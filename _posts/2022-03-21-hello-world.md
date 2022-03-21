@@ -1,11 +1,9 @@
 ---
-title: 'Blog Post number 1'
-date: 2012-08-14
-permalink: /posts/2012/08/blog-post-1/
+title: 'Hello World!'
+date: 2022-03-21
+permalink: /posts/2022/03/hello-world.md/
 tags:
-  - cool posts
-  - category1
-  - category2
+  - test
 ---
 
 This is a sample blog post. Lorem ipsum I can't remember the rest of lorem ipsum and don't have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.
