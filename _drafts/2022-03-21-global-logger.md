@@ -1,10 +1,14 @@
 ---
-title: "Hello World!"
+title: "Creating a Global Logger from Scratch"
 date: 2022-03-21
-permalink: /posts/2022/03/hello-world.md/
+permalink: /posts/2022/03/global-logger.md/
 tags:
-  - test
+  - python
+  - sql-server
+  - experiments
 ---
+
+We have a lot of
 
 This is a sample blog post. Lorem ipsum I can't remember the rest of lorem ipsum and don't have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.
 
