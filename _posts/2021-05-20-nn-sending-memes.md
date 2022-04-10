@@ -5,6 +5,7 @@ permalink: /posts/2021/05/nn-sending-memes.md/
 tags:
   - machine-learning
   - experiments
+  - python
 ---
 
 # Using a Neural Network for sending memes to my girlfriend
