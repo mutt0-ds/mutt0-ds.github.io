@@ -23,7 +23,7 @@ They must operate locally on specific machines, can't be containerized, there ar
 
 I looked forward to libraries for automatize this process, like Airflow and Luigi (TODO: add links), but, mostly because I'm still at the beginning of my learning process, I found them cumbersome to use and too powerful for the simple task I want to solve.
 
-TODO: evidenziala
+(Callout)
 
 > I just want a log of the executed scripts, stored as a table in our SQL Server, ready to be queried in the future with a GUI.
 
