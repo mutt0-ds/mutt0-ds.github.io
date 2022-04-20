@@ -1,5 +1,5 @@
 ---
-title: "How I built my personal Airflow with Python, Appsmith and SQL Server"
+title: "My Personal Airflow - How I'm monitoring my scripts with Python, Appsmith and SQL Server"
 date: 2022-03-21
 permalink: /posts/2022/03/personal-airflow.md/
 tags:
@@ -7,41 +7,40 @@ tags:
   - sql-server
   - experiments
   - appsmith
+  - javascript
 ---
 
-Here's the story of how I created my first full-stack project, starting as a side project for learning Appsmith in front-end, but in the end it's operative /Todo: CHECKA
+Here's the story of how I created my first full-stack project, using Python and SQL Server in backend and Appsmith to provide a GUI for my daily activities
 
 ## 😟 The Problem
 
-There are some tasks at my workplace that are particularly painful to monitor. Many of them follows this sort of flow:
+There are some scripts I'm using that are particularly painful to monitor. The typical structure is the following:
 
 1. Load data (from a file or manual input)
-2. Send a request to a local DB / very specific API
-3. Compare the data received with the input and if something is wrong, notify the user
+2. Send a request to internal DB / very specific API
+3. Compare the data received with the input and if something is wrong, notify the me or a colleague
 
-They must operate locally on specific machines, can't be containerized, there are severe API limitations in some cases #TODO SPIEGA PROBLEMA E AGGIUNGI CHE C'era gia un modulo per Slack
+They must operate locally on specific machines, can't be containerized, there are severe API limitations in some cases.
 
-I looked forward to libraries for automatize this process, like Airflow and Luigi (TODO: add links), but, mostly because I'm still at the beginning of my learning process, I found them cumbersome to use and too powerful for the simple task I want to solve.
+> **❔** I know that there are some amazing automation libraries like [Airflow](https://airflow.apache.org/) and [Luigi](https://github.com/spotify/luigi), but I chose to not use them because I needed something simpler and more customizable. I also wanted to test myself and build a whole project to be used in my day-to-day work.
 
-(Callout)
+I also needed a custom dashboard (inspired by [Airflow's one](https://airflow.apache.org/docs/apache-airflow/stable/ui.html), to be used by my colleagues for monitoring the scripts assigned to their departments, open tickets, and do other unique actions.
 
-> I just want a log of the executed scripts, stored as a table in our SQL Server, ready to be queried in the future with a GUI.
-
-Then, it would be cool for some colleagues to be able to
-
-So, here's the story about I created my own 'Airflow'. I have a lot to learn yet, but blabla that's for the future me
+So, here's the story about I created my own Logger. I have a lot to learn yet, but hey, its a start #TODO: migliora intro
 
 ### My Proposal
 
-1. Rework the previous alert module as a logger that connects to my database and registers every execution
-2. In case of error, register the error in the database and then send the alert
-3. Provide a simple GUI for my colleagues to validate potential warnings
+In my mind, my logger would consist of three parts
 
-## 🐌 Back-End: Python module with decorator
+1. Backend: a module to be imported by all the scripts that connect to the Database and stores logging data and results. Since the majority of them is in Python, that's the language I'm going to use.
+2. Database: a SQL Server Express instance we have already set up for other tasks in our local server.
+3. Frontend: I'm definitely not an expert here; I needed something quick to spin up, hostable on the server, as easiest as possible to customize, capable to connect with our APIs. [Appsmith](https://www.appsmith.com/) was the right choice and I had a lot of fun with it.
+
+## 🐌 Backend: Python module with decorator
 
 My starting point was the previously existing library, which was already imported by all the scripts for handling exceptions and crashes. Every script had this kind of template in its `main.py` file:
 
-### Old Alert Library
+##### Old Alert Library
 
 ```python
 import alert_library
@@ -56,7 +55,7 @@ if __name__=='__main__':
     alert_library.send_error(e) # the module handles all the error cases and sends a report
 ```
 
-### The JobLogger class
+##### The JobLogger class
 
 From there, I rewrited the alert_library module into a so-called `job_logger`, here's its pseudo-code
 
@@ -144,14 +143,20 @@ TODO: metti screenshot esempio tabella
 
 ## 📊 Frontend : Appsmith
 
-I decided to use Appsmith, which is an amazing open source framework to build internal tools with low-code, easy to spin up and pretty fun to work with. I'm currently studying Angular, but at the moment I needed something very quick to set up and unable to cause me too many headaches until I'll be more skilled with TypeScript and Javascript (which is used in Appsmith widgets, but they are just a few lines).
+Appsmith is an amazing open source framework to build internal tools with low-code, easy to spin up and pretty fun to work with. I'm also studying Angular, but right now I needed something very quick to set up, with access control and unable to cause me too many headaches until I'll be more skilled with TypeScript and Javascript (which is used in Appsmith widgets, but they are just a few lines).
 
-Appsmith is ridicously easy to set up (just run this docker-compose.yml), and I connected my DB and the Slack API in a few minutes. Since this is an internal tool I didn't need to create an host, blabla serve?
+Appsmith is _ridicously easy_ to set up (just run [this docker-compose.yml](https://docs.appsmith.com/setup/docker#docker-compose-configuration)), and I was able to connect my DB and the Slack API in a few minutes.
 
-A very cool feature is that the entire Dashboard, with queries and connections, can be exported as a simple JSON file and re-created in another Appsmith account. I discovered it when I re-built the docker image, losing all my progress with the test dashboard, and struggled for hours with docker commands before realizing that I can just download that JSON and store it as a backup.
+A very cool feature is that the entire Dashboard, including widgets, JS Objects and connections, can be exported as a simple JSON file and imported in another Appsmith instance. I discovered it when I restarted the docker image, losing all my progress with the test I was creating, and struggled for hours with docker commands before realizing that I should just download the JSON and store it as a backup. You can also connect it to a Github repo with SSL.
+
+So, here's the final result: the "Dettagli" (Details) button contains additional informations and a modal for opening a ticket. I connected a Sendgrid test account to the App and quickly invited my colleague to share the fun!
 
 SCREENSHOTS DELLA DASHBOARD
 
 ## Conclusions
 
-As a junior Software Engineer, I still have a lot to learn with building apps, but I consider Appsmith a good starting point for setting up a nice, simple GUI. Monitoring all those minor activities has been rather painful, and now with my personal logger app I'm able to keep an eye on them and collaborate with my colleagues.
+As a junior Software Engineer, I still have a lot to learn about building apps, but my JobLogger project was a good starting point for me. I'm using it on a daily basis and it's helping my colleagues with monitoring our activities, which is amazing considering that I wasn't thinking about putting it on (internal) production!
+
+I'm very satisfied about the outcome of the project and I'm already working for additional features, such as opening tickets about a specific task and visualizing the scheduled jobs for the day...
+
+This was a fun and educative experience, thanks for having read my story. See you for the next project!
