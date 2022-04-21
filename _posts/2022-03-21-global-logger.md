@@ -10,7 +10,7 @@ tags:
   - javascript
 ---
 
-Here's the story of how I created my first full-stack project, using Python and SQL Server in backend and Appsmith to provide a GUI for monitoring my daily activities.
+Here's the story of how I created my first full-stack project for monitoring my daily activities, using Python and SQL Server in backend and Appsmith for the GUI.
 
 ## 😟 The Problem
 
@@ -32,9 +32,9 @@ So, here's the backstory regarding how I created my own Logger. I have a lot to 
 
 In my mind, my logger would consist of three parts
 
-1. Backend: a module to be imported by all the scripts that connect to the Database and store logging data and results. Since the majority of them are in Python, that's the language I'm going to use.
-2. Database: a SQL Server Express instance we have already set up for other tasks in our local server.
-3. Frontend: I'm a newbie here; I needed something quick to spin up, hostable on the server, as easiest as possible to customize, capable to connect with our APIs. [Appsmith](https://www.appsmith.com/) was the right choice and I had a lot of fun with it.
+1. **Backend**: a module to be imported by all the scripts that connect to the Database and store logging data and results. Since the majority of them are in Python, that's the language I'm going to use.
+2. **Database**: a SQL Server Express instance we have already set up for other tasks in our local server.
+3. **Frontend**: I'm a newbie here; I needed something quick to spin up, hostable on the server, as easiest as possible to customize, capable to connect with our APIs. [Appsmith](https://www.appsmith.com/) was the right choice and I had a lot of fun with it.
 
 ## 🐌 Backend: Python module with decorator
 
@@ -134,7 +134,7 @@ if __name__=='__main__':
 
 ```
 
-I admired this solution not only because it's elegant, but eventually if a colleague reads the code of the script, they won't get confused by the logger logic, and hence one can easily debug the code by commenting on just the decorator line. Simple, isn't it?
+I admired this solution not only because it's elegant, but eventually **if a colleague reads the code of the script, he won't get confused by the logger logic**, and hence one can easily debug the code by commenting on just the decorator line. Simple, isn't it?
 
 ## 📦 Data Layer : SQL Server Database
 
@@ -147,19 +147,19 @@ Not an area I have much expertise in, albeit we simply have an existing instance
 
 ## 📊 Frontend : Appsmith
 
-Appsmith is an efficient open-source framework to build internal tools with lesser code, easy to spin up, and a charm to work with. I'm also studying Angular, but right now time is of the essence and a quick set-up is needed, with access control and unable to cause nuisance until I pick up further skillsets with TypeScript and Javascript (which are utilized in Appsmith widgets, yet there are a few lines).
+[**Appsmith**](https://www.appsmith.com/) is an efficient open-source framework to build internal tools with lesser code, easy to spin up, and a charm to work with. I'm also studying Angular, but right now time is of the essence and a quick set-up is needed, with access control and unable to cause nuisance until I pick up further skillsets with TypeScript and Javascript (which are utilized in Appsmith widgets, yet there are a few lines).
 
 Appsmith is _ridicously easy_ to set up (just run [this docker-compose.yml](https://docs.appsmith.com/setup/docker#docker-compose-configuration)), and I was able to connect my DB and the Slack API within a few minutes.
 
-A noteworthy feature that remains is the entire Dashboard, including widgets, JS Objects, and connections that can be exported as a simple JSON file and imported into another instance of Appsmith. I struck on this discovery when I restarted the docker image, losing all my progress with the test I was creating and struggled hours with the docker commands, until realizing I should download the JSON and store it as a backup. You can also piece it together with a Github repo having SSL.
+A noteworthy feature that remains is **the entire Dashboard, including widgets, JS Objects, and connections that can be exported as a simple JSON file** and imported into another instance of Appsmith. I struck on this discovery when I restarted the docker image, losing all my progress with the test I was creating and struggled hours with the docker commands, until realizing I should download the JSON and store it as a backup. You can also piece it together with a Github repo having SSL.
 
-Here’s the final result: the "Dettagli" (Details) button contains additional information and a modal for opening a ticket. I connected a Sendgrid account to the App and quickly invited my colleague to share the fun!
+Here’s **the final result**: the "_Dettagli_" (Details) button contains additional information and a modal for opening a ticket. I connected a Sendgrid account to the App and quickly invited my colleague to share the fun!
 
-![Dashboard](https://github.com/mutt0-ds/mutt0-ds.github.io/blob/master/images/dashboard.jpg)
+![Dashboard](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/dashboard.jpg)
 
 ## Conclusions
 
-As a junior Software Engineer, I have long ways to have comprehensive app-building knowledge, but my JobLogger project acts as an enlightening first step. I employ it on a daily basis since it’s assisting my colleagues by monitoring our activities, which is excellent considering that I wasn’t even thinking about putting it on (internal) production!
+As a junior Software Engineer, I have long ways to have comprehensive app-building knowledge, but **my JobLogger project acts as an enlightening first step**. I employ it on a daily basis since it’s assisting my colleagues by monitoring our activities, which is excellent considering that I wasn’t even thinking about putting it on (internal) production!
 
 My satisfaction with this outcome of the project is high, as I am already working on embedding more features such as opening tickets for a particular task, and visualizing the scheduled jobs requisite on any day.
 
