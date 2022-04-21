@@ -10,15 +10,15 @@ tags:
   - javascript
 ---
 
-Here's the story of how I created my first full-stack project for monitoring my daily activities, using Python and SQL Server in backend and Appsmith for the GUI.
+Here's the story of how I created my first full-stack project for monitoring my daily activities, using Python and SQL Server in backend and Appsmith for the GUI. I have a lot to learn and process yet, but hey, it's a start.
 
 ## 😟 The Problem
 
 There are scripts I'm using that are particularly tedious to monitor. The typical structure is the following:
 
-1. Load data (from a file or manual input)
-2. Send a request to internal DB / very specific API
-3. Compare the data received with the input and if something is wrong, notify me or a colleague.
+1. **Load data** (from a file or manual input)
+2. **Send a request** to internal DB / very specific API
+3. **Compare the data** received with the input and if something is wrong, notify me or a colleague.
 
 They must operate locally on specific machines, can't be containerized, there are severe API limitations in some cases.
 
@@ -26,11 +26,9 @@ They must operate locally on specific machines, can't be containerized, there ar
 
 I also needed a custom dashboard (inspired by [Airflow's one](https://airflow.apache.org/docs/apache-airflow/stable/ui.html), to be used by my colleagues for monitoring the scripts assigned to their departments, opening tickets, and doing other unique actions.
 
-So, here's the backstory regarding how I created my own Logger. I have a lot to learn and process yet, but hey, it's a start.
+## 💡 My Proposal
 
-### My Proposal
-
-In my mind, my logger would consist of three parts
+In my mind, my logger would consist of three parts:
 
 1. **Backend**: a module to be imported by all the scripts that connect to the Database and store logging data and results. Since the majority of them are in Python, that's the language I'm going to use.
 2. **Database**: a SQL Server Express instance we have already set up for other tasks in our local server.
