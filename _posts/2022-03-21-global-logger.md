@@ -1,7 +1,7 @@
 ---
 title: "My Personal Airflow - How I'm monitoring my scripts with Python, Appsmith and SQL Server"
-date: 2022-03-21
-permalink: /posts/2022/03/personal-airflow.md/
+date: 2022-04-21
+permalink: /posts/2022/04/personal-airflow.md/
 tags:
   - python
   - sql-server
