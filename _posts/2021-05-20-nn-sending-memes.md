@@ -8,8 +8,6 @@ tags:
   - python
 ---
 
-# Using a Neural Network for sending memes to my girlfriend
-
 Well, my GF's tastes in memes are simple: she loves wholesome memes and, most importantly, **she loves animals**.
 
 That's why I created a fun little project that:
