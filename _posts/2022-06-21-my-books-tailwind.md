@@ -1,7 +1,7 @@
 ---
 title: "First time with Tailwind CSS: showing off my books!"
 date: 2022-06-21
-permalink: /posts/2022/06/my-books-tailwind.md
+permalink: /posts/2022/06/my-books-tailwind.md/
 tags:
   - tailwind
   - angular
