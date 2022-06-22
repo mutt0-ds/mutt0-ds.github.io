@@ -9,3 +9,5 @@ redirect_from:
 ---
 
 Hi! Welcome to my personal Github.io blog, where I talk about my projects 😊🎉
+
+You can read my latest articles in the [Posts]('./year-archive/) section
