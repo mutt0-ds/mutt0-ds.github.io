@@ -11,161 +11,71 @@ tags:
 
 I'm back for another post, this time about my new chapter in my journey towards learning Full-Stack web development!
 
-In the previous months I started using Angular and Typescript for crafting some small web apps and dashboard, but I always found CSS management cumbersome. I could spend hours tweaking font-size and align-items parameters and hard-coding variables, and this wasn't a lot of fun.
+In the previous months I started using Angular and Typescript for creating some small web apps and dashboard, but I always found CSS management cumbersome. I could spend hours tweaking font-size and align-items parameters and hard-coding variables, and this wasn't a lot of fun.
 
 That's until I discovered Tailwind, which is heavily recommended by the frontend community! I decided to set up a toy project to learn it, and... Wow! It was so simple, yet so effective!
 
-Here's what I did for setting up my personal library
+## 📊 The Dashboard
 
-Here's the story of how I created my first full-stack project for monitoring my daily activities, using Python and SQL Server in backend and Appsmith for the GUI. I have a lot to learn and process yet, but hey, it's a start.
+I deployed [a live demo on Netlify](https://my-personal-library.netlify.app/), while if you are interested in the code, the public repository is [here](https://github.com/mutt0-ds/my-books-tailwind).
 
-## 😟 The Problem
+![demo](https://raw.githubusercontent.com/mutt0-ds/my-books-tailwind/main/src/assets/demo.gif)
 
-There are scripts I'm using that are particularly tedious to monitor. The typical structure is the following:
+![book](https://github.com/mutt0-ds/my-books-tailwind/blob/main/src/assets/selected-book.png?raw=true)
 
-1. **Load data** (from a file or manual input)
-2. **Send a request** to internal DB / very specific API
-3. **Compare the data** received with the input and if something is wrong, notify me or a colleague.
+## 📚 The Dataset: My Books
 
-They must operate locally on specific machines, can't be containerized, there are severe API limitations in some cases.
+For my experiment, I wanted to create something unique, not clones of existing websites or basic pages. Since I'm already monitoring the books I'm reading on a Notion Database, I exported the data from the past two years and used it as a small dataset.
+I would have liked to include my detailed notes, but since I write them only for personal use they often are in an embarrassing hybrid of Italo-English which will take too long for a complete translation.
+For now, I just sticked with Rating (1-5 ⭐), Brief Recap (a couple of lines
+I write for quickly presenting the book), Category, Author, Title and Date.
 
-> **❔** I know that there are some amazing automation libraries like [Airflow](https://airflow.apache.org/) and [Luigi](https://github.com/spotify/luigi), but I chose to not use them because I needed something simpler and more customizable. I also wanted to test myself and build a whole project to be used in my day-to-day work.
+![DB](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/notion-db-books.png)
 
-I also needed a custom dashboard (inspired by [Airflow's one](https://airflow.apache.org/docs/apache-airflow/stable/ui.html), to be used by my colleagues for monitoring the scripts assigned to their departments, opening tickets, and doing other unique actions.
+## 📦 Angular + tilt.js
 
-## 💡 My Proposal
+The project has been created using the [Angular CLI](https://angular.io/cli), and I kept it really simple: there are 3 components.
 
-In my mind, my logger would consist of three parts:
+1. The header, where the user can filter the category of the books
+2. The sidebar, for selecting the books
+3. The book component, showing the Book Card.
 
-1. **Backend**: a module to be imported by all the scripts that connect to the Database and store logging data and results. Since the majority of them are in Python, that's the language I'm going to use.
-2. **Database**: a SQL Server Express instance we have already set up for other tasks in our local server.
-3. **Frontend**: I'm a newbie here; I needed something quick to spin up, hostable on the server, as easiest as possible to customize, capable to connect with our APIs. [Appsmith](https://www.appsmith.com/) was the right choice and I had a lot of fun with it.
+The most complex part, because I somehow managed to overcomplicate things, was to read and clean the data from the Notion export. It was just a small CSV, but as I said my notes were a bit messy so I cleaned them directly after the import.
 
-## 🐌 Backend: Python module with decorator
+I also wanted to have fun with a nice little library called [vanilla-tilt.js](https://github.com/micku7zu/vanilla-tilt.js), which gives that modern tilting effect to the Book Card.
 
-My starting point was a previously existing library, which was already imported by all the scripts for handling exceptions and crashes. Every script contains this kind of template in its `main.py` file:
+## 🌬 But why Tailwind?
 
-##### Old Alert Library
+I started with the header and I immediately loved the easiness of Tailwind:
 
-```python
-import alert_library
-
-def main():
-  ... # the script does its magic here
-
-if __name__=='__main__':
-  try:
-    main()
-  except Exception as e:
-    alert_library.send_error(e) # the module handles all the error cases and sends a report
+```html
+<div
+  class="sticky top-0 left-0 h-12 md:h-16 w-screen bg-gray-200 shadow-lg z-10"
+>
+  <div class="max-w-xl flex flex-row">
+    <h1
+      class="flex items-center mx-5 md:text-xl text-sm text-blue-500 font-extrabold"
+    >
+      Davide's Library
+    </h1>
+  </div>
+</div>
 ```
 
-##### The JobLogger class
+If you aren't used to Tailwind's unique paradigm, this may look messy. But in three lines the header was ready. Every class represented a CSS properties: for example I wanted the header to be sticky at the top, so I gave it the 'sticky', 'top: 0', 'left: 0' CSS properties using Tailwind classes. It's very intuitive.
 
-From there, I rewrited the alert_library module into a so-called `job_logger`, here's its pseudo-code:
+I also didn't waste time with shadows setting: I applied the beautiful 'shadow-lg' class and everything was ready.
 
-```python
-... import helper_functions, db_functions, logging, etc...
+If you were wondering, 'bg-gray-200' and 'text-blue-500' are properties for defining the colors of the background and the text, using a default palette by Tailwind, which I could configure in the settings.
 
-@dataclass
-class Joblogger
-  job_id: int
-  status: str = 'Pending'
+In the first hour I was a bit scared to create a monster with several lines of classes in my code, but in the end I found so useful to have HTML and CSS together in a single file. Everything is more intuitive, and I didn't even have to tweak many Tailwind settings, except for a couple of animations I wanted to use. The default ones are already enough for such a simple site.
 
-  def __post_init__(self):
-    # looking for further data about the job in the db...
-    data = db_functions.get_job_data(self.job_id)
-    self.job_name = data.get('job_name')
-    #self.other_useful_info = ...
+It's better for readability (in the long run!), way quicker than classic CSS and perfectly integrated with VS Code's Intellisense. Tailwind is a great tool and I can see why so many developers are recommending it.
 
-  def begin_job():
-    to_upload = {'job_id' : self._job_id,
-                'h_begin': datetime.now(),
-                'status': self.status,
-                #other_useful_info...}
-    self.row_id = db_functions._insert_on_db(to_upload)
+## 📱 Mobile Responsive you say?
 
-  def finish_job():
-    self.status = 'Done'
-    to_upload = {
-                'status': self.status,
-                'h_end': datetime.now(),
-                'message': 'OK',
-                'needs_validation': helper_functions.check_validation(...)
-                #other_useful_info...}
-      db_functions._update_on_db(self.row_id, to_upload)
-
-  def handle_error(e: Exception)
-    self.status = "ERROR"
-    to_upload = {self.status,
-                'traceback': traceback.format_exc(limit=2, chain=False)
-                #other_useful_info...}
-    db_functions._update_on_db(self.row_id, to_upload)
-    # + old alert library for sending alerts
-```
-
-Now all the scripts have this structure:
-
-```python
-from job_logger import JobLogger
-
-def main():
-  ... # the script does its magic here
-
-if __name__=='__main__':
-  logger = JobLogger()
-  try:
-    logger.begin_job(job_id = 3)
-    main()
-    logger.finish_job()
-  except Exception as e:
-    alert_library.handle_error(e) # the module handles all the error cases and sends a report
-
-```
-
-Mhhh... slightly unkempt, verbose, and inconvenient to update for my tastes... Let's fashion a decorator so I don't have to paste so many lines of code into every script!
-
-### The JobLogger Decorator
-
-```python
-from job_logger import monitor_job
-
-@monitor_job(job_id = 3)
-def main():
-  ... # the script does its magic here
-
-if __name__=='__main__':
-  main()
-
-```
-
-I admired this solution not only because it's elegant, but eventually **if a colleague reads the code of the script, he won't get confused by the logger logic**, and hence one can easily debug the code by commenting on just the decorator line. Simple, isn't it?
-
-## 📦 Data Layer : SQL Server Database
-
-Not an area I have much expertise in, albeit we simply have an existing instance of a SQL Server upon which I created a new Database as per my convenience. There aren’t a lot of scripts running every hour thus making the amount of data manageable to the point it could be handled even by SQLlite. The fascinating part is that I have already written a module for interacting with this specific database, administering all the permissions, etc.. (the scripts are run by distinct machines by separate owners). I won’t explore the DB logic upheld here, although the JobLogger database has a few tables:
-
-1. _User Table_
-2. _Department Table_
-3. _Job Table_, with all the details referencing the task, name, path, pc that should run it, scheduling details, and if it needs validation, etc... The Key is the job_id, which is an auto incremental number, and therefore it's significant to specify it in the Python decorator
-4. _Log History Table_, which is the most important part: the history of all the run activities, including logs, warnings, comments, starting and ending times. Every execution of the `monitor_job` function creates a new row on the table.
-
-## 📊 Frontend : Appsmith
-
-[**Appsmith**](https://www.appsmith.com/) is an efficient open-source framework to build internal tools with lesser code, easy to spin up, and a charm to work with. I'm also studying Angular, but right now time is of the essence and a quick set-up is needed, with access control and unable to cause nuisance until I pick up further skillsets with TypeScript and Javascript (which are utilized in Appsmith widgets, yet there are a few lines).
-
-Appsmith is _ridicously easy_ to set up (just run [this docker-compose.yml](https://docs.appsmith.com/setup/docker#docker-compose-configuration)), and I was able to connect my DB and the Slack API within a few minutes.
-
-A noteworthy feature that remains is **the entire Dashboard, including widgets, JS Objects, and connections that can be exported as a simple JSON file** and imported into another instance of Appsmith. I struck on this discovery when I restarted the docker image, losing all my progress with the test I was creating and struggled hours with the docker commands, until realizing I should download the JSON and store it as a backup. You can also piece it together with a Github repo having SSL.
-
-Here’s **the final result**: the "_Dettagli_" (Details) button contains additional information and a modal for opening a ticket. I connected a Sendgrid account to the App and quickly invited my colleague to share the fun!
-
-![Dashboard](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/dashboard.jpg)
+I quickly deployed the dashboard using the [Netlify CLI](https://www.netlify.com/blog/2019/09/23/first-steps-using-netlify-and-angular/) and, excited, I sent it via Whatsapp to a friend.
 
 ## Conclusions
 
-As a junior Software Engineer, I have long ways to have comprehensive app-building knowledge, but **my JobLogger project acts as an enlightening first step**. I employ it on a daily basis since it’s assisting my colleagues by monitoring our activities, which is excellent considering that I wasn’t even thinking about putting it on (internal) production!
-
-My satisfaction with this outcome of the project is high, as I am already working on embedding more features such as opening tickets for a particular task, and visualizing the scheduled jobs requisite on any day.
-
-Fun and educative experience indeed, thanks for reading my experience! See you on the next project!
+TODO
