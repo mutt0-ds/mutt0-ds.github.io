@@ -14,7 +14,7 @@ So, I decided to challenge myself and try to learn a bit more about ***CO**mmon 
 
 Especially in the banking sector, this is a delicate topic because 3 trillion $ depend on COBOL code (95% of ATMs and 80% of all in-person credit card transaction are using it, [Reuters says](http://fingfx.thomsonreuters.com/gfx/rngs/USA-BANKS-COBOL/010040KH18J/)), and few programmers want to mess up with something so critically important that’s still working reliably. 
 
-![COBOL meme](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/meme-cobol.jpg)
+![COBOL meme](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/meme_cobol.jpg)
 
 I also recommend [this brief introduction in 100 seconds](https://www.youtube.com/watch?v=7d7-etf-wNI) if you are looking for a quick recap.
 
@@ -25,7 +25,7 @@ Managing legacy code of half a century ago is not my dream, but maybe, I thought
 ## COBOL's essentials
 The first impression isn't great, since it's such verbose language... Let's compare a“Hello World” in Python, JS, and COBOL:
 
-```COBOL
+```cobol
 # 🐍 Python
 print('Hello World')
 
