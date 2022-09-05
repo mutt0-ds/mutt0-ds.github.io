@@ -24,7 +24,7 @@ Managing legacy code of half a century ago is not my dream, but maybe, I thought
 ## COBOL's essentials
 The first impression isn't great, since it's such verbose language... Let's compare a“Hello World” in Python, JS, and COBOL:
 
-```cobol
+```
 # 🐍 Python
 print('Hello World')
 
