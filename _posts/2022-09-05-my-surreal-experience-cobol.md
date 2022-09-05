@@ -8,9 +8,8 @@ tags:
   - ibm
   - finance
 ---
-# My surreal experience with COBOL
-I was bored.
-So, I decided to challenge myself and try to learn a bit more about ***CO**mmon **B**usiness-**O**riented **L**anguage* aka [COBOL](https://en.wikipedia.org/wiki/COBOL), invented in 1959 by IBM. It’s not the most popular among programmers, being extremely old and with huge limitations compared to today’s modern languages... Yet, as we will see, it’s still alive, hidden in huge legacy codebases in the form of spaghetti code and difficult to get rid of without  an entire system redesign. 
+
+I was feeling curious... So, I decided to challenge myself and try to learn a bit more about ***CO**mmon **B**usiness-**O**riented **L**anguage* aka [COBOL](https://en.wikipedia.org/wiki/COBOL), invented in 1959 by IBM. It’s not the most popular among programmers, being extremely old and with huge limitations compared to today’s modern languages... Yet, as we will see, it’s still alive, hidden in huge legacy codebases in the form of spaghetti code and difficult to get rid of without  an entire system redesign. 
 
 Especially in the banking sector, this is a delicate topic because 3 trillion $ depend on COBOL code (95% of ATMs and 80% of all in-person credit card transaction are using it, [Reuters says](http://fingfx.thomsonreuters.com/gfx/rngs/USA-BANKS-COBOL/010040KH18J/)), and few programmers want to mess up with something so critically important that’s still working reliably. 
 
