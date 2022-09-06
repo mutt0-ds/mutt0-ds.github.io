@@ -46,7 +46,7 @@ console.log('Hello World')
 The line numbers and the indentation are peculiar because back in the day the code was written on physical punch cards!
 Also, all the variables are global and have to be defined at the beginning of the code, in the WORKING-STORAGE SECTION. Since module imports are cumbersome, there's a tendency of writing programs in monolithic blocks with so many declarations that finding unique names becomes a big issue.
 
-In addition, [before 2002, COBOL didn’t support comments](https://stackoverflow.com/a/17616222). Imagine working on a codebase of 50 years ago, with millions of dollars depending on it, thousands of variables, and no way to understand who, why and how someone made that choice in the 60s.
+~~In addition, [before 2002, COBOL didn’t support comments](https://stackoverflow.com/a/17616222). Imagine working on a codebase of 50 years ago, with millions of dollars depending on it, thousands of variables, and no way to understand who, why and how someone made that choice in the 60s.~~ (UPDATE: [that's wrong, the presence of comments is mentioned in older textbooks](https://nvlpubs.nist.gov/nistpubs/Legacy/hb/nbshandbook106.pdf))
 
 Despite its flaws, COBOL remains an easy language to learn and read, since it targets non-technical people by using English statements similar to SQL. It’s extremely stable and precise, thus its longevity. 
 
@@ -80,7 +80,7 @@ After having coded a bit, I tackled [IBM’s course](https://www.ibm.com/blogs/i
 - The stability and the rigidity of the language are evident, I can see why it’s so difficult to replace without adding bugs, especially on mathematical operations.
 
 ## What have I learned?
-Studying COBOL has certainly opened my eyes to how much technology has evolved during the years, but at the same time, I am fascinated by how this 70-year-old creature has kept many similarities to today’s stacks, for example with IF and SWITCH statements, tables, and functions. The basics are always the same. 
+Studying COBOL has certainly opened my eyes to how much technology has evolved during the years, but at the same time, I am fascinated by how this 63-year-old creature has kept many similarities to today’s stacks, for example with IF and SWITCH statements, tables, and functions. The basics are always the same. 
 
 I don’t recommend IBM’s course, verbose and not very intuitive (unless you want the certification?), while Derek’s tutorial helped in getting my hands dirty and with the setup.
 
