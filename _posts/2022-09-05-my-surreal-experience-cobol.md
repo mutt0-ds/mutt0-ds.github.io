@@ -1,6 +1,6 @@
 ---
 title: "My surreal experience with COBOL"
-date: 2029-09-05
+date: 2022-09-05
 permalink: /posts/2022/06/my-surreal-experience-cobol.md/
 tags:
   - cobol
@@ -83,8 +83,6 @@ After having coded a bit, I tackled [IBM’s course](https://www.ibm.com/blogs/i
 Studying COBOL has certainly opened my eyes to how much technology has evolved during the years, but at the same time, I am fascinated by how this 63-year-old creature has kept many similarities to today’s stacks, for example with IF and SWITCH statements, tables, and functions. The basics are always the same. 
 
 I don’t recommend IBM’s course, verbose and not very intuitive (unless you want the certification?), while Derek’s tutorial helped in getting my hands dirty and with the setup.
-
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="da4bf742-fdaa-468b-a916-8b365ca37121" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 It's easy to make fun of COBOL and its archaic limits, but let’s not forget the people that were writing my same codes on punch cards, without IDEs, Stack Overflow, the Internet… And this code written in such an ancient context is still up today, working incessantly, giving your money when you use the ATM. Jokes apart, I would be proud of it.
 
