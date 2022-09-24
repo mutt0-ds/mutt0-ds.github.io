@@ -33,7 +33,7 @@ Very important section for beginners, explaining the most common functions and t
 
 It introduces the different data types, which are the classic ones (Integer, Float, Currency, Datetime, Boolean, Strings, Binary), with just a new type, Variant, which is DAX-specific and simply means that there could be different data types (such as `Any`in Python).
 
-There are brief introductions of the operators: arithmetic (+-*/), comparatives (<,>,=,<>,≥,≤), logic (&&, | |, IN, NOT) and tables, created with {} and must include parenthesis in case of multiple values. E.g. `Colours = {”Red”, “White”, “Blue”}`. `Animals = {(”Dog”, “Woof”),( “Cat”, “Meow”)}`
+There are brief introductions of the operators: arithmetic (+-*/), comparatives (<,>,=,<>,≥,≤), logic (&&, \|\|, IN, NOT) and tables, created with {} and must include parenthesis in case of multiple values. E.g. `Colours = {”Red”, “White”, “Blue”}`. `Animals = {(”Dog”, “Woof”),( “Cat”, “Meow”)}`
 
 ### Calculated Columns
 
