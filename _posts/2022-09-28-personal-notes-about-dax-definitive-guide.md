@@ -17,14 +17,11 @@ I'm using a few screenshots from the book for educational purposes, all rights a
 
 It took me several weeks for finishing it, but I felt extremely prepared after the experience and grateful for such a useful resource that will be fundamental in my future. The authors did a terrific job and I am happy to support them and share a positive feedback of their work on my blog. Knowing that my memory is terrible I took accurate notes of everything I found interesting and what I have to read again. I hope it will help you as well!
 
-<aside>
-📝 My personal classification of each chapter
-****⚠ VERY IMPORTANT, read it several times and understand everything
+### My personal classification of each chapter
+⚠️ **VERY IMPORTANT**, read it several times and understand everything
 🔄 To read again, plenty of examples/documentation
 ✨ Useful
 ❓ Minor insights
-
-</aside>
 
 ## 1 ✨ What is DAX?
 
@@ -36,7 +33,7 @@ Very important section for beginners, explaining the most common functions and t
 
 It introduces the different data types, which are the classic ones (Integer, Float, Currency, Datetime, Boolean, Strings, Binary), with just a new type, Variant, which is DAX-specific and simply means that there could be different data types (such as `Any`in Python).
 
-There are brief introductions of the operators: arithmetic (+-*/), comparatives (<,>,=,<>,≥,≤), logic (&&, ||, IN, NOT) and tables, created with {} and must include parenthesis in case of multiple values. E.g. `Colours = {”Red”, “White”, “Blue”}`. `Animals = {(”Dog”, “Woof”),( “Cat”, “Meow”)}`
+There are brief introductions of the operators: arithmetic (+-*/), comparatives (<,>,=,<>,≥,≤), logic (&&, | |, IN, NOT) and tables, created with {} and must include parenthesis in case of multiple values. E.g. `Colours = {”Red”, “White”, “Blue”}`. `Animals = {(”Dog”, “Woof”),( “Cat”, “Meow”)}`
 
 ### Calculated Columns
 
@@ -86,7 +83,7 @@ AVERAGEX (
 - Date & Time:`DATE, DATEVALUE, DAY, EDATE, EOMONTH, HOUR, MINUTE, MONTH, NOW, SECOND, TIME, TIMEVALUE, TODAY, WEEKDAY, WEEKNUM, YEAR, YEARFRAC`
 - Relational: `RELATED` e `RELATEDTABLE`. They are very powerful, we will explore them later
 
-## 3 ⚠Using basic table functions
+## 3 ⚠️ Using basic table functions
 
 ### FILTER
 
@@ -102,16 +99,11 @@ Like `ALL`, `VALUES` and `DISTINCT` return a list of unique values too… With a
 
 There’s a brief insight  about `HASONEVALUE`, a shortcut for `IF ( COUNTROWS ( VALUES ( [colonna] ) ) = 1, VALUES ( [colonna] )`; it has a second argument for returning a message if there’s more than a value: it can be useful for cards and elements that expect only one value to be selected.
 
-## 4 ⚠ Understanding Evaluation Context
+## 4 ⚠️ Understanding Evaluation Context
 
-<aside>
-⚠️ The authors say that this chapter and #5 are the most important of the entire book. If you understand context, you will avoid the most common errors when you code in DAX. Read it several times until you understand everything!
+⚠️️ The authors say that this chapter and #5 are the most important of the entire book. If you understand context, you will avoid the most common errors when you code in DAX. Read it several times until you understand everything!
 
-</aside>
-
-In DAX, there are two completely different contexts impacting your formulas. Filter Context, which filters data, and Row Context, which iterates through tables. A context is, in short, the environment where the expression is evaluated. 
-
-Ci sono due contesti completamente differenti: **filter context**, che **FILTRA DATI** e **row context**, che **ITERA TABELLE**. Un contesto è l’ambiente in cui l’espressione viene valutata.
+In DAX, there are two completely different contexts impacting your formulas. **Filter Context**, which **filters data**, and **Row Context**, which **iterates through tables**. A context is, in short, the environment where the expression is evaluated. 
 
 ### Filter Context
 
@@ -144,7 +136,7 @@ Sales[Customer Age] -- and average the customer's age
 ) -- TODO: you should break it down in a variable and use AVERAGEX too
 ```
 
-## 5 ⚠ Understanding CALCULATE and CALCULATETABLE
+## 5 ⚠️ Understanding CALCULATE and CALCULATETABLE
 
 `CALCULATE` is the most important and powerful DAX function and the one with significant nuances to understand. `CALCULATETABLE`  is the same but returns a table. Their complexity is caused by their unique characteristic: **they can create new filters** thus modifying the filter context seen in Chapter 4. Here again, the authors recommend reading the section several times until perfectly understand it.
 
@@ -278,7 +270,7 @@ By default, PowerBI creates a hidden date table for every Time/DateTime column o
 - Pay attention to the semi-additive measures, which can be cumbersome. For example, a bank account balance: it's not the sum of all the rows in the previous period, but the value at the end of the month! The suggestion is to use `LASTDATE` and `LASTNONBLANK` to calculate the balance on the last available day, without messing up with the row context.
 - `STARTOFYEAR, STARTOFQUARTER, STARTOFMONTH, ENDOFYEAR, ENDOFQUARTER, ENDOFMONTH` are mostly used for financial data, see the stock chart example
 
-## 9 ❓Calculations Group
+## 9 ❓ Calculations Group
 
 They are a great way for grouping similar measures, but they currently have a great problem: they are not available on PowerBI, but you have to use the Tabular model underneath with [Tabular Editor](https://tabulareditor.github.io/), which is a new tool. I won't talk about them here because I found groups more complicated than useful in my case, even if I acknowledge their potentialities. Eventually, read the chapter again when you'll notice many similar, repeated measures.
 
@@ -303,7 +295,7 @@ Data lineage ([simply explained here](https://www.sqlbi.com/articles/understandi
 
 E.g. having an intermediate table created manually like `NewTable = {’Red’,’Blue’}`, it can't possibly know to be originated from the column `Product[Color]`, losing all the original relationships. A slicer using NewTable won't filter anything! With `TREATAS` you can forcefully assign another table's characteristics (they must have the same structure of course!). Another good example is when you're creating a table with custom years and you want to use it as a Date table, applying a personalized filter without iterating. Check them out.
 
-## 11 ❓Handling hierarchies
+## 11 ❓ Handling hierarchies
 
 Hierarchies aren't natively supported on DAX formulas, thus implementing them can be very tricky. A classic example is when a measure behaves differently based on the active hierarchy, for example with product categories and subcategories. In the book's example, a combination of  `PercOnSubcategory := DIVIDE ( [Sales Amount], CALCULATE ( [Sales Amount], ALLSELECTED ( Product[Product Name] ) ) )` is used for calculating the percentage of each subcategory compared to all the rows of the selected category. Changing the element in the hierarchy can be done by replacing the argument in `ALLSELECTED` (Category, Product Name, etc...).
 
@@ -336,7 +328,7 @@ A common question is about the differences between `FILTER` (which returns a tab
 - `DATATABLE` is a more advanced table constructor; it has a more complex syntax since it requires specifying the type of each column, and you usually use it for hard-coded simple tables. I prefer making them in SQL, so I doubt I'll use the function frequently.
 - `GENERATESERIES` is like the `range` function: it returns a sequence of elements (dates, numbers) from the starting and ending parameters
 
-## 13 ✨Authoring Queries
+## 13 ✨ Authoring Queries
 
 Here we explore DAX Studio, very useful for testing, formatting and debugging DAX queries. A must-have. Since this article is becoming very long, I recommend watching some Youtube Tutorials like this [one](https://www.youtube.com/watch?v=qeelmG7jcnc) or this [one](https://www.youtube.com/watch?v=fV2ZK4q3FBQ) to save time. It's simpler than writing down everything that is presented in the chapter.
 
@@ -390,7 +382,7 @@ These functions can become extremely cumbersome, especially when used inside a `
 - Every column of a table has its own data lineage, which is actually its representation on the data model. Whenever a filter acts, it works on the corresponding column in the model. Thus, if you lose the data lineage you won't be able to filter. You have to use `TREATAS` to 'teach' the item about his lost position in the data model and force it back
 - Usually functions for grouping data keep the data lineage; filters with an aggregation generate a new one; same for `ROW` and `ADDCOLUMNS` (see examples)
 
-## 15 ⚠ Advanced Relationship
+## 15 ⚠️ Advanced Relationship
 
 ### Calculated Physical Relationships
 
@@ -485,19 +477,19 @@ With DAX Studio it is possible to analyze all the queries we are making through 
 
 ### Plans
 
-1. DAX
+- DAX
 
 ![DAX](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_14.png)
 
-2. Logical Query Plan: it's still easy to trace back its relationship with the original DAX version. In this case, it corresponds to “Create a table with a column named Value, filled with the content of a SUM operation, performed by the storage engine by scanning the Quantity column in the Sales table.”
+- Logical Query Plan: it's still easy to trace back its relationship with the original DAX version. In this case, it corresponds to “Create a table with a column named Value, filled with the content of a SUM operation, performed by the storage engine by scanning the Quantity column in the Sales table.”
 
 ![Logical Query Plan](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_15.png)
 
-3. Physical Query Plan: it looks similar to the Logical Tree, but it goes deeper, with different operators and a more complex structure, difficult to interpret. Some important details are hidden here though! Pay attention to ProjectionSpool, which shows the number of records picked up by the engine from the DB with a SQL query. Being the step a single thread and using memory, it could be a bottleneck
+- Physical Query Plan: it looks similar to the Logical Tree, but it goes deeper, with different operators and a more complex structure, difficult to interpret. Some important details are hidden here though! Pay attention to ProjectionSpool, which shows the number of records picked up by the engine from the DB with a SQL query. Being the step a single thread and using memory, it could be a bottleneck
 
 ![Physical Query Plan](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_16.png)
 
-4. the XmSQL query generated by the Storage Engine's ProjectionSpool, which is what the database will receive as input. This is just the SQL conversion of the previous step, you can't intervene
+- the XmSQL query generated by the Storage Engine's ProjectionSpool, which is what the database will receive as input. This is just the SQL conversion of the previous step, you can't intervene
 
 ![XmSQL](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_17.png)
 
