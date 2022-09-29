@@ -196,6 +196,7 @@ Unfortunately, the CT doesn’t filter a single row but works with unique values
 
 ![Wrong formula](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_2.png)
 ![Wrong formula Results](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_3.png)
+
 *Wrong formula: the Right Sales Amount doesn’t use `CALCULATE`*
 
 
