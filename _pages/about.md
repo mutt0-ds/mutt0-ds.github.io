@@ -8,12 +8,15 @@ redirect_from:
   - /about.html
 ---
 
-Hi! Welcome to my personal Github.io blog, where I talk about my projects 😊🎉
+Hi! Welcome to my blog, where I talk about my projects 😊🎉
 You can read my latest articles in the [Posts](https://mutt0-ds.github.io/year-archive/) section.
 
 ## What about me?
 
-I'm a Software Engineer currently working in the Financial industry. I consider myself to be a calm, organized and curious person, always looking fow new things to learn.
+I'm a Software Engineer with experience in the IT & Financial fields. I consider myself a calm, organized and curious person, always looking for new things to learn.
+
+Focused on Data Visualization and Machine Learning, I'm a big fan of data-driven environments. 
+That's why I document everything with [Notion](https://www.notion.so/), and I'm doing my best for contributing to the open-source [Python Notion SDK](https://github.com/ramnes/notion-sdk-py).
 
 ## My current stack
 
