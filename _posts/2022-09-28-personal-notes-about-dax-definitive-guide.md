@@ -310,7 +310,7 @@ There are very advanced examples here, I wouldn't recommend them unless they are
 
 ### Exploring CALCULATETABLE
 
-A common question is about the differences between `FILTER` (which returns a table) and `CALCULATETABLE` (which is like `CALCULATE` but with a table). The latter is very powerful: it changes the context filter first and then calculates the expression; `FILTER` iterates the table and groups together the rows that are included in the filter **without changing the context**. You should use `CALCULATETABLE` whenever you want a context transition, but there's a limit: it must be applied only on columns that belong to the data model; with measures, `FILTER` becomes necessary. E.g. (`Large Customers = FILTER ( Customer, [Sales Amount] > 1000000)`). More info about performances [here](https://www.sqlbi.com/articles/filter-vs-calculatetable-optimization-using-cardinality-estimation/)
+A common question is about the differences between `FILTER` (which returns a table) and `CALCULATETABLE` (which is like `CALCULATE` but with a table). The latter is very powerful: it changes the context filter first and then calculates the expression; `FILTER` iterates the table and groups together the rows that are included in the filter **without changing the context**. You should use `CALCULATETABLE` whenever you want a context transition, but there's a limit: it must be applied only on columns that belong to the data model; with measures, `FILTER` becomes necessary. E.g. (`Large Customers = FILTER ( Customer, [Sales Amount] > 1000000)`). More info about performances [here](https://www.sqlbi.com/articles/filter-vs-calculatetable-optimization-using-cardinality-estimation/).
 
 ### Functions for manipulating tables
 
@@ -394,9 +394,9 @@ When using calculated columns for creating relationships (e.g. the `DiscountDayK
 
 ### Virtual Relationships
 
-Sometimes it's creating a relation inside the DAX query is simpler, without setting it up in the data model. It's the same for the final user. However, they are less performant, hard to find in the codebase and more complex to handle.
+Sometimes creating a relation inside the DAX query is simpler, without setting it up in the data model. It's the same for the final user. However, they are less performant, hard to find in the codebase and more complex to handle.
 
-There's a nice example showing how to transfer a filter with `KEEPFILTERS**(**TREATAS)` (and maybe `SUMMARIZE` first for extracting the columns we need), then doing the calculations with the same filters applied on the new table; remember to use `KEEPFILTERS` or `TREATAS` will reset them!
+There's a nice example showing how to transfer a filter with `KEEPFILTERS(TREATAS)` (and maybe `SUMMARIZE` first for extracting the columns we need), then doing the calculations with the same filters applied on the new table; remember to use `KEEPFILTERS` or `TREATAS` will reset them!
 
 ### Relationships
 
@@ -420,7 +420,7 @@ Short chapter with a couple of interesting use cases, I liked the first and the 
 - Working days between two dates: it shows some strategies like creating a boolean 'Is Holiday' in the Date Table and counting days while skipping the ones with 'Is Holiday' == False, or, for reducing iterations, groups all orders by date pairs. Read the code in the examples, you'll learn a lot. The best solution is a calculated table with all the distinct combinations, which greatly reduces the iterations during the scanning process.
 - Budget and Sales together: not useful in my situation. It creates a measure for every row with a month that shows the expected budget for the future (when Sales are still null), or the past Sales. It uses `KEEPFILTERS` with a cool trick with Max Date for reducing iterations
 - Computing same-store sales: not useful, the example describes a measure for considering the sales on the multi-year total only if the store was open on that specific year
-- Numbering events: it can be valuable because if you try to brute-force this one you'll have a bad time. The author wants to number the rows of a table based on the occurrences of the customer's name (so the rows will be 1 Jon 33$, 2 Jon 34$, 1 Bob 2$, 1 Sam 4$, 2 Sam 5$ etc...). The right tool is `RANKX` with a `customerkey = currentCustomerKey` filter, very effective.
+- Numbering events: it can be valuable because if you try to brute-force this one you'll have a bad time. The author wants to number the rows of a table based on the occurrences of the customer's name (so the rows will be 1 Jon 33 \$, 2 Jon 34 \$, 1 Bob 2 \$, 1 Sam 4 \$, 2 Sam 5 \$ etc...). The right tool is `RANKX` with a `customerkey = currentCustomerKey` filter, very effective.
 - Computing LY YTD: very useful, I've already challenged this one in the past. It uses a `TREATAS` to keep the data lineage, then `SAMEPERIODLASTYEAR`
 
 ## 17 ✨ The DAX Engine
