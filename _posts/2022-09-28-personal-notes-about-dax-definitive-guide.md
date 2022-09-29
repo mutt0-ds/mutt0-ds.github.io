@@ -12,6 +12,8 @@ tags:
 ---
 Disclaimer: this will be a long, long post, written in my own way. It’s essentially a dump of my personal notes, taken when reading [“The Definitive Guide to DAX”](https://www.sqlbi.com/books/the-definitive-guide-to-dax-2nd-edition/) written by **Alberto Ferrari** and **Marco Russo**. At my new workplace I’m going to use PowerBI and DAX a lot, thus my boss suggested me to read the book.
 
+![cover](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/cover.jpg)
+
 Yep, it is big and very technical, with 700+ pages rich in contents, but trust me, that’s the “Bible”, a must-read for anyone willing to work with PowerBI and DAX. There’s everything you need, from the basics commands to the most advanced functions, with complex topics such as context transition, query plan, and storage engine. Many examples, in addition, apart from explaining every concept introduced in the book (which focuses a lot on giving clear, practical explanations) explore edge cases that gave me lots of headaches in the past. Further examples and insights can be found on the authors’ site [SQLBI](https://www.sqlbi.com/). 
 
 It took me several weeks for finishing it, but I felt extremely prepared after the experience and grateful for such a useful resource that will be fundamental in my future. The authors did a terrific job and I am happy to support them and share a positive feedback of their work on my blog. Knowing that my memory is terrible I took accurate notes of everything I found interesting and what I have to read again. I hope it will help you as well!
