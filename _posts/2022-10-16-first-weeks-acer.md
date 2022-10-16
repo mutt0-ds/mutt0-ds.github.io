@@ -2,8 +2,6 @@
 title: "My first weeks at Acer Europe"
 date: 2022-10-16
 permalink: /posts/2022/10/first-weeks-acer/
-header:
-  teaser: "acer.png"
 tags:
   - acer
   - power-bi
@@ -13,24 +11,21 @@ tags:
 This is mostly a post for my future self, when I will think about my first days and weeks at my current workplace and ask to myself: "How was I feeling like when I began?".  
 Note: I'm working at Acer EMEA HQ, so when I mention "*Acer*", for simplicity, I mean "*Acer Europe*".
 
-<!-- ![cover](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/acer.png) -->
+![cover](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/acer.png)
 
 ## 💭 My expectations
 
-Since my previous big experience was in a smaller company working in a non-IT sector, I had a lot of changes in front of me:
-- An organization with thousands of employees and decaded of history
-- Several departments and key stakeholders to interact with
+Since my previous big experience was in a smaller company working in a non-IT sector, I was expecting the following scenario:
+
+- An organization with thousands of employees and decades of history
+- Several departments and key stakeholders to interact with, each one with specific priorities
 - A huge IT department where I'm the youngest member here
 - New technologies to discover: in particular, I've never worked with most of the Azure tools we are using
 - A whole new level of complexity
 
-I wasn't particularly worried about the previous points, as I'm happy to learn new things and I'm used to manage projects with lots of different users. Being a Business Intelligence Developer, my current tasks are mostly about managing Power BI dashboards and collecting data from some of the company's databases, more or less what I was used to do before... 
+I wasn't particularly worried about the previous points, as I'm happy to learn new things and I'm used to manage projects with lots of different users. Being a Business Intelligence Developer, my current tasks are about managing Power BI dashboards and collecting data from some of the company's databases, more or less what I was used to do before...
 
-{% note %}
-
-**🤯:** What caught me off-guard was the **scale** of Acer's IT structure!
-
-{% endnote %}
+> 🤯 What caught me off-guard was the **scale** of Acer's IT structure!
 
 - While I was used to query a DB with a few dozens tables, now I have to deep dive into hundreds (if not thousands) of tables and views.
 - While I set up a simple ETL with a few data sources and a couple of MB of data, the new process I've been shown features hundreds of queries, with different environments and edge cases to handle.
