@@ -1,6 +1,6 @@
 ---
 title: "My first weeks at Acer Europe"
-date: 2022-10-22
+date: 2022-10-16
 permalink: /posts/2022/10/first-weeks-acer/
 header:
   teaser: "acer.png"
