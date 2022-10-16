@@ -1,6 +1,8 @@
 ---
 title: "My first weeks at Acer Europe"
 date: 2022-10-22
+header:
+  teaser: "profile.png"
 tags:
   - acer
   - power-bi
