@@ -25,7 +25,7 @@ My previous experience was in a small company and a very different sector. Consi
 
 I wasn't too worried about the previous points, as I'm happy to learn new things and I'm used to managing projects with different stakeholders. Being a **Business Intelligence Developer**, my tasks were going to be about managing Power BI dashboards and collecting data from databases, more or less what I was used to doing before...
 
-![example dashboard](https://learn.microsoft.com/it-it/power-bi/create-reports/media/sample-sales-and-marketing/sales1.png)
+![example dashboard](https://learn.microsoft.com/it-it/power-bi/create-reports/media/sample-sales-and-marketing/sales1.png)  
 *Example of a typical Power BI report I work with*
 
 > 🤯 What caught me off-guard was the **scale** of Acer's IT structure!
@@ -51,7 +51,7 @@ Starting from the second week, I feel that I'm quickly getting used to my new wo
 
 Every day I feel just a bit more skilled in my tasks and many things are becoming easier and easier, in perspective, compared to a few days ago.
 
-Once I got familiar to the basics of the services we use, Azure doesn't look too confusing. For example, I had to create some PowerShell scripts to automate basic tasks and I was surprised of how little it take!
+Once I got familiar to the basics of the services we use, Azure doesn't look too confusing. For example, I had to write some PowerShell scripts to automate basic tasks and I was surprised of how little time it took me!
 
 The amount of data to explore is still overwhelming, but step after step I identified the more important tables, which are going to be used for the majority of the reports.
 
