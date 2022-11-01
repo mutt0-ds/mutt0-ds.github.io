@@ -36,7 +36,7 @@ My requisites were:
 - A [variable group](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml#create-a-variable-group) with auth variables to Power BI for the service principal (explained [here](https://github.com/gbrueckl/PowerBI.CICD#environment-variables))
 
 As Gerhard says:
-> The core idea of the solution is to use CI/CD pipelines that automatically extracts the metadata of a .pbix file as soon as it is pushed to the Git repository. To do this, the .pbix file is automatically uploaded to a Power BI Premium workspace using the Power BI REST API and the free version of Tabular Editor 2 then extracts the BIM file via the XMLA endpoint and push it back to the repository. 
+> The core idea of the solution is to use CI/CD pipelines that automatically extracts the metadata of a .pbix file as soon as it is pushed to the Git repository. To do this, the .pbix file is automatically uploaded to a Power BI Premium workspace using the Power BI REST API and the free version of Tabular Editor 2 then extracts the BIM file via the XMLA endpoint and push it back to the repository.
 
 [pipeline](https://blog.gbrueckl.at/wp-content/uploads/2022/02/PBIX_to_BIM_YAML_workflow.png)
 
@@ -147,6 +147,8 @@ This was the part that gave me lots of problems, as the original code didn't see
 
 ### 6. Extract the metadata TODO
 
+#TODO modifica la parte del get changed files
+
 The core of the Pipeline
 
 ```powershell
@@ -159,12 +161,15 @@ The core of the Pipeline
       $ErrorActionPreference = "Stop"
       # print Information stream
       $InformationPreference = "Continue"
-      $root_path = (Get-Location).Path
-      $tabular_editor_root_path = $root_path
-      Write-Information "Working Directory: $root_path"
+      
+      # install the Power BI Powershell module
       Set-PSRepository PSGallery -InstallationPolicy Trusted
       Install-Module -Name MicrosoftPowerBIMgmt -Scope CurrentUser
       Import-Module -Name MicrosoftPowerBIMgmt
+      
+      # setup
+      $root_path = (Get-Location).Path
+      $tabular_editor_root_path = $root_path
       $ind = "`t"
       $git_event_before = $env:GIT_EVENT_BEFORE
       $git_event_after = $env:GIT_EVENT_AFTER
@@ -175,17 +180,22 @@ The core of the Pipeline
       $tenant_id = $env:PBI_TENANT_ID
       $client_id = $env:PBI_CLIENT_ID
       $client_secret = $env:PBI_CLIENT_SECRET
+
+      # login to Power BI
       $login_info = "User ID=app:$client_id@$tenant_id;Password=$client_secret"
       [securestring]$sec_client_secret = ConvertTo-SecureString $client_secret -AsPlainText -Force
       [pscredential]$credential = New-Object System.Management.Automation.PSCredential ($client_id, $sec_client_secret)
       Connect-PowerBIServiceAccount -Credential $credential -ServicePrincipal -TenantId $tenant_id
 
-      
+      # accessing the workspace
       $workspace = Get-PowerBIWorkspace -Id $workspace_id
       Write-Information "Power BI Workspace: `n$($workspace | ConvertTo-Json)"
       if (-not $workspace.IsOnDedicatedCapacity) {
         Write-Error "The provided Workspace ID ($($workspace.id)) is not on Premium Capacity!"
       }
+
+      # very important: finding the modified files with git diff
+      # it has to be triggered by a push to the repo
       Write-Information "Triggered By: $triggered_by"
       Write-Information "Getting changed .pbix files ..."
       if ($triggered_by -like "*CI" -or $triggered_by -eq "push") {
@@ -195,18 +205,18 @@ The core of the Pipeline
         $pbix_files = $pbix_files | ForEach-Object { Join-Path $root_path $_ | Get-Item }
         if ($pbix_files.Count -eq 0) {
           Write-Warning "Something went wrong! Could not find any changed .pbix files using the above 'git diff' command!"
-          Write-Information "Getting all .pbix files in the repo to be sure to get all changes!"
+          
           # get all .pbix files in the current repository
+          # disable these lines if you don't want the feature
+          Write-Information "Getting all .pbix files in the repo to be sure to get all changes!"
           $pbix_files = Get-ChildItem -Path (Join-Path $root_path $manual_trigger_path_filter) -Recurse -Filter "*.pbix" -File
         }
-      }
-      elseif ($triggered_by -eq "Manual" -or $triggered_by -eq "workflow_dispatch") {
-        # get all .pbix files in the current repository
-        $pbix_files = Get-ChildItem -Path (Join-Path $root_path $manual_trigger_path_filter) -Recurse -Filter "*.pbix" -File
       }
       else {
         Write-Error "Invalid Trigger!"
       }
+
+
       Write-Information "Changed .pbix files ($($pbix_files.Count)):"
       $pbix_files | ForEach-Object { Write-Information "$ind$($_.FullName)" }
       # we need to set Serialization Options to allow export to Folder via TE2
@@ -233,6 +243,8 @@ The core of the Pipeline
       $serialization_options | Out-File (Join-Path $tabular_editor_root_path "TabularEditor_SerializeOptions.json")
       "Model.SetAnnotation(""TabularEditor_SerializeOptions"", ReadFile(@""$(Join-Path $tabular_editor_root_path "TabularEditor_SerializeOptions.json")""));" `
         | Out-File (Join-Path $tabular_editor_root_path "ApplySerializeOptionsAnnotation.csx")
+      
+      # for each .pbix modified extract metadata with Tabular Editor
       foreach ($pbix_file in $pbix_files) {
         $report = $null
         $dataset = $null
@@ -247,12 +259,14 @@ The core of the Pipeline
           else {
             Write-Information "$ind Datamodel found!"
           }
+
+          # upload the file with the dataset to the Premium workspace
           $temp_name = "$($pbix_file.BaseName)-$(Get-Date -Format 'yyyyMMddTHHmmss')"
           Write-Information "$ind Uploading $($pbix_file.FullName.Replace($root_path, '')) to $($workspace.Name)/$temp_name ... "
           $report = New-PowerBIReport -Path $pbix_file.FullName -Name $temp_name -WorkspaceId $workspace.Id
           Start-Sleep -Seconds 5
-          Write-Information "$ind$ind Done!"
-          Write-Information "$ind Getting PowerBI dataset ..."
+          
+          # retrieving the uploaded data
           $dataset = Get-PowerBIDataset -WorkspaceId $workspace.Id | Where-Object { $_.Name -eq $temp_name }
           $connection_string = "powerbi://api.powerbi.com/v1.0/myorg/$($workspace.Name);initial catalog=$($dataset.Name)"
           Write-Information "$ind Extracting metadata ..."
@@ -299,7 +313,11 @@ The core of the Pipeline
 
 ### 7. Push the Metadata to the Git repository TODO
 
-```shell
+The final step is to push the .json metadata extracted by Tabular Editor to the repo. The script uses the name and email of the original committer and mentions the original id in the message, to avoid confusion.
+
+#TODo cambia mssaggio
+
+```bat
 - task: CmdLine@2
   displayName: Push PBIX metadata to Git repo
   inputs:
