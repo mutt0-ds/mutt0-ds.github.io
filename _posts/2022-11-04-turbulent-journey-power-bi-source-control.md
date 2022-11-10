@@ -13,7 +13,8 @@ tags:
 ---
 One of the most annoying issues I have when working with Power BI files is that source control is a real pain.
 Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly complicated solutions... But that day seems still far in the future.
-Here is a story about how I managed to set up a CI/CD pipeline through Azure DevOps Pipeline for providing rudimental version control of our Power BI reports. Hopefully, I will have to update it in the future as a deprecated solution.
+
+Here is a story about how I managed to set up a CI/CD pipeline through Azure DevOps Pipeline for providing rudimental version control of our Power BI reports.
 
 ![cover](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/title.jpg)
 
@@ -29,7 +30,7 @@ While textual formats like markdown or .json can be compared using an editor, bi
 
 Many people have tried to tackle the problem, in particular, [Kerksi](https://www.kerski.tech/bringing-dataops-to-power-bi-part10/
 ) and [Gerhard Brueckl](https://blog.gbrueckl.at/). I'm very thankful for their precious resources.
-Also, I have to thank the creators of Tabular Editor, an open-source tool that offers several functionalities, including extracting the metadata of a .pbix files into .json files, transforming the binary file into a textual format.
+Also, I have to thank the creators of [Tabular Editor](https://tabulareditor.com/), an open-source tool that offers several functionalities, including extracting the metadata of a .pbix files into .json files, transforming the binary file into a textual format.
 
 The main source for this article is [this amazing blog post from Gerhard Brueckl](https://blog.gbrueckl.at/2022/02/automating-the-extraction-of-bim-metadata-from-pbix-files-using-ci-cd-pipelines/). The code I used mostly comes from his [Github repository](https://github.com/gbrueckl/PowerBI.CICD), with a few tweaks I personally added. I recommend reading its README for the more technical details and the environment variables needed for authentication. You may be interested in [his Github Action version](https://github.com/gbrueckl/PowerBI.CICD/blob/main/.github/workflows/pbix_to_bim.yml), which doesn't require Azure.
 
@@ -52,9 +53,9 @@ In short, the pipeline retrieves the commit id of the latest two commits in the 
 
 ## 💬 The code [Step by Step]
 
-Be free to skip this section if you are not interested in the details about the code, which is fully available here (ADD). I'm trying to keep things simple for newbies like me so I  documented every step.
+Be free to skip this section if you are not interested in the details about the code, which is fully available [here](https://github.com/mutt0-ds/powerbi-source-control-pipeline/tree/main). I'm trying to keep things simple for newbies like me so I  documented every step.
 
-First, a simple introduction to Azure Pipelines.
+First, a simple introduction to [Azure Pipelines](https://www.reddit.com/r/csharp/comments/this0y/eli5_cicd_with_azure_devops/).
 An Azure Pipeline is composed of a setup part and different steps. The code is executed in a VM (in my case, hosted by Microsoft) triggered after every commit, which doesn't basically anything about the context. This is good because the code is always executed in a neutral environment, but also requires to install modules every time and complicates some (in theory) simple steps, especially when using git.
 
 ### 1. Setup
