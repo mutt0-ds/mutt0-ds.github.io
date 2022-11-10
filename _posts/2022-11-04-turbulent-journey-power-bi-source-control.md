@@ -19,9 +19,11 @@ Here is a story about how I managed to set up a CI/CD pipeline through Azure Dev
 
 ## ❓ The problem
 
-.pbix files are binary, so it is impossible to compare them using an IDE like textual files. This results in a confusing situation where we have to document what exactly has been changed after every update, losing the powerful features available with git. So, lots of time wasted, plus insecurity and confusion.
+While textual formats like markdown or .json can be compared using an editor, binary formats like .pbix are not supported, being binary files. This results in a confusing situation where we have to document what exactly has been changed after every update, losing the powerful features available with git. So, lots of time wasted, plus insecurity and confusion.
 
 ![binary](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/binary.png)
+
+![working-git](https://code.visualstudio.com/assets/docs/sourcecontrol/overview/overview.png)
 
 ## 🙏 Acknowledgments
 
