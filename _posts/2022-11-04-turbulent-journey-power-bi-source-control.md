@@ -1,6 +1,6 @@
 ---
-title: "A turbulent journey through Power BI source control (feat. Azure DevOps Pipeline & Tabular Editor 2)"
-date: 2022-11-04
+title: "A turbulent journey through Power BI source control"
+date: 2022-11-07
 permalink: /posts/2022/11/turbulent-journey-power-bi-source-control/
 tags:
   - source-control
@@ -11,48 +11,55 @@ tags:
   - tabular-editor
   - azure
 ---
-One of the most annoying issues I have when working with Power BI files is that source control is a real pain. 
-Considering that Microsoft owns Azure, Github and Power BI, one would hope that they will came up with a solution for comparing two reports without using third-party tools or (read more) overly complicate solutions, but that day seems still far in the future.
-This is a story about how I managed to set up a CI/CD pipeline through Azure DevOps Pipeline for providing a rudimental version control of our Power BI reports. Hopefully I will have to update it in the future as a deprecated solution.
+One of the most annoying issues I have when working with Power BI files is that source control is a real pain.
+Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly complicated solutions... But that day seems still far in the future.
+Here is a story about how I managed to set up a CI/CD pipeline through Azure DevOps Pipeline for providing rudimental version control of our Power BI reports. Hopefully, I will have to update it in the future as a deprecated solution.
 
-## The problem
+![cover](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/title.jpg)
 
-[ADD PHOTO]
-.pbix files are binary, thus it is impossible to compare them using an IDE like I was used to when coding. This results in lots of confusin as we have to ask to users what exactly they have changed when updating their reports. We can't risk merging a version that may have been created months before. So, lots of time wasted, plus insecurity and confusion.
+## ❓ The problem
+
+.pbix files are binary, so it is impossible to compare them using an IDE like textual files. This results in a confusing situation where we have to document what exactly has been changed after every update, losing the powerful features available with git. So, lots of time wasted, plus insecurity and confusion.
+
+![binary](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/binary.png)
 
 ## 🙏 Acknowledgments
 
-Let's start with the sources. I have to thank  the creators of Tabular Editor, an open-source tool that offers several functionalities, including extracting the metadata of a .pbix files into .json files, providing a classical comparable format.
+Many people have tried to tackle the problem, in particular, [Kerksi](https://www.kerski.tech/bringing-dataops-to-power-bi-part10/
+) and [Gerhard Brueckl](https://blog.gbrueckl.at/). I'm very thankful for their precious resources.
+Also, I have to thank the creators of Tabular Editor, an open-source tool that offers several functionalities, including extracting the metadata of a .pbix files into .json files, transforming the binary file into a textual format.
 
-The main source for this article is [this blog post from Gerhard Brueckl](https://blog.gbrueckl.at/2022/02/automating-the-extraction-of-bim-metadata-from-pbix-files-using-ci-cd-pipelines/). The code I used is mostly from his [Github repository](https://github.com/gbrueckl/PowerBI.CICD), with a few tweaks. I recommend reading its README for the more technical details. You may be interested in [his Github Action version](https://github.com/gbrueckl/PowerBI.CICD/blob/main/.github/workflows/pbix_to_bim.yml), which doesn't require Azure. Be warned that I didn't use it so I will only talk about the "Azure way".
+The main source for this article is [this amazing blog post from Gerhard Brueckl](https://blog.gbrueckl.at/2022/02/automating-the-extraction-of-bim-metadata-from-pbix-files-using-ci-cd-pipelines/). The code I used mostly comes from his [Github repository](https://github.com/gbrueckl/PowerBI.CICD), with a few tweaks I personally added. I recommend reading its README for the more technical details and the environment variables needed for authentication. You may be interested in [his Github Action version](https://github.com/gbrueckl/PowerBI.CICD/blob/main/.github/workflows/pbix_to_bim.yml), which doesn't require Azure.
 
-## The idea
+## 📑 Requisites
 
-My requisites were:
-
+- a .pbix file with a dataset to track with git
 - a PowerBI Premium license (and a Premium workspace already created)
-- a Azure DevOps repository for storing the files
+- an Azure DevOps repository
 - [a service principal](https://learn.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals) (an Active Directory entity with permissions to edit the Power BI Premium workspace)
 - A [variable group](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml#create-a-variable-group) with auth variables to Power BI for the service principal (explained [here](https://github.com/gbrueckl/PowerBI.CICD#environment-variables))
+
+## 💡 The idea
 
 As Gerhard says:
 > The core idea of the solution is to use CI/CD pipelines that automatically extracts the metadata of a .pbix file as soon as it is pushed to the Git repository. To do this, the .pbix file is automatically uploaded to a Power BI Premium workspace using the Power BI REST API and the free version of Tabular Editor 2 then extracts the BIM file via the XMLA endpoint and push it back to the repository.
 
-[pipeline](https://blog.gbrueckl.at/wp-content/uploads/2022/02/PBIX_to_BIM_YAML_workflow.png)
+![pipeline](https://blog.gbrueckl.at/wp-content/uploads/2022/02/PBIX_to_BIM_YAML_workflow.png)
 
-## The code [Step by Step]
+In short, the pipeline retrieves the commit id of the latest two commits in the repository, detects which .pbix files have been modified, then uploads them in the Premium Workspace. This step is needed because the Premium workspace gives access to an XMLA endpoint used by Tabular Editor to access its data. Then, the pipeline extracts all the metadata in .JSON format and pushes it to the DevOps repository.
 
-Be free to skip this section if you are not interested in the details about the code, which is the one used in [the original repo](https://github.com/gbrueckl/PowerBI.CICD), with some tweaks I had to add. I'm trying to keep things simple for newbies like me.
+## 💬 The code [Step by Step]
 
-An Azure Pipeline is composed of a setup part and different steps. The code is executed in a VM (in my case, hosted by Microsoft) initialized after every commit, which doesn't basically anything about the context.
+Be free to skip this section if you are not interested in the details about the code, which is fully available here (ADD). I'm trying to keep things simple for newbies like me so I  documented every step.
 
-For simplicty, I'm dividing the steps for each task of the pipeline.
+First, a simple introduction to Azure Pipelines.
+An Azure Pipeline is composed of a setup part and different steps. The code is executed in a VM (in my case, hosted by Microsoft) triggered after every commit, which doesn't basically anything about the context. This is good because the code is always executed in a neutral environment, but also requires to install modules every time and complicates some (in theory) simple steps, especially when using git.
 
 ### 1. Setup
 
-Here I named the pipeline, that will be triggered only when a .pbix file is commited, on all branches.
-
-The `batch` paremeter, as [badly documented by Windows](https://stackoverflow.com/questions/67099766/azure-yaml-schema-batch-trigger), has been set to false: I want to trigger the pipeline for each commit, even if more of them have been pushed in a batch.
+Here I named the pipeline, which will be triggered only when a .pbix file is committed, on all branches.
+The `batch` parameter, as [badly documented by Windows](https://stackoverflow.com/questions/67099766/azure-yaml-schema-batch-trigger), has been set to `false`: I want to trigger the pipeline for each commit, even if more of them have been pushed in a batch.
+This is not a very efficient way, but I had some issues when retrieving the commit ids using the DevOps API (step 5) so I decided to keep it simple.
 
 ```yaml
 name: Extract PBIX metadata
@@ -72,8 +79,8 @@ pool:
 
 ### 2. Variables
 
-The variable group contains the access token that can be accessed like `$env:PBI_USER_NAME`. 
-The tricky detail I had to learn is that if you flag a variable in your variable group as "Secret", [you have to esplicitedly declare it in the YAML code](https://stackoverflow.com/a/69891660), like you will see in the next steps. Otherwise there is no warning, the value will simply be null.
+The variable group contains the access token that can be accessed like `$env:PBI_USER_NAME`.
+A little, innocent detail I had to remember is that if you flag a variable in your variable group as "Secret", [you have to explicitly declare it in the YAML code](https://stackoverflow.com/a/69891660). Otherwise, there is no warning, the value will simply be null. Stupid, but tricky if you don't know that, as I know firsthand...
 
 ```yaml
 variables:
@@ -82,7 +89,7 @@ variables:
 
 ### 3. Git Checkout
 
-The pipeline is executing a `git checkout` behind the scenes by default, but I had to declare it esplicitly. The trick here is to add `persistCredentials: true` to keep the credentials for the next steps, where we will have to use git again to retrieve the commit ids... 
+The pipeline is executing a `git checkout` behind the scenes by default to retrive all the files in the repository, but I had to declare it esplicitly. The trick here is to add `persistCredentials: true` to keep the git credentials for the next steps. Otherwise (again, experienced firsthand), gut 
 
 ```yaml
 steps:
@@ -114,42 +121,46 @@ steps:
 
 ### 5. Get the Commit IDs
 
-This was the part that gave me lots of problems, as the original code didn't seem to work in case of merges or, for some reasons, was skipping some commits. It's very annoying that Azure DevOps doesn't provide a way to retrieve the git commit id preceeding the running build, so I had to use this intricate way by calling the DevOps API and then using `git log` for retrieving the previous commit.
+This was the part that gave me a bit of a headache, as the original code didn't seem to work in case of merges or, for some reason, was skipping some commits. It's very annoying that Azure DevOps doesn't provide a way to retrieve the git commit id preceding the running build, so I had to use this escamotage by calling the DevOps API and then using `git log` for retrieving the previous commit.
 
 ```powershell
 - task: PowerShell@2
-  displayName: Get GIT Commit-IDs before and after Push
+  displayName: Get the Commit IDs
   inputs:
     targetType: 'inline'
     script: |
-      # print Information stream
-      $InformationPreference = "Continue"
-      $headers = @{ Authorization = "Bearer $env:SYSTEM_ACCESSTOKEN" }
-      $uri = "$env:SYSTEM_TEAMFOUNDATIONSERVERURI$env:SYSTEM_TEAMPROJECT/_apis/build/builds/$($env:BUILD_BUILDID)/changes?api-version=5.1"
+    # print Information stream
+    $InformationPreference = "Continue"
 
-      # calling the DevOps API
-      $changes = Invoke-RestMethod -Method Get -Headers $headers -Uri $uri
-      if ($changes.count -gt 0) {
-          $commit_id_before = # TODO metti codice
-          $commit_id_after = $changes.value[0].id
+    $headers = @{ Authorization = "Bearer $env:SYSTEM_ACCESSTOKEN" }
+    $uri = "$env:SYSTEM_TEAMFOUNDATIONSERVERURI$env:SYSTEM_TEAMPROJECT/_apis/build/builds/$($env:BUILD_BUILDID)/changes?api-version=5.1"
+    # API Call to DevOps API to retrieve changes
+    $changes = Invoke-RestMethod -Method Get -Headers $headers -Uri $uri
 
-          # setting the value as environment variable
-          Write-Host "##vso[task.setvariable variable=GIT_EVENT_BEFORE]$commit_id_before^!"
-          Write-Host "##vso[task.setvariable variable=GIT_EVENT_AFTER]$commit_id_after"
-      }
-      else {
+    if ($changes.count -gt 0) {
+        # the first commit of the list is the one that triggered the pipeline
+        $commit_id_after = $changes.value[0].id
+        # using git for retrieving the preceeding commit
+        $commit_id_before = @($(git log --pretty=%P -n 1 $commit_id_after --max-count=1 --max-parents=1))
+
+        Write-Information "Commit ID before push: $commit_id_before"
+        Write-Information "Commit ID after push:  $commit_id_after"
+
+        # this sets the value as environment variable
+        Write-Host "##vso[task.setvariable variable=GIT_EVENT_BEFORE]$commit_id_before"
+        Write-Host "##vso[task.setvariable variable=GIT_EVENT_AFTER]$commit_id_after"
+    }
+    else {
         Write-Warning "No changes found in Build $($env:BUILD_BUILDID)"
-      }
-    pwsh: true
-  env: # we need to declare the secret environment variable
-    SYSTEM_ACCESSTOKEN: $(System.AccessToken)
+    }
+  pwsh: true
 ```
 
-### 6. Extract the metadata TODO
+![git](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/git.png)
 
-#TODO modifica la parte del get changed files
+### 6. Extract PBIX Metadata
 
-The core of the Pipeline
+The core of the Pipeline, which requires the MicrosoftPowerBIMgmt Powershell module, the credentials for logging in Power BI and then calling the Premium Workspace endpoint for extracting data using Tabular Editor.
 
 ```powershell
 - task: PowerShell@2
@@ -207,7 +218,7 @@ The core of the Pipeline
           Write-Warning "Something went wrong! Could not find any changed .pbix files using the above 'git diff' command!"
           
           # get all .pbix files in the current repository
-          # disable these lines if you don't want the feature
+          # disable these lines if you don't want this feature
           Write-Information "Getting all .pbix files in the repo to be sure to get all changes!"
           $pbix_files = Get-ChildItem -Path (Join-Path $root_path $manual_trigger_path_filter) -Recurse -Filter "*.pbix" -File
         }
@@ -311,32 +322,47 @@ The core of the Pipeline
     pwsh: true  
 ```
 
-### 7. Push the Metadata to the Git repository TODO
+![extraction](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/extraction.png)
 
-The final step is to push the .json metadata extracted by Tabular Editor to the repo. The script uses the name and email of the original committer and mentions the original id in the message, to avoid confusion.
+### 7. Push the Metadata to the Git repository
 
-#TODo cambia mssaggio
+The final step is to push the .json metadata extracted by Tabular Editor to the repository. The script uses the name and email of the original committer and mentions the original id in the message for keeping things clear.
+
+If you get a `GenericContribute` permission error, remember to add the service principal account as Contributor as shown [here](https://stackoverflow.com/a/56542631).
 
 ```bat
 - task: CmdLine@2
-  displayName: Push PBIX metadata to Git repo
-  inputs:
-    script: |
-      SET _full_branch_name=$(Build.SourceBranch)
-      SET _full_branch_name=%_full_branch_name:refs/heads/=%
-      echo Branch Name: %_full_branch_name%
-      git config --global user.name '$(Build.RequestedFor)'
-      git config --global user.email '$(Build.RequestedForEMail)'
-      git checkout %_full_branch_name%
-      git stash
-      git pull
-      git stash apply
-      git add **/*.json
-      git status --porcelain
-      git commit -am "Automated extracton of metadata from PBIX - original changes by $(Build.RequestedFor) \n[skip ci]"
-      git push origin HEAD:%_full_branch_name%
+    displayName: Push PBIX metadata to Git repo
+    inputs:
+      script: |
+        SET _full_branch_name=$(Build.SourceBranch)
+        SET _full_branch_name=%_full_branch_name:refs/heads/=%
+        SET _commit_message="🤖 PBIX Metadata Extraction for #%GIT_EVENT_AFTER% $(Build.RequestedFor) [skip ci]"
+
+        git config --global user.name '$(Build.RequestedFor)'
+        git config --global user.email '$(Build.RequestedForEMail)'
+        git checkout %_full_branch_name%
+        git stash
+        git pull
+        git stash apply
+        git add **/*.json
+        git status --porcelain
+        git commit -am %_commit_message%
+        git push origin HEAD:%_full_branch_name%
 ```
 
-## Conclusions
+## 🔚 Conclusions
 
-#TODO di di pbi tools che però non e' containerizzabile
+![commit](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/commit.png)
+
+Keeping track of the changes inside Power BI files is still a painful process at the moment, and I sincerely hope that Microsoft will soon find a solution to the issue.
+
+![result](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/result.png)
+
+The method I set up is working if the report contains a dataset and something has changed in the schema and the measures, but unfortunately it still can't detect visual changes, which is the most common cause of confusion, especially when users begin messing around with bookmarks and filters. Since many of our reports are using external datasets as source, they are untracked by the system.
+
+The only solution currently available is [pbi-tools](https://pbi.tools/cli/), which is unfortunately unusable in a pipeline as it requires a Power BI Desktop instance on the VM (we can't use the Core edition for extracting metadata). From [what I could find](https://community.powerbi.com/t5/Desktop/docker/m-p/426116), containerizing the app is not a suitable solution, but I'm keeping an eye on [an open issue on Github](https://github.com/pbi-tools/pbi-tools/issues/176) that could be the final solution.
+
+In that case, we could just import the correct VM Image with the pre-installed pbi-tools, extract the metadata and commit the changes in a few steps (and I'll be happy to update the guide).
+
+For now, be free to adapt my solution if it suits your needs!
