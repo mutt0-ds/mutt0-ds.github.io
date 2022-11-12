@@ -28,7 +28,7 @@ While textual formats like markdown or .json can be compared using an editor, bi
 
 ## 🙏 Acknowledgments
 
-Many people have tried to tackle the problem, in particular, [Kerksi](https://www.kerski.tech/bringing-dataops-to-power-bi-part10/
+Many people have tried to tackle the problem, in particular, [Kerski](https://www.kerski.tech/bringing-dataops-to-power-bi-part10/
 ) and [Gerhard Brueckl](https://blog.gbrueckl.at/). I'm very thankful for their precious resources.
 Also, I have to thank the creators of [Tabular Editor](https://tabulareditor.com/), an open-source tool that offers several functionalities, including extracting the metadata of a .pbix files into .json files, transforming the binary file into a textual format.
 
