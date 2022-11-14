@@ -37,7 +37,7 @@ The main source for this article is [this amazing blog post from Gerhard Brueckl
 ## 📑 Requisites
 
 - a .pbix file with a dataset to track with git
-- a PowerBI Premium license (and a Premium workspace already created)
+- a PowerBI Premium per User license (and a Premium workspace already created)
 - an Azure DevOps repository
 - [a service principal](https://learn.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals) (an Active Directory entity with permissions to edit the Power BI Premium workspace)
 - A [variable group](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml#create-a-variable-group) with auth variables to Power BI for the service principal (explained [here](https://github.com/gbrueckl/PowerBI.CICD#environment-variables))
