@@ -92,7 +92,7 @@ variables:
 
 ### 3. Git Checkout
 
-The pipeline is executing a `git checkout` behind the scenes by default to retrive all the files in the repository, but I had to declare it esplicitly. The trick here is to add `persistCredentials: true` to keep the git credentials for the next steps. Otherwise (again, experienced firsthand), gut 
+The pipeline is executing a `git checkout` behind the scenes by default to retrive all the files in the repository, but I had to declare it esplicitly. The trick here is to add `persistCredentials: true` to keep the git credentials for the next steps.
 
 ```yaml
 steps:
