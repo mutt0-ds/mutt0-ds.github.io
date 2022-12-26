@@ -9,9 +9,9 @@ tags:
   - coverage
   - pytest
 ---
-There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously not fun activities for many developers 😫.
+There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously not fun activities for many developers 😫
 
-Luckily, we are all unique in our own way and I decided to contribute to [the testing module](https://codecov.io/github/ramnes/notion-sdk-py) one of my favorite libraries, [notion-sdk-py](https://github.com/ramnes/notion-sdk-py).
+Luckily, we are all unique in our own way and I decided to contribute to [the testing module](https://codecov.io/github/ramnes/notion-sdk-py) of one of my favorite libraries, [notion-sdk-py](https://github.com/ramnes/notion-sdk-py).
 
 ![title](https://github.com/mutt0-ds/mutt0-ds.github.io/blob/master/images/notion_coverage/title.png?raw=true)
 
@@ -28,7 +28,8 @@ Tests are important for making sure that the code does what's expected to do, by
 Writing tests is not enough: coverage (ideally) plays an important part. The idea is to count the percentage of lines of code that are executed during test runs. The higher percentage of code is covered, the more likely the program does what it’s supposed to.
 
 At least, in theory: [a 100% coverage doesn't mean anything if the tests aren't good](https://www.google.com/search?q=a+100%25+coverage+doesn%27t+mean+anything), as it's surprisingly easy to write meaningless tests that increase coverage but aren't really improving anything.
-Achieving a 100% coverage should not be considered the one and only objective, yet improving it is a noble and useful challenge: as you will see, there is a lot to learn...
+
+>Achieving a 100% coverage should not be considered the one and only objective, yet improving it is a noble and useful challenge: as you will see, there is a lot to learn...
 
 Example: I have a simple function that checks if a number is positive (True) or zero/negative (False), printing out a statement.
 
@@ -57,10 +58,10 @@ def test_number_sign_detector():
 
 ![test_passes](https://github.com/mutt0-ds/mutt0-ds.github.io/blob/master/images/notion_coverage/pytest_example.png?raw=true)
 
-100% of the tests (1/1 🤗) will pass so, in theory my function is solid... Isn't it?
+100% of the tests (1/1 🤗) passed, in theory my function is solid... Isn't it?
 
 Well, it could be better.
-The coverage is 66% because I am not considering all the edge cases that can happen: in this case, if num is a zero.
+The coverage is 78% because I didn't consider all the cases that can happen: in this case, if `num==0`.
 
 Luckily, pytest has an option for saving an interactive coverage report with the command `pytest --cov=./path/src/folder --cov-report=term-missing --cov-report=html` where I can quickly see which lines are covered by the tests.
 
