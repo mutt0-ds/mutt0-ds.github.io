@@ -9,9 +9,13 @@ tags:
   - coverage
   - pytest
 ---
-There is something bizarre with me if two of my favourite activities are writing documentation and test, which are notoriously not fun activities for the many developers. Luckily, we are all unique in our own way and I decided to contribute to the testing module one of my favorite libraries, notion-sdk-py.
+There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously not fun activities for many developers 😫.
 
-Being [a certified Notion user](https://www.credly.com/badges/f15407b3-5fa8-4d9b-99cf-d862399a1543/public_url), I use it on a daily basis, and the library helps me automatically organize my notes. I even used it for custom bots and documentation. If you don't know [the tool](https://www.notion.so/) yet, I recommend trying it out: it may be a bit more complex compared to a classic note Editor like Google Notes or Evernote, but its potential is huge.
+Luckily, we are all unique in our own way and I decided to contribute to [the testing module](https://codecov.io/github/ramnes/notion-sdk-py) one of my favorite libraries, [notion-sdk-py](https://github.com/ramnes/notion-sdk-py).
+
+![title](https://github.com/mutt0-ds/mutt0-ds.github.io/blob/master/images/notion_coverage/title.png?raw=true)
+
+Being [a certified Notion user](https://www.credly.com/badges/f15407b3-5fa8-4d9b-99cf-d862399a1543/public_url), I use it on a daily basis, and the library helps me automatically organize my notes. I even used it for custom bots and documentation. If you don't know [the tool](https://www.notion.so/) yet, I recommend trying it out: it may be a bit more complex compared to a classic note editor like Google Keep or Evernote, but its potential is huge.
 
 For better understanding this article, just keep in mind that Notion is like a wiki: each page is an element, which contains several blocks that could be paragraphs, tables (called databases), subpages or links to other pages. Just like Wikipedia, each Notion element has a unique ID.
 
@@ -19,11 +23,12 @@ For better understanding this article, just keep in mind that Notion is like a w
 
 ## 🔍 Brief introduction to testing and coverage
 
-Tests are important for making sure that the code does what's expected to do, by creating functions that simulate common (and uncommon) cases to make sure that the behaviour is always coherent with our expectations. For example, in notion-sdk-py the tests have to create a new page, update its metadata, delete it, compare that all the requests are working. I'm using [pytest](https://docs.pytest.org/en/6.2.x/contents.html) in this article, which is one of the most used testing libraries in Python.
+Tests are important for making sure that the code does what's expected to do, by creating functions that simulate common (and uncommon) cases to make sure that the behaviour is always coherent with our expectations. For example, in [notion-sdk-py the tests](https://github.com/ramnes/notion-sdk-py/tree/main/tests) have to create a new page, update its metadata, delete it, compare that all the requests are working. I'm using [pytest](https://docs.pytest.org/en/6.2.x/contents.html) in this article, which is one of the most used testing libraries in Python.
 
 Writing tests is not enough: coverage (ideally) plays an important part. The idea is to count the percentage of lines of code that are executed during test runs. The higher percentage of code is covered, the more likely the program does what it’s supposed to.
 
-At least, in theory: a 100% coverage doesn't mean anything if the tests aren't good, as it's surprisingly easy to write meaningless tests that increase coverage but aren't really improving anything... It should not be considered as the main target, yet it is a noble objective to improve it.
+At least, in theory: [a 100% coverage doesn't mean anything if the tests aren't good](https://www.google.com/search?q=a+100%25+coverage+doesn%27t+mean+anything), as it's surprisingly easy to write meaningless tests that increase coverage but aren't really improving anything.
+Achieving a 100% coverage should not be considered the one and only objective, yet improving it is a noble and useful challenge: as you will see, there is a lot to learn...
 
 Example: I have a simple function that checks if a number is positive (True) or zero/negative (False), printing out a statement.
 
@@ -50,6 +55,8 @@ def test_number_sign_detector():
   assert not number_sign_detector(-1)
 ```
 
+![test_passes](https://github.com/mutt0-ds/mutt0-ds.github.io/blob/master/images/notion_coverage/pytest_example.png?raw=true)
+
 100% of the tests (1/1 🤗) will pass so, in theory my function is solid... Isn't it?
 
 Well, it could be better.
@@ -57,11 +64,11 @@ The coverage is 66% because I am not considering all the edge cases that can hap
 
 Luckily, pytest has an option for saving an interactive coverage report with the command `pytest --cov=./path/src/folder --cov-report=term-missing --cov-report=html` where I can quickly see which lines are covered by the tests.
 
-So, wrapping up: increasing coverage usually improves the quality of tests by exploring more edge cases and is generally considered a good indicator about the reliability of the code, if done well. H
+![coverage_report](https://github.com/mutt0-ds/mutt0-ds.github.io/blob/master/images/notion_coverage/coverage.png?raw=true)
 
-## ❓ The situation with the Notion API SDK
+## ❓ How can I test Notion API SDK?
 
-I must admit that in my case, creating tests wasn't easy: the majority of notion-sdk-py functions is interacting with Notion servers... Which require an API key and a Notion account with a page where run tests, since almost every element in Notion requires an ID to be queried:
+I must admit that in my case, creating tests wasn't trivial: the majority of the [functions in notion-sdk-py](https://github.com/ramnes/notion-sdk-py/blob/main/notion_client/api_endpoints.py) is interacting with Notion servers... Which require an API key and a Notion account with a page where run tests, since almost every element in Notion requires an ID to be queried:
 
 ```python
 # code for retrieving a page
@@ -74,20 +81,22 @@ print(response)
 # JSON data...
 ```
 
-These API calls were apparently a big issue for creating reliable tests, as the response depends on the server side. A big rule with tests is that they need to be as isolated as possible, minimizing any possible interference from external fasctors.
+These API calls were initially a big issue for creating reliable tests, as the response depends on the server side. A big rule with tests is that they need to be as isolated as possible, minimizing any possible interference from external fasctors.
 
 There may be a connection issue, for example, or permission issues.
 Also, if another user wants to execute the test on its pc, he needs to create a testing environment on its own Notion account with a new API key, add the necessary permissions and make sure that the environment is the same for each independent run...Painful, yet still feasible for a library maintainer.
 
 However [notion-sdk-py uses Github Actions in its CI/CD pipeline](https://github.com/ramnes/notion-sdk-py/actions) for running tests on external VMs, complicating things.
 
-Also, many Notion objects are interconnected: if I want to test a comment, I must create a block first (that the comment is referring to) and a parent page containing the block. This results is a big sequence of API calls for creating, updating and deleting objects. How can I simulate them?
+Also, many Notion objects are dependent from each other: if I want to test a comment, I must create a block first (that the comment is referring to) and a parent page containing the block. This results is a big sequence of API calls for creating, updating and deleting objects. How can I simulate them?
+
+![navigation](https://thomasjfrank.com/wp-content/uploads/2021/05/Notion-Complete-Block-Reference.gif)
 
 ## 💡 The solution: fixtures
 
 [Fixtures](https://docs.pytest.org/en/6.2.x/fixture.html) are a basic component of testing libraries: like the name says, they are "fixed" elements that are (usually) created once for session and can be used by all the tests that are needing it without calling the same function over and over again.
 
-To use a fixture, we can just add its name as an argument of the test function:
+To use a fixture, we can just add its name as an input parameter of the test function:
 
 ```python
 import pytest
@@ -132,7 +141,7 @@ def test_pages_retrieve(client, parent_page_id):
     assert response["object"] == "page"
 ```
 
-However, if you run the tests in this order (delete first), they will fail. They are sharing the same fixture, thus the `test_pages_delete` will delete the testing environment before `test_pages_retrieve` will be able of retrieving and updating its data!
+However, if you run the tests in this exact order they will fail. They are sharing the same fixture, thus the `test_pages_delete` will delete the testing environment before `test_pages_retrieve` will be able of retrieving and updating its data!
 Sure, we can change their orders, but it is better to fix the issue: each test should not be influence by the others...
 
 ## 💡💡 The upgraded solution: function-scoped fixtures
@@ -145,10 +154,10 @@ A [fixture can have the following scopes](https://betterprogramming.pub/understa
 - "class" (one object for each class)
 - "function" (one object for each test)
 
-In this case I used "session" and "function" scopes. The Notion client can be one for each session, as said before, to improve efficiency.
+In this case I used "session" and "function" scopes. The Notion client can be used once for session, as said before, to improve efficiency.
 The page_id of each test, however, must be recreated each time for granting independency and atomicity: that's when the "function" scope gets useful.
 
-It's basically a shortcut for generating a new environment page each time a test is running:
+It's basically a shortcut for generating a new environment page each time a test begins:
 
 ```python
 # long way
@@ -193,7 +202,7 @@ def test_pages_update(client, parent_page_id):
 
 By using `yield`, I can give the ID of the parent page to the test that is asking for it, and then deleting it with `client.blocks.delete` before the end, cleaning up everything and resetting the environment even in case of a failure. Before that, I was finding 20+ new subpages in my personal Notion page and cleaning them up wasn't very funny 😅
 
-The final solution in the library is a bit more complex, because from a general parent page (session-scoped), based on the type of test we can create a function-scoped subpage containing another function-scoped block, comment or database. In fact, fixtures can call other fixtures and so on. You better check out [the code](https://github.com/ramnes/notion-sdk-py/blob/main/tests/conftest.py) if you are curious.
+The final solution used the library is a bit more complex, because from a general parent page (session-scoped), depending on each case the module creates a function-scoped subpage containing another function-scoped block, comment or database. In fact, fixtures can call other fixtures and so on. You better check out [the code](https://github.com/ramnes/notion-sdk-py/blob/main/tests/conftest.py) if you are curious.
 
 There is one problem left: we still can't control the responses of the API... If the connection times out, or a user is not authenticated, the tests will fail.
 
@@ -205,7 +214,7 @@ The plugin [pytest-vcr](https://pytest-vcr.readthedocs.io/en/latest/) integrates
 
 It is highly unlikely that Notion is going to introduce disruptive changes in its API, especially in our case where we can send the desired version as parameter, we can stay pretty safe that the cassettes are reliably simulating real requests.
 
-Let's pick up again the pages_retrieve test
+Let's pick up again the pages_retrieve test:
 
 ```python
 #.. client and parent page id fixtures
@@ -256,10 +265,12 @@ A few things to highlight:
 - The test will use the stored response for all the future runs, indpendently by the user, connection, time or zone
 - If the code that makes the request changes pytest will throw an error and we will have to recreate a new cassette
 - The API Token has to be hidden (like we did [here](https://github.com/ramnes/notion-sdk-py/blob/main/tests/conftest.py#L12)) or it will be stored in plain text in the cassette!
-- A cassette can't be a fixture because the two decorators will interfere
+- A cassette can't also be a fixture because the two decorators will interfere
 
 ## 🔨 Conclusions
 
-With cassettes and fixtures [I managed to achieve 100% test coverage](https://github.com/ramnes/notion-sdk-py/pull/168) on notion-sdk-py, which was absolutely unthinkable just a few weeks before! I learned so much by contributing on the library, and this posts represents a quick sumup of my takeaways. Hopefully it will help you if you will be in my same situation, where I was lost trying to understand how to test something that was so dependant on Notion.
+With cassettes and fixtures [I managed to achieve 100% test coverage](https://github.com/ramnes/notion-sdk-py/pull/168) on notion-sdk-py, which was absolutely unthinkable to me just a few weeks before! I learned so much by contributing on the library, and this posts represents a quick sumup of my takeaways. Hopefully it will help you if you will be in my same situation, where I was lost trying to understand how to test something that was so dependant on external sources.
 
-A big thank to [ramnes](https://github.com/ramnes) for the help and for his amazing library!
+![100_coverage](https://github.com/mutt0-ds/mutt0-ds.github.io/blob/master/images/notion_coverage/final_coverage.png?raw=true)
+
+A big thank to [ramnes](https://github.com/ramnes) for the precious feedbacks and for his amazing library!
