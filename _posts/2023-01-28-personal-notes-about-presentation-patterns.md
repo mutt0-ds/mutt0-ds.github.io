@@ -21,13 +21,13 @@ The book is very conference-centric with a precise focus on the IT world, which 
 
 Nonetheless, I think that there are numerous key concepts to learn in “Presentation Pattern”! Thanks to its clear structure the reading is entertaining and I immediately grasped a lot of notions that I will apply in my presentations. That is one of the most useful books I’ve read!
 
+![cover](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/presentation_patterns_cover.jpg)
+
 “Presentation Patterns” has a [detailed glossary](https://presentationpatterns.com/glossary/) with a recap of each pattern, but I decided to write down my notes in my own way to make sure to understand every concept. By sharing them, I hope they will be useful and help making more interesting content!
 
 You can buy the book [here](https://presentationpatterns.com/): all credits go to the authors, who I would like to thank for their amazing job.
 
 > Key Takeaway: don’t let the presentation tools influence your message, and you can’t either have a document or a presentation.
-
-![cover](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/presentation_patterns_cover.jpg)
 
 ## <span style="color:green"> ✔ Patterns</span>
 
