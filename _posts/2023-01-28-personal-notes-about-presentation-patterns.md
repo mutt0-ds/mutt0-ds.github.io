@@ -12,7 +12,7 @@ tags:
 ---
 # Presentation Patterns
 
-Written by **[Neal Ford](https://nealford.com/), [Matthew McCullough](https://matthewjmccullough.com) and [Nathaniel Schutta](http://ntschutta.io)**, **"Presentation Patterns - Techniques for Crafting Better Presentations"** is an encyclopedia of patterns, tips and common mistakes experienced by the authors, who have spoken at hundreds of IT talks. In particular, they introduce “[No Fluff, Just Stuff](https://www.nofluffjuststuff.com)“, a traveling technical conference series covering a
+Written by **[Neal Ford](https://nealford.com/), [Matthew McCullough](https://matthewjmccullough.com) and [Nathaniel Schutta](http://ntschutta.io)**, **"Presentation Patterns - Techniques for Crafting Better Presentations"** is an encyclopedia of patterns, tips and common mistakes experienced by the authors, who have delivered thousands of presentations. In particular, they introduce “[No Fluff, Just Stuff](https://www.nofluffjuststuff.com)“, a traveling technical conference series covering a
 wide variety of topics related to software development and management.
 
 During the years, they have build up their toolbox of patterns to provide killer presentations, which are divided in three main sections: **Prepare** (thinking and setting up the presentation’s key concepts), **Build** (creating the slides), **Deliver** (present the content). While reading, I decided to categorize the items into **Patterns**, **Antipatterns** and “**Others**” (type of slides or special kind of presentations which I didn't consider as a pattern).
