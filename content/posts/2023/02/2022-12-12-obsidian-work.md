@@ -13,7 +13,7 @@ tags:
   - documentation
   - second-brain
 ---
-
+TODO CONTINUE
 ## 🧠 Introduction to Second Brains & Brain Dumping
 
 As I'm working with data all the time, I'm aware of the importance of keeping them in a safe and structured place, where they can be easily accessed when needed, which could be days, weeks or even years in the future. Thus,  organizing my informations, tasks and notes is a key activity in my work (and personal) life. Without a clear system I would feel lost in chaos and my productivity will plunge (also considering that my memory sucks).
