@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>appsmith on Mutt0-ds Notes</title>
+    <link>https://mutt0-ds.github.io/tags/appsmith/</link>
+    <description>Recent content in appsmith on Mutt0-ds Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/appsmith/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Personal Airflow - How I&#39;m monitoring my scripts with Python, Appsmith and SQL Server</title>
+      <link>https://mutt0-ds.github.io/posts/2022/03/personal-airflow/</link>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2022/03/personal-airflow/</guid>
+      <description>Here&amp;rsquo;s the story of how I created my first full-stack project for monitoring my daily activities, using Python and SQL Server in backend and Appsmith for the GUI. I have a lot to learn and process yet, but hey, it&amp;rsquo;s a start.
+😟 The Problem There are scripts I&amp;rsquo;m using that are particularly tedious to monitor. The typical structure is the following:
+Load data (from a file or manual input) Send a request to internal DB / very specific API Compare the data received with the input and if something is wrong, notify me or a colleague.</description>
+    </item>
+    
+  </channel>
+</rss>

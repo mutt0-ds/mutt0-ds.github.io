@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="A turbulent journey through Power BI source control" />
+<meta property="og:description" content="One of the most annoying issues I have when working with Power BI files is that source control is a real pain. Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly complicated solutions&hellip; But that day seems still far in the future.
+Here is a story about how I managed to set up a CI/CD pipeline through Azure DevOps Pipeline for providing rudimental version control of our Power BI reports." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-11-07T00:00:00+00:00" /><meta property="og:site_name" content="Mutt0-ds Notes" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A turbulent journey through Power BI source control"/>
+<meta name="twitter:description" content="One of the most annoying issues I have when working with Power BI files is that source control is a real pain. Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly complicated solutions&hellip; But that day seems still far in the future.
+Here is a story about how I managed to set up a CI/CD pipeline through Azure DevOps Pipeline for providing rudimental version control of our Power BI reports."/>
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+A turbulent journey through Power BI source control | Mutt0-ds Notes
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">A turbulent journey through Power BI source control</h1>
+            <div class="text-center">
+              Mutt0-ds 
+              <small>|</small>
+              Nov 7, 2022
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid" src="/images/power_bi_source_control/title.jpg" alt="A turbulent journey through Power BI source control">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>One of the most annoying issues I have when working with Power BI files is that source control is a real pain.
+Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly complicated solutions&hellip; But that day seems still far in the future.</p>
+<p>Here is a story about how I managed to set up a CI/CD pipeline through Azure DevOps Pipeline for providing rudimental version control of our Power BI reports.</p>
+<h2 id="-the-problem">❓ The problem</h2>
+<p>While textual formats like markdown or .json can be compared using an editor, binary formats like .pbix are not supported, being binary files. This results in a confusing situation where we have to document what exactly has been changed after every update, losing the powerful features available with git. So, lots of time wasted, plus insecurity and confusion.</p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/binary.png" alt="binary"></p>
+<p><img src="https://code.visualstudio.com/assets/docs/sourcecontrol/overview/overview.png" alt="working-git"></p>
+<h2 id="-acknowledgments">🙏 Acknowledgments</h2>
+<p>Many people have tried to tackle the problem, in particular, <a href="https://www.kerski.tech/bringing-dataops-to-power-bi-part10/">Kerski</a> and <a href="https://blog.gbrueckl.at/">Gerhard Brueckl</a>. I&rsquo;m very thankful for their precious resources.
+Also, I have to thank the creators of <a href="https://tabulareditor.com/">Tabular Editor</a>, an open-source tool that offers several functionalities, including extracting the metadata of a .pbix files into .json files, transforming the binary file into a textual format.</p>
+<p>The main source for this article is <a href="https://blog.gbrueckl.at/2022/02/automating-the-extraction-of-bim-metadata-from-pbix-files-using-ci-cd-pipelines/">this amazing blog post from Gerhard Brueckl</a>. The code I used mostly comes from his <a href="https://github.com/gbrueckl/PowerBI.CICD">Github repository</a>, with a few tweaks I personally added. I recommend reading its README for the more technical details and the environment variables needed for authentication. You may be interested in <a href="https://github.com/gbrueckl/PowerBI.CICD/blob/main/.github/workflows/pbix_to_bim.yml">his Github Action version</a>, which doesn&rsquo;t require Azure.</p>
+<h2 id="-requisites">📑 Requisites</h2>
+<ul>
+<li>a .pbix file with a dataset to track with git</li>
+<li>a PowerBI Premium per User license (and a Premium workspace already created)</li>
+<li>an Azure DevOps repository</li>
+<li><a href="https://learn.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals">a service principal</a> (an Active Directory entity with permissions to edit the Power BI Premium workspace)</li>
+<li>A <a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&amp;tabs=yaml#create-a-variable-group">variable group</a> with auth variables to Power BI for the service principal (explained <a href="https://github.com/gbrueckl/PowerBI.CICD#environment-variables">here</a>)</li>
+</ul>
+<h2 id="-the-idea">💡 The idea</h2>
+<p>As Gerhard says:</p>
+<blockquote>
+<p>The core idea of the solution is to use CI/CD pipelines that automatically extracts the metadata of a .pbix file as soon as it is pushed to the Git repository. To do this, the .pbix file is automatically uploaded to a Power BI Premium workspace using the Power BI REST API and the free version of Tabular Editor 2 then extracts the BIM file via the XMLA endpoint and push it back to the repository.</p>
+</blockquote>
+<p><img src="https://blog.gbrueckl.at/wp-content/uploads/2022/02/PBIX_to_BIM_YAML_workflow.png" alt="pipeline"></p>
+<p>In short, the pipeline retrieves the commit id of the latest two commits in the repository, detects which .pbix files have been modified, then uploads them in the Premium Workspace. This step is needed because the Premium workspace gives access to an XMLA endpoint used by Tabular Editor to access its data. Then, the pipeline extracts all the metadata in .JSON format and pushes it to the DevOps repository.</p>
+<h2 id="-the-code-step-by-step">💬 The code [Step by Step]</h2>
+<p>Be free to skip this section if you are not interested in the details about the code, which is fully available <a href="https://github.com/mutt0-ds/powerbi-source-control-pipeline/tree/main">here</a>. I&rsquo;m trying to keep things simple for newbies like me so I  documented every step.</p>
+<p>First, a simple introduction to <a href="https://www.reddit.com/r/csharp/comments/this0y/eli5_cicd_with_azure_devops/">Azure Pipelines</a>.
+An Azure Pipeline is composed of a setup part and different steps. The code is executed in a VM (in my case, hosted by Microsoft) triggered after every commit, which doesn&rsquo;t basically anything about the context. This is good because the code is always executed in a neutral environment, but also requires to install modules every time and complicates some (in theory) simple steps, especially when using git.</p>
+<h3 id="1-setup">1. Setup</h3>
+<p>Here I named the pipeline, which will be triggered only when a .pbix file is committed, on all branches.
+The <code>batch</code> parameter, as <a href="https://stackoverflow.com/questions/67099766/azure-yaml-schema-batch-trigger">badly documented by Windows</a>, has been set to <code>false</code>: I want to trigger the pipeline for each commit, even if more of them have been pushed in a batch.
+This is not a very efficient way, but I had some issues when retrieving the commit ids using the DevOps API (step 5) so I decided to keep it simple.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Extract PBIX metadata</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">trigger</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">batch</span>: <span style="color:#66d9ef">false</span> <span style="color:#75715e"># one pipeline for every commit</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">include</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#39;*&#39;</span> <span style="color:#75715e"># on all branches</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">paths</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">include</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#39;**/*.pbix&#39;</span> <span style="color:#75715e"># whenever a .pbix file is pushed</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">pool</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">vmImage</span>: <span style="color:#ae81ff">windows-latest</span> <span style="color:#75715e"># windows VM with PowerShell</span>
+</span></span></code></pre></div><h3 id="2-variables">2. Variables</h3>
+<p>The variable group contains the access token that can be accessed like <code>$env:PBI_USER_NAME</code>.
+A little, innocent detail I had to remember is that if you flag a variable in your variable group as &ldquo;Secret&rdquo;, <a href="https://stackoverflow.com/a/69891660">you have to explicitly declare it in the YAML code</a>. Otherwise, there is no warning, the value will simply be null. Stupid, but tricky if you don&rsquo;t know that, as I know firsthand&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">variables</span>:
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">group</span>: <span style="color:#ae81ff">My Variable Group</span> <span style="color:#75715e"># &lt;-- change this to match your library/variable group</span>
+</span></span></code></pre></div><h3 id="3-git-checkout">3. Git Checkout</h3>
+<p>The pipeline is executing a <code>git checkout</code> behind the scenes by default to retrive all the files in the repository, but I had to declare it esplicitly. The trick here is to add <code>persistCredentials: true</code> to keep the git credentials for the next steps.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">checkout</span>: <span style="color:#ae81ff">self</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">clean</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># resets the environment to a fresh new state</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">persistCredentials</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># very important to keep the credentials</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">fetchDepth</span>: <span style="color:#ae81ff">0</span>
+</span></span></code></pre></div><h3 id="4-download-tabular-editor-portable">4. Download Tabular Editor Portable</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>- task<span style="color:#960050;background-color:#1e0010">:</span> PowerShell@2
+</span></span><span style="display:flex;"><span>  displayName<span style="color:#960050;background-color:#1e0010">:</span> Download-TabularEditor2
+</span></span><span style="display:flex;"><span>  inputs<span style="color:#960050;background-color:#1e0010">:</span>
+</span></span><span style="display:flex;"><span>    targetType<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;inline&#39;</span>
+</span></span><span style="display:flex;"><span>    script<span style="color:#960050;background-color:#1e0010">:</span> |
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Download URL for Tabular Editor portable:</span>
+</span></span><span style="display:flex;"><span>      $TabularEditorUrl = <span style="color:#e6db74">&#34;https://cdn.tabulareditor.com/files/te2/TabularEditor.Portable.zip&#34;</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Download destination (root of PowerShell script execution path):</span>
+</span></span><span style="display:flex;"><span>      $DownloadDestination = Join-Path (Get-Location) <span style="color:#e6db74">&#34;TabularEditor.zip&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Download from GitHub:</span>
+</span></span><span style="display:flex;"><span>      Invoke-WebRequest -Uri $TabularEditorUrl -OutFile $DownloadDestination
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Unzip Tabular Editor portable, and then delete the zip file:</span>
+</span></span><span style="display:flex;"><span>      Expand-Archive -Path $DownloadDestination -DestinationPath (Get-Location).Path
+</span></span><span style="display:flex;"><span>      Remove-Item $DownloadDestination
+</span></span><span style="display:flex;"><span>    pwsh<span style="color:#960050;background-color:#1e0010">:</span> true <span style="color:#75715e"># necessary variable for passing the script values to Powershell</span>
+</span></span></code></pre></div><h3 id="5-get-the-commit-ids">5. Get the Commit IDs</h3>
+<p>This was the part that gave me a bit of a headache, as the original code didn&rsquo;t seem to work in case of merges or, for some reason, was skipping some commits. It&rsquo;s very annoying that Azure DevOps doesn&rsquo;t provide a way to retrieve the git commit id preceding the running build, so I had to use this escamotage by calling the DevOps API and then using <code>git log</code> for retrieving the previous commit.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>- task<span style="color:#960050;background-color:#1e0010">:</span> PowerShell@2
+</span></span><span style="display:flex;"><span>  displayName<span style="color:#960050;background-color:#1e0010">:</span> Get the Commit IDs
+</span></span><span style="display:flex;"><span>  inputs<span style="color:#960050;background-color:#1e0010">:</span>
+</span></span><span style="display:flex;"><span>    targetType<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;inline&#39;</span>
+</span></span><span style="display:flex;"><span>    script<span style="color:#960050;background-color:#1e0010">:</span> |
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># print Information stream</span>
+</span></span><span style="display:flex;"><span>    $InformationPreference = <span style="color:#e6db74">&#34;Continue&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    $headers = @{ Authorization = <span style="color:#e6db74">&#34;Bearer </span>$env:SYSTEM_ACCESSTOKEN<span style="color:#e6db74">&#34;</span> }
+</span></span><span style="display:flex;"><span>    $uri = <span style="color:#e6db74">&#34;</span>$env:SYSTEM_TEAMFOUNDATIONSERVERURI$env:SYSTEM_TEAMPROJECT<span style="color:#e6db74">/_apis/build/builds/</span>$($env:BUILD_BUILDID)<span style="color:#e6db74">/changes?api-version=5.1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># API Call to DevOps API to retrieve changes</span>
+</span></span><span style="display:flex;"><span>    $changes = Invoke-RestMethod -Method Get -Headers $headers -Uri $uri
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($changes.count <span style="color:#f92672">-gt</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># the first commit of the list is the one that triggered the pipeline</span>
+</span></span><span style="display:flex;"><span>        $commit_id_after = $changes.value[<span style="color:#ae81ff">0</span>].id
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># using git for retrieving the preceeding commit</span>
+</span></span><span style="display:flex;"><span>        $commit_id_before = @($(git log --pretty=<span style="color:#66d9ef">%</span>P -n <span style="color:#ae81ff">1</span> $commit_id_after --max-count=<span style="color:#ae81ff">1</span> --max-parents=<span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Write-Information <span style="color:#e6db74">&#34;Commit ID before push: </span>$commit_id_before<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>        Write-Information <span style="color:#e6db74">&#34;Commit ID after push:  </span>$commit_id_after<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># this sets the value as environment variable</span>
+</span></span><span style="display:flex;"><span>        Write-Host <span style="color:#e6db74">&#34;##vso[task.setvariable variable=GIT_EVENT_BEFORE]</span>$commit_id_before<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>        Write-Host <span style="color:#e6db74">&#34;##vso[task.setvariable variable=GIT_EVENT_AFTER]</span>$commit_id_after<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        Write-Warning <span style="color:#e6db74">&#34;No changes found in Build </span>$($env:BUILD_BUILDID)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  pwsh<span style="color:#960050;background-color:#1e0010">:</span> true
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/git.png" alt="git"></p>
+<h3 id="6-extract-pbix-metadata">6. Extract PBIX Metadata</h3>
+<p>The core of the Pipeline, which requires the MicrosoftPowerBIMgmt Powershell module, the credentials for logging in Power BI and then calling the Premium Workspace endpoint for extracting data using Tabular Editor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>- task<span style="color:#960050;background-color:#1e0010">:</span> PowerShell@2
+</span></span><span style="display:flex;"><span>  displayName<span style="color:#960050;background-color:#1e0010">:</span> Extract-PBIXMetadata
+</span></span><span style="display:flex;"><span>  inputs<span style="color:#960050;background-color:#1e0010">:</span>
+</span></span><span style="display:flex;"><span>    targetType<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;inline&#39;</span>
+</span></span><span style="display:flex;"><span>    script<span style="color:#960050;background-color:#1e0010">:</span> |
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># halt on first error</span>
+</span></span><span style="display:flex;"><span>      $ErrorActionPreference = <span style="color:#e6db74">&#34;Stop&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># print Information stream</span>
+</span></span><span style="display:flex;"><span>      $InformationPreference = <span style="color:#e6db74">&#34;Continue&#34;</span>
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># install the Power BI Powershell module</span>
+</span></span><span style="display:flex;"><span>      Set-PSRepository PSGallery -InstallationPolicy Trusted
+</span></span><span style="display:flex;"><span>      Install-Module -Name MicrosoftPowerBIMgmt -Scope CurrentUser
+</span></span><span style="display:flex;"><span>      Import-Module -Name MicrosoftPowerBIMgmt
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># setup</span>
+</span></span><span style="display:flex;"><span>      $root_path = (Get-Location).Path
+</span></span><span style="display:flex;"><span>      $tabular_editor_root_path = $root_path
+</span></span><span style="display:flex;"><span>      $ind = <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">`t</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>      $git_event_before = $env:GIT_EVENT_BEFORE
+</span></span><span style="display:flex;"><span>      $git_event_after = $env:GIT_EVENT_AFTER
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      $triggered_by = $env:BUILD_REASON
+</span></span><span style="display:flex;"><span>      $workspace_id = $env:PBI_PREMIUM_WORKSPACE_ID
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      $tenant_id = $env:PBI_TENANT_ID
+</span></span><span style="display:flex;"><span>      $client_id = $env:PBI_CLIENT_ID
+</span></span><span style="display:flex;"><span>      $client_secret = $env:PBI_CLIENT_SECRET
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># login to Power BI</span>
+</span></span><span style="display:flex;"><span>      $login_info = <span style="color:#e6db74">&#34;User ID=app:</span>$client_id<span style="color:#e6db74">@</span>$tenant_id<span style="color:#e6db74">;Password=</span>$client_secret<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>      [<span style="color:#66d9ef">securestring</span>]$sec_client_secret = ConvertTo-SecureString $client_secret -AsPlainText -Force
+</span></span><span style="display:flex;"><span>      [<span style="color:#66d9ef">pscredential</span>]$credential = New-Object System.Management.Automation.PSCredential ($client_id, $sec_client_secret)
+</span></span><span style="display:flex;"><span>      Connect-PowerBIServiceAccount -Credential $credential -ServicePrincipal -TenantId $tenant_id
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># accessing the workspace</span>
+</span></span><span style="display:flex;"><span>      $workspace = Get-PowerBIWorkspace -Id $workspace_id
+</span></span><span style="display:flex;"><span>      Write-Information <span style="color:#e6db74">&#34;Power BI Workspace: </span><span style="color:#ae81ff">`n</span>$($workspace | ConvertTo-Json)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#f92672">-not</span> $workspace.IsOnDedicatedCapacity) {
+</span></span><span style="display:flex;"><span>        Write-Error <span style="color:#e6db74">&#34;The provided Workspace ID (</span>$($workspace.id)<span style="color:#e6db74">) is not on Premium Capacity!&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># very important: finding the modified files with git diff</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># it has to be triggered by a push to the repo</span>
+</span></span><span style="display:flex;"><span>      Write-Information <span style="color:#e6db74">&#34;Triggered By: </span>$triggered_by<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>      Write-Information <span style="color:#e6db74">&#34;Getting changed .pbix files ...&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> ($triggered_by <span style="color:#f92672">-like</span> <span style="color:#e6db74">&#34;*CI&#34;</span> <span style="color:#f92672">-or</span> $triggered_by <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;push&#34;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># get the changed .pbix files in the current push</span>
+</span></span><span style="display:flex;"><span>        Write-Information <span style="color:#e6db74">&#34;git diff --name-only </span>$git_event_before<span style="color:#e6db74"> </span>$git_event_after<span style="color:#e6db74"> --diff-filter=ACM &#34;&#34;*.pbix&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        $pbix_files = @($(git diff --name-only $git_event_before $git_event_after --diff-filter=ACM <span style="color:#e6db74">&#34;*.pbix&#34;</span>))
+</span></span><span style="display:flex;"><span>        $pbix_files = $pbix_files | ForEach-Object { Join-Path $root_path $_ | Get-Item }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ($pbix_files.Count <span style="color:#f92672">-eq</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>          Write-Warning <span style="color:#e6db74">&#34;Something went wrong! Could not find any changed .pbix files using the above &#39;git diff&#39; command!&#34;</span>
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e"># get all .pbix files in the current repository</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e"># disable these lines if you don&#39;t want this feature</span>
+</span></span><span style="display:flex;"><span>          Write-Information <span style="color:#e6db74">&#34;Getting all .pbix files in the repo to be sure to get all changes!&#34;</span>
+</span></span><span style="display:flex;"><span>          $pbix_files = Get-ChildItem -Path (Join-Path $root_path $manual_trigger_path_filter) -Recurse -Filter <span style="color:#e6db74">&#34;*.pbix&#34;</span> <span style="color:#f92672">-File</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        Write-Error <span style="color:#e6db74">&#34;Invalid Trigger!&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      Write-Information <span style="color:#e6db74">&#34;Changed .pbix files (</span>$($pbix_files.Count)<span style="color:#e6db74">):&#34;</span>
+</span></span><span style="display:flex;"><span>      $pbix_files | ForEach-Object { Write-Information <span style="color:#e6db74">&#34;</span>$ind$($_.FullName)<span style="color:#e6db74">&#34;</span> }
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># we need to set Serialization Options to allow export to Folder via TE2</span>
+</span></span><span style="display:flex;"><span>      $serialization_options = <span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;IgnoreInferredObjects&#34;: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;IgnoreInferredProperties&#34;: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;IgnoreTimestamps&#34;: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;SplitMultilineStrings&#34;: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;PrefixFilenames&#34;: false,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;LocalTranslations&#34;: false,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;LocalPerspectives&#34;: false,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;LocalRelationships&#34;: false,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;Levels&#34;: [
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              &#34;Data Sources&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              &#34;Perspectives&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              &#34;Relationships&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              &#34;Roles&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              &#34;Tables&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              &#34;Tables/Columns&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              &#34;Tables/Measures&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              &#34;Translations&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          ]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      }&#39;</span>
+</span></span><span style="display:flex;"><span>      $serialization_options | Out-File (Join-Path $tabular_editor_root_path <span style="color:#e6db74">&#34;TabularEditor_SerializeOptions.json&#34;</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;Model.SetAnnotation(&#34;&#34;TabularEditor_SerializeOptions&#34;&#34;, ReadFile(@&#34;&#34;</span>$(Join-Path $tabular_editor_root_path <span style="color:#e6db74">&#34;TabularEditor_SerializeOptions.json&#34;</span>)<span style="color:#e6db74">&#34;&#34;));&#34;</span> `
+</span></span><span style="display:flex;"><span>        | Out-File (Join-Path $tabular_editor_root_path <span style="color:#e6db74">&#34;ApplySerializeOptionsAnnotation.csx&#34;</span>)
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># for each .pbix modified extract metadata with Tabular Editor</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">foreach</span> ($pbix_file <span style="color:#66d9ef">in</span> $pbix_files) {
+</span></span><span style="display:flex;"><span>        $report = $null
+</span></span><span style="display:flex;"><span>        $dataset = $null
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>          Write-Information <span style="color:#e6db74">&#34;Processing  </span>$($pbix_file.FullName)<span style="color:#e6db74"> ... &#34;</span>
+</span></span><span style="display:flex;"><span>          Write-Information <span style="color:#e6db74">&#34;</span>$ind<span style="color:#e6db74"> Checking if PBIX file contains a datamodel ...&#34;</span>
+</span></span><span style="display:flex;"><span>          $zip_entries = [<span style="color:#66d9ef">IO.Compression.ZipFile</span>]::OpenRead($pbix_file.FullName).Entries.Name;
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#34;DataModel&#34;</span> -notin $zip_entries) {
+</span></span><span style="display:flex;"><span>            Write-Information <span style="color:#e6db74">&#34;</span>$ind<span style="color:#e6db74"> No datamodel found in </span>$($pbix_file.Name)<span style="color:#e6db74"> - skipping further processing of this file!&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            Write-Information <span style="color:#e6db74">&#34;</span>$ind<span style="color:#e6db74"> Datamodel found!&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e"># upload the file with the dataset to the Premium workspace</span>
+</span></span><span style="display:flex;"><span>          $temp_name = <span style="color:#e6db74">&#34;</span>$($pbix_file.BaseName)<span style="color:#e6db74">-</span>$(Get-Date -Format <span style="color:#e6db74">&#39;yyyyMMddTHHmmss&#39;</span>)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>          Write-Information <span style="color:#e6db74">&#34;</span>$ind<span style="color:#e6db74"> Uploading </span>$($pbix_file.FullName.Replace($root_path, <span style="color:#e6db74">&#39;&#39;</span>))<span style="color:#e6db74"> to </span>$($workspace.Name)<span style="color:#e6db74">/</span>$temp_name<span style="color:#e6db74"> ... &#34;</span>
+</span></span><span style="display:flex;"><span>          $report = New-PowerBIReport -Path $pbix_file.FullName -Name $temp_name -WorkspaceId $workspace.Id
+</span></span><span style="display:flex;"><span>          Start-Sleep -Seconds <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e"># retrieving the uploaded data</span>
+</span></span><span style="display:flex;"><span>          $dataset = Get-PowerBIDataset -WorkspaceId $workspace.Id | Where-Object { $_.Name <span style="color:#f92672">-eq</span> $temp_name }
+</span></span><span style="display:flex;"><span>          $connection_string = <span style="color:#e6db74">&#34;powerbi://api.powerbi.com/v1.0/myorg/</span>$($workspace.Name)<span style="color:#e6db74">;initial catalog=</span>$($dataset.Name)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>          Write-Information <span style="color:#e6db74">&#34;</span>$ind<span style="color:#e6db74"> Extracting metadata ...&#34;</span>
+</span></span><span style="display:flex;"><span>          $executable = Join-Path $tabular_editor_root_path TabularEditor.exe
+</span></span><span style="display:flex;"><span>          $output_path = <span style="color:#e6db74">&#34;</span>$(Join-Path $pbix_file.DirectoryName $pbix_file.BaseName)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>          $params = @(
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;&#34;&#34;Provider=MSOLAP;Data Source=</span>$connection_string<span style="color:#e6db74">;</span>$login_info<span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;&#34;&#34;</span>$($dataset.Name)<span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;-SCRIPT &#34;&#34;</span>$(Join-Path $tabular_editor_root_path <span style="color:#e6db74">&#39;ApplySerializeOptionsAnnotation.csx&#39;</span>)<span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;-FOLDER &#34;&#34;</span>$output_path<span style="color:#e6db74">&#34;&#34; &#34;&#34;</span>$($pbix_file.BaseName)<span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>          )
+</span></span><span style="display:flex;"><span>          Write-Debug <span style="color:#e6db74">&#34;</span>$ind<span style="color:#e6db74"> </span>$executable<span style="color:#e6db74"> </span>$params<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>          $p = Start-Process -FilePath $executable -Wait -NoNewWindow -PassThru -RedirectStandardOutput <span style="color:#e6db74">&#34;</span>$temp_name<span style="color:#e6db74">.log&#34;</span> -ArgumentList $params
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> ($p.ExitCode <span style="color:#f92672">-ne</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>            Write-Error <span style="color:#e6db74">&#34;</span>$ind<span style="color:#e6db74"> Failed to extract PBIX metadata from </span>$($dataset.WebUrl)<span style="color:#e6db74">!&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>          Write-Information <span style="color:#e6db74">&#34;</span>$ind<span style="color:#e6db74"> Extracted PBIX metadata to FOLDER &#39;(</span>$output_path<span style="color:#e6db74">)&#39;!&#34;</span>
+</span></span><span style="display:flex;"><span>          Write-Information <span style="color:#e6db74">&#34;</span>$ind<span style="color:#e6db74"> Overwriting &#39;name&#39; and &#39;id&#39; properties now ...&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e"># need to overwrite id and name as they are taken from the temporary dataset</span>
+</span></span><span style="display:flex;"><span>          $bim_json = Get-Content (Join-Path $output_path <span style="color:#e6db74">&#34;database.json&#34;</span>) | ConvertFrom-Json
+</span></span><span style="display:flex;"><span>          $bim_json.name = $pbix_file.BaseName
+</span></span><span style="display:flex;"><span>          $bim_json.id = $pbix_file.BaseName
+</span></span><span style="display:flex;"><span>          $bim_json | ConvertTo-Json -Depth <span style="color:#ae81ff">50</span> | Out-File (Join-Path $output_path <span style="color:#e6db74">&#34;database.json&#34;</span>)
+</span></span><span style="display:flex;"><span>          Write-Information <span style="color:#e6db74">&#34;</span>$ind<span style="color:#e6db74"> PBIX metadata written to FOLDER &#39;</span>$output_path<span style="color:#e6db74">&#39;!&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>          Write-Warning <span style="color:#e6db74">&#34;An error occurred:&#34;</span>
+</span></span><span style="display:flex;"><span>          Write-Warning $_
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">finally</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> ($report <span style="color:#f92672">-ne</span> $null) {
+</span></span><span style="display:flex;"><span>            Write-Information <span style="color:#e6db74">&#34;</span>$ind<span style="color:#e6db74"> Removing temporary PowerBI report ...&#34;</span>
+</span></span><span style="display:flex;"><span>            Remove-PowerBIReport -WorkspaceId $workspace.Id -Id $report.Id
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> ($dataset <span style="color:#f92672">-ne</span> $null) {
+</span></span><span style="display:flex;"><span>            Write-Information <span style="color:#e6db74">&#34;</span>$ind<span style="color:#e6db74"> Removing temporary PowerBI dataset ...&#34;</span>
+</span></span><span style="display:flex;"><span>            Invoke-PowerBIRestMethod -Url <span style="color:#e6db74">&#34;https://api.powerbi.com/v1.0/myorg/groups/</span>$($workspace.Id)<span style="color:#e6db74">/datasets/</span>$($dataset.Id)<span style="color:#e6db74">&#34;</span> -Method Delete
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      Write-Information <span style="color:#e6db74">&#34;Finished!&#34;</span>
+</span></span><span style="display:flex;"><span>    pwsh<span style="color:#960050;background-color:#1e0010">:</span> true  
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/extraction.png" alt="extraction"></p>
+<h3 id="7-push-the-metadata-to-the-git-repository">7. Push the Metadata to the Git repository</h3>
+<p>The final step is to push the .json metadata extracted by Tabular Editor to the repository. The script uses the name and email of the original committer and mentions the original id in the message for keeping things clear.</p>
+<p>If you get a <code>GenericContribute</code> permission error, remember to add the service principal account as Contributor as shown <a href="https://stackoverflow.com/a/56542631">here</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>- task: CmdLine@2
+</span></span><span style="display:flex;"><span>    displayName: Push PBIX metadata to Git repo
+</span></span><span style="display:flex;"><span>    inputs:
+</span></span><span style="display:flex;"><span>      script: |
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SET</span> _full_branch_name=$(Build.SourceBranch)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SET</span> _full_branch_name=%_full_branch_name:refs/heads/=%
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SET</span> _commit_message=<span style="color:#e6db74">&#34;🤖 PBIX Metadata Extraction for #</span>%GIT_EVENT_AFTER%<span style="color:#e6db74"> $(Build.RequestedFor) [skip ci]&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        git config --global user.name &#39;$(Build.RequestedFor)&#39;
+</span></span><span style="display:flex;"><span>        git config --global user.email &#39;$(Build.RequestedForEMail)&#39;
+</span></span><span style="display:flex;"><span>        git checkout %_full_branch_name%
+</span></span><span style="display:flex;"><span>        git stash
+</span></span><span style="display:flex;"><span>        git pull
+</span></span><span style="display:flex;"><span>        git stash apply
+</span></span><span style="display:flex;"><span>        git add **/*.json
+</span></span><span style="display:flex;"><span>        git status --porcelain
+</span></span><span style="display:flex;"><span>        git commit -am %_commit_message%
+</span></span><span style="display:flex;"><span>        git push origin HEAD:%_full_branch_name%
+</span></span></code></pre></div><h2 id="-conclusions">🔚 Conclusions</h2>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/commit.png" alt="commit"></p>
+<p>Keeping track of the changes inside Power BI files is still a painful process at the moment, and I sincerely hope that Microsoft will soon find a solution to the issue.</p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/result.png" alt="result"></p>
+<p>The method I set up is working if the report contains a dataset and something has changed in the schema and the measures, but unfortunately it still can&rsquo;t detect visual changes, which is the most common cause of confusion, especially when users begin messing around with bookmarks and filters. Since many of our reports are using external datasets as source, they are untracked by the system.</p>
+<p>The only solution currently available is <a href="https://pbi.tools/cli/">pbi-tools</a>, which is unfortunately unusable in a pipeline as it requires a Power BI Desktop instance on the VM (we can&rsquo;t use the Core edition for extracting metadata). From <a href="https://community.powerbi.com/t5/Desktop/docker/m-p/426116">what I could find</a>, containerizing the app is not a suitable solution, but I&rsquo;m keeping an eye on <a href="https://github.com/pbi-tools/pbi-tools/issues/176">an open issue on Github</a> that could be the final solution.</p>
+<p>In that case, we could just import the correct VM Image with the pre-installed pbi-tools, extract the metadata and commit the changes in a few steps (and I&rsquo;ll be happy to update the guide).</p>
+<p>For now, be free to adapt my solution if it suits your needs!</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-the-problem">❓ The problem</a></li>
+    <li><a href="#-acknowledgments">🙏 Acknowledgments</a></li>
+    <li><a href="#-requisites">📑 Requisites</a></li>
+    <li><a href="#-the-idea">💡 The idea</a></li>
+    <li><a href="#-the-code-step-by-step">💬 The code [Step by Step]</a>
+      <ul>
+        <li><a href="#1-setup">1. Setup</a></li>
+        <li><a href="#2-variables">2. Variables</a></li>
+        <li><a href="#3-git-checkout">3. Git Checkout</a></li>
+        <li><a href="#4-download-tabular-editor-portable">4. Download Tabular Editor Portable</a></li>
+        <li><a href="#5-get-the-commit-ids">5. Get the Commit IDs</a></li>
+        <li><a href="#6-extract-pbix-metadata">6. Extract PBIX Metadata</a></li>
+        <li><a href="#7-push-the-metadata-to-the-git-repository">7. Push the Metadata to the Git repository</a></li>
+      </ul>
+    </li>
+    <li><a href="#-conclusions">🔚 Conclusions</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/source-control" target="_blank">source-control</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/power-bi" target="_blank">power-bi</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/devops" target="_blank">devops</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/pipeline" target="_blank">pipeline</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/git" target="_blank">git</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/tabular-editor" target="_blank">tabular-editor</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/azure" target="_blank">azure</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=A%20turbulent%20journey%20through%20Power%20BI%20source%20control&url=https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2022%2f11%2fturbulent-journey-power-bi-source-control%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=A%20turbulent%20journey%20through%20Power%20BI%20source%20control: https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2022%2f11%2fturbulent-journey-power-bi-source-control%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=A%20turbulent%20journey%20through%20Power%20BI%20source%20control&amp;body=Check%20out%20this%20site https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2022%2f11%2fturbulent-journey-power-bi-source-control%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/">
+                        <img src="/images/presentation_patterns_cover.jpg" class="card-img-top" alt="Personal Notes about Presentation Patterns">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Personal Notes about Presentation Patterns">Personal Notes about Presentation Patterns</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>Presentation Patterns Written by Neal Ford, Matthew McCullough and Nathaniel Schutta, &ldquo;Presentation Patterns - Techniques for Crafting Better Presentations&rdquo; is an encyclopedia of patterns, tips and common mistakes experienced by the authors, who have delivered thousands of presentations. …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jan 28, 2023</span>
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2022/12/road-100-coverage-notion/">
+                        <img src="/images/notion_coverage/title.png" class="card-img-top" alt="Road to 100% Test Coverage on notion-sdk-py">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2022/12/road-100-coverage-notion/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Road to 100% Test Coverage on notion-sdk-py">Road to 100% Test Coverage on notion-sdk-py</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously unexciting activities for many developers 😫
+Luckily, we are all unique in our own way and I decided to contribute to the testing module of one of my …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Dec 26, 2022</span>
+                    <a href="/posts/2022/12/road-100-coverage-notion/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2022/11/turbulent-journey-power-bi-source-control/">
+                        <img src="/images/power_bi_source_control/title.jpg" class="card-img-top" alt="A turbulent journey through Power BI source control">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2022/11/turbulent-journey-power-bi-source-control/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="A turbulent journey through Power BI source control">A turbulent journey through Power BI source control</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>One of the most annoying issues I have when working with Power BI files is that source control is a real pain. Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Nov 7, 2022</span>
+                    <a href="/posts/2022/11/turbulent-journey-power-bi-source-control/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://linkedin.com/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2023  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

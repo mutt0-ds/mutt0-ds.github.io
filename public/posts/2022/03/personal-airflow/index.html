@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="My Personal Airflow - How I&#39;m monitoring my scripts with Python, Appsmith and SQL Server" />
+<meta property="og:description" content="Here&rsquo;s the story of how I created my first full-stack project for monitoring my daily activities, using Python and SQL Server in backend and Appsmith for the GUI. I have a lot to learn and process yet, but hey, it&rsquo;s a start.
+😟 The Problem There are scripts I&rsquo;m using that are particularly tedious to monitor. The typical structure is the following:
+Load data (from a file or manual input) Send a request to internal DB / very specific API Compare the data received with the input and if something is wrong, notify me or a colleague." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mutt0-ds.github.io/posts/2022/03/personal-airflow/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-21T00:00:00+00:00" /><meta property="og:site_name" content="Mutt0-ds Notes" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="My Personal Airflow - How I&#39;m monitoring my scripts with Python, Appsmith and SQL Server"/>
+<meta name="twitter:description" content="Here&rsquo;s the story of how I created my first full-stack project for monitoring my daily activities, using Python and SQL Server in backend and Appsmith for the GUI. I have a lot to learn and process yet, but hey, it&rsquo;s a start.
+😟 The Problem There are scripts I&rsquo;m using that are particularly tedious to monitor. The typical structure is the following:
+Load data (from a file or manual input) Send a request to internal DB / very specific API Compare the data received with the input and if something is wrong, notify me or a colleague."/>
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+My Personal Airflow - How I&#39;m monitoring my scripts with Python, Appsmith and SQL Server | Mutt0-ds Notes
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">My Personal Airflow - How I&#39;m monitoring my scripts with Python, Appsmith and SQL Server</h1>
+            <div class="text-center">
+              Mutt0-ds 
+              <small>|</small>
+              Apr 21, 2022
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid" src="/images/dashboard.jpg" alt="My Personal Airflow - How I&#39;m monitoring my scripts with Python, Appsmith and SQL Server">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>Here&rsquo;s the story of how I created my first full-stack project for monitoring my daily activities, using Python and SQL Server in backend and Appsmith for the GUI. I have a lot to learn and process yet, but hey, it&rsquo;s a start.</p>
+<h2 id="-the-problem">😟 The Problem</h2>
+<p>There are scripts I&rsquo;m using that are particularly tedious to monitor. The typical structure is the following:</p>
+<ol>
+<li><strong>Load data</strong> (from a file or manual input)</li>
+<li><strong>Send a request</strong> to internal DB / very specific API</li>
+<li><strong>Compare the data</strong> received with the input and if something is wrong, notify me or a colleague.</li>
+</ol>
+<p>They must operate locally on specific machines, can&rsquo;t be containerized, there are severe API limitations in some cases.</p>
+<blockquote>
+<p><strong>❔</strong> I know that there are some amazing automation libraries like <a href="https://airflow.apache.org/">Airflow</a> and <a href="https://github.com/spotify/luigi">Luigi</a>, but I chose to not use them because I needed something simpler and more customizable. I also wanted to test myself and build a whole project to be used in my day-to-day work.</p>
+</blockquote>
+<p>I also needed a custom dashboard (inspired by <a href="https://airflow.apache.org/docs/apache-airflow/stable/ui.html">Airflow&rsquo;s one</a>, to be used by my colleagues for monitoring the scripts assigned to their departments, opening tickets, and doing other unique actions.</p>
+<h2 id="-my-proposal">💡 My Proposal</h2>
+<p>In my mind, my logger would consist of three parts:</p>
+<ol>
+<li><strong>Backend</strong>: a module to be imported by all the scripts that connect to the Database and store logging data and results. Since the majority of them are in Python, that&rsquo;s the language I&rsquo;m going to use.</li>
+<li><strong>Database</strong>: a SQL Server Express instance we have already set up for other tasks in our local server.</li>
+<li><strong>Frontend</strong>: I&rsquo;m a newbie here; I needed something quick to spin up, hostable on the server, as easiest as possible to customize, capable to connect with our APIs. <a href="https://www.appsmith.com/">Appsmith</a> was the right choice and I had a lot of fun with it.</li>
+</ol>
+<h2 id="-backend-python-module-with-decorator">🐌 Backend: Python module with decorator</h2>
+<p>My starting point was a previously existing library, which was already imported by all the scripts for handling exceptions and crashes. Every script contains this kind of template in its <code>main.py</code> file:</p>
+<h5 id="old-alert-library">Old Alert Library</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> alert_library
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span> <span style="color:#75715e"># the script does its magic here</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__<span style="color:#f92672">==</span><span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>    alert_library<span style="color:#f92672">.</span>send_error(e) <span style="color:#75715e"># the module handles all the error cases and sends a report</span>
+</span></span></code></pre></div><h5 id="the-joblogger-class">The JobLogger class</h5>
+<p>From there, I rewrited the alert_library module into a so-called <code>job_logger</code>, here&rsquo;s its pseudo-code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">...</span> <span style="color:#f92672">import</span> helper_functions<span style="color:#f92672">,</span> db_functions<span style="color:#f92672">,</span> logging<span style="color:#f92672">,</span> etc...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@dataclass</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Joblogger</span>
+</span></span><span style="display:flex;"><span>  job_id: int
+</span></span><span style="display:flex;"><span>  status: str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Pending&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__post_init__</span>(self):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># looking for further data about the job in the db...</span>
+</span></span><span style="display:flex;"><span>    data <span style="color:#f92672">=</span> db_functions<span style="color:#f92672">.</span>get_job_data(self<span style="color:#f92672">.</span>job_id)
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>job_name <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;job_name&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#self.other_useful_info = ...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">begin_job</span>():
+</span></span><span style="display:flex;"><span>    to_upload <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;job_id&#39;</span> : self<span style="color:#f92672">.</span>_job_id,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;h_begin&#39;</span>: datetime<span style="color:#f92672">.</span>now(),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;status&#39;</span>: self<span style="color:#f92672">.</span>status,
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">#other_useful_info...}</span>
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>row_id <span style="color:#f92672">=</span> db_functions<span style="color:#f92672">.</span>_insert_on_db(to_upload)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">finish_job</span>():
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Done&#39;</span>
+</span></span><span style="display:flex;"><span>    to_upload <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;status&#39;</span>: self<span style="color:#f92672">.</span>status,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;h_end&#39;</span>: datetime<span style="color:#f92672">.</span>now(),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;message&#39;</span>: <span style="color:#e6db74">&#39;OK&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;needs_validation&#39;</span>: helper_functions<span style="color:#f92672">.</span>check_validation(<span style="color:#f92672">...</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">#other_useful_info...}</span>
+</span></span><span style="display:flex;"><span>      db_functions<span style="color:#f92672">.</span>_update_on_db(self<span style="color:#f92672">.</span>row_id, to_upload)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">handle_error</span>(e: <span style="color:#a6e22e">Exception</span>)
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ERROR&#34;</span>
+</span></span><span style="display:flex;"><span>    to_upload <span style="color:#f92672">=</span> {self<span style="color:#f92672">.</span>status,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;traceback&#39;</span>: traceback<span style="color:#f92672">.</span>format_exc(limit<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, chain<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">#other_useful_info...}</span>
+</span></span><span style="display:flex;"><span>    db_functions<span style="color:#f92672">.</span>_update_on_db(self<span style="color:#f92672">.</span>row_id, to_upload)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># + old alert library for sending alerts</span>
+</span></span></code></pre></div><p>Now all the scripts have this structure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> job_logger <span style="color:#f92672">import</span> JobLogger
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span> <span style="color:#75715e"># the script does its magic here</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__<span style="color:#f92672">==</span><span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>  logger <span style="color:#f92672">=</span> JobLogger()
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>begin_job(job_id <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>    main()
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>finish_job()
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>    alert_library<span style="color:#f92672">.</span>handle_error(e) <span style="color:#75715e"># the module handles all the error cases and sends a report</span>
+</span></span></code></pre></div><p>Mhhh&hellip; slightly unkempt, verbose, and inconvenient to update for my tastes&hellip; Let&rsquo;s fashion a decorator so I don&rsquo;t have to paste so many lines of code into every script!</p>
+<h3 id="the-joblogger-decorator">The JobLogger Decorator</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> job_logger <span style="color:#f92672">import</span> monitor_job
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@monitor_job</span>(job_id <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span> <span style="color:#75715e"># the script does its magic here</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__<span style="color:#f92672">==</span><span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>  main()
+</span></span></code></pre></div><p>I admired this solution not only because it&rsquo;s elegant, but eventually <strong>if a colleague reads the code of the script, he won&rsquo;t get confused by the logger logic</strong>, and hence one can easily debug the code by commenting on just the decorator line. Simple, isn&rsquo;t it?</p>
+<h2 id="-data-layer--sql-server-database">📦 Data Layer : SQL Server Database</h2>
+<p>Not an area I have much expertise in, albeit we simply have an existing instance of a SQL Server upon which I created a new Database as per my convenience. There aren’t a lot of scripts running every hour thus making the amount of data manageable to the point it could be handled even by SQLlite. The fascinating part is that I have already written a module for interacting with this specific database, administering all the permissions, etc.. (the scripts are run by distinct machines by separate owners). I won’t explore the DB logic upheld here, although the JobLogger database has a few tables:</p>
+<ol>
+<li><em>User Table</em></li>
+<li><em>Department Table</em></li>
+<li><em>Job Table</em>, with all the details referencing the task, name, path, pc that should run it, scheduling details, and if it needs validation, etc&hellip; The Key is the job_id, which is an auto incremental number, and therefore it&rsquo;s significant to specify it in the Python decorator</li>
+<li><em>Log History Table</em>, which is the most important part: the history of all the run activities, including logs, warnings, comments, starting and ending times. Every execution of the <code>monitor_job</code> function creates a new row on the table.</li>
+</ol>
+<h2 id="-frontend--appsmith">📊 Frontend : Appsmith</h2>
+<p><a href="https://www.appsmith.com/"><strong>Appsmith</strong></a> is an efficient open-source framework to build internal tools with lesser code, easy to spin up, and a charm to work with. I&rsquo;m also studying Angular, but right now time is of the essence and a quick set-up is needed, with access control and unable to cause nuisance until I pick up further skillsets with TypeScript and Javascript (which are utilized in Appsmith widgets, yet there are a few lines).</p>
+<p>Appsmith is <em>ridicously easy</em> to set up (just run <a href="https://docs.appsmith.com/setup/docker#docker-compose-configuration">this docker-compose.yml</a>), and I was able to connect my DB and the Slack API within a few minutes.</p>
+<p>A noteworthy feature that remains is <strong>the entire Dashboard, including widgets, JS Objects, and connections that can be exported as a simple JSON file</strong> and imported into another instance of Appsmith. I struck on this discovery when I restarted the docker image, losing all my progress with the test I was creating and struggled hours with the docker commands, until realizing I should download the JSON and store it as a backup. You can also piece it together with a Github repo having SSL.</p>
+<p>Here’s <strong>the final result</strong>: the &ldquo;<em>Dettagli</em>&rdquo; (Details) button contains additional information and a modal for opening a ticket. I connected a Sendgrid account to the App and quickly invited my colleague to share the fun!</p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/dashboard.jpg" alt="Dashboard"></p>
+<h2 id="conclusions">Conclusions</h2>
+<p>As a junior Software Engineer, I have long ways to have comprehensive app-building knowledge, but <strong>my JobLogger project acts as an enlightening first step</strong>. I employ it on a daily basis since it’s assisting my colleagues by monitoring our activities, which is excellent considering that I wasn’t even thinking about putting it on (internal) production!</p>
+<p>My satisfaction with this outcome of the project is high, as I am already working on embedding more features such as opening tickets for a particular task, and visualizing the scheduled jobs requisite on any day.</p>
+<p>Fun and educative experience indeed, thanks for reading my experience! See you on the next project!</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-the-problem">😟 The Problem</a></li>
+    <li><a href="#-my-proposal">💡 My Proposal</a></li>
+    <li><a href="#-backend-python-module-with-decorator">🐌 Backend: Python module with decorator</a>
+      <ul>
+        <li></li>
+        <li><a href="#the-joblogger-decorator">The JobLogger Decorator</a></li>
+      </ul>
+    </li>
+    <li><a href="#-data-layer--sql-server-database">📦 Data Layer : SQL Server Database</a></li>
+    <li><a href="#-frontend--appsmith">📊 Frontend : Appsmith</a></li>
+    <li><a href="#conclusions">Conclusions</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/python" target="_blank">python</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/sql-server" target="_blank">sql-server</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/experiments" target="_blank">experiments</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/appsmith" target="_blank">appsmith</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/javascript" target="_blank">javascript</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=My%20Personal%20Airflow%20-%20How%20I%27m%20monitoring%20my%20scripts%20with%20Python%2c%20Appsmith%20and%20SQL%20Server&url=https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2022%2f03%2fpersonal-airflow%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=My%20Personal%20Airflow%20-%20How%20I%27m%20monitoring%20my%20scripts%20with%20Python%2c%20Appsmith%20and%20SQL%20Server: https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2022%2f03%2fpersonal-airflow%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=My%20Personal%20Airflow%20-%20How%20I%27m%20monitoring%20my%20scripts%20with%20Python%2c%20Appsmith%20and%20SQL%20Server&amp;body=Check%20out%20this%20site https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2022%2f03%2fpersonal-airflow%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/">
+                        <img src="/images/presentation_patterns_cover.jpg" class="card-img-top" alt="Personal Notes about Presentation Patterns">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Personal Notes about Presentation Patterns">Personal Notes about Presentation Patterns</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>Presentation Patterns Written by Neal Ford, Matthew McCullough and Nathaniel Schutta, &ldquo;Presentation Patterns - Techniques for Crafting Better Presentations&rdquo; is an encyclopedia of patterns, tips and common mistakes experienced by the authors, who have delivered thousands of presentations. …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jan 28, 2023</span>
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2022/12/road-100-coverage-notion/">
+                        <img src="/images/notion_coverage/title.png" class="card-img-top" alt="Road to 100% Test Coverage on notion-sdk-py">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2022/12/road-100-coverage-notion/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Road to 100% Test Coverage on notion-sdk-py">Road to 100% Test Coverage on notion-sdk-py</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously unexciting activities for many developers 😫
+Luckily, we are all unique in our own way and I decided to contribute to the testing module of one of my …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Dec 26, 2022</span>
+                    <a href="/posts/2022/12/road-100-coverage-notion/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2022/11/turbulent-journey-power-bi-source-control/">
+                        <img src="/images/power_bi_source_control/title.jpg" class="card-img-top" alt="A turbulent journey through Power BI source control">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2022/11/turbulent-journey-power-bi-source-control/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="A turbulent journey through Power BI source control">A turbulent journey through Power BI source control</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>One of the most annoying issues I have when working with Power BI files is that source control is a real pain. Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Nov 7, 2022</span>
+                    <a href="/posts/2022/11/turbulent-journey-power-bi-source-control/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://linkedin.com/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2023  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

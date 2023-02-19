@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Mutt0-ds Notes</title>
+    <link>https://mutt0-ds.github.io/posts/</link>
+    <description>Recent content in Posts on Mutt0-ds Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Personal Notes about Presentation Patterns</title>
+      <link>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</link>
+      <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</guid>
+      <description>Presentation Patterns Written by Neal Ford, Matthew McCullough and Nathaniel Schutta, &amp;ldquo;Presentation Patterns - Techniques for Crafting Better Presentations&amp;rdquo; is an encyclopedia of patterns, tips and common mistakes experienced by the authors, who have delivered thousands of presentations. In particular, they introduce “No Fluff, Just Stuff“, a traveling technical conference series covering a wide variety of topics related to software development and management.
+During the years, they have build up their toolbox of patterns to provide killer presentations, which are divided in three main sections: Prepare (thinking and setting up the presentation’s key concepts), Build (creating the slides), Deliver (present the content).</description>
+    </item>
+    
+    <item>
+      <title>Road to 100% Test Coverage on notion-sdk-py</title>
+      <link>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</link>
+      <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</guid>
+      <description>There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously unexciting activities for many developers 😫
+Luckily, we are all unique in our own way and I decided to contribute to the testing module of one of my favorite libraries, notion-sdk-py.
+Being a certified Notion user, I use its Web App on a daily basis, and the Python library helps me automatically organize my notes.</description>
+    </item>
+    
+    <item>
+      <title>A turbulent journey through Power BI source control</title>
+      <link>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</link>
+      <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</guid>
+      <description>One of the most annoying issues I have when working with Power BI files is that source control is a real pain. Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly complicated solutions&amp;hellip; But that day seems still far in the future.
+Here is a story about how I managed to set up a CI/CD pipeline through Azure DevOps Pipeline for providing rudimental version control of our Power BI reports.</description>
+    </item>
+    
+    <item>
+      <title>My first weeks at Acer Europe</title>
+      <link>https://mutt0-ds.github.io/posts/2022/10/first-weeks-acer/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2022/10/first-weeks-acer/</guid>
+      <description>This is a post for my future self when I will be asking myself: “How were my first days at Acer like?”.
+Note: I&amp;rsquo;m working at Acer EMEA HQ, so when I mention &amp;ldquo;Acer&amp;rdquo;, for simplicity, I mean &amp;ldquo;Acer Europe&amp;rdquo;.
+💭 My expectations My previous experience was in a small company and a very different sector. Considering this, I was expecting the following challenges in the upcoming scenario:
+An organization with thousands of employees and decades of history Several departments and key stakeholders to interact with, each one with specific priorities A huge IT department where I&amp;rsquo;m the youngest member here New technologies to discover: in particular, I&amp;rsquo;ve never worked with most of the Azure tools we are using A whole new level of complexity I wasn&amp;rsquo;t too worried about the previous points, as I&amp;rsquo;m happy to learn new things and I&amp;rsquo;m used to managing projects with different stakeholders.</description>
+    </item>
+    
+    <item>
+      <title>Personal Notes about The Definitive Guide to DAX</title>
+      <link>https://mutt0-ds.github.io/posts/2022/09/personal-notes-about-dax-definitive-guide/</link>
+      <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2022/09/personal-notes-about-dax-definitive-guide/</guid>
+      <description>Disclaimer: this will be a long, long post, written in my own way. It’s essentially a dump of my personal notes, taken when reading “The Definitive Guide to DAX” written by Alberto Ferrari and Marco Russo. At my new workplace I’m going to use PowerBI and DAX a lot, thus my boss suggested me to read the book.
+Yep, it is big and very technical, with 700+ pages rich in contents, but trust me, that’s the “Bible”, a must-read for anyone willing to work with PowerBI and DAX.</description>
+    </item>
+    
+    <item>
+      <title>My surreal experience with COBOL</title>
+      <link>https://mutt0-ds.github.io/posts/2022/09/my-surreal-experience-cobol/</link>
+      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2022/09/my-surreal-experience-cobol/</guid>
+      <description>I was feeling curious&amp;hellip; So, I decided to challenge myself and try to learn a bit more about COmmon Business-Oriented Language aka COBOL, invented in 1959 by IBM. It’s not the most popular among programmers, being extremely old and with huge limitations compared to today’s modern languages&amp;hellip; Yet, as we will see, it’s still alive, hidden in huge legacy codebases in the form of spaghetti code and difficult to get rid of without an entire system redesign.</description>
+    </item>
+    
+    <item>
+      <title>First time with Tailwind CSS: showing off my books!</title>
+      <link>https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/</link>
+      <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/</guid>
+      <description>I&amp;rsquo;m back with another post, this time exploring a new CSS framework, Tailwind CSS!
+In the previous months I started using Angular and Typescript for some small web apps and dashboards, but I always found CSS management cumbersome. I could spend hours tweaking font-size and align-items parameters and hard-coding variables, and this wasn&amp;rsquo;t a lot of fun.
+That&amp;rsquo;s why I decided to try Tailwind, which is being heavily recommended by many people in the frontend community!</description>
+    </item>
+    
+    <item>
+      <title>My Personal Airflow - How I&#39;m monitoring my scripts with Python, Appsmith and SQL Server</title>
+      <link>https://mutt0-ds.github.io/posts/2022/03/personal-airflow/</link>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2022/03/personal-airflow/</guid>
+      <description>Here&amp;rsquo;s the story of how I created my first full-stack project for monitoring my daily activities, using Python and SQL Server in backend and Appsmith for the GUI. I have a lot to learn and process yet, but hey, it&amp;rsquo;s a start.
+😟 The Problem There are scripts I&amp;rsquo;m using that are particularly tedious to monitor. The typical structure is the following:
+Load data (from a file or manual input) Send a request to internal DB / very specific API Compare the data received with the input and if something is wrong, notify me or a colleague.</description>
+    </item>
+    
+    <item>
+      <title>Using a Neural Network for sending memes to my girlfriend</title>
+      <link>https://mutt0-ds.github.io/posts/2021/05/nn-sending-memes/</link>
+      <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2021/05/nn-sending-memes/</guid>
+      <description>Well, my GF&amp;rsquo;s tastes in memes are simple: she loves wholesome memes and, most importantly, she loves animals.
+That&amp;rsquo;s why I created a fun little project that:
+Surfs the subreddit r/wholesomemes using the reddit API Downloads a few of the hottest memes in the contents folder Initializes a ResNet50 model that recognizes images containing any animal Sends them via mail to my GF (positively welcomed) Final email (3 memes by default) Reddit I&amp;rsquo;m using the praw library for downloading the memes, it requires a Reddit Bot enabled.</description>
+    </item>
+    
+  </channel>
+</rss>

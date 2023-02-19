@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="Road to 100% Test Coverage on notion-sdk-py" />
+<meta property="og:description" content="There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously unexciting activities for many developers 😫
+Luckily, we are all unique in our own way and I decided to contribute to the testing module of one of my favorite libraries, notion-sdk-py.
+Being a certified Notion user, I use its Web App on a daily basis, and the Python library helps me automatically organize my notes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-12-26T00:00:00+00:00" /><meta property="og:site_name" content="Mutt0-ds Notes" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Road to 100% Test Coverage on notion-sdk-py"/>
+<meta name="twitter:description" content="There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously unexciting activities for many developers 😫
+Luckily, we are all unique in our own way and I decided to contribute to the testing module of one of my favorite libraries, notion-sdk-py.
+Being a certified Notion user, I use its Web App on a daily basis, and the Python library helps me automatically organize my notes."/>
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+Road to 100% Test Coverage on notion-sdk-py | Mutt0-ds Notes
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Road to 100% Test Coverage on notion-sdk-py</h1>
+            <div class="text-center">
+              Mutt0-ds 
+              <small>|</small>
+              Dec 26, 2022
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid" src="/images/notion_coverage/title.png" alt="Road to 100% Test Coverage on notion-sdk-py">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously unexciting activities for many developers 😫</p>
+<p>Luckily, we are all unique in our own way and I decided to contribute to <a href="https://codecov.io/github/ramnes/notion-sdk-py">the testing module</a> of one of my favorite libraries, <a href="https://github.com/ramnes/notion-sdk-py">notion-sdk-py</a>.</p>
+<p>Being <a href="https://www.credly.com/badges/f15407b3-5fa8-4d9b-99cf-d862399a1543/public_url">a certified Notion user</a>, I use its Web App on a daily basis, and the Python library helps me automatically organize my notes. I even used it for custom bots and documentation. If you don’t know <a href="https://www.notion.so/">the tool</a> yet, I recommend trying it out: it may be a bit more complex compared to a classic note editor like Google Keep or Evernote, but its potential is huge.</p>
+<p>For better understanding this article, just keep in mind that Notion is like a wiki: each page is an element, which contains several blocks that could be paragraphs, tables (called databases), subpages or links to other pages. Each Notion element has a unique ID.</p>
+<p><img src="https://cdn.gosquared.com/blog/wp-content/uploads/2020/04/Screenshot-2022-07-20-at-15.38.59.png" alt="Notion Page"></p>
+<h2 id="-brief-introduction-to-testing-and-coverage">🔍 Brief introduction to testing and coverage</h2>
+<p>Tests are important for making sure that the code does what’s expected to do, by creating functions that simulate common (and uncommon) cases to make sure that the behaviour is always coherent with our expectations. For example, in <a href="https://github.com/ramnes/notion-sdk-py/tree/main/tests">notion-sdk-py the tests</a> have to create a new page, update its metadata, delete it, compare that all the requests are working. I’m using <a href="https://docs.pytest.org/en/6.2.x/contents.html">pytest</a> in this article, which is one of the most used testing libraries in Python.</p>
+<p>Writing tests is not enough: coverage (ideally) plays an important part. The idea is to count the percentage of lines of code that are executed during test runs. The higher percentage of code is covered, the more likely the program does what it’s supposed to.</p>
+<p>At least, in theory: <a href="https://www.google.com/search?q=a+100%25+coverage+doesn%27t+mean+anything">a 100% coverage doesn’t mean anything if the tests aren’t good</a>, as it’s surprisingly easy to write meaningless tests that increase the numbers but aren’t really improving anything. For this reason, it is a common point of view that coverage is basically useless if done with an incorrect approach.</p>
+<blockquote>
+<p>Achieving a 100% coverage should not be considered the one and only objective, yet improving it is a noble and useful challenge: as you will see, there is a lot to learn…</p>
+</blockquote>
+<p>Example: I have a simple function that checks if a number is positive (True) or zero/negative (False), printing out a statement.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">number_sign_detector</span>(num: int) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> num <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;The number is positive&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">elif</span> num <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;The number is zero&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;The number is negative&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span></code></pre></div><p>I write down a simple test with pytest:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> main <span style="color:#f92672">import</span> number_sign_detector
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_number_sign_detector</span>():
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">assert</span> number_sign_detector(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">assert</span> <span style="color:#f92672">not</span> number_sign_detector(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><p><img src="https://github.com/mutt0-ds/mutt0-ds.github.io/blob/master/images/notion_coverage/pytest_example.png?raw=true" alt="test_passes"></p>
+<p>100% of the tests (1/1 🤗) passed, in theory my function is solid… Isn’t it?</p>
+<p>Well, it could be better. The coverage is 78% because I didn’t consider all the cases that can happen: in this case, if <code>num==0</code>.</p>
+<p>Luckily, pytest has an option for saving an interactive coverage report with the command <code>pytest --cov=./path/src/folder --cov-report=term-missing --cov-report=html</code> where I can quickly see which lines are covered by the tests.</p>
+<p><img src="https://github.com/mutt0-ds/mutt0-ds.github.io/blob/master/images/notion_coverage/coverage.png?raw=true" alt="coverage_report"></p>
+<h2 id="-how-can-i-test-notion-api-sdk">❓ How can I test Notion API SDK?</h2>
+<p>I must admit that in my case, creating tests wasn’t trivial: the majority of the <a href="https://github.com/ramnes/notion-sdk-py/blob/main/notion_client/api_endpoints.py">functions in notion-sdk-py</a> is interacting with Notion servers… Which require an API key and a Notion account with a page where run tests, since almost every element in Notion requires an ID to be queried:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># code for retrieving a page</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> notion_client <span style="color:#f92672">import</span> Client
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>client <span style="color:#f92672">=</span> Client(auth<span style="color:#f92672">=</span>NOTION_API_TOKEN)
+</span></span><span style="display:flex;"><span>response <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>pages<span style="color:#f92672">.</span>retrieve(page_id<span style="color:#f92672">=</span>UNIQUE_PAGE_ID)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(response)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># JSON data...</span>
+</span></span></code></pre></div><p>These API calls were initially a big issue for creating reliable tests, as the response depends on the server
+side. A big rule with tests is that they need to be as isolated as possible, minimizing any possible interference from external factors.</p>
+<p>There may be a connection issue, for example, or permission issues. Also, if another user wants to execute the test on its pc, they needs to create a testing environment on its own Notion account with a new API key, add the necessary permissions and make sure that the environment is the same for each independent run…Painful, yet still feasible for a library maintainer.</p>
+<p>However <a href="https://github.com/ramnes/notion-sdk-py/actions">notion-sdk-py uses Github Actions in its CI/CD pipeline</a> for running tests on external VMs, complicating things.</p>
+<p>Also, many Notion objects are dependent from each other: if I want to test a comment, I must create a block first (that the comment is referring to) and a parent page containing the block. This results is a big sequenceof API calls for creating, updating and deleting objects. How can I simulate them?</p>
+<p><img src="https://thomasjfrank.com/wp-content/uploads/2021/05/Notion-Complete-Block-Reference.gif" alt="navigation"></p>
+<h2 id="-the-solution-fixtures">💡 The solution: fixtures</h2>
+<p><a href="https://docs.pytest.org/en/6.2.x/fixture.html">Fixtures</a> are a basic component of testing libraries: like the name says, they are “fixed” elements that are can be used by all the tests that are needing it for generating an initial state.</p>
+<p>To use a fixture, we can just add its name as an input parameter of the test function. This is an example of “dependency injection”, a design that aims to isolate the testing phase, which has only the task of checking that something works as expected, and its initiation phase:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pytest
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> notion_client <span style="color:#f92672">import</span> Client
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@pytest.fixture</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">client</span>():
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> Client(auth<span style="color:#f92672">=</span>TOKEN)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_a</span>(client):
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># client gets created</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">assert</span> client <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_b</span>(client):
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># another client gets created</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">assert</span> client<span style="color:#f92672">.</span>pages <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>
+</span></span></code></pre></div><p>Both tests need a client (which manages all the requests to the Notion API so it is called for many cases): by using the same fixture, both functions have the same (but independent) environment without worrying about its initiation.</p>
+<p>I previously said that for testing many functions, I need a parent page first, which has to be manually set up: it can be considered as the initial path. The easiest way to share its ID is with another fixture:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#.. client fixture </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># os.environ[&#39;NOTION_PARENT_PAGE&#39;] = &#34;f691a0f9-da72-43bd-94ef-365793610746&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@pytest.fixture</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">page_id</span>():
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;NOTION_PARENT_PAGE&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_pages_delete</span>(client, page_id):
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>blocks<span style="color:#f92672">.</span>delete(block_id<span style="color:#f92672">=</span>page_id)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> response
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_pages_retrieve</span>(client, page_id):
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>pages<span style="color:#f92672">.</span>retrieve(page_id<span style="color:#f92672">=</span>page_id)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> response[<span style="color:#e6db74">&#34;object&#34;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;page&#34;</span>
+</span></span></code></pre></div><p>However, if you run the tests in this exact order they will fail. They are sharing the same static fixture, thus the <code>test_pages_delete</code> will delete the testing environment before <code>test_pages_retrieve</code> will be able of retrieving and updating its data! Sure, we can change their orders, but it is better to fix the issue: each test should not be influenced by the others…</p>
+<h2 id="-the-upgraded-solution-function-scoped-fixtures">💡💡 The upgraded solution: function-scoped fixtures</h2>
+<p>A <a href="https://betterprogramming.pub/understand-5-scopes-of-pytest-fixtures-1b607b5c19ed?gi=fe628b6947b5">fixture can have the following scopes</a>:</p>
+<ul>
+<li>“session” (one object for all tests)</li>
+<li>“package” (one object for each package)</li>
+<li>“module”: one object for each module (e.g. test_client.py and test_endpoints.py will have one copy each of the fixture)</li>
+<li>“class” (one object for each class)</li>
+<li>“function” (one object for each test, default option)</li>
+</ul>
+<p>In this case I used “session” and “function” scopes. The Notion client can be used once for session, for example, to improve efficiency.
+The page_id of each test, however, must be generated each time starting from the initial <code>NOTION_PARENT_PAGE</code> for granting independency and atomicity: that’s when the “function” scope gets useful. It is the default option for fixtures, but I want to make clear that the functions I’m going to use are being called each time.</p>
+<p>For avoiding conflicting tests r, I decided to create unique subpages from the initial parent page. The fixture returns a dynamic Notion ID, which basically a shortcut for generating a new environment page each time a test begins:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># long way</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_pages_retrieve</span>(client):
+</span></span><span style="display:flex;"><span>    payload <span style="color:#f92672">=</span> {parent:{<span style="color:#e6db74">&#34;page_id&#34;</span>: os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;NOTION_PARENT_PAGE&#39;</span>]},
+</span></span><span style="display:flex;"><span>              properties:{<span style="color:#e6db74">&#34;title&#34;</span>: [{<span style="color:#e6db74">&#34;text&#34;</span>: {<span style="color:#e6db74">&#34;content&#34;</span>: <span style="color:#e6db74">&#34;Test Page&#34;</span>}}}}
+</span></span><span style="display:flex;"><span>    parent_page_id <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>pages<span style="color:#f92672">.</span>create(<span style="color:#f92672">**</span>payload)[<span style="color:#e6db74">&#34;id&#34;</span>] 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> response[<span style="color:#e6db74">&#34;object&#34;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;page&#34;</span>
+</span></span><span style="display:flex;"><span>    client<span style="color:#f92672">.</span>blocks<span style="color:#f92672">.</span>delete(block_id<span style="color:#f92672">=</span>parent_page_id)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># short way</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@pytest.fixture</span>(scope<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;function&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">parent_page_id</span>():
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;NOTION_PARENT_PAGE&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@pytest.fixture</span>(scope<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;function&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">page_id</span>(client, parent_page_id):
+</span></span><span style="display:flex;"><span>  payload <span style="color:#f92672">=</span> {parent:{<span style="color:#e6db74">&#34;page_id&#34;</span>: parent_page_id},
+</span></span><span style="display:flex;"><span>            properties:{<span style="color:#e6db74">&#34;title&#34;</span>: [{<span style="color:#e6db74">&#34;text&#34;</span>: {<span style="color:#e6db74">&#34;content&#34;</span>: <span style="color:#e6db74">&#34;Test Page&#34;</span>}}}}
+</span></span><span style="display:flex;"><span>  response <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>pages<span style="color:#f92672">.</span>create(<span style="color:#f92672">**</span>payload)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">yield</span> response[<span style="color:#e6db74">&#34;id&#34;</span>] 
+</span></span><span style="display:flex;"><span>  client<span style="color:#f92672">.</span>blocks<span style="color:#f92672">.</span>delete(block_id<span style="color:#f92672">=</span>response[<span style="color:#e6db74">&#34;id&#34;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_pages_retrieve</span>(client, page_id):
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># the page_id is generated by the function-scoped fixture</span>
+</span></span><span style="display:flex;"><span>  response <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>pages<span style="color:#f92672">.</span>retrieve(page_id<span style="color:#f92672">=</span>parent_page_id)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">assert</span> response[<span style="color:#e6db74">&#34;object&#34;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;page&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># the parent page is then deleted</span>
+</span></span></code></pre></div><p>By using <code>yield</code>, I can give the ID of the parent page to the test that is asking for it (which only cares about its specific task), and then deleting it with <code>client.blocks.delete</code> before the end. This is a <a href="https://wiki.python.org/moin/Generators">generator</a>, a function that returns a lazy iterator which doesn’t store its content in memory.</p>
+<p>With this method, there will be a final step for cleaning up everything and resetting the environment even in case of a failure. Before that, I was finding 20+ new subpages in my personal Notion page and cleaning them up wasn’t very funny 😅</p>
+<p>The final solution used the library is a bit more complex, because from a general parent page (session-scoped), depending on each case the module creates a function-scoped subpage containing another function-scoped block, comment or database. In fact, fixtures can call other fixtures and so on. You better check out <a href="https://github.com/ramnes/notion-sdk-py/blob/main/tests/conftest.py">the code</a> if you are curious.</p>
+<p>There is one problem left: we still can’t control the responses of the API… If the connection times out, or a user is not authenticated, the tests will fail.</p>
+<h2 id="-the-almost-final-solution-cassettes">💡📼 The almost-final solution: cassettes</h2>
+<p>The concept of a <a href="https://betterprogramming.pub/your-api-tests-must-be-reproducible-6e1c57986f4?gi=119ee926cb4e">cassette</a> is very cool: they are objects that capture an HTTP response and can be rewinded for an undefined number of times as the JSON data is stored locally. This makes tests that are working with external requests reproducible, as the response is always the same, independently from connection or permission issues. Also, they speed up the testing time, as they don’t require a connection anymore.</p>
+<p>The plugin <a href="https://pytest-vcr.readthedocs.io/en/latest/">pytest-vcr</a> integrates cassettes for pytest as a decorator: the decorated test will send a request the first time, save it in a local .yaml file, and use it for all the successive runs.</p>
+<p>Sometimes Notion introduces <a href="https://developers.notion.com/reference/changes-by-version">breaking changes in its API</a>, but there is nothing to worry about: we can just update the <a href="https://github.com/ramnes/notion-sdk-py/blob/5829ae16df7dae6429de22201939c2a443324026/notion_client/client.py#L52">“Notion-Version” header</a> in the request, regenerate the cassettes, and see if there are new issues.</p>
+<p>With this methodology, we can stay pretty safe that the cassettes are reliably simulating real requests.</p>
+<p>Let’s pick up again the pages_retrieve test:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#.. client and parent page id fixtures</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@pytest.mark.vcr</span>()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_pages_retrieve</span>(client, page_id):
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>pages<span style="color:#f92672">.</span>retrieve(page_id<span style="color:#f92672">=</span>page_id)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> response[<span style="color:#e6db74">&#34;object&#34;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;page&#34;</span>
+</span></span></code></pre></div><p>Pytest will locally store the response data in YAML format the first time the test is run.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">interactions</span>:
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">request</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># data about the create request for the parent page</span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">request</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">body</span>: <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">headers</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">accept</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#39;*/*&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">accept-encoding</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">gzip, deflate</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">authorization</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">secret_...</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">connection</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">keep-alive</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">host</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">api.notion.com</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">notion-version</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#39;2022-06-28&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">method</span>: <span style="color:#ae81ff">GET</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">uri</span>: <span style="color:#ae81ff">https://api.notion.com/v1/pages/09462f1b-f4a9-4d52-8f9f-3061df0fa937</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">response</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">content</span>: <span style="color:#e6db74">&#39;{&#34;object&#34;:&#34;page&#34;,&#34;id&#34;:&#34;09462f1b-f4a9-4d52-8f9f-3061df0fa937&#34;,&#34;created_time&#34;:&#34;2022-11-16T15:44:00.000Z&#34;,&#34;last_edited_time&#34;:&#34;2022-11-16T15:44:00.000Z&#34;,&#34;created_by&#34;:{&#34;object&#34;:&#34;user&#34;,&#34;id&#34;:&#34;823cf07b-34df-4ae6-9fbc-dbc600a815c6&#34;},&#34;last_edited_by&#34;:{&#34;object&#34;:&#34;user&#34;,&#34;id&#34;:&#34;823cf07b-34df-4ae6-9fbc-dbc600a815c6&#34;},&#34;cover&#34;:null,&#34;icon&#34;:null,&#34;parent&#34;:{&#34;type&#34;:&#34;page_id&#34;,&#34;page_id&#34;:&#34;f691a0f9-da72-43bd-94ef-365793610746&#34;},&#34;archived&#34;:false,&#34;properties&#34;:{&#34;title&#34;:{&#34;id&#34;:&#34;title&#34;,&#34;type&#34;:&#34;title&#34;,&#34;title&#34;:[{&#34;type&#34;:&#34;text&#34;,&#34;text&#34;:{&#34;content&#34;:&#34;Test
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      2022-11-16 16:44:37.054647&#34;,&#34;link&#34;:null},&#34;annotations&#34;:{&#34;bold&#34;:false,&#34;italic&#34;:false,&#34;strikethrough&#34;:false,&#34;underline&#34;:false,&#34;code&#34;:false,&#34;color&#34;:&#34;default&#34;},&#34;plain_text&#34;:&#34;Test
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      2022-11-16 16:44:37.054647&#34;,&#34;href&#34;:null}]}},&#34;url&#34;:&#34;https://www.notion.so/Test-2022-11-16-16-44-37-054647-09462f1bf4a94d528f9f3061df0fa937&#34;}&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">headers</span>: {}
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">http_version</span>: <span style="color:#ae81ff">HTTP/1.1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">status_code</span>: <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">request</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># data about the delete request for the parent page</span>
+</span></span></code></pre></div><p>A few things to highlight:</p>
+<ul>
+<li>The cassette contains all the data about the requests made by <code>test_pages_retrieve</code>, including the two “hidden” create and delete by the client fixture. I cut them out here for keeping the post short.</li>
+<li>The test will use the stored response for all the future runs, indpendently by the user, connection, time or zone</li>
+<li>If the code that makes the request changes pytest will throw an error and we will have to recreate a new cassette</li>
+<li>The API Token has to be hidden (like we did <a href="https://github.com/ramnes/notion-sdk-py/blob/5829ae16df7dae6429de22201939c2a443324026/tests/conftest.py#L12-L22">here</a>) or it will be stored in plain text in the cassette!</li>
+<li>A cassette can’t also be a fixture because the two decorators will interfere</li>
+</ul>
+<h2 id="-conclusions">🔨 Conclusions</h2>
+<p>With cassettes and fixtures <a href="https://github.com/ramnes/notion-sdk-py/pull/168">I managed to achieve 100% test coverage</a> on notion-sdk-py, which was absolutely unthinkable to me just a few weeks before! I learned so much by contributing on the library, and this posts represents a quick sumup of my takeaways. Hopefully it will help you if you will be in my same situation, where I was lost trying to understand how to test something that was so dependant on external sources.</p>
+<p><img src="https://github.com/mutt0-ds/mutt0-ds.github.io/blob/master/images/notion_coverage/final_coverage.png?raw=true" alt="100_coverage"></p>
+<p>A big thank to <a href="https://github.com/ramnes">ramnes</a> for the precious feedbacks, the proofereading and for his amazing library!</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-brief-introduction-to-testing-and-coverage">🔍 Brief introduction to testing and coverage</a></li>
+    <li><a href="#-how-can-i-test-notion-api-sdk">❓ How can I test Notion API SDK?</a></li>
+    <li><a href="#-the-solution-fixtures">💡 The solution: fixtures</a></li>
+    <li><a href="#-the-upgraded-solution-function-scoped-fixtures">💡💡 The upgraded solution: function-scoped fixtures</a></li>
+    <li><a href="#-the-almost-final-solution-cassettes">💡📼 The almost-final solution: cassettes</a></li>
+    <li><a href="#-conclusions">🔨 Conclusions</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/python" target="_blank">python</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/notion" target="_blank">notion</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/test" target="_blank">test</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/coverage" target="_blank">coverage</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/pytest" target="_blank">pytest</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=Road%20to%20100%25%20Test%20Coverage%20on%20notion-sdk-py&url=https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2022%2f12%2froad-100-coverage-notion%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Road%20to%20100%25%20Test%20Coverage%20on%20notion-sdk-py: https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2022%2f12%2froad-100-coverage-notion%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=Road%20to%20100%25%20Test%20Coverage%20on%20notion-sdk-py&amp;body=Check%20out%20this%20site https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2022%2f12%2froad-100-coverage-notion%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/">
+                        <img src="/images/presentation_patterns_cover.jpg" class="card-img-top" alt="Personal Notes about Presentation Patterns">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Personal Notes about Presentation Patterns">Personal Notes about Presentation Patterns</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>Presentation Patterns Written by Neal Ford, Matthew McCullough and Nathaniel Schutta, &ldquo;Presentation Patterns - Techniques for Crafting Better Presentations&rdquo; is an encyclopedia of patterns, tips and common mistakes experienced by the authors, who have delivered thousands of presentations. …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jan 28, 2023</span>
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2022/12/road-100-coverage-notion/">
+                        <img src="/images/notion_coverage/title.png" class="card-img-top" alt="Road to 100% Test Coverage on notion-sdk-py">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2022/12/road-100-coverage-notion/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Road to 100% Test Coverage on notion-sdk-py">Road to 100% Test Coverage on notion-sdk-py</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously unexciting activities for many developers 😫
+Luckily, we are all unique in our own way and I decided to contribute to the testing module of one of my …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Dec 26, 2022</span>
+                    <a href="/posts/2022/12/road-100-coverage-notion/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2022/11/turbulent-journey-power-bi-source-control/">
+                        <img src="/images/power_bi_source_control/title.jpg" class="card-img-top" alt="A turbulent journey through Power BI source control">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2022/11/turbulent-journey-power-bi-source-control/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="A turbulent journey through Power BI source control">A turbulent journey through Power BI source control</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>One of the most annoying issues I have when working with Power BI files is that source control is a real pain. Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Nov 7, 2022</span>
+                    <a href="/posts/2022/11/turbulent-journey-power-bi-source-control/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://linkedin.com/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2023  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

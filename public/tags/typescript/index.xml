@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>typescript on Mutt0-ds Notes</title>
+    <link>https://mutt0-ds.github.io/tags/typescript/</link>
+    <description>Recent content in typescript on Mutt0-ds Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First time with Tailwind CSS: showing off my books!</title>
+      <link>https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/</link>
+      <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/</guid>
+      <description>I&amp;rsquo;m back with another post, this time exploring a new CSS framework, Tailwind CSS!
+In the previous months I started using Angular and Typescript for some small web apps and dashboards, but I always found CSS management cumbersome. I could spend hours tweaking font-size and align-items parameters and hard-coding variables, and this wasn&amp;rsquo;t a lot of fun.
+That&amp;rsquo;s why I decided to try Tailwind, which is being heavily recommended by many people in the frontend community!</description>
+    </item>
+    
+  </channel>
+</rss>
