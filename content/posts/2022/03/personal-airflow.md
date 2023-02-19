@@ -157,7 +157,7 @@ A noteworthy feature that remains is **the entire Dashboard, including widgets, 
 
 Here’s **the final result**: the "_Dettagli_" (Details) button contains additional information and a modal for opening a ticket. I connected a Sendgrid account to the App and quickly invited my colleague to share the fun!
 
-![Dashboard](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/dashboard.jpg)
+![Dashboard](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/dashboard.jpg)
 
 ## Conclusions
 

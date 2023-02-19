@@ -24,7 +24,7 @@ Here is a story about how I managed to set up a CI/CD pipeline through Azure Dev
 
 While textual formats like markdown or .json can be compared using an editor, binary formats like .pbix are not supported, being binary files. This results in a confusing situation where we have to document what exactly has been changed after every update, losing the powerful features available with git. So, lots of time wasted, plus insecurity and confusion.
 
-![binary](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/binary.png)
+![binary](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/power_bi_source_control/binary.png)
 
 ![working-git](https://code.visualstudio.com/assets/docs/sourcecontrol/overview/overview.png)
 
@@ -161,7 +161,7 @@ This was the part that gave me a bit of a headache, as the original code didn't 
   pwsh: true
 ```
 
-![git](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/git.png)
+![git](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/power_bi_source_control/git.png)
 
 ### 6. Extract PBIX Metadata
 
@@ -327,7 +327,7 @@ The core of the Pipeline, which requires the MicrosoftPowerBIMgmt Powershell mod
     pwsh: true  
 ```
 
-![extraction](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/extraction.png)
+![extraction](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/power_bi_source_control/extraction.png)
 
 ### 7. Push the Metadata to the Git repository
 
@@ -358,11 +358,11 @@ If you get a `GenericContribute` permission error, remember to add the service p
 
 ## 🔚 Conclusions
 
-![commit](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/commit.png)
+![commit](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/power_bi_source_control/commit.png)
 
 Keeping track of the changes inside Power BI files is still a painful process at the moment, and I sincerely hope that Microsoft will soon find a solution to the issue.
 
-![result](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/result.png)
+![result](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/power_bi_source_control/result.png)
 
 The method I set up is working if the report contains a dataset and something has changed in the schema and the measures, but unfortunately it still can't detect visual changes, which is the most common cause of confusion, especially when users begin messing around with bookmarks and filters. Since many of our reports are using external datasets as source, they are untracked by the system.
 

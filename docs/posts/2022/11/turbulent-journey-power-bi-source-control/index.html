@@ -276,7 +276,7 @@ Considering that Microsoft owns Azure, Github, and Power BI, one would hope that
 <p>Here is a story about how I managed to set up a CI/CD pipeline through Azure DevOps Pipeline for providing rudimental version control of our Power BI reports.</p>
 <h2 id="-the-problem">❓ The problem</h2>
 <p>While textual formats like markdown or .json can be compared using an editor, binary formats like .pbix are not supported, being binary files. This results in a confusing situation where we have to document what exactly has been changed after every update, losing the powerful features available with git. So, lots of time wasted, plus insecurity and confusion.</p>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/binary.png" alt="binary"></p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/power_bi_source_control/binary.png" alt="binary"></p>
 <p><img src="https://code.visualstudio.com/assets/docs/sourcecontrol/overview/overview.png" alt="working-git"></p>
 <h2 id="-acknowledgments">🙏 Acknowledgments</h2>
 <p>Many people have tried to tackle the problem, in particular, <a href="https://www.kerski.tech/bringing-dataops-to-power-bi-part10/">Kerski</a> and <a href="https://blog.gbrueckl.at/">Gerhard Brueckl</a>. I&rsquo;m very thankful for their precious resources.
@@ -378,7 +378,7 @@ A little, innocent detail I had to remember is that if you flag a variable in yo
 </span></span><span style="display:flex;"><span>        Write-Warning <span style="color:#e6db74">&#34;No changes found in Build </span>$($env:BUILD_BUILDID)<span style="color:#e6db74">&#34;</span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>  pwsh<span style="color:#960050;background-color:#1e0010">:</span> true
-</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/git.png" alt="git"></p>
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/power_bi_source_control/git.png" alt="git"></p>
 <h3 id="6-extract-pbix-metadata">6. Extract PBIX Metadata</h3>
 <p>The core of the Pipeline, which requires the MicrosoftPowerBIMgmt Powershell module, the credentials for logging in Power BI and then calling the Premium Workspace endpoint for extracting data using Tabular Editor.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>- task<span style="color:#960050;background-color:#1e0010">:</span> PowerShell@2
@@ -538,7 +538,7 @@ A little, innocent detail I had to remember is that if you flag a variable in yo
 </span></span><span style="display:flex;"><span>      }
 </span></span><span style="display:flex;"><span>      Write-Information <span style="color:#e6db74">&#34;Finished!&#34;</span>
 </span></span><span style="display:flex;"><span>    pwsh<span style="color:#960050;background-color:#1e0010">:</span> true  
-</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/extraction.png" alt="extraction"></p>
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/power_bi_source_control/extraction.png" alt="extraction"></p>
 <h3 id="7-push-the-metadata-to-the-git-repository">7. Push the Metadata to the Git repository</h3>
 <p>The final step is to push the .json metadata extracted by Tabular Editor to the repository. The script uses the name and email of the original committer and mentions the original id in the message for keeping things clear.</p>
 <p>If you get a <code>GenericContribute</code> permission error, remember to add the service principal account as Contributor as shown <a href="https://stackoverflow.com/a/56542631">here</a>.</p>
@@ -561,9 +561,9 @@ A little, innocent detail I had to remember is that if you flag a variable in yo
 </span></span><span style="display:flex;"><span>        git commit -am %_commit_message%
 </span></span><span style="display:flex;"><span>        git push origin HEAD:%_full_branch_name%
 </span></span></code></pre></div><h2 id="-conclusions">🔚 Conclusions</h2>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/commit.png" alt="commit"></p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/power_bi_source_control/commit.png" alt="commit"></p>
 <p>Keeping track of the changes inside Power BI files is still a painful process at the moment, and I sincerely hope that Microsoft will soon find a solution to the issue.</p>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/power_bi_source_control/result.png" alt="result"></p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/power_bi_source_control/result.png" alt="result"></p>
 <p>The method I set up is working if the report contains a dataset and something has changed in the schema and the measures, but unfortunately it still can&rsquo;t detect visual changes, which is the most common cause of confusion, especially when users begin messing around with bookmarks and filters. Since many of our reports are using external datasets as source, they are untracked by the system.</p>
 <p>The only solution currently available is <a href="https://pbi.tools/cli/">pbi-tools</a>, which is unfortunately unusable in a pipeline as it requires a Power BI Desktop instance on the VM (we can&rsquo;t use the Core edition for extracting metadata). From <a href="https://community.powerbi.com/t5/Desktop/docker/m-p/426116">what I could find</a>, containerizing the app is not a suitable solution, but I&rsquo;m keeping an eye on <a href="https://github.com/pbi-tools/pbi-tools/issues/176">an open issue on Github</a> that could be the final solution.</p>
 <p>In that case, we could just import the correct VM Image with the pre-installed pbi-tools, extract the metadata and commit the changes in a few steps (and I&rsquo;ll be happy to update the guide).</p>

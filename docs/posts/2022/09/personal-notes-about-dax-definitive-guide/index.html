@@ -391,14 +391,14 @@ In short, <code>CALCULATE</code> transforms the row context into a new filter to
 <li>CT transforms all the row contexts, without exceptions</li>
 <li>CT invalids every existing row context once the transition happens</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_1.png" alt="SUMX without CALCULATE example">
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_1.png" alt="SUMX without CALCULATE example">
 <em><code>SUMX</code> without CALCULATE ignores the row context. The solution work because the Sales column has unique IDs, so there aren’t duplicates!</em></p>
 <p>Unfortunately, the CT doesn’t filter a single row but works with unique values, so we will have extremely tricky errors in case of tables with duplicates! Using this tactic is not only incorrect, but also very slow since the engine has to iterate for all the rows of the table. Using a measure is wrong too, because:</p>
 <blockquote>
 <p>Whenever you read a measure call in DAX, you should always read it as if <code>CALCULATE</code> were there</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_2.png" alt="Wrong formula">
-<img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_3.png" alt="Wrong formula Results"></p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_2.png" alt="Wrong formula">
+<img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_3.png" alt="Wrong formula Results"></p>
 <p><em>Wrong formula: the Right Sales Amount doesn’t use <code>CALCULATE</code></em></p>
 <h2 id="calculate-modifiers-see-chapter-14">CALCULATE modifiers (see Chapter 14)</h2>
 <ul>
@@ -406,14 +406,14 @@ In short, <code>CALCULATE</code> transforms the row context into a new filter to
 <li><code>CROSSFILTER</code>, which is similar, but more powerful: it can disable the relationship between tables and change its direction (more on this later). I&rsquo;ve never used it though</li>
 <li><code>KEEPFILTERS</code> keeps the existing filters like <code>VALUES</code>, for example in <code>Audio Sales KeepFilters := CALCULATE ( [Sales Amount], KEEPFILTERS ( 'Product'[Category] = &quot;Audio&quot; ) )</code>. However, it doesn&rsquo;t overwrite the filter context, but simply adds the filters in its arguments with an <code>AND</code> operator. The outcome will then have BLANK rows if they aren&rsquo;t included in the filter condition. Observe the differences:</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_4.png" alt="CALCULATE example">
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_4.png" alt="CALCULATE example">
 <em><code>CALCULATE ( [Sales Amount], 'Product'[Category] = &quot;Audio&quot; )</code></em></p>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_5.png" alt="CALCULATE KEEPFILTERS example">
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_5.png" alt="CALCULATE KEEPFILTERS example">
 <em><code>CALCULATE ( [Sales Amount], KEEPFILTERS ( 'Product'[Category] = &quot;Audio&quot; ) )</code></em></p>
 <ul>
 <li>
 <p><code>ALL</code> shows a different behavior if used inside a <code>CALCULATE</code>, becoming a sort of <code>REMOVEFILTER</code> and removing the effect of any <code>KEEPFILTERS</code>, even if it&rsquo;s used after the statement. That&rsquo;s because the ALL* modifiers have higher execution priority than normal filters</p>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_6.png" alt="They are the same">
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_6.png" alt="They are the same">
 <em>They are the same</em></p>
 </li>
 <li>
@@ -424,7 +424,7 @@ In short, <code>CALCULATE</code> transforms the row context into a new filter to
 <p>They are important for code readability and performance optimization, use them if you see repetitions. The only thing to remember well is that they are immutable CONSTANTS calculated at the beginning of the calculation containing them. Every variables must be introduced with <code>VAR</code>.
 Pay attention to the definition order: a variable can&rsquo;t reference another variable declared later.</p>
 <p>Another peculiarity is the name: it must be different from every existing table&rsquo;s name, otherwise DAX gets confused. A best practice is to use long names precisely describing their purpose. The engine, when creating variables, uses two <code>__</code>as prefix</p>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_7.png" alt="good example about variables’ immutability">
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_7.png" alt="good example about variables’ immutability">
 <em>Here’s a good example about variables’ immutability</em></p>
 <h2 id="7--working-with-iterators-and-with-calculate">7 🔄 Working with iterators and with CALCULATE</h2>
 <p>Most of the iterators require a table and an expression used to calculate something row-by-row inside that table (e.g. <code>SUMX</code> calculates the sum). Specifically, the expression will iterate every row, collecting its value, then will apply the operation (in this case, a sum). Thus, all the iterators are working in the same way, except for the final operation they apply.</p>
@@ -463,7 +463,7 @@ Pay attention to the definition order: a variable can&rsquo;t reference another 
 </li>
 <li>
 <p><code>PARALLELPERIOD</code> is useful if you are looking for the entire period despite the presence of row filters. So, for example, if you want the result of the previous quarter in the rows January, February, March write <code>PQ Total Sales :=CALCULATE ( [Sales Amount], PARALLELPERIOD ( 'Date'[Date], -1, QUARTER ) )</code> and see the results in the example:
-<img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_8.png" alt="PARALLELPERIOD"></p>
+<img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_8.png" alt="PARALLELPERIOD"></p>
 </li>
 <li>
 <p>The functions <code>PREVIOUSYEAR, PREVIOUSQUARTER, PREVIOUSMONTH, PREVIOUSDAY, NEXTYEAR, NEXTQUARTER, NEXTMONTH,</code> and <code>NEXTDAY</code> are using the same &lsquo;independent&rsquo; context</p>
@@ -498,8 +498,8 @@ Pay attention to the definition order: a variable can&rsquo;t reference another 
 <h2 id="11--handling-hierarchies">11 ❓ Handling hierarchies</h2>
 <p>Hierarchies aren&rsquo;t natively supported on DAX formulas, thus implementing them can be very tricky. A classic example is when a measure behaves differently based on the active hierarchy, for example with product categories and subcategories. In the book&rsquo;s example, a combination of  <code>PercOnSubcategory := DIVIDE ( [Sales Amount], CALCULATE ( [Sales Amount], ALLSELECTED ( Product[Product Name] ) ) )</code> is used for calculating the percentage of each subcategory compared to all the rows of the selected category. Changing the element in the hierarchy can be done by replacing the argument in <code>ALLSELECTED</code> (Category, Product Name, etc&hellip;).</p>
 <p><code>ISINSCOPE</code> is a useful function that simulates a hierarchy focus, returning TRUE if the arg column is filtered and has been used for grouping (thus both row and filter contexts are using it). In the book, it is used for showing BLANK if the calculation is not about the selected hierarchy.</p>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_9.png" alt="ISINSCOPE 1">
-<img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_10.png" alt="ISINSCOPE 2"></p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_9.png" alt="ISINSCOPE 1">
+<img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_10.png" alt="ISINSCOPE 2"></p>
 <p>There are very advanced examples here, I wouldn&rsquo;t recommend them unless they are heavily used in the current. At the moment I&rsquo;m not writing down anything else.</p>
 <h2 id="12--working-with-tables">12 🔄 Working with tables</h2>
 <h3 id="exploring-calculatetable">Exploring CALCULATETABLE</h3>
@@ -543,8 +543,8 @@ EVALUATE
 <h2 id="14--advanced-dax-concepts">14 🔄 Advanced DAX concepts</h2>
 <h3 id="expanded-tables">Expanded Tables</h3>
 <p>Expanded Tables are the core of DAX. Remember that every time you select a table, there&rsquo;s a hidden world behind it that includes all its relationships!</p>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_11.png" alt="Expanded Tables 1">
-<img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_12.png" alt="Expanded Tables 2"></p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_11.png" alt="Expanded Tables 1">
+<img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_12.png" alt="Expanded Tables 2"></p>
 <p>When selecting a <code>CALCULATE</code> filter on the Color column of Product, we can observe that the filter context uses all the linked tables, including Sales! Using <code>RELATED</code>, you can work on the related tables existing in the expanded table.</p>
 <h3 id="the-all-functions">The ALL* functions</h3>
 <p>These functions can become extremely cumbersome, especially when used inside a <code>CALCULATE</code>. Pay a lot of attention to them:</p>
@@ -595,7 +595,7 @@ EVALUATE
 <li>Computing LY YTD: very useful, I&rsquo;ve already challenged this one in the past. It uses a <code>TREATAS</code> to keep the data lineage, then <code>SAMEPERIODLASTYEAR</code></li>
 </ul>
 <h2 id="17--the-dax-engine">17 ✨ The DAX Engine</h2>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_13.png" alt="DAX Engine"></p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_13.png" alt="DAX Engine"></p>
 <p>A technical segment that shows what&rsquo;s happening behind the scenes. It isn&rsquo;t focused on <strong>DirectQuery</strong>, which is just a SQL query translated and optimized by the Formula Engine, but rather on <strong>VertiPaq</strong>, which uses an in-memory copy of the table which will be queried by the Formula Engine too (it doesn&rsquo;t work with uncompressed tables).</p>
 <p>A third query mode can be <strong>Dual</strong>, with a table read in-memory during data refresh, but read with DirectQuery at query time.</p>
 <p>VertiPaq is a columnar database, very effective when you want to filter many rows on a few columns, but slower when filtering a few rows on many columns. Its structure is a transposition of a classic database. Its objective is to be as efficient as possible by compressing data with several methods: hash encryption, unit encoding, RLE, intermediate tables and so on&hellip;</p>
@@ -628,19 +628,19 @@ EVALUATE
 <ul>
 <li>DAX</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_14.png" alt="DAX"></p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_14.png" alt="DAX"></p>
 <ul>
 <li>Logical Query Plan: it&rsquo;s still easy to trace back its relationship with the original DAX version. In this case, it corresponds to “Create a table with a column named Value, filled with the content of a SUM operation, performed by the storage engine by scanning the Quantity column in the Sales table.”</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_15.png" alt="Logical Query Plan"></p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_15.png" alt="Logical Query Plan"></p>
 <ul>
 <li>Physical Query Plan: it looks similar to the Logical Tree, but it goes deeper, with different operators and a more complex structure, difficult to interpret. Some important details are hidden here though! Pay attention to ProjectionSpool, which shows the number of records picked up by the engine from the DB with a SQL query. Being the step a single thread and using memory, it could be a bottleneck</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_16.png" alt="Physical Query Plan"></p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_16.png" alt="Physical Query Plan"></p>
 <ul>
 <li>the XmSQL query generated by the Storage Engine&rsquo;s ProjectionSpool, which is what the database will receive as input. This is just the SQL conversion of the previous step, you can&rsquo;t intervene</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_17.png" alt="XmSQL"></p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_17.png" alt="XmSQL"></p>
 <p>Then, there are some technicalities about xmSQL, not really my cup of tea. Just a final reminder: remember to clean up the cache before analyzing performances, since the engine stores previous datacaches in memory and the processing speed will be faster than in reality.</p>
 <h3 id="callbackdataid">CallbackDataId</h3>
 <p>If in the DAX formula there are complex elements such as <code>IF</code> or <code>SQRT</code>, then the Formula Engine will insert in its XmSQL query plan the CallbackDataId statement. E.g. for a <code>ROUND</code>, there will be something like</p>

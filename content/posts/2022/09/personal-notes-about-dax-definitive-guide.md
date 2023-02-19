@@ -194,7 +194,7 @@ Another example:  `Sales Amount := SUMX ( Sales, CALCULATE ( SUM ( Sales[Quantit
 - CT transforms all the row contexts, without exceptions
 - CT invalids every existing row context once the transition happens
 
-![SUMX without CALCULATE example](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_1.png)
+![SUMX without CALCULATE example](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_1.png)
 *`SUMX` without CALCULATE ignores the row context. The solution work because the Sales column has unique IDs, so there aren’t duplicates!*
 
 Unfortunately, the CT doesn’t filter a single row but works with unique values, so we will have extremely tricky errors in case of tables with duplicates! Using this tactic is not only incorrect, but also very slow since the engine has to iterate for all the rows of the table. Using a measure is wrong too, because:
@@ -202,8 +202,8 @@ Unfortunately, the CT doesn’t filter a single row but works with unique values
 > Whenever you read a measure call in DAX, you should always read it as if `CALCULATE` were there
 > 
 
-![Wrong formula](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_2.png)
-![Wrong formula Results](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_3.png)
+![Wrong formula](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_2.png)
+![Wrong formula Results](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_3.png)
 
 *Wrong formula: the Right Sales Amount doesn’t use `CALCULATE`*
 
@@ -214,15 +214,15 @@ Unfortunately, the CT doesn’t filter a single row but works with unique values
 - `CROSSFILTER`, which is similar, but more powerful: it can disable the relationship between tables and change its direction (more on this later). I've never used it though
 - `KEEPFILTERS` keeps the existing filters like `VALUES`, for example in `Audio Sales KeepFilters := CALCULATE ( [Sales Amount], KEEPFILTERS ( 'Product'[Category] = "Audio" ) )`. However, it doesn't overwrite the filter context, but simply adds the filters in its arguments with an `AND` operator. The outcome will then have BLANK rows if they aren't included in the filter condition. Observe the differences:
 
-![CALCULATE example](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_4.png)
+![CALCULATE example](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_4.png)
 *`CALCULATE ( [Sales Amount], 'Product'[Category] = "Audio" )`*
 
-![CALCULATE KEEPFILTERS example](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_5.png)
+![CALCULATE KEEPFILTERS example](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_5.png)
 *`CALCULATE ( [Sales Amount], KEEPFILTERS ( 'Product'[Category] = "Audio" ) )`*
 
 - `ALL` shows a different behavior if used inside a `CALCULATE`, becoming a sort of `REMOVEFILTER` and removing the effect of any `KEEPFILTERS`, even if it's used after the statement. That's because the ALL* modifiers have higher execution priority than normal filters
     
-    ![They are the same](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_6.png)
+    ![They are the same](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_6.png)
     *They are the same*
     
 - `ALLSELECTED`, like `ALL`, has a different behavior: see Chapter 14 and be very careful when using it, it should be avoided!
@@ -234,7 +234,7 @@ Pay attention to the definition order: a variable can't reference another variab
 
 Another peculiarity is the name: it must be different from every existing table's name, otherwise DAX gets confused. A best practice is to use long names precisely describing their purpose. The engine, when creating variables, uses two `__`as prefix
 
-![good example about variables’ immutability](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_7.png)
+![good example about variables’ immutability](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_7.png)
 *Here’s a good example about variables’ immutability*
 
 ## 7 🔄 Working with iterators and with CALCULATE
@@ -271,7 +271,7 @@ By default, PowerBI creates a hidden date table for every Time/DateTime column o
 - `SAMEPERIODLASTYEAR` returns a set of dates shifted one year before
 - `DATEADD` is very powerful and flexible: you can decide how much to add (a number) and what (years, quarters, months, etc...), such as `PQ Sales := CALCULATE ( [Sales Amount], DATEADD ( 'Date'[Date], -1, QUARTER ) )`. It always returns days included in the Date table and it can become cumbersome during some edge cases, read well this section.
 - `PARALLELPERIOD` is useful if you are looking for the entire period despite the presence of row filters. So, for example, if you want the result of the previous quarter in the rows January, February, March write `PQ Total Sales :=CALCULATE ( [Sales Amount], PARALLELPERIOD ( 'Date'[Date], -1, QUARTER ) )` and see the results in the example:
-![PARALLELPERIOD](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_8.png)
+![PARALLELPERIOD](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_8.png)
 
 - The functions `PREVIOUSYEAR, PREVIOUSQUARTER, PREVIOUSMONTH, PREVIOUSDAY, NEXTYEAR, NEXTQUARTER, NEXTMONTH,` and `NEXTDAY` are using the same 'independent' context
 - `DATESINPERIOD` is a classic for calculating the Moving Annual Total (the total of the last 12 months). There are some alternative examples with `DATESBETWEEN`
@@ -309,8 +309,8 @@ Hierarchies aren't natively supported on DAX formulas, thus implementing them ca
 
 `ISINSCOPE` is a useful function that simulates a hierarchy focus, returning TRUE if the arg column is filtered and has been used for grouping (thus both row and filter contexts are using it). In the book, it is used for showing BLANK if the calculation is not about the selected hierarchy.
 
-![ISINSCOPE 1](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_9.png)
-![ISINSCOPE 2](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_10.png)
+![ISINSCOPE 1](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_9.png)
+![ISINSCOPE 2](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_10.png)
 
 There are very advanced examples here, I wouldn't recommend them unless they are heavily used in the current. At the moment I'm not writing down anything else.
 
@@ -369,8 +369,8 @@ Some functions you'll be using for authoring queries:
 
 Expanded Tables are the core of DAX. Remember that every time you select a table, there's a hidden world behind it that includes all its relationships!
 
-![Expanded Tables 1](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_11.png)
-![Expanded Tables 2](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_12.png)
+![Expanded Tables 1](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_11.png)
+![Expanded Tables 2](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_12.png)
 
 When selecting a `CALCULATE` filter on the Color column of Product, we can observe that the filter context uses all the linked tables, including Sales! Using `RELATED`, you can work on the related tables existing in the expanded table.
 
@@ -433,7 +433,7 @@ Short chapter with a couple of interesting use cases, I liked the first and the 
 
 ## 17 ✨ The DAX Engine
 
-![DAX Engine](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_13.png)
+![DAX Engine](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_13.png)
 
 A technical segment that shows what's happening behind the scenes. It isn't focused on **DirectQuery**, which is just a SQL query translated and optimized by the Formula Engine, but rather on **VertiPaq**, which uses an in-memory copy of the table which will be queried by the Formula Engine too (it doesn't work with uncompressed tables).
 
@@ -487,19 +487,19 @@ With DAX Studio it is possible to analyze all the queries we are making through 
 
 - DAX
 
-![DAX](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_14.png)
+![DAX](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_14.png)
 
 - Logical Query Plan: it's still easy to trace back its relationship with the original DAX version. In this case, it corresponds to “Create a table with a column named Value, filled with the content of a SUM operation, performed by the storage engine by scanning the Quantity column in the Sales table.”
 
-![Logical Query Plan](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_15.png)
+![Logical Query Plan](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_15.png)
 
 - Physical Query Plan: it looks similar to the Logical Tree, but it goes deeper, with different operators and a more complex structure, difficult to interpret. Some important details are hidden here though! Pay attention to ProjectionSpool, which shows the number of records picked up by the engine from the DB with a SQL query. Being the step a single thread and using memory, it could be a bottleneck
 
-![Physical Query Plan](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_16.png)
+![Physical Query Plan](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_16.png)
 
 - the XmSQL query generated by the Storage Engine's ProjectionSpool, which is what the database will receive as input. This is just the SQL conversion of the previous step, you can't intervene
 
-![XmSQL](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/definitive_guide_dax/dax_17.png)
+![XmSQL](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_17.png)
 
 Then, there are some technicalities about xmSQL, not really my cup of tea. Just a final reminder: remember to clean up the cache before analyzing performances, since the engine stores previous datacaches in memory and the processing speed will be faster than in reality.
 

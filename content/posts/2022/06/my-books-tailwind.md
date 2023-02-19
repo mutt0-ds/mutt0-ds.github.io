@@ -37,7 +37,7 @@ I would have liked to include my detailed notes, but since I write them only for
 Thus I only used the columns Rating (1-5 ⭐), Brief Recap (a couple of lines
 I write for quickly presenting the book), Category, Author, Title and Date.
 
-![DB](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/images/notion-db-books.png)
+![DB](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/notion-db-books.png)
 
 ## 📦 Angular + tilt.js
 
