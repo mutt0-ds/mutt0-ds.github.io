@@ -119,7 +119,7 @@ params:
     intro: "Hi, I'm"
     title: "Davide"
     subtitle: "A Software Engineer focused on AI, Cloud & Data Visualization"
-    content: "This is a collection of my notes, thoughts and stories collected while exploring the beautiful, dynamic world around the things I love. 
+    content: "This is a collection of my notes, thoughts and stories collected while exploring the world around the things I love. 
     Currently working with Power BI, Azure & cutting-edge AI technologies"
     image: /images/me.jpg
     roundImage: false # Make hero image circular | default false
