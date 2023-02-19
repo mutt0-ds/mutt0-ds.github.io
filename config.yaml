@@ -135,7 +135,7 @@ params:
         - icon: fab fa-github
           url: https://github.com/mutt0-ds
         - icon: fab fa-linkedin
-          url: https://linkedin.com/davide-muttoni-77b134194/
+          url: https://www.linkedin.com/in/davide-muttoni-77b134194/
       # customIcons:
       # - icon: /fav.png
       #   url: "https://example.com"
@@ -393,7 +393,7 @@ params:
       disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/mutt0-ds
-      linkedin: https://linkedin.com/davide-muttoni-77b134194/
+      linkedin: https://www.linkedin.com/in/davide-muttoni-77b134194/
 
   # List pages like blogs and posts
   listPages:
