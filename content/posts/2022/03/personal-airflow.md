@@ -1,6 +1,7 @@
 ---
 title: "My Personal Airflow - How I'm monitoring my scripts with Python, Appsmith and SQL Server"
 date: 2022-04-21
+github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/dashboard.jpg
 draft: false

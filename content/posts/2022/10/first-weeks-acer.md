@@ -1,6 +1,7 @@
 ---
 title: "My first weeks at Acer Europe"
 date: 2022-10-16
+github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/acer.png
 draft: false

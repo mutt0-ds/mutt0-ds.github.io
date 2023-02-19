@@ -1,6 +1,7 @@
 ---
 title: "Personal Notes about Presentation Patterns"
 date: 2023-01-28
+github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/presentation_patterns_cover.jpg
 draft: false

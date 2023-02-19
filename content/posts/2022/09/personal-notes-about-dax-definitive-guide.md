@@ -1,6 +1,7 @@
 ---
 title: "Personal Notes about The Definitive Guide to DAX"
 date: 2022-09-28
+github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/definitive_guide_dax/cover.jpg
 draft: false

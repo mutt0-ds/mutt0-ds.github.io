@@ -1,6 +1,7 @@
 ---
 title: "My surreal experience with COBOL"
 date: 2022-09-05
+github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/meme_cobol.jpg
 draft: false

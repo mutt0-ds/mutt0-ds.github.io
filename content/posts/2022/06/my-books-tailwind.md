@@ -1,6 +1,7 @@
 ---
 title: "First time with Tailwind CSS: showing off my books!"
 date: 2022-06-21
+github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/selected-book.png
 draft: false

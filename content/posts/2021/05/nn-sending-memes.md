@@ -1,6 +1,7 @@
 ---
 title: "Using a Neural Network for sending memes to my girlfriend"
 date: 2021-05-20
+github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/meme_example.png
 draft: false

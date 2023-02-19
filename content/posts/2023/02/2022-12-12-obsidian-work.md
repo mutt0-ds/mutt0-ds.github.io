@@ -1,6 +1,7 @@
 ---
 title: "How I organize notes at work with Obsidian"
 date: 2023-02-29
+github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/TODO.png
 draft: true

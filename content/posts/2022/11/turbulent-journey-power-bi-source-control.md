@@ -1,6 +1,7 @@
 ---
 title: "A turbulent journey through Power BI source control"
 date: 2022-11-07
+github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/power_bi_source_control/title.jpg
 draft: false
