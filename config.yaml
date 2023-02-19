@@ -1,4 +1,5 @@
 baseURL: "https://mutt0-ds.github.io"
+publishDir: ./docs
 languageCode: "en-us"
 title: "Mutt0-ds Notes"
 theme: hugo-profile
