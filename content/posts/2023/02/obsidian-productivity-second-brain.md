@@ -31,7 +31,7 @@ Personally, I love using Notion for my personal Second Brain because of its user
 
 However, for work, I've found that Obsidian is the way to go.
 
-![notes](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obsidian/notes.png | width=600)
+![notes](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obsidian/notes.png)
 
 ## 💼 Obsidian at work
 
@@ -43,7 +43,7 @@ However, Obsidian notes have a singular characteristic that makes them particula
 
 To put it plainly, Obsidian is literally a second brain. Notes don't have to be structured in a folder and can be interconnected with hyperlinks, which creates an out-of-world experience for exploring and finding new relationships. And all it takes is mentioning the other file between brackets! A picture is worth a thousand words, and here is a typical Obsidian graph view that allows you to visually explore how notes are linked to each other.
 
-![graph view](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obsidian/obsidian_graph.png | width=600)
+![graph view](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obsidian/obsidian_graph.png)
 
 ![graph view 2](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obsidian/graph_search.gif)
 
