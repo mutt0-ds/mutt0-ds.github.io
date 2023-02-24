@@ -31,6 +31,8 @@ Personally, I love using Notion for my personal Second Brain because of its user
 
 However, for work, I've found that Obsidian is the way to go.
 
+![notes](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obsidian/notes.png)
+
 ## 💼 Obsidian at work
 
 Unfortunately, Notion stores data on their servers without a self-hosted option and it doesn't work offline, so putting sensitive data in there is out of question. Obsidian, differently, works completely offline (so unless you pay for a Premium service or use a shared directory you can't access its notes from other devices). Its notes are "just" Markdown files (a special textual format with a specific syntax for basic customization) stored in the PC, just like .txt documents... And the program reads them like Notepad, super minimal and lightweight.
