@@ -6,13 +6,58 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>documentation</title>
+      <link>https://mutt0-ds.github.io/tags/documentation/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://mutt0-ds.github.io/tags/markdown/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>notes</title>
       <link>https://mutt0-ds.github.io/tags/notes/</link>
-      <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mutt0-ds.github.io/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>obsidian</title>
+      <link>https://mutt0-ds.github.io/tags/obsidian/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/obsidian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plugin</title>
+      <link>https://mutt0-ds.github.io/tags/plugin/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>second-brain</title>
+      <link>https://mutt0-ds.github.io/tags/second-brain/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/second-brain/</guid>
       <description></description>
     </item>
     
@@ -364,51 +409,6 @@
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://mutt0-ds.github.io/tags/resnet/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>documentation</title>
-      <link>https://mutt0-ds.github.io/tags/documentation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/documentation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>markdown</title>
-      <link>https://mutt0-ds.github.io/tags/markdown/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>obsidian</title>
-      <link>https://mutt0-ds.github.io/tags/obsidian/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/obsidian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>plugin</title>
-      <link>https://mutt0-ds.github.io/tags/plugin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/plugin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>second-brain</title>
-      <link>https://mutt0-ds.github.io/tags/second-brain/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/second-brain/</guid>
       <description></description>
     </item>
     

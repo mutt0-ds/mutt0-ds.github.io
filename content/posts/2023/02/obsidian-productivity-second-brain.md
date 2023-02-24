@@ -1,6 +1,6 @@
 ---
 title: "Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes"
-date: 2023-02-29
+date: 2023-02-24
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/obsidian/obsidian.jpg

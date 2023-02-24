@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mutt0-ds.github.io/tags/documentation/</loc>
+    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/markdown/</loc>
+    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</loc>
+    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mutt0-ds.github.io/</loc>
-    <lastmod>2023-01-28T00:00:00+00:00</lastmod>
+    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/notes/</loc>
-    <lastmod>2023-01-28T00:00:00+00:00</lastmod>
+    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</loc>
-    <lastmod>2023-01-28T00:00:00+00:00</lastmod>
+    <loc>https://mutt0-ds.github.io/tags/obsidian/</loc>
+    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/plugin/</loc>
+    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/posts/</loc>
+    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/second-brain/</loc>
+    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/</loc>
+    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/powerpoint/</loc>
@@ -24,9 +45,6 @@
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/study/</loc>
-    <lastmod>2023-01-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/talk/</loc>
@@ -159,17 +177,5 @@
     <lastmod>2021-05-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/categories/</loc>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/documentation/</loc>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/markdown/</loc>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</loc>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/obsidian/</loc>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/plugin/</loc>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/second-brain/</loc>
   </url>
 </urlset>

@@ -6,7 +6,16 @@
     <description>Recent content on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes</title>
+      <link>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</guid>
+      <description>🧠 Introduction to Second Brains &amp;amp; Brain Dumping As I&amp;rsquo;m working with data all the time, I&amp;rsquo;m aware of the importance of keeping it in a safe and structured place, where it can be easily accessed when needed, which could be days, weeks or even years in the future. Thus, organizing my information, tasks, and notes is a key activity in my work (and personal) life. Without a clear system, I would feel lost in chaos, and my productivity would plunge (also considering that my memory sucks).</description>
+    </item>
+    
     <item>
       <title>Personal Notes about Presentation Patterns</title>
       <link>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</link>
@@ -100,15 +109,6 @@ Load data (from a file or manual input) Send a request to internal DB / very spe
       <description>Well, my GF&amp;rsquo;s tastes in memes are simple: she loves wholesome memes and, most importantly, she loves animals.
 That&amp;rsquo;s why I created a fun little project that:
 Surfs the subreddit r/wholesomemes using the reddit API Downloads a few of the hottest memes in the contents folder Initializes a ResNet50 model that recognizes images containing any animal Sends them via mail to my GF (positively welcomed) Final email (3 memes by default) Reddit I&amp;rsquo;m using the praw library for downloading the memes, it requires a Reddit Bot enabled.</description>
-    </item>
-    
-    <item>
-      <title>Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes</title>
-      <link>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</guid>
-      <description>🧠 Introduction to Second Brains &amp;amp; Brain Dumping As I&amp;rsquo;m working with data all the time, I&amp;rsquo;m aware of the importance of keeping it in a safe and structured place, where it can be easily accessed when needed, which could be days, weeks or even years in the future. Thus, organizing my information, tasks, and notes is a key activity in my work (and personal) life. Without a clear system, I would feel lost in chaos, and my productivity would plunge (also considering that my memory sucks).</description>
     </item>
     
   </channel>
