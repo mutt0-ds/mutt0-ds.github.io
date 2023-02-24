@@ -41,9 +41,9 @@ However, Obsidian notes have a singular characteristic that makes them particula
 
 To put it plainly, Obsidian is literally a second brain. Notes don't have to be structured in a folder and can be interconnected with hyperlinks, which creates an out-of-world experience for exploring and finding new relationships. And all it takes is mentioning the other file between brackets! A picture is worth a thousand words, and here is a typical Obsidian graph view that allows you to visually explore how notes are linked to each other.
 
-![graph view](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obisidian/obsidian_graph.png)
+![graph view](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obsidian/obsidian_graph.png)
 
-![graph view 2](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obisidian/graph_search.gif)
+![graph view 2](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obsidian/graph_search.gif)
 
 ## ☝ Why I have chosen Obsidian
 
@@ -106,7 +106,7 @@ It's been four months since I started using Obsidian, and it has already been a 
 
 An excellent example that I presented in my proposal was a story about a user who raised a question during a brief meeting about an advanced Power BI feature. During the meeting, I took some notes on the issue, then created another note with a guide, and then another note about the following meeting where I introduced the guide. A few days later, I completely forgot where the guide was located, but I remembered the user's happy reaction in the second-grade related note and traced my way back to the valuable document. I use this technique multiple times a day when searching for notes, and it saves me a lot of time piece by piece. Also, I don't have to worry about restructuring notes when a project evolves; I can just link them together and embed updates of the project in a primary super note.
 
-![graph view](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obisidian/graph_view.gif)
+![graph view](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obsidian/graph_view.gif)
 
 The most significant advantage, as mentioned in the introduction, is the ease of the "brain dumping" process. Whenever I come across new information, I can open Obsidian in one second, create a note with a shortcut, and jot down a few lines to be cleaned up later. My brain is now free to keep listening and learning without worrying about forgetting anything valuable. Yes, it's a huge boost to my personal sanity and productivity.
 
