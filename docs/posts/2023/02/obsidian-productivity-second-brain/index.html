@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes" />
+<meta property="og:description" content="🧠 Introduction to Second Brains &amp; Brain Dumping As I&rsquo;m working with data all the time, I&rsquo;m aware of the importance of keeping it in a safe and structured place, where it can be easily accessed when needed, which could be days, weeks or even years in the future. Thus, organizing my information, tasks, and notes is a key activity in my work (and personal) life. Without a clear system, I would feel lost in chaos, and my productivity would plunge (also considering that my memory sucks)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/" /><meta property="article:section" content="posts" />
+
+<meta property="og:site_name" content="Mutt0-ds Notes" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes"/>
+<meta name="twitter:description" content="🧠 Introduction to Second Brains &amp; Brain Dumping As I&rsquo;m working with data all the time, I&rsquo;m aware of the importance of keeping it in a safe and structured place, where it can be easily accessed when needed, which could be days, weeks or even years in the future. Thus, organizing my information, tasks, and notes is a key activity in my work (and personal) life. Without a clear system, I would feel lost in chaos, and my productivity would plunge (also considering that my memory sucks)."/>
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes | Mutt0-ds Notes
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes</h1>
+            <div class="text-center">
+              Mutt0-ds 
+              <small>|</small>
+              Jan 1, 0001
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid" src="/images/obsidian/obsidian.jpg" alt="Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes">
+          </div>
+          
+          <article class="page-content  p-2">
+          <h2 id="-introduction-to-second-brains--brain-dumping">🧠 Introduction to Second Brains &amp; Brain Dumping</h2>
+<p>As I&rsquo;m working with data all the time, I&rsquo;m aware of the importance of keeping it in a safe and structured place, where it can be easily accessed when needed, which could be days, weeks or even years in the future. Thus, organizing my information, tasks, and notes is a key activity in my work (and personal) life. Without a clear system, I would feel lost in chaos, and my productivity would plunge (also considering that my memory sucks).</p>
+<p>Today, I want to introduce you to two buzzwords related to the note taking: <strong>Brain Dumping</strong> and <strong>Second Brain</strong>. Brain Dumping is a technique that involves storing as quick as possible any useful data in a safe place, so it can be easily accessed and cleaned later and the brain can avoid worrying about them. For example, if you have a code snippet that helped you solve a problem, you can copy and paste it into a note in your &ldquo;_TO_ORGANIZE&rdquo; folder.
+When I&rsquo;m free, usually at the end of the day, I cleanse the note, add some context to the code, and put them in the right section of my documentation tool. Some old-schoolers use post-it notes and agendas, I use Second Brains.</p>
+<blockquote>
+<p>A Second Brain is a methodology for saving and systematically reminding us of the ideas, inspirations, insights, and connections we&rsquo;ve gained through our experience. It expands our memory and our intellect using the modern tools of technology and networks.
+&ndash; <cite><a href="https://fortelabs.com/blog/basboverview/">Tiago Forte </a></cite></p>
+</blockquote>
+<p>This concept has given rise to tools like which are strucuted to help take note-taking to the next level.
+These tools, structured like wikis, extend the concept of Brain Dumping by making taking notes, connecting and structuring them a bliss, or in my special case, even a &ldquo;fun&rdquo; activity. The biggest players are <a href="https://roamresearch.com/">Roam Research</a>, <a href="https://www.notion.so/">Notion</a>, and <a href="https://obsidian.md/">Obsidian</a>, all with different characteristics but sharing the same core.</p>
+<p>Personally, I love using Notion for my personal Second Brain because of its user-friendly UX. You may already know my deep love for Notion , which I use on my daily life and I contribute to the Python library. For starters, I recommend it thanks to its user-friendly UX, and it&rsquo;s the go-to choice for my personal Second Brain. Sometimes I give access to part of my Notion wiki to other people and they immediately catch up with its structure.</p>
+<p>However, for work, I&rsquo;ve found that Obsidian is the way to go.</p>
+<h2 id="-obsidian-at-work">💼 Obsidian at work</h2>
+<p>Unfortunately, Notion stores data on their servers without a self-hosted option and it doesn&rsquo;t work offline, so putting sensitive data in there is out of question. Obsidian, differently, works completely offline (so unless you pay for a Premium service or use a shared directory you can&rsquo;t access its notes from other devices). Its notes are &ldquo;just&rdquo; Markdown files (a special textual format with a specific syntax for basic customization) stored in the PC, just like .txt documents&hellip; And the program reads them like Notepad, super minimal and lightweight.</p>
+<p>However, Obsidian notes have a singular characteristic that makes them particularly suitable in my current environment&hellip;</p>
+<blockquote>
+<p>They are like neurons</p>
+</blockquote>
+<p>To put it plainly, Obsidian is literally a second brain. Notes don&rsquo;t have to be structured in a folder and can be interconnected with hyperlinks, which creates an out-of-world experience for exploring and finding new relationships. And all it takes is mentioning the other file between brackets! A picture is worth a thousand words, and here is a typical Obsidian graph view that allows you to visually explore how notes are linked to each other.</p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obisidian/obsidian_graph.png" alt="graph view"></p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obisidian/graph_search.gif" alt="graph view 2"></p>
+<h2 id="-why-i-have-chosen-obsidian">☝ Why I have chosen Obsidian</h2>
+<p>My job is a constant juggling act of multiple large projects, meetings, tickets, and reports from various data sources. It&rsquo;s a labyrinth of information that&rsquo;s impossible to navigate without getting lost. But then, Obsidian comes to the rescue.</p>
+<p>With its ability to link notes together, I can map out the entire flow of information and stay on top of everything. Here&rsquo;s how I do it:</p>
+<ul>
+<li>Each meeting is linked to the relevant projects or open tickets.</li>
+<li>Each ticket is linked to the reports and data sources notes.</li>
+<li>Each data source is linked to its business logics and other data sources.</li>
+<li>Each project has documentation and links to all related meetings.</li>
+<li>Each script is linked to the ticket or project it&rsquo;s been useful for.</li>
+<li>And so on, depending on the scenario.</li>
+</ul>
+<p>Using Obsidian&rsquo;s graph view, I can quickly access all the information connected to a single object. During meetings or whenever I gain new intel, I quickly jot it down using the &ldquo;Brain Dumping&rdquo; strategy and store it in Obsidian. Later, I organize the notes, link them together, and expand the wiki.</p>
+<h2 id="-a-brief-overview-of-the-structure">📁 A brief overview of the structure</h2>
+<p>My Obsidian vault is a treasure trove of information that I&rsquo;ve decided to structure in a way that is easy for my colleagues to access. It&rsquo;s a semi-structured schema with high flexiblity as it&rsquo;s not required by Obsidian (it doesn&rsquo;t even have a sort option) that helps to organize the wealth of information that I need to manage every day. With main folders and subfolders, I can easily navigate my way around and find what I need quickly.</p>
+<p>Here&rsquo;s a snapshot of my Obsidian vault structure:</p>
+<ul>
+<li><strong>TO_ORGANIZE</strong> - this is where I store new notes by default before cleaning them up.</li>
+<li><strong>Docs</strong> - where I keep all the important documentation that my team and I need to access quickly. This includes user guides, technical guides, checklists, and - information for Power BI reports, data sources, and other special cases.</li>
+<li><strong>Projects</strong> - unique folders for each project that I&rsquo;m working on. These folders usually contain other subfolders with additional information.</li>
+<li><strong>Tickets</strong> - a comprehensive list of open and closed tickets, divided by department.</li>
+<li><strong>Meetings</strong> - notes from all the meetings I attend, divided by department.</li>
+<li><strong>Personal</strong> - a space for me to keep personal notes and scripts, divided by language and context. It&rsquo;s also where I keep notes like this one.</li>
+<li><strong>Old</strong> - a folder for older notes that I don&rsquo;t need to access regularly.</li>
+<li><strong>Media</strong> - the default folder where Obsidian stores all media files.</li>
+</ul>
+<p>With this structure, I can easily find and access the information that I need. It&rsquo;s a system that is not only efficient but also visually appealing. I could remove all the folders if I wanted to, but the structure helps to give a familiar feel to other users.</p>
+<h2 id="-plugins-i-use">🔨 Plugins I use</h2>
+<p>There is a plethora of options available in the marketplace to enhance the Obsidian experience. While I prefer to keep things streamlined, here are a few plugins that I can wholeheartedly recommend:</p>
+<ul>
+<li><a href="https://github.com/deathau/cm-editor-syntax-highlight-obsidian">Editor Syntax Highlight</a>: exceedingly helpful, especially when dealing with notes containing code snippets. It makes syntax highlighting a breeze, and makes the code much more readable.</li>
+<li><a href="https://github.com/ganesshkumar/obsidian-excel-to-markdown-table">Excel to Markdown table</a>: an absolute lifesaver when you need to copy data from Excel files. It takes care of all the formatting issues, saving you a ton of time and effort.</li>
+<li><a href="https://github.com/FlorianWoelki/obsidian-icon-folder">Icon Folder</a>: I love this plugin because it allows me to maintain the same aesthetic I was accustomed to in Notion, where every folder had a corresponding emoji. It&rsquo;s a small touch, but it makes the interface much more enjoyable to use.</li>
+<li><a href="https://github.com/reorx/obsidian-paste-image-rename">Paste Image rename</a>: If you&rsquo;re someone who frequently pastes screenshots or other images into your notes, then it is an absolute must-have.</li>
+<li><a href="https://github.com/denolehov/obsidian-url-into-selection">Paste URL into selection</a>: another one that replicates the functionality of Notion, and it&rsquo;s a time-saver for me. It allows me to quickly paste a URL into a selected piece of text in my notes.</li>
+<li><a href="https://github.com/mgmeyers/obsidian-smart-typography">Smart Typography</a>: this plugin is all about the aesthetics, and it&rsquo;s a small thing that makes a big difference. It makes minor typographic tweaks (like replacing hyphens with en-dashes), which makes the notes more visually appealing and easier to read.</li>
+<li><a href="https://github.com/jdbrice/obsidian-code-block-copy">Copy Button for code blocks</a>: a tiny addition that saves me a ton of time. It adds a copy button to code blocks, so you can quickly copy the code without having to highlight it and use the keyboard shortcut. I can&rsquo;t understand why this functionality isn&rsquo;t already built into Obsidian.</li>
+</ul>
+<h2 id="-obsidian-limitations">⛔ Obsidian limitations</h2>
+<p>At present, there are some limitations with Obsidian that are impacting my experience. Let&rsquo;s take a closer look:</p>
+<ul>
+<li>Unfortunately, there is no option to share a note as a public link that can be accessed by others (web or within my organization). While I understand Obsidian&rsquo;s focus on privacy and &ldquo;private notes,&rdquo; I do miss the convenience of being able to easily share a page as a link with a colleague or leave clickable shortcuts to links in a folder like in Notion.</li>
+<li>The PDF export feature is limited, and there&rsquo;s no way to export notes in bulk. For instance, I&rsquo;d like to automatically upload a PDF of some notes in a folder when I edit them with specific formatting. But unless I start learning <a href="https://github.com/Wandmalfarbe/pandoc-latex-template">LaTeX and pandoc</a>, I&rsquo;m unable to do so.</li>
+<li>Syntax formatting in code blocks isn&rsquo;t enabled unless you have <a href="https://github.com/deathau/cm-editor-syntax-highlight-obsidian">an outdated plugin</a> that doesn&rsquo;t even support DAX (Power BI&rsquo;s script language) formatting. While I&rsquo;m working on a plugin fork to address this issue, it&rsquo;s a tedious process.</li>
+<li>While the Obsidian team is currently focused on the <a href="https://obsidian.md/canvas">Canvas feature</a>, which is a fantastic addition for those who previously used Graph.io and similar software, the frequency and impact of updates are slow due to the team&rsquo;s small size. Thus, I doubt that my previous issues will be addressed quickly.</li>
+</ul>
+<p>Moreover, I would strongly advise against using Obsidian if you are not fond of its neural structure, especially if your notes are not often interconnected. This is due to the fact that the learning curve can be steep, requiring the mastery of several shortcuts and a certain discipline in maintaining notes. If you neglect to organize your vault, it can quickly become overwhelming. It&rsquo;s worth noting that if you&rsquo;re not utilizing connections, you&rsquo;re only tapping into half of Obsidian&rsquo;s capabilities.</p>
+<h2 id="-first-results">🥳 First Results</h2>
+<p>It&rsquo;s been four months since I started using Obsidian, and it has already been a game-changer for me on multiple occasions. Initially, I was skeptical due to my love for Notion, but the adoption process was seamless, and my productivity has definitively increased. The most incredible thing about Obsidian is how I can instantly look back at past meetings connected to a particular topic and explore further, find connections, and expand my knowledge by examining other notes and reconstructing the entire scenario.</p>
+<p>An excellent example that I presented in my proposal was a story about a user who raised a question during a brief meeting about an advanced Power BI feature. During the meeting, I took some notes on the issue, then created another note with a guide, and then another note about the following meeting where I introduced the guide. A few days later, I completely forgot where the guide was located, but I remembered the user&rsquo;s happy reaction in the second-grade related note and traced my way back to the valuable document. I use this technique multiple times a day when searching for notes, and it saves me a lot of time piece by piece. Also, I don&rsquo;t have to worry about restructuring notes when a project evolves; I can just link them together and embed updates of the project in a primary super note.</p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/obisidian/graph_view.gif" alt="graph view"></p>
+<p>The most significant advantage, as mentioned in the introduction, is the ease of the &ldquo;brain dumping&rdquo; process. Whenever I come across new information, I can open Obsidian in one second, create a note with a shortcut, and jot down a few lines to be cleaned up later. My brain is now free to keep listening and learning without worrying about forgetting anything valuable. Yes, it&rsquo;s a huge boost to my personal sanity and productivity.</p>
+<p>Currently, I also have a few scripts that automate the process of cleaning links and organizing notes in my vault, as they are just a bunch of .md textual files in the end.</p>
+<p>If you&rsquo;re interested in this innovative way of organizing notes, then I recommend giving Obsidian a try. There are tools available for importing notes from <a href="https://github.com/dmuth/evernote-to-obsidian">Evernote</a>, <a href="https://github.com/Segza/OneNote-to-Obsidian">OneNote</a> and <a href="https://github.com/connertennery/Notion-to-Obsidian-Converter">Notion</a>, so the transition is seamless. It takes a while to get used to Obsidian; personally, it took me a week to become familiar with the process, but then the fun began.</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-introduction-to-second-brains--brain-dumping">🧠 Introduction to Second Brains &amp; Brain Dumping</a></li>
+    <li><a href="#-obsidian-at-work">💼 Obsidian at work</a></li>
+    <li><a href="#-why-i-have-chosen-obsidian">☝ Why I have chosen Obsidian</a></li>
+    <li><a href="#-a-brief-overview-of-the-structure">📁 A brief overview of the structure</a></li>
+    <li><a href="#-plugins-i-use">🔨 Plugins I use</a></li>
+    <li><a href="#-obsidian-limitations">⛔ Obsidian limitations</a></li>
+    <li><a href="#-first-results">🥳 First Results</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/obsidian" target="_blank">obsidian</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/notes" target="_blank">notes</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/markdown" target="_blank">markdown</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/documentation" target="_blank">documentation</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/second-brain" target="_blank">second-brain</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/plugin" target="_blank">plugin</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=Maximizing%20Productivity%20with%20Obsidian%3a%20My%20Second%20Brain%20for%20Organizing%20Work%20Notes&url=https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f02%2fobsidian-productivity-second-brain%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Maximizing%20Productivity%20with%20Obsidian%3a%20My%20Second%20Brain%20for%20Organizing%20Work%20Notes: https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f02%2fobsidian-productivity-second-brain%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=Maximizing%20Productivity%20with%20Obsidian%3a%20My%20Second%20Brain%20for%20Organizing%20Work%20Notes&amp;body=Check%20out%20this%20site https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f02%2fobsidian-productivity-second-brain%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/">
+                        <img src="/images/presentation_patterns_cover.jpg" class="card-img-top" alt="Personal Notes about Presentation Patterns">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Personal Notes about Presentation Patterns">Personal Notes about Presentation Patterns</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>Presentation Patterns Written by Neal Ford, Matthew McCullough and Nathaniel Schutta, &ldquo;Presentation Patterns - Techniques for Crafting Better Presentations&rdquo; is an encyclopedia of patterns, tips and common mistakes experienced by the authors, who have delivered thousands of presentations. …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jan 28, 2023</span>
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2022/12/road-100-coverage-notion/">
+                        <img src="/images/notion_coverage/title.png" class="card-img-top" alt="Road to 100% Test Coverage on notion-sdk-py">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2022/12/road-100-coverage-notion/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Road to 100% Test Coverage on notion-sdk-py">Road to 100% Test Coverage on notion-sdk-py</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously unexciting activities for many developers 😫
+Luckily, we are all unique in our own way and I decided to contribute to the testing module of one of my …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Dec 26, 2022</span>
+                    <a href="/posts/2022/12/road-100-coverage-notion/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2022/11/turbulent-journey-power-bi-source-control/">
+                        <img src="/images/power_bi_source_control/title.jpg" class="card-img-top" alt="A turbulent journey through Power BI source control">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2022/11/turbulent-journey-power-bi-source-control/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="A turbulent journey through Power BI source control">A turbulent journey through Power BI source control</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>One of the most annoying issues I have when working with Power BI files is that source control is a real pain. Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Nov 7, 2022</span>
+                    <a href="/posts/2022/11/turbulent-journey-power-bi-source-control/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2023  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
