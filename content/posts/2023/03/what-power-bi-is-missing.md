@@ -81,7 +81,7 @@ This is very cool, as it replaces and simplifies many manual processes while giv
 - If the original dataset has a gateway, we have to set up credentials on all the Composite Model datasets and map everything on the gateway
 - Creators can't add calculated columns or tables to the tables from the original dataset, which blocks many custom logic requirements
 
-Evenn though the Composite Model is a great starting point, it still requires some tweaks to achieve before it can be adopted fully.
+Even though the Composite Model is a great starting point, it still requires some tweaks to achieve before it can be adopted fully.
 
 ![composite model](https://learn.microsoft.com/en-us/power-platform-release-plan/2020wave2/power-bi/media/composite-models.jpg)
 
