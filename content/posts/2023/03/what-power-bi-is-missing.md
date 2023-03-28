@@ -54,7 +54,7 @@ Luckily, I rarely have to create long DAX queries in Power BI. The majority of c
 
 Creating them in the Power BI tab is only suitable if you like to become frustrated with debugging. The simplest solution is another third-party tool, [DAX Studio](https://www.sqlbi.com/tools/dax-studio/) by SQLBI, which enables syntax highlighting, formatting, linting, quick access to documentation, and rather simple debugging. I highly recommend DAX Studio, which is a wonderful and open-source tool. However, considering that Microsoft owns VS Code, I am waiting for some DAX-compatible extensions to better integrate my workflow.
 
-![dax studio](https://cdn.sqlbi.com/wp-content/uploads/dax-studio-v3-ui.png)
+![dax studio](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/power_bi_missing/dax-studio-v3-ui.png)
 
 ## 📄 Intermediate-level Documentation
 
