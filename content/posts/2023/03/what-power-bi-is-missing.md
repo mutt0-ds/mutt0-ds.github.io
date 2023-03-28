@@ -22,6 +22,8 @@ While writing, I found myself lucky as all the points I'll state are currently e
 That being said, there are still a few features that could use some attention. For each point, I've included a "📿 Hope level" rating, speculating about the likelihood of these features being implemented in the near future.
 Please note that these ratings are based on my own personal speculations as of March 2023.
 
+![roadmap](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/power_bi_missing/roadmap.png)
+
 ## 🔢 Basic Version Control
 
 > 📿 Hope level: 7/10
@@ -34,7 +36,7 @@ In our situation, this became increasingly frustrating month after month as our 
 
 > 📿 Hope level: 4/10
 
-An edge case that is more common than expected, especially in the case of forecasts, is the need for users to input one or more values (such as a coefficient of growth) and see live results in Power BI. Currently, this is rather difficult to implement, either with [over-engineered Power App solutions](https://www.youtube.com/watch?v=uPHwjPRnRwE) or with a combination of tables, slicers, and code (I almost lost my sanity with 100 lines of DAX code).
+An edge case that is more common than expected, especially in the case of forecasts, is the need for users to input one or more values (such as a coefficient of growth) and see live results in Power BI. Currently, this is rather difficult to implement, either with [over-engineered Power App solutions](https://www.youtube.com/watch?v=uPHwjPRnRwE) or with a combination of tables, what-if parameters, and code (I almost lost my sanity with 100 lines of DAX code).
 
 I wish there were a plugin or chart with a "User Input" feature that includes an input area where users can enter values that will populate live data. However, I understand how complicated this could be at the structural level and that it may not be worth the effort for an edge case. Moreover, Power BI is primarily a data visualization tool, so this is not exactly what we can expect from it.
 
@@ -52,6 +54,8 @@ Luckily, I rarely have to create long DAX queries in Power BI. The majority of c
 
 Creating them in the Power BI tab is only suitable if you like to become frustrated with debugging. The simplest solution is another third-party tool, [DAX Studio](https://www.sqlbi.com/tools/dax-studio/) by SQLBI, which enables syntax highlighting, formatting, linting, quick access to documentation, and rather simple debugging. I highly recommend DAX Studio, which is a wonderful and open-source tool. However, considering that Microsoft owns VS Code, I am waiting for some DAX-compatible extensions to better integrate my workflow.
 
+![dax studio](https://cdn.sqlbi.com/wp-content/uploads/dax-studio-v3-ui.png)
+
 ## 📄 Intermediate-level Documentation
 
 > 📿 Hope level: 2/10
@@ -60,7 +64,7 @@ This is a struggle I am having with Microsoft in general, as its documentation s
 
 For beginners, I recommend [dax.guide](https://dax.guide) from the SQLBI team. Just compare their [COUNT](https://dax.guide/count/) example with the [one on Microsoft.com](https://learn.microsoft.com/en-gb/dax/count-function-dax) for understanding what each function does and how it works. They provide examples, working code, clear explanations of the cases, and links to other concepts.
 
-For the majority of intermediate doubts, such as row/filter context, data connectors, and small DAX formulas, it is still quicker to look at the Power BI forums or YouTube videos, for example from [Guy In A Cube](https://www.youtube.com/c/GuyinaCube).
+For the majority of intermediate doubts, such as row/filter context, data connectors, and small DAX formulas, it is still quicker to look at the [Power BI forums](https://community.powerbi.com) or YouTube videos, for example from [Guy In A Cube](https://www.youtube.com/c/GuyinaCube).
 
 [Learn.microsoft.com](https://learn.microsoft.com) remains my last hope when I'm looking for documentation, even though I consider myself an advanced user. I wish that Microsoft would simplify the website for less technical users. Luckily, the web is full of useful and informative third-party sources.
 
@@ -78,6 +82,8 @@ This is very cool, as it replaces and simplifies many manual processes while giv
 - Creators can't add calculated columns or tables to the tables from the original dataset, which blocks many custom logic requirements
 
 Evenn though the Composite Model is a great starting point, it still requires some tweaks to achieve before it can be adopted fully.
+
+![composite model](https://learn.microsoft.com/en-us/power-platform-release-plan/2020wave2/power-bi/media/composite-models.jpg)
 
 ## 🤖 AI-enhanced capabilities
 
