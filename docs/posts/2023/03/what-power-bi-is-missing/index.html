@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="What Power BI is still missing" />
+<meta property="og:description" content="During these months, I had the chance to take a look at Power BI at the enterprise level, juggling advanced requests from hundreds of users and reports. I am impressed by all the features that the developers have rolled out recently, greatly improving both user and creator experiences. However, one should always maintain an impartial critical vision of the tools, no matter how useful they can be. For this reason, I decided to share my thoughts about some features that are currently lacking or require over-complicated solutions (often from third-party tools), in the hope that Microsoft will find them useful when working on Power BI&rsquo;s development roadmap." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-03-27T00:00:00+00:00" /><meta property="og:site_name" content="Mutt0-ds Notes" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="What Power BI is still missing"/>
+<meta name="twitter:description" content="During these months, I had the chance to take a look at Power BI at the enterprise level, juggling advanced requests from hundreds of users and reports. I am impressed by all the features that the developers have rolled out recently, greatly improving both user and creator experiences. However, one should always maintain an impartial critical vision of the tools, no matter how useful they can be. For this reason, I decided to share my thoughts about some features that are currently lacking or require over-complicated solutions (often from third-party tools), in the hope that Microsoft will find them useful when working on Power BI&rsquo;s development roadmap."/>
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+What Power BI is still missing | Mutt0-ds Notes
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">What Power BI is still missing</h1>
+            <div class="text-center">
+              Mutt0-ds 
+              <small>|</small>
+              Mar 27, 2023
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid" src="/images/power_bi_missing/what-power-bi-missing.jpg" alt="What Power BI is still missing">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>During these months, I had the chance to take a look at Power BI at the enterprise level, juggling advanced requests from hundreds of users and reports. I am impressed by all the features that the developers have rolled out recently, greatly improving both user and creator experiences. However, one should always maintain an impartial critical vision of the tools, no matter how useful they can be. For this reason, I decided to share my thoughts about some features that are currently lacking or require over-complicated solutions (often from third-party tools), in the hope that Microsoft will find them useful when working on Power BI&rsquo;s development roadmap.</p>
+<p>While writing, I found myself lucky as all the points I&rsquo;ll state are currently edge cases or issues I&rsquo;ve solved with other solutions. So, I would say that overall, Power BI has reached a level of maturity where it smoothly performs its standard job (data visualization) and provides tons of useful tools, customization, and synergies with the Office suite while being updated monthly.</p>
+<p>That being said, there are still a few features that could use some attention. For each point, I&rsquo;ve included a &ldquo;📿 Hope level&rdquo; rating, speculating about the likelihood of these features being implemented in the near future.
+Please note that these ratings are based on my own personal speculations as of March 2023.</p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/power_bi_missing/roadmap.png" alt="roadmap"></p>
+<h2 id="-basic-version-control">🔢 Basic Version Control</h2>
+<blockquote>
+<p>📿 Hope level: 7/10</p>
+</blockquote>
+<p>That&rsquo;s an old story: .pbix files are binary, so they can&rsquo;t be easily tracked and compared with git or other versioning systems. It&rsquo;s ironic that the parent company owns Github, but I suppose priorities differ, as evidenced by the recent announcement of <a href="https://github.blog/2023-03-22-github-copilot-x-the-ai-powered-developer-experience/">Copilot X with GPT-4</a>. There aren&rsquo;t many big teams of Power BI developers out there who really need the feature.</p>
+<p>In our situation, this became increasingly frustrating month after month as our models grew larger, and there was still no easy way to compare different versions. I addressed this in <a href="https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/">another blog post</a>, where I created an over-engineered Azure Pipeline that downloads a third-party tool (Tabular Editor 2) every time, uses it to extract JSON metadata, and commits it together with the model. This allowed us to keep track of parts of the model such as tables, columns, and relationships, but not charts or visuals. Git integration <a href="https://twitter.com/mthierba/status/1618701222177042433">was announced a few weeks ago</a>, then canceled, then supported in an upcoming <a href="https://twitter.com/PowerBITips/status/1636675335591788545/photo/1">an upcoming TMDL</a> initiative by SQLBits. While there is still no clear direction defined, things are in motion.</p>
+<h2 id="-enhanced-user-input">🔘 Enhanced User Input</h2>
+<blockquote>
+<p>📿 Hope level: 4/10</p>
+</blockquote>
+<p>An edge case that is more common than expected, especially in the case of forecasts, is the need for users to input one or more values (such as a coefficient of growth) and see live results in Power BI. Currently, this is rather difficult to implement, either with <a href="https://www.youtube.com/watch?v=uPHwjPRnRwE">over-engineered Power App solutions</a> or with a combination of tables, what-if parameters, and code (I almost lost my sanity with 100 lines of DAX code).</p>
+<p>I wish there were a plugin or chart with a &ldquo;User Input&rdquo; feature that includes an input area where users can enter values that will populate live data. However, I understand how complicated this could be at the structural level and that it may not be worth the effort for an edge case. Moreover, Power BI is primarily a data visualization tool, so this is not exactly what we can expect from it.</p>
+<p>Microsoft has partially addressed this with the <a href="https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-analyze-in-excel">Analyze in Excel</a> feature: it is now easier to connect the dataset to Excel and create ad-hoc formulas from there. While waiting for a native Power BI solution, let&rsquo;s stick to using Excel.</p>
+<h2 id="-developer-tools">🧰 Developer tools</h2>
+<blockquote>
+<p>📿 Hope level: 6/10</p>
+</blockquote>
+<p>Compared to other Microsoft products such as <a href="https://www.typescriptlang.org">TypeScript</a> or <a href="https://playwright.dev">Playwright</a>, Power BI lacks some basic developer-friendly plugins. This is mostly due to the fact that BI developers who need them represent a small niche. However, as someone who comes from other languages nd uses <a href="https://code.visualstudio.com">VS Code</a> all the time, I find the lack of support for my daily activities rather surprising, especially when dealing with messy DAX queries (Power BI&rsquo;s scripting language, inspired by Excel&rsquo;s formula language).</p>
+<p>I don&rsquo;t like DAX, and sometimes I feel like giving up on it. Microsoft doesn&rsquo;t really provide me with anything to improve my experience when writing queries that are more than two lines long. Poor DAX doesn&rsquo;t even have a logo!</p>
+<p>Luckily, I rarely have to create long DAX queries in Power BI. The majority of calculation logic is in the data warehouse, but sometimes there are edge cases that require ad-hoc DAX measures of multiple lines.</p>
+<p>Creating them in the Power BI tab is only suitable if you like to become frustrated with debugging. The simplest solution is another third-party tool, <a href="https://www.sqlbi.com/tools/dax-studio/">DAX Studio</a> by SQLBI, which enables syntax highlighting, formatting, linting, quick access to documentation, and rather simple debugging. I highly recommend DAX Studio, which is a wonderful and open-source tool. However, considering that Microsoft owns VS Code, I am waiting for some DAX-compatible extensions to better integrate my workflow.</p>
+<p><img src="https://cdn.sqlbi.com/wp-content/uploads/dax-studio-v3-ui.png" alt="dax studio"></p>
+<h2 id="-intermediate-level-documentation">📄 Intermediate-level Documentation</h2>
+<blockquote>
+<p>📿 Hope level: 2/10</p>
+</blockquote>
+<p>This is a struggle I am having with Microsoft in general, as its documentation spectacularly manages to overcomplicate even simple concepts. In my opinion, <a href="https://learn.microsoft.com">Microsoft docs</a> are great for advanced users who can understand all the technical jargon that is taken for granted, but for beginners or even intermediate developers, this can be overwhelming.</p>
+<p>For beginners, I recommend <a href="https://dax.guide">dax.guide</a> from the SQLBI team. Just compare their <a href="https://dax.guide/count/">COUNT</a> example with the <a href="https://learn.microsoft.com/en-gb/dax/count-function-dax">one on Microsoft.com</a> for understanding what each function does and how it works. They provide examples, working code, clear explanations of the cases, and links to other concepts.</p>
+<p>For the majority of intermediate doubts, such as row/filter context, data connectors, and small DAX formulas, it is still quicker to look at the <a href="https://community.powerbi.com">Power BI forums</a> or YouTube videos, for example from <a href="https://www.youtube.com/c/GuyinaCube">Guy In A Cube</a>.</p>
+<p><a href="https://learn.microsoft.com">Learn.microsoft.com</a> remains my last hope when I&rsquo;m looking for documentation, even though I consider myself an advanced user. I wish that Microsoft would simplify the website for less technical users. Luckily, the web is full of useful and informative third-party sources.</p>
+<h2 id="-composite-model">📈 Composite model</h2>
+<blockquote>
+<p>📿 Hope level: 8/10</p>
+</blockquote>
+<p>Another experimental feature from Power BI that has been giving me a bit of a headache lately is the <a href="https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-composite-models">Composite Model</a>. Don&rsquo;t get me wrong, it&rsquo;s a <strong>game changer</strong> as it makes it possible to provide a central Power BI dataset with all the data and security rules enabled, which creators can then use as a source and merge with their own data (usually Excel files).</p>
+<p>This is very cool, as it replaces and simplifies many manual processes while giving lots of power to secondary report creators. However, it&rsquo;s still an experimental feature that requires a bit of tricky (and badly documented) steps for working on the Power BI Service, while on Desktop it is pretty straightforward. Here are some issues I&rsquo;ve encountered:</p>
+<ul>
+<li>Viewers need Build Permissions to all the underlying datasets (which could be a security issue)</li>
+<li>Apparently, RLS impersonation gets screwed up. I tried to impersonate users, and I was able to look at all the data (but in reality, they can&rsquo;t)</li>
+<li>If the original dataset has a gateway, we have to set up credentials on all the Composite Model datasets and map everything on the gateway</li>
+<li>Creators can&rsquo;t add calculated columns or tables to the tables from the original dataset, which blocks many custom logic requirements</li>
+</ul>
+<p>Evenn though the Composite Model is a great starting point, it still requires some tweaks to achieve before it can be adopted fully.</p>
+<p><img src="https://learn.microsoft.com/en-us/power-platform-release-plan/2020wave2/power-bi/media/composite-models.jpg" alt="composite model"></p>
+<h2 id="-ai-enhanced-capabilities">🤖 AI-enhanced capabilities</h2>
+<blockquote>
+<p>📿 Hope level: 9/10</p>
+</blockquote>
+<p>I wrote the final line just to tag the post with #chatgpt and #agi for boosting views.
+Joking!</p>
+<p>I am curious to see how Microsoft will implement Open AI&rsquo;s tool in Power BI, as the current options are a bit limited in terms of UX experience. Yes, there is the Q&amp;A feature, but it hasn&rsquo;t clicked with me as it&rsquo;s not &ldquo;that&rdquo; smart or intuitive at the moment.</p>
+<p>I wouldn&rsquo;t be surprised to see a ChatGPT-like prompt where users can type their questions and receive quick replies, charts, or even help with applying filters or manipulating tables. If the system can be tweaked with external documentations and ad-hoc instructions (now possible with the <a href="https://github.com/openai/chatgpt-retrieval-plugin">Retrieval Plugin</a>), it will make Power BI much more powerful for helping people discover new data and information.</p>
+<p>Given the current hype and excitement for AI, I&rsquo;m confident that Microsoft will adapt Copilot&rsquo;s features in Power BI and work some magic. It&rsquo;s the perfect time.</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-basic-version-control">🔢 Basic Version Control</a></li>
+    <li><a href="#-enhanced-user-input">🔘 Enhanced User Input</a></li>
+    <li><a href="#-developer-tools">🧰 Developer tools</a></li>
+    <li><a href="#-intermediate-level-documentation">📄 Intermediate-level Documentation</a></li>
+    <li><a href="#-composite-model">📈 Composite model</a></li>
+    <li><a href="#-ai-enhanced-capabilities">🤖 AI-enhanced capabilities</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/power-bi" target="_blank">power-bi</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/features" target="_blank">features</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/reporting" target="_blank">reporting</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/documentation" target="_blank">documentation</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/version-control" target="_blank">version-control</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/composite-model" target="_blank">composite-model</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/ai" target="_blank">ai</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=What%20Power%20BI%20is%20still%20missing&url=https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f03%2fwhat-power-bi-is-missing%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=What%20Power%20BI%20is%20still%20missing: https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f03%2fwhat-power-bi-is-missing%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=What%20Power%20BI%20is%20still%20missing&amp;body=Check%20out%20this%20site https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f03%2fwhat-power-bi-is-missing%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/03/what-power-bi-is-missing/">
+                        <img src="/images/power_bi_missing/what-power-bi-missing.jpg" class="card-img-top" alt="What Power BI is still missing">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/03/what-power-bi-is-missing/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="What Power BI is still missing">What Power BI is still missing</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>During these months, I had the chance to take a look at Power BI at the enterprise level, juggling advanced requests from hundreds of users and reports. I am impressed by all the features that the developers have rolled out recently, greatly improving both user and creator experiences. However, one …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Mar 27, 2023</span>
+                    <a href="/posts/2023/03/what-power-bi-is-missing/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/02/obsidian-productivity-second-brain/">
+                        <img src="/images/obsidian/obsidian.jpg" class="card-img-top" alt="Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/02/obsidian-productivity-second-brain/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes">Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>🧠 Introduction to Second Brains &amp; Brain Dumping As I&rsquo;m working with data all the time, I&rsquo;m aware of the importance of keeping it in a safe and structured place, where it can be easily accessed when needed, which could be days, weeks or even years in the future. Thus, organizing my …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Feb 24, 2023</span>
+                    <a href="/posts/2023/02/obsidian-productivity-second-brain/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/">
+                        <img src="/images/presentation_patterns_cover.jpg" class="card-img-top" alt="Personal Notes about Presentation Patterns">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Personal Notes about Presentation Patterns">Personal Notes about Presentation Patterns</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>Presentation Patterns Written by Neal Ford, Matthew McCullough and Nathaniel Schutta, &ldquo;Presentation Patterns - Techniques for Crafting Better Presentations&rdquo; is an encyclopedia of patterns, tips and common mistakes experienced by the authors, who have delivered thousands of presentations. …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jan 28, 2023</span>
+                    <a href="/posts/2023/01/personal-notes-about-presentation-patterns/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2023  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
