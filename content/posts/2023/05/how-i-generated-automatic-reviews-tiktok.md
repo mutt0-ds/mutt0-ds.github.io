@@ -38,7 +38,7 @@ Therefore, editing and recording TikTok videos shouldn't exceed that time frame;
 
 My idea was to download generic abstract video backgrounds, add the sound of the reviewed song using Python and FFMPEG, and manually insert the article text with the TikTok app before uploading. It was a bit tedious and slow, but since this was an experiment for a social media platform I don't use and a small niche blog, there was no pressure.
 
-Then, I stumbled upon **[RedditVideoMakerBot](https://github.com/elebumm/RedditVideoMakerBot)**, my savior.
+Then, I stumbled upon **[RedditVideoMakerBot](https://github.com/elebumm/RedditVideoMakerBot)**, my Lord and Savior.
 
 I want to publicly thank and praise [elebumm](https://github.com/elebumm) and their team for this ingenious repository. It has 5k stars, 70+ contributors, advanced CI pipelines, and a list of libraries in the requirements with some famous names:
 
