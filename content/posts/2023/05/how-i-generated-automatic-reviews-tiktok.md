@@ -3,7 +3,7 @@ title: "How I ended up with AI-generated Music Reviews on TikTok"
 date: 2023-05-14
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
-image: /images/reviews_tiktok/
+image: /images/reviews_tiktok/title.jpg
 draft: false
 author: "Mutt0-ds"
 tags:
@@ -59,24 +59,24 @@ https://user-images.githubusercontent.com/66544866/173453972-6526e4e6-c6ef-41c5-
 
 This is ridiculously specific and I'm fascinated by the capabilities of programmers who are adding features to this amazing project. The level of configuration is impressive, with a GUI, multiple voice options, AI-powered post filtering, and even content translation. The settings are extensive and well-documented. This is better maintained than many core libraries in Python!
 
-- Schema of the structure
+![redditvideomarkerbot-strategy](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/redditvideomarkerbot.jpg)
 
 [![lewisthumbnail](https://user-images.githubusercontent.com/6053155/173631669-1d1b14ad-c478-4010-b57d-d79592a789f2.png)
 ](https://www.youtube.com/watch?v=3gjcY_00U1w)
 
 So I forked it and started building my OWN TikTok creator framework starting from RedditVideoMakerBot.
 
-## 🕷 Gather text and screenshots from my blog
+## 🕷️ Gather text and screenshots from my blog
 
 The initial task was to obtain the content: innstead of relying on the Reddit API, I made some code adjustments and replaced it with an HTTP request to my public blog's website. This enabled me to download the paragraphs and utilize headless Google Chrome with Playwright to capture screenshots for each segment of the video.
 
-## 🎙 Generate the voiceover
+## 🎤 Generate the voiceover
 
 RedditVideoMakerBot offers an extensive range of 7 libraries, including Streamlab and AWSPolly, along with over 20 voices for text-to-speech conversion. The advancements in this technology are truly remarkable, with some voices sounding incredibly human-like.
 
 For my project, I opted for the _"male funny"_ voice from TikTok, which is conveniently accessible with an account and has a natural tone that suits my needs perfectly. The code then combines multiple small .mp3 files, merging them into the first component of the final result sync.
 
-- schema
+![tts-strategy](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/tts.jpg)
 
 ## 🔍 Finding 'The Drop'
 
@@ -88,20 +88,21 @@ However, I encountered an obstacle at this point. I wanted the most energetic se
 
 During my research, I came across an [intriguing thesis titled "Finding 'The Drop': Recognizing the climax in electronic music using classification models"](http://essay.utwente.nl/82333/1/Bachelor_Thesis.pdf) by Koen van den Brink. The author utilized AI techniques, including Support Vector Machines and Convolutional Neural Networks, to identify the climax point in a song by analyzing its spectrogram. Discovering this thesis was a delightful moment as I realized someone else had faced a similar problem and even conducted research on it, providing valuable insights and motivation for my own project.
 
-- thesis
+![thesis](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/thesis.jpg)
 
 However, I opted not to train an entire convolutional neural network and over-engineer my solution solely for finding the right segment for my TikTok videos. Instead, I relied on my personal experience and examined a few spectrograms, measuring the noise levels (in decibels) at each second of the song. Surprisingly, this approach yielded satisfactory results without the need for complex AI models.
 
-- average wave of an EDM song
+![soundwave](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/wave.jpg)
 
 My function kicks in after 25% of the song has played and looks for a specific moment when:
 
-- The next second is at least 5% noisier
-- The noise level in the next second should be in the 95th percentile across the entire duration of the song
+1. The next second is at least 5% noisier
+2. The noise level in the next second should be in the 95th percentile across the entire duration of the song
+
 Yep, that's the climax. So simple, so effective. It works for many music genres and took me 5 minutes to code.
 
-- average wave of an EDM song
- 
+![soundwave-strategy](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/wave_strategy.jpg)
+
 ```python
 def find_drop(df: pd.DataFrame) -> int:
     THRESHOLD_MAX_DB = round(df.DB.max() * 0.95, 2)
@@ -116,7 +117,7 @@ def find_drop(df: pd.DataFrame) -> int:
             return current_sec.name
 ```
 
-## ✂ Merge audio, screenshot and video parts
+## ✂️ Merge audio, screenshot and video parts
 
 At this stage, working with FFMPEG drove me a little crazy. The Python wrapper posed significant limitations, as it is primarily designed as a command-line tool rather than a comprehensive library. I had to meticulously synchronize different elements: the segments of screenshots, the background video featuring EDM festival footage, and the combined voiceover with background music, while ensuring that the resolution was properly cropped for mobile devices, which added further time to the process. Throughout all of this, [the persistent and unhelpful ffmpeg error messages continued to haunt me](https://github.com/kkroening/ffmpeg-python/issues/165) (until I discovered how to override the stderr)
 
