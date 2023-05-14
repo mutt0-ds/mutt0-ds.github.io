@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="How I ended up with AI-generated Music Reviews on TikTok" />
+<meta property="og:description" content="This is a fun story, with a series of technologies and topics that I couldn&rsquo;t believe they were capable of living together&hellip; EDM, TikTok, Text-To-Speech, AI, Playwright&hellip; Many times, when going down this over-engineered rabbit hole, I thought, &ldquo;OK, I have to write about this thing.&rdquo; And also, &ldquo;What am I doing here with my time?&rdquo;
+📚 Some context So, here are a few key things to be aware of:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mutt0-ds.github.io/posts/2023/05/how-i-generated-automatic-reviews-tiktok/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-14T00:00:00+00:00" /><meta property="og:site_name" content="Mutt0-ds Notes" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How I ended up with AI-generated Music Reviews on TikTok"/>
+<meta name="twitter:description" content="This is a fun story, with a series of technologies and topics that I couldn&rsquo;t believe they were capable of living together&hellip; EDM, TikTok, Text-To-Speech, AI, Playwright&hellip; Many times, when going down this over-engineered rabbit hole, I thought, &ldquo;OK, I have to write about this thing.&rdquo; And also, &ldquo;What am I doing here with my time?&rdquo;
+📚 Some context So, here are a few key things to be aware of:"/>
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+How I ended up with AI-generated Music Reviews on TikTok | Mutt0-ds Notes
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">How I ended up with AI-generated Music Reviews on TikTok</h1>
+            <div class="text-center">
+              Mutt0-ds 
+              <small>|</small>
+              May 14, 2023
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid" src="/images/reviews_tiktok/title.jpg" alt="How I ended up with AI-generated Music Reviews on TikTok">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>This is a fun story, with a series of technologies and topics that I couldn&rsquo;t believe they were capable of living together&hellip; EDM, TikTok, Text-To-Speech, AI, Playwright&hellip; Many times, when going down this over-engineered rabbit hole, I thought, &ldquo;OK, I have to write about this thing.&rdquo; And also, &ldquo;What am I doing here with my time?&rdquo;</p>
+<h2 id="-some-context">📚 Some context</h2>
+<p>So, here are a few key things to be aware of:</p>
+<ul>
+<li>I write reviews for an electronic music (EDM) blog. It&rsquo;s not too professional, just my thoughts on the music I listen to.</li>
+<li>I&rsquo;m a total newbie to TikTok, and I don&rsquo;t use it regularly.</li>
+<li>Being lazy by nature, I love automating tasks.</li>
+</ul>
+<p>Everything began when <a href="https://www.hdblog.it/mercato/articoli/n569014/antitrust-impone-meta-riprendere-trattative-siae/">Instagram encountered copyright issues with the Italian SIAE</a> regarding music stickers. Consequently, Meta&rsquo;s social media platform decided to temporarily remove the option of adding music to posts. This was a significant concern for my blog since we frequently used this feature, allowing readers to listen to the music while reading the article on our homepage. Additionally, Instagram heavily emphasizes videos, following the success of TikTok, resulting in a continuous decline in reach for our static posts.</p>
+<p>That&rsquo;s when the idea struck me: &ldquo;<em>we should transition to video reviews.</em>&rdquo;</p>
+<p>Social media isn&rsquo;t the primary focus of our blog, and I use it sparingly. Typically, I write the review, publish it on the website, and then share an image containing the content and link on social media using <a href="https://www.hootsuite.com/">Hootsuite</a>. I&rsquo;ve automated the process as much as possible, so it usually takes no more than 5 minutes (excluding the time required to write the content, of course, but that&rsquo;s a separate matter).</p>
+<p>Therefore, editing and recording TikTok videos shouldn&rsquo;t exceed that time frame; that was the main priority. I also wanted to acquire video editing skills that could prove useful for future projects. Additionally, since we&rsquo;re on the topic, I thought it would be beneficial to explore the chaotic realm of TikTok, considering it&rsquo;s the direction in which social media is evolving.</p>
+<h2 id="-the-starting-point-redditvideomakerbot">🏠 The starting point: RedditVideoMakerBot</h2>
+<p>My idea was to download generic abstract video backgrounds, add the sound of the reviewed song using Python and FFMPEG, and manually insert the article text with the TikTok app before uploading. It was a bit tedious and slow, but since this was an experiment for a social media platform I don&rsquo;t use and a small niche blog, there was no pressure.</p>
+<p>Then, I stumbled upon <strong><a href="https://github.com/elebumm/RedditVideoMakerBot">RedditVideoMakerBot</a></strong>, my Lord and Savior.</p>
+<p>I want to publicly thank and praise <a href="https://github.com/elebumm">elebumm</a> and their team for this ingenious repository. It has 5k stars, 70+ contributors, advanced CI pipelines, and a list of libraries in the requirements with some famous names:</p>
+<ul>
+<li><a href="https://github.com/microsoft/playwright">playwright</a> (web testing framework)</li>
+<li><a href="https://github.com/praw-dev/praw">praw</a> (Reddit&rsquo;s API wrapper)</li>
+<li><a href="https://github.com/pytube/pytube">pytube</a> (YouTube&rsquo;s downloader)</li>
+<li><a href="https://github.com/kkroening/ffmpeg-python">ffmpeg-python</a> (video editing)</li>
+<li><a href="https://github.com/pallets/flask">Flask</a> (micro-framework for web apps)</li>
+<li><a href="https://github.com/pytorch/pytorch">pytorch</a>, <a href="https://github.com/huggingface/transformers">transformers</a> (AI libraries)</li>
+<li><a href="https://github.com/pndurette/gTTS">gTTS</a>, <a href="https://github.com/nateshmbhat/pyttsx3">pyttsx3</a> (Text-To-Speech models)</li>
+</ul>
+<p>Are we building a spaceship?!
+No, this complex and DEFINITELY over-engineered architecture serves one, very, very specific purpose.</p>
+<blockquote>
+<p>Scrapes a post&rsquo;s data from Reddit and create a TikTok videos with an AI&rsquo;s text-to-speech-generated voiceover and a gameplay background</p>
+</blockquote>
+<p><a href="https://user-images.githubusercontent.com/66544866/173453972-6526e4e6-c6ef-41c5-ab40-5d275e724e7c.mp4">https://user-images.githubusercontent.com/66544866/173453972-6526e4e6-c6ef-41c5-ab40-5d275e724e7c.mp4</a></p>
+<p>This is ridiculously specific and I&rsquo;m fascinated by the capabilities of programmers who are adding features to this amazing project. The level of configuration is impressive, with a GUI, multiple voice options, AI-powered post filtering, and even content translation. The settings are extensive and well-documented. This is better maintained than many core libraries in Python!</p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/redditvideomarkerbot.jpg" alt="redditvideomarkerbot-strategy"></p>
+<p><a href="https://www.youtube.com/watch?v=3gjcY_00U1w"><img src="https://user-images.githubusercontent.com/6053155/173631669-1d1b14ad-c478-4010-b57d-d79592a789f2.png" alt="lewisthumbnail">
+</a></p>
+<p>So I forked it and started building my OWN TikTok creator framework starting from RedditVideoMakerBot.</p>
+<h2 id="-gather-text-and-screenshots-from-my-blog">🕷️ Gather text and screenshots from my blog</h2>
+<p>The initial task was to obtain the content: innstead of relying on the Reddit API, I made some code adjustments and replaced it with an HTTP request to my public blog&rsquo;s website. This enabled me to download the paragraphs and utilize headless Google Chrome with Playwright to capture screenshots for each segment of the video.</p>
+<h2 id="-generate-the-voiceover">🎤 Generate the voiceover</h2>
+<p>RedditVideoMakerBot offers an extensive range of 7 libraries, including Streamlab and AWSPolly, along with over 20 voices for text-to-speech conversion. The advancements in this technology are truly remarkable, with some voices sounding incredibly human-like.</p>
+<p>For my project, I opted for the <em>&ldquo;male funny&rdquo;</em> voice from TikTok, which is conveniently accessible with an account and has a natural tone that suits my needs perfectly. The code then combines multiple small .mp3 files, merging them into the first component of the final result sync.</p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/tts.jpg" alt="tts-strategy"></p>
+<h2 id="-finding-the-drop">🔍 Finding &lsquo;The Drop&rsquo;</h2>
+<p>The initial steps were relatively straightforward, but that&rsquo;s when I had to take the reins. My task was to incorporate the song that is being review into the audio track as a background while the text-to-speech (TTS) voice narrates the article.</p>
+<p>To achieve this, my code opens the song&rsquo;s .mp3 file, crops it to match the duration of the voiceover audio, reduces its volume by 70%, and seamlessly blends the two files together. Luckily, <a href="https://ffmpeg.org/">FFMPEG</a>, the library used for video editing, handles these tasks, saving me the need to learn another framework.</p>
+<p>However, I encountered an obstacle at this point. I wanted the most energetic section of the song, known as the &ldquo;Drop&rdquo; or the climax, to start right at the beginning of the video to immediately capture the viewer&rsquo;s attention. Automating this process turned out to be more challenging than expected. While it&rsquo;s a simple task for a human, finding the right segment programmatically proved to be non-trivial.</p>
+<p>During my research, I came across an <a href="http://essay.utwente.nl/82333/1/Bachelor_Thesis.pdf">intriguing thesis titled &ldquo;Finding &lsquo;The Drop&rsquo;: Recognizing the climax in electronic music using classification models&rdquo;</a> by Koen van den Brink. The author utilized AI techniques, including Support Vector Machines and Convolutional Neural Networks, to identify the climax point in a song by analyzing its spectrogram. Discovering this thesis was a delightful moment as I realized someone else had faced a similar problem and even conducted research on it, providing valuable insights and motivation for my own project.</p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/thesis.jpg" alt="thesis"></p>
+<p>However, I opted not to train an entire convolutional neural network and over-engineer my solution solely for finding the right segment for my TikTok videos. Instead, I relied on my personal experience and examined a few spectrograms, measuring the noise levels (in decibels) at each second of the song. Surprisingly, this approach yielded satisfactory results without the need for complex AI models.</p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/wave.jpg" alt="soundwave"></p>
+<p>My function kicks in after 25% of the song has played and looks for a specific moment when:</p>
+<ol>
+<li>The next second is at least 5% noisier</li>
+<li>The noise level in the next second should be in the 95th percentile across the entire duration of the song</li>
+</ol>
+<p>Yep, that&rsquo;s the climax. So simple, so effective. It works for many music genres and took me 5 minutes to code.</p>
+<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/wave_strategy.jpg" alt="soundwave-strategy"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_drop</span>(df: pd<span style="color:#f92672">.</span>DataFrame) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>    THRESHOLD_MAX_DB <span style="color:#f92672">=</span> round(df<span style="color:#f92672">.</span>DB<span style="color:#f92672">.</span>max() <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.95</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    THRESHOLD_DELTA <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.05</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(df)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>        current_sec <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>iloc[i]
+</span></span><span style="display:flex;"><span>        next_sec <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>iloc[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>        delta <span style="color:#f92672">=</span> (next_sec<span style="color:#f92672">.</span>DB <span style="color:#f92672">-</span> current_sec<span style="color:#f92672">.</span>DB) <span style="color:#f92672">/</span> current_sec<span style="color:#f92672">.</span>DB
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (next_sec<span style="color:#f92672">.</span>DB <span style="color:#f92672">&gt;</span> THRESHOLD_MAX_DB) <span style="color:#f92672">and</span> (delta <span style="color:#f92672">&gt;</span> THRESHOLD_DELTA):
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Found a drop! At #</span><span style="color:#e6db74">{</span>current_sec<span style="color:#f92672">.</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> current_sec<span style="color:#f92672">.</span>name
+</span></span></code></pre></div><h2 id="-merge-audio-screenshot-and-video-parts">✂️ Merge audio, screenshot and video parts</h2>
+<p>At this stage, working with FFMPEG drove me a little crazy. The Python wrapper posed significant limitations, as it is primarily designed as a command-line tool rather than a comprehensive library. I had to meticulously synchronize different elements: the segments of screenshots, the background video featuring EDM festival footage, and the combined voiceover with background music, while ensuring that the resolution was properly cropped for mobile devices, which added further time to the process. Throughout all of this, <a href="https://github.com/kkroening/ffmpeg-python/issues/165">the persistent and unhelpful ffmpeg error messages continued to haunt me</a> (until I discovered how to override the stderr)</p>
+<h2 id="-the-result-my-first-tiktok">🏆 The Result: my first TikTok!</h2>
+<p>The videos I can generate may not be award-winning or as captivating as the average TikTok content, but for me, it&rsquo;s a personal victory. I take great pride in my tiny framework, which can be adjusted for other solutions in case of new video/audio editing ideas.</p>
+<ul>
+<li>Video</li>
+</ul>
+<p>During this process, I gained valuable insights into the reliability of Text-To-Speech technologies, which have come a long way, and FFMPEG, a powerful tool for editing multimedia files once you grasp its commands. Previously, I perceived video and audio editing as daunting, requiring complex software and expertise (which it does, for professional purposes!). However, being able to make basic edits with code gave me a sense of accomplishment.</p>
+<p>Currently, I have garnered a modest number of views (under the thousand) on TikTok. I need to explore ways to enhance performance and determine if this type of content can truly succeed on the platform. Additionally, I aspire to evolve the FFMPEG component, perhaps by incorporating transitions or more advanced visual effects.</p>
+<p>One thing is certain, this has been an enjoyable experience, and I&rsquo;m excited to continue exploring and refining my work. I extend my gratitude once again to <a href="https://github.com/elebumm">Lewis Menelaws (elebumm)</a> and his library for providing the foundation for this endeavor.</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-some-context">📚 Some context</a></li>
+    <li><a href="#-the-starting-point-redditvideomakerbot">🏠 The starting point: RedditVideoMakerBot</a></li>
+    <li><a href="#-gather-text-and-screenshots-from-my-blog">🕷️ Gather text and screenshots from my blog</a></li>
+    <li><a href="#-generate-the-voiceover">🎤 Generate the voiceover</a></li>
+    <li><a href="#-finding-the-drop">🔍 Finding &lsquo;The Drop&rsquo;</a></li>
+    <li><a href="#-merge-audio-screenshot-and-video-parts">✂️ Merge audio, screenshot and video parts</a></li>
+    <li><a href="#-the-result-my-first-tiktok">🏆 The Result: my first TikTok!</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/tiktok" target="_blank">tiktok</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/python" target="_blank">python</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/video-editing" target="_blank">video-editing</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/music-reviews" target="_blank">music-reviews</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/playwright" target="_blank">playwright</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/tts" target="_blank">tts</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/automation" target="_blank">automation</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/ffmpeg" target="_blank">ffmpeg</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=How%20I%20ended%20up%20with%20AI-generated%20Music%20Reviews%20on%20TikTok&url=https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f05%2fhow-i-generated-automatic-reviews-tiktok%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=How%20I%20ended%20up%20with%20AI-generated%20Music%20Reviews%20on%20TikTok: https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f05%2fhow-i-generated-automatic-reviews-tiktok%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=How%20I%20ended%20up%20with%20AI-generated%20Music%20Reviews%20on%20TikTok&amp;body=Check%20out%20this%20site https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f05%2fhow-i-generated-automatic-reviews-tiktok%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/05/how-i-generated-automatic-reviews-tiktok/">
+                        <img src="/images/reviews_tiktok/title.jpg" class="card-img-top" alt="How I ended up with AI-generated Music Reviews on TikTok">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/05/how-i-generated-automatic-reviews-tiktok/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="How I ended up with AI-generated Music Reviews on TikTok">How I ended up with AI-generated Music Reviews on TikTok</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>This is a fun story, with a series of technologies and topics that I couldn&rsquo;t believe they were capable of living together&hellip; EDM, TikTok, Text-To-Speech, AI, Playwright&hellip; Many times, when going down this over-engineered rabbit hole, I thought, &ldquo;OK, I have to write about this …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 14, 2023</span>
+                    <a href="/posts/2023/05/how-i-generated-automatic-reviews-tiktok/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/03/what-power-bi-is-missing/">
+                        <img src="/images/power_bi_missing/what-power-bi-missing.jpg" class="card-img-top" alt="What Power BI is still missing">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/03/what-power-bi-is-missing/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="What Power BI is still missing">What Power BI is still missing</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>During these months, I had the chance to take a look at Power BI at the enterprise level, juggling advanced requests from hundreds of users and reports. I am impressed by all the features that the developers have rolled out recently, greatly improving both user and creator experiences. However, one …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Mar 27, 2023</span>
+                    <a href="/posts/2023/03/what-power-bi-is-missing/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/02/obsidian-productivity-second-brain/">
+                        <img src="/images/obsidian/obsidian.jpg" class="card-img-top" alt="Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/02/obsidian-productivity-second-brain/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes">Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>🧠 Introduction to Second Brains &amp; Brain Dumping As I&rsquo;m working with data all the time, I&rsquo;m aware of the importance of keeping it in a safe and structured place, where it can be easily accessed when needed, which could be days, weeks or even years in the future. Thus, organizing my …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Feb 24, 2023</span>
+                    <a href="/posts/2023/02/obsidian-productivity-second-brain/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2023  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
