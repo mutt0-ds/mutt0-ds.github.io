@@ -55,7 +55,7 @@ No, this complex and DEFINITELY over-engineered architecture serves one, very, v
 
 > Scrapes a post's data from Reddit and create a TikTok videos with an AI's text-to-speech-generated voiceover and a gameplay background
 
-https://user-images.githubusercontent.com/66544866/173453972-6526e4e6-c6ef-41c5-ab40-5d275e724e7c.mp4
+{{< video src="/images/reviews_tiktok/test.mp4" type="video/mp4" preload="auto" >}}
 
 This is ridiculously specific and I'm fascinated by the capabilities of programmers who are adding features to this amazing project. The level of configuration is impressive, with a GUI, multiple voice options, AI-powered post filtering, and even content translation. The settings are extensive and well-documented. This is better maintained than many core libraries in Python!
 
@@ -86,7 +86,7 @@ To achieve this, my code opens the song's .mp3 file, crops it to match the durat
 
 However, I encountered an obstacle at this point. I wanted the most energetic section of the song, known as the "Drop" or the climax, to start right at the beginning of the video to immediately capture the viewer's attention. Automating this process turned out to be more challenging than expected. While it's a simple task for a human, finding the right segment programmatically proved to be non-trivial.
 
-During my research, I came across an [intriguing thesis titled "Finding 'The Drop': Recognizing the climax in electronic music using classification models"](http://essay.utwente.nl/82333/1/Bachelor_Thesis.pdf) by Koen van den Brink. The author utilized AI techniques, including Support Vector Machines and Convolutional Neural Networks, to identify the climax point in a song by analyzing its spectrogram. Discovering this thesis was a delightful moment as I realized someone else had faced a similar problem and even conducted research on it, providing valuable insights and motivation for my own project.
+During my research, I came across an intriguing thesis titled ["Finding 'The Drop': Recognizing the climax in electronic music using classification models"](http://essay.utwente.nl/82333/1/Bachelor_Thesis.pdf) by Koen van den Brink. The author utilized AI techniques, including Support Vector Machines and Convolutional Neural Networks, to identify the climax point in a song by analyzing its spectrogram. Discovering this thesis was a delightful moment as I realized someone else had faced a similar problem and even conducted research on it, providing valuable insights and motivation for my own project.
 
 ![thesis](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/thesis.jpg)
 
@@ -125,7 +125,7 @@ At this stage, working with FFMPEG drove me a little crazy. The Python wrapper p
 
 The videos I can generate may not be award-winning or as captivating as the average TikTok content, but for me, it's a personal victory. I take great pride in my tiny framework, which can be adjusted for other solutions in case of new video/audio editing ideas.
 
-- Video
+{{< video src="/images/reviews_tiktok/tiktok.mp4" type="video/mp4" preload="auto" >}}
 
 During this process, I gained valuable insights into the reliability of Text-To-Speech technologies, which have come a long way, and FFMPEG, a powerful tool for editing multimedia files once you grasp its commands. Previously, I perceived video and audio editing as daunting, requiring complex software and expertise (which it does, for professional purposes!). However, being able to make basic edits with code gave me a sense of accomplishment.
 
