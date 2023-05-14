@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mutt0-ds.github.io/tags/automation/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/ffmpeg/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/posts/2023/05/how-i-generated-automatic-reviews-tiktok/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/music-reviews/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/playwright/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/posts/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/python/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/tiktok/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/tts/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/video-editing/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mutt0-ds.github.io/tags/ai/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
@@ -14,19 +50,10 @@
     <loc>https://mutt0-ds.github.io/tags/features/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/</loc>
-    <lastmod>2023-03-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/posts/</loc>
-    <lastmod>2023-03-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mutt0-ds.github.io/tags/power-bi/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/reporting/</loc>
-    <lastmod>2023-03-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/version-control/</loc>
@@ -78,9 +105,6 @@
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/pytest/</loc>
-    <lastmod>2022-12-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/python/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</loc>
