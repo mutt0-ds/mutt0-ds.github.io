@@ -328,12 +328,12 @@ No, this complex and DEFINITELY over-engineered architecture serves one, very, v
 <p>My function kicks in after 25% of the song has played and looks for a specific moment when:</p>
 <ol>
 <li>The next second is at least 5% noisier</li>
-<li>The noise level in the next second should be in the 95th percentile across the entire duration of the song</li>
+<li>The noise level in the next second should be in the 99th percentile across the entire duration of the song</li>
 </ol>
 <p>Yep, that&rsquo;s the climax. So simple, so effective. It works for many music genres and took me 5 minutes to code.</p>
 <p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/wave_strategy.jpg" alt="soundwave-strategy"></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_drop</span>(df: pd<span style="color:#f92672">.</span>DataFrame) <span style="color:#f92672">-&gt;</span> int:
-</span></span><span style="display:flex;"><span>    THRESHOLD_MAX_DB <span style="color:#f92672">=</span> round(df<span style="color:#f92672">.</span>DB<span style="color:#f92672">.</span>max() <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.95</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    THRESHOLD_MAX_DB <span style="color:#f92672">=</span> round(df<span style="color:#f92672">.</span>DB<span style="color:#f92672">.</span>max() <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.99</span>, <span style="color:#ae81ff">2</span>)
 </span></span><span style="display:flex;"><span>    THRESHOLD_DELTA <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.05</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(df)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):

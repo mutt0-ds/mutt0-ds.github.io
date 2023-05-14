@@ -97,7 +97,7 @@ However, I opted not to train an entire convolutional neural network and over-en
 My function kicks in after 25% of the song has played and looks for a specific moment when:
 
 1. The next second is at least 5% noisier
-2. The noise level in the next second should be in the 95th percentile across the entire duration of the song
+2. The noise level in the next second should be in the 99th percentile across the entire duration of the song
 
 Yep, that's the climax. So simple, so effective. It works for many music genres and took me 5 minutes to code.
 
@@ -105,7 +105,7 @@ Yep, that's the climax. So simple, so effective. It works for many music genres 
 
 ```python
 def find_drop(df: pd.DataFrame) -> int:
-    THRESHOLD_MAX_DB = round(df.DB.max() * 0.95, 2)
+    THRESHOLD_MAX_DB = round(df.DB.max() * 0.99, 2)
     THRESHOLD_DELTA = 0.05
 
     for i in range(len(df)-1):
