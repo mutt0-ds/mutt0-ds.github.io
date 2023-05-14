@@ -301,7 +301,11 @@ No, this complex and DEFINITELY over-engineered architecture serves one, very, v
 <blockquote>
 <p>Scrapes a post&rsquo;s data from Reddit and create a TikTok videos with an AI&rsquo;s text-to-speech-generated voiceover and a gameplay background</p>
 </blockquote>
-<p><a href="https://user-images.githubusercontent.com/66544866/173453972-6526e4e6-c6ef-41c5-ab40-5d275e724e7c.mp4">https://user-images.githubusercontent.com/66544866/173453972-6526e4e6-c6ef-41c5-ab40-5d275e724e7c.mp4</a></p>
+<video class="video-shortcode" style="max-width:100%;height:auto;" preload="auto" controls>
+    <source src="/images/reviews_tiktok/test.mp4" type="video/mp4">
+    There should have been a video here but your browser does not seem
+    to support it.
+</video>
 <p>This is ridiculously specific and I&rsquo;m fascinated by the capabilities of programmers who are adding features to this amazing project. The level of configuration is impressive, with a GUI, multiple voice options, AI-powered post filtering, and even content translation. The settings are extensive and well-documented. This is better maintained than many core libraries in Python!</p>
 <p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/redditvideomarkerbot.jpg" alt="redditvideomarkerbot-strategy"></p>
 <p><a href="https://www.youtube.com/watch?v=3gjcY_00U1w"><img src="https://user-images.githubusercontent.com/6053155/173631669-1d1b14ad-c478-4010-b57d-d79592a789f2.png" alt="lewisthumbnail">
@@ -317,7 +321,7 @@ No, this complex and DEFINITELY over-engineered architecture serves one, very, v
 <p>The initial steps were relatively straightforward, but that&rsquo;s when I had to take the reins. My task was to incorporate the song that is being review into the audio track as a background while the text-to-speech (TTS) voice narrates the article.</p>
 <p>To achieve this, my code opens the song&rsquo;s .mp3 file, crops it to match the duration of the voiceover audio, reduces its volume by 70%, and seamlessly blends the two files together. Luckily, <a href="https://ffmpeg.org/">FFMPEG</a>, the library used for video editing, handles these tasks, saving me the need to learn another framework.</p>
 <p>However, I encountered an obstacle at this point. I wanted the most energetic section of the song, known as the &ldquo;Drop&rdquo; or the climax, to start right at the beginning of the video to immediately capture the viewer&rsquo;s attention. Automating this process turned out to be more challenging than expected. While it&rsquo;s a simple task for a human, finding the right segment programmatically proved to be non-trivial.</p>
-<p>During my research, I came across an <a href="http://essay.utwente.nl/82333/1/Bachelor_Thesis.pdf">intriguing thesis titled &ldquo;Finding &lsquo;The Drop&rsquo;: Recognizing the climax in electronic music using classification models&rdquo;</a> by Koen van den Brink. The author utilized AI techniques, including Support Vector Machines and Convolutional Neural Networks, to identify the climax point in a song by analyzing its spectrogram. Discovering this thesis was a delightful moment as I realized someone else had faced a similar problem and even conducted research on it, providing valuable insights and motivation for my own project.</p>
+<p>During my research, I came across an intriguing thesis titled <a href="http://essay.utwente.nl/82333/1/Bachelor_Thesis.pdf">&ldquo;Finding &lsquo;The Drop&rsquo;: Recognizing the climax in electronic music using classification models&rdquo;</a> by Koen van den Brink. The author utilized AI techniques, including Support Vector Machines and Convolutional Neural Networks, to identify the climax point in a song by analyzing its spectrogram. Discovering this thesis was a delightful moment as I realized someone else had faced a similar problem and even conducted research on it, providing valuable insights and motivation for my own project.</p>
 <p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/thesis.jpg" alt="thesis"></p>
 <p>However, I opted not to train an entire convolutional neural network and over-engineer my solution solely for finding the right segment for my TikTok videos. Instead, I relied on my personal experience and examined a few spectrograms, measuring the noise levels (in decibels) at each second of the song. Surprisingly, this approach yielded satisfactory results without the need for complex AI models.</p>
 <p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/wave.jpg" alt="soundwave"></p>
@@ -343,9 +347,11 @@ No, this complex and DEFINITELY over-engineered architecture serves one, very, v
 <p>At this stage, working with FFMPEG drove me a little crazy. The Python wrapper posed significant limitations, as it is primarily designed as a command-line tool rather than a comprehensive library. I had to meticulously synchronize different elements: the segments of screenshots, the background video featuring EDM festival footage, and the combined voiceover with background music, while ensuring that the resolution was properly cropped for mobile devices, which added further time to the process. Throughout all of this, <a href="https://github.com/kkroening/ffmpeg-python/issues/165">the persistent and unhelpful ffmpeg error messages continued to haunt me</a> (until I discovered how to override the stderr)</p>
 <h2 id="-the-result-my-first-tiktok">🏆 The Result: my first TikTok!</h2>
 <p>The videos I can generate may not be award-winning or as captivating as the average TikTok content, but for me, it&rsquo;s a personal victory. I take great pride in my tiny framework, which can be adjusted for other solutions in case of new video/audio editing ideas.</p>
-<ul>
-<li>Video</li>
-</ul>
+<video class="video-shortcode" style="max-width:100%;height:auto;" preload="auto" controls>
+    <source src="/images/reviews_tiktok/tiktok.mp4" type="video/mp4">
+    There should have been a video here but your browser does not seem
+    to support it.
+</video>
 <p>During this process, I gained valuable insights into the reliability of Text-To-Speech technologies, which have come a long way, and FFMPEG, a powerful tool for editing multimedia files once you grasp its commands. Previously, I perceived video and audio editing as daunting, requiring complex software and expertise (which it does, for professional purposes!). However, being able to make basic edits with code gave me a sense of accomplishment.</p>
 <p>Currently, I have garnered a modest number of views (under the thousand) on TikTok. I need to explore ways to enhance performance and determine if this type of content can truly succeed on the platform. Additionally, I aspire to evolve the FFMPEG component, perhaps by incorporating transitions or more advanced visual effects.</p>
 <p>One thing is certain, this has been an enjoyable experience, and I&rsquo;m excited to continue exploring and refining my work. I extend my gratitude once again to <a href="https://github.com/elebumm">Lewis Menelaws (elebumm)</a> and his library for providing the foundation for this endeavor.</p>
