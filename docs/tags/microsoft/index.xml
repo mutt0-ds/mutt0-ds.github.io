@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>microsoft on Mutt0-ds Notes</title>
+    <link>https://mutt0-ds.github.io/tags/microsoft/</link>
+    <description>Recent content in microsoft on Mutt0-ds Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/microsoft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The unnecessary hype strategy behind Microosft Fabric</title>
+      <link>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</link>
+      <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</guid>
+      <description>If you are into Data Engineering in Microsoft Azure Cloud Environment, you probaly heard about Microsoft Fabric being announced last week at the yearly event Microsoft Build. My two cents: it’s a very big deal for us engineers, working with data every day.
+In short, Microsoft introduced a huge, unified data platform that merges lots of tools together, starting from a common Data Lake where data can stored (OneLake), and a suite of new tools that are integrated in the “fabric” of Fabric.</description>
+    </item>
+    
+  </channel>
+</rss>
