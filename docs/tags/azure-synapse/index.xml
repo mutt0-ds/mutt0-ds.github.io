@@ -8,13 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 29 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/azure-synapse/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The unnecessary hype strategy behind Microosft Fabric</title>
+      <title>The unnecessary hype strategy behind Microsoft Fabric</title>
       <link>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</guid>
-      <description>If you are into Data Engineering in Microsoft Azure Cloud Environment, you probaly heard about Microsoft Fabric being announced last week at the yearly event Microsoft Build. My two cents: it’s a very big deal for us engineers, working with data every day.
-In short, Microsoft introduced a huge, unified data platform that merges lots of tools together, starting from a common Data Lake where data can stored (OneLake), and a suite of new tools that are integrated in the “fabric” of Fabric.</description>
+      <description>If you are into Data Engineering in Microsoft Azure Cloud Environment, you probaly heard about Microsoft Fabric being announced last week at the yearly event Microsoft Build. Well, &amp;ldquo;heard&amp;rdquo; is quite an euphesmism: everyone in the field is extremely excited about the announcements of the event. And for good reasons, as it’s a very big deal for us engineers, working with data every day.
+In short, Fabric is a cutting-edge, unified data platform that merges lots of tools together, starting from a common Data Lake where data can be stored (OneLake), and a suite of new tools on top of it that are integrated in the “fabric” of Fabric.</description>
     </item>
     
   </channel>
