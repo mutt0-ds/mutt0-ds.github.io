@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google-maps on Mutt0-ds Notes</title>
+    <link>https://mutt0-ds.github.io/tags/google-maps/</link>
+    <description>Recent content in google-maps on Mutt0-ds Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/google-maps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analyzing my Commute Data with Google Maps and Python</title>
+      <link>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</guid>
+      <description>When me and my commute buddy gets stuck in traffic when commuting, we often fantasize about the right route to take and the best time to leave the office for avoiding these uncomfortable situations. Now, with the power of technology (and the inspiration from this great guide from XXXX), I&amp;rsquo;m finally able to bring real numbers to my theories about the optimal time to leave our homes and workplaces!
+When you are using Google Maps and need to see the expected time of arrival, there is a query behind the hood to the Google Distance Matrix API.</description>
+    </item>
+    
+  </channel>
+</rss>
