@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>commute</title>
+      <link>https://mutt0-ds.github.io/tags/commute/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/commute/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>data-analysis</title>
       <link>https://mutt0-ds.github.io/tags/data-analysis/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
@@ -49,6 +58,15 @@
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mutt0-ds.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>traffic</title>
+      <link>https://mutt0-ds.github.io/tags/traffic/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/traffic/</guid>
       <description></description>
     </item>
     
