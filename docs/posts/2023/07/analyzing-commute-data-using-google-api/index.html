@@ -28,18 +28,16 @@
 
 
 
-<meta property="og:title" content="Analyzing my Commute Data with Google Maps and Python" />
-<meta property="og:description" content="When me and my commute buddy gets stuck in traffic when commuting, we often fantasize about the right route to take and the best time to leave the office for avoiding these uncomfortable situations. Now, with the power of technology (and the inspiration from this great guide from XXXX), I&rsquo;m finally able to bring real numbers to my theories about the optimal time to leave our homes and workplaces!
-When you are using Google Maps and need to see the expected time of arrival, there is a query behind the hood to the Google Distance Matrix API." />
+<meta property="og:title" content="Analyzing My Commute Data to Find the Best Time to Go to Work" />
+<meta property="og:description" content="When my commute buddy and I find ourselves stuck in traffic during our car journeys, we often daydream about finding the ideal route and the optimal time to leave the office in order to avoid these uncomfortable situations. Now, thanks to the power of technology and the inspiration I drew from a fantastic article by @hishamsajid113, I am finally able to back up my theories about the best departure times from home and simulate with real data!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-07-07T00:00:00+00:00" />
 <meta property="article:modified_time" content="2023-07-07T00:00:00+00:00" /><meta property="og:site_name" content="Mutt0-ds Notes" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Analyzing my Commute Data with Google Maps and Python"/>
-<meta name="twitter:description" content="When me and my commute buddy gets stuck in traffic when commuting, we often fantasize about the right route to take and the best time to leave the office for avoiding these uncomfortable situations. Now, with the power of technology (and the inspiration from this great guide from XXXX), I&rsquo;m finally able to bring real numbers to my theories about the optimal time to leave our homes and workplaces!
-When you are using Google Maps and need to see the expected time of arrival, there is a query behind the hood to the Google Distance Matrix API."/>
+<meta name="twitter:title" content="Analyzing My Commute Data to Find the Best Time to Go to Work"/>
+<meta name="twitter:description" content="When my commute buddy and I find ourselves stuck in traffic during our car journeys, we often daydream about finding the ideal route and the optimal time to leave the office in order to avoid these uncomfortable situations. Now, thanks to the power of technology and the inspiration I drew from a fantastic article by @hishamsajid113, I am finally able to back up my theories about the best departure times from home and simulate with real data!"/>
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -110,7 +108,7 @@ When you are using Google Maps and need to see the expected time of arrival, the
 <script defer src="/fontawesome-5/all-5.15.4.js"></script>
 
   <title>
-Analyzing my Commute Data with Google Maps and Python | Mutt0-ds Notes
+Analyzing My Commute Data to Find the Best Time to Go to Work | Mutt0-ds Notes
 
   </title>
 </head>
@@ -252,7 +250,7 @@ Analyzing my Commute Data with Google Maps and Python | Mutt0-ds Notes
       <div class="col-sm-12 col-md-12 col-lg-9">
         <div class="pr-lg-4">
           <div class="title mb-5">
-            <h1 class="text-center mb-4">Analyzing my Commute Data with Google Maps and Python</h1>
+            <h1 class="text-center mb-4">Analyzing My Commute Data to Find the Best Time to Go to Work</h1>
             <div class="text-center">
               Mutt0-ds 
               <small>|</small>
@@ -267,46 +265,39 @@ Analyzing my Commute Data with Google Maps and Python | Mutt0-ds Notes
           </div>
           
           <div class="featured-image">
-            <img class="img-fluid" src="/images/fabric/fabric_title.jpg" alt="Analyzing my Commute Data with Google Maps and Python">
+            <img class="img-fluid" src="/images/commute_data/commute_title.jpg" alt="Analyzing My Commute Data to Find the Best Time to Go to Work">
           </div>
           
           <article class="page-content  p-2">
-          <p>When me and my commute buddy gets stuck in traffic when commuting, we often fantasize about the right route to take and the best time to leave the office for avoiding these uncomfortable situations. Now, with the power of technology (and the inspiration from this great guide from XXXX), I&rsquo;m finally able to bring real numbers to my theories about the optimal time to leave our homes and workplaces!</p>
-<p>When you are using Google Maps and need to see the expected time of arrival, there is a query behind the hood to the Google Distance Matrix API. The API returns the predicted rrival time, using complex algorythms related to the average traffic in that area and data collected from other cars and devices using Google Maps. In my case, this is usually rather reliable, except when an unexpected accident happens. The API requires signing up to Google Cloud Platform, but its free plan is generous for my small experiment, which uses kess than 1000 API calls.</p>
-<p>In my fabolous script, I generated a sequence of 5-minute intervals in my commute times to simulate all the possible departure times from home (in the morning) and the office (in the evening).
-Then, I made several API calls using my home and work coordinates as parameters, for each time segment of the simulation and analyzed the Google Maps predictions related to the traffic I should encounter when leaving at the selected times.</p>
-<p>The outcomes were quite as expected from my emphirical experiences, but it feels nice to have some numbers to crunch. Here are my charts:</p>
-<h2 id="takeaways">Takeaways</h2>
+          <p>When my commute buddy and I find ourselves stuck in traffic during our car journeys, we often daydream about finding the ideal route and <strong>the optimal time</strong> to leave the office in order to avoid these uncomfortable situations. Now, thanks to the power of technology and the inspiration I drew from <a href="https://medium.com/@hishamsajid113/using-google-distance-matrix-api-to-reduce-commute-time-b17a0b9b0fbe">a fantastic article by @hishamsajid113</a>, I am finally able to back up my theories about the best departure times from home and simulate with real data!</p>
+<p>Fortunately, I have the flexibility to adjust my work hours within a predefined availability window. This allows us to save precious time and undoubtedly benefit our mental well-being by avoiding stressful experiences on the road.</p>
+<h2 id="gathering-the-data">Gathering the Data</h2>
+<p>When using <a href="https://www.google.com/maps/">Google Maps</a> to check the estimated time of arrival, there is a query sent to the <a href="https://developers.google.com/maps/documentation/distance-matrix/overview"><strong>Google Distance Matrix API</strong></a> behind the scenes. This API provides the predicted arrival time based on complex algorithms that consider average traffic conditions in the area and data collected from other vehicles, satellites and devices. In my experience, this information is usually quite reliable, except for unforeseen incidents such as car accidents or roadworks. To access the API, you need to sign up for the Google Cloud Platform (<a href="https://www.youtube.com/watch?v=cIGCh8J9AfA">tutorial</a>), and its free plan is generous enough for my small experiment, which involves fewer than 1000 API calls.</p>
+<div style="max-width: 4126px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 59.5113%;"><iframe src="//iframely.net/OJQiZpH" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p>In my fabulous script, I generated a sequence of 5-minute intervals representing different departure times from home in the morning (6AM - 10AM) and from the office in the evening (4PM - 8PM). I then made multiple API calls using the coordinates of my home and workplace as parameters for each time segment in the simulation. I analyzed the traffic predictions provided by Google Maps for each departure time to understand the expected conditions I would encounter.</p>
+<p>You can find <a href="https://github.com/mutt0-ds/commute-analysis">the code on Github</a>, but please note that you will need an API key for the Google Distance Matrix API and the coordinates of your home and office if you want to use it for your own analysis.</p>
+<h2 id="key-findings">Key Findings</h2>
+<p>The results of my analysis were mostly in line with my empirical experiences, but it feels satisfying to have concrete numbers to work with. Here are my charts and takeaways from the analysis:</p>
+<h2 id="morning-commute">Morning Commute</h2>
+<div style="max-width: 2561px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 46.8135%;"><iframe src="//iframely.net/rzXtwOl" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <ul>
-<li>Leaving at 5.30</li>
+<li>It&rsquo;s important to remember that these results are influenced by the current summer period, during which schools are closed and traffic is less intense, particularly in the morning hours. I will update the results in a few months to capture any changes.</li>
+<li>Even when leaving at 6:45 AM, <strong>we still encounter heavy traffic</strong> as we reach the office area around 7:30 AM, where congestion is concentrated. Leaving home earlier doesn&rsquo;t provide significant time-saving advantages.</li>
+<li>Friday (when many people work from home) and Thursday are the best days in terms of commute time.</li>
+<li>Departing at 8 AM (our current standard hour) is a good compromise and better than I initially thought.</li>
 </ul>
-<p>If you are into Data Engineering in Microsoft Azure Cloud Environment, you probaly heard about <strong>Microsoft Fabric</strong> being announced last week at the yearly event <a href="https://news.microsoft.com/build-2023/">Microsoft Build</a>. Well, &ldquo;heard&rdquo; is quite an euphesmism: everyone in the field is extremely excited about the announcements of the event. And for good reasons, as it’s a very big deal for us engineers, working with data every day.</p>
-<p>In short, Fabric is a cutting-edge, unified data platform that merges lots of tools together, starting from a common Data Lake where data can be stored (<a href="https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview"><strong>OneLake</strong></a>), and a suite of new tools on top of it that are integrated in the “fabric” of Fabric. Some of them are evolutions of existing systems, like <strong>Synapse Data Engineering</strong> (<a href="https://azure.microsoft.com/en-us/products/synapse-analytics/">Azure Synapse Anaylytics</a>) or <strong>Data Factory</strong> (<a href="https://azure.microsoft.com/en-us/products/data-factory">Azure Data Factory</a>) for ETL and Data Processing. Others, like my beloved <a href="https://powerbi.microsoft.com/en-us/"><strong>Power BI</strong></a>, have kept the same features but they will be integrated in the platform in the future. Others, like <a href="https://blog.fabric.microsoft.com/en-us/blog/driving-actions-from-your-data-with-data-activator/"><strong>Data Activator</strong></a>(no-code triggers), are brand new.</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/X_c7gLfJz_Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-<div style="max-width: 1440px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 53.25%;"><iframe src="//iframely.net/LNrnS4V" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
-<p>Let me be clear: the idea of unifying all these data-related services in charge of processing, storing and using data is a game changer, if Fabric will respect the promises. In my job, handling data in the correct way is the crucial part, and I’m already using Synapse, Data Factory, Data Lake, Data Warehouse and Power BI as separate Azure Services so I doubt that much in my workflow will change: everything will be more interconnected and, hopefully, more productive, with support for the new AI technologies and unlocked integrations.</p>
-<div style="max-width: 1536px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="//iframely.net/Cmp4DxI" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
-<p>What I didn’t like is <strong>Microsoft hype-oriented strategy</strong>. There was total secret about Fabric, and then in a couple of days it’s everywhere, still in Beta, with so much new infrormation that everyone out there still has to proceed what’s going to change and what’s exactly we will have to adapt. New spending plans, beta features, articles describing the “magic unlocked” by these tools, an explosion of <a href="https://www.youtube.com/watch?v=6QusOchmSXQ">contents</a> and <a href="https://www.youtube.com/watch?v=tu2M_K3pb0E">curiosity</a> has been suddenly evoked.</p>
-<div style="max-width: 774px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 64.031%;"><iframe src="//iframely.net/JYJhv7z" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
-<p>While I understand the rushed period the Big Tech are encountering, with <a href="https://time.com/6255952/ai-impact-chatgpt-microsoft-google/">the AI Race</a> dominating the minds of business users (and investors), in this case the update is on a technical side.</p>
-<p>Let’s take the other “<strong>bomb</strong>”, the protagonist of Microsoft Build 2023. I&rsquo;m talking about <a href="https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/16/introducing-microsoft-365-copilot-a-whole-new-way-to-work/"><strong>365 Copilot</strong></a>, a sort of ChatGPT assistant that can be integrated with Office Tools for generating presentations, Word documents and analysis, has been anticipated several months before, with lots of buzz from the press. There is mistery about how it will work at the end, but Microsoft is sharing as many updates as possible about the tool. With 365 Copilot and <a href="https://www.youtube.com/watch?v=DaIYrlMOj7I">Azure AI Studio</a> alone, which makes possible to build our own GPT models with in-house data, Microsoft would have already win everything for this year. The AI Race, at the moment of writing, is on its hands.</p>
-<div style="max-width: 1345px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 32.1142%;"><iframe src="//iframely.net/VyLswwI" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
-<p>That’s why I don’t like this choice of dropping another huge announcement with no anticipation. Was it only for the joy of scaring the competitors? Microsoft Fabric, all cool and shiny, <em>the joy of every Data Engineer and Data Analyst</em>, still leaves my biggest question remains unanswered.</p>
-<blockquote>
-<p>How will Fabric coexist with the existing suite (Synapse, Data Lake, Power BI)?
-For how much they will be supported and updated? How the migration will work, eventually?</p>
-</blockquote>
-<p><a href="https://learn.microsoft.com/en-us/fabric/">Microsoft Docs</a> only says ‘<em>Migration paths will soon be made available to help transition teams that are ready to switch services</em>’, but this is dangerous territory for rushed decisions. And I’m not even worrying about vendor lock-in (yet).</p>
-<p>I think that Microsoft is killing it this year, and the AI announcements were already enough for the press and the business users. Such a relevant change in the Data Platform is extremely welcomed, but I would have preferred a slowly rolled introduction, to leave us the time to digest the news and get ready to test the new features. Now I’m left with 7 services I want to try, almost zero documentation available yet, and the worry that the existing tools will be impacted by the update in the short term.</p>
-<blockquote>
-<p>I feel confused.</p>
-</blockquote>
-<p>I admit that it’s fun and nice to read about all the shiny updates incoming and I think that the team made an amazing job, but rushed announcements and hype trains don’t sound well for data processing platforms, where <strong>security, performance and reliability</strong> are what matters.
-While cautious, I&rsquo;m hopeful and curious for the exciting future of the Microsoft Azure platform, which will furtherly enhance the amazing results we are capable to achieve with our data.</p>
+<h2 id="evening-commute">Evening Commute</h2>
+<div style="max-width: 2561px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 46.8135%;"><iframe src="//iframely.net/OYrcVkj" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<ul>
+<li>Leaving at 5:30 PM, as I sometimes did when in a hurry, falls right in the worst traffic period. What a great idea!</li>
+<li>After the peak at 5:30 PM, commute times gradually decrease. The later you leave, the better, but the impact is not substantial. From 6:30 PM onwards, it becomes more manageable.</li>
+<li>In the evening, Friday becomes the worst day to commute before 5 PM (as more people are heading out for the weekend, especially in July). Monday is relatively calmer, which is good news.</li>
+<li><strong>Wednesday consistently proves to be the worst day for commuting</strong> in both morning and evening data. So when my commuting buddy claims that Wednesday is a cursed day, we now have some scientific data to back up that statement.</li>
+</ul>
+<p>Bonus: adding Saturday and Sunday to see the impact traffic has compared to &ldquo;normal&rdquo; working days. It adds from 20 to 30 minutes to the total time!</p>
+<div style="max-width: 2561px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 46.8135%;"><iframe src="//iframely.net/DpOHXfk" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<h2 id="conclusions">Conclusions</h2>
+<p>Let&rsquo;s face it, nobody enjoys being stuck in traffic. I am grateful to have the opportunity to work from home and, on the other commuting days, to have flexible hours that allow me to avoid the worst traffic moments when heading to the office. Thanks to the data provided by Google Maps, I now have a general framework of the best and worst time frames for my travels, keeping in mind that accidents and roadworks can always disrupt plans at the last minute. And most importantly, I can confirm that Wednesday is indeed the worst day for my particular commuting situation.</p>
 
           </article>
         </div>
@@ -321,7 +312,11 @@ While cautious, I&rsquo;m hopeful and curious for the exciting future of the Mic
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#takeaways">Takeaways</a></li>
+    <li><a href="#gathering-the-data">Gathering the Data</a></li>
+    <li><a href="#key-findings">Key Findings</a></li>
+    <li><a href="#morning-commute">Morning Commute</a></li>
+    <li><a href="#evening-commute">Evening Commute</a></li>
+    <li><a href="#conclusions">Conclusions</a></li>
   </ul>
 </nav>
               </div>
@@ -334,6 +329,10 @@ While cautious, I&rsquo;m hopeful and curious for the exciting future of the Mic
             <ul class="tags-ul list-unstyled list-inline">
               
               <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/gcp" target="_blank">gcp</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/traffic" target="_blank">traffic</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/commute" target="_blank">commute</a></li>
               
               <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/python" target="_blank">python</a></li>
               
@@ -353,17 +352,17 @@ While cautious, I&rsquo;m hopeful and curious for the exciting future of the Mic
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=Analyzing%20my%20Commute%20Data%20with%20Google%20Maps%20and%20Python&url=https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f07%2fanalyzing-commute-data-using-google-api%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=Analyzing%20My%20Commute%20Data%20to%20Find%20the%20Best%20Time%20to%20Go%20to%20Work&url=https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f07%2fanalyzing-commute-data-using-google-api%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=Analyzing%20my%20Commute%20Data%20with%20Google%20Maps%20and%20Python: https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f07%2fanalyzing-commute-data-using-google-api%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Analyzing%20My%20Commute%20Data%20to%20Find%20the%20Best%20Time%20to%20Go%20to%20Work: https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f07%2fanalyzing-commute-data-using-google-api%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=Analyzing%20my%20Commute%20Data%20with%20Google%20Maps%20and%20Python&amp;body=Check%20out%20this%20site https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f07%2fanalyzing-commute-data-using-google-api%2f'>
+                  <a target="_blank" href='mailto:?subject=Analyzing%20My%20Commute%20Data%20to%20Find%20the%20Best%20Time%20to%20Go%20to%20Work&amp;body=Check%20out%20this%20site https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f07%2fanalyzing-commute-data-using-google-api%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -431,16 +430,16 @@ While cautious, I&rsquo;m hopeful and curious for the exciting future of the Mic
                 
                 <div class="card-header">
                     <a href="/posts/2023/07/analyzing-commute-data-using-google-api/">
-                        <img src="/images/fabric/fabric_title.jpg" class="card-img-top" alt="Analyzing my Commute Data with Google Maps and Python">
+                        <img src="/images/commute_data/commute_title.jpg" class="card-img-top" alt="Analyzing My Commute Data to Find the Best Time to Go to Work">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
                     <a href="/posts/2023/07/analyzing-commute-data-using-google-api/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="Analyzing my Commute Data with Google Maps and Python">Analyzing my Commute Data with Google Maps and Python</h5>
+                        <h5 class="card-title bg-transparent" title="Analyzing My Commute Data to Find the Best Time to Go to Work">Analyzing My Commute Data to Find the Best Time to Go to Work</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p>When me and my commute buddy gets stuck in traffic when commuting, we often fantasize about the right route to take and the best time to leave the office for avoiding these uncomfortable situations. Now, with the power of technology (and the inspiration from this great guide from XXXX), I&rsquo;m …</p>
+                        <p>When my commute buddy and I find ourselves stuck in traffic during our car journeys, we often daydream about finding the ideal route and the optimal time to leave the office in order to avoid these uncomfortable situations. Now, thanks to the power of technology and the inspiration I drew from a …</p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
