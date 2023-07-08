@@ -6,7 +6,17 @@
     <description>Recent content on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analyzing my Commute Data with Google Maps and Python</title>
+      <link>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</guid>
+      <description>When me and my commute buddy gets stuck in traffic when commuting, we often fantasize about the right route to take and the best time to leave the office for avoiding these uncomfortable situations. Now, with the power of technology (and the inspiration from this great guide from XXXX), I&amp;rsquo;m finally able to bring real numbers to my theories about the optimal time to leave our homes and workplaces!
+When you are using Google Maps and need to see the expected time of arrival, there is a query behind the hood to the Google Distance Matrix API.</description>
+    </item>
+    
     <item>
       <title>The unnecessary hype strategy behind Microsoft Fabric</title>
       <link>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</link>
