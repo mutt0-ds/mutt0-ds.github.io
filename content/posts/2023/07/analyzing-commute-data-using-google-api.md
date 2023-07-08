@@ -23,7 +23,7 @@ Fortunately, I have the flexibility to adjust my work hours within a predefined 
 
 When using [Google Maps](https://www.google.com/maps/) to check the estimated time of arrival, there is a query sent to the [**Google Distance Matrix API**](https://developers.google.com/maps/documentation/distance-matrix/overview) behind the scenes. This API provides the predicted arrival time based on complex algorithms that consider average traffic conditions in the area and data collected from other vehicles, satellites and devices. In my experience, this information is usually quite reliable, except for unforeseen incidents such as car accidents or roadworks. To access the API, you need to sign up for the Google Cloud Platform ([tutorial](https://www.youtube.com/watch?v=cIGCh8J9AfA)), and its free plan is generous enough for my small experiment, which involves fewer than 1000 API calls.
 
-<div style="max-width: 4126px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 59.5113%;"><iframe src="//iframely.net/OJQiZpH" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2966px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 72.4919%;"><iframe src="//iframely.net/wKlT0Z2" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 In my fabulous script, I generated a sequence of 5-minute intervals representing different departure times from home in the morning (6AM - 10AM) and from the office in the evening (4PM - 8PM). I then made multiple API calls using the coordinates of my home and workplace as parameters for each time segment in the simulation. I analyzed the traffic predictions provided by Google Maps for each departure time to understand the expected conditions I would encounter.
 
@@ -35,7 +35,7 @@ The results of my analysis were mostly in line with my empirical experiences, bu
 
 ## Morning Commute
 
-<div style="max-width: 2561px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 46.8135%;"><iframe src="//iframely.net/rzXtwOl" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2561px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 46.8135%;"><iframe src="//iframely.net/RZdtzCO" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 - It's important to remember that these results are influenced by the current summer period, during which schools are closed and traffic is less intense, particularly in the morning hours. I will update the results in a few months to capture any changes.
 - Even when leaving at 6:45 AM, **we still encounter heavy traffic** as we reach the office area around 7:30 AM, where congestion is concentrated. Leaving home earlier doesn't provide significant time-saving advantages.
@@ -44,7 +44,7 @@ The results of my analysis were mostly in line with my empirical experiences, bu
 
 ## Evening Commute
 
-<div style="max-width: 2561px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 46.8135%;"><iframe src="//iframely.net/OYrcVkj" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2561px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 46.8135%;"><iframe src="//iframely.net/TkFkXpS" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 - Leaving at 5:30 PM, as I sometimes did when in a hurry, falls right in the worst traffic period. What a great idea!
 - After the peak at 5:30 PM, commute times gradually decrease. The later you leave, the better, but the impact is not substantial. From 6:30 PM onwards, it becomes more manageable.
@@ -53,7 +53,7 @@ The results of my analysis were mostly in line with my empirical experiences, bu
 
 Bonus: adding Saturday and Sunday to see the impact traffic has compared to "normal" working days. It adds from 20 to 30 minutes to the total time!
 
-<div style="max-width: 2561px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 46.8135%;"><iframe src="//iframely.net/DpOHXfk" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2561px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 46.8135%;"><iframe src="//iframely.net/zJhrAzO" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 ## Conclusions
 
