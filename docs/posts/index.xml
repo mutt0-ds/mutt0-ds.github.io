@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Second Brain... 6 Months later: Obsidian update</title>
+      <link>https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/</link>
+      <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/</guid>
+      <description>It&amp;rsquo;s been quite the journey since I first delved into Second Brain technologies for organizing my team&amp;rsquo;s documentation. I previously shared my initial experiences with Obsidian, and now, it&amp;rsquo;s time for a comprehensive update. In case you missed my earlier exploration, you can catch up here.
+So, what has changed? Let&amp;rsquo;s dive right in. Since my last update, I&amp;rsquo;ve continued to utilize Obsidian for secure and structured note organization within my team, enjoying the rapid and intuitive process and enjoying its advantages (flexibility, powerful search system, security, and so on).</description>
+    </item>
+    
     <item>
       <title>Analyzing My Commute Data to Find the Best Time to Go to Work</title>
       <link>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</link>
