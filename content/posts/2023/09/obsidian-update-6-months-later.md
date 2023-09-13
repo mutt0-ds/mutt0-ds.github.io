@@ -68,5 +68,5 @@ One crucial aspect to consider when using Obsidian is the organization of your v
 This Obsidian project continues to thrive, and I've happily recommended it to many technical colleagues interested in exploring this new tool. I've encountered no major roadblocks, and I look forward to delving deeper into its features. While I can't reveal much about my vault's contents, given its internal nature, I hope this update provides a glimpse into the evolving landscape.
 After overcoming a slight learning curve, Obsidian has indeed proven to be the right tool for my needs and I am extremely satisfied.
 
-Feel free to reach out if you'd like to learn more about my vault and my experiences with this tool.
+Feel free to reach out to me [here](mailto:mr0lnk6r1@relay.firefox.com) if you'd like to learn more about my vault and my experiences with this tool.
 Happy knowledge-organizing!
