@@ -6,7 +6,17 @@
     <description>Recent content in commute on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/commute/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/commute/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Finding the Best Time to Go to Work: Now with Car Accidents Data &amp; Power BI Dashboard!</title>
+      <link>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</guid>
+      <description>I want to express my gratitude for the positive feedbacks I received a few months ago when I used Google Maps data to determine the best times for the daily commute. TL;DR: Mondays are the best, while Wednesdays, and early Fridays are the trickiest times to hit the road.
+However, the neatness of this analysis takes a hit when real-world unpredictabilities come into play. Things like heavy traffic, rain, road closures due to accidents, or just that one slow driver in front of you can disrupt even the best-planned routes.</description>
+    </item>
+    
     <item>
       <title>Analyzing My Commute Data to Find the Best Time to Go to Work</title>
       <link>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</link>

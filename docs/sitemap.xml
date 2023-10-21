@@ -2,13 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mutt0-ds.github.io/tags/commute/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/data-analysis/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/google-maps/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/posts/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/power-bi/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/python/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/traffic/</loc>
+    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mutt0-ds.github.io/tags/documentation/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/markdown/</loc>
-    <lastmod>2023-09-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/</loc>
@@ -20,16 +47,7 @@
     <loc>https://mutt0-ds.github.io/tags/obsidian/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/</loc>
-    <lastmod>2023-09-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/python/</loc>
-    <lastmod>2023-09-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mutt0-ds.github.io/tags/second-brain/</loc>
-    <lastmod>2023-09-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/update/</loc>
@@ -38,22 +56,10 @@
     <loc>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/commute/</loc>
-    <lastmod>2023-07-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/data-analysis/</loc>
-    <lastmod>2023-07-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mutt0-ds.github.io/tags/gcp/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/google-distance-matrix/</loc>
-    <lastmod>2023-07-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/google-maps/</loc>
-    <lastmod>2023-07-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/traffic/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/azure-synapse/</loc>
@@ -69,9 +75,6 @@
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/microsoft/</loc>
-    <lastmod>2023-05-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/power-bi/</loc>
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</loc>
