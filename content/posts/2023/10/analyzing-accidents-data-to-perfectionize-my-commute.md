@@ -26,11 +26,11 @@ Instead, I decided to explore something more intriguing: car accidents. These ar
 
 The most challenging part, I assumed, would be acquiring the data. But to my surprise, the Swiss government offers an [interactive dashboard](https://map.geo.admin.ch/?topic=vu&lang=en&bgLayer=ch.swisstopo.pixelkarte-grau&layers=ch.astra.unfaelle-personenschaeden_alle%2Cch.swisstopo.swissnames3d&layers_timestamp=99990101%2C&E=2652000.00&N=1171625.00&zoom=2&catalogNodes=1318) and a [link](https://data.geo.admin.ch/ch.astra.unfaelle-personenschaeden_alle/) for exporting all the data ([direct download](https://data.geo.admin.ch/ch.astra.unfaelle-personenschaeden_alle/unfaelle-personenschaeden_alle/unfaelle-personenschaeden_alle_2056.csv.zip)). Within minutes, I had a decade's worth of Swiss car accident data downloaded, ready to crunch some numbers.
 
-<div style="max-width: 2303px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.4528%;"><iframe src="//iframely.net/LXatZcs" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2303px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.4528%;"><iframe src="//iframely.net/LXatZcs" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 The data proved to be relatively clean, featuring columns in French, Italian, German, and English, detailing accident types, road types, weekdays, and hours (though not exact dates for privacy). As a newcomer in this field, my major challenge was deciphering the creators' peculiar method of measuring latitudes and longitudes, which was based on the center on the country rather than as the standard, on the Earth's center of mass. Those Location_CHLV95 fields threw me off at first, but after [some exploration](https://en.wikipedia.org/wiki/EPSG_Geodetic_Parameter_Dataset), I managed to convert the coordinates from [EPSG:2056](https://epsg.io/2056) (the "Swiss" method) to the Standard World Geodetic System, using the [pyproj](https://pypi.org/project/pyproj/) library.
 
-<div style="max-width: 811px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 34.7633%;"><iframe src="//iframely.net/WGcM92d" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 811px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 34.7633%;"><iframe src="//iframely.net/WGcM92d" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 The last steps involved filtering the coordinates to focus only on my commute area, and I was ready to explore the results.
 
@@ -38,19 +38,19 @@ The last steps involved filtering the coordinates to focus only on my commute ar
 
 Instead of relying solely on Python's [seaborn](https://seaborn.pydata.org/) for data visualization, I turned to a more potent tool I use in my daily job, Microsoft Power BI (I already wrote about it [here](https://mutt0-ds.github.io/tags/power-bi/)). My first task was to create a map of accidents, color-coded by severity, much like the one on the [Swiss website](https://map.geo.admin.ch/?topic=vu&lang=en&bgLayer=ch.swisstopo.pixelkarte-grau&layers=ch.astra.unfaelle-personenschaeden_alle%2Cch.swisstopo.swissnames3d&layers_timestamp=99990101%2C&E=2652000.00&N=1171625.00&zoom=2&catalogNodes=1318).
 
-<div style="max-width: 1148px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75.5486%;"><iframe src="//iframely.net/f5TLmf2" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1148px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75.5486%;"><iframe src="//iframely.net/f5TLmf2" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 Now, let's delve into the aggregated data (still filtered to my commute area). Surprisingly, the risk of accidents is lowest during the morning, gradually increasing to peak during the evening rush hour. Among the weekdays, Tuesday stands out slightly, though it's a minor fluctuation. As for Mondays, they consistently prove to be the least congested days during my commute. So if you're one of those who despise Mondays, here's a valid reason to find joy: it's the safest weekday!
 
-<div style="max-width: 1218px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 65.8128%;"><iframe src="//iframely.net/C85NqI5" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1218px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 65.8128%;"><iframe src="//iframely.net/C85NqI5" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 But my data spans over the past 11 years, and many changes have occurred on our roads during that time. If we consider only the post-COVID years, the trend appears more random. It seems that the data isn't sufficient for drawing precise conclusions. Mondays continue to show fewer accidents, though, offering some statistical redemption for the most loathed day of the week.
 
-<div style="max-width: 1225px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 65.6219%;"><iframe src="//iframely.net/5AzUYTE" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1225px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 65.6219%;"><iframe src="//iframely.net/5AzUYTE" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 Speaking of recent years, let's conclude the analysis with an encouraging chart: the trend over the years. Since 2010, car accidents on both my commute route and the entire region have decreased by half. This indicates not only safer roads but also saved lives, a result of (my guess) a combination of stricter speed limits, advancements in automotive safety, and increased awareness of road safety issues. It's truly heartening news.
 
-<div style="max-width: 1236px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 64.7573%;"><iframe src="//iframely.net/WI0fLpr" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1236px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 64.7573%;"><iframe src="//iframely.net/WI0fLpr" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 ## 🤔 Final Thoughts
 
