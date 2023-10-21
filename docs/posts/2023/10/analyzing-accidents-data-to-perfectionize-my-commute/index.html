@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="Finding the Best Time to Go to Work: Now with Car Accidents Data &amp; Power BI Dashboard!" />
+<meta property="og:description" content="I want to express my gratitude for the positive feedbacks I received a few months ago when I used Google Maps data to determine the best times for the daily commute. TL;DR: Mondays are the best, while Wednesdays, and early Fridays are the trickiest times to hit the road.
+However, the neatness of this analysis takes a hit when real-world unpredictabilities come into play. Things like heavy traffic, rain, road closures due to accidents, or just that one slow driver in front of you can disrupt even the best-planned routes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-10-20T00:00:00+00:00" /><meta property="og:site_name" content="Mutt0-ds Notes" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Finding the Best Time to Go to Work: Now with Car Accidents Data &amp; Power BI Dashboard!"/>
+<meta name="twitter:description" content="I want to express my gratitude for the positive feedbacks I received a few months ago when I used Google Maps data to determine the best times for the daily commute. TL;DR: Mondays are the best, while Wednesdays, and early Fridays are the trickiest times to hit the road.
+However, the neatness of this analysis takes a hit when real-world unpredictabilities come into play. Things like heavy traffic, rain, road closures due to accidents, or just that one slow driver in front of you can disrupt even the best-planned routes."/>
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+Finding the Best Time to Go to Work: Now with Car Accidents Data &amp; Power BI Dashboard! | Mutt0-ds Notes
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Finding the Best Time to Go to Work: Now with Car Accidents Data &amp; Power BI Dashboard!</h1>
+            <div class="text-center">
+              Mutt0-ds 
+              <small>|</small>
+              Oct 20, 2023
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid" src="/images/commute_data/commute_title_v2.jpg" alt="Finding the Best Time to Go to Work: Now with Car Accidents Data &amp; Power BI Dashboard!">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>I want to express my gratitude for the positive feedbacks I received a few months ago when <a href="https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/">I used Google Maps data to determine the best times for the daily commute</a>. TL;DR: Mondays are the best, while Wednesdays, and early Fridays are the trickiest times to hit the road.</p>
+<p>However, the neatness of this analysis takes a hit when real-world unpredictabilities come into play. Things like heavy traffic, rain, road closures due to accidents, or just that one slow driver in front of you can disrupt even the best-planned routes. So, it&rsquo;s essential to view these explorations as &ldquo;what if&rdquo; games. They provide a general framework but can&rsquo;t fully account for the chaos of everyday life.</p>
+<p>For a while, I contemplated adding weather data to show how rainy days significantly affect commute times, not to mention snowy days. The problem is, predicting tomorrow&rsquo;s weather is challenging, and my initial hypothesis was already on shaky ground. Empirical evidence reveals anyway that the worse the weather, the worse the commute.</p>
+<p>Instead, I decided to explore something more intriguing: car accidents. These are the &ldquo;<a href="https://en.wikipedia.org/wiki/Black_swan_theory">black swans</a>&rdquo; of road trip planning—unexpected events that can ruin your day and disrupt any carefully calculated commute. Unfortunately, we can&rsquo;t predict or prevent them, but by understanding when accidents are more likely, we can at least be more informed. In this analysis, I will focus on my coordinates in the Swiss area, but I&rsquo;ll provide <a href="https://github.com/mutt0-ds/commute-analysis">the code on my Github</a> so you can investigate car accident data yourself. The best part? No Google key is required this time.</p>
+<h2 id="-gathering-and-preparing-the-data">📦 Gathering and Preparing the Data</h2>
+<p>The most challenging part, I assumed, would be acquiring the data. But to my surprise, the Swiss government offers an <a href="https://map.geo.admin.ch/?topic=vu&amp;lang=en&amp;bgLayer=ch.swisstopo.pixelkarte-grau&amp;layers=ch.astra.unfaelle-personenschaeden_alle%2Cch.swisstopo.swissnames3d&amp;layers_timestamp=99990101%2C&amp;E=2652000.00&amp;N=1171625.00&amp;zoom=2&amp;catalogNodes=1318">interactive dashboard</a> and a <a href="https://data.geo.admin.ch/ch.astra.unfaelle-personenschaeden_alle/">link</a> for exporting all the data (<a href="https://data.geo.admin.ch/ch.astra.unfaelle-personenschaeden_alle/unfaelle-personenschaeden_alle/unfaelle-personenschaeden_alle_2056.csv.zip">direct download</a>). Within minutes, I had a decade&rsquo;s worth of Swiss car accident data downloaded, ready to crunch some numbers.</p>
+<div style="max-width: 2303px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.4528%;"><iframe src="//iframely.net/LXatZcs" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p>The data proved to be relatively clean, featuring columns in French, Italian, German, and English, detailing accident types, road types, weekdays, and hours (though not exact dates for privacy). As a newcomer in this field, my major challenge was deciphering the creators&rsquo; peculiar method of measuring latitudes and longitudes, which was based on the center on the country rather than as the standard, on the Earth&rsquo;s center of mass. Those Location_CHLV95 fields threw me off at first, but after <a href="https://en.wikipedia.org/wiki/EPSG_Geodetic_Parameter_Dataset">some exploration</a>, I managed to convert the coordinates from <a href="https://epsg.io/2056">EPSG:2056</a> (the &ldquo;Swiss&rdquo; method) to the Standard World Geodetic System, using the <a href="https://pypi.org/project/pyproj/">pyproj</a> library.</p>
+<div style="max-width: 811px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 34.7633%;"><iframe src="//iframely.net/WGcM92d" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p>The last steps involved filtering the coordinates to focus only on my commute area, and I was ready to explore the results.</p>
+<h2 id="-a-peek-with-power-bi">📊 A Peek with Power BI</h2>
+<p>Instead of relying solely on Python&rsquo;s <a href="https://seaborn.pydata.org/">seaborn</a> for data visualization, I turned to a more potent tool I use in my daily job, Microsoft Power BI (I already wrote about it <a href="https://mutt0-ds.github.io/tags/power-bi/">here</a>). My first task was to create a map of accidents, color-coded by severity, much like the one on the <a href="https://map.geo.admin.ch/?topic=vu&amp;lang=en&amp;bgLayer=ch.swisstopo.pixelkarte-grau&amp;layers=ch.astra.unfaelle-personenschaeden_alle%2Cch.swisstopo.swissnames3d&amp;layers_timestamp=99990101%2C&amp;E=2652000.00&amp;N=1171625.00&amp;zoom=2&amp;catalogNodes=1318">Swiss website</a>.</p>
+<div style="max-width: 1148px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75.5486%;"><iframe src="//iframely.net/f5TLmf2" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p>Now, let&rsquo;s delve into the aggregated data (still filtered to my commute area). Surprisingly, the risk of accidents is lowest during the morning, gradually increasing to peak during the evening rush hour. Among the weekdays, Tuesday stands out slightly, though it&rsquo;s a minor fluctuation. As for Mondays, they consistently prove to be the least congested days during my commute. So if you&rsquo;re one of those who despise Mondays, here&rsquo;s a valid reason to find joy: it&rsquo;s the safest weekday!</p>
+<div style="max-width: 1218px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 65.8128%;"><iframe src="//iframely.net/C85NqI5" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p>But my data spans over the past 11 years, and many changes have occurred on our roads during that time. If we consider only the post-COVID years, the trend appears more random. It seems that the data isn&rsquo;t sufficient for drawing precise conclusions. Mondays continue to show fewer accidents, though, offering some statistical redemption for the most loathed day of the week.</p>
+<div style="max-width: 1225px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 65.6219%;"><iframe src="//iframely.net/5AzUYTE" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p>Speaking of recent years, let&rsquo;s conclude the analysis with an encouraging chart: the trend over the years. Since 2010, car accidents on both my commute route and the entire region have decreased by half. This indicates not only safer roads but also saved lives, a result of (my guess) a combination of stricter speed limits, advancements in automotive safety, and increased awareness of road safety issues. It&rsquo;s truly heartening news.</p>
+<div style="max-width: 1236px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 64.7573%;"><iframe src="//iframely.net/WI0fLpr" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<h2 id="-final-thoughts">🤔 Final Thoughts</h2>
+<ul>
+<li>My updated analysis reaffirms that Mondays are statistically better for commuting, and avoiding peak hours whenever possible is obviously a wise choice, both mentally and phisically speaking.</li>
+<li>Focusing on the most recent years, the risk of accidents appears random and challenging to predict on a day-to-day basis. However, accidents are notably more likely during the evening rush hour, around 6 PM (+100% risk increase).</li>
+<li>My assumption that people are sleepier in the morning, increasing the risk of accidents, doesn&rsquo;t hold up in this data.</li>
+<li>The gradual decrease in car accidents over the years is excellent news for all commuters.</li>
+</ul>
+<p>With this update, I can better assess the safety of each day and make informed decisions, like avoiding working from home on Mondays. It was a rewarding experience delving into the Swiss dataset, and I hope that these findings will contribute to improving road safety and security in our country. Let&rsquo;s see if I can unearth more data to refine my analysis further!</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-gathering-and-preparing-the-data">📦 Gathering and Preparing the Data</a></li>
+    <li><a href="#-a-peek-with-power-bi">📊 A Peek with Power BI</a></li>
+    <li><a href="#-final-thoughts">🤔 Final Thoughts</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/power-bi" target="_blank">power-bi</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/traffic" target="_blank">traffic</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/commute" target="_blank">commute</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/python" target="_blank">python</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/google-maps" target="_blank">google-maps</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/data-analysis" target="_blank">data-analysis</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=Finding%20the%20Best%20Time%20to%20Go%20to%20Work%3a%20Now%20with%20Car%20Accidents%20Data%20%26%20Power%20BI%20Dashboard%21&url=https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f10%2fanalyzing-accidents-data-to-perfectionize-my-commute%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Finding%20the%20Best%20Time%20to%20Go%20to%20Work%3a%20Now%20with%20Car%20Accidents%20Data%20%26%20Power%20BI%20Dashboard%21: https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f10%2fanalyzing-accidents-data-to-perfectionize-my-commute%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=Finding%20the%20Best%20Time%20to%20Go%20to%20Work%3a%20Now%20with%20Car%20Accidents%20Data%20%26%20Power%20BI%20Dashboard%21&amp;body=Check%20out%20this%20site https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2023%2f10%2fanalyzing-accidents-data-to-perfectionize-my-commute%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/">
+                        <img src="/images/commute_data/commute_title_v2.jpg" class="card-img-top" alt="Finding the Best Time to Go to Work: Now with Car Accidents Data &amp; Power BI Dashboard!">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Finding the Best Time to Go to Work: Now with Car Accidents Data &amp; Power BI Dashboard!">Finding the Best Time to Go to Work: Now with Car Accidents Data &amp; Power BI Dashboard!</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>I want to express my gratitude for the positive feedbacks I received a few months ago when I used Google Maps data to determine the best times for the daily commute. TL;DR: Mondays are the best, while Wednesdays, and early Fridays are the trickiest times to hit the road.
+However, the neatness of …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Oct 20, 2023</span>
+                    <a href="/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/09/obsidian-update-6-months-later/">
+                        <img src="/images/obsidian/vault_animated.gif" class="card-img-top" alt="My Second Brain... 6 Months later: Obsidian update">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/09/obsidian-update-6-months-later/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="My Second Brain... 6 Months later: Obsidian update">My Second Brain... 6 Months later: Obsidian update</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>It&rsquo;s been quite the journey since I first delved into Second Brain technologies for organizing my team&rsquo;s documentation. I previously shared my initial experiences with Obsidian, and now, it&rsquo;s time for a comprehensive update. In case you missed my earlier exploration, you can catch …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Sep 13, 2023</span>
+                    <a href="/posts/2023/09/obsidian-update-6-months-later/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/07/analyzing-commute-data-using-google-api/">
+                        <img src="/images/commute_data/commute_title.jpg" class="card-img-top" alt="Analyzing My Commute Data to Find the Best Time to Go to Work">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/07/analyzing-commute-data-using-google-api/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Analyzing My Commute Data to Find the Best Time to Go to Work">Analyzing My Commute Data to Find the Best Time to Go to Work</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>When my commute buddy and I find ourselves stuck in traffic during our car journeys, we often daydream about finding the ideal route and the optimal time to leave the office in order to avoid these uncomfortable situations. Now, thanks to the power of technology and the inspiration I drew from a …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jul 7, 2023</span>
+                    <a href="/posts/2023/07/analyzing-commute-data-using-google-api/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2023  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

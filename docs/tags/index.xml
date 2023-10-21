@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>commute</title>
+      <link>https://mutt0-ds.github.io/tags/commute/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/commute/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-analysis</title>
+      <link>https://mutt0-ds.github.io/tags/data-analysis/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/data-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google-maps</title>
+      <link>https://mutt0-ds.github.io/tags/google-maps/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/google-maps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>power-bi</title>
+      <link>https://mutt0-ds.github.io/tags/power-bi/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://mutt0-ds.github.io/tags/python/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>traffic</title>
+      <link>https://mutt0-ds.github.io/tags/traffic/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/traffic/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>documentation</title>
       <link>https://mutt0-ds.github.io/tags/documentation/</link>
@@ -44,15 +98,6 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>https://mutt0-ds.github.io/tags/python/</link>
-      <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>second-brain</title>
       <link>https://mutt0-ds.github.io/tags/second-brain/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
@@ -71,24 +116,6 @@
     </item>
     
     <item>
-      <title>commute</title>
-      <link>https://mutt0-ds.github.io/tags/commute/</link>
-      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/commute/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data-analysis</title>
-      <link>https://mutt0-ds.github.io/tags/data-analysis/</link>
-      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/data-analysis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>gcp</title>
       <link>https://mutt0-ds.github.io/tags/gcp/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
@@ -103,24 +130,6 @@
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mutt0-ds.github.io/tags/google-distance-matrix/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>google-maps</title>
-      <link>https://mutt0-ds.github.io/tags/google-maps/</link>
-      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/google-maps/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>traffic</title>
-      <link>https://mutt0-ds.github.io/tags/traffic/</link>
-      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/traffic/</guid>
       <description></description>
     </item>
     
@@ -166,15 +175,6 @@
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mutt0-ds.github.io/tags/microsoft/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>power-bi</title>
-      <link>https://mutt0-ds.github.io/tags/power-bi/</link>
-      <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
       <description></description>
     </item>
     

@@ -20,7 +20,7 @@ However, the neatness of this analysis takes a hit when real-world unpredictabil
 
 For a while, I contemplated adding weather data to show how rainy days significantly affect commute times, not to mention snowy days. The problem is, predicting tomorrow's weather is challenging, and my initial hypothesis was already on shaky ground. Empirical evidence reveals anyway that the worse the weather, the worse the commute.
 
-Instead, I decided to explore something more intriguing: car accidents. These are the "[black swans](https://en.wikipedia.org/wiki/Black_swan_theory)" of road trip planning—unexpected events that can ruin your day and disrupt any carefully calculated commute. Unfortunately, we can't predict or prevent them, but by understanding when accidents are more likely, we can at least be more informed. In this analysis, I will focus on my coordinates in the Swiss area, but I'll provide the code on my Github so you can investigate car accident data yourself. The best part? No Google key is required this time.
+Instead, I decided to explore something more intriguing: car accidents. These are the "[black swans](https://en.wikipedia.org/wiki/Black_swan_theory)" of road trip planning—unexpected events that can ruin your day and disrupt any carefully calculated commute. Unfortunately, we can't predict or prevent them, but by understanding when accidents are more likely, we can at least be more informed. In this analysis, I will focus on my coordinates in the Swiss area, but I'll provide [the code on my Github](https://github.com/mutt0-ds/commute-analysis) so you can investigate car accident data yourself. The best part? No Google key is required this time.
 
 ## 📦 Gathering and Preparing the Data
 
