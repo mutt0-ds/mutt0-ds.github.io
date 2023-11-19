@@ -282,7 +282,7 @@ This blog post is actually a dump of my notes, which I tried to partially automa
 <ul>
 <li>SQL Server On-Premises: Classic solution.</li>
 <li>IaaS (Infrastructure as a Service): Utilizes a purchased VM for MSSQL. Eliminates the need for VM maintenance.</li>
-<li>PaaS (Platform as a Service):Azure offers three PaaS options for SQL Server. RDS (Relational Data Service) available for MySQL, PostgreSQL, MariaDB.</li>
+<li>PaaS (Platform as a Service): Azure offers three PaaS options for SQL Server. RDS (Relational Data Service) available for MySQL, PostgreSQL, MariaDB.</li>
 </ul>
 <h4 id="three-paas-database-running-options-in-azure">Three PaaS Database Running Options in Azure</h4>
 <ul>
@@ -308,18 +308,24 @@ Tiers include General Purpose, Business Critical, <a href="https://learn.microso
 <h4 id="hyperscale">Hyperscale</h4>
 <p>Utilizes a cluster-based model with modularized SQL, resembling AWS <a href="https://aws.amazon.com/it/rds/aurora/">Aurora</a>. Complexity in design but offers benefits like distribution and quorum-based operations. However, this is a new solution.</p>
 <h4 id="sql-managed-instance-details">SQL Managed Instance Details</h4>
-<p>Entire SQL Server instance with PaaS advantages.
-Azure manages hardware and all what&rsquo;s under the hood.
-Convenient, duplicated, and region-secured backups. This is already a game changer.
-High availability through ready clones, with consideration for potential connection disruption during a switch.</p>
+<ul>
+<li>Entire SQL Server instance with PaaS advantages.</li>
+<li>Azure manages hardware and all what&rsquo;s under the hood.</li>
+<li>Convenient, duplicated, and region-secured backups. This is already a game changer.</li>
+<li>High availability through ready clones, with consideration for potential connection disruption during a switch.</li>
+</ul>
 <h4 id="the-aws-offer">The AWS offer</h4>
-<p>Different offerings from Azure, but fundamental features are similar.
-Azure holds exclusivity on SQL Server; AWS updates may have a delayed rollout.</p>
+<ul>
+<li>Different offerings from Azure, but fundamental features are similar.</li>
+<li>Azure holds exclusivity on SQL Server; AWS updates may have a delayed rollout.</li>
+</ul>
 <h4 id="fleet-manager---new-azure-feature">Fleet Manager - New Azure Feature</h4>
-<p>Legislation mandates one DB per tenant.
-Fleet Manager assists in scaling numerous databases.
-Databases can be categorized into tiers for balanced priority and power.
-Fleet represents a pool with characteristics similar to an elastic pool.</p>
+<ul>
+<li>Thumb&rsquo;s rule: one DB per tenant.</li>
+<li>Fleet Manager assists in scaling numerous databases (in the order of thousands).</li>
+<li>Databases can be categorized into tiers for balanced priority and power.</li>
+<li>Kind of a pool of pools</li>
+</ul>
 <h2 id="-t-sql-performance-tips--tricks-by-sergio-govoni">📐 T-SQL performance tips &amp; tricks by Sergio Govoni</h2>
 <div style="max-width: 1757px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 133.8797%;"><iframe src="//iframely.net/xlNErkd" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <h4 id="1-sargable-predicateshttpswwwsqlshackcomhow-to-use-sargable-expressions-in-t-sql-queries-performance-advantages-and-examples">1. <a href="https://www.sqlshack.com/how-to-use-sargable-expressions-in-t-sql-queries-performance-advantages-and-examples/">Sargable Predicates</a></h4>
