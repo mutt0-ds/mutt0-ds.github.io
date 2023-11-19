@@ -113,8 +113,8 @@ Utilizes a cluster-based model with modularized SQL, resembling AWS [Aurora](htt
 
 #### Tools Used
 
-[Query Store](https://learn.microsoft.com/it-it/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?view=sql-server-ver16) - The black box of SQL Server, storing query stats and history. (note: read about Hint Query Store)
-[Extended Events (XE)](https://learn.microsoft.com/en-us/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server?view=sql-server-ver16) - Monitors 3000 types of events for detailed insights.
+- [Query Store](https://learn.microsoft.com/it-it/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?view=sql-server-ver16) - The black box of SQL Server, storing query stats and history. (note: read about Hint Query Store)
+- [Extended Events (XE)](https://learn.microsoft.com/en-us/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server?view=sql-server-ver16) - Monitors 3000 types of events for detailed insights.
 
 #### Scenario: SQL Server at 100% CPU
 
