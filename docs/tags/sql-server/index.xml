@@ -6,7 +6,17 @@
     <description>Recent content in sql-server on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/sql-server/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/sql-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My AI-tweaked Data Saturdays 23 Notes</title>
+      <link>https://mutt0-ds.github.io/posts/2023/11/ai-tweaked-data-saturdays-notes/</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/posts/2023/11/ai-tweaked-data-saturdays-notes/</guid>
+      <description>Last Saturday I had the privilege of attending Data Saturdays #37 at Parma, an event series focused on Microsoft data platform technologies. Covering AI, Database, Business Intelligence, and Cloud, the event promised insights from top experts in Italy (and beyond).
+Of course, I wrote down (almost) everything I heard. This blog post is actually a dump of my notes, which I tried to partially automated with a mix of OCR + ChatGPT, which struggled in understanding most of the complex contexts&amp;hellip; My disorganized note management didn&amp;rsquo;t help, poor GPT.</description>
+    </item>
+    
     <item>
       <title>My Personal Airflow - How I&#39;m monitoring my scripts with Python, Appsmith and SQL Server</title>
       <link>https://mutt0-ds.github.io/posts/2022/03/personal-airflow/</link>

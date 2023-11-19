@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>azure</title>
+      <link>https://mutt0-ds.github.io/tags/azure/</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-saturdays</title>
+      <link>https://mutt0-ds.github.io/tags/data-saturdays/</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/data-saturdays/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://mutt0-ds.github.io/tags/database/</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>power-bi</title>
+      <link>https://mutt0-ds.github.io/tags/power-bi/</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sql-server</title>
+      <link>https://mutt0-ds.github.io/tags/sql-server/</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/sql-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>t-sql</title>
+      <link>https://mutt0-ds.github.io/tags/t-sql/</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mutt0-ds.github.io/tags/t-sql/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>commute</title>
       <link>https://mutt0-ds.github.io/tags/commute/</link>
@@ -31,15 +85,6 @@
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mutt0-ds.github.io/tags/google-maps/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>power-bi</title>
-      <link>https://mutt0-ds.github.io/tags/power-bi/</link>
-      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
       <description></description>
     </item>
     
@@ -377,15 +422,6 @@
     </item>
     
     <item>
-      <title>azure</title>
-      <link>https://mutt0-ds.github.io/tags/azure/</link>
-      <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/azure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>devops</title>
       <link>https://mutt0-ds.github.io/tags/devops/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
@@ -580,15 +616,6 @@
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mutt0-ds.github.io/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sql-server</title>
-      <link>https://mutt0-ds.github.io/tags/sql-server/</link>
-      <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mutt0-ds.github.io/tags/sql-server/</guid>
       <description></description>
     </item>
     

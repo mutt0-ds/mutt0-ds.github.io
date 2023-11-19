@@ -3,7 +3,7 @@ title: "My AI-tweaked Data Saturdays 23 Notes"
 date: 2023-11-19
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
-image: /images/data_saturdays/cover.jpg.jpg
+image: /images/data_saturdays/cover.jpg
 draft: false
 author: "Mutt0-ds"
 tags:
@@ -24,6 +24,8 @@ So, my key points are slightly "tweaked" using AI and then carefully checked and
 Special thanks to Ema for the support.
 
 ## ☁ SQL Server PaaS by Gianluca Hotz
+
+<div style="max-width: 1834px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 137.6963%;"><iframe src="//iframely.net/WeqRYGZ" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 #### Three Solutions
 
@@ -77,6 +79,8 @@ Fleet represents a pool with characteristics similar to an elastic pool.
 
 ## 📐 T-SQL performance tips & tricks by Sergio Govoni
 
+<div style="max-width: 1757px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 133.8797%;"><iframe src="//iframely.net/xlNErkd" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+
 #### 1. [Sargable Predicates](https://www.sqlshack.com/how-to-use-sargable-expressions-in-t-sql-queries-performance-advantages-and-examples/)
 
 - Learn to read [Execution Plans](https://www.sqlshack.com/execution-plans-in-sql-server/); Index Seek good, Index Scan worse.
@@ -104,6 +108,8 @@ Fleet represents a pool with characteristics similar to an elastic pool.
 - Create an index with a name to cache Tempdb and avoid creating new indexes for each query if they have anonymous indexes.
 
 ## 🧯 SQL Server On Fire by Gabriele Franco
+
+<div style="max-width: 1814px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 133.8624%;"><iframe src="//iframely.net/yBY9cdc" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 #### Tools Used
 
@@ -133,10 +139,12 @@ Fleet represents a pool with characteristics similar to an elastic pool.
 
 #### Using Extended Events (XE)
 
-- Referenced the [dm_xe_sessions](https://learn.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/- sys-dm-xe-sessions-transact-sql?view=azuresqldb-current) table to observe and analyze extended events sessions.
+- Referenced the [dm_xe_sessions](https://learn.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/-sys-dm-xe-sessions-transact-sql) table to observe and analyze extended events sessions.
 - Demonstrated downloading in XDL format for deadlocks (note: see more about that)
 
 ## 🔓 Unlocking the Power of AI-Driven Analytics: Mastering Generative AI in Power BI by Leon Gordon
+
+<div style="max-width: 1834px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 134.5549%;"><iframe src="//iframely.net/tsk3cev" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 #### The scenario
 
@@ -196,9 +204,12 @@ Fleet represents a pool with characteristics similar to an elastic pool.
 ## 👀 What to look out for when migrating your data to the cloud; is it REALLY the right choice? by Emanuele Meazzo
 
 I didn't take notes here as I work with Ema and he will share with me the entire presentation, which was rich in interesting points about the question one should me when choosing to migrate to the Cloud. It's not that simple.
+
 ⭐ Will update with the whole presentation. Amazing performance that made me leave the room with more questions than answer.
 
 ## 🕘 Save The Date by Rudi Bruchez
+
+<div style="max-width: 1853px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 134.715%;"><iframe src="//iframely.net/M6dlvZg" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 This session explores the nuances of different date and time types in SQL Server, highlighting the strengths and challenges of each and emphasizing best practices for handling date-related operations.
 Suggested article: [The Ultimate Guide to Datetime datatypes](https://karaszi.com/the-ultimate-guide-to-the-datetime-datatypes)
