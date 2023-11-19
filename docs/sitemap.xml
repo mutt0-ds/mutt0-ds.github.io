@@ -2,6 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mutt0-ds.github.io/tags/azure/</loc>
+    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/data-saturdays/</loc>
+    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/database/</loc>
+    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/</loc>
+    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/posts/2023/11/ai-tweaked-data-saturdays-notes/</loc>
+    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/posts/</loc>
+    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/power-bi/</loc>
+    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/sql-server/</loc>
+    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/t-sql/</loc>
+    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/</loc>
+    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mutt0-ds.github.io/tags/commute/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -14,19 +44,7 @@
     <loc>https://mutt0-ds.github.io/tags/google-maps/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/</loc>
-    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/posts/</loc>
-    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/power-bi/</loc>
-    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mutt0-ds.github.io/tags/python/</loc>
-    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/traffic/</loc>
@@ -164,9 +182,6 @@
     <loc>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/azure/</loc>
-    <lastmod>2022-11-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mutt0-ds.github.io/tags/devops/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -246,9 +261,6 @@
     <lastmod>2022-04-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/posts/2022/03/personal-airflow/</loc>
-    <lastmod>2022-04-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/sql-server/</loc>
     <lastmod>2022-04-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/machine-learning/</loc>
