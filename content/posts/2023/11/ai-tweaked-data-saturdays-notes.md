@@ -23,7 +23,7 @@ So, my key points are slightly "tweaked" using AI and then carefully checked and
 
 Special thanks to Ema for the support.
 
-## ☁ SQL Server PaaS by Gianluca Holtz
+## ☁ SQL Server PaaS by Gianluca Hotz
 
 #### Three Solutions
 
