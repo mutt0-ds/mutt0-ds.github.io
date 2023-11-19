@@ -31,7 +31,7 @@ Special thanks to Ema for the support.
 
 - SQL Server On-Premises: Classic solution.
 - IaaS (Infrastructure as a Service): Utilizes a purchased VM for MSSQL. Eliminates the need for VM maintenance.
-- PaaS (Platform as a Service):Azure offers three PaaS options for SQL Server. RDS (Relational Data Service) available for MySQL, PostgreSQL, MariaDB.
+- PaaS (Platform as a Service): Azure offers three PaaS options for SQL Server. RDS (Relational Data Service) available for MySQL, PostgreSQL, MariaDB.
 
 #### Three PaaS Database Running Options in Azure
 
@@ -60,22 +60,22 @@ Utilizes a cluster-based model with modularized SQL, resembling AWS [Aurora](htt
 
 #### SQL Managed Instance Details
 
-Entire SQL Server instance with PaaS advantages.
-Azure manages hardware and all what's under the hood.
-Convenient, duplicated, and region-secured backups. This is already a game changer.
-High availability through ready clones, with consideration for potential connection disruption during a switch.
+- Entire SQL Server instance with PaaS advantages.
+- Azure manages hardware and all what's under the hood.
+- Convenient, duplicated, and region-secured backups. This is already a game changer.
+- High availability through ready clones, with consideration for potential connection disruption during a switch.
 
 #### The AWS offer
 
-Different offerings from Azure, but fundamental features are similar.
-Azure holds exclusivity on SQL Server; AWS updates may have a delayed rollout.
+- Different offerings from Azure, but fundamental features are similar.
+- Azure holds exclusivity on SQL Server; AWS updates may have a delayed rollout.
 
 #### Fleet Manager - New Azure Feature
 
-Legislation mandates one DB per tenant.
-Fleet Manager assists in scaling numerous databases.
-Databases can be categorized into tiers for balanced priority and power.
-Fleet represents a pool with characteristics similar to an elastic pool.
+- Thumb's rule: one DB per tenant.
+- Fleet Manager assists in scaling numerous databases (in the order of thousands).
+- Databases can be categorized into tiers for balanced priority and power.
+- Kind of a pool of pools
 
 ## 📐 T-SQL performance tips & tricks by Sergio Govoni
 
