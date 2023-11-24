@@ -23,6 +23,8 @@ So, my key points are slightly "tweaked" using AI and then carefully checked and
 
 Special thanks to Ema for the support.
 
+> Update: most of the presentations have been uploaded on GitHub: you can find them [here](https://github.com/suxstellino/events/tree/main/2023/datasat/parma)
+
 ## ☁ SQL Server PaaS by Gianluca Hotz
 
 <div style="max-width: 1834px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 137.6963%;"><iframe src="//iframely.net/WeqRYGZ" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
