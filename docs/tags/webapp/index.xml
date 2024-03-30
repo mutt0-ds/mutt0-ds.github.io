@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webapp on Mutt0-ds Notes</title>
+    <link>http://localhost:1313/tags/webapp/</link>
+    <description>Recent content in Webapp on Mutt0-ds Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/webapp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TODO: my journey with Full Stack Development: creating a web app from scractches</title>
+      <link>http://localhost:1313/posts/2024/02/my-journey-with-webapp/</link>
+      <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024/02/my-journey-with-webapp/</guid>
+      <description>🧠 Introduction to Second Brains &amp;amp; Brain Dumping I&amp;rsquo;ve been quite silent in the past months, but there was quite a big reason for doing so: I was studying, a lot. This time I decided to dive again into fullstack web development, but instead of my past, smaller experiments of one page, I wanted to build a functional web app including Database, ORM, Authentication and Excel integration.&#xA;I already worked on smaller projects, but this &amp;ldquo;secret misssion&amp;rdquo; was going to be inspired by a legacy tool for Forecasting, I had the chance to study.</description>
+    </item>
+  </channel>
+</rss>

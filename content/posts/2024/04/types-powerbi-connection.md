@@ -1,9 +1,9 @@
 ---
 title: "The 3 (+1) ways to Get Data in Power BI, simply explained"
-date: 2024-04-02
+date: 2024-04-01
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
-image: /images/power_bi_connections\pbi_connections_charts.jpg
+image: /images/power_bi_connections/pbi_connections_charts.png
 draft: false
 author: "Mutt0-ds"
 tags:
@@ -36,7 +36,7 @@ Let's say you are in a hurry and still can't spare a moment for tutorials. You j
 In Import Mode, all the data is in the .pbix file.
 To be precise, it's stored in its _semantic model_, also known as the dataset, which acts as the memory of your report. Whenever you hit "Refresh," **all the data from the original data source gets copied** into the report. This typically results in a speedy query experience since the data needed for visualizations is readily available. Problem is when you have 20 million rows, refresh times take 30 minutes and the app crashes when you save it.
 
-![https://nexacu.com.au/media/old-blog/2019-04-Power-BI-Data-Refresh-Button.png]
+![Refresh button](https://nexacu.com.au/media/old-blog/2019-04-Power-BI-Data-Refresh-Button.png)
 
 That's why I recommend Import Mode for getting started with local reports and you want to query your files (by experience, Excel). However, it doesn't scale well with larger datasets, and manual refreshes are necessary for obtaining the freshest data. It's suitable for small-scale projects but falls short when dealing with larger datasets.
 
@@ -45,7 +45,7 @@ That's why I recommend Import Mode for getting started with local reports and yo
 [DirectQuery](https://learn.microsoft.com/it-it/power-bi/connect-data/desktop-use-directquery) is interesting.
 The report's semantic model is just a connector to the original data source (in this case, a database), and every time you interact with your report sends a new query. This may take some seconds depending on the query complexity and the source's performances, but has the great advantage of returning live data.
 
-I recommend DirectQuery if you really need live data and if your report isn't too complex, thereby avoiding significant delays and performance impacts on the original source. However, it doesn't scale well and comes with https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-use-directquery#considerations-and-limitations.
+I recommend DirectQuery if you really need live data and if your report isn't too complex, thereby avoiding significant delays and performance impacts on the original source. However, it doesn't scale well and comes with [notable limitations](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-use-directquery#considerations-and-limitations).
 
 ## Live Connection Mode
 

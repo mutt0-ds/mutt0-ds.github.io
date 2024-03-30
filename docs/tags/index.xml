@@ -6,654 +6,511 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>azure</title>
+      <title>Azure</title>
       <link>https://mutt0-ds.github.io/tags/azure/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/azure/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>data-saturdays</title>
+      <title>Data-Saturdays</title>
       <link>https://mutt0-ds.github.io/tags/data-saturdays/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/data-saturdays/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>database</title>
+      <title>Database</title>
       <link>https://mutt0-ds.github.io/tags/database/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/database/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>power-bi</title>
+      <title>Power-Bi</title>
       <link>https://mutt0-ds.github.io/tags/power-bi/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>sql-server</title>
+      <title>Sql-Server</title>
       <link>https://mutt0-ds.github.io/tags/sql-server/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/sql-server/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>t-sql</title>
+      <title>T-Sql</title>
       <link>https://mutt0-ds.github.io/tags/t-sql/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/t-sql/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>commute</title>
+      <title>Commute</title>
       <link>https://mutt0-ds.github.io/tags/commute/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/commute/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>data-analysis</title>
+      <title>Data-Analysis</title>
       <link>https://mutt0-ds.github.io/tags/data-analysis/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/data-analysis/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>google-maps</title>
+      <title>Google-Maps</title>
       <link>https://mutt0-ds.github.io/tags/google-maps/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/google-maps/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>python</title>
+      <title>Python</title>
       <link>https://mutt0-ds.github.io/tags/python/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/python/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>traffic</title>
+      <title>Traffic</title>
       <link>https://mutt0-ds.github.io/tags/traffic/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/traffic/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>documentation</title>
+      <title>Documentation</title>
       <link>https://mutt0-ds.github.io/tags/documentation/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/documentation/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>markdown</title>
+      <title>Markdown</title>
       <link>https://mutt0-ds.github.io/tags/markdown/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/markdown/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>notes</title>
+      <title>Notes</title>
       <link>https://mutt0-ds.github.io/tags/notes/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/notes/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>obsidian</title>
+      <title>Obsidian</title>
       <link>https://mutt0-ds.github.io/tags/obsidian/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/obsidian/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>second-brain</title>
+      <title>Second-Brain</title>
       <link>https://mutt0-ds.github.io/tags/second-brain/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/second-brain/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>update</title>
+      <title>Update</title>
       <link>https://mutt0-ds.github.io/tags/update/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/update/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>gcp</title>
+      <title>Gcp</title>
       <link>https://mutt0-ds.github.io/tags/gcp/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/gcp/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>google-distance-matrix</title>
+      <title>Google-Distance-Matrix</title>
       <link>https://mutt0-ds.github.io/tags/google-distance-matrix/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/google-distance-matrix/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>azure-synapse</title>
+      <title>Azure-Synapse</title>
       <link>https://mutt0-ds.github.io/tags/azure-synapse/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/azure-synapse/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>build</title>
+      <title>Build</title>
       <link>https://mutt0-ds.github.io/tags/build/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/build/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>copilot</title>
+      <title>Copilot</title>
       <link>https://mutt0-ds.github.io/tags/copilot/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/copilot/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>fabric</title>
+      <title>Fabric</title>
       <link>https://mutt0-ds.github.io/tags/fabric/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/fabric/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>microsoft</title>
+      <title>Microsoft</title>
       <link>https://mutt0-ds.github.io/tags/microsoft/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/microsoft/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>automation</title>
+      <title>Automation</title>
       <link>https://mutt0-ds.github.io/tags/automation/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/automation/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ffmpeg</title>
+      <title>Ffmpeg</title>
       <link>https://mutt0-ds.github.io/tags/ffmpeg/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/ffmpeg/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>music-reviews</title>
+      <title>Music-Reviews</title>
       <link>https://mutt0-ds.github.io/tags/music-reviews/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/music-reviews/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>playwright</title>
+      <title>Playwright</title>
       <link>https://mutt0-ds.github.io/tags/playwright/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/playwright/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tiktok</title>
+      <title>Tiktok</title>
       <link>https://mutt0-ds.github.io/tags/tiktok/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/tiktok/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tts</title>
+      <title>Tts</title>
       <link>https://mutt0-ds.github.io/tags/tts/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/tts/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>video-editing</title>
+      <title>Video-Editing</title>
       <link>https://mutt0-ds.github.io/tags/video-editing/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/video-editing/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ai</title>
+      <title>Ai</title>
       <link>https://mutt0-ds.github.io/tags/ai/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/ai/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>composite-model</title>
+      <title>Composite-Model</title>
       <link>https://mutt0-ds.github.io/tags/composite-model/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/composite-model/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>features</title>
+      <title>Features</title>
       <link>https://mutt0-ds.github.io/tags/features/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/features/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>reporting</title>
+      <title>Reporting</title>
       <link>https://mutt0-ds.github.io/tags/reporting/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/reporting/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>version-control</title>
+      <title>Version-Control</title>
       <link>https://mutt0-ds.github.io/tags/version-control/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/version-control/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>plugin</title>
+      <title>Plugin</title>
       <link>https://mutt0-ds.github.io/tags/plugin/</link>
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/plugin/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>powerpoint</title>
+      <title>Powerpoint</title>
       <link>https://mutt0-ds.github.io/tags/powerpoint/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/powerpoint/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>presentation</title>
+      <title>Presentation</title>
       <link>https://mutt0-ds.github.io/tags/presentation/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/presentation/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>soft-skills</title>
+      <title>Soft-Skills</title>
       <link>https://mutt0-ds.github.io/tags/soft-skills/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/soft-skills/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>study</title>
+      <title>Study</title>
       <link>https://mutt0-ds.github.io/tags/study/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/study/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>talk</title>
+      <title>Talk</title>
       <link>https://mutt0-ds.github.io/tags/talk/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/talk/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>coverage</title>
+      <title>Coverage</title>
       <link>https://mutt0-ds.github.io/tags/coverage/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/coverage/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>notion</title>
+      <title>Notion</title>
       <link>https://mutt0-ds.github.io/tags/notion/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/notion/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pytest</title>
+      <title>Pytest</title>
       <link>https://mutt0-ds.github.io/tags/pytest/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/pytest/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>test</title>
+      <title>Test</title>
       <link>https://mutt0-ds.github.io/tags/test/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/test/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>devops</title>
+      <title>Devops</title>
       <link>https://mutt0-ds.github.io/tags/devops/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/devops/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>git</title>
+      <title>Git</title>
       <link>https://mutt0-ds.github.io/tags/git/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/git/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pipeline</title>
+      <title>Pipeline</title>
       <link>https://mutt0-ds.github.io/tags/pipeline/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/pipeline/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>source-control</title>
+      <title>Source-Control</title>
       <link>https://mutt0-ds.github.io/tags/source-control/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/source-control/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tabular-editor</title>
+      <title>Tabular-Editor</title>
       <link>https://mutt0-ds.github.io/tags/tabular-editor/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/tabular-editor/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>acer</title>
+      <title>Acer</title>
       <link>https://mutt0-ds.github.io/tags/acer/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/acer/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>experience</title>
+      <title>Experience</title>
       <link>https://mutt0-ds.github.io/tags/experience/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/experience/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>dashboard</title>
+      <title>Dashboard</title>
       <link>https://mutt0-ds.github.io/tags/dashboard/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/dashboard/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>dax</title>
+      <title>Dax</title>
       <link>https://mutt0-ds.github.io/tags/dax/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/dax/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>powerbi</title>
+      <title>Powerbi</title>
       <link>https://mutt0-ds.github.io/tags/powerbi/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/powerbi/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>sql</title>
+      <title>Sql</title>
       <link>https://mutt0-ds.github.io/tags/sql/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/sql/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>cobol</title>
+      <title>Cobol</title>
       <link>https://mutt0-ds.github.io/tags/cobol/</link>
       <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/cobol/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>finance</title>
+      <title>Finance</title>
       <link>https://mutt0-ds.github.io/tags/finance/</link>
       <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/finance/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ibm</title>
+      <title>Ibm</title>
       <link>https://mutt0-ds.github.io/tags/ibm/</link>
       <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/ibm/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>learning</title>
+      <title>Learning</title>
       <link>https://mutt0-ds.github.io/tags/learning/</link>
       <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/learning/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>angular</title>
+      <title>Angular</title>
       <link>https://mutt0-ds.github.io/tags/angular/</link>
       <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/angular/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>books</title>
+      <title>Books</title>
       <link>https://mutt0-ds.github.io/tags/books/</link>
       <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/books/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tailwind</title>
+      <title>Tailwind</title>
       <link>https://mutt0-ds.github.io/tags/tailwind/</link>
       <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/tailwind/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>typescript</title>
+      <title>Typescript</title>
       <link>https://mutt0-ds.github.io/tags/typescript/</link>
       <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/typescript/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>appsmith</title>
+      <title>Appsmith</title>
       <link>https://mutt0-ds.github.io/tags/appsmith/</link>
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/appsmith/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>experiments</title>
+      <title>Experiments</title>
       <link>https://mutt0-ds.github.io/tags/experiments/</link>
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/experiments/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>javascript</title>
+      <title>Javascript</title>
       <link>https://mutt0-ds.github.io/tags/javascript/</link>
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/javascript/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>machine-learning</title>
+      <title>Machine-Learning</title>
       <link>https://mutt0-ds.github.io/tags/machine-learning/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/machine-learning/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>meme</title>
+      <title>Meme</title>
       <link>https://mutt0-ds.github.io/tags/meme/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/meme/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>neural-network</title>
+      <title>Neural-Network</title>
       <link>https://mutt0-ds.github.io/tags/neural-network/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/neural-network/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>resnet</title>
+      <title>Resnet</title>
       <link>https://mutt0-ds.github.io/tags/resnet/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/tags/resnet/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
