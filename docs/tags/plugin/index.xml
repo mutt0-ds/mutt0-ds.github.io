@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>plugin on Mutt0-ds Notes</title>
+    <title>Plugin on Mutt0-ds Notes</title>
     <link>https://mutt0-ds.github.io/tags/plugin/</link>
-    <description>Recent content in plugin on Mutt0-ds Notes</description>
+    <description>Recent content in Plugin on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/plugin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mutt0-ds.github.io/tags/plugin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes</title>
       <link>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</link>
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</guid>
       <description>🧠 Introduction to Second Brains &amp;amp; Brain Dumping As I&amp;rsquo;m working with data all the time, I&amp;rsquo;m aware of the importance of keeping it in a safe and structured place, where it can be easily accessed when needed, which could be days, weeks or even years in the future. Thus, organizing my information, tasks, and notes is a key activity in my work (and personal) life. Without a clear system, I would feel lost in chaos, and my productivity would plunge (also considering that my memory sucks).</description>
     </item>
-    
   </channel>
 </rss>

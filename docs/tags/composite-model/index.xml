@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>composite-model on Mutt0-ds Notes</title>
+    <title>Composite-Model on Mutt0-ds Notes</title>
     <link>https://mutt0-ds.github.io/tags/composite-model/</link>
-    <description>Recent content in composite-model on Mutt0-ds Notes</description>
+    <description>Recent content in Composite-Model on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mutt0-ds.github.io/tags/composite-model/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mutt0-ds.github.io/tags/composite-model/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What Power BI is still missing</title>
       <link>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</guid>
       <description>During these months, I had the chance to take a look at Power BI at the enterprise level, juggling advanced requests from hundreds of users and reports. I am impressed by all the features that the developers have rolled out recently, greatly improving both user and creator experiences. However, one should always maintain an impartial critical vision of the tools, no matter how useful they can be. For this reason, I decided to share my thoughts about some features that are currently lacking or require over-complicated solutions (often from third-party tools), in the hope that Microsoft will find them useful when working on Power BI&amp;rsquo;s development roadmap.</description>
     </item>
-    
   </channel>
 </rss>
