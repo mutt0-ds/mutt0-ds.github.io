@@ -14,48 +14,51 @@ tags:
   - semantic-model
 ---
 
-I see a lot of confusion regarding how a Power BI reports gets data. Where is actually the data? How often is refreshed? Depending on which mode you have chosen, this question will be tricky to answer.
-Let's keep things simple, I will be focusing on Power BI Desktop in this article: let's say that you got a .pbix file and don't have time to watch the [10-minute technical video from Guy in a Cube](https://www.youtube.com/watch?v=-ip7mKUdwRg) I usually link my users to.
+There's quite a bit of confusion swirling around about how Power BI reports gather data. Where does the data actually reside? How frequently does it refresh? Depending on the mode you've selected, this question can be a bit tricky to tackle.
 
-Open your file in Power BI Desktop and check the bottom-right corner.
+Let's simplify things a bit. In this article, I'll be focusing on Power BI Desktop. Imagine you've got a .pbix file on hand and don't quite have the time to sit through [10-minute technical video from Guy in a Cube](https://www.youtube.com/watch?v=-ip7mKUdwRg) that I usually link my users to.
 
-![power_bi_desktop]
+First things first, open your file in Power BI Desktop and take a peek at the bottom-right corner.
+
+<div style="max-width: 2303px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.4528%;"><iframe src="//iframely.net/ER7G3PL" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 1. If it's empty, you are in **Import Mode**
 2. If it says "Live connected to _dataset name_" you are in **Live Connection** mode
 3. If it says "Storage Mode: DirectQuery" you are in **DirectQuery** mode
-4. If it says "Storage Mode: Mixed", you have a **Composite Model**
+4. If it says "Storage Mode: Mixed", you've got yourself a **Composite Model**
 
-Let's say you are in a hurry and still don't have time to watch tutorials, you want to know where is the data and the bare minimum to know if you are screwing up something. Say no more.
+Let's say you are in a hurry and still can't spare a moment for tutorials. You just want to know where the data is and the absolute minimum to ensure you're not messing anything up. Say no more.
 
-![pbi_connections_chart]
+<div style="max-width: 2303px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.4528%;"><iframe src="//iframely.net/lwXu3yn" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 ## Import Mode
 
-All the data is in the .pbix file.
-To be precise, it is stored in its "semantic model", also called dataset, the memory of your report. Every time you click "Refresh", all the data in the original data source are copied again in the report. This results in a very fast query experience, if you create a visual, the data used is already there. Problem is when you have 20 million rows, refresh times take 30 minutes and the app crashes when you save it.
+In Import Mode, all the data is in the .pbix file.
+To be precise, it's stored in its _semantic model_, also known as the dataset, which acts as the memory of your report. Whenever you hit "Refresh," **all the data from the original data source gets copied** into the report. This typically results in a speedy query experience since the data needed for visualizations is readily available. Problem is when you have 20 million rows, refresh times take 30 minutes and the app crashes when you save it.
 
 ![https://nexacu.com.au/media/old-blog/2019-04-Power-BI-Data-Refresh-Button.png]
 
-That's why I recommend Import Mode if you are getting started with a local report and you want to query your files (by experiences, Excels). This solution doesn't scale well with bigger data sizes, and has the limit that you need to manually refresh the report and wait for the results if you are looking for the fresher results. Good for small-scale projects, not for larger scale.
+That's why I recommend Import Mode for getting started with local reports and you want to query your files (by experience, Excel). However, it doesn't scale well with larger datasets, and manual refreshes are necessary for obtaining the freshest data. It's suitable for small-scale projects but falls short when dealing with larger datasets.
 
 ## DirectQuery
 
-DirectQuery sounds very promising. The report's semantic model is just a connector to the original data source (in this case, a database), and every time you interact with your report sends a new query. This may take some seconds depending on the query complexity and the source's performances, but has the great advantage of returning live data.
+[DirectQuery](https://learn.microsoft.com/it-it/power-bi/connect-data/desktop-use-directquery) is interesting.
+The report's semantic model is just a connector to the original data source (in this case, a database), and every time you interact with your report sends a new query. This may take some seconds depending on the query complexity and the source's performances, but has the great advantage of returning live data.
 
-I recommend DirectQuery if you need live data, or your report is simple enough that there won't be big delays and performance impact in the original source. It doesn't scale well and has some notable limitations.
+I recommend DirectQuery if you really need live data and if your report isn't too complex, thereby avoiding significant delays and performance impacts on the original source. However, it doesn't scale well and comes with https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-use-directquery#considerations-and-limitations.
 
 ## Live Connection Mode
 
-If you are not working at large scale, you won't probably need this solution, but in my company this is the de-facto standard, with hundreds of users reading data at the same time. The concept is simple, and genial: one report to serve them all.
-Let's import all the data in a report.
-Then, we publish the report in a shared Power BI workspace, available to users. Daily (and hourly) ETL pipelines are in charge of refreshing the "source" report without the need of manual effort, supervised by data engineers.
+Live Connection Mode might not be necessary for smaller-scale projects, but in my company, it's the standard practice, with hundreds of users accessing data simultaneously. The concept is straightforward yet ingenious: one report to serve them all.
+Here's how it works: we import all the data into a report, then publish it in a shared Power BI workspace accessible to users. Daily (and hourly) ETL pipelines handle refreshing the "source" report automatically, overseen by data engineers.
 
-If this source is available, one can "live connect" to it in the report and gain all the benefits of Import Mode (size, speed, simplicity), without having to worry about the semantic model's refreshes, which is somewhere else.
+With this setup, users can ["live connect"](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-report-lifecycle-datasets) to the report and enjoy all the benefits of Import Mode—size, speed, and simplicity—without worrying about refreshing the semantic model, which resides elsewhere.
 
-The big drawback is that you can't change the semantic model since it's not there, thus the creation of new tables and columns (but not measures) in a live connected report is unavailable. All the new changes must be done on the original report.
+However, a significant drawback is the inability to modify the semantic model directly since it's located elsewhere. Thus, creating new tables and columns (excluding measures) in a live connected report isn't possible. All new changes must be made in the original report.
 
 ## Composite Model
 
-The Composite Model is when you mix together a Live Connection (which becomes a DirectQuery), and something else, either another DirectQuery or a local file in Import Mode.
+The [Composite Model](https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-composite-models) is when you mix together a Live Connection (which becomes a DirectQuery), and something else, either another DirectQuery or a local file in Import Mode.
 I won't go too much into details here because it's a new feature, and still has big limitations in my opinion. I've mentioned its great potential in a past article, as it can be the Saint Graal for some people who aim to integrate an "official" report with their own local files, but mixing together connection can incredibly deteriorate the query performance, because the model will make several queries before joining the results with the rest of the data. Still, be very cautious with composite models and keep an eye for future updates.
+
+The Composite Model blends a Live Connection (which essentially becomes a DirectQuery) with another DirectQuery or a local file in Import Mode. I won't delve too deeply into the specifics here because it's a relatively new feature with significant limitations, in my opinion. While I've highlighted its potential [in a previous article](https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/), caution is warranted, as mixing connections can severely impact query performance. The model may execute several queries before joining the results with the rest of the data. Approach composite models with care and keep an eye out for future updates.
