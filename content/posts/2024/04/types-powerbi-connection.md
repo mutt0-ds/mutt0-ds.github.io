@@ -1,5 +1,5 @@
 ---
-title: "The 3 (+1) ways to Get Data in Power BI, simply explained"
+title: "The 3 (+2) ways to Get Data in Power BI, simply explained"
 date: 2024-04-01
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
@@ -12,15 +12,16 @@ tags:
   - fabric
   - dataset
   - semantic-model
+  - directquery
 ---
 
-There's quite a bit of confusion swirling around about how Power BI reports gather data. Where does the data actually reside? How frequently does it refresh? Depending on the mode you've selected, this question can be a bit tricky to tackle.
+There's quite a bit of confusion swirling around about how Power BI reports gather data. Where is the data actually stored? How frequently does it refresh? Depending on the mode you've selected, this question can be a bit tricky to tackle.
 
 Let's simplify things a bit. In this article, I'll be focusing on Power BI Desktop. Imagine you've got a .pbix file on hand and don't quite have the time to sit through [10-minute technical video from Guy in a Cube](https://www.youtube.com/watch?v=-ip7mKUdwRg) that I usually link my users to.
 
 First things first, open your file in Power BI Desktop and take a peek at the bottom-right corner.
 
-<div style="max-width: 2303px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.4528%;"><iframe src="//iframely.net/ER7G3PL" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2303px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 69.4528%;"><iframe src="//iframely.net/ER7G3PL" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 1. If it's empty, you are in **Import Mode**
 2. If it says "Live connected to _dataset name_" you are in **Live Connection** mode
@@ -62,3 +63,11 @@ The [Composite Model](https://learn.microsoft.com/en-us/power-bi/transform-model
 I won't go too much into details here because it's a new feature, and still has big limitations in my opinion. I've mentioned its great potential in a past article, as it can be the Saint Graal for some people who aim to integrate an "official" report with their own local files, but mixing together connection can incredibly deteriorate the query performance, because the model will make several queries before joining the results with the rest of the data. Still, be very cautious with composite models and keep an eye for future updates.
 
 The Composite Model blends a Live Connection (which essentially becomes a DirectQuery) with another DirectQuery or a local file in Import Mode. I won't delve too deeply into the specifics here because it's a relatively new feature with significant limitations, in my opinion. While I've highlighted its potential [in a previous article](https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/), caution is warranted, as mixing connections can severely impact query performance. The model may execute several queries before joining the results with the rest of the data. Approach composite models with care and keep an eye out for future updates.
+
+## Ah, and there is more!
+
+For the sake of completeness, I have to mention a fifth way to read data in Power BI: **Direct Lake**. This approach combines the speed of Import mode with the live queries of DirectQuery by utilizing well-optimized tables in a Data Lake, offering the best of both worlds. However, it's only available in the Power BI Premium P-level and Microsoft Fabric, and it requires advanced data engineering to set up the Data Lake. If you're intrigued by this solution, you'll need to dive into the [Microsoft documentation](https://learn.microsoft.com/en-us/power-bi/enterprise/directlake-overview) and seek out more detailed resources than my post.
+
+![Direct lake diagram](https://learn.microsoft.com/en-en/power-bi/enterprise/media/directlake-overview/directlake-diagram.png)
+
+I hope you found this straightforward information helpful. Sometimes, with technical topics like Power BI, it's easy to get lost in complex jargon and intricate details.

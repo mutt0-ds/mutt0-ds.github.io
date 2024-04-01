@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The 3 (&#43;1) ways to Get Data in Power BI, simply explained on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/posts/2024/04/types-powerbi-connection/</link>
-    <description>Recent content in The 3 (&#43;1) ways to Get Data in Power BI, simply explained on Mutt0-ds Notes</description>
+    <title>The 3 (&#43;2) ways to Get Data in Power BI, simply explained on Mutt0-ds Notes</title>
+    <link>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</link>
+    <description>Recent content in The 3 (&#43;2) ways to Get Data in Power BI, simply explained on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/2024/04/types-powerbi-connection/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Power-Bi on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/power-bi/</link>
+    <link>https://mutt0-ds.github.io/tags/power-bi/</link>
     <description>Recent content in Power-Bi on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/power-bi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/power-bi/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The 3 (&#43;1) ways to Get Data in Power BI, simply explained</title>
-      <link>http://localhost:1313/posts/2024/04/types-powerbi-connection/</link>
+      <title>The 3 (&#43;2) ways to Get Data in Power BI, simply explained</title>
+      <link>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2024/04/types-powerbi-connection/</guid>
-      <description>There&amp;rsquo;s quite a bit of confusion swirling around about how Power BI reports gather data. Where does the data actually reside? How frequently does it refresh? Depending on the mode you&amp;rsquo;ve selected, this question can be a bit tricky to tackle.&#xA;Let&amp;rsquo;s simplify things a bit. In this article, I&amp;rsquo;ll be focusing on Power BI Desktop. Imagine you&amp;rsquo;ve got a .pbix file on hand and don&amp;rsquo;t quite have the time to sit through 10-minute technical video from Guy in a Cube that I usually link my users to.</description>
+      <guid>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</guid>
+      <description>There&amp;rsquo;s quite a bit of confusion swirling around about how Power BI reports gather data. Where is the data actually stored? How frequently does it refresh? Depending on the mode you&amp;rsquo;ve selected, this question can be a bit tricky to tackle.&#xA;Let&amp;rsquo;s simplify things a bit. In this article, I&amp;rsquo;ll be focusing on Power BI Desktop. Imagine you&amp;rsquo;ve got a .pbix file on hand and don&amp;rsquo;t quite have the time to sit through 10-minute technical video from Guy in a Cube that I usually link my users to.</description>
     </item>
     <item>
       <title>My AI-tweaked Data Saturdays 23 Notes</title>
-      <link>http://localhost:1313/posts/2023/11/ai-tweaked-data-saturdays-notes/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/11/ai-tweaked-data-saturdays-notes/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/11/ai-tweaked-data-saturdays-notes/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/11/ai-tweaked-data-saturdays-notes/</guid>
       <description>Last Saturday I had the privilege of attending Data Saturdays #37 at Parma, an event series focused on Microsoft data platform technologies. Covering AI, Database, Business Intelligence, and Cloud, the event promised insights from top experts in Italy (and beyond).&#xA;Of course, I wrote down (almost) everything I heard. This blog post is actually a dump of my notes, which I tried to partially automated with a mix of OCR + ChatGPT, which struggled in understanding most of the complex contexts&amp;hellip; My disorganized note management didn&amp;rsquo;t help, poor GPT.</description>
     </item>
     <item>
       <title>Finding the Best Time to Go to Work: Now with Car Accidents Data &amp; Power BI Dashboard!</title>
-      <link>http://localhost:1313/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</guid>
       <description>I want to express my gratitude for the positive feedbacks I received a few months ago when I used Google Maps data to determine the best times for the daily commute. TL;DR: Mondays are the best, while Wednesdays, and early Fridays are the trickiest times to hit the road.&#xA;However, the neatness of this analysis takes a hit when real-world unpredictabilities come into play. Things like heavy traffic, rain, road closures due to accidents, or just that one slow driver in front of you can disrupt even the best-planned routes.</description>
     </item>
     <item>
       <title>The unnecessary hype strategy behind Microsoft Fabric</title>
-      <link>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</guid>
       <description>If you are into Data Engineering in Microsoft Azure Cloud Environment, you probaly heard about Microsoft Fabric being announced last week at the yearly event Microsoft Build. Well, &amp;ldquo;heard&amp;rdquo; is quite an euphesmism: everyone in the field is extremely excited about the announcements of the event. And for good reasons, as it’s a very big deal for us engineers, working with data every day.&#xA;In short, Fabric is a cutting-edge, unified data platform that merges lots of tools together, starting from a common Data Lake where data can be stored (OneLake), and a suite of new tools on top of it that are integrated in the “fabric” of Fabric.</description>
     </item>
     <item>
       <title>What Power BI is still missing</title>
-      <link>http://localhost:1313/posts/2023/03/what-power-bi-is-missing/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/03/what-power-bi-is-missing/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</guid>
       <description>During these months, I had the chance to take a look at Power BI at the enterprise level, juggling advanced requests from hundreds of users and reports. I am impressed by all the features that the developers have rolled out recently, greatly improving both user and creator experiences. However, one should always maintain an impartial critical vision of the tools, no matter how useful they can be. For this reason, I decided to share my thoughts about some features that are currently lacking or require over-complicated solutions (often from third-party tools), in the hope that Microsoft will find them useful when working on Power BI&amp;rsquo;s development roadmap.</description>
     </item>
     <item>
       <title>A turbulent journey through Power BI source control</title>
-      <link>http://localhost:1313/posts/2022/11/turbulent-journey-power-bi-source-control/</link>
+      <link>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2022/11/turbulent-journey-power-bi-source-control/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</guid>
       <description>One of the most annoying issues I have when working with Power BI files is that source control is a real pain. Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly complicated solutions&amp;hellip; But that day seems still far in the future.&#xA;Here is a story about how I managed to set up a CI/CD pipeline through Azure DevOps Pipeline for providing rudimental version control of our Power BI reports.</description>
     </item>
     <item>
       <title>My first weeks at Acer Europe</title>
-      <link>http://localhost:1313/posts/2022/10/first-weeks-acer/</link>
+      <link>https://mutt0-ds.github.io/posts/2022/10/first-weeks-acer/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2022/10/first-weeks-acer/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2022/10/first-weeks-acer/</guid>
       <description>This is a post for my future self when I will be asking myself: “How were my first days at Acer like?”.&#xA;Note: I&amp;rsquo;m working at Acer EMEA HQ, so when I mention &amp;ldquo;Acer&amp;rdquo;, for simplicity, I mean &amp;ldquo;Acer Europe&amp;rdquo;.&#xA;💭 My expectations My previous experience was in a small company and a very different sector. Considering this, I was expecting the following challenges in the upcoming scenario:&#xA;An organization with thousands of employees and decades of history Several departments and key stakeholders to interact with, each one with specific priorities A huge IT department where I&amp;rsquo;m the youngest member here New technologies to discover: in particular, I&amp;rsquo;ve never worked with most of the Azure tools we are using A whole new level of complexity I wasn&amp;rsquo;t too worried about the previous points, as I&amp;rsquo;m happy to learn new things and I&amp;rsquo;m used to managing projects with different stakeholders.</description>
     </item>
   </channel>
