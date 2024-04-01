@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Connection</title>
+      <link>https://mutt0-ds.github.io/tags/connection/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/connection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dataset</title>
+      <link>https://mutt0-ds.github.io/tags/dataset/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/dataset/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fabric</title>
+      <link>https://mutt0-ds.github.io/tags/fabric/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/fabric/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Power-Bi</title>
+      <link>https://mutt0-ds.github.io/tags/power-bi/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Semantic-Model</title>
+      <link>https://mutt0-ds.github.io/tags/semantic-model/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/semantic-model/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Azure</title>
       <link>https://mutt0-ds.github.io/tags/azure/</link>
@@ -27,13 +62,6 @@
       <link>https://mutt0-ds.github.io/tags/database/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/database/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Power-Bi</title>
-      <link>https://mutt0-ds.github.io/tags/power-bi/</link>
-      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
       <description></description>
     </item>
     <item>
@@ -160,13 +188,6 @@
       <link>https://mutt0-ds.github.io/tags/copilot/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/copilot/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fabric</title>
-      <link>https://mutt0-ds.github.io/tags/fabric/</link>
-      <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/fabric/</guid>
       <description></description>
     </item>
     <item>
