@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Personal Notes about Presentation Patterns on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</link>
+    <link>http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/</link>
     <description>Recent content in Personal Notes about Presentation Patterns on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

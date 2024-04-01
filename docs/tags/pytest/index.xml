@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pytest on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/pytest/</link>
+    <link>http://localhost:1313/tags/pytest/</link>
     <description>Recent content in Pytest on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Dec 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/pytest/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/pytest/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Road to 100% Test Coverage on notion-sdk-py</title>
-      <link>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</link>
+      <link>http://localhost:1313/posts/2022/12/road-100-coverage-notion/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</guid>
+      <guid>http://localhost:1313/posts/2022/12/road-100-coverage-notion/</guid>
       <description>There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously unexciting activities for many developers 😫&#xA;Luckily, we are all unique in our own way and I decided to contribute to the testing module of one of my favorite libraries, notion-sdk-py.&#xA;Being a certified Notion user, I use its Web App on a daily basis, and the Python library helps me automatically organize my notes.</description>
     </item>
   </channel>

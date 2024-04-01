@@ -2,294 +2,294 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mutt0-ds.github.io/tags/connection/</loc>
+    <loc>http://localhost:1313/tags/connection/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/dataset/</loc>
+    <loc>http://localhost:1313/tags/dataset/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/fabric/</loc>
+    <loc>http://localhost:1313/tags/fabric/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/power-bi/</loc>
+    <loc>http://localhost:1313/tags/power-bi/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/semantic-model/</loc>
+    <loc>http://localhost:1313/tags/semantic-model/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</loc>
+    <loc>http://localhost:1313/posts/2024/04/types-powerbi-connection/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/azure/</loc>
+    <loc>http://localhost:1313/tags/azure/</loc>
     <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/data-saturdays/</loc>
+    <loc>http://localhost:1313/tags/data-saturdays/</loc>
     <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/database/</loc>
+    <loc>http://localhost:1313/tags/database/</loc>
     <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/11/ai-tweaked-data-saturdays-notes/</loc>
+    <loc>http://localhost:1313/posts/2023/11/ai-tweaked-data-saturdays-notes/</loc>
     <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/sql-server/</loc>
+    <loc>http://localhost:1313/tags/sql-server/</loc>
     <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/t-sql/</loc>
+    <loc>http://localhost:1313/tags/t-sql/</loc>
     <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/commute/</loc>
+    <loc>http://localhost:1313/tags/commute/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/data-analysis/</loc>
+    <loc>http://localhost:1313/tags/data-analysis/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</loc>
+    <loc>http://localhost:1313/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/google-maps/</loc>
+    <loc>http://localhost:1313/tags/google-maps/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/python/</loc>
+    <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/traffic/</loc>
+    <loc>http://localhost:1313/tags/traffic/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/documentation/</loc>
+    <loc>http://localhost:1313/tags/documentation/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/markdown/</loc>
+    <loc>http://localhost:1313/tags/markdown/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/</loc>
+    <loc>http://localhost:1313/posts/2023/09/obsidian-update-6-months-later/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/notes/</loc>
+    <loc>http://localhost:1313/tags/notes/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/obsidian/</loc>
+    <loc>http://localhost:1313/tags/obsidian/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/second-brain/</loc>
+    <loc>http://localhost:1313/tags/second-brain/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/update/</loc>
+    <loc>http://localhost:1313/tags/update/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</loc>
+    <loc>http://localhost:1313/posts/2023/07/analyzing-commute-data-using-google-api/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/gcp/</loc>
+    <loc>http://localhost:1313/tags/gcp/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/google-distance-matrix/</loc>
+    <loc>http://localhost:1313/tags/google-distance-matrix/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/azure-synapse/</loc>
+    <loc>http://localhost:1313/tags/azure-synapse/</loc>
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/build/</loc>
+    <loc>http://localhost:1313/tags/build/</loc>
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/copilot/</loc>
+    <loc>http://localhost:1313/tags/copilot/</loc>
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/microsoft/</loc>
+    <loc>http://localhost:1313/tags/microsoft/</loc>
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</loc>
+    <loc>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</loc>
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/automation/</loc>
+    <loc>http://localhost:1313/tags/automation/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/ffmpeg/</loc>
+    <loc>http://localhost:1313/tags/ffmpeg/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/05/how-i-generated-automatic-reviews-tiktok/</loc>
+    <loc>http://localhost:1313/posts/2023/05/how-i-generated-automatic-reviews-tiktok/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/music-reviews/</loc>
+    <loc>http://localhost:1313/tags/music-reviews/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/playwright/</loc>
+    <loc>http://localhost:1313/tags/playwright/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/tiktok/</loc>
+    <loc>http://localhost:1313/tags/tiktok/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/tts/</loc>
+    <loc>http://localhost:1313/tags/tts/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/video-editing/</loc>
+    <loc>http://localhost:1313/tags/video-editing/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/ai/</loc>
+    <loc>http://localhost:1313/tags/ai/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/composite-model/</loc>
+    <loc>http://localhost:1313/tags/composite-model/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/features/</loc>
+    <loc>http://localhost:1313/tags/features/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/reporting/</loc>
+    <loc>http://localhost:1313/tags/reporting/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/version-control/</loc>
+    <loc>http://localhost:1313/tags/version-control/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</loc>
+    <loc>http://localhost:1313/posts/2023/03/what-power-bi-is-missing/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</loc>
+    <loc>http://localhost:1313/posts/2023/02/obsidian-productivity-second-brain/</loc>
     <lastmod>2023-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/plugin/</loc>
+    <loc>http://localhost:1313/tags/plugin/</loc>
     <lastmod>2023-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</loc>
+    <loc>http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/powerpoint/</loc>
+    <loc>http://localhost:1313/tags/powerpoint/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/presentation/</loc>
+    <loc>http://localhost:1313/tags/presentation/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/soft-skills/</loc>
+    <loc>http://localhost:1313/tags/soft-skills/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/study/</loc>
+    <loc>http://localhost:1313/tags/study/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/talk/</loc>
+    <loc>http://localhost:1313/tags/talk/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/coverage/</loc>
+    <loc>http://localhost:1313/tags/coverage/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/notion/</loc>
+    <loc>http://localhost:1313/tags/notion/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/pytest/</loc>
+    <loc>http://localhost:1313/tags/pytest/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</loc>
+    <loc>http://localhost:1313/posts/2022/12/road-100-coverage-notion/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/test/</loc>
+    <loc>http://localhost:1313/tags/test/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</loc>
+    <loc>http://localhost:1313/posts/2022/11/turbulent-journey-power-bi-source-control/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/devops/</loc>
+    <loc>http://localhost:1313/tags/devops/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/git/</loc>
+    <loc>http://localhost:1313/tags/git/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/pipeline/</loc>
+    <loc>http://localhost:1313/tags/pipeline/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/source-control/</loc>
+    <loc>http://localhost:1313/tags/source-control/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/tabular-editor/</loc>
+    <loc>http://localhost:1313/tags/tabular-editor/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/acer/</loc>
+    <loc>http://localhost:1313/tags/acer/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/experience/</loc>
+    <loc>http://localhost:1313/tags/experience/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/10/first-weeks-acer/</loc>
+    <loc>http://localhost:1313/posts/2022/10/first-weeks-acer/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/dashboard/</loc>
+    <loc>http://localhost:1313/tags/dashboard/</loc>
     <lastmod>2022-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/dax/</loc>
+    <loc>http://localhost:1313/tags/dax/</loc>
     <lastmod>2022-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/09/personal-notes-about-dax-definitive-guide/</loc>
+    <loc>http://localhost:1313/posts/2022/09/personal-notes-about-dax-definitive-guide/</loc>
     <lastmod>2022-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/powerbi/</loc>
+    <loc>http://localhost:1313/tags/powerbi/</loc>
     <lastmod>2022-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/sql/</loc>
+    <loc>http://localhost:1313/tags/sql/</loc>
     <lastmod>2022-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/cobol/</loc>
+    <loc>http://localhost:1313/tags/cobol/</loc>
     <lastmod>2022-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/finance/</loc>
+    <loc>http://localhost:1313/tags/finance/</loc>
     <lastmod>2022-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/ibm/</loc>
+    <loc>http://localhost:1313/tags/ibm/</loc>
     <lastmod>2022-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/learning/</loc>
+    <loc>http://localhost:1313/tags/learning/</loc>
     <lastmod>2022-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/09/my-surreal-experience-cobol/</loc>
+    <loc>http://localhost:1313/posts/2022/09/my-surreal-experience-cobol/</loc>
     <lastmod>2022-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/angular/</loc>
+    <loc>http://localhost:1313/tags/angular/</loc>
     <lastmod>2022-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/books/</loc>
+    <loc>http://localhost:1313/tags/books/</loc>
     <lastmod>2022-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/</loc>
+    <loc>http://localhost:1313/posts/2022/06/my-books-tailwind/</loc>
     <lastmod>2022-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/tailwind/</loc>
+    <loc>http://localhost:1313/tags/tailwind/</loc>
     <lastmod>2022-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/typescript/</loc>
+    <loc>http://localhost:1313/tags/typescript/</loc>
     <lastmod>2022-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/appsmith/</loc>
+    <loc>http://localhost:1313/tags/appsmith/</loc>
     <lastmod>2022-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/experiments/</loc>
+    <loc>http://localhost:1313/tags/experiments/</loc>
     <lastmod>2022-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/javascript/</loc>
+    <loc>http://localhost:1313/tags/javascript/</loc>
     <lastmod>2022-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/03/personal-airflow/</loc>
+    <loc>http://localhost:1313/posts/2022/03/personal-airflow/</loc>
     <lastmod>2022-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/machine-learning/</loc>
+    <loc>http://localhost:1313/tags/machine-learning/</loc>
     <lastmod>2021-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/meme/</loc>
+    <loc>http://localhost:1313/tags/meme/</loc>
     <lastmod>2021-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/neural-network/</loc>
+    <loc>http://localhost:1313/tags/neural-network/</loc>
     <lastmod>2021-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/resnet/</loc>
+    <loc>http://localhost:1313/tags/resnet/</loc>
     <lastmod>2021-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2021/05/nn-sending-memes/</loc>
+    <loc>http://localhost:1313/posts/2021/05/nn-sending-memes/</loc>
     <lastmod>2021-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>
