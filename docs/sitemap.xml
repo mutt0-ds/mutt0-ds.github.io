@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mutt0-ds.github.io/tags/ai/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/api/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/openai/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/posts/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/python/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/tools/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mutt0-ds.github.io/tags/connection/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -14,19 +41,10 @@
     <loc>https://mutt0-ds.github.io/tags/fabric/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/</loc>
-    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/posts/</loc>
-    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mutt0-ds.github.io/tags/power-bi/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/semantic-model/</loc>
-    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</loc>
@@ -60,9 +78,6 @@
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/google-maps/</loc>
-    <lastmod>2023-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/python/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/traffic/</loc>
@@ -136,9 +151,6 @@
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/video-editing/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/ai/</loc>
-    <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/composite-model/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>

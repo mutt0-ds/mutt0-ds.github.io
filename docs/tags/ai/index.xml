@@ -6,8 +6,15 @@
     <description>Recent content in Ai on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Giving our AI superpowers with OpenAI Tools</title>
+      <link>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</link>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</guid>
+      <description>In recent months, I have been experimenting with AI tools to leverage new, powerful technologies and create value. Like you, I am inundated with hype and buzzwords, and this makes things complicate, when trying to get started. While looking for simple answers to my questions, it’s often challenging to extract real value. So, I want to share my notes to help others with similar needs.&#xA;My Business Case: an AI Analyst Let’s start with the big question I had in my mind:</description>
+    </item>
     <item>
       <title>What Power BI is still missing</title>
       <link>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</link>

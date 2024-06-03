@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="Giving our AI superpowers with OpenAI Tools" />
+<meta property="og:description" content="In recent months, I have been experimenting with AI tools to leverage new, powerful technologies and create value. Like you, I am inundated with hype and buzzwords, and this makes things complicate, when trying to get started. While looking for simple answers to my questions, it’s often challenging to extract real value. So, I want to share my notes to help others with similar needs.
+My Business Case: an AI Analyst Let’s start with the big question I had in my mind:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-06-03T00:00:00+00:00" /><meta property="og:site_name" content="Mutt0-ds Notes" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Giving our AI superpowers with OpenAI Tools"/>
+<meta name="twitter:description" content="In recent months, I have been experimenting with AI tools to leverage new, powerful technologies and create value. Like you, I am inundated with hype and buzzwords, and this makes things complicate, when trying to get started. While looking for simple answers to my questions, it’s often challenging to extract real value. So, I want to share my notes to help others with similar needs.
+My Business Case: an AI Analyst Let’s start with the big question I had in my mind:"/>
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+Giving our AI superpowers with OpenAI Tools | Mutt0-ds Notes
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Giving our AI superpowers with OpenAI Tools</h1>
+            <div class="text-center">
+              Mutt0-ds 
+              <small>|</small>
+              Jun 3, 2024
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid" src="/images/ai_superpowers/cover.jpg" alt="Giving our AI superpowers with OpenAI Tools">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>In recent months, I have been experimenting with AI tools to leverage new, powerful technologies and create value. Like you, I am inundated with hype and buzzwords, and this makes things complicate, when trying to get started. While looking for simple answers to my questions, it’s often challenging to extract real value. So, I want to share my notes to help others with similar needs.</p>
+<h2 id="my-business-case-an-ai-analyst">My Business Case: an AI Analyst</h2>
+<p>Let’s start with the big question I had in my mind:</p>
+<blockquote>
+<p>I have a big, complex data source (a database, an API). How can I connect it to an AI and be fairly* confident it doesn’t mess things up?</p>
+</blockquote>
+<p><em>*Remember, with AI, you can’t be 100% sure of anything.</em></p>
+<p>Specifically, I worked with our order database to create an “AI Analyst&quot; using Azure OpenAI. The goal was to enable it to respond to common questions like, <em>“When is my order arriving?”</em> or <em>“What’s the order status for this customer?”</em> This would save our analysts time and effort since the majority of the questions they receive are always the same..</p>
+<p>I’m not talking of the toy databases you find in tutorials with 3 tables and 10 columns, this is a real schema with joins, millions of rows and knowledge of the business logic required. The cool part is that by using tools the AI model won’t care about the complexity underneath: as you’ll see, the possibilities are endless.</p>
+<h2 id="before-ai-tools">Before AI Tools</h2>
+<p>Back in the “old days” (five months ago, lol), the only way was to use GPT-3.5 to make SQL queries and return a response, specifically with Langchain and a <a href="https://python.langchain.com/v0.1/docs/use_cases/sql/">SQL</a> plugin.</p>
+<p>I also considered making DAX queries to <a href="https://python.langchain.com/v0.1/docs/integrations/toolkits/powerbi/">Power BI</a> models. However, AI tends to hallucinate when you add a couple of joins in SQL, and it gets even worse with a language that has only a fraction of the documentation and popularity. Indeed, results were terrible. I remember using several calls for checking and parsing the code, along with multiple retries.</p>
+<h2 id="the-game-changer-tools">The Game Changer: Tools</h2>
+<p>Then, <a href="https://platform.openai.com/docs/guides/function-calling">OpenAI announced Tools (initially called Function Calling)</a>. Tools allow the latest AI models (3.5 turbo, 4, 4o) to decide whether calling certain functions when needed.</p>
+<p>It’s like telling to our GPT, <code>“Reply to my {QUESTION}, knowing that if I ask about the weather, you can use this {FUNCTION} which needs the city and time as input.”</code>. This is prompt engineering, as I was saying. The OpenAI ChatCompletion API returns a special object for running the tool and then provides the final response.</p>
+<p>This differs from <a href="https://aws.amazon.com/what-is/retrieval-augmented-generation/">Retrieval Augmented Generation (RAG)</a>, where you use a specialized Vector database to search your documents (e.g., Copilot with your email inbox), then pass the best results to the prompt and tell the AI to reply based on the context.</p>
+<div style="max-width: 1536px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="//iframely.net/ZRkGzjC" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p>But not <em>that</em> different. In RAG you search for similar data, find results, then tell the AI, <code>“Hey, given this {CONTEXT}, reply to my {QUESTION}.”</code>. <strong>Always remember that it’s all prompt engineering</strong>.</p>
+<div style="max-width: 1066px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1937%;"><iframe src="//iframely.net/ndPoIXx" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p>Cool, but getting started wasn’t straightforward. Navigating through hype and buzzwords, overcomplicated solutions (I see you, <a href="github.com/microsoft/semantic-kernel/tree/main/python">semantic-kernel</a>!), <a href="https://community.openai.com/t/what-is-deference-between-function-call-and-tool-call/686481/3">outdated docs</a>, and useless tutorials was a journey. What I needed was something like this post.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>I’ll keep things simple with “vanilla” OpenAI code. I mostly followed the OpenAI tutorial notebooks and then hit my head on a few common pitfalls (more on this at the end). You can use <a href="https://python.langchain.com/v0.1/docs/modules/agents/agent_types/openai_tools/#:~:text=The%20goal%20of%20the%20OpenAI,or%20more%20functions%20as%20tools.">Langchain</a> implementations and similar tools, with a prepared list of functions you can install and run.</p>
+<p>But in my case, I needed to read our internal database, so I had to build the function from scratch.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_order_data</span>(order_code: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">...</span> calling the DB etc, example response <span style="color:#960050;background-color:#1e0010">👇</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> json<span style="color:#f92672">.</span>dumps({
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#39;order_code&#39;</span>: <span style="color:#e6db74">&#39;TEST123&#39;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#39;product&#39;</span>: <span style="color:#e6db74">&#39;Gaming PC&#39;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#39;quantity&#39;</span>: <span style="color:#ae81ff">10</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#39;status&#39;</span>: <span style="color:#e6db74">&#39;IN TRANSIT&#39;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#39;ETA&#39;</span>: <span style="color:#e6db74">&#39;6/6/2024&#39;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#39;customer&#39;</span>: <span style="color:#e6db74">&#39;Test Customer&#39;</span>
+</span></span><span style="display:flex;"><span>	})
+</span></span></code></pre></div><p>How can we teach our model to use these functions/tools, and when should it use them? OpenAI defined a standard template that describes what each function does and the parameters to use. You can see how prompt engineering becomes important here. I know that some users are calling order codes ‘order no’, I can specify that in the prompt to help the AI understand.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>get_order_data_docs <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;function&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;function&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;get_order_data&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Use this function to retrieve data about an order&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;parameters&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;object&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;properties&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;order_code&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Order Code (also called Order No or Number). Format is [A-Z]</span><span style="color:#e6db74">{10}</span><span style="color:#e6db74">&#34;</span>,
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;required&#34;</span>: [<span style="color:#e6db74">&#34;order_code&#34;</span>],
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can pass this template to the API call like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">call_gpt</span>(client, history, tools<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>) <span style="color:#f92672">-&gt;</span> tuple[str, list]:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;calls the api and updates the history. Returns response and history&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    chat_response <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>chat<span style="color:#f92672">.</span>completions<span style="color:#f92672">.</span>create(
+</span></span><span style="display:flex;"><span>        model<span style="color:#f92672">=</span>AZURE_OPENAI_DEPLOYMENT_NAME, messages<span style="color:#f92672">=</span>history, tools<span style="color:#f92672">=</span>tools, tool_choice<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;auto&#34;</span> <span style="color:#66d9ef">if</span> tools <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># you should add better error handling</span>
+</span></span><span style="display:flex;"><span>    response_message <span style="color:#f92672">=</span> chat_response<span style="color:#f92672">.</span>choices[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>message
+</span></span><span style="display:flex;"><span>    history<span style="color:#f92672">.</span>append(response_message<span style="color:#f92672">.</span>to_dict())
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> response_message, history
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>response_message, history <span style="color:#f92672">=</span> call_gpt(client, history, tools<span style="color:#f92672">=</span>[get_order_data_docs])
+</span></span></code></pre></div><h2 id="working-example">Working Example</h2>
+<p>I asked the model about an order, and you can see that as an intermediate step, the ChatCompletion API returned a ‘special object’ called <code>tool_call</code> that shows which function to call and with which arguments.</p>
+<div style="max-width: 1120px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 13.3976%;"><iframe src="//iframely.net/AgppO6x" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 498px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 24.8193%;"><iframe src="//iframely.net/coypa8w" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p>Note that the model is not executing anything itself; it is merely indicating the function it wants to use. It is then our responsibility to execute the function, adding any necessary data cleaning features or security checks. And then we can pass the results back to the ChatCompletion API to generate the final answer! We have full control.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tool_calls <span style="color:#f92672">=</span> response_message<span style="color:#f92672">.</span>tool_calls
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> tool_calls:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;using a tool 👀&#34;</span>)
+</span></span><span style="display:flex;"><span>    response, history <span style="color:#f92672">=</span> call_tool(tool_calls, client, history)
+</span></span></code></pre></div><p>Here are some useful tips to save you some headaches:</p>
+<ul>
+<li>The API evolves, so remember that this is the status as of June 2024.</li>
+<li>Check the examples in the OpenAI tutorial notebooks (<a href="https://github.com/dkhundley/openai-api-tutorial/blob/main/notebooks/function-calling.ipynb">simple</a> and <a href="https://github.com/openai/openai-cookbook/blob/main/examples/Function_calling_finding_nearby_places.ipynb">advanced</a>). They are difficult to find and often buried in many other results.</li>
+<li>When using a tool, it’s very important to include the tool call and the tool response in the history (even though they are not real messages) to avoid the infamous ChatCompletion error <code>Invalid parameter: messages with role 'tool' must be a response to a preceding message with 'tool_calls'.</code></li>
+<li>If the function has a date parameter, remember that the model has a knowledge gap stuck in the past. If a user says ‘give me the order for this week,’ the date may default to 2023 or another incorrect date. It’s better to ask the user to provide precise dates or calculate the date within the function.</li>
+<li>Always check the possible questions that could be asked and tweak the template accordingly. That’s 90% of the effort in limiting hallucinations.</li>
+<li>Truncate the conversation and limit the returned payload after a certain number of messages to avoid increasing costs, as all the function results will be passed in the history. It’s better to have several small functions that return a limited amount of data rather than one large, do-it-all function.</li>
+</ul>
+<h2 id="final-code">Final Code</h2>
+<p>The full code is here, stripped to the bare bones. You will need to install the <code>openai</code> module and define the keys. Remember to change the keys if using the standard OpenAI client. I hope you find it helpful.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> openai <span style="color:#f92672">import</span> AzureOpenAI <span style="color:#75715e"># change to OpenAI depending on your case</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> utils.settings <span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    AZURE_OPENAI_API_KEY,
+</span></span><span style="display:flex;"><span>    AZURE_OPENAI_ENDPOINT,
+</span></span><span style="display:flex;"><span>    AZURE_OPENAI_DEPLOYMENT_NAME,
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>client <span style="color:#f92672">=</span> AzureOpenAI(
+</span></span><span style="display:flex;"><span>    azure_deployment<span style="color:#f92672">=</span>AZURE_OPENAI_DEPLOYMENT_NAME,
+</span></span><span style="display:flex;"><span>    azure_endpoint<span style="color:#f92672">=</span>AZURE_OPENAI_ENDPOINT,
+</span></span><span style="display:flex;"><span>    api_key<span style="color:#f92672">=</span>AZURE_OPENAI_API_KEY,
+</span></span><span style="display:flex;"><span>    api_version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2024-02-01&#34;</span>,
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_order_data</span>(order_code: str) <span style="color:#f92672">-&gt;</span> dict:
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e"># ... calling the DB etc, example response 👇</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> json<span style="color:#f92672">.</span>dumps({
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#39;order_code&#39;</span>: <span style="color:#e6db74">&#39;TEST123&#39;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#39;product&#39;</span>: <span style="color:#e6db74">&#39;Gaming PC&#39;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#39;quantity&#39;</span>: <span style="color:#ae81ff">10</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#39;status&#39;</span>: <span style="color:#e6db74">&#39;IN TRANSIT&#39;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#39;ETA&#39;</span>: <span style="color:#e6db74">&#39;6/6/2024&#39;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#39;customer&#39;</span>: <span style="color:#e6db74">&#39;Test Customer&#39;</span>
+</span></span><span style="display:flex;"><span>	})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>get_order_data_docs <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;function&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;function&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;get_order_data&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Use this function to retrieve data about an order&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;parameters&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;object&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;properties&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;order_code&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Order Code (also called Order No or Number). Format is [A-Z]</span><span style="color:#e6db74">{10}</span><span style="color:#e6db74">&#34;</span>,
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;required&#34;</span>: [<span style="color:#e6db74">&#34;order_code&#34;</span>],
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>AVAILABLE_TOOLS <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;get_order_data&#34;</span>: (get_order_data, get_order_data_docs),
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">call_gpt</span>(client, history, tools<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>) <span style="color:#f92672">-&gt;</span> tuple[str, list]:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;calls the api and updates the history. Returns response and history&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    chat_response <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>chat<span style="color:#f92672">.</span>completions<span style="color:#f92672">.</span>create(
+</span></span><span style="display:flex;"><span>        model<span style="color:#f92672">=</span>AZURE_OPENAI_DEPLOYMENT_NAME,
+</span></span><span style="display:flex;"><span>        messages<span style="color:#f92672">=</span>history,
+</span></span><span style="display:flex;"><span>        tools<span style="color:#f92672">=</span>tools,
+</span></span><span style="display:flex;"><span>        tool_choice<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;auto&#34;</span> <span style="color:#66d9ef">if</span> tools <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    response_message <span style="color:#f92672">=</span> chat_response<span style="color:#f92672">.</span>choices[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>message
+</span></span><span style="display:flex;"><span>    history<span style="color:#f92672">.</span>append(response_message<span style="color:#f92672">.</span>to_dict())
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> response_message, history
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">call_tool</span>(tool_calls, client, history) <span style="color:#f92672">-&gt;</span> tuple[str, list]:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;If the response has a tool action, we call the api in a slightly different way, adding the function response. Returns response and history&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    tool_call_id <span style="color:#f92672">=</span> tool_calls[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>id
+</span></span><span style="display:flex;"><span>    tool_function_name <span style="color:#f92672">=</span> tool_calls[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>function<span style="color:#f92672">.</span>name
+</span></span><span style="display:flex;"><span>    tool_query_string <span style="color:#f92672">=</span> eval(tool_calls[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>function<span style="color:#f92672">.</span>arguments)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Call the function and retrieve results. Append the results to the messages list.</span>
+</span></span><span style="display:flex;"><span>    fun_to_call <span style="color:#f92672">=</span> AVAILABLE_TOOLS<span style="color:#f92672">.</span>get(tool_function_name)
+</span></span><span style="display:flex;"><span>    results <span style="color:#f92672">=</span> fun_to_call[<span style="color:#ae81ff">0</span>](<span style="color:#f92672">**</span>tool_query_string)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># then call it another time for generating the final answer given the function results</span>
+</span></span><span style="display:flex;"><span>    history<span style="color:#f92672">.</span>append(
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;role&#34;</span>: <span style="color:#e6db74">&#34;tool&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;tool_call_id&#34;</span>: tool_call_id,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;name&#34;</span>: tool_function_name,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;content&#34;</span>: results,
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    res <span style="color:#f92672">=</span> call_gpt(client, history)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> res
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>history <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;role&#34;</span>: <span style="color:#e6db74">&#34;system&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;content&#34;</span>: <span style="color:#e6db74">&#34;Don&#39;t make assumptions about what values to plug into functions. Ask for clarification if a user request is ambiguous.&#34;</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    user_input <span style="color:#f92672">=</span> str(input(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&gt;&#34;</span>))
+</span></span><span style="display:flex;"><span>    new_message <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;role&#34;</span>: <span style="color:#e6db74">&#34;user&#34;</span>, <span style="color:#e6db74">&#34;content&#34;</span>: user_input}
+</span></span><span style="display:flex;"><span>    history<span style="color:#f92672">.</span>append(new_message)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    response_message, history <span style="color:#f92672">=</span> call_gpt(client, history, tools<span style="color:#f92672">=</span>[get_order_data_docs])
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># tool calls is the special object returned by the ChatCompletion API if the model decided to use a tool</span>
+</span></span><span style="display:flex;"><span>    tool_calls <span style="color:#f92672">=</span> response_message<span style="color:#f92672">.</span>tool_calls
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> tool_calls:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;using a tool 👀&#34;</span>)
+</span></span><span style="display:flex;"><span>        response, history <span style="color:#f92672">=</span> call_tool(tool_calls, client, history)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(history)
+</span></span></code></pre></div>
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#my-business-case-an-ai-analyst">My Business Case: an AI Analyst</a></li>
+    <li><a href="#before-ai-tools">Before AI Tools</a></li>
+    <li><a href="#the-game-changer-tools">The Game Changer: Tools</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#working-example">Working Example</a></li>
+    <li><a href="#final-code">Final Code</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/ai" target="_blank">ai</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/openai" target="_blank">openai</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/tools" target="_blank">tools</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/python" target="_blank">python</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/api" target="_blank">api</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=Giving%20our%20AI%20superpowers%20with%20OpenAI%20Tools&url=https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2024%2f06%2fai-superpowers-tools%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Giving%20our%20AI%20superpowers%20with%20OpenAI%20Tools: https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2024%2f06%2fai-superpowers-tools%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=Giving%20our%20AI%20superpowers%20with%20OpenAI%20Tools&amp;body=Check%20out%20this%20site https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2024%2f06%2fai-superpowers-tools%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2024/06/ai-superpowers-tools/">
+                        <img src="/images/ai_superpowers/cover.jpg" class="card-img-top" alt="Giving our AI superpowers with OpenAI Tools">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2024/06/ai-superpowers-tools/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Giving our AI superpowers with OpenAI Tools">Giving our AI superpowers with OpenAI Tools</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>In recent months, I have been experimenting with AI tools to leverage new, powerful technologies and create value. Like you, I am inundated with hype and buzzwords, and this makes things complicate, when trying to get started. While looking for simple answers to my questions, it’s often challenging …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jun 3, 2024</span>
+                    <a href="/posts/2024/06/ai-superpowers-tools/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2024/04/types-powerbi-connection/">
+                        <img src="/images/power_bi_connections/pbi_connections_charts.png" class="card-img-top" alt="The 3 (&#43;2) ways to Get Data in Power BI, simply explained">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2024/04/types-powerbi-connection/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="The 3 (&#43;2) ways to Get Data in Power BI, simply explained">The 3 (+2) ways to Get Data in Power BI, simply explained</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>There&rsquo;s quite a bit of confusion swirling around about how Power BI reports gather data. Where is the data actually stored? How frequently does it refresh? Depending on the mode you&rsquo;ve selected, this question can be a bit tricky to tackle.
+Let&rsquo;s simplify things a bit. In this …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Apr 1, 2024</span>
+                    <a href="/posts/2024/04/types-powerbi-connection/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2023/11/ai-tweaked-data-saturdays-notes/">
+                        <img src="/images/data_saturdays/cover.jpg" class="card-img-top" alt="My AI-tweaked Data Saturdays 23 Notes">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2023/11/ai-tweaked-data-saturdays-notes/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="My AI-tweaked Data Saturdays 23 Notes">My AI-tweaked Data Saturdays 23 Notes</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>Last Saturday I had the privilege of attending Data Saturdays #37 at Parma, an event series focused on Microsoft data platform technologies. Covering AI, Database, Business Intelligence, and Cloud, the event promised insights from top experts in Italy (and beyond).
+Of course, I wrote down (almost) …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Nov 19, 2023</span>
+                    <a href="/posts/2023/11/ai-tweaked-data-saturdays-notes/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io/" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2024  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai</title>
+      <link>https://mutt0-ds.github.io/tags/ai/</link>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Api</title>
+      <link>https://mutt0-ds.github.io/tags/api/</link>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Openai</title>
+      <link>https://mutt0-ds.github.io/tags/openai/</link>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://mutt0-ds.github.io/tags/python/</link>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>https://mutt0-ds.github.io/tags/tools/</link>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/tools/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Connection</title>
       <link>https://mutt0-ds.github.io/tags/connection/</link>
@@ -104,13 +139,6 @@
       <link>https://mutt0-ds.github.io/tags/google-maps/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/google-maps/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>https://mutt0-ds.github.io/tags/python/</link>
-      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/python/</guid>
       <description></description>
     </item>
     <item>
@@ -251,13 +279,6 @@
       <link>https://mutt0-ds.github.io/tags/video-editing/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/video-editing/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ai</title>
-      <link>https://mutt0-ds.github.io/tags/ai/</link>
-      <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/ai/</guid>
       <description></description>
     </item>
     <item>
