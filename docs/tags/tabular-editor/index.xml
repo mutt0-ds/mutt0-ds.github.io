@@ -6,15 +6,8 @@
     <description>Recent content in Tabular-Editor on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Nov 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/tabular-editor/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The pro trick for Measure Descriptions in Power BI</title>
-      <link>http://localhost:1313/posts/2024/07/the-trick-measure-description-powerbi/</link>
-      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2024/07/the-trick-measure-description-powerbi/</guid>
-      <description>Today I want to show you a very useful trick that we are using for automatically describing our measures and calculated columns in Power BI. A big problem we had in the past, and source of constant requests from our most advanced users (the one who were connecting live to the Power BI datasets and creating their own small reports) is &amp;ldquo;How does this MEASURE work?&amp;rdquo;. In case of legacy columns with 10 variants, or the ones with complex business logic involved, this was quite a frequent cause of confusion.</description>
-    </item>
     <item>
       <title>A turbulent journey through Power BI source control</title>
       <link>http://localhost:1313/posts/2022/11/turbulent-journey-power-bi-source-control/</link>

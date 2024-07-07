@@ -2,31 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/c-sharp/</loc>
-    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/dax/</loc>
-    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/description/</loc>
-    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/power-bi/</loc>
-    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/tabular-editor/</loc>
-    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/2024/07/the-trick-measure-description-powerbi/</loc>
     <lastmod>2024-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ai/</loc>
@@ -44,6 +23,9 @@
     <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2024-06-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-06-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/tools/</loc>
     <lastmod>2024-06-03T00:00:00+00:00</lastmod>
   </url><url>
@@ -59,32 +41,14 @@
     <loc>http://localhost:1313/tags/fabric/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/power-bi/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/semantic-model/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/2024/04/types-powerbi-connection/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/frontend/</loc>
-    <lastmod>2024-02-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/fullstack/</loc>
-    <lastmod>2024-02-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/next.js/</loc>
-    <lastmod>2024-02-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/prisma/</loc>
-    <lastmod>2024-02-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/tailwind/</loc>
-    <lastmod>2024-02-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/2024/02/my-journey-with-webapp/</loc>
-    <lastmod>2024-02-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/webapp/</loc>
-    <lastmod>2024-02-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/azure/</loc>
     <lastmod>2023-11-19T00:00:00+00:00</lastmod>
@@ -148,24 +112,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/google-distance-matrix/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/communication/</loc>
-    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/listening/</loc>
-    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/2024/07/personal-notes-simply-said/</loc>
-    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/presentation/</loc>
-    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/soft-skills/</loc>
-    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/speaking/</loc>
-    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/azure-synapse/</loc>
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
@@ -233,6 +179,12 @@
     <loc>http://localhost:1313/tags/powerpoint/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/presentation/</loc>
+    <lastmod>2023-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/soft-skills/</loc>
+    <lastmod>2023-01-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/study/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
@@ -269,6 +221,9 @@
     <loc>http://localhost:1313/tags/source-control/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/tabular-editor/</loc>
+    <lastmod>2022-11-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/acer/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
@@ -279,6 +234,9 @@
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/dashboard/</loc>
+    <lastmod>2022-09-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/dax/</loc>
     <lastmod>2022-09-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/2022/09/personal-notes-about-dax-definitive-guide/</loc>
@@ -312,6 +270,9 @@
     <lastmod>2022-06-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/2022/06/my-books-tailwind/</loc>
+    <lastmod>2022-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tailwind/</loc>
     <lastmod>2022-06-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/typescript/</loc>

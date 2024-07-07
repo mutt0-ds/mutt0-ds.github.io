@@ -6,43 +6,8 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>C-Sharp</title>
-      <link>http://localhost:1313/tags/c-sharp/</link>
-      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/c-sharp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Dax</title>
-      <link>http://localhost:1313/tags/dax/</link>
-      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/dax/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Description</title>
-      <link>http://localhost:1313/tags/description/</link>
-      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/description/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Power-Bi</title>
-      <link>http://localhost:1313/tags/power-bi/</link>
-      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/power-bi/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tabular-Editor</title>
-      <link>http://localhost:1313/tags/tabular-editor/</link>
-      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tabular-editor/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Ai</title>
       <link>http://localhost:1313/tags/ai/</link>
@@ -107,52 +72,17 @@
       <description></description>
     </item>
     <item>
+      <title>Power-Bi</title>
+      <link>http://localhost:1313/tags/power-bi/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/power-bi/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Semantic-Model</title>
       <link>http://localhost:1313/tags/semantic-model/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/semantic-model/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Frontend</title>
-      <link>http://localhost:1313/tags/frontend/</link>
-      <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/frontend/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fullstack</title>
-      <link>http://localhost:1313/tags/fullstack/</link>
-      <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/fullstack/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Next.js</title>
-      <link>http://localhost:1313/tags/next.js/</link>
-      <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/next.js/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Prisma</title>
-      <link>http://localhost:1313/tags/prisma/</link>
-      <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/prisma/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tailwind</title>
-      <link>http://localhost:1313/tags/tailwind/</link>
-      <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tailwind/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Webapp</title>
-      <link>http://localhost:1313/tags/webapp/</link>
-      <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/webapp/</guid>
       <description></description>
     </item>
     <item>
@@ -275,41 +205,6 @@
       <description></description>
     </item>
     <item>
-      <title>Communication</title>
-      <link>http://localhost:1313/tags/communication/</link>
-      <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/communication/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Listening</title>
-      <link>http://localhost:1313/tags/listening/</link>
-      <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/listening/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Presentation</title>
-      <link>http://localhost:1313/tags/presentation/</link>
-      <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/presentation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Soft-Skills</title>
-      <link>http://localhost:1313/tags/soft-skills/</link>
-      <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/soft-skills/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Speaking</title>
-      <link>http://localhost:1313/tags/speaking/</link>
-      <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/speaking/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Azure-Synapse</title>
       <link>http://localhost:1313/tags/azure-synapse/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
@@ -429,6 +324,20 @@
       <description></description>
     </item>
     <item>
+      <title>Presentation</title>
+      <link>http://localhost:1313/tags/presentation/</link>
+      <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/presentation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Soft-Skills</title>
+      <link>http://localhost:1313/tags/soft-skills/</link>
+      <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/soft-skills/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Study</title>
       <link>http://localhost:1313/tags/study/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
@@ -499,6 +408,13 @@
       <description></description>
     </item>
     <item>
+      <title>Tabular-Editor</title>
+      <link>http://localhost:1313/tags/tabular-editor/</link>
+      <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tabular-editor/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Acer</title>
       <link>http://localhost:1313/tags/acer/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
@@ -517,6 +433,13 @@
       <link>http://localhost:1313/tags/dashboard/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/dashboard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dax</title>
+      <link>http://localhost:1313/tags/dax/</link>
+      <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/dax/</guid>
       <description></description>
     </item>
     <item>
@@ -573,6 +496,13 @@
       <link>http://localhost:1313/tags/books/</link>
       <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/books/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tailwind</title>
+      <link>http://localhost:1313/tags/tailwind/</link>
+      <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tailwind/</guid>
       <description></description>
     </item>
     <item>
