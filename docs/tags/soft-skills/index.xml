@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Soft-Skills on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/soft-skills/</link>
+    <link>http://localhost:1313/tags/soft-skills/</link>
     <description>Recent content in Soft-Skills on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/soft-skills/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/soft-skills/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Personal Notes about Simply Said</title>
+      <link>http://localhost:1313/posts/2024/07/personal-notes-simply-said/</link>
+      <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024/07/personal-notes-simply-said/</guid>
+      <description>Simply Said Simply Said is the best communication book I&amp;rsquo;ve recently read. It consdes so much information that it resembles an encyclopedia, and the beatufiul thoing is that its key point is, simply said, &amp;ldquo;focus on others&amp;rdquo;. So, for the others, as you, I ocnsodnere the 19 chapters of this useful guide by Jy Sullivan in an easy-to graps blog post,m which will giver you a general overviwew, and hopegully, th deisre to by it .</description>
+    </item>
     <item>
       <title>Personal Notes about Presentation Patterns</title>
-      <link>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</link>
+      <link>http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</guid>
+      <guid>http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/</guid>
       <description>Presentation Patterns Written by Neal Ford, Matthew McCullough and Nathaniel Schutta, &amp;ldquo;Presentation Patterns - Techniques for Crafting Better Presentations&amp;rdquo; is an encyclopedia of patterns, tips and common mistakes experienced by the authors, who have delivered thousands of presentations. In particular, they introduce “No Fluff, Just Stuff“, a traveling technical conference series covering a wide variety of topics related to software development and management.&#xA;During the years, they have build up their toolbox of patterns to provide killer presentations, which are divided in three main sections: Prepare (thinking and setting up the presentation’s key concepts), Build (creating the slides), Deliver (present the content).</description>
     </item>
   </channel>
