@@ -14,9 +14,10 @@ tags:
   - notes
   - sql
 ---
+
 Disclaimer: this will be a long, long post, written in my own way. It’s essentially a dump of my personal notes, taken when reading [“The Definitive Guide to DAX”](https://www.sqlbi.com/books/the-definitive-guide-to-dax-2nd-edition/) written by **Alberto Ferrari** and **Marco Russo**. At my new workplace I’m going to use PowerBI and DAX a lot, thus my boss suggested me to read the book.
 
-Yep, it is big and very technical, with 700+ pages rich in contents, but trust me, that’s the “Bible”, a must-read for anyone willing to work with PowerBI and DAX. There’s everything you need, from the basics commands to the most advanced functions, with complex topics such as context transition, query plan, and storage engine. Many examples, in addition, apart from explaining every concept introduced in the book (which focuses a lot on giving clear, practical explanations) explore edge cases that gave me lots of headaches in the past. Further examples and insights can be found on the authors’ site [SQLBI](https://www.sqlbi.com/). 
+Yep, it is big and very technical, with 700+ pages rich in contents, but trust me, that’s the “Bible”, a must-read for anyone willing to work with PowerBI and DAX. There’s everything you need, from the basics commands to the most advanced functions, with complex topics such as context transition, query plan, and storage engine. Many examples, in addition, apart from explaining every concept introduced in the book (which focuses a lot on giving clear, practical explanations) explore edge cases that gave me lots of headaches in the past. Further examples and insights can be found on the authors’ site [SQLBI](https://www.sqlbi.com/).
 
 It took me several weeks for finishing it, but I felt extremely prepared after the experience and grateful for such a useful resource that will be fundamental in my future. The authors did a terrific job and I am happy to support them and share a positive feedback of their work on my blog. Knowing that my memory is terrible I took accurate notes of everything I found interesting and what I have to read again. I hope it will help you as well!
 
@@ -32,7 +33,7 @@ It took me several weeks for finishing it, but I felt extremely prepared after t
 
 ## 1 ✨ What is DAX?
 
-Introductive chapter that introduces the concept of  **D**ata **A**nalysis e**X**pressions, there’s nothing more to add. There’s an interesting presentation of all the different points of view of possible users (the ones who come from an Excel Background, or a PowerBI one, a SQL one…). Personally, I felt in synthony with the ‘typical’ SQL user: learning that the `FILTER` DAX clause is the equivalent of a `WHERE` immediately cleared some doubts I had.
+Introductive chapter that introduces the concept of **D**ata **A**nalysis e**X**pressions, there’s nothing more to add. There’s an interesting presentation of all the different points of view of possible users (the ones who come from an Excel Background, or a PowerBI one, a SQL one…). Personally, I felt in synthony with the ‘typical’ SQL user: learning that the `FILTER` DAX clause is the equivalent of a `WHERE` immediately cleared some doubts I had.
 
 ## 2 🔄 Introducing DAX
 
@@ -40,11 +41,11 @@ Very important section for beginners, explaining the most common functions and t
 
 It introduces the different data types, which are the classic ones (Integer, Float, Currency, Datetime, Boolean, Strings, Binary), with just a new type, Variant, which is DAX-specific and simply means that there could be different data types (such as `Any`in Python).
 
-There are brief introductions of the operators: arithmetic (+-*/), comparatives (<,>,=,<>,≥,≤), logic (&&, \|\|, IN, NOT) and tables, created with {} and must include parenthesis in case of multiple values. E.g. `Colours = {”Red”, “White”, “Blue”}`. `Animals = {(”Dog”, “Woof”),( “Cat”, “Meow”)}`
+There are brief introductions of the operators: arithmetic (+-\*/), comparatives (<,>,=,<>,≥,≤), logic (&&, \|\|, IN, NOT) and tables, created with {} and must include parenthesis in case of multiple values. E.g. `Colours = {”Red”, “White”, “Blue”}`. `Animals = {(”Dog”, “Woof”),( “Cat”, “Meow”)}`
 
 ### Calculated Columns
 
-Written as `‘Table Name’[Column Name]`, calculated columns are new columns added to the data model, and you can use them just like a default one, independently from the context. Just be aware that in Import Mode (the standard one), they are calculated during the data refresh, then stored in memory, occupying some precious RAM! If you have a complex formula, don’t break it down into intermediate steps as you do in Excel, but rather create and test it in DAX Studio and store the result in a single calculated column to optimize the model. 
+Written as `‘Table Name’[Column Name]`, calculated columns are new columns added to the data model, and you can use them just like a default one, independently from the context. Just be aware that in Import Mode (the standard one), they are calculated during the data refresh, then stored in memory, occupying some precious RAM! If you have a complex formula, don’t break it down into intermediate steps as you do in Excel, but rather create and test it in DAX Studio and store the result in a single calculated column to optimize the model.
 
 You should use a calculated column if:
 
@@ -56,7 +57,7 @@ You should use a calculated column if:
 
 A measure is not directly associated with a table and it’s written as `[Measure Name]`. Generally, you should use them when you don’t want to calculate values for each row, but you want an aggregation: in fact, a measure has an implicit CALCULATE clause in its formula and is modified by the context (see Chapter 5). Here’s a good example:
 
-If you create a calculated column like `Sales[GrossMarginPct] = Sales[GrossMargin] / Sales[SalesAmount]`, you will see that the total is more than 100% (If our ten products have a 50% Gross Margin each, the table displays 50*10 → 500%)! DAX is applying the formula row-by-row, but we want to see the total instead. A measure `GrossMarginPct := SUM ( Sales[GrossMargin] ) / SUM (Sales[SalesAmount] )` will give the correct result instead.
+If you create a calculated column like `Sales[GrossMarginPct] = Sales[GrossMargin] / Sales[SalesAmount]`, you will see that the total is more than 100% (If our ten products have a 50% Gross Margin each, the table displays 50\*10 → 500%)! DAX is applying the formula row-by-row, but we want to see the total instead. A measure `GrossMarginPct := SUM ( Sales[GrossMargin] ) / SUM (Sales[SalesAmount] )` will give the correct result instead.
 
 You should use a measure if:
 
@@ -96,21 +97,21 @@ AVERAGEX (
 
 The book introduces `FILTER` and the `EVALUATE` concept, to be used on DAX Studio. With `FILTER` with multiple conditions, a good tip is to put the most restrictive at the top of the query, to optimize it in case of big tables.
 
-### ALL*
+### ALL\*
 
-ALL* gets introduced too, they are extremely powerful: `ALL, ALLEXCEPT, ALLCROSSFILTERED, ALLNOBLANKROW, ALLSELECTED`. `ALL` IGNORES EVERY ACTIVE FILTER in the report and it’s useful when you calculate ratios and percentages compared to the total, regardless of filters and users’ selections. It returns a list of unique values, requiring a table or a list of columns, not an expression; if you use `ALL` with more than a column, it will give back all the possible unique combinations existing in the table. `ALLEXCEPT` can be translated as ‘take everything from that table except the following columns’. The rest will be explained in Chapter 14.
+ALL\* gets introduced too, they are extremely powerful: `ALL, ALLEXCEPT, ALLCROSSFILTERED, ALLNOBLANKROW, ALLSELECTED`. `ALL` IGNORES EVERY ACTIVE FILTER in the report and it’s useful when you calculate ratios and percentages compared to the total, regardless of filters and users’ selections. It returns a list of unique values, requiring a table or a list of columns, not an expression; if you use `ALL` with more than a column, it will give back all the possible unique combinations existing in the table. `ALLEXCEPT` can be translated as ‘take everything from that table except the following columns’. The rest will be explained in Chapter 14.
 
 ### VALUES,DISTINCT,BLANK
 
-Like `ALL`, `VALUES` and `DISTINCT` return a list of unique values too… With a big difference. `VALUES` returns the visible values, so it’s not ignoring the active filters, and the same does `DISTINCT`. They are different in the case of invalid relations. There’s a great example in the chapter: if, for example, a product is missing from the Product table, the join between it and the Sales table will have blank rows in the results. In this case, `DISTINCT` gets confused when calculating the average amount for product, while `VALUES` considers the blank row correctly in the division. TL;DR: use `VALUES` most of the cases. 
+Like `ALL`, `VALUES` and `DISTINCT` return a list of unique values too… With a big difference. `VALUES` returns the visible values, so it’s not ignoring the active filters, and the same does `DISTINCT`. They are different in the case of invalid relations. There’s a great example in the chapter: if, for example, a product is missing from the Product table, the join between it and the Sales table will have blank rows in the results. In this case, `DISTINCT` gets confused when calculating the average amount for product, while `VALUES` considers the blank row correctly in the division. TL;DR: use `VALUES` most of the cases.
 
-There’s a brief insight  about `HASONEVALUE`, a shortcut for `IF ( COUNTROWS ( VALUES ( [colonna] ) ) = 1, VALUES ( [colonna] )`; it has a second argument for returning a message if there’s more than a value: it can be useful for cards and elements that expect only one value to be selected.
+There’s a brief insight about `HASONEVALUE`, a shortcut for `IF ( COUNTROWS ( VALUES ( [colonna] ) ) = 1, VALUES ( [colonna] )`; it has a second argument for returning a message if there’s more than a value: it can be useful for cards and elements that expect only one value to be selected.
 
 ## 4 ⚠️ Understanding Evaluation Context
 
 ⚠️️ The authors say that this chapter and #5 are the most important of the entire book. If you understand context, you will avoid the most common errors when you code in DAX. Read it several times until you understand everything!
 
-In DAX, there are two completely different contexts impacting your formulas. **Filter Context**, which **filters data**, and **Row Context**, which **iterates through tables**. A context is, in short, the environment where the expression is evaluated. 
+In DAX, there are two completely different contexts impacting your formulas. **Filter Context**, which **filters data**, and **Row Context**, which **iterates through tables**. A context is, in short, the environment where the expression is evaluated.
 
 ### Filter Context
 
@@ -120,32 +121,32 @@ Let’s take a table with a measure, say `TotalSales = SUMX(Sales[Amount]`. A ta
 
 ### Row Context
 
-The example I recommend to read carefully uses this calculated column `Sales[Gross Margin] = Sales[Quantity] * ( Sales[Net Price] - Sales[Unit Cost] )`. Now remember, this column reasons in terms of rows, so, how does DAX manages to understand which row is working on? Using row context, which is basically a cursor. Row context, then, calculates the expression by considering the row that contains it. 
+The example I recommend to read carefully uses this calculated column `Sales[Gross Margin] = Sales[Quantity] * ( Sales[Net Price] - Sales[Unit Cost] )`. Now remember, this column reasons in terms of rows, so, how does DAX manages to understand which row is working on? Using row context, which is basically a cursor. Row context, then, calculates the expression by considering the row that contains it.
 
-If you write Gross Margin as a measure, you lose the row context, thus you need the iterative version ending with X: `Gross Margin := SUMX ( Sales, Sales[Quantity] * ( Sales[Net Price] - Sales[Unit Cost] ) )`  . The iterative version works because it uses SUMX, capable of keeping the row context. `Gross Margin := Sales[Quantity] * ( Sales[Net Price] - Sales[Unit Cost] )` is invalid.
+If you write Gross Margin as a measure, you lose the row context, thus you need the iterative version ending with X: `Gross Margin := SUMX ( Sales, Sales[Quantity] * ( Sales[Net Price] - Sales[Unit Cost] ) )` . The iterative version works because it uses SUMX, capable of keeping the row context. `Gross Margin := Sales[Quantity] * ( Sales[Net Price] - Sales[Unit Cost] )` is invalid.
 
 ### Other Notes
 
 … The chapter goes on with several interesting examples and questions for understanding the contexts, especially when used in filters.
 
-In the case of complex functions that work in two different contexts, there’s the `EARLIER` function for accessing the more external layer. Honestly, I hope to never use it, it’s extremely tricky, read the book to understand how the switch works, but even the authors admit that variables work better. 
+In the case of complex functions that work in two different contexts, there’s the `EARLIER` function for accessing the more external layer. Honestly, I hope to never use it, it’s extremely tricky, read the book to understand how the switch works, but even the authors admit that variables work better.
 
 Golden rule: **row context iterates, filter context filters**. Thus you can’t use the row context without a `RELATED/RELATEDTABLE`. On the contrary, the filter context uses relationships automatically, but be aware that its behavior can be different depending on the relationship’s direction (see chapter 15). I point out a very interesting example with `SUMMARIZE` in the case of the calculation of the average customers’ age without including duplicates: the code shows how to include a different column, read it carefully.
 
 ```sql
-Correct Average := AVERAGEX ( -- Iterate on 
-		SUMMARIZE ( -- all the existing combinations 
-		Sales, -- that exist in Sales 
-		Sales[CustomerKey], -- of the customer key and 
-		Sales[Customer Age] -- the customer age 
-	), -- 
-Sales[Customer Age] -- and average the customer's age 
+Correct Average := AVERAGEX ( -- Iterate on
+		SUMMARIZE ( -- all the existing combinations
+		Sales, -- that exist in Sales
+		Sales[CustomerKey], -- of the customer key and
+		Sales[Customer Age] -- the customer age
+	), --
+Sales[Customer Age] -- and average the customer's age
 ) -- TODO: you should break it down in a variable and use AVERAGEX too
 ```
 
 ## 5 ⚠️ Understanding CALCULATE and CALCULATETABLE
 
-`CALCULATE` is the most important and powerful DAX function and the one with significant nuances to understand. `CALCULATETABLE`  is the same but returns a table. Their complexity is caused by their unique characteristic: **they can create new filters** thus modifying the filter context seen in Chapter 4. Here again, the authors recommend reading the section several times until perfectly understand it.
+`CALCULATE` is the most important and powerful DAX function and the one with significant nuances to understand. `CALCULATETABLE` is the same but returns a table. Their complexity is caused by their unique characteristic: **they can create new filters** thus modifying the filter context seen in Chapter 4. Here again, the authors recommend reading the section several times until perfectly understand it.
 
 The formula is `CALCULATE ( Expression, Condition1, ... ConditionN )`, accepting every expression as a first parameter, then N filters. For filters, which are tables or lists of values, you can use an expression like `'Product'[Brand] = "Contoso”`; behind the scenes, DAX changes it to `FILTER ( ALL ( 'Product'[Brand] ), 'Product'[Brand] = "Contoso" )`. For readability, use the compact form, but be aware of some edge cases that require the extended `FILTER` one.
 
@@ -153,12 +154,12 @@ In short, `CALCULATE`:
 
 - Makes a copy of the existing filter context
 - Evaluates every filter in its arguments, and, for each condition, creates a list of valid values for the specific column (in the example, it will be `{’Contoso}’`). It’s like a `FILTER ALL`
-- If  2+ filters concern the same columns, they will be joined with an `AND`statement
+- If 2+ filters concern the same columns, they will be joined with an `AND`statement
 - Uses the new condition for replacing the existing filters (thus ignoring previous selections or filters!) or adding it to the context if they are new
 - If there’s a row context, it applies a **CONTEXT TRANSITION** (VERY IMPORTANT, SEE BELOW) transforming it into a filter context and removing the aforementioned row context
 - When it’s done, it applies the new filter context to the model, makes the calculation then comes back to the original situation. It’s just a temporary modification
 
-Now, remember: since `CALCULATE`  uses a `FILTER ( ALL)` behind the scenes, if you want to avoid losing all the previous filters you have to use the extended form with `VALUES` in the argument instead of `ALL`. With this method, the existing filters will be kept. I point out another interesting example that shows a Ratio in relationship with the unfiltered Sales table, while the Date table has to keep its filters.
+Now, remember: since `CALCULATE` uses a `FILTER ( ALL)` behind the scenes, if you want to avoid losing all the previous filters you have to use the extended form with `VALUES` in the argument instead of `ALL`. With this method, the existing filters will be kept. I point out another interesting example that shows a Ratio in relationship with the unfiltered Sales table, while the Date table has to keep its filters.
 
 ### Filtering with complex conditions
 
@@ -174,17 +175,16 @@ Sales Large Amount :=
 	 Sales[Quantity] * Sales[Net Price] >= 1000 ))
 ```
 
-There’s an example with a slicer trying to filter a table with a measure using `CALCULATE`, but obviously since there’s an `ALL`in the compact form, the slicer doesn’t work! You must use a `KEEPFILTERS`  for wrapping the filter condition.
+There’s an example with a slicer trying to filter a table with a measure using `CALCULATE`, but obviously since there’s an `ALL`in the compact form, the slicer doesn’t work! You must use a `KEEPFILTERS` for wrapping the filter condition.
 
 ### Context Transition
 
 > `CALCULATE` invalidates any row context. It automatically adds as filter arguments all the columns that are currently being iterated in any row context—filtering their actual value in the row being iterated
-In short, `CALCULATE` transforms the row context into a new filter to be added to the filter context, since there’s no way for it to understand the row context. That’s the transition!
-> 
+> In short, `CALCULATE` transforms the row context into a new filter to be added to the filter context, since there’s no way for it to understand the row context. That’s the transition!
 
-An excellent example for reviewing the concept. The formula `Sum Num Of Sales := SUMX ( Sales, COUNTROWS ( Sales ) )`, surprisingly, shows the squared `COUNTROWS`! In fact, the amount of Contoso rows is, say, 37000, and `SUMX` iterates 37000 times for each row, thus the outcome will be 37000*37000 since it’s targeting the row context!
+An excellent example for reviewing the concept. The formula `Sum Num Of Sales := SUMX ( Sales, COUNTROWS ( Sales ) )`, surprisingly, shows the squared `COUNTROWS`! In fact, the amount of Contoso rows is, say, 37000, and `SUMX` iterates 37000 times for each row, thus the outcome will be 37000\*37000 since it’s targeting the row context!
 
-Another example:  `Sales Amount := SUMX ( Sales, CALCULATE ( SUM ( Sales[Quantity])))`. The secret is that, behind the scenes, CALCULATE is using row-by-row filters since it’s following the row context in the SUM, thus it’s calculating `Tot = CALCULATE(SUM ( Sales[Quantity] ), Sales[Product] = “A”)  + CALCULATE(SUM ( Sales[Quantity] ), Sales[Product] = “B”)`... for n times.
+Another example: `Sales Amount := SUMX ( Sales, CALCULATE ( SUM ( Sales[Quantity])))`. The secret is that, behind the scenes, CALCULATE is using row-by-row filters since it’s following the row context in the SUM, thus it’s calculating `Tot = CALCULATE(SUM ( Sales[Quantity] ), Sales[Product] = “A”)  + CALCULATE(SUM ( Sales[Quantity] ), Sales[Product] = “B”)`... for n times.
 
 - The context transition (from now, CT) is expensive. Use `CALCULATE`sparingly, because during iterations it will apply filters on every row
 - CT doesn’t filter one row only! **The new filter filters all the rows with the same value**! So, if in the example above `Sales[Product] = “A”`, there could be more than one result based on the input data
@@ -195,18 +195,16 @@ Another example:  `Sales Amount := SUMX ( Sales, CALCULATE ( SUM ( Sales[Quantit
 - CT invalids every existing row context once the transition happens
 
 ![SUMX without CALCULATE example](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_1.png)
-*`SUMX` without CALCULATE ignores the row context. The solution work because the Sales column has unique IDs, so there aren’t duplicates!*
+_`SUMX` without CALCULATE ignores the row context. The solution work because the Sales column has unique IDs, so there aren’t duplicates!_
 
 Unfortunately, the CT doesn’t filter a single row but works with unique values, so we will have extremely tricky errors in case of tables with duplicates! Using this tactic is not only incorrect, but also very slow since the engine has to iterate for all the rows of the table. Using a measure is wrong too, because:
 
 > Whenever you read a measure call in DAX, you should always read it as if `CALCULATE` were there
-> 
 
 ![Wrong formula](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_2.png)
 ![Wrong formula Results](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_3.png)
 
-*Wrong formula: the Right Sales Amount doesn’t use `CALCULATE`*
-
+_Wrong formula: the Right Sales Amount doesn’t use `CALCULATE`_
 
 ## CALCULATE modifiers (see Chapter 14)
 
@@ -215,16 +213,14 @@ Unfortunately, the CT doesn’t filter a single row but works with unique values
 - `KEEPFILTERS` keeps the existing filters like `VALUES`, for example in `Audio Sales KeepFilters := CALCULATE ( [Sales Amount], KEEPFILTERS ( 'Product'[Category] = "Audio" ) )`. However, it doesn't overwrite the filter context, but simply adds the filters in its arguments with an `AND` operator. The outcome will then have BLANK rows if they aren't included in the filter condition. Observe the differences:
 
 ![CALCULATE example](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_4.png)
-*`CALCULATE ( [Sales Amount], 'Product'[Category] = "Audio" )`*
+_`CALCULATE ( [Sales Amount], 'Product'[Category] = "Audio" )`_
 
 ![CALCULATE KEEPFILTERS example](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_5.png)
-*`CALCULATE ( [Sales Amount], KEEPFILTERS ( 'Product'[Category] = "Audio" ) )`*
+_`CALCULATE ( [Sales Amount], KEEPFILTERS ( 'Product'[Category] = "Audio" ) )`_
 
-- `ALL` shows a different behavior if used inside a `CALCULATE`, becoming a sort of `REMOVEFILTER` and removing the effect of any `KEEPFILTERS`, even if it's used after the statement. That's because the ALL* modifiers have higher execution priority than normal filters
-    
-    ![They are the same](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_6.png)
-    *They are the same*
-    
+- `ALL` shows a different behavior if used inside a `CALCULATE`, becoming a sort of `REMOVEFILTER` and removing the effect of any `KEEPFILTERS`, even if it's used after the statement. That's because the ALL\* modifiers have higher execution priority than normal filters
+  ![They are the same](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_6.png)
+  _They are the same_
 - `ALLSELECTED`, like `ALL`, has a different behavior: see Chapter 14 and be very careful when using it, it should be avoided!
 
 ## 6 ✨ Variables
@@ -235,7 +231,7 @@ Pay attention to the definition order: a variable can't reference another variab
 Another peculiarity is the name: it must be different from every existing table's name, otherwise DAX gets confused. A best practice is to use long names precisely describing their purpose. The engine, when creating variables, uses two `__`as prefix
 
 ![good example about variables’ immutability](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_7.png)
-*Here’s a good example about variables’ immutability*
+_Here’s a good example about variables’ immutability_
 
 ## 7 🔄 Working with iterators and with CALCULATE
 
@@ -271,7 +267,7 @@ By default, PowerBI creates a hidden date table for every Time/DateTime column o
 - `SAMEPERIODLASTYEAR` returns a set of dates shifted one year before
 - `DATEADD` is very powerful and flexible: you can decide how much to add (a number) and what (years, quarters, months, etc...), such as `PQ Sales := CALCULATE ( [Sales Amount], DATEADD ( 'Date'[Date], -1, QUARTER ) )`. It always returns days included in the Date table and it can become cumbersome during some edge cases, read well this section.
 - `PARALLELPERIOD` is useful if you are looking for the entire period despite the presence of row filters. So, for example, if you want the result of the previous quarter in the rows January, February, March write `PQ Total Sales :=CALCULATE ( [Sales Amount], PARALLELPERIOD ( 'Date'[Date], -1, QUARTER ) )` and see the results in the example:
-![PARALLELPERIOD](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_8.png)
+  ![PARALLELPERIOD](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_8.png)
 
 - The functions `PREVIOUSYEAR, PREVIOUSQUARTER, PREVIOUSMONTH, PREVIOUSDAY, NEXTYEAR, NEXTQUARTER, NEXTMONTH,` and `NEXTDAY` are using the same 'independent' context
 - `DATESINPERIOD` is a classic for calculating the Moving Annual Total (the total of the last 12 months). There are some alternative examples with `DATESBETWEEN`
@@ -305,7 +301,7 @@ E.g. having an intermediate table created manually like `NewTable = {’Red’,�
 
 ## 11 ❓ Handling hierarchies
 
-Hierarchies aren't natively supported on DAX formulas, thus implementing them can be very tricky. A classic example is when a measure behaves differently based on the active hierarchy, for example with product categories and subcategories. In the book's example, a combination of  `PercOnSubcategory := DIVIDE ( [Sales Amount], CALCULATE ( [Sales Amount], ALLSELECTED ( Product[Product Name] ) ) )` is used for calculating the percentage of each subcategory compared to all the rows of the selected category. Changing the element in the hierarchy can be done by replacing the argument in `ALLSELECTED` (Category, Product Name, etc...).
+Hierarchies aren't natively supported on DAX formulas, thus implementing them can be very tricky. A classic example is when a measure behaves differently based on the active hierarchy, for example with product categories and subcategories. In the book's example, a combination of `PercOnSubcategory := DIVIDE ( [Sales Amount], CALCULATE ( [Sales Amount], ALLSELECTED ( Product[Product Name] ) ) )` is used for calculating the percentage of each subcategory compared to all the rows of the selected category. Changing the element in the hierarchy can be done by replacing the argument in `ALLSELECTED` (Category, Product Name, etc...).
 
 `ISINSCOPE` is a useful function that simulates a hierarchy focus, returning TRUE if the arg column is filtered and has been used for grouping (thus both row and filter contexts are using it). In the book, it is used for showing BLANK if the calculation is not about the selected hierarchy.
 
@@ -374,7 +370,7 @@ Expanded Tables are the core of DAX. Remember that every time you select a table
 
 When selecting a `CALCULATE` filter on the Color column of Product, we can observe that the filter context uses all the linked tables, including Sales! Using `RELATED`, you can work on the related tables existing in the expanded table.
 
-### The ALL* functions
+### The ALL\* functions
 
 These functions can become extremely cumbersome, especially when used inside a `CALCULATE`. Pay a lot of attention to them:
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta charset="UTF-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
@@ -32,7 +32,7 @@
 <meta property="og:description" content="Disclaimer: this will be a long, long post, written in my own way. It’s essentially a dump of my personal notes, taken when reading “The Definitive Guide to DAX” written by Alberto Ferrari and Marco Russo. At my new workplace I’m going to use PowerBI and DAX a lot, thus my boss suggested me to read the book.
 Yep, it is big and very technical, with 700&#43; pages rich in contents, but trust me, that’s the “Bible”, a must-read for anyone willing to work with PowerBI and DAX." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mutt0-ds.github.io/posts/2022/09/personal-notes-about-dax-definitive-guide/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/posts/2022/09/personal-notes-about-dax-definitive-guide/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-28T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-09-28T00:00:00+00:00" /><meta property="og:site_name" content="Mutt0-ds Notes" />
 
@@ -279,7 +279,7 @@ Personal Notes about The Definitive Guide to DAX | Mutt0-ds Notes
 <p>✨ Useful</p>
 <p>❓ Minor insights</p>
 <h2 id="1--what-is-dax">1 ✨ What is DAX?</h2>
-<p>Introductive chapter that introduces the concept of  <strong>D</strong>ata <strong>A</strong>nalysis e<strong>X</strong>pressions, there’s nothing more to add. There’s an interesting presentation of all the different points of view of possible users (the ones who come from an Excel Background, or a PowerBI one, a SQL one…). Personally, I felt in synthony with the ‘typical’ SQL user: learning that the <code>FILTER</code> DAX clause is the equivalent of a <code>WHERE</code> immediately cleared some doubts I had.</p>
+<p>Introductive chapter that introduces the concept of <strong>D</strong>ata <strong>A</strong>nalysis e<strong>X</strong>pressions, there’s nothing more to add. There’s an interesting presentation of all the different points of view of possible users (the ones who come from an Excel Background, or a PowerBI one, a SQL one…). Personally, I felt in synthony with the ‘typical’ SQL user: learning that the <code>FILTER</code> DAX clause is the equivalent of a <code>WHERE</code> immediately cleared some doubts I had.</p>
 <h2 id="2--introducing-dax">2 🔄 Introducing DAX</h2>
 <p>Very important section for beginners, explaining the most common functions and the difference between calculated column and measure.</p>
 <p>It introduces the different data types, which are the classic ones (Integer, Float, Currency, Datetime, Boolean, Strings, Binary), with just a new type, Variant, which is DAX-specific and simply means that there could be different data types (such as <code>Any</code>in Python).</p>
@@ -328,7 +328,7 @@ Personal Notes about The Definitive Guide to DAX | Mutt0-ds Notes
 <p>ALL* gets introduced too, they are extremely powerful: <code>ALL, ALLEXCEPT, ALLCROSSFILTERED, ALLNOBLANKROW, ALLSELECTED</code>. <code>ALL</code> IGNORES EVERY ACTIVE FILTER in the report and it’s useful when you calculate ratios and percentages compared to the total, regardless of filters and users’ selections. It returns a list of unique values, requiring a table or a list of columns, not an expression; if you use <code>ALL</code> with more than a column, it will give back all the possible unique combinations existing in the table. <code>ALLEXCEPT</code> can be translated as ‘take everything from that table except the following columns’. The rest will be explained in Chapter 14.</p>
 <h3 id="valuesdistinctblank">VALUES,DISTINCT,BLANK</h3>
 <p>Like <code>ALL</code>, <code>VALUES</code> and <code>DISTINCT</code> return a list of unique values too… With a big difference. <code>VALUES</code> returns the visible values, so it’s not ignoring the active filters, and the same does <code>DISTINCT</code>. They are different in the case of invalid relations. There’s a great example in the chapter: if, for example, a product is missing from the Product table, the join between it and the Sales table will have blank rows in the results. In this case, <code>DISTINCT</code> gets confused when calculating the average amount for product, while <code>VALUES</code> considers the blank row correctly in the division. TL;DR: use <code>VALUES</code> most of the cases.</p>
-<p>There’s a brief insight  about <code>HASONEVALUE</code>, a shortcut for <code>IF ( COUNTROWS ( VALUES ( [colonna] ) ) = 1, VALUES ( [colonna] )</code>; it has a second argument for returning a message if there’s more than a value: it can be useful for cards and elements that expect only one value to be selected.</p>
+<p>There’s a brief insight about <code>HASONEVALUE</code>, a shortcut for <code>IF ( COUNTROWS ( VALUES ( [colonna] ) ) = 1, VALUES ( [colonna] )</code>; it has a second argument for returning a message if there’s more than a value: it can be useful for cards and elements that expect only one value to be selected.</p>
 <h2 id="4--understanding-evaluation-context">4 ⚠️ Understanding Evaluation Context</h2>
 <p>⚠️️ The authors say that this chapter and #5 are the most important of the entire book. If you understand context, you will avoid the most common errors when you code in DAX. Read it several times until you understand everything!</p>
 <p>In DAX, there are two completely different contexts impacting your formulas. <strong>Filter Context</strong>, which <strong>filters data</strong>, and <strong>Row Context</strong>, which <strong>iterates through tables</strong>. A context is, in short, the environment where the expression is evaluated.</p>
@@ -337,32 +337,32 @@ Personal Notes about The Definitive Guide to DAX | Mutt0-ds Notes
 <p>Let’s take a table with a measure, say <code>TotalSales = SUMX(Sales[Amount]</code>. A table has rows and cells. Every expression is evaluated based on its cell, which in turn is modified based on active filters and the selected column. So, the TotalSales measure will be, say, 30Mln if I put it into a card with no filters and just a cell, but if I use it in a table with multiple rows the is split based on the row’s contents (imagine a division by Area: Europe, US, Asia → 30mln will become 10mln x 3 cells. Behind the scenes, DAX is adding a <code>FILTER</code> saying <code>FILTER (Area = ‘Europe’)</code> and so on, for every cell). So, the filter context changes the outcome of the expression considering the filters that become active if, for example, it’s inside a specific cell of a table. What’s important is the context of the cell containing it: which is precisely the filter context.</p>
 <h3 id="row-context">Row Context</h3>
 <p>The example I recommend to read carefully uses this calculated column <code>Sales[Gross Margin] = Sales[Quantity] * ( Sales[Net Price] - Sales[Unit Cost] )</code>. Now remember, this column reasons in terms of rows, so, how does DAX manages to understand which row is working on? Using row context, which is basically a cursor. Row context, then, calculates the expression by considering the row that contains it.</p>
-<p>If you write Gross Margin as a measure, you lose the row context, thus you need the iterative version ending with X: <code>Gross Margin := SUMX ( Sales, Sales[Quantity] * ( Sales[Net Price] - Sales[Unit Cost] ) )</code>  . The iterative version works because it uses SUMX, capable of keeping the row context. <code>Gross Margin := Sales[Quantity] * ( Sales[Net Price] - Sales[Unit Cost] )</code> is invalid.</p>
+<p>If you write Gross Margin as a measure, you lose the row context, thus you need the iterative version ending with X: <code>Gross Margin := SUMX ( Sales, Sales[Quantity] * ( Sales[Net Price] - Sales[Unit Cost] ) )</code> . The iterative version works because it uses SUMX, capable of keeping the row context. <code>Gross Margin := Sales[Quantity] * ( Sales[Net Price] - Sales[Unit Cost] )</code> is invalid.</p>
 <h3 id="other-notes">Other Notes</h3>
 <p>… The chapter goes on with several interesting examples and questions for understanding the contexts, especially when used in filters.</p>
 <p>In the case of complex functions that work in two different contexts, there’s the <code>EARLIER</code> function for accessing the more external layer. Honestly, I hope to never use it, it’s extremely tricky, read the book to understand how the switch works, but even the authors admit that variables work better.</p>
 <p>Golden rule: <strong>row context iterates, filter context filters</strong>. Thus you can’t use the row context without a <code>RELATED/RELATEDTABLE</code>. On the contrary, the filter context uses relationships automatically, but be aware that its behavior can be different depending on the relationship’s direction (see chapter 15). I point out a very interesting example with <code>SUMMARIZE</code> in the case of the calculation of the average customers’ age without including duplicates: the code shows how to include a different column, read it carefully.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>Correct Average :<span style="color:#f92672">=</span> AVERAGEX ( <span style="color:#75715e">-- Iterate on 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		SUMMARIZE ( <span style="color:#75715e">-- all the existing combinations 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Sales, <span style="color:#75715e">-- that exist in Sales 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Sales[CustomerKey], <span style="color:#75715e">-- of the customer key and 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Sales[Customer Age] <span style="color:#75715e">-- the customer age 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	), <span style="color:#75715e">-- 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Sales[Customer Age] <span style="color:#75715e">-- and average the customer&#39;s age 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>Correct Average :<span style="color:#f92672">=</span> AVERAGEX ( <span style="color:#75715e">-- Iterate on
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		SUMMARIZE ( <span style="color:#75715e">-- all the existing combinations
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Sales, <span style="color:#75715e">-- that exist in Sales
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Sales[CustomerKey], <span style="color:#75715e">-- of the customer key and
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Sales[Customer Age] <span style="color:#75715e">-- the customer age
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	), <span style="color:#75715e">--
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Sales[Customer Age] <span style="color:#75715e">-- and average the customer&#39;s age
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>) <span style="color:#75715e">-- TODO: you should break it down in a variable and use AVERAGEX too
 </span></span></span></code></pre></div><h2 id="5--understanding-calculate-and-calculatetable">5 ⚠️ Understanding CALCULATE and CALCULATETABLE</h2>
-<p><code>CALCULATE</code> is the most important and powerful DAX function and the one with significant nuances to understand. <code>CALCULATETABLE</code>  is the same but returns a table. Their complexity is caused by their unique characteristic: <strong>they can create new filters</strong> thus modifying the filter context seen in Chapter 4. Here again, the authors recommend reading the section several times until perfectly understand it.</p>
+<p><code>CALCULATE</code> is the most important and powerful DAX function and the one with significant nuances to understand. <code>CALCULATETABLE</code> is the same but returns a table. Their complexity is caused by their unique characteristic: <strong>they can create new filters</strong> thus modifying the filter context seen in Chapter 4. Here again, the authors recommend reading the section several times until perfectly understand it.</p>
 <p>The formula is <code>CALCULATE ( Expression, Condition1, ... ConditionN )</code>, accepting every expression as a first parameter, then N filters. For filters, which are tables or lists of values, you can use an expression like <code>'Product'[Brand] = &quot;Contoso”</code>; behind the scenes, DAX changes it to <code>FILTER ( ALL ( 'Product'[Brand] ), 'Product'[Brand] = &quot;Contoso&quot; )</code>. For readability, use the compact form, but be aware of some edge cases that require the extended <code>FILTER</code> one.</p>
 <p>In short, <code>CALCULATE</code>:</p>
 <ul>
 <li>Makes a copy of the existing filter context</li>
 <li>Evaluates every filter in its arguments, and, for each condition, creates a list of valid values for the specific column (in the example, it will be <code>{’Contoso}’</code>). It’s like a <code>FILTER ALL</code></li>
-<li>If  2+ filters concern the same columns, they will be joined with an <code>AND</code>statement</li>
+<li>If 2+ filters concern the same columns, they will be joined with an <code>AND</code>statement</li>
 <li>Uses the new condition for replacing the existing filters (thus ignoring previous selections or filters!) or adding it to the context if they are new</li>
 <li>If there’s a row context, it applies a <strong>CONTEXT TRANSITION</strong> (VERY IMPORTANT, SEE BELOW) transforming it into a filter context and removing the aforementioned row context</li>
 <li>When it’s done, it applies the new filter context to the model, makes the calculation then comes back to the original situation. It’s just a temporary modification</li>
 </ul>
-<p>Now, remember: since <code>CALCULATE</code>  uses a <code>FILTER ( ALL)</code> behind the scenes, if you want to avoid losing all the previous filters you have to use the extended form with <code>VALUES</code> in the argument instead of <code>ALL</code>. With this method, the existing filters will be kept. I point out another interesting example that shows a Ratio in relationship with the unfiltered Sales table, while the Date table has to keep its filters.</p>
+<p>Now, remember: since <code>CALCULATE</code> uses a <code>FILTER ( ALL)</code> behind the scenes, if you want to avoid losing all the previous filters you have to use the extended form with <code>VALUES</code> in the argument instead of <code>ALL</code>. With this method, the existing filters will be kept. I point out another interesting example that shows a Ratio in relationship with the unfiltered Sales table, while the Date table has to keep its filters.</p>
 <h3 id="filtering-with-complex-conditions">Filtering with complex conditions</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#f92672">//</span> WRONG<span style="color:#f92672">!</span> There <span style="color:#66d9ef">are</span> two different columns, you have <span style="color:#66d9ef">to</span> use the extended form
 </span></span><span style="display:flex;"><span>Sales <span style="color:#66d9ef">Large</span> Amount :<span style="color:#f92672">=</span>
@@ -373,14 +373,14 @@ Personal Notes about The Definitive Guide to DAX | Mutt0-ds Notes
 </span></span><span style="display:flex;"><span> FILTER (
 </span></span><span style="display:flex;"><span>	 <span style="color:#66d9ef">ALL</span> ( Sales[Quantity], Sales[Net Price] ),
 </span></span><span style="display:flex;"><span>	 Sales[Quantity] <span style="color:#f92672">*</span> Sales[Net Price] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1000</span> ))
-</span></span></code></pre></div><p>There’s an example with a slicer trying to filter a table with a measure using <code>CALCULATE</code>, but obviously since there’s an <code>ALL</code>in the compact form, the slicer doesn’t work! You must use a <code>KEEPFILTERS</code>  for wrapping the filter condition.</p>
+</span></span></code></pre></div><p>There’s an example with a slicer trying to filter a table with a measure using <code>CALCULATE</code>, but obviously since there’s an <code>ALL</code>in the compact form, the slicer doesn’t work! You must use a <code>KEEPFILTERS</code> for wrapping the filter condition.</p>
 <h3 id="context-transition">Context Transition</h3>
 <blockquote>
 <p><code>CALCULATE</code> invalidates any row context. It automatically adds as filter arguments all the columns that are currently being iterated in any row context—filtering their actual value in the row being iterated
 In short, <code>CALCULATE</code> transforms the row context into a new filter to be added to the filter context, since there’s no way for it to understand the row context. That’s the transition!</p>
 </blockquote>
 <p>An excellent example for reviewing the concept. The formula <code>Sum Num Of Sales := SUMX ( Sales, COUNTROWS ( Sales ) )</code>, surprisingly, shows the squared <code>COUNTROWS</code>! In fact, the amount of Contoso rows is, say, 37000, and <code>SUMX</code> iterates 37000 times for each row, thus the outcome will be 37000*37000 since it’s targeting the row context!</p>
-<p>Another example:  <code>Sales Amount := SUMX ( Sales, CALCULATE ( SUM ( Sales[Quantity])))</code>. The secret is that, behind the scenes, CALCULATE is using row-by-row filters since it’s following the row context in the SUM, thus it’s calculating <code>Tot = CALCULATE(SUM ( Sales[Quantity] ), Sales[Product] = “A”)  + CALCULATE(SUM ( Sales[Quantity] ), Sales[Product] = “B”)</code>&hellip; for n times.</p>
+<p>Another example: <code>Sales Amount := SUMX ( Sales, CALCULATE ( SUM ( Sales[Quantity])))</code>. The secret is that, behind the scenes, CALCULATE is using row-by-row filters since it’s following the row context in the SUM, thus it’s calculating <code>Tot = CALCULATE(SUM ( Sales[Quantity] ), Sales[Product] = “A”)  + CALCULATE(SUM ( Sales[Quantity] ), Sales[Product] = “B”)</code>&hellip; for n times.</p>
 <ul>
 <li>The context transition (from now, CT) is expensive. Use <code>CALCULATE</code>sparingly, because during iterations it will apply filters on every row</li>
 <li>CT doesn’t filter one row only! <strong>The new filter filters all the rows with the same value</strong>! So, if in the example above <code>Sales[Product] = “A”</code>, there could be more than one result based on the input data</li>
@@ -410,14 +410,10 @@ In short, <code>CALCULATE</code> transforms the row context into a new filter to
 <p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_5.png" alt="CALCULATE KEEPFILTERS example">
 <em><code>CALCULATE ( [Sales Amount], KEEPFILTERS ( 'Product'[Category] = &quot;Audio&quot; ) )</code></em></p>
 <ul>
-<li>
-<p><code>ALL</code> shows a different behavior if used inside a <code>CALCULATE</code>, becoming a sort of <code>REMOVEFILTER</code> and removing the effect of any <code>KEEPFILTERS</code>, even if it&rsquo;s used after the statement. That&rsquo;s because the ALL* modifiers have higher execution priority than normal filters</p>
-<p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_6.png" alt="They are the same">
-<em>They are the same</em></p>
-</li>
-<li>
-<p><code>ALLSELECTED</code>, like <code>ALL</code>, has a different behavior: see Chapter 14 and be very careful when using it, it should be avoided!</p>
-</li>
+<li><code>ALL</code> shows a different behavior if used inside a <code>CALCULATE</code>, becoming a sort of <code>REMOVEFILTER</code> and removing the effect of any <code>KEEPFILTERS</code>, even if it&rsquo;s used after the statement. That&rsquo;s because the ALL* modifiers have higher execution priority than normal filters
+<img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_6.png" alt="They are the same">
+<em>They are the same</em></li>
+<li><code>ALLSELECTED</code>, like <code>ALL</code>, has a different behavior: see Chapter 14 and be very careful when using it, it should be avoided!</li>
 </ul>
 <h2 id="6--variables">6 ✨ Variables</h2>
 <p>They are important for code readability and performance optimization, use them if you see repetitions. The only thing to remember well is that they are immutable CONSTANTS calculated at the beginning of the calculation containing them. Every variables must be introduced with <code>VAR</code>.
@@ -495,7 +491,7 @@ Pay attention to the definition order: a variable can&rsquo;t reference another 
 <p>Data lineage (<a href="https://www.sqlbi.com/articles/understanding-data-lineage-in-dax/">simply explained here</a>) is a tag that identifies the original column in the data model that we are querying. When selecting some values, PowerBI keeps some metadata, including the lineage specifying which &lsquo;connected&rsquo; columns can be queried using the selected columns. If you use some expressions such as <code>ADDCOLUMNS</code>, you&rsquo;ll lose the lineage, thus you will just get a raw outpout. This is important to understand for avoiding annoying side effects with filters and slicers.</p>
 <p>E.g. having an intermediate table created manually like <code>NewTable = {’Red’,’Blue’}</code>, it can&rsquo;t possibly know to be originated from the column <code>Product[Color]</code>, losing all the original relationships. A slicer using NewTable won&rsquo;t filter anything! With <code>TREATAS</code> you can forcefully assign another table&rsquo;s characteristics (they must have the same structure of course!). Another good example is when you&rsquo;re creating a table with custom years and you want to use it as a Date table, applying a personalized filter without iterating. Check them out.</p>
 <h2 id="11--handling-hierarchies">11 ❓ Handling hierarchies</h2>
-<p>Hierarchies aren&rsquo;t natively supported on DAX formulas, thus implementing them can be very tricky. A classic example is when a measure behaves differently based on the active hierarchy, for example with product categories and subcategories. In the book&rsquo;s example, a combination of  <code>PercOnSubcategory := DIVIDE ( [Sales Amount], CALCULATE ( [Sales Amount], ALLSELECTED ( Product[Product Name] ) ) )</code> is used for calculating the percentage of each subcategory compared to all the rows of the selected category. Changing the element in the hierarchy can be done by replacing the argument in <code>ALLSELECTED</code> (Category, Product Name, etc&hellip;).</p>
+<p>Hierarchies aren&rsquo;t natively supported on DAX formulas, thus implementing them can be very tricky. A classic example is when a measure behaves differently based on the active hierarchy, for example with product categories and subcategories. In the book&rsquo;s example, a combination of <code>PercOnSubcategory := DIVIDE ( [Sales Amount], CALCULATE ( [Sales Amount], ALLSELECTED ( Product[Product Name] ) ) )</code> is used for calculating the percentage of each subcategory compared to all the rows of the selected category. Changing the element in the hierarchy can be done by replacing the argument in <code>ALLSELECTED</code> (Category, Product Name, etc&hellip;).</p>
 <p><code>ISINSCOPE</code> is a useful function that simulates a hierarchy focus, returning TRUE if the arg column is filtered and has been used for grouping (thus both row and filter contexts are using it). In the book, it is used for showing BLANK if the calculation is not about the selected hierarchy.</p>
 <p><img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_9.png" alt="ISINSCOPE 1">
 <img src="https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static//images/definitive_guide_dax/dax_10.png" alt="ISINSCOPE 2"></p>
@@ -803,17 +799,17 @@ EVALUATE
             <h5>Tags</h5>
             <ul class="tags-ul list-unstyled list-inline">
               
-              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/dax" target="_blank">dax</a></li>
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/dax" target="_blank">dax</a></li>
               
-              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/powerbi" target="_blank">powerbi</a></li>
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/powerbi" target="_blank">powerbi</a></li>
               
-              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/study" target="_blank">study</a></li>
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/study" target="_blank">study</a></li>
               
-              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/dashboard" target="_blank">dashboard</a></li>
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/dashboard" target="_blank">dashboard</a></li>
               
-              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/notes" target="_blank">notes</a></li>
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/notes" target="_blank">notes</a></li>
               
-              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/sql" target="_blank">sql</a></li>
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/sql" target="_blank">sql</a></li>
               
             </ul>
           </aside>
@@ -825,17 +821,17 @@ EVALUATE
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=Personal%20Notes%20about%20The%20Definitive%20Guide%20to%20DAX&url=https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2022%2f09%2fpersonal-notes-about-dax-definitive-guide%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=Personal%20Notes%20about%20The%20Definitive%20Guide%20to%20DAX&url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2f09%2fpersonal-notes-about-dax-definitive-guide%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=Personal%20Notes%20about%20The%20Definitive%20Guide%20to%20DAX: https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2022%2f09%2fpersonal-notes-about-dax-definitive-guide%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Personal%20Notes%20about%20The%20Definitive%20Guide%20to%20DAX: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2f09%2fpersonal-notes-about-dax-definitive-guide%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=Personal%20Notes%20about%20The%20Definitive%20Guide%20to%20DAX&amp;body=Check%20out%20this%20site https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2022%2f09%2fpersonal-notes-about-dax-definitive-guide%2f'>
+                  <a target="_blank" href='mailto:?subject=Personal%20Notes%20about%20The%20Definitive%20Guide%20to%20DAX&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2f09%2fpersonal-notes-about-dax-definitive-guide%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -902,6 +898,30 @@ EVALUATE
             <div class="card h-100">
                 
                 <div class="card-header">
+                    <a href="/posts/2024/07/the-trick-measure-description-powerbi/">
+                        <img src="/images/ai_superpowers/cover.jpg" class="card-img-top" alt="The pro trick for Measure Descriptions in Power BI">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2024/07/the-trick-measure-description-powerbi/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="The pro trick for Measure Descriptions in Power BI">The pro trick for Measure Descriptions in Power BI</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>Today I want to show you a very useful trick that we are using for automatically describing our measures and calculated columns in Power BI. A big problem we had in the past, and source of constant requests from our most advanced users (the one who were connecting live to the Power BI datasets and …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jul 10, 2024</span>
+                    <a href="/posts/2024/07/the-trick-measure-description-powerbi/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
                     <a href="/posts/2024/06/ai-superpowers-tools/">
                         <img src="/images/ai_superpowers/cover.jpg" class="card-img-top" alt="Giving our AI superpowers with OpenAI Tools">
                     </a>
@@ -943,31 +963,6 @@ Let&rsquo;s simplify things a bit. In this …</p>
                 <div class="mt-auto card-footer">
                     <span class="float-start">Apr 1, 2024</span>
                     <a href="/posts/2024/04/types-powerbi-connection/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 pt-2">
-            <div class="card h-100">
-                
-                <div class="card-header">
-                    <a href="/posts/2023/11/ai-tweaked-data-saturdays-notes/">
-                        <img src="/images/data_saturdays/cover.jpg" class="card-img-top" alt="My AI-tweaked Data Saturdays 23 Notes">
-                    </a>
-                </div>
-                
-                <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="/posts/2023/11/ai-tweaked-data-saturdays-notes/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="My AI-tweaked Data Saturdays 23 Notes">My AI-tweaked Data Saturdays 23 Notes</h5>
-                    </a>
-                    <div class="card-text secondary-font">
-                        <p>Last Saturday I had the privilege of attending Data Saturdays #37 at Parma, an event series focused on Microsoft data platform technologies. Covering AI, Database, Business Intelligence, and Cloud, the event promised insights from top experts in Italy (and beyond).
-Of course, I wrote down (almost) …</p>
-                    </div>
-                </div>
-                <div class="mt-auto card-footer">
-                    <span class="float-start">Nov 19, 2023</span>
-                    <a href="/posts/2023/11/ai-tweaked-data-saturdays-notes/" class="float-end btn btn-outline-info btn-sm">Read</a>
                 </div>
             </div>
         </div>
@@ -1025,7 +1020,7 @@ Of course, I wrote down (almost) …</p>
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
             <div class="pb-2">
-                <a href="https://mutt0-ds.github.io/" title="Mutt0-ds Notes">
+                <a href="http://localhost:1313/" title="Mutt0-ds Notes">
                     <img alt="Footer logo" src="/fav.png"
                         height="40px" width="40px">
                 </a>
