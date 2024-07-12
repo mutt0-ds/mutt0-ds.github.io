@@ -1,10 +1,10 @@
 ---
 title: "Personal Notes about Simply Said"
-date: 2023-07-07
+date: 2024-07-12
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/simply_said/cover.png
-draft: true
+draft: false
 author: "Mutt0-ds"
 tags:
   - presentation
@@ -15,35 +15,42 @@ tags:
   - soft-skills
 ---
 
-"Simply Said" is the best communication book I've read recently.
+["Simply Said"](https://www.amazon.com/Simply-Said-Communicating-Better-Beyond/dp/1119285283) is the best communication book I've read recently.
 I discovered it thanks to Jordan Cutler (who runs an [amazing tech newsletter](https://read.highgrowthengineer.com/)) and at first, I considered it a standard communications book. Things like "listen to others," "be positive," blah blah.
 
-I was wrong. "Simply Said" is much more than that.
+I was wrong. **"Simply Said" is much more than that**.
 That's why I condensed most of its wisdom into this blog post, and I hope it will inspire you to read it as well.
 
-It's the first book I've found that takes a real deep dive into complex communication contexts, from giving a speech to thousands of people to making a toast to your lifelong buddy, and every single time it gives solid tips. The author, [Jay Sullivan](https://www.jaysullivanbooks.com/), runs a consultancy firm to train executives in improving their communication skills, and you can see the pragmatism and real-life stories shining through his words. This guy knows his stuff.
+It's the first book I've found that takes a real deep dive into complex communication contexts, from giving a speech to thousands of people to making a toast to your lifelong buddy, and every-single-time it gives solid tips. The author, [Jay Sullivan](https://www.jaysullivanbooks.com/), runs a consultancy firm to train executives in improving their communication skills, and you can see the pragmatism and real-life stories shining through his words. This guy knows his stuff.
 
 Writing this kind of post takes a while. I have to skim through all the notes I scribbled down, then rephrase them in a way that makes sense for someone who isn't reading the book. If you find some parts confusing or badly written, please send me a message so I can learn from your feedback!
 
-Legend:
-⭐ Key chapter
-❓ Less impactful chapter
+> **Legend**:
+>
+> ⭐ Key chapter
+>
+> ❓ Less impactful chapter
 
 # Key takeaways
 
-The main takeaway of the book is **"Focus on others"**. Be ready to read it dozens of times.
+The main takeaway of the book is **"Focus on others"**. Be ready to read these words dozens of times.
 
-That's because people don't care about YOU; they care about themselves. So, when talking to them, you need to explain why this benefits them and why they should invest their time in listening to you. Sullivan is quite repetitive on this, but he always provides practical examples to highlight the importance of this principle.
+That's because people don't care about YOU; they care about themselves.
+
+So, when talking to them, you need to explain why this benefits them and why they should invest their time in listening to you. Sullivan is quite repetitive on this, but he always provides practical examples to highlight the importance of this principle.
 
 "Simply Said" is divided into five parts, each with its own key focus:
 
-Part 1 covers Sullivan’s general tips for making presentations that grab—and keep—the audience’s attention
-Part 2 discusses his tips for effective oral communication, including how to apply these ideas to different situations
-Part 3 focuses on improving your written communication in documents and emails
+- Part 1 covers Sullivan’s general tips for making presentations that grab—and keep—the audience’s attention
+- Part 2 discusses his tips for effective oral communication, including how to apply these ideas to different situations
+- Part 3 focuses on improving your written communication in documents and emails
 
-The final chapters were a bit outside of my comfort zone because I'm not a manager, but I still found a lot of useful information (though I took fewer notes):
-Part 4 interactions in meetings or in group activities
-Part 5 leadership advices and long-term planning
+The final chapters were a bit outside of my comfort zone because I'm not a manager. I still found a lot of useful information (though I took fewer notes):
+
+- Part 4: interactions in meetings or in group activities
+- Part 5: leadership advices and long-term planning
+
+![cover](https://m.media-amazon.com/images/S/aplus-media-library-service-media/69ed593b-76f8-4c66-9d94-e137c96e106f.__CR1,0,2997,927_PT0_SX970_V1___.jpg)
 
 # 📌 Section 1: Your Content
 
@@ -103,15 +110,14 @@ Most people are afraid of "public speaking," but **every conversation is public*
 
 The key is to be PRESENT to your audience: people who listen to you want to know that they have your attention. So, first of all, focus on THEM and don't look distracted or disconnected. How?
 
-- **Eye Contact**: Do not scan your audience; your brain can't process so much information while talking, and you risk panicking or getting confused. **⭐ Make eye contact with one person at a time for a complete sentence, about 5-7 seconds**. It takes less energy to be nice to everyone than to figure out who you need to be nice to. So, looking at all the people in the room in the eye, one by one, slowly, will have several benefits. It will calm you, help avoid distractions, and build rapport with the audience as they see you are interested in them.
-
+- **Eye Contact**
+  Do not scan your audience; your brain can't process so much information while talking, and you risk panicking or getting confused.
+  **⭐ Make eye contact with one person at a time for a complete sentence, about 5-7 seconds**. It takes less energy to be nice to everyone than to figure out who you need to be nice to. So, looking at all the people in the room in the eye, one by one, slowly, will have several benefits. It will calm you, help avoid distractions, and build rapport with the audience as they see you are interested in them.
 - **Voice**:
-
   - **Slow Down**: When nervous, people speak faster, making the audience feel overwhelmed
   - Volume: Your goal is to be heard by people even at the back of the room. Ask for feedback about the volume
   - Tone: Smile; your tone will sound more optimistic, even on the phone
   - Inflection: Your voice should emphasize the important ideas you want to convey. Avoid the up-speak tone that sounds like a question. Use sharp, clear, definitive hand gestures to express yourself
-
 - **Body Language**:
   - Hands: Keep them steady. If you keep them moving too much, you will look nervous or distracted. If you have a PC or notebook, keep your hands there. Leverage gestures: you can almost never be too distracting with gestures; they are great ways to convey attention
   - Face: **SMILE**. You should look like you want to meet your audience
