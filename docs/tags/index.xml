@@ -2,584 +2,584 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://mutt0-ds.github.io/tags/</link>
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Communication</title>
-      <link>http://localhost:1313/tags/communication/</link>
+      <link>https://mutt0-ds.github.io/tags/communication/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/communication/</guid>
+      <guid>https://mutt0-ds.github.io/tags/communication/</guid>
       <description></description>
     </item>
     <item>
       <title>Listening</title>
-      <link>http://localhost:1313/tags/listening/</link>
+      <link>https://mutt0-ds.github.io/tags/listening/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/listening/</guid>
+      <guid>https://mutt0-ds.github.io/tags/listening/</guid>
       <description></description>
     </item>
     <item>
       <title>Notes</title>
-      <link>http://localhost:1313/tags/notes/</link>
+      <link>https://mutt0-ds.github.io/tags/notes/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/notes/</guid>
+      <guid>https://mutt0-ds.github.io/tags/notes/</guid>
       <description></description>
     </item>
     <item>
       <title>Presentation</title>
-      <link>http://localhost:1313/tags/presentation/</link>
+      <link>https://mutt0-ds.github.io/tags/presentation/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/presentation/</guid>
+      <guid>https://mutt0-ds.github.io/tags/presentation/</guid>
       <description></description>
     </item>
     <item>
       <title>Soft-Skills</title>
-      <link>http://localhost:1313/tags/soft-skills/</link>
+      <link>https://mutt0-ds.github.io/tags/soft-skills/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/soft-skills/</guid>
+      <guid>https://mutt0-ds.github.io/tags/soft-skills/</guid>
       <description></description>
     </item>
     <item>
       <title>Speaking</title>
-      <link>http://localhost:1313/tags/speaking/</link>
+      <link>https://mutt0-ds.github.io/tags/speaking/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/speaking/</guid>
+      <guid>https://mutt0-ds.github.io/tags/speaking/</guid>
       <description></description>
     </item>
     <item>
       <title>Ai</title>
-      <link>http://localhost:1313/tags/ai/</link>
+      <link>https://mutt0-ds.github.io/tags/ai/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ai/</guid>
+      <guid>https://mutt0-ds.github.io/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Api</title>
-      <link>http://localhost:1313/tags/api/</link>
+      <link>https://mutt0-ds.github.io/tags/api/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/api/</guid>
+      <guid>https://mutt0-ds.github.io/tags/api/</guid>
       <description></description>
     </item>
     <item>
       <title>Openai</title>
-      <link>http://localhost:1313/tags/openai/</link>
+      <link>https://mutt0-ds.github.io/tags/openai/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/openai/</guid>
+      <guid>https://mutt0-ds.github.io/tags/openai/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
+      <link>https://mutt0-ds.github.io/tags/python/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/python/</guid>
+      <guid>https://mutt0-ds.github.io/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
-      <link>http://localhost:1313/tags/tools/</link>
+      <link>https://mutt0-ds.github.io/tags/tools/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tools/</guid>
+      <guid>https://mutt0-ds.github.io/tags/tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Connection</title>
-      <link>http://localhost:1313/tags/connection/</link>
+      <link>https://mutt0-ds.github.io/tags/connection/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/connection/</guid>
+      <guid>https://mutt0-ds.github.io/tags/connection/</guid>
       <description></description>
     </item>
     <item>
       <title>Dataset</title>
-      <link>http://localhost:1313/tags/dataset/</link>
+      <link>https://mutt0-ds.github.io/tags/dataset/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/dataset/</guid>
+      <guid>https://mutt0-ds.github.io/tags/dataset/</guid>
       <description></description>
     </item>
     <item>
       <title>Directquery</title>
-      <link>http://localhost:1313/tags/directquery/</link>
+      <link>https://mutt0-ds.github.io/tags/directquery/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/directquery/</guid>
+      <guid>https://mutt0-ds.github.io/tags/directquery/</guid>
       <description></description>
     </item>
     <item>
       <title>Fabric</title>
-      <link>http://localhost:1313/tags/fabric/</link>
+      <link>https://mutt0-ds.github.io/tags/fabric/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/fabric/</guid>
+      <guid>https://mutt0-ds.github.io/tags/fabric/</guid>
       <description></description>
     </item>
     <item>
       <title>Power-Bi</title>
-      <link>http://localhost:1313/tags/power-bi/</link>
+      <link>https://mutt0-ds.github.io/tags/power-bi/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/power-bi/</guid>
+      <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
       <description></description>
     </item>
     <item>
       <title>Semantic-Model</title>
-      <link>http://localhost:1313/tags/semantic-model/</link>
+      <link>https://mutt0-ds.github.io/tags/semantic-model/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/semantic-model/</guid>
+      <guid>https://mutt0-ds.github.io/tags/semantic-model/</guid>
       <description></description>
     </item>
     <item>
       <title>Azure</title>
-      <link>http://localhost:1313/tags/azure/</link>
+      <link>https://mutt0-ds.github.io/tags/azure/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/azure/</guid>
+      <guid>https://mutt0-ds.github.io/tags/azure/</guid>
       <description></description>
     </item>
     <item>
       <title>Data-Saturdays</title>
-      <link>http://localhost:1313/tags/data-saturdays/</link>
+      <link>https://mutt0-ds.github.io/tags/data-saturdays/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/data-saturdays/</guid>
+      <guid>https://mutt0-ds.github.io/tags/data-saturdays/</guid>
       <description></description>
     </item>
     <item>
       <title>Database</title>
-      <link>http://localhost:1313/tags/database/</link>
+      <link>https://mutt0-ds.github.io/tags/database/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/database/</guid>
+      <guid>https://mutt0-ds.github.io/tags/database/</guid>
       <description></description>
     </item>
     <item>
       <title>Sql-Server</title>
-      <link>http://localhost:1313/tags/sql-server/</link>
+      <link>https://mutt0-ds.github.io/tags/sql-server/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/sql-server/</guid>
+      <guid>https://mutt0-ds.github.io/tags/sql-server/</guid>
       <description></description>
     </item>
     <item>
       <title>T-Sql</title>
-      <link>http://localhost:1313/tags/t-sql/</link>
+      <link>https://mutt0-ds.github.io/tags/t-sql/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/t-sql/</guid>
+      <guid>https://mutt0-ds.github.io/tags/t-sql/</guid>
       <description></description>
     </item>
     <item>
       <title>Commute</title>
-      <link>http://localhost:1313/tags/commute/</link>
+      <link>https://mutt0-ds.github.io/tags/commute/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/commute/</guid>
+      <guid>https://mutt0-ds.github.io/tags/commute/</guid>
       <description></description>
     </item>
     <item>
       <title>Data-Analysis</title>
-      <link>http://localhost:1313/tags/data-analysis/</link>
+      <link>https://mutt0-ds.github.io/tags/data-analysis/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/data-analysis/</guid>
+      <guid>https://mutt0-ds.github.io/tags/data-analysis/</guid>
       <description></description>
     </item>
     <item>
       <title>Google-Maps</title>
-      <link>http://localhost:1313/tags/google-maps/</link>
+      <link>https://mutt0-ds.github.io/tags/google-maps/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/google-maps/</guid>
+      <guid>https://mutt0-ds.github.io/tags/google-maps/</guid>
       <description></description>
     </item>
     <item>
       <title>Traffic</title>
-      <link>http://localhost:1313/tags/traffic/</link>
+      <link>https://mutt0-ds.github.io/tags/traffic/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/traffic/</guid>
+      <guid>https://mutt0-ds.github.io/tags/traffic/</guid>
       <description></description>
     </item>
     <item>
       <title>Documentation</title>
-      <link>http://localhost:1313/tags/documentation/</link>
+      <link>https://mutt0-ds.github.io/tags/documentation/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/documentation/</guid>
+      <guid>https://mutt0-ds.github.io/tags/documentation/</guid>
       <description></description>
     </item>
     <item>
       <title>Markdown</title>
-      <link>http://localhost:1313/tags/markdown/</link>
+      <link>https://mutt0-ds.github.io/tags/markdown/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/markdown/</guid>
+      <guid>https://mutt0-ds.github.io/tags/markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>Obsidian</title>
-      <link>http://localhost:1313/tags/obsidian/</link>
+      <link>https://mutt0-ds.github.io/tags/obsidian/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/obsidian/</guid>
+      <guid>https://mutt0-ds.github.io/tags/obsidian/</guid>
       <description></description>
     </item>
     <item>
       <title>Second-Brain</title>
-      <link>http://localhost:1313/tags/second-brain/</link>
+      <link>https://mutt0-ds.github.io/tags/second-brain/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/second-brain/</guid>
+      <guid>https://mutt0-ds.github.io/tags/second-brain/</guid>
       <description></description>
     </item>
     <item>
       <title>Update</title>
-      <link>http://localhost:1313/tags/update/</link>
+      <link>https://mutt0-ds.github.io/tags/update/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/update/</guid>
+      <guid>https://mutt0-ds.github.io/tags/update/</guid>
       <description></description>
     </item>
     <item>
       <title>Gcp</title>
-      <link>http://localhost:1313/tags/gcp/</link>
+      <link>https://mutt0-ds.github.io/tags/gcp/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/gcp/</guid>
+      <guid>https://mutt0-ds.github.io/tags/gcp/</guid>
       <description></description>
     </item>
     <item>
       <title>Google-Distance-Matrix</title>
-      <link>http://localhost:1313/tags/google-distance-matrix/</link>
+      <link>https://mutt0-ds.github.io/tags/google-distance-matrix/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/google-distance-matrix/</guid>
+      <guid>https://mutt0-ds.github.io/tags/google-distance-matrix/</guid>
       <description></description>
     </item>
     <item>
       <title>Azure-Synapse</title>
-      <link>http://localhost:1313/tags/azure-synapse/</link>
+      <link>https://mutt0-ds.github.io/tags/azure-synapse/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/azure-synapse/</guid>
+      <guid>https://mutt0-ds.github.io/tags/azure-synapse/</guid>
       <description></description>
     </item>
     <item>
       <title>Build</title>
-      <link>http://localhost:1313/tags/build/</link>
+      <link>https://mutt0-ds.github.io/tags/build/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/build/</guid>
+      <guid>https://mutt0-ds.github.io/tags/build/</guid>
       <description></description>
     </item>
     <item>
       <title>Copilot</title>
-      <link>http://localhost:1313/tags/copilot/</link>
+      <link>https://mutt0-ds.github.io/tags/copilot/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/copilot/</guid>
+      <guid>https://mutt0-ds.github.io/tags/copilot/</guid>
       <description></description>
     </item>
     <item>
       <title>Microsoft</title>
-      <link>http://localhost:1313/tags/microsoft/</link>
+      <link>https://mutt0-ds.github.io/tags/microsoft/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/microsoft/</guid>
+      <guid>https://mutt0-ds.github.io/tags/microsoft/</guid>
       <description></description>
     </item>
     <item>
       <title>Automation</title>
-      <link>http://localhost:1313/tags/automation/</link>
+      <link>https://mutt0-ds.github.io/tags/automation/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/automation/</guid>
+      <guid>https://mutt0-ds.github.io/tags/automation/</guid>
       <description></description>
     </item>
     <item>
       <title>Ffmpeg</title>
-      <link>http://localhost:1313/tags/ffmpeg/</link>
+      <link>https://mutt0-ds.github.io/tags/ffmpeg/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ffmpeg/</guid>
+      <guid>https://mutt0-ds.github.io/tags/ffmpeg/</guid>
       <description></description>
     </item>
     <item>
       <title>Music-Reviews</title>
-      <link>http://localhost:1313/tags/music-reviews/</link>
+      <link>https://mutt0-ds.github.io/tags/music-reviews/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/music-reviews/</guid>
+      <guid>https://mutt0-ds.github.io/tags/music-reviews/</guid>
       <description></description>
     </item>
     <item>
       <title>Playwright</title>
-      <link>http://localhost:1313/tags/playwright/</link>
+      <link>https://mutt0-ds.github.io/tags/playwright/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/playwright/</guid>
+      <guid>https://mutt0-ds.github.io/tags/playwright/</guid>
       <description></description>
     </item>
     <item>
       <title>Tiktok</title>
-      <link>http://localhost:1313/tags/tiktok/</link>
+      <link>https://mutt0-ds.github.io/tags/tiktok/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tiktok/</guid>
+      <guid>https://mutt0-ds.github.io/tags/tiktok/</guid>
       <description></description>
     </item>
     <item>
       <title>Tts</title>
-      <link>http://localhost:1313/tags/tts/</link>
+      <link>https://mutt0-ds.github.io/tags/tts/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tts/</guid>
+      <guid>https://mutt0-ds.github.io/tags/tts/</guid>
       <description></description>
     </item>
     <item>
       <title>Video-Editing</title>
-      <link>http://localhost:1313/tags/video-editing/</link>
+      <link>https://mutt0-ds.github.io/tags/video-editing/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/video-editing/</guid>
+      <guid>https://mutt0-ds.github.io/tags/video-editing/</guid>
       <description></description>
     </item>
     <item>
       <title>Composite-Model</title>
-      <link>http://localhost:1313/tags/composite-model/</link>
+      <link>https://mutt0-ds.github.io/tags/composite-model/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/composite-model/</guid>
+      <guid>https://mutt0-ds.github.io/tags/composite-model/</guid>
       <description></description>
     </item>
     <item>
       <title>Features</title>
-      <link>http://localhost:1313/tags/features/</link>
+      <link>https://mutt0-ds.github.io/tags/features/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/features/</guid>
+      <guid>https://mutt0-ds.github.io/tags/features/</guid>
       <description></description>
     </item>
     <item>
       <title>Reporting</title>
-      <link>http://localhost:1313/tags/reporting/</link>
+      <link>https://mutt0-ds.github.io/tags/reporting/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/reporting/</guid>
+      <guid>https://mutt0-ds.github.io/tags/reporting/</guid>
       <description></description>
     </item>
     <item>
       <title>Version-Control</title>
-      <link>http://localhost:1313/tags/version-control/</link>
+      <link>https://mutt0-ds.github.io/tags/version-control/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/version-control/</guid>
+      <guid>https://mutt0-ds.github.io/tags/version-control/</guid>
       <description></description>
     </item>
     <item>
       <title>Plugin</title>
-      <link>http://localhost:1313/tags/plugin/</link>
+      <link>https://mutt0-ds.github.io/tags/plugin/</link>
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/plugin/</guid>
+      <guid>https://mutt0-ds.github.io/tags/plugin/</guid>
       <description></description>
     </item>
     <item>
       <title>Powerpoint</title>
-      <link>http://localhost:1313/tags/powerpoint/</link>
+      <link>https://mutt0-ds.github.io/tags/powerpoint/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/powerpoint/</guid>
+      <guid>https://mutt0-ds.github.io/tags/powerpoint/</guid>
       <description></description>
     </item>
     <item>
       <title>Study</title>
-      <link>http://localhost:1313/tags/study/</link>
+      <link>https://mutt0-ds.github.io/tags/study/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/study/</guid>
+      <guid>https://mutt0-ds.github.io/tags/study/</guid>
       <description></description>
     </item>
     <item>
       <title>Talk</title>
-      <link>http://localhost:1313/tags/talk/</link>
+      <link>https://mutt0-ds.github.io/tags/talk/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/talk/</guid>
+      <guid>https://mutt0-ds.github.io/tags/talk/</guid>
       <description></description>
     </item>
     <item>
       <title>Coverage</title>
-      <link>http://localhost:1313/tags/coverage/</link>
+      <link>https://mutt0-ds.github.io/tags/coverage/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/coverage/</guid>
+      <guid>https://mutt0-ds.github.io/tags/coverage/</guid>
       <description></description>
     </item>
     <item>
       <title>Notion</title>
-      <link>http://localhost:1313/tags/notion/</link>
+      <link>https://mutt0-ds.github.io/tags/notion/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/notion/</guid>
+      <guid>https://mutt0-ds.github.io/tags/notion/</guid>
       <description></description>
     </item>
     <item>
       <title>Pytest</title>
-      <link>http://localhost:1313/tags/pytest/</link>
+      <link>https://mutt0-ds.github.io/tags/pytest/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/pytest/</guid>
+      <guid>https://mutt0-ds.github.io/tags/pytest/</guid>
       <description></description>
     </item>
     <item>
       <title>Test</title>
-      <link>http://localhost:1313/tags/test/</link>
+      <link>https://mutt0-ds.github.io/tags/test/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/test/</guid>
+      <guid>https://mutt0-ds.github.io/tags/test/</guid>
       <description></description>
     </item>
     <item>
       <title>Devops</title>
-      <link>http://localhost:1313/tags/devops/</link>
+      <link>https://mutt0-ds.github.io/tags/devops/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/devops/</guid>
+      <guid>https://mutt0-ds.github.io/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>http://localhost:1313/tags/git/</link>
+      <link>https://mutt0-ds.github.io/tags/git/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/git/</guid>
+      <guid>https://mutt0-ds.github.io/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Pipeline</title>
-      <link>http://localhost:1313/tags/pipeline/</link>
+      <link>https://mutt0-ds.github.io/tags/pipeline/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/pipeline/</guid>
+      <guid>https://mutt0-ds.github.io/tags/pipeline/</guid>
       <description></description>
     </item>
     <item>
       <title>Source-Control</title>
-      <link>http://localhost:1313/tags/source-control/</link>
+      <link>https://mutt0-ds.github.io/tags/source-control/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/source-control/</guid>
+      <guid>https://mutt0-ds.github.io/tags/source-control/</guid>
       <description></description>
     </item>
     <item>
       <title>Tabular-Editor</title>
-      <link>http://localhost:1313/tags/tabular-editor/</link>
+      <link>https://mutt0-ds.github.io/tags/tabular-editor/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tabular-editor/</guid>
+      <guid>https://mutt0-ds.github.io/tags/tabular-editor/</guid>
       <description></description>
     </item>
     <item>
       <title>Acer</title>
-      <link>http://localhost:1313/tags/acer/</link>
+      <link>https://mutt0-ds.github.io/tags/acer/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/acer/</guid>
+      <guid>https://mutt0-ds.github.io/tags/acer/</guid>
       <description></description>
     </item>
     <item>
       <title>Experience</title>
-      <link>http://localhost:1313/tags/experience/</link>
+      <link>https://mutt0-ds.github.io/tags/experience/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/experience/</guid>
+      <guid>https://mutt0-ds.github.io/tags/experience/</guid>
       <description></description>
     </item>
     <item>
       <title>Dashboard</title>
-      <link>http://localhost:1313/tags/dashboard/</link>
+      <link>https://mutt0-ds.github.io/tags/dashboard/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/dashboard/</guid>
+      <guid>https://mutt0-ds.github.io/tags/dashboard/</guid>
       <description></description>
     </item>
     <item>
       <title>Dax</title>
-      <link>http://localhost:1313/tags/dax/</link>
+      <link>https://mutt0-ds.github.io/tags/dax/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/dax/</guid>
+      <guid>https://mutt0-ds.github.io/tags/dax/</guid>
       <description></description>
     </item>
     <item>
       <title>Powerbi</title>
-      <link>http://localhost:1313/tags/powerbi/</link>
+      <link>https://mutt0-ds.github.io/tags/powerbi/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/powerbi/</guid>
+      <guid>https://mutt0-ds.github.io/tags/powerbi/</guid>
       <description></description>
     </item>
     <item>
       <title>Sql</title>
-      <link>http://localhost:1313/tags/sql/</link>
+      <link>https://mutt0-ds.github.io/tags/sql/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/sql/</guid>
+      <guid>https://mutt0-ds.github.io/tags/sql/</guid>
       <description></description>
     </item>
     <item>
       <title>Cobol</title>
-      <link>http://localhost:1313/tags/cobol/</link>
+      <link>https://mutt0-ds.github.io/tags/cobol/</link>
       <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cobol/</guid>
+      <guid>https://mutt0-ds.github.io/tags/cobol/</guid>
       <description></description>
     </item>
     <item>
       <title>Finance</title>
-      <link>http://localhost:1313/tags/finance/</link>
+      <link>https://mutt0-ds.github.io/tags/finance/</link>
       <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/finance/</guid>
+      <guid>https://mutt0-ds.github.io/tags/finance/</guid>
       <description></description>
     </item>
     <item>
       <title>Ibm</title>
-      <link>http://localhost:1313/tags/ibm/</link>
+      <link>https://mutt0-ds.github.io/tags/ibm/</link>
       <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ibm/</guid>
+      <guid>https://mutt0-ds.github.io/tags/ibm/</guid>
       <description></description>
     </item>
     <item>
       <title>Learning</title>
-      <link>http://localhost:1313/tags/learning/</link>
+      <link>https://mutt0-ds.github.io/tags/learning/</link>
       <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/learning/</guid>
+      <guid>https://mutt0-ds.github.io/tags/learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Angular</title>
-      <link>http://localhost:1313/tags/angular/</link>
+      <link>https://mutt0-ds.github.io/tags/angular/</link>
       <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/angular/</guid>
+      <guid>https://mutt0-ds.github.io/tags/angular/</guid>
       <description></description>
     </item>
     <item>
       <title>Books</title>
-      <link>http://localhost:1313/tags/books/</link>
+      <link>https://mutt0-ds.github.io/tags/books/</link>
       <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/books/</guid>
+      <guid>https://mutt0-ds.github.io/tags/books/</guid>
       <description></description>
     </item>
     <item>
       <title>Tailwind</title>
-      <link>http://localhost:1313/tags/tailwind/</link>
+      <link>https://mutt0-ds.github.io/tags/tailwind/</link>
       <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tailwind/</guid>
+      <guid>https://mutt0-ds.github.io/tags/tailwind/</guid>
       <description></description>
     </item>
     <item>
       <title>Typescript</title>
-      <link>http://localhost:1313/tags/typescript/</link>
+      <link>https://mutt0-ds.github.io/tags/typescript/</link>
       <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/typescript/</guid>
+      <guid>https://mutt0-ds.github.io/tags/typescript/</guid>
       <description></description>
     </item>
     <item>
       <title>Appsmith</title>
-      <link>http://localhost:1313/tags/appsmith/</link>
+      <link>https://mutt0-ds.github.io/tags/appsmith/</link>
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/appsmith/</guid>
+      <guid>https://mutt0-ds.github.io/tags/appsmith/</guid>
       <description></description>
     </item>
     <item>
       <title>Experiments</title>
-      <link>http://localhost:1313/tags/experiments/</link>
+      <link>https://mutt0-ds.github.io/tags/experiments/</link>
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/experiments/</guid>
+      <guid>https://mutt0-ds.github.io/tags/experiments/</guid>
       <description></description>
     </item>
     <item>
       <title>Javascript</title>
-      <link>http://localhost:1313/tags/javascript/</link>
+      <link>https://mutt0-ds.github.io/tags/javascript/</link>
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/javascript/</guid>
+      <guid>https://mutt0-ds.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>Machine-Learning</title>
-      <link>http://localhost:1313/tags/machine-learning/</link>
+      <link>https://mutt0-ds.github.io/tags/machine-learning/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/machine-learning/</guid>
+      <guid>https://mutt0-ds.github.io/tags/machine-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Meme</title>
-      <link>http://localhost:1313/tags/meme/</link>
+      <link>https://mutt0-ds.github.io/tags/meme/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/meme/</guid>
+      <guid>https://mutt0-ds.github.io/tags/meme/</guid>
       <description></description>
     </item>
     <item>
       <title>Neural-Network</title>
-      <link>http://localhost:1313/tags/neural-network/</link>
+      <link>https://mutt0-ds.github.io/tags/neural-network/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/neural-network/</guid>
+      <guid>https://mutt0-ds.github.io/tags/neural-network/</guid>
       <description></description>
     </item>
     <item>
       <title>Resnet</title>
-      <link>http://localhost:1313/tags/resnet/</link>
+      <link>https://mutt0-ds.github.io/tags/resnet/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/resnet/</guid>
+      <guid>https://mutt0-ds.github.io/tags/resnet/</guid>
       <description></description>
     </item>
   </channel>

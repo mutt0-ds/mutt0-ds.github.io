@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Communication on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/communication/</link>
+    <link>https://mutt0-ds.github.io/tags/communication/</link>
     <description>Recent content in Communication on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/communication/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/communication/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Personal Notes about Simply Said</title>
-      <link>http://localhost:1313/posts/2024/07/personal-notes-simply-said/</link>
+      <link>https://mutt0-ds.github.io/posts/2024/07/personal-notes-simply-said/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2024/07/personal-notes-simply-said/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2024/07/personal-notes-simply-said/</guid>
       <description>&amp;ldquo;Simply Said&amp;rdquo; is the best communication book I&amp;rsquo;ve read recently. I discovered it thanks to Jordan Cutler (who runs an amazing tech newsletter) and at first, I considered it a standard communications book. Things like &amp;ldquo;listen to others,&amp;rdquo; &amp;ldquo;be positive,&amp;rdquo; blah blah.&#xA;I was wrong. &amp;ldquo;Simply Said&amp;rdquo; is much more than that. That&amp;rsquo;s why I condensed most of its wisdom into this blog post, and I hope it will inspire you to read it as well.</description>
     </item>
   </channel>
