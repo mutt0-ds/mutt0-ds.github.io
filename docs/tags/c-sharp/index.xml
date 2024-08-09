@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C-Sharp on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/c-sharp/</link>
+    <link>https://mutt0-ds.github.io/tags/c-sharp/</link>
     <description>Recent content in C-Sharp on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/c-sharp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mutt0-ds.github.io/tags/c-sharp/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The pro trick for Measure Descriptions in Power BI</title>
-      <link>http://localhost:1313/posts/2024/07/the-trick-measure-description-powerbi/</link>
-      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2024/07/the-trick-measure-description-powerbi/</guid>
-      <description>Today I want to show you a very useful trick that we are using for automatically describing our measures and calculated columns in Power BI. A big problem we had in the past, and source of constant requests from our most advanced users (the one who were connecting live to the Power BI datasets and creating their own small reports) is &amp;ldquo;How does this MEASURE work?&amp;rdquo;. In case of legacy columns with 10 variants, or the ones with complex business logic involved, this was quite a frequent cause of confusion.</description>
+      <title>The Pro Trick for Measure Descriptions in Power BI</title>
+      <link>https://mutt0-ds.github.io/posts/2024/08/the-trick-measure-description-powerbi/</link>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/posts/2024/08/the-trick-measure-description-powerbi/</guid>
+      <description>&amp;ldquo;How does this MEASURE/COLUMN work?&amp;rdquo; This is one of the most frequent requests I was receiving. And it&amp;rsquo;s easy to see why.&#xA;In complex Power BI models, users often struggle to understand the meaning of specific measures or columns. This is especially true for ambiguous names like AMSLast12m or columns with deep business logic such as NetAmount. How is it calculated? With VAT? Without it? Help!&#xA;Traditionally, there were limited options: ask a colleague, guess the logic, search documentation, or simply try your luck and add it blindly to the report.</description>
     </item>
   </channel>
 </rss>
