@@ -146,12 +146,14 @@ params:
     title: "About Me"
     image: "/fav.png"
     content: |-
-      I'm a Software Engineer with experience in the IT & Financial fields. I consider myself a calm, organized and curious person, always looking for new things to learn.
-
-      Focused on Data Visualization and Machine Learning, I'm a big fan of data-driven environments. 
-      That's why I document everything with [Notion](https://www.notion.so/), and I'm doing my best for contributing to the open-source [Python Notion SDK](https://github.com/ramnes/notion-sdk-py).
+      Data Engineer with a passion for BI Analytics and Artificial Intelligence. Calm, organized, and endlessly curious.
       
-      Here are a few technologies I've been working with recently, either in my free time or for some projects:
+      My experience spans IT and Finance, where I've specialized in transforming complex data into meaningful insights. 
+      I've worked across the entire Data Visualization process, from building ETL pipelines to creating Power BI dashboards.
+      
+      I'm an advocate for clear documentation and enjoy contributing to open-source projects, particularly the [Python Notion SDK](https://github.com/ramnes/notion-sdk-py).
+      
+      Recent tech stack: 👇
     
       - 📋 Languages
 
