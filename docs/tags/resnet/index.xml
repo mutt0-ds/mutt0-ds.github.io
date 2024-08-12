@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Resnet on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/resnet/</link>
+    <link>https://mutt0-ds.github.io/tags/resnet/</link>
     <description>Recent content in Resnet on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 May 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/resnet/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/resnet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using a Neural Network for sending memes to my girlfriend</title>
-      <link>http://localhost:1313/posts/2021/05/nn-sending-memes/</link>
+      <link>https://mutt0-ds.github.io/posts/2021/05/nn-sending-memes/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2021/05/nn-sending-memes/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2021/05/nn-sending-memes/</guid>
       <description>Well, my GF&amp;rsquo;s tastes in memes are simple: she loves wholesome memes and, most importantly, she loves animals.&#xA;That&amp;rsquo;s why I created a fun little project that:&#xA;Surfs the subreddit r/wholesomemes using the reddit API Downloads a few of the hottest memes in the contents folder Initializes a ResNet50 model that recognizes images containing any animal Sends them via mail to my GF (positively welcomed) Final email (3 memes by default) Reddit I&amp;rsquo;m using the praw library for downloading the memes, it requires a Reddit Bot enabled.</description>
     </item>
   </channel>
