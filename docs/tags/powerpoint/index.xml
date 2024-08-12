@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Powerpoint on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/powerpoint/</link>
+    <link>https://mutt0-ds.github.io/tags/powerpoint/</link>
     <description>Recent content in Powerpoint on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/powerpoint/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/powerpoint/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Personal Notes about Presentation Patterns</title>
-      <link>http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</guid>
       <description>Presentation Patterns Written by Neal Ford, Matthew McCullough and Nathaniel Schutta, &amp;ldquo;Presentation Patterns - Techniques for Crafting Better Presentations&amp;rdquo; is an encyclopedia of patterns, tips and common mistakes experienced by the authors, who have delivered thousands of presentations. In particular, they introduce “No Fluff, Just Stuff“, a traveling technical conference series covering a wide variety of topics related to software development and management.&#xA;During the years, they have build up their toolbox of patterns to provide killer presentations, which are divided in three main sections: Prepare (thinking and setting up the presentation’s key concepts), Build (creating the slides), Deliver (present the content).</description>
     </item>
   </channel>

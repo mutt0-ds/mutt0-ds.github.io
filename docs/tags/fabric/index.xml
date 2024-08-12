@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fabric on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/fabric/</link>
+    <link>https://mutt0-ds.github.io/tags/fabric/</link>
     <description>Recent content in Fabric on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/fabric/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/fabric/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The 3 (&#43;2) ways to Get Data in Power BI, simply explained</title>
-      <link>http://localhost:1313/posts/2024/04/types-powerbi-connection/</link>
+      <link>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2024/04/types-powerbi-connection/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</guid>
       <description>There&amp;rsquo;s quite a bit of confusion swirling around about how Power BI reports gather data. Where is the data actually stored? How frequently does it refresh? Depending on the mode you&amp;rsquo;ve selected, this question can be a bit tricky to tackle.&#xA;Let&amp;rsquo;s simplify things a bit. In this article, I&amp;rsquo;ll be focusing on Power BI Desktop. Imagine you&amp;rsquo;ve got a .pbix file on hand and don&amp;rsquo;t quite have the time to sit through 10-minute technical video from Guy in a Cube that I usually link my users to.</description>
     </item>
     <item>
       <title>The unnecessary hype strategy behind Microsoft Fabric</title>
-      <link>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</guid>
       <description>If you are into Data Engineering in Microsoft Azure Cloud Environment, you probaly heard about Microsoft Fabric being announced last week at the yearly event Microsoft Build. Well, &amp;ldquo;heard&amp;rdquo; is quite an euphesmism: everyone in the field is extremely excited about the announcements of the event. And for good reasons, as it’s a very big deal for us engineers, working with data every day.&#xA;In short, Fabric is a cutting-edge, unified data platform that merges lots of tools together, starting from a common Data Lake where data can be stored (OneLake), and a suite of new tools on top of it that are integrated in the “fabric” of Fabric.</description>
     </item>
   </channel>
