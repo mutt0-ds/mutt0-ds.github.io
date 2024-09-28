@@ -1,6 +1,6 @@
 ---
 title: "A MUST for Multi-cultural Teams: The Culture Map"
-date: 2024-08-09
+date: 2024-09-29
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/culture_map/culture_map.png
