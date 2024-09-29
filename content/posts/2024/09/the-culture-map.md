@@ -15,38 +15,44 @@ tags:
 
 # Cultures can be very different
 
-One of my favorite lessons in my international master's course was about cultural differences. I remember our instructor our instructor showing us funny videos of different cultures interacting, highlighting how these differences can lead to serious misunderstandings. There was an American asking an Indian colleague if they'll meet next week's deadline. The response, "I'll see what I can do," could mean either "sure" or "no way," depending on the cultural context.
+One of my favorite lessons in my international master's course was about **cultural differences**. I remember our instructor showing us funny videos of different cultures interacting. There was an American asking an Indian colleague if they'll meet next week's deadline. The response, _"I'll see what I can do"_ could mean either _"sure"_ or _"no way"_ depending on the cultural context. Needless to add that the American was very confused when the deadline wasn't met the week after.
 
-That’s because India is a high-context culture, where linguistic nuances are the norm. A Japanese person won't give me negative feedback directly but rather use varying levels of complex analogies to provide indirect hints on how to improve. Compare this to a low-context Swedish person who might bluntly say, "This system sucks," and you can imagine how complex this topic becomes.
+That’s because India is a high-context culture, where linguistic nuances are the norm. An Indian person won't give us negative feedback directly. Instead, they use varying levels of complex analogies to provide indirect hints on how to improve. Compare this to a low-context Swedish person. He will be more likely to say "This system sucks" in a blunt and direct way.
 
-> Disclaimer on generalizations: It's important to note that we're discussing averages and general tendencies, not stereotypes. You'll find diverse individuals within any culture. These are cultural hints to provide a baseline when you have no other data points except the country. You should always evolve your understanding based on personal interactions.
+> Disclaimer on generalizations: It's important to note that we're discussing averages and general tendencies, not stereotypes. The country position on the chart indicates the mid-position of a range of acceptable or appropriate behaviors in that country! Of course, you'll find diverse individuals within any culture. You should always evolve your understanding based on personal interactions.
 
-Another example? Just take this viral meme about UK language (which is middle-high context) and you can understand why it’s so important to be aware of differences before causing misunderstandings, wasting time or confusing the counterpart.
+Another example? Just take this viral meme about UK language (which is middle-high context)!
 
-![british_say_meme](https://utesinternationallounge.com/wp-content/uploads/2018/08/Bildschirmfoto-2018-08-31-um-11.40.05.png)
+<div style="max-width: 1006px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 90.4535%;"><iframe src="//iframely.net/vuJax5F" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
-Another interesting aspect is the importance of relationships in different cultures. In China, it's crucial to know the other person, share meals and drinks together, while Nordic cultures like America and Germany prefer to focus on tasks. From both perspectives, their approach feels perfectly natural, but it's deeply ingrained in their cultural norms.
+Another interesting aspect is the importance of relationships in different cultures. In China, it's crucial to know the other person, share meals and drinks together. At the opposite, Nordic cultures like America and Germany prefer to focus on tasks. From both perspectives, their approach feels natural, but it's deeply ingrained in their cultural norms.
 
 ## And that’s great!
 
-And that's the fun part: we're all different, and there's no "right" or "wrong" way to communicate. Each of us has our own style, and each perspective makes sense in its context. In the end it's all about appreciating the rich diversity of human communication and adapting our styles accordingly.
+And that's the fun part: **we're all different**, and there's no "right" or "wrong" way to communicate. Each of us has our own style, and each perspective makes sense in its cultural context. In the end it's all about appreciating the rich diversity of human communication and adapting our styles accordingly.
 
 I've always applied these lessons carefully, especially now that I work in a corporation with dozens of different cultures. I was able to connect more naturally and avoid many intercultural oopsie.
-I find it serves as a shortcut: if I'm talking with someone from a low-context culture, I can expect some sharp and direct comments, while for a high-context culture, I need to be very careful and read between the lines.
+Knowing cultures serves as a shortcut: if I'm talking with someone from a low-context culture, I can expect some sharp and direct comments. For a high-context culture, I need to be very careful and read between the lines.
 
-Let's take time perception as another example: a German person will usually be punctual, and punctuality is highly valued, while for a Brazilian, I know I can be more flexible with timing.
+Let's take time perception as another example. A German person will usually be punctual, and punctuality is highly valued, while for a Brazilian, I know I can be more flexible with timing.
 
-# Erin Meyer’s "The Culture Map"
+## Erin Meyer’s "The Culture Map"
 
-All these precious differences are explored in the fantastic book [**"The Culture Map"** by Erin Meyer](https://www.amazon.com/Culture-Map-INTL-ED-Decoding/dp/1610392760), which was suggested in my course and which I now highly recommend myself.
+All these precious differences are explored in the fantastic book [**"The Culture Map"** by Erin Meyer](https://www.amazon.com/Culture-Map-INTL-ED-Decoding/dp/1610392760), which my professor suggested during the course and which I now highly recommend myself.
 
-A unique strategy the professor used was to position each culture along a spectrum with two extremes, creating a structured framework to differentiate between them. I found this approach so useful in understanding cultural variations that I recreated a Figma diagram of the Culture Map, including cultures I've personally interacted with. This gives me a quick visual reference of their (average) cultural traits, blending Meyer's insights with my own experiences.
+A unique strategy the professor used was to position each culture along a spectrum with two extremes. This creates a structured framework to differentiate between them. During the past months, I recreated my own Figma diagram of the Culture Map, including cultures I've personally interacted with. This gives me a quick visual reference of their (average) cultural traits, blending Meyer's insights with my own experiences.
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/YSnXo4O5NsAb1d4kIRRRui/Culture-%F0%9F%97%BA-Map?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+
+Png version:
+
+<div style="max-width: 4201px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.5287%;"><iframe src="//iframely.net/kXIjPAj" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 Here's an explanation of each point on the Culture Map so you actually know what’s going on:
 
 ### Communicating
 
-**Low-context:** Good communication is precise and straight to the point. Key messages are repeated several times, and the goal of communicating is explicitly expressed. (For example, the 🇺🇸)
+**Low-context:** Good communication is precise and straight to the point. Key messages are repeated several times, and the goal of communicating is explicitly expressed, as it happens in the 🇺🇸.
 
 **High-context:** Communication is nuanced and has multiple layers. Messages are signaled but often not explicitly stated. This type of communication requires "reading between the lines". For example, 🇯🇵, where there's even a specific word for this concept: 空気くうきを読よむ, "Reading the Air". It's vital skill to understand the subtle nuances of a situation and respond appropriately.
 
