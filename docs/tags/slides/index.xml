@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slides on Mutt0-ds Notes</title>
+    <link>https://mutt0-ds.github.io/tags/slides/</link>
+    <description>Recent content in Slides on Mutt0-ds Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mutt0-ds.github.io/tags/slides/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Culture - How we promoted Power BI in a Corporate Environment [🎙 Power BI Ticino 2024]</title>
+      <link>https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/</link>
+      <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/</guid>
+      <description>Last Friday, I took the stage at the Power BI Ticino Conference to share one of my favorite projects at Acer: our Power BI Champions program. The idea? Find Early Adopters (people who have a curious approach towards new technologies) and put them on the front line to help us promote Power BI and data culture to the rest of the team.&#xA;I never imagined I&amp;rsquo;d speak at a conference when I started this journey&amp;hellip; But wow - the positive feedback and amazing people I&amp;rsquo;ve met make me want to do it again!</description>
+    </item>
+  </channel>
+</rss>

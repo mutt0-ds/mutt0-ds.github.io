@@ -6,20 +6,55 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Communication</title>
-      <link>https://mutt0-ds.github.io/tags/communication/</link>
-      <pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/communication/</guid>
+      <title>Conference</title>
+      <link>https://mutt0-ds.github.io/tags/conference/</link>
+      <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/conference/</guid>
       <description></description>
     </item>
     <item>
       <title>Culture</title>
       <link>https://mutt0-ds.github.io/tags/culture/</link>
-      <pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/culture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data-Culture</title>
+      <link>https://mutt0-ds.github.io/tags/data-culture/</link>
+      <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/data-culture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Power-Bi</title>
+      <link>https://mutt0-ds.github.io/tags/power-bi/</link>
+      <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Presentation</title>
+      <link>https://mutt0-ds.github.io/tags/presentation/</link>
+      <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/presentation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Slides</title>
+      <link>https://mutt0-ds.github.io/tags/slides/</link>
+      <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/slides/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Communication</title>
+      <link>https://mutt0-ds.github.io/tags/communication/</link>
+      <pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/communication/</guid>
       <description></description>
     </item>
     <item>
@@ -58,13 +93,6 @@
       <description></description>
     </item>
     <item>
-      <title>Power-Bi</title>
-      <link>https://mutt0-ds.github.io/tags/power-bi/</link>
-      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Tabular-Editor</title>
       <link>https://mutt0-ds.github.io/tags/tabular-editor/</link>
       <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
@@ -83,13 +111,6 @@
       <link>https://mutt0-ds.github.io/tags/notes/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/notes/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Presentation</title>
-      <link>https://mutt0-ds.github.io/tags/presentation/</link>
-      <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/presentation/</guid>
       <description></description>
     </item>
     <item>
