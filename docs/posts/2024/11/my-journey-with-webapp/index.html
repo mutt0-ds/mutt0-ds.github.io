@@ -28,19 +28,17 @@
 
 
 
-<meta property="og:title" content="TODO: my journey with Full Stack Development: creating a web app from scractches" />
-<meta property="og:description" content="🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months.Why?
-First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague.
-Second, there was so much content to cover that I didn&rsquo;t know where to start. It&rsquo;s a lot to unpack, so I&rsquo;m splitting this into at least two parts." />
+<meta property="og:title" content="I redesigned an Excel tool into a Full Stack Web App: here&#39;s how" />
+<meta property="og:description" content="🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months for two reasons:
+First, since the project I created is being considered for production deployment at my company, I need to keep certain details vague. Second, there&rsquo;s so much content to cover that finding a starting point was challenging. To make it more digestible, I&rsquo;m splitting this into at least two parts." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/2024/11/my-journey-with-webapp/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-11-13T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-11-13T00:00:00+00:00" /><meta property="og:site_name" content="Mutt0-ds Notes" />
+<meta property="article:published_time" content="2024-11-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-11-12T00:00:00+00:00" /><meta property="og:site_name" content="Mutt0-ds Notes" />
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="TODO: my journey with Full Stack Development: creating a web app from scractches"/>
-<meta name="twitter:description" content="🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months.Why?
-First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague.
-Second, there was so much content to cover that I didn&rsquo;t know where to start. It&rsquo;s a lot to unpack, so I&rsquo;m splitting this into at least two parts."/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="I redesigned an Excel tool into a Full Stack Web App: here&#39;s how"/>
+<meta name="twitter:description" content="🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months for two reasons:
+First, since the project I created is being considered for production deployment at my company, I need to keep certain details vague. Second, there&rsquo;s so much content to cover that finding a starting point was challenging. To make it more digestible, I&rsquo;m splitting this into at least two parts."/>
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -111,7 +109,7 @@ Second, there was so much content to cover that I didn&rsquo;t know where to sta
 <script defer src="/fontawesome-5/all-5.15.4.js"></script>
 
   <title>
-TODO: my journey with Full Stack Development: creating a web app from scractches | Mutt0-ds Notes
+I redesigned an Excel tool into a Full Stack Web App: here&#39;s how | Mutt0-ds Notes
 
   </title>
 </head>
@@ -253,11 +251,11 @@ TODO: my journey with Full Stack Development: creating a web app from scractches
       <div class="col-sm-12 col-md-12 col-lg-9">
         <div class="pr-lg-4">
           <div class="title mb-5">
-            <h1 class="text-center mb-4">TODO: my journey with Full Stack Development: creating a web app from scractches</h1>
+            <h1 class="text-center mb-4">I redesigned an Excel tool into a Full Stack Web App: here&#39;s how</h1>
             <div class="text-center">
               Mutt0-ds 
               <small>|</small>
-              Nov 13, 2024
+              Nov 12, 2024
 
               
               <span id="readingTime">
@@ -268,84 +266,84 @@ TODO: my journey with Full Stack Development: creating a web app from scractches
           </div>
           
           <div class="featured-image">
-            <img class="img-fluid" src="/images/web_app/cover.png" alt="TODO: my journey with Full Stack Development: creating a web app from scractches">
+            <img class="img-fluid" src="/images/web_app/cover.png" alt="I redesigned an Excel tool into a Full Stack Web App: here&#39;s how">
           </div>
           
           <article class="page-content  p-2">
           <h2 id="-breaking-down-full-stack-development">🧠 Breaking Down Full Stack Development</h2>
-<p>This post has been sitting in my drafts for over 7 months.Why?</p>
-<p>First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague.<br>
-Second, there was so much content to cover that I didn&rsquo;t know where to start. It&rsquo;s a lot to unpack, so I&rsquo;m splitting this into at least two parts.</p>
-<p>Today, I want to tackle a challenge that many developers face:</p>
+<p>This post has been sitting in my drafts for over 7 months for two reasons:</p>
+<p>First, since the project I created is being considered for production deployment at my company, I need to keep certain details vague. <br>
+Second, <strong>there&rsquo;s so much content to cover</strong> that finding a starting point was challenging. To make it more digestible, I&rsquo;m splitting this into at least two parts.</p>
+<p>Today, I want to tackle a fundamental challenge that many developers face:</p>
 <blockquote>
-<p>How do you build a <strong>complete</strong> application from scratch?</p>
+<p>How do you build a 🌟<strong>complete</strong>🌟 application from scratch?</p>
 </blockquote>
-<p>And by complete, I mean <strong>a full stack application with a database, a user-friendly frontend, and a backend that handles calculations, data movement, and security</strong>.</p>
-<p>While large companies typically have entire teams dedicated to these different components (frontend, QA, backend, DBA), I want to share my experience building a smaller-scale application. My goal is to help you understand what happens behind the scenes, all the moving pieces involved, and which areas you might want to focus on. As always, using simple and clear language, so, always remember I am oversimplifying a complex topic.</p>
+<p>And by complete, I mean <strong>a full stack application with a database, user-friendly frontend, and a backend that handles calculations, data movement, and security</strong>.</p>
+<p>While large companies typically have dedicated teams for different components (frontend, QA, backend, DBA), I&rsquo;ll share my experience building a smaller-scale application. My goal is to help you understand the behind-the-scenes workings, all the moving pieces involved, and which areas deserve your focus. As always, I&rsquo;ll use simple and clear language, though keep in mind I&rsquo;m oversimplifying complex topics.</p>
 <p>Here&rsquo;s how I built a prototype of a sales forecasting app for my company.</p>
 <p><em>Sneak Peek</em>:</p>
 <div style="max-width: 2266px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 48.0932%;"><iframe src="//iframely.net/fuw3M7i" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <h2 id="some-context">Some context</h2>
-<p>I should mention upfront - <strong>I&rsquo;m not a full stack developer</strong>.</p>
-<p>My background is in Data Engineering and Data Science. While I&rsquo;m comfortable with backend languages like Python and TypeScript, frontend development was my biggest challenge. The closest I&rsquo;d come to frontend work was Power BI, which is an entirely different beast. I&rsquo;ve already talked about my previous experiments <a href="https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/">here (Tailwind)</a> and <a href="https://mutt0-ds.github.io/posts/2022/03/personal-airflow/">here (Appsmith)</a>.</p>
-<p>The project began with a problem at work: we had a legacy forecasting tool built in Excel. Picture this: hundreds of columns spread across multiple sheets, all powered by VBA macros. The workflow was simple - users insert new sales, run calculations through VBA, and dump the results into a database.</p>
+<p>Let me be upfront - <strong>I&rsquo;m not a full stack developer</strong>.</p>
+<p>My background is in Data Engineering and Data Science. While I&rsquo;m comfortable with backend languages like Python and TypeScript, frontend development was my biggest challenge. My closest experience with frontend work was Power BI, which is an entirely different beast. I&rsquo;ve already talked about my previous experiments <a href="https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/">here (Tailwind)</a> and <a href="https://mutt0-ds.github.io/posts/2022/03/personal-airflow/">here (Appsmith)</a>.</p>
+<p>The project emerged from a workplace challenge:<strong>we had a legacy forecasting tool built in Excel</strong>. Classic corporate story.</p>
+<p>Imagine hundreds of columns spread across multiple sheets, powered by VBA macros. The workflow was straightforward - users input new sales, run VBA calculations, and export results to a database.</p>
 <p><em>Something like this. Multiply its complexity by 100 (credits: Excel-Skills.com)</em>:</p>
 <div style="max-width: 960px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="//iframely.net/7Trgacl" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
-<p>It worked, but had the classic pain points of legacy systems:</p>
+<p>It worked, but it suffered from classic legacy system issues:</p>
 <ol>
 <li>VBA debugging was a nightmare</li>
 <li>Performance was poor. And this was used hundres of times a day!</li>
-<li>The code was a tangled mess that nobody wanted to touch</li>
+<li>The code was so complex that nobody wanted to touch it</li>
 </ol>
-<p>I wondered: what would this tool look like if rebuilt with modern technologies? So I decided to explore current trending technologies, choosing ones known for their developer-friendly experience (the same ones you&rsquo;ll find in most beginner tutorials).</p>
+<p>I wondered: <em>what if we rebuilt this tool using modern technologies</em>? This led me to explore current trending technologies, focusing on those known for their developer-friendly experience (the same ones you&rsquo;ll find in most beginner tutorials).</p>
 <h2 id="the-project-scope">The Project Scope</h2>
 <p>My modernized version needed to handle:</p>
 <ul>
 <li><strong>User input</strong> for new sales data</li>
 <li><strong>KPI calculations</strong> (like net revenue)</li>
-<li><strong>Settings management</strong> for calculation settings (e.g., VAT rates)</li>
+<li><strong>Settings management</strong> for calculation parameters (e.g., VAT rates)</li>
 <li>Excel export functionality (of course)</li>
 <li>What-if analysis through a pivot system</li>
 </ul>
 <p>At its core, it&rsquo;s a forecasting system that lets users upload sales data, validates the input, and runs calculations. The tricky part was implementing a complex settings system that depends on multiple variables - think VAT rates by country or customer-specific discounts.</p>
-<p>This is where the backend really earns its keep.</p>
-<p><em>Settings example. Pardon for the centering, I had to remove some parts</em></p>
+<p>This is where the backend proves its worth.</p>
+<p><em>Settings example. Pardon for the weird centering, I had to remove some parts</em></p>
 <div style="max-width: 1848px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 41.8182%;"><iframe src="//iframely.net/2TCjhD3" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <h2 id="choosing-the-tech-stack">Choosing the Tech Stack</h2>
-<p>This was overwhelming at first. The options seem endless, and you could spend weeks just comparing different tools. Let me break it down to the essentials. For a full stack application you need three main layers:</p>
+<p>This was overwhelming at first. The options seem endless. Let me break it down to the essentials. For a full stack application you need three main layers:</p>
 <ul>
-<li>📦 <strong>A database</strong> for storing the data - the logical core of the application. Remember, most business applications ultimately help non-technical users interact with data.</li>
+<li>📦 <strong>A database</strong> for storing the data - the logical core of the application. Remember, most business applications in the end are just wrappers around the database to help non-technical users interact with data.</li>
 <li>🖼 <strong>A frontend</strong> to create the user interface, typically built with JavaScript, HTML, and CSS</li>
 <li>🧮 <strong>A backend</strong> to handle calculations and database operations</li>
 </ul>
-<p>I&rsquo;ll be honest: I picked the most beginner-friendly options available. My choices were heavily influenced by tutorials from <a href="https://fireship.io/courses/nextjs/">Fireship</a> and <a href="https://codewithmosh.com/p/ultimate-nextjs-series">Code with Mosh</a>. I recommend them: great courses, easy to follow, they will guide you through the basics.</p>
+<p>Simply said: I picked the most beginner-friendly options available. My choices were heavily influenced by tutorials from <a href="https://fireship.io/courses/nextjs/">Fireship</a> and <a href="https://codewithmosh.com/p/ultimate-nextjs-series">Code with Mosh</a> - both excellent resources for beginners.</p>
 <div style="max-width: 4714px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 68.4317%;"><iframe src="//iframely.net/6FJOKN4" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <h2 id="data-first">Data first</h2>
 <p>First, I studied the tool and collected the requirements (and that&rsquo;s another story).
-Being a data engineer, I started where I was comfortable: <strong>database design</strong>. Before touching any frontend code, I mapped out my fact and dimension tables - Sales, Product, Customer, Settings, Calculations.</p>
-<p>You might have some questions already.</p>
+Being a data engineer, I started where I was comfortable: <strong>database design</strong>. Before touching any frontend code, I mapped out my fact and dimension tables - Sales, Product, Customer, Settings, and Calculations.</p>
+<p>You might wonder about some design choices:</p>
 <ul>
-<li>Why separate lines and calculations? The granularity is the same, 1 sale has 1 calculation, but while sales can be only edited by the users, that&rsquo;s not the same for calculations. If you change the VAT value for France in the Settings, all the calculations (like Net Revenue) related to French data are reprocessed. But Sales values are not impacted.</li>
-<li>Why start with data? A solid database design provides the foundation everything else builds upon. Too often, I&rsquo;ve seen developers twist their database design to fit application logic. It should be the other way around - let your application flow from a clean, logical data model.</li>
+<li>Why separate lines and calculations? While they share a one-to-one relationship, they serve different purposes. Sales data is user-edited, while calculations automatically update based on setting changes (like VAT rates).</li>
+<li>Why start with data? A solid database design provides the foundation for everything else. Too often, developers adapt their database to fit application logic. Instead, let your application flow from a clean, logical data model.</li>
 </ul>
 <h2 id="frontend-adventures-tables-and-ui-components">Frontend Adventures: Tables and UI Components</h2>
-<p>Once I had my database skeleton, I fired up Next.js and tackled <strong>my first frontend challenge: displaying data in tables</strong>. Let me tell you - building interactive tables from scratch is painful, especially when you need features like filtering and sorting.</p>
+<p>With the database structure in place, I launched into Next.js and faced <strong>my first frontend challenge</strong>: displaying data in tables. Let me tell you - building interactive tables from scratch is challenging, especially when you need features like filtering and sorting.</p>
 <p>Luckily, I found <a href="https://ui.shadcn.com/">shadcn/ui</a>, a component library built on Radix UI and Tailwind CSS. It provides standardized UI elements that you can copy and paste in your code without reinventing the wheel.</p>
-<p>What initially drew me to shadcn/ui was their table component, which integrates <a href="https://tanstack.com/table/latest">TanStack Table V8</a>, another great library designed for building tables. This gave me filtering, sorting, and pagination right out of the box.</p>
-<p>Funny enough, I chose shadcn/ui just for the table component, but ended up using their entire ecosystem. Buttons, cards, popups - they were all just an import away. Modern frontend development has come a long way!</p>
+<p>I initially chose shadcn/ui for their table component, which integrates <a href="https://tanstack.com/table/latest">TanStack Table V8</a>, another great library designed for building tables. This provided built-in filtering, sorting, and pagination. I ended up using their entire component ecosystem - buttons, cards, popups, and more, all just an import away. Modern frontend development has come a long way!</p>
 <div style="max-width: 1536px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 67.6563%;"><iframe src="//iframely.net/XASUIo4" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <h2 id="my-lazy-tips-for-frontend-development">My Lazy Tips for Frontend Development</h2>
 <ul>
 <li>Don&rsquo;t reinvent the wheel - use established UI libraries</li>
 <li>Start simple - you can always add complexity later</li>
-<li>Focus on functionality first, polish second</li>
-<li>Leverage AI. Debugging cryptic Typescript errors is no fun. ChatGPT happily gave me an hand in many edge cases, saving me precious hours. I found it unusable for anything slightly more complex though, expecially when calculating the business logic. Still ,I estimate a 30% speedup on the most annoying cases.</li>
+<li>Focus on core features before polishing</li>
+<li>Use AI wisely. While ChatGPT helped debug cryptic Typescript errors (saving roughly 30% of my time) and excels with boilerplates, it struggled with complex business logic</li>
 </ul>
 <h2 id="forms-and-data-validation">Forms and Data Validation</h2>
-<p>With my data display sorted, I tackled <strong>forms</strong> next. Forms are a key part for this kind of app. In the end, it&rsquo;s the user that enters the input, such as a new sale to create calculations from. Making sure the data is correct and usable is crucial, and it wasn&rsquo;t that simple.
-Next.js forms, combined with Zod for validation, make it surprisingly straightforward to handle user input. You can easily enforce rules like email format validation or ensuring quantities are positive numbers.</p>
+<p>With my data display sorted, I tackled <strong>forms</strong> next. Forms are a key part for this kind of app. In the end, it&rsquo;s the user that enters the input, such as a new sale to create calculations from. Making sure the data is correct and usable is crucial, and it wasn&rsquo;t that simple.</p>
+<p>Next.js forms, combined with <a href="https://zod.dev">Zod</a> for validation, make it surprisingly straightforward to handle user input. You can easily enforce rules like email format validation or ensuring quantities are positive numbers.</p>
 <div style="max-width: 2258px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 28.1084%;"><iframe src="//iframely.net/1o5Danv" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
-<p>I&rsquo;ll dive deeper into forms and validation in part two of this series, where I&rsquo;ll also cover the specific tools I used and share more detailed tips from my experience.</p>
+<p>I&rsquo;ll talk about forms and validation in part two of this series, where I&rsquo;ll also cover the specific tools I used and share more detailed tips from my experience.</p>
 <p><em>To be continued&hellip;</em></p>
 
           </article>
@@ -380,7 +378,7 @@ Next.js forms, combined with Zod for validation, make it surprisingly straightfo
             <h5>Tags</h5>
             <ul class="tags-ul list-unstyled list-inline">
               
-              <li class="list-inline-item"><a href="http://localhost:1313/tags/webapp" target="_blank">webapp</a></li>
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/web-app" target="_blank">web-app</a></li>
               
               <li class="list-inline-item"><a href="http://localhost:1313/tags/next.js" target="_blank">next.js</a></li>
               
@@ -392,6 +390,8 @@ Next.js forms, combined with Zod for validation, make it surprisingly straightfo
               
               <li class="list-inline-item"><a href="http://localhost:1313/tags/fullstack" target="_blank">fullstack</a></li>
               
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/postgresql" target="_blank">postgresql</a></li>
+              
             </ul>
           </aside>
           
@@ -402,17 +402,17 @@ Next.js forms, combined with Zod for validation, make it surprisingly straightfo
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=TODO%3a%20my%20journey%20with%20Full%20Stack%20Development%3a%20creating%20a%20web%20app%20from%20scractches&url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f11%2fmy-journey-with-webapp%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=I%20redesigned%20an%20Excel%20tool%20into%20a%20Full%20Stack%20Web%20App%3a%20here%27s%20how&url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f11%2fmy-journey-with-webapp%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=TODO%3a%20my%20journey%20with%20Full%20Stack%20Development%3a%20creating%20a%20web%20app%20from%20scractches: http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f11%2fmy-journey-with-webapp%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=I%20redesigned%20an%20Excel%20tool%20into%20a%20Full%20Stack%20Web%20App%3a%20here%27s%20how: http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f11%2fmy-journey-with-webapp%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=TODO%3a%20my%20journey%20with%20Full%20Stack%20Development%3a%20creating%20a%20web%20app%20from%20scractches&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f11%2fmy-journey-with-webapp%2f'>
+                  <a target="_blank" href='mailto:?subject=I%20redesigned%20an%20Excel%20tool%20into%20a%20Full%20Stack%20Web%20App%3a%20here%27s%20how&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f11%2fmy-journey-with-webapp%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -480,22 +480,21 @@ Next.js forms, combined with Zod for validation, make it surprisingly straightfo
                 
                 <div class="card-header">
                     <a href="/posts/2024/11/my-journey-with-webapp/">
-                        <img src="/images/web_app/cover.png" class="card-img-top" alt="TODO: my journey with Full Stack Development: creating a web app from scractches">
+                        <img src="/images/web_app/cover.png" class="card-img-top" alt="I redesigned an Excel tool into a Full Stack Web App: here&#39;s how">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
                     <a href="/posts/2024/11/my-journey-with-webapp/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="TODO: my journey with Full Stack Development: creating a web app from scractches">TODO: my journey with Full Stack Development: creating a web app from scractches</h5>
+                        <h5 class="card-title bg-transparent" title="I redesigned an Excel tool into a Full Stack Web App: here&#39;s how">I redesigned an Excel tool into a Full Stack Web App: here&#39;s how</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p>🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months.Why?
-First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague.
-Second, there was so much content to cover that I …</p>
+                        <p>🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months for two reasons:
+First, since the project I created is being considered for production deployment at my company, I need to keep certain details vague. Second, there&rsquo;s so much content to cover that …</p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">Nov 13, 2024</span>
+                    <span class="float-start">Nov 12, 2024</span>
                     <a href="/posts/2024/11/my-journey-with-webapp/" class="float-end btn btn-outline-info btn-sm">Read</a>
                 </div>
             </div>
