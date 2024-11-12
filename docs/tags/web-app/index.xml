@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web-App on Mutt0-ds Notes</title>
+    <link>http://localhost:1313/tags/web-app/</link>
+    <description>Recent content in Web-App on Mutt0-ds Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/web-app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I redesigned an Excel tool into a Full Stack Web App: here&#39;s how</title>
+      <link>http://localhost:1313/posts/2024/11/my-journey-with-webapp/</link>
+      <pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024/11/my-journey-with-webapp/</guid>
+      <description>🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months for two reasons:&#xA;First, since the project I created is being considered for production deployment at my company, I need to keep certain details vague. Second, there&amp;rsquo;s so much content to cover that finding a starting point was challenging. To make it more digestible, I&amp;rsquo;m splitting this into at least two parts.</description>
+    </item>
+  </channel>
+</rss>

@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/2024/11/my-journey-with-webapp/</link>
       <pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/2024/11/my-journey-with-webapp/</guid>
-      <description>🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months. Why? First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague. Second, there was so much content to cover that I didn&amp;rsquo;t know where to start. It&amp;rsquo;s a lot to unpack, so I&amp;rsquo;m splitting this into at least two parts.</description>
+      <description>🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months for two reasons:&#xA;First, since the project I created is being considered for production deployment at my company, I need to keep certain details vague. Second, there&amp;rsquo;s so much content to cover that finding a starting point was challenging. To make it more digestible, I&amp;rsquo;m splitting this into at least two parts.</description>
     </item>
     <item>
       <title>First time with Tailwind CSS: showing off my books!</title>
