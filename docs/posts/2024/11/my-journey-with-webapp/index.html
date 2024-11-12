@@ -29,14 +29,18 @@
 
 
 <meta property="og:title" content="TODO: my journey with Full Stack Development: creating a web app from scractches" />
-<meta property="og:description" content="🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months. Why? First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague. Second, there was so much content to cover that I didn&rsquo;t know where to start. It&rsquo;s a lot to unpack, so I&rsquo;m splitting this into at least two parts." />
+<meta property="og:description" content="🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months.Why?
+First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague.
+Second, there was so much content to cover that I didn&rsquo;t know where to start. It&rsquo;s a lot to unpack, so I&rsquo;m splitting this into at least two parts." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/2024/11/my-journey-with-webapp/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-11-13T00:00:00+00:00" />
 <meta property="article:modified_time" content="2024-11-13T00:00:00+00:00" /><meta property="og:site_name" content="Mutt0-ds Notes" />
 
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="TODO: my journey with Full Stack Development: creating a web app from scractches"/>
-<meta name="twitter:description" content="🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months. Why? First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague. Second, there was so much content to cover that I didn&rsquo;t know where to start. It&rsquo;s a lot to unpack, so I&rsquo;m splitting this into at least two parts."/>
+<meta name="twitter:description" content="🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months.Why?
+First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague.
+Second, there was so much content to cover that I didn&rsquo;t know where to start. It&rsquo;s a lot to unpack, so I&rsquo;m splitting this into at least two parts."/>
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -269,66 +273,80 @@ TODO: my journey with Full Stack Development: creating a web app from scractches
           
           <article class="page-content  p-2">
           <h2 id="-breaking-down-full-stack-development">🧠 Breaking Down Full Stack Development</h2>
-<p>This post has been sitting in my drafts for over 7 months. Why?
-First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague. Second, there was so much content to cover that I didn&rsquo;t know where to start. It&rsquo;s a lot to unpack, so I&rsquo;m splitting this into at least two parts.</p>
-<p>Today, I want to tackle a challenge that many developers face:
-how do you build a complete program from scratch?</p>
-<p>And by complete, I mean a full stack application with a database, a user-friendly frontend, and a backend that handles calculations, data movement, and security.</p>
+<p>This post has been sitting in my drafts for over 7 months.Why?</p>
+<p>First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague.<br>
+Second, there was so much content to cover that I didn&rsquo;t know where to start. It&rsquo;s a lot to unpack, so I&rsquo;m splitting this into at least two parts.</p>
+<p>Today, I want to tackle a challenge that many developers face:</p>
+<blockquote>
+<p>How do you build a <strong>complete</strong> application from scratch?</p>
+</blockquote>
+<p>And by complete, I mean <strong>a full stack application with a database, a user-friendly frontend, and a backend that handles calculations, data movement, and security</strong>.</p>
 <p>While large companies typically have entire teams dedicated to these different components (frontend, QA, backend, DBA), I want to share my experience building a smaller-scale application. My goal is to help you understand what happens behind the scenes, all the moving pieces involved, and which areas you might want to focus on. As always, using simple and clear language, so, always remember I am oversimplifying a complex topic.</p>
-<p>Here&rsquo;s how I built my prototype during my free time.</p>
+<p>Here&rsquo;s how I built a prototype of a sales forecasting app for my company.</p>
+<p><em>Sneak Peek</em>:</p>
+<div style="max-width: 2266px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 48.0932%;"><iframe src="//iframely.net/fuw3M7i" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <h2 id="some-context">Some context</h2>
-<p>I should mention upfront - I&rsquo;m not a full stack developer.</p>
-<p>My background is in Data Engineering and Data Science. While I&rsquo;m comfortable with backend languages like Python and TypeScript, frontend development was my biggest challenge. The closest I&rsquo;d come to frontend work was Power BI, which is an entirely different beast.</p>
-<p>The project started with a problem at work: we had a legacy forecasting tool built in Excel. Picture this: hundreds of columns spread across multiple sheets, all powered by VBA macros. The workflow was simple - add numbers, run calculations through VBA, and dump the results into a database.</p>
+<p>I should mention upfront - <strong>I&rsquo;m not a full stack developer</strong>.</p>
+<p>My background is in Data Engineering and Data Science. While I&rsquo;m comfortable with backend languages like Python and TypeScript, frontend development was my biggest challenge. The closest I&rsquo;d come to frontend work was Power BI, which is an entirely different beast. I&rsquo;ve already talked about my previous experiments <a href="https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/">here (Tailwind)</a> and <a href="https://mutt0-ds.github.io/posts/2022/03/personal-airflow/">here (Appsmith)</a>.</p>
+<p>The project began with a problem at work: we had a legacy forecasting tool built in Excel. Picture this: hundreds of columns spread across multiple sheets, all powered by VBA macros. The workflow was simple - users insert new sales, run calculations through VBA, and dump the results into a database.</p>
+<p><em>Something like this. Multiply its complexity by 100 (credits: Excel-Skills.com)</em>:</p>
+<div style="max-width: 960px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="//iframely.net/7Trgacl" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p>It worked, but had the classic pain points of legacy systems:</p>
 <ol>
 <li>VBA debugging was a nightmare</li>
-<li>Performance was poor</li>
+<li>Performance was poor. And this was used hundres of times a day!</li>
 <li>The code was a tangled mess that nobody wanted to touch</li>
 </ol>
 <p>I wondered: what would this tool look like if rebuilt with modern technologies? So I decided to explore current trending technologies, choosing ones known for their developer-friendly experience (the same ones you&rsquo;ll find in most beginner tutorials).</p>
 <h2 id="the-project-scope">The Project Scope</h2>
 <p>My modernized version needed to handle:</p>
 <ul>
-<li>User input for new sales data</li>
-<li>KPI calculations (like net revenue)</li>
-<li>Configuration management for calculation settings (e.g., VAT rates)</li>
+<li><strong>User input</strong> for new sales data</li>
+<li><strong>KPI calculations</strong> (like net revenue)</li>
+<li><strong>Settings management</strong> for calculation settings (e.g., VAT rates)</li>
 <li>Excel export functionality (of course)</li>
 <li>What-if analysis through a pivot system</li>
 </ul>
-<p>At its core, it&rsquo;s a forecasting system that lets users upload sales data, validates the input, and runs calculations. The tricky part was implementing a complex settings system that depends on multiple variables - think VAT rates by country or customer-specific discounts. This is where the backend really earns its keep.</p>
+<p>At its core, it&rsquo;s a forecasting system that lets users upload sales data, validates the input, and runs calculations. The tricky part was implementing a complex settings system that depends on multiple variables - think VAT rates by country or customer-specific discounts.</p>
+<p>This is where the backend really earns its keep.</p>
+<p><em>Settings example. Pardon for the centering, I had to remove some parts</em></p>
+<div style="max-width: 1848px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 41.8182%;"><iframe src="//iframely.net/2TCjhD3" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <h2 id="choosing-the-tech-stack">Choosing the Tech Stack</h2>
-<p>This was overwhelming at first. The options seem endless, and you could spend weeks just comparing different tools. Let me break it down to the essentials. You need three main layers:</p>
-<ol>
-<li>A database for data storage - the logical core of your application. Remember, most business applications ultimately help non-technical users interact with data.</li>
-<li>A frontend framework to create the user interface, typically built with JavaScript, HTML, and CSS</li>
-<li>A backend framework to handle calculations and database operations</li>
-</ol>
-<p>I&rsquo;ll be honest: I picked the most beginner-friendly options available. My choices were heavily influenced by tutorials from Fireship and Code with Mosh (TODO: full credit).</p>
+<p>This was overwhelming at first. The options seem endless, and you could spend weeks just comparing different tools. Let me break it down to the essentials. For a full stack application you need three main layers:</p>
+<ul>
+<li>📦 <strong>A database</strong> for storing the data - the logical core of the application. Remember, most business applications ultimately help non-technical users interact with data.</li>
+<li>🖼 <strong>A frontend</strong> to create the user interface, typically built with JavaScript, HTML, and CSS</li>
+<li>🧮 <strong>A backend</strong> to handle calculations and database operations</li>
+</ul>
+<p>I&rsquo;ll be honest: I picked the most beginner-friendly options available. My choices were heavily influenced by tutorials from <a href="https://fireship.io/courses/nextjs/">Fireship</a> and <a href="https://codewithmosh.com/p/ultimate-nextjs-series">Code with Mosh</a>. I recommend them: great courses, easy to follow, they will guide you through the basics.</p>
+<div style="max-width: 4714px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 68.4317%;"><iframe src="//iframely.net/6FJOKN4" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <h2 id="data-first">Data first</h2>
 <p>First, I studied the tool and collected the requirements (and that&rsquo;s another story).
-Being a data engineer, I started where I was comfortable: database design. Before touching any frontend code, I mapped out my fact and dimension tables - Sales, Product, Customer, Settings, Calculations.</p>
-<p>You might wonder about those last two tables. Why separate settings and calculations? Settings can vary by country, customer, or product, requiring complex JOIN operations to associate them with sales data. The granularity is different. As for calculations, values like gross and net revenue require multiple intermediate steps (subtracting discounts, applying tactics, etc.). Having a separate 1:1 table with sales improves both efficiency and model clarity.</p>
-<p>Why start with data? A solid database design provides the foundation everything else builds upon. Too often, I&rsquo;ve seen developers twist their database design to fit application logic. It should be the other way around - let your application flow from a clean, logical data model.</p>
-<p>Ok, I know you have two questions.
-Why settings? Settings can be related to a country, a customer, a product: In order to associate them to a Sales line, a big JOIN statement needs to be made to find all the occurrences. Theri grnaularity is different.
-Why calculations? Because, for calculating values such as Gross and Net Revenue, multiple intermediate steps needs to be calculated, e.g. subtracting discounts or tacticals. A different table, 1:1 with the sales, improves efficiency and makes the model simpler.</p>
+Being a data engineer, I started where I was comfortable: <strong>database design</strong>. Before touching any frontend code, I mapped out my fact and dimension tables - Sales, Product, Customer, Settings, Calculations.</p>
+<p>You might have some questions already.</p>
+<ul>
+<li>Why separate lines and calculations? The granularity is the same, 1 sale has 1 calculation, but while sales can be only edited by the users, that&rsquo;s not the same for calculations. If you change the VAT value for France in the Settings, all the calculations (like Net Revenue) related to French data are reprocessed. But Sales values are not impacted.</li>
+<li>Why start with data? A solid database design provides the foundation everything else builds upon. Too often, I&rsquo;ve seen developers twist their database design to fit application logic. It should be the other way around - let your application flow from a clean, logical data model.</li>
+</ul>
 <h2 id="frontend-adventures-tables-and-ui-components">Frontend Adventures: Tables and UI Components</h2>
-<p>Once I had my database skeleton, I fired up Next.js and tackled my first frontend challenge: displaying data in tables. Let me tell you - building interactive tables from scratch is painful, especially when you need features like filtering and sorting.</p>
-<p>Luckily, I found shadcn/ui, a component library built on Radix UI and Tailwind CSS. It provides standardized UI elements that you can copy and paste in your code without reinventing the wheel.</p>
-<p>What initially drew me to shadcn/ui was their table component, which integrates TanStack Table V8, another great library designed for building tables. This gave me filtering, sorting, and pagination right out of the box.</p>
+<p>Once I had my database skeleton, I fired up Next.js and tackled <strong>my first frontend challenge: displaying data in tables</strong>. Let me tell you - building interactive tables from scratch is painful, especially when you need features like filtering and sorting.</p>
+<p>Luckily, I found <a href="https://ui.shadcn.com/">shadcn/ui</a>, a component library built on Radix UI and Tailwind CSS. It provides standardized UI elements that you can copy and paste in your code without reinventing the wheel.</p>
+<p>What initially drew me to shadcn/ui was their table component, which integrates <a href="https://tanstack.com/table/latest">TanStack Table V8</a>, another great library designed for building tables. This gave me filtering, sorting, and pagination right out of the box.</p>
 <p>Funny enough, I chose shadcn/ui just for the table component, but ended up using their entire ecosystem. Buttons, cards, popups - they were all just an import away. Modern frontend development has come a long way!</p>
+<div style="max-width: 1536px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 67.6563%;"><iframe src="//iframely.net/XASUIo4" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <h2 id="my-lazy-tips-for-frontend-development">My Lazy Tips for Frontend Development</h2>
 <ul>
 <li>Don&rsquo;t reinvent the wheel - use established UI libraries</li>
 <li>Start simple - you can always add complexity later</li>
 <li>Focus on functionality first, polish second</li>
-<li>TODO add</li>
+<li>Leverage AI. Debugging cryptic Typescript errors is no fun. ChatGPT happily gave me an hand in many edge cases, saving me precious hours. I found it unusable for anything slightly more complex though, expecially when calculating the business logic. Still ,I estimate a 30% speedup on the most annoying cases.</li>
 </ul>
 <h2 id="forms-and-data-validation">Forms and Data Validation</h2>
-<p>With my data display sorted, I tackled forms next. Next.js forms, combined with Zod for validation, make it surprisingly straightforward to handle user input. You can easily enforce rules like email format validation or ensuring quantities are positive numbers.</p>
+<p>With my data display sorted, I tackled <strong>forms</strong> next. Forms are a key part for this kind of app. In the end, it&rsquo;s the user that enters the input, such as a new sale to create calculations from. Making sure the data is correct and usable is crucial, and it wasn&rsquo;t that simple.
+Next.js forms, combined with Zod for validation, make it surprisingly straightforward to handle user input. You can easily enforce rules like email format validation or ensuring quantities are positive numbers.</p>
+<div style="max-width: 2258px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 28.1084%;"><iframe src="//iframely.net/1o5Danv" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p>I&rsquo;ll dive deeper into forms and validation in part two of this series, where I&rsquo;ll also cover the specific tools I used and share more detailed tips from my experience.</p>
-<p>To be continued&hellip;</p>
+<p><em>To be continued&hellip;</em></p>
 
           </article>
         </div>
@@ -471,7 +489,9 @@ Why calculations? Because, for calculating values such as Gross and Net Revenue,
                         <h5 class="card-title bg-transparent" title="TODO: my journey with Full Stack Development: creating a web app from scractches">TODO: my journey with Full Stack Development: creating a web app from scractches</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p>🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months. Why? First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague. Second, there was so much content to cover that I …</p>
+                        <p>🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months.Why?
+First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague.
+Second, there was so much content to cover that I …</p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
