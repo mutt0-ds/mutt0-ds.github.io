@@ -6,14 +6,14 @@
     <description>Recent content in Frontend on Mutt0-ds Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TODO: my journey with Full Stack Development: creating a web app from scractches</title>
-      <link>http://localhost:1313/posts/2024/02/my-journey-with-webapp/</link>
-      <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2024/02/my-journey-with-webapp/</guid>
-      <description>🧠 Introduction to Second Brains &amp;amp; Brain Dumping I&amp;rsquo;ve been quite silent in the past months, but there was quite a big reason for doing so: I was studying, a lot. This time I decided to dive again into fullstack web development, but instead of my past, smaller experiments of one page, I wanted to build a functional web app including Database, ORM, Authentication and Excel integration.&#xA;I already worked on smaller projects, but this &amp;ldquo;secret misssion&amp;rdquo; was going to be inspired by a legacy tool for Forecasting, I had the chance to study.</description>
+      <link>http://localhost:1313/posts/2024/11/my-journey-with-webapp/</link>
+      <pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024/11/my-journey-with-webapp/</guid>
+      <description>🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months. Why? First, the project I created has been under discussion for production deployment at my company, so I need to keep certain details vague. Second, there was so much content to cover that I didn&amp;rsquo;t know where to start. It&amp;rsquo;s a lot to unpack, so I&amp;rsquo;m splitting this into at least two parts.</description>
     </item>
   </channel>
 </rss>
