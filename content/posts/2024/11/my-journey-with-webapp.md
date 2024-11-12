@@ -1,9 +1,9 @@
 ---
 title: "TODO: my journey with Full Stack Development: creating a web app from scractches"
-date: 2024-02-24
+date: 2024-11-13
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
-image: /images/obsidian/obsidian.jpg
+image: /images/web_app/cover.png
 draft: true
 author: "Mutt0-ds"
 tags:
