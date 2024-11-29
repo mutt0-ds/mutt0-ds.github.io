@@ -1,5 +1,5 @@
 ---
-title: "I redesigned an Excel tool into a Full Stack Web App: here's how"
+title: "Reinventing a Full Stack Web App: here's how"
 date: 2024-11-13
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
