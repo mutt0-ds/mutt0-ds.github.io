@@ -13,7 +13,7 @@ outputs:
     - "HTML"
     - "RSS"
 
-Paginate: 6
+pagination.pagerSize: 6
 enableRobotsTXT: true
 # disqusShortname: your-disqus-shortname
 # googleAnalytics: G-MEASUREMENT_ID
