@@ -4,7 +4,7 @@
     <title>Prisma on Mutt0-ds Notes</title>
     <link>https://mutt0-ds.github.io/tags/prisma/</link>
     <description>Recent content in Prisma on Mutt0-ds Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 13 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/prisma/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://mutt0-ds.github.io/posts/2024/11/my-journey-with-webapp/</link>
       <pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/posts/2024/11/my-journey-with-webapp/</guid>
-      <description>🧠 Breaking Down Full Stack Development This post has been sitting in my drafts for over 7 months for two reasons:&#xA;First, since the project I created is being considered for production deployment at my company, I need to keep certain details vague. Second, there&amp;rsquo;s so much content to cover that finding a starting point was challenging. To make it more digestible, I&amp;rsquo;m splitting this into at least two parts.</description>
+      <description>&lt;h2 id=&#34;-breaking-down-full-stack-development&#34;&gt;🧠 Breaking Down Full Stack Development&lt;/h2&gt;&#xA;&lt;p&gt;This post has been sitting in my drafts for over 7 months for two reasons:&lt;/p&gt;&#xA;&lt;p&gt;First, since the project I created is being considered for production deployment at my company, I need to keep certain details vague. &lt;br&gt;&#xA;Second, &lt;strong&gt;there&amp;rsquo;s so much content to cover&lt;/strong&gt; that finding a starting point was challenging. To make it more digestible, I&amp;rsquo;m splitting this into at least two parts.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
