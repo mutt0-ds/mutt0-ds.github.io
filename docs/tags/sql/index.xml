@@ -4,7 +4,7 @@
     <title>Sql on Mutt0-ds Notes</title>
     <link>https://mutt0-ds.github.io/tags/sql/</link>
     <description>Recent content in Sql on Mutt0-ds Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Sep 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://mutt0-ds.github.io/posts/2022/09/personal-notes-about-dax-definitive-guide/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/posts/2022/09/personal-notes-about-dax-definitive-guide/</guid>
-      <description>Disclaimer: this will be a long, long post, written in my own way. It’s essentially a dump of my personal notes, taken when reading “The Definitive Guide to DAX” written by Alberto Ferrari and Marco Russo. At my new workplace I’m going to use PowerBI and DAX a lot, thus my boss suggested me to read the book.&#xA;Yep, it is big and very technical, with 700+ pages rich in contents, but trust me, that’s the “Bible”, a must-read for anyone willing to work with PowerBI and DAX.</description>
+      <description>&lt;p&gt;Disclaimer: this will be a long, long post, written in my own way. It’s essentially a dump of my personal notes, taken when reading &lt;a href=&#34;https://www.sqlbi.com/books/the-definitive-guide-to-dax-2nd-edition/&#34;&gt;“The Definitive Guide to DAX”&lt;/a&gt; written by &lt;strong&gt;Alberto Ferrari&lt;/strong&gt; and &lt;strong&gt;Marco Russo&lt;/strong&gt;. At my new workplace I’m going to use PowerBI and DAX a lot, thus my boss suggested me to read the book.&lt;/p&gt;&#xA;&lt;p&gt;Yep, it is big and very technical, with 700+ pages rich in contents, but trust me, that’s the “Bible”, a must-read for anyone willing to work with PowerBI and DAX. There’s everything you need, from the basics commands to the most advanced functions, with complex topics such as context transition, query plan, and storage engine. Many examples, in addition, apart from explaining every concept introduced in the book (which focuses a lot on giving clear, practical explanations) explore edge cases that gave me lots of headaches in the past. Further examples and insights can be found on the authors’ site &lt;a href=&#34;https://www.sqlbi.com/&#34;&gt;SQLBI&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

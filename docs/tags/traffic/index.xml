@@ -4,7 +4,7 @@
     <title>Traffic on Mutt0-ds Notes</title>
     <link>https://mutt0-ds.github.io/tags/traffic/</link>
     <description>Recent content in Traffic on Mutt0-ds Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/traffic/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</guid>
-      <description>I want to express my gratitude for the positive feedbacks I received a few months ago when I used Google Maps data to determine the best times for the daily commute. TL;DR: Mondays are the best, while Wednesdays, and early Fridays are the trickiest times to hit the road.&#xA;However, the neatness of this analysis takes a hit when real-world unpredictabilities come into play. Things like heavy traffic, rain, road closures due to accidents, or just that one slow driver in front of you can disrupt even the best-planned routes.</description>
+      <description>&lt;p&gt;I want to express my gratitude for the positive feedbacks I received a few months ago when &lt;a href=&#34;https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/&#34;&gt;I used Google Maps data to determine the best times for the daily commute&lt;/a&gt;. TL;DR: Mondays are the best, while Wednesdays, and early Fridays are the trickiest times to hit the road.&lt;/p&gt;&#xA;&lt;p&gt;However, the neatness of this analysis takes a hit when real-world unpredictabilities come into play. Things like heavy traffic, rain, road closures due to accidents, or just that one slow driver in front of you can disrupt even the best-planned routes. So, it&amp;rsquo;s essential to view these explorations as &amp;ldquo;what if&amp;rdquo; games. They provide a general framework but can&amp;rsquo;t fully account for the chaos of everyday life.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Analyzing My Commute Data to Find the Best Time to Go to Work</title>
       <link>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</guid>
-      <description>When my commute buddy and I find ourselves stuck in traffic during our car journeys, we often daydream about finding the ideal route and the optimal time to leave the office in order to avoid these uncomfortable situations. Now, thanks to the power of technology and the inspiration I drew from a fantastic article by @hishamsajid113, I am finally able to back up my theories about the best departure times from home and simulate with real data!</description>
+      <description>&lt;p&gt;When my commute buddy and I find ourselves stuck in traffic during our car journeys, we often daydream about finding the ideal route and &lt;strong&gt;the optimal time&lt;/strong&gt; to leave the office in order to avoid these uncomfortable situations. Now, thanks to the power of technology and the inspiration I drew from &lt;a href=&#34;https://medium.com/@hishamsajid113/using-google-distance-matrix-api-to-reduce-commute-time-b17a0b9b0fbe&#34;&gt;a fantastic article by @hishamsajid113&lt;/a&gt;, I am finally able to back up my theories about the best departure times from home and simulate with real data!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

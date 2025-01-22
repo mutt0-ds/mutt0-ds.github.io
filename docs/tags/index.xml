@@ -4,10 +4,45 @@
     <title>Tags on Mutt0-ds Notes</title>
     <link>https://mutt0-ds.github.io/tags/</link>
     <description>Recent content in Tags on Mutt0-ds Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Course</title>
+      <link>https://mutt0-ds.github.io/tags/course/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/course/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Datacamp</title>
+      <link>https://mutt0-ds.github.io/tags/datacamp/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/datacamp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fabric</title>
+      <link>https://mutt0-ds.github.io/tags/fabric/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/fabric/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Power-Bi</title>
+      <link>https://mutt0-ds.github.io/tags/power-bi/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Writing</title>
+      <link>https://mutt0-ds.github.io/tags/writing/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/writing/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Frontend</title>
       <link>https://mutt0-ds.github.io/tags/frontend/</link>
@@ -76,13 +111,6 @@
       <link>https://mutt0-ds.github.io/tags/data-culture/</link>
       <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/data-culture/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Power-Bi</title>
-      <link>https://mutt0-ds.github.io/tags/power-bi/</link>
-      <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
       <description></description>
     </item>
     <item>
@@ -223,13 +251,6 @@
       <link>https://mutt0-ds.github.io/tags/directquery/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/directquery/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fabric</title>
-      <link>https://mutt0-ds.github.io/tags/fabric/</link>
-      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/fabric/</guid>
       <description></description>
     </item>
     <item>

@@ -4,7 +4,7 @@
     <title>Ibm on Mutt0-ds Notes</title>
     <link>https://mutt0-ds.github.io/tags/ibm/</link>
     <description>Recent content in Ibm on Mutt0-ds Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Sep 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/ibm/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://mutt0-ds.github.io/posts/2022/09/my-surreal-experience-cobol/</link>
       <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/posts/2022/09/my-surreal-experience-cobol/</guid>
-      <description>I was feeling curious&amp;hellip; So, I decided to challenge myself and try to learn a bit more about COmmon Business-Oriented Language aka COBOL, invented in 1959 by IBM. It’s not the most popular among programmers, being extremely old and with huge limitations compared to today’s modern languages&amp;hellip; Yet, as we will see, it’s still alive, hidden in huge legacy codebases in the form of spaghetti code and difficult to get rid of without an entire system redesign.</description>
+      <description>&lt;p&gt;I was feeling curious&amp;hellip; So, I decided to challenge myself and try to learn a bit more about &lt;em&gt;&lt;strong&gt;CO&lt;/strong&gt;mmon &lt;strong&gt;B&lt;/strong&gt;usiness-&lt;strong&gt;O&lt;/strong&gt;riented &lt;strong&gt;L&lt;/strong&gt;anguage&lt;/em&gt; aka &lt;a href=&#34;https://en.wikipedia.org/wiki/COBOL&#34;&gt;COBOL&lt;/a&gt;, invented in 1959 by IBM. It’s not the most popular among programmers, being extremely old and with huge limitations compared to today’s modern languages&amp;hellip; Yet, as we will see, it’s still alive, hidden in huge legacy codebases in the form of spaghetti code and difficult to get rid of without  an entire system redesign.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
