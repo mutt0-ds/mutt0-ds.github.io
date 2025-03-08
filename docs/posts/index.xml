@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simplicity speaks louder than Complexity</title>
+      <link>https://mutt0-ds.github.io/posts/2025/03/first-pitch/</link>
+      <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/posts/2025/03/first-pitch/</guid>
+      <description>&lt;p&gt;A few days ago, I had my first technical presentation at my new company.&#xA;I joined InvestSuite 3 months ago and it was finally time to present the product I’m working on, StoryTeller, to a very important customer.&lt;/p&gt;&#xA;&lt;p&gt;I was nervous.&lt;/p&gt;&#xA;&lt;p&gt;I’ve given many presentations in the past (to hundreds of people, even at a conference) so this wasn’t entirely new to me. But I’m shy by nature, and presenting doesn’t come easily to me. This time, it felt different because the stakes were higher: it was about selling our product.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How I created my first Course with Datacamp</title>
       <link>https://mutt0-ds.github.io/posts/2025/01/fabric-datacamp-course/</link>
