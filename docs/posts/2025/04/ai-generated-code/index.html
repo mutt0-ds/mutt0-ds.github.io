@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/">
+  <meta property="og:site_name" content="Mutt0-ds Notes">
+  <meta property="og:title" content="45 Minutes, 100% AI-Generated Code">
+  <meta property="og:description" content="Last Saturday, I woke up with an idea: what if StoryTeller, the product I work on, had an interactive dashboard with an AI agent that could perform tasks? It was one of those half-formed concepts I could picture it but couldn’t quite articulate it. I knew if I wanted my team to take it seriously, I’d need to build something tangible. Otherwise, it’d just sound like abstract brainstorming.
+So, I sinned. I vibe coded. (I hate that word, so let’s say “I went full speed with AI and ignored the brakes.”) Here’s what I learned from prototyping with 100% AI-generated code.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-19T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-19T00:00:00+00:00">
+    <meta property="article:tag" content="Ai">
+    <meta property="article:tag" content="Coding">
+    <meta property="article:tag" content="Cursor">
+    <meta property="article:tag" content="Next-Js">
+    <meta property="article:tag" content="Prototyping">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="45 Minutes, 100% AI-Generated Code">
+  <meta name="twitter:description" content="Last Saturday, I woke up with an idea: what if StoryTeller, the product I work on, had an interactive dashboard with an AI agent that could perform tasks? It was one of those half-formed concepts I could picture it but couldn’t quite articulate it. I knew if I wanted my team to take it seriously, I’d need to build something tangible. Otherwise, it’d just sound like abstract brainstorming.
+So, I sinned. I vibe coded. (I hate that word, so let’s say “I went full speed with AI and ignored the brakes.”) Here’s what I learned from prototyping with 100% AI-generated code.">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+45 Minutes, 100% AI-Generated Code | Mutt0-ds Notes
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">45 Minutes, 100% AI-Generated Code</h1>
+            <div class="text-center">
+              Mutt0-ds 
+              <small>|</small>
+              Apr 19, 2025
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid" src="/images/vibe_coding/ollivander.gif" alt="45 Minutes, 100% AI-Generated Code">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>Last Saturday, I woke up with an idea: what if <strong><a href="https://www.investsuite.com/storyteller">StoryTeller</a>, the product I work on, had an interactive dashboard with an AI agent that could perform tasks</strong>?
+It was one of those half-formed concepts I could picture it but couldn’t quite articulate it. I knew if I wanted my team to take it seriously, I’d need to build something tangible. Otherwise, it’d just sound like abstract brainstorming.</p>
+<p>So, I sinned. I <em>vibe coded</em>.
+(I hate that word, so let&rsquo;s say &ldquo;I went full speed with AI and ignored the brakes.&rdquo;)
+Here’s what I learned from prototyping with <strong>100% AI-generated code</strong>.</p>
+<h2 id="my-take-on-ai-tools-for-devs">My take on AI tools for Devs</h2>
+<p>I won&rsquo;t claim to reveal hidden truths, but here&rsquo;s my stance on AI tools for developers:
+I consider them as an evolution of Googling. It&rsquo;s an art. It&rsquo;s&hellip; a vibe.</p>
+<p>Back in the day 👴, when you had a problem, you needed to:</p>
+<ol>
+<li>Carefully select search terms for Google</li>
+<li>Choose the right results (usually Stack Overflow)</li>
+<li>Analyzing the top comments</li>
+<li>Copy-pasting and adapting the solution to your needs.</li>
+</ol>
+<p>AI speeds this up dramatically, but you still need that critical thinking - knowing what you want, how you want it and whether the solution might backfire later. <strong>Prompting is becoming an art like Googling</strong>. This comes with experience.</p>
+<p>Vibe coding (blindly accepting AI output) is like always picking Google&rsquo;s first result and pasting it. Sure, it might work, but you&rsquo;re building technical debt with code you barely reviewed. At insane speed. That’s why AI is perfect for prototyping: I knew this wouldn’t ship to production, so I could afford to be reckless.</p>
+<p>(Don&rsquo;t get me wrong, I use AI for a lot of other tasks: brainstorming, exploring approaches, cleaning up messy code, etc&hellip; How to correctly use it is a long and complex topic I&rsquo;m only quikcly touching here)</p>
+<p>What scares me is how easily AI-assisted tools sell shiny demos: exactly what marketers love. But in reality, you can&rsquo;t open a million-line code repository, pick a medium-complexity issue, and let the AI agent work unsupervised.</p>
+<h2 id="from-figma-to-cursor">From Figma to Cursor</h2>
+<p>I first tried mocking upthe confuse idea in my mind using <a href="https://www.figma.com/">Figma</a> and <a href="https://www.framer.com/">Framer</a>, but static designs couldn&rsquo;t capture the flow I wanted: <em>me chatting with an AI agent -&gt; the agent updating report data in real time</em>. Or maybe it was just me being bad at using them.</p>
+<p>So I decided to set up <a href="https://www.cursor.com/">Cursor</a> (my favorite IDE at the moment) and created a new project. It was a Next.js web app, because <a href="https://mutt0-ds.github.io/posts/2024/11/my-journey-with-webapp/">I&rsquo;ve already some experience with it</a>, and it was a complete solution for creating and interactive web application to show what I had in mind.</p>
+<p>Finally I had some time to try to experiment a little bit without the pressure of a complex codebase to handle. I had something in my mind, and the freedom to create everything I wanted.</p>
+<p><strong>45 minutes later</strong>, I was done.</p>
+<h2 id="the-strategy">The strategy</h2>
+<p>Remember, I had no clear ideas yet. I just wanted to imagine how an AI agent would work in my mind.</p>
+<p>My only rule was that <strong>all code would be AI-generated</strong>.</p>
+<p>In the Cursor Agent prompt, I told my model (<a href="https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/">Gemini 2.5 Pro</a>, by far my favorite for coding) to follow this strategy, iterating as I refined my vision:</p>
+<ul>
+<li>Create a dashboard with 4 panels</li>
+<li>Add a chat component</li>
+<li>Set up an OpenAI API agent that uses tools to interact with my data (a local file)</li>
+<li>Create 2 chart components (to simulate a dashboard)</li>
+<li>Embed a mock report in the final panel</li>
+</ul>
+<p>Then we developed the interactive logic where I could ask the model to change parameters, modify data, and generate final reports.</p>
+<h2 id="first-impressions-amazing-experience">First impressions: amazing experience</h2>
+<p>It felt <strong>incredible</strong>. I entered &ldquo;the flow&rdquo; immediately, rapidly iterating, building, transforming my code. I&rsquo;ve rarely felt so productive.
+What would normally take days (if I ever finished it, probably not, it wasn&rsquo;t worth the effort for something I would have shown in a 5-minute call) took minutes. The dopamine hits kept coming as each task completed.</p>
+<p>Then I realized what I&rsquo;d done. I&rsquo;d sinned. I&rsquo;d vibecoded.
+<strong>The codebase was a mess (especially the tool-usage logic) and I barely understood it.</strong></p>
+<p>Jokes aside, I noticed how tempting it was to keep prompting fixes without thinking. LLMs tend to overcomplicate solutions when uncertain. Despite limiting verbosity (with Cursor Rules), the model built an unnecessarily complex tool-calling system when I just wanted: &ldquo;If I ask to change data, call change_data; if refreshing, call refresh_report&rdquo;. You need discipline to rein them in when they hallucinate or derail. As I&rsquo;ve said repeatedly: it&rsquo;s an art. A vibe.</p>
+<p>What truly scared me? <strong>I didn&rsquo;t learn from my work</strong>. It felt like reading a stranger&rsquo;s codebase.
+For throwaway code, fine, but for serious projects? Unacceptable. You must understand what you&rsquo;re creating, at least structurally. I&rsquo;m tired of working on undocumented codebases with obscure logic, and I refuse to contribute to that legacy.</p>
+<p>Near the end, I got stuck because I&rsquo;d forgotten how the chart logic worked. I spent 10 of my 45 minutes reverse-engineering my own &ldquo;code.&rdquo; A warning sign.</p>
+<p>Still, my ugly prototype served its purpose. On Monday, I showed it to my team and we briefly discussed the (still vague) concept.</p>
+<p>The lesson? <strong>Going full speed with AI is tempting and fun, but also dangerous without critical thinking</strong>. I understand the excitement. But combining tools with experience, judgment, and &ldquo;vibe&rdquo; yields far better results in the long run.</p>
+<h2 id="final-observations">Final Observations</h2>
+<ul>
+<li><strong>AI excels at frontend work</strong> (structured, framework-specific code). I struggled more with backend tasks where business logic derails LLMs.</li>
+<li><strong>Perfect for throwaway code</strong> and scripting (obviously).</li>
+<li><strong>&ldquo;AI etiquette&rdquo; remains crucial: critical thinking can&rsquo;t be automated</strong>. I learned through experience, just like with Googling.</li>
+<li>If I was a junior, <strong>I would prioritize learning how to use AI tools effectively</strong>. It&rsquo;s a different approach, where you keep asking and asking the LLM to explain what it did, and learn during the procces. It&rsquo;s important because the landscape has changed. I don&rsquo;t need juniors for menial tasks, but a junior with a reliable strategy (e.g. not just throwing bad AI-generated code) can go very far.</li>
+<li><a href="https://ghuntley.com/stdlib/"><strong>Cursor Rules</strong></a> help (I hate LLM verbosity).</li>
+<li><strong>Experienced devs can 2x-5x productivity</strong> by knowing what to ask and how to supervise. My workflow: brainstorm → AI drafts → I implement → AI refines → I verify. The human in the loop can&rsquo;t be removed. DO NOT AI implement -&gt; end.</li>
+<li>Experience also helps to <strong>identify when AI is going in the wrong direction</strong>, usually an over-complicated solution you don&rsquo;t need</li>
+<li><strong>Non-technical users going unchecked worries me</strong>. But in the end is no worse than bad consultants or a bunch of interns. Just harder to detect, but we still didn&rsquo;t break the world.</li>
+<li><strong>Explaining these nuances to non-devs will be tough</strong>. Anyone with no experience can build my same dahsboard and think <em>&ldquo;why do I need an engineer&rdquo;</em>. As other have predicted, this mountain of technical debt written by AI will kick us back in a few years and there will be more sensitivity about the topic, but for now, we need to be very clear about how important the human in the loop still is.</li>
+</ul>
+<p>That said, I&rsquo;m optimistic about AI&rsquo;s potential. These tools are transformative and here to stay. We just need to use them wisely.</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#my-take-on-ai-tools-for-devs">My take on AI tools for Devs</a></li>
+    <li><a href="#from-figma-to-cursor">From Figma to Cursor</a></li>
+    <li><a href="#the-strategy">The strategy</a></li>
+    <li><a href="#first-impressions-amazing-experience">First impressions: amazing experience</a></li>
+    <li><a href="#final-observations">Final Observations</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/ai" target="_blank">ai</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/coding" target="_blank">coding</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/cursor" target="_blank">cursor</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/next-js" target="_blank">next-js</a></li>
+              
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/prototyping" target="_blank">prototyping</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=45%20Minutes%2c%20100%25%20AI-Generated%20Code&url=https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2025%2f04%2fai-generated-code%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=45%20Minutes%2c%20100%25%20AI-Generated%20Code: https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2025%2f04%2fai-generated-code%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=45%20Minutes%2c%20100%25%20AI-Generated%20Code&amp;body=Check%20out%20this%20site https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2025%2f04%2fai-generated-code%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/04/ai-generated-code/">
+                        <img src="/images/vibe_coding/ollivander.gif" class="card-img-top" alt="45 Minutes, 100% AI-Generated Code">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/04/ai-generated-code/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="45 Minutes, 100% AI-Generated Code">45 Minutes, 100% AI-Generated Code</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Last Saturday, I woke up with an idea: what if <strong><a href="https://www.investsuite.com/storyteller">StoryTeller</a>, the product I work on, had an interactive dashboard with an AI agent that could perform tasks</strong>?
+It was one of those half-formed concepts I could picture it but couldn’t quite articulate it. I knew if I wanted my team to take it seriously, …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Apr 19, 2025</span>
+                    <a href="/posts/2025/04/ai-generated-code/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/03/first-pitch/">
+                        <img src="/images/first_pitch/title.png" class="card-img-top" alt="Simplicity speaks louder than Complexity">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/03/first-pitch/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Simplicity speaks louder than Complexity">Simplicity speaks louder than Complexity</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>A few days ago, I had my first technical presentation at my new company.
+I joined InvestSuite 3 months ago and it was finally time to present the product I’m working on, <a href="https://www.investsuite.com/storyteller">StoryTeller</a>, to a very important customer.</p>
+<p>I was nervous.</p>
+<p>I’ve given many presentations in the past (to hundreds of people, even …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Mar 8, 2025</span>
+                    <a href="/posts/2025/03/first-pitch/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/01/fabric-datacamp-course/">
+                        <img src="/images/datacamp_fabric/datacamp_course.jfif" class="card-img-top" alt="How I created my first Course with Datacamp">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/01/fabric-datacamp-course/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="How I created my first Course with Datacamp">How I created my first Course with Datacamp</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>I just published <a href="https://app.datacamp.com/learn/courses/plan-and-implement-a-data-analytics-environment-with-microsoft-fabric">an online course</a>! covering advanced <a href="https://www.microsoft.com/en-us/microsoft-fabric">Microsoft Fabric</a> topics like security, deployment, admin settings, and version control!</p>
+<p>Honestly, I never imagined I’d say, “I’m a teacher”&hellip;
+It feels pretty wild, but here I am!</p>
+<p>This project kept me busy for months, and I’m really proud of …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jan 22, 2025</span>
+                    <a href="/posts/2025/01/fabric-datacamp-course/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io/" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
