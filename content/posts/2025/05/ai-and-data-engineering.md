@@ -40,7 +40,7 @@ This one’s my personal favorite. Also the most chaotic as it ranges from "try 
 
 It’s what happens when a new project starts, or a client shares a dataset on you and says "can you tell us if this is usable?" You quickly connect to the source, pull out the data, clean it out, maybe throw some Excel magic or Python scripts in there and get something to use before the meeting.
 
-It’s not strictly “data engineering” in the job-title sense. I’ve seen finance analysts, HR folks, even sales do some form of this. **Prototyping is the messy, improvisational core of early-stage data work**: that's why I find it so fascinating and it's the core of my work.
+It’s not strictly “data engineering” in the job-title sense. I’ve seen finance analysts, HR folks, even sales do some form of this. **Prototyping is the messy, improvisational foundation of early-stage data work**: that's why I find it so fascinating and it's the core of my work.
 
 <div style="max-width: 576px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="//iframely.net/rO1XsCE2" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
@@ -67,13 +67,13 @@ The truth is, coding AI works well when the problem is clean and the data is pre
 ## 2. Structured Data Cleaning/Data Entry
 
 Now let’s talk about the other kind of data work.
-The *"download a file, change some headers, check for mistakes, re-upload it to another system"* kind. A staple in corporations everywhere.
+The "download a file, change some headers, check for mistakes, re-upload it to another system" kind. A staple in corporations everywhere.
 
-<div style="max-width: 600px; margin-bottom:3"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 66.6%;"><iframe src="//iframely.net/RJi1v8Ra" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 600px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 66.6%;"><iframe src="//iframely.net/RJi1v8Ra" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 I've seen around quite some time: from Marketing interns downloading Google Analytics results to make a weekly chart in Excel, to more complex manual steps between one internal system and another that "is not connected".
 
-It’s mind-numbing. And honestly? This is where AI should be amazing. The process is clear, repeatable, and boring. 
+It’s mind-numbing. And honestly? This is **where AI should be amazing**. The process is clear, repeatable, and boring. 
 
 But here’s where I’m still skeptical.
 Because the truth is, most of this could’ve been automated years ago. Not even with AI (usually), just regular old Python scripts, or tools like Power Automate, Zapier, Excel macros. The real blocker is [**Organizational Inertia**](https://www.sciencedirect.com/science/article/pii/S1029313221000038).
@@ -111,6 +111,11 @@ And even if the AI agent somehow gets the logic right… **how do you trust it?*
 [A hallucinated React component is easy to spot](https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/). It crashes or looks weird. Bad data quietly poisons your reporting until someone in the C-suite sees a chart that doesn’t add up, and then suddenly, it’s your problem.
 
 The tooling is getting flashier, but the core problems are still human, still fuzzy, still hard to automate.
+
+<div style="max-width: 941px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 99.7449%;"><iframe src="//iframely.net/93lNyZNr" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+
+
+*Credits: Data Goblin*
 
 
 ## So... Will AI Replace Data Engineers?
