@@ -6,13 +6,41 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ai</title>
       <link>https://mutt0-ds.github.io/tags/ai/</link>
-      <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Copilot</title>
+      <link>https://mutt0-ds.github.io/tags/copilot/</link>
+      <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/copilot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data-Engineering</title>
+      <link>https://mutt0-ds.github.io/tags/data-engineering/</link>
+      <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/data-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Power-Bi</title>
+      <link>https://mutt0-ds.github.io/tags/power-bi/</link>
+      <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prototyping</title>
+      <link>https://mutt0-ds.github.io/tags/prototyping/</link>
+      <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/prototyping/</guid>
       <description></description>
     </item>
     <item>
@@ -34,13 +62,6 @@
       <link>https://mutt0-ds.github.io/tags/next-js/</link>
       <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/next-js/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Prototyping</title>
-      <link>https://mutt0-ds.github.io/tags/prototyping/</link>
-      <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/prototyping/</guid>
       <description></description>
     </item>
     <item>
@@ -97,13 +118,6 @@
       <link>https://mutt0-ds.github.io/tags/fabric/</link>
       <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/fabric/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Power-Bi</title>
-      <link>https://mutt0-ds.github.io/tags/power-bi/</link>
-      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/power-bi/</guid>
       <description></description>
     </item>
     <item>
@@ -419,13 +433,6 @@
       <link>https://mutt0-ds.github.io/tags/build/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/build/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Copilot</title>
-      <link>https://mutt0-ds.github.io/tags/copilot/</link>
-      <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/copilot/</guid>
       <description></description>
     </item>
     <item>
