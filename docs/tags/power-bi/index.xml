@@ -6,8 +6,15 @@
     <description>Recent content in Power-Bi on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/power-bi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No, AI is not replacing Data Engineers.</title>
+      <link>https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/</link>
+      <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.anthropic.com/news/claude-4&#34;&gt;Claude 4&lt;/a&gt; landed, and as usual, it kicked off the usual hype cycle.&#xA;&amp;ldquo;Best coding model ever&amp;rdquo; &amp;ldquo;It writes stories!&amp;rdquo; &amp;ldquo;AI is replacing programmers!&amp;rdquo; And of course, LinkedIn is buzzing with non-technical folks proudly declaring how engineers are doomed and it’s time to &amp;ldquo;rethink talent&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Anthropic CEO even dropped a &lt;a href=&#34;https://www.pcmag.com/news/anthropic-ceo-ai-poised-to-wipe-out-50-of-entry-level-jobs-in-next-5-years&#34;&gt;spicy take&lt;/a&gt;: AI could wipe out &lt;strong&gt;half&lt;/strong&gt; of all entry-level white-collar jobs and spike unemployment to 10–20% in the next 1–5 years.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How I created my first Course with Datacamp</title>
       <link>https://mutt0-ds.github.io/posts/2025/01/fabric-datacamp-course/</link>
