@@ -14,7 +14,7 @@ tags:
   - prototyping
 ---
 [Claude 4](https://www.anthropic.com/news/claude-4) landed, and as usual, it kicked off the usual hype cycle.
-"Best coding model ever" "It writes stories!" "AI is replacing programmers!" And of course, LinkedIn is buzzing with non-technical folks proudly declaring how engineers are doomed and it’s time to "rethink talent".
+"Best coding model ever" "It writes stories!" "AI is replacing programmers!" And of course, LinkedIn is buzzing with non-technical folks declaring how engineers are doomed and it’s time to "rethink talent".
 
 Anthropic CEO even dropped a [spicy take](https://www.pcmag.com/news/anthropic-ceo-ai-poised-to-wipe-out-50-of-entry-level-jobs-in-next-5-years): AI could wipe out **half** of all entry-level white-collar jobs and spike unemployment to 10–20% in the next 1–5 years.
 
@@ -24,29 +24,29 @@ Anthropic CEO even dropped a [spicy take](https://www.pcmag.com/news/anthropic-c
 
 Bold. But **what about data engineers**?
 
-And no, I’m not doing another ["AI is a tool, not a replacement" speech](https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/). That’s tired. A slightly better score on some synthetic coding benchmark doesn’t move the needle for me. Developers will adapt and more opportunities will unlock.
+And no, I’m not doing another ["AI is a tool, not a replacement" speech](https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/). That’s tired. A slightly better score on some synthetic coding benchmark doesn’t move the needle for me. Developers will adapt, and more opportunities will unlock.
 
-What I do want to explore is this: 
+What I want to explore is this: 
 
 > Why is Data Engineering still so unmoved by all this AI hype?
 
 There’s still some wild claiming happening out there, like [this guy](https://www.linkedin.com/posts/mattdancho_tableau-and-powerbi-are-getting-killed-by-activity-7309237909319020544-_-lK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC2U3k8BCS51ADEjGbUB2Wf0ovHOD7F_hng) saying "Tableau and Power BI are getting killed by free AI tools". We'll get back to it later.
 
-For me, broad data engineering (generically, *the building of systems to enable the collection and usage of data*) breaks down into three areas where AI still doesn't cut it:
+For me, broad data engineering (*the building of systems to enable the collection and usage of data*) breaks down into three areas where AI still doesn't cut it:
 
 ## 1. Greenfield Prototyping
 
-This one’s my personal favorite. Also the most chaotic as it ranges from "try out this new API integration" to "Boss wants a number by 4 PM".
+This one’s my favorite. Also, the most chaotic as it ranges from "try out this new API integration" to "Boss wants a number by 4 PM".
 
-It’s what happens when a new project starts, or a client shares a dataset on you and says "can you tell us if this is usable?" You quickly connect to the source, pull out the data, clean it out, maybe throw some Excel magic or Python scripts in there and get something to use before the meeting.
+It’s what happens when a new project starts, or a client shares a dataset with you and says "can you tell us if this is usable?" You connect to the source, pull out the data, clean it out, maybe throw some Excel magic or Python scripts in there and get something to use before the meeting.
 
-It’s not strictly “data engineering” in the job-title sense. I’ve seen finance analysts, HR folks, even sales do some form of this. **Prototyping is the messy, improvisational foundation of early-stage data work**: that's why I find it so fascinating and it's the core of my work.
+It’s not “data engineering” in the job-title sense. I’ve seen finance analysts, HR folks, even sales do some form of this. **Prototyping is the messy, improvisational foundation of early-stage data work**: that's why I find it so fascinating, and it's the core of my work.
 
 <div style="max-width: 576px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="//iframely.net/rO1XsCE2" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 *Me, prototyping.*
 
-Indeed, we were all impressed when ChatGPT started parsing Excels and doing throughful data analytics. But real life isn’t a demo video.
+Indeed, we were all impressed when ChatGPT started parsing Excels and doing exploratory data analysis. But real life isn’t a demo video.
 
 <div style="max-width: 2292px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 53.089%;"><iframe src="//iframely.net/dbcNKH9N" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
@@ -62,7 +62,11 @@ Take last week: I had to prep a usable API input for our product, [StoryTeller](
 
 AI helped a bit. I mean, sure, it generated the skeleton of a Python script to start with. But the actual decisions, the weird little fixes, the intuition to say, "huh, this column doesn’t look right"? Still 100% human. It started hallucinated at point 1 of my list, removing instruments instead of trying to fix the error.
 
-The truth is, coding AI works well when the problem is clean and the data is predictable, as it happens in simple software development. **In early-stage, high-pressure, ambiguous data work, AI doesn’t really know what to do**. And let’s be honest: sometimes, **neither do you**, until you start poking around.
+The truth is, coding AI works well when the problem is clean and the data is predictable, as it happens in simple software development. 
+
+They're still doing decently in the greenfield data prototyping, and I recommend testing AI out and find its limit and strenghts! They can be incredible companions.
+
+But they tend to crumble when they hit something new, which is pretty much the norm. Because **in early-stage, high-pressure, ambiguous data work, AI doesn’t really know what to do**. And let’s be honest: sometimes, **neither do you**, until you start poking around.
 
 ## 2. Structured Data Cleaning/Data Entry
 
