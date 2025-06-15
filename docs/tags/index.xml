@@ -6,8 +6,36 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Book</title>
+      <link>http://localhost:1313/tags/book/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/book/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Physics</title>
+      <link>http://localhost:1313/tags/physics/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/physics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reading</title>
+      <link>http://localhost:1313/tags/reading/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/reading/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>We-Have-No-Idea</title>
+      <link>http://localhost:1313/tags/we-have-no-idea/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/we-have-no-idea/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Ai</title>
       <link>http://localhost:1313/tags/ai/</link>
