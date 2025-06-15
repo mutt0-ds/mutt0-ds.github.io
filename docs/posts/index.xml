@@ -2,206 +2,213 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Physics book for people who hate Physics</title>
+      <link>http://localhost:1313/posts/2025/06/we-have-no-idea-book/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025/06/we-have-no-idea-book/</guid>
+      <description>&lt;p&gt;My relationship with physics has always been… troubled.&lt;/p&gt;&#xA;&lt;p&gt;Probably because I had a high school teacher who never managed to spark any interest in me, I just never caught up. I remember sitting silently at my final exam (Maturità) when the physics question came up, completely blank. I also struggled like hell with the physics exam at university. It just never clicked.&lt;/p&gt;&#xA;&lt;p&gt;And honestly, I don’t deal with physics in my daily life, so the chance to change that never really came up.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>No, AI is not replacing Data Engineers.</title>
-      <link>https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/</link>
+      <link>http://localhost:1313/posts/2025/05/ai-and-data-engineering/</link>
       <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/</guid>
+      <guid>http://localhost:1313/posts/2025/05/ai-and-data-engineering/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.anthropic.com/news/claude-4&#34;&gt;Claude 4&lt;/a&gt; landed, and as usual, it kicked off the usual hype cycle.&#xA;&amp;ldquo;Best coding model ever&amp;rdquo; &amp;ldquo;It writes stories!&amp;rdquo; &amp;ldquo;AI is replacing programmers!&amp;rdquo; And of course, LinkedIn is buzzing with non-technical folks declaring how engineers are doomed and it’s time to &amp;ldquo;rethink talent&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Anthropic CEO even dropped a &lt;a href=&#34;https://www.pcmag.com/news/anthropic-ceo-ai-poised-to-wipe-out-50-of-entry-level-jobs-in-next-5-years&#34;&gt;spicy take&lt;/a&gt;: AI could wipe out &lt;strong&gt;half&lt;/strong&gt; of all entry-level white-collar jobs and spike unemployment to 10–20% in the next 1–5 years.&lt;/p&gt;</description>
     </item>
     <item>
       <title>45 Minutes, 100% AI-Generated Code</title>
-      <link>https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/</link>
+      <link>http://localhost:1313/posts/2025/04/ai-generated-code/</link>
       <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/</guid>
+      <guid>http://localhost:1313/posts/2025/04/ai-generated-code/</guid>
       <description>&lt;p&gt;Last Saturday, I woke up with an idea: what if &lt;strong&gt;&lt;a href=&#34;https://www.investsuite.com/storyteller&#34;&gt;StoryTeller&lt;/a&gt;, the product I work on, had an interactive dashboard with an AI agent that could perform tasks&lt;/strong&gt;?&#xA;It was one of those half-formed concepts I could picture it but couldn&amp;rsquo;t quite articulate it. I knew if I wanted my team to take it seriously, I&amp;rsquo;d need to build something tangible. Otherwise, it&amp;rsquo;d just sound like abstract brainstorming.&lt;/p&gt;&#xA;&lt;p&gt;So, I sinned. I &lt;em&gt;vibe coded&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Simplicity speaks louder than Complexity</title>
-      <link>https://mutt0-ds.github.io/posts/2025/03/first-pitch/</link>
+      <link>http://localhost:1313/posts/2025/03/first-pitch/</link>
       <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2025/03/first-pitch/</guid>
+      <guid>http://localhost:1313/posts/2025/03/first-pitch/</guid>
       <description>&lt;p&gt;A few days ago, I had my first technical presentation at my new company.&#xA;I joined InvestSuite 3 months ago and it was finally time to present the product I’m working on, &lt;a href=&#34;https://www.investsuite.com/storyteller&#34;&gt;StoryTeller&lt;/a&gt;, to a very important customer.&lt;/p&gt;&#xA;&lt;p&gt;I was nervous.&lt;/p&gt;&#xA;&lt;p&gt;I’ve given many presentations in the past (to hundreds of people, even at &lt;a href=&#34;https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/&#34;&gt;a conference&lt;/a&gt;) so this wasn’t entirely new to me. But I’m shy by nature, and presenting doesn’t come easily to me. This time, it felt different because the stakes were higher: &lt;strong&gt;it was about selling our product&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How I created my first Course with Datacamp</title>
-      <link>https://mutt0-ds.github.io/posts/2025/01/fabric-datacamp-course/</link>
+      <link>http://localhost:1313/posts/2025/01/fabric-datacamp-course/</link>
       <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2025/01/fabric-datacamp-course/</guid>
+      <guid>http://localhost:1313/posts/2025/01/fabric-datacamp-course/</guid>
       <description>&lt;p&gt;I just published &lt;a href=&#34;https://app.datacamp.com/learn/courses/plan-and-implement-a-data-analytics-environment-with-microsoft-fabric&#34;&gt;an online course&lt;/a&gt;! covering advanced &lt;a href=&#34;https://www.microsoft.com/en-us/microsoft-fabric&#34;&gt;Microsoft Fabric&lt;/a&gt; topics like security, deployment, admin settings, and version control!&lt;/p&gt;&#xA;&lt;p&gt;Honestly, I never imagined I’d say, “I’m a teacher”&amp;hellip;&#xA;It feels pretty wild, but here I am!&lt;/p&gt;&#xA;&lt;p&gt;This project kept me busy for months, and I’m really proud of how it turned out. Fabric is way more complex than Power BI. It&amp;rsquo;s a complete data platform with several services, and there’s not much in-depth content out there for those who want to learn about the technical side. With &lt;a href=&#34;https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/&#34;&gt;my experience in a large organization&lt;/a&gt;, where I learned about Power BI and Fabric firsthand, I was excited to share what I know.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Reinventing a Full Stack Web App: here&#39;s how</title>
-      <link>https://mutt0-ds.github.io/posts/2024/11/my-journey-with-webapp/</link>
+      <link>http://localhost:1313/posts/2024/11/my-journey-with-webapp/</link>
       <pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/11/my-journey-with-webapp/</guid>
+      <guid>http://localhost:1313/posts/2024/11/my-journey-with-webapp/</guid>
       <description>&lt;h2 id=&#34;-breaking-down-full-stack-development&#34;&gt;🧠 Breaking Down Full Stack Development&lt;/h2&gt;&#xA;&lt;p&gt;This post has been sitting in my drafts for over 7 months for two reasons:&lt;/p&gt;&#xA;&lt;p&gt;First, since the project I created is being considered for production deployment at my company, I need to keep certain details vague. &lt;br&gt;&#xA;Second, &lt;strong&gt;there&amp;rsquo;s so much content to cover&lt;/strong&gt; that finding a starting point was challenging. To make it more digestible, I&amp;rsquo;m splitting this into at least two parts.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Data Culture - How we promoted Power BI in a Corporate Environment [🎙 Power BI Ticino 2024]</title>
-      <link>https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/</link>
+      <link>http://localhost:1313/posts/2024/10/my-talk-about-data-culture/</link>
       <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/</guid>
+      <guid>http://localhost:1313/posts/2024/10/my-talk-about-data-culture/</guid>
       <description>&lt;p&gt;Last Friday, I took the stage at the &lt;strong&gt;&lt;a href=&#34;https://sessionize.com/pbiugiti2024/&#34;&gt;Power BI Ticino Conference&lt;/a&gt;&lt;/strong&gt; to share one of my favorite projects at Acer: our &lt;strong&gt;Power BI Champions program&lt;/strong&gt;.&#xA;The idea? Find Early Adopters (people who have a curious approach towards new technologies) and put them on the front line to help us promote Power BI and data culture to the rest of the team.&lt;/p&gt;&#xA;&lt;p&gt;I never imagined I&amp;rsquo;d speak at a conference when I started this journey&amp;hellip;&#xA;But wow - the positive feedback and amazing people I&amp;rsquo;ve met make me want to do it again!&lt;/p&gt;</description>
     </item>
     <item>
       <title>A MUST for Multi-cultural Teams: The Culture Map</title>
-      <link>https://mutt0-ds.github.io/posts/2024/09/the-culture-map/</link>
+      <link>http://localhost:1313/posts/2024/09/the-culture-map/</link>
       <pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/09/the-culture-map/</guid>
+      <guid>http://localhost:1313/posts/2024/09/the-culture-map/</guid>
       <description>&lt;h1 id=&#34;cultures-can-be-very-different&#34;&gt;Cultures can be very different&lt;/h1&gt;&#xA;&lt;p&gt;One of my favorite lessons in my international master&amp;rsquo;s course was about &lt;strong&gt;cultural differences&lt;/strong&gt;. I remember our instructor showing us funny videos of different cultures interacting. There was an American asking an Indian colleague if they&amp;rsquo;ll meet next week&amp;rsquo;s deadline. The response, &lt;em&gt;&amp;ldquo;I&amp;rsquo;ll see what I can do&amp;rdquo;&lt;/em&gt; could mean either &lt;em&gt;&amp;ldquo;sure&amp;rdquo;&lt;/em&gt; or &lt;em&gt;&amp;ldquo;no way&amp;rdquo;&lt;/em&gt; depending on the cultural context. Needless to add that the American was very confused when the deadline wasn&amp;rsquo;t met the week after.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Pro Trick for Measure Descriptions in Power BI</title>
-      <link>https://mutt0-ds.github.io/posts/2024/08/the-trick-measure-description-powerbi/</link>
+      <link>http://localhost:1313/posts/2024/08/the-trick-measure-description-powerbi/</link>
       <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/08/the-trick-measure-description-powerbi/</guid>
+      <guid>http://localhost:1313/posts/2024/08/the-trick-measure-description-powerbi/</guid>
       <description>&lt;h1 id=&#34;how-does-this-measurecolumn-work&#34;&gt;&amp;ldquo;How does this MEASURE/COLUMN work?&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;This is one of the most frequent requests I was receiving. And it&amp;rsquo;s easy to see why.&lt;/p&gt;&#xA;&lt;p&gt;In complex Power BI models, users often struggle to understand the meaning of specific measures or columns. This is especially true for ambiguous names like &lt;code&gt;AMSLast12m&lt;/code&gt; or columns with deep business logic such as &lt;code&gt;NetAmount&lt;/code&gt;. How is it calculated? With VAT? Without it? Help!&lt;/p&gt;&#xA;&lt;p&gt;Traditionally, there were limited options: ask a colleague, guess the logic, search documentation, or simply try your luck and add it blindly to the report. None of these are ideal solutions, particularly for those new to report creation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Personal Notes about Simply Said</title>
-      <link>https://mutt0-ds.github.io/posts/2024/07/personal-notes-simply-said/</link>
+      <link>http://localhost:1313/posts/2024/07/personal-notes-simply-said/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/07/personal-notes-simply-said/</guid>
+      <guid>http://localhost:1313/posts/2024/07/personal-notes-simply-said/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.amazon.com/Simply-Said-Communicating-Better-Beyond/dp/1119285283&#34;&gt;&amp;ldquo;Simply Said&amp;rdquo;&lt;/a&gt; is the best communication book I&amp;rsquo;ve read recently.&#xA;I discovered it thanks to Jordan Cutler (who runs an &lt;a href=&#34;https://read.highgrowthengineer.com/&#34;&gt;amazing tech newsletter&lt;/a&gt;) and at first, I considered it a standard communications book. Things like &amp;ldquo;listen to others,&amp;rdquo; &amp;ldquo;be positive,&amp;rdquo; blah blah.&lt;/p&gt;&#xA;&lt;p&gt;I was wrong. &lt;strong&gt;&amp;ldquo;Simply Said&amp;rdquo; is much more than that&lt;/strong&gt;.&#xA;That&amp;rsquo;s why I condensed most of its wisdom into this blog post, and I hope it will inspire you to read it as well.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Giving our AI superpowers with OpenAI Tools</title>
-      <link>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</link>
+      <link>http://localhost:1313/posts/2024/06/ai-superpowers-tools/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</guid>
+      <guid>http://localhost:1313/posts/2024/06/ai-superpowers-tools/</guid>
       <description>&lt;p&gt;In recent months, I have been experimenting with AI tools to leverage new, powerful technologies and create value. Like you, I am inundated with hype and buzzwords, and this makes things complicate, when trying to get started. While looking for simple answers to my questions, it’s often challenging to extract real value. So, I want to share my notes to help others with similar needs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-business-case-an-ai-analyst&#34;&gt;My Business Case: an AI Analyst&lt;/h2&gt;&#xA;&lt;p&gt;Let’s start with the big question I had in my mind:&lt;/p&gt;</description>
     </item>
     <item>
       <title>The 3 (&#43;2) ways to Get Data in Power BI, simply explained</title>
-      <link>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</link>
+      <link>http://localhost:1313/posts/2024/04/types-powerbi-connection/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</guid>
+      <guid>http://localhost:1313/posts/2024/04/types-powerbi-connection/</guid>
       <description>&lt;p&gt;There&amp;rsquo;s quite a bit of confusion swirling around about how Power BI reports gather data. Where is the data actually stored? How frequently does it refresh? Depending on the mode you&amp;rsquo;ve selected, this question can be a bit tricky to tackle.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s simplify things a bit. In this article, I&amp;rsquo;ll be focusing on Power BI Desktop. Imagine you&amp;rsquo;ve got a .pbix file on hand and don&amp;rsquo;t quite have the time to sit through &lt;a href=&#34;https://www.youtube.com/watch?v=-ip7mKUdwRg&#34;&gt;10-minute technical video from Guy in a Cube&lt;/a&gt; that I usually link my users to.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My AI-tweaked Data Saturdays 23 Notes</title>
-      <link>https://mutt0-ds.github.io/posts/2023/11/ai-tweaked-data-saturdays-notes/</link>
+      <link>http://localhost:1313/posts/2023/11/ai-tweaked-data-saturdays-notes/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/11/ai-tweaked-data-saturdays-notes/</guid>
+      <guid>http://localhost:1313/posts/2023/11/ai-tweaked-data-saturdays-notes/</guid>
       <description>&lt;p&gt;Last Saturday I had the privilege of attending &lt;a href=&#34;https://datasaturdays.com/2023-11-18-datasaturday0037/&#34;&gt;Data Saturdays #37 at Parma&lt;/a&gt;, an event series focused on Microsoft data platform technologies. Covering AI, Database, Business Intelligence, and Cloud, the event promised insights from top experts in Italy (and beyond).&lt;/p&gt;&#xA;&lt;p&gt;Of course, I wrote down (almost) everything I heard.&#xA;This blog post is actually a dump of my notes, which I tried to partially automated with a mix of OCR + ChatGPT, which struggled in understanding most of the complex contexts&amp;hellip; My disorganized note management didn&amp;rsquo;t help, poor GPT.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Finding the Best Time to Go to Work: Now with Car Accidents Data &amp; Power BI Dashboard!</title>
-      <link>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</link>
+      <link>http://localhost:1313/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</guid>
+      <guid>http://localhost:1313/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</guid>
       <description>&lt;p&gt;I want to express my gratitude for the positive feedbacks I received a few months ago when &lt;a href=&#34;https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/&#34;&gt;I used Google Maps data to determine the best times for the daily commute&lt;/a&gt;. TL;DR: Mondays are the best, while Wednesdays, and early Fridays are the trickiest times to hit the road.&lt;/p&gt;&#xA;&lt;p&gt;However, the neatness of this analysis takes a hit when real-world unpredictabilities come into play. Things like heavy traffic, rain, road closures due to accidents, or just that one slow driver in front of you can disrupt even the best-planned routes. So, it&amp;rsquo;s essential to view these explorations as &amp;ldquo;what if&amp;rdquo; games. They provide a general framework but can&amp;rsquo;t fully account for the chaos of everyday life.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Second Brain... 6 Months later: Obsidian update</title>
-      <link>https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/</link>
+      <link>http://localhost:1313/posts/2023/09/obsidian-update-6-months-later/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/</guid>
+      <guid>http://localhost:1313/posts/2023/09/obsidian-update-6-months-later/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been quite the journey since I first delved into Second Brain technologies for organizing my team&amp;rsquo;s documentation. I previously shared my initial experiences with Obsidian, and now, it&amp;rsquo;s time for a comprehensive update. In case you missed my earlier exploration, you can catch up &lt;a href=&#34;https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;So, what has changed?&#xA;Let&amp;rsquo;s dive right in. Since my last update, I&amp;rsquo;ve continued to utilize Obsidian for secure and structured note organization within my team, enjoying the rapid and intuitive process and enjoying its advantages (flexibility, powerful search system,  security, and so on). I&amp;rsquo;m still in the &amp;ldquo;honeymoon&amp;rdquo; phase.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Analyzing My Commute Data to Find the Best Time to Go to Work</title>
-      <link>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</link>
+      <link>http://localhost:1313/posts/2023/07/analyzing-commute-data-using-google-api/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</guid>
+      <guid>http://localhost:1313/posts/2023/07/analyzing-commute-data-using-google-api/</guid>
       <description>&lt;p&gt;When my commute buddy and I find ourselves stuck in traffic during our car journeys, we often daydream about finding the ideal route and &lt;strong&gt;the optimal time&lt;/strong&gt; to leave the office in order to avoid these uncomfortable situations. Now, thanks to the power of technology and the inspiration I drew from &lt;a href=&#34;https://medium.com/@hishamsajid113/using-google-distance-matrix-api-to-reduce-commute-time-b17a0b9b0fbe&#34;&gt;a fantastic article by @hishamsajid113&lt;/a&gt;, I am finally able to back up my theories about the best departure times from home and simulate with real data!&lt;/p&gt;</description>
     </item>
     <item>
       <title>The unnecessary hype strategy behind Microsoft Fabric</title>
-      <link>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</link>
+      <link>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</guid>
+      <guid>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</guid>
       <description>&lt;p&gt;If you are into Data Engineering in Microsoft Azure Cloud Environment, you probaly heard about &lt;strong&gt;Microsoft Fabric&lt;/strong&gt; being announced last week at the yearly event &lt;a href=&#34;https://news.microsoft.com/build-2023/&#34;&gt;Microsoft Build&lt;/a&gt;. Well, &amp;ldquo;heard&amp;rdquo; is quite an euphesmism: everyone in the field is extremely excited about the announcements of the event. And for good reasons, as it’s a very big deal for us engineers, working with data every day.&lt;/p&gt;&#xA;&lt;p&gt;In short, Fabric is a cutting-edge, unified data platform that merges lots of tools together, starting from a common Data Lake where data can be stored (&lt;a href=&#34;https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview&#34;&gt;&lt;strong&gt;OneLake&lt;/strong&gt;&lt;/a&gt;), and a suite of new tools on top of it that are integrated in the “fabric” of Fabric. Some of them are evolutions of existing systems, like &lt;strong&gt;Synapse Data Engineering&lt;/strong&gt; (&lt;a href=&#34;https://azure.microsoft.com/en-us/products/synapse-analytics/&#34;&gt;Azure Synapse Anaylytics&lt;/a&gt;) or &lt;strong&gt;Data Factory&lt;/strong&gt; (&lt;a href=&#34;https://azure.microsoft.com/en-us/products/data-factory&#34;&gt;Azure Data Factory&lt;/a&gt;) for ETL and Data Processing. Others, like my beloved &lt;a href=&#34;https://powerbi.microsoft.com/en-us/&#34;&gt;&lt;strong&gt;Power BI&lt;/strong&gt;&lt;/a&gt;, have kept the same features but they will be integrated in the platform in the future. Others, like &lt;a href=&#34;https://blog.fabric.microsoft.com/en-us/blog/driving-actions-from-your-data-with-data-activator/&#34;&gt;&lt;strong&gt;Data Activator&lt;/strong&gt;&lt;/a&gt;(no-code triggers), are brand new.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How I ended up with AI-generated Music Reviews on TikTok</title>
-      <link>https://mutt0-ds.github.io/posts/2023/05/how-i-generated-automatic-reviews-tiktok/</link>
+      <link>http://localhost:1313/posts/2023/05/how-i-generated-automatic-reviews-tiktok/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/05/how-i-generated-automatic-reviews-tiktok/</guid>
+      <guid>http://localhost:1313/posts/2023/05/how-i-generated-automatic-reviews-tiktok/</guid>
       <description>&lt;p&gt;This is a fun story, with a series of technologies and topics that I couldn&amp;rsquo;t believe they were capable of living together&amp;hellip; EDM, TikTok, Text-To-Speech, AI, Playwright&amp;hellip; Many times, when going down this over-engineered rabbit hole, I thought, &amp;ldquo;OK, I have to write about this thing.&amp;rdquo; And also, &amp;ldquo;What am I doing here with my time?&amp;rdquo;&lt;/p&gt;&#xA;&lt;h2 id=&#34;-some-context&#34;&gt;📚 Some context&lt;/h2&gt;&#xA;&lt;p&gt;So, here are a few key things to be aware of:&lt;/p&gt;</description>
     </item>
     <item>
       <title>What Power BI is still missing</title>
-      <link>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</link>
+      <link>http://localhost:1313/posts/2023/03/what-power-bi-is-missing/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</guid>
+      <guid>http://localhost:1313/posts/2023/03/what-power-bi-is-missing/</guid>
       <description>&lt;p&gt;During these months, I had the chance to take a look at Power BI at the enterprise level, juggling advanced requests from hundreds of users and reports. I am impressed by all the features that the developers have rolled out recently, greatly improving both user and creator experiences. However, one should always maintain an impartial critical vision of the tools, no matter how useful they can be. For this reason, I decided to share my thoughts about some features that are currently lacking or require over-complicated solutions (often from third-party tools), in the hope that Microsoft will find them useful when working on Power BI&amp;rsquo;s development roadmap.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes</title>
-      <link>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</link>
+      <link>http://localhost:1313/posts/2023/02/obsidian-productivity-second-brain/</link>
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</guid>
+      <guid>http://localhost:1313/posts/2023/02/obsidian-productivity-second-brain/</guid>
       <description>&lt;h2 id=&#34;-introduction-to-second-brains--brain-dumping&#34;&gt;🧠 Introduction to Second Brains &amp;amp; Brain Dumping&lt;/h2&gt;&#xA;&lt;p&gt;As I&amp;rsquo;m working with data all the time, I&amp;rsquo;m aware of the importance of keeping it in a safe and structured place, where it can be easily accessed when needed, which could be days, weeks or even years in the future. Thus, organizing my information, tasks, and notes is a key activity in my work (and personal) life. Without a clear system, I would feel lost in chaos, and my productivity would plunge (also considering that my memory sucks).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Personal Notes about Presentation Patterns</title>
-      <link>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</link>
+      <link>http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</guid>
+      <guid>http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/</guid>
       <description>&lt;h1 id=&#34;presentation-patterns&#34;&gt;Presentation Patterns&lt;/h1&gt;&#xA;&lt;p&gt;Written by &lt;strong&gt;&lt;a href=&#34;https://nealford.com/&#34;&gt;Neal Ford&lt;/a&gt;, &lt;a href=&#34;https://matthewjmccullough.com&#34;&gt;Matthew McCullough&lt;/a&gt; and &lt;a href=&#34;http://ntschutta.io&#34;&gt;Nathaniel Schutta&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;&amp;ldquo;Presentation Patterns - Techniques for Crafting Better Presentations&amp;rdquo;&lt;/strong&gt; is an encyclopedia of patterns, tips and common mistakes experienced by the authors, who have delivered thousands of presentations. In particular, they introduce “&lt;a href=&#34;https://www.nofluffjuststuff.com&#34;&gt;No Fluff, Just Stuff&lt;/a&gt;“, a traveling technical conference series covering a&#xA;wide variety of topics related to software development and management.&lt;/p&gt;&#xA;&lt;p&gt;During the years, they have build up their toolbox of patterns to provide killer presentations, which are divided in three main sections: &lt;strong&gt;Prepare&lt;/strong&gt; (thinking and setting up the presentation’s key concepts), &lt;strong&gt;Build&lt;/strong&gt; (creating the slides), &lt;strong&gt;Deliver&lt;/strong&gt; (present the content). While reading, I decided to categorize the items into &lt;strong&gt;Patterns&lt;/strong&gt;, &lt;strong&gt;Antipatterns&lt;/strong&gt; and “&lt;strong&gt;Others&lt;/strong&gt;” (type of slides or special kind of presentations which I didn&amp;rsquo;t consider as a pattern).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Road to 100% Test Coverage on notion-sdk-py</title>
-      <link>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</link>
+      <link>http://localhost:1313/posts/2022/12/road-100-coverage-notion/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</guid>
+      <guid>http://localhost:1313/posts/2022/12/road-100-coverage-notion/</guid>
       <description>&lt;p&gt;There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously unexciting activities for many developers 😫&lt;/p&gt;&#xA;&lt;p&gt;Luckily, we are all unique in our own way and I decided to contribute to &lt;a href=&#34;https://codecov.io/github/ramnes/notion-sdk-py&#34;&gt;the testing module&lt;/a&gt; of one of my favorite libraries, &lt;a href=&#34;https://github.com/ramnes/notion-sdk-py&#34;&gt;notion-sdk-py&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Being &lt;a href=&#34;https://www.credly.com/badges/f15407b3-5fa8-4d9b-99cf-d862399a1543/public_url&#34;&gt;a certified Notion user&lt;/a&gt;, I use its Web App on a daily basis, and the Python library helps me automatically organize my notes. I even used it for custom bots and documentation. If you don’t know &lt;a href=&#34;https://www.notion.so/&#34;&gt;the tool&lt;/a&gt; yet, I recommend trying it out: it may be a bit more complex compared to a classic note editor like Google Keep or Evernote, but its potential is huge.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A turbulent journey through Power BI source control</title>
-      <link>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</link>
+      <link>http://localhost:1313/posts/2022/11/turbulent-journey-power-bi-source-control/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</guid>
+      <guid>http://localhost:1313/posts/2022/11/turbulent-journey-power-bi-source-control/</guid>
       <description>&lt;p&gt;One of the most annoying issues I have when working with Power BI files is that source control is a real pain.&#xA;Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly complicated solutions&amp;hellip; But that day seems still far in the future.&lt;/p&gt;&#xA;&lt;p&gt;Here is a story about how I managed to set up a CI/CD pipeline through Azure DevOps Pipeline for providing rudimental version control of our Power BI reports.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My first weeks at Acer Europe</title>
-      <link>https://mutt0-ds.github.io/posts/2022/10/first-weeks-acer/</link>
+      <link>http://localhost:1313/posts/2022/10/first-weeks-acer/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/10/first-weeks-acer/</guid>
+      <guid>http://localhost:1313/posts/2022/10/first-weeks-acer/</guid>
       <description>&lt;p&gt;This is a post for my future self when I will be asking myself: &lt;em&gt;“How were my first days at Acer like?”&lt;/em&gt;.&lt;br&gt;&#xA;Note: I&amp;rsquo;m working at Acer EMEA HQ, so when I mention &amp;ldquo;&lt;em&gt;Acer&lt;/em&gt;&amp;rdquo;, for simplicity, I mean &amp;ldquo;&lt;em&gt;Acer Europe&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;-my-expectations&#34;&gt;💭 My expectations&lt;/h2&gt;&#xA;&lt;p&gt;My previous experience was in a small company and a very different sector. Considering this, I was expecting the following challenges in the upcoming scenario:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;An organization with thousands of employees and decades of history&lt;/li&gt;&#xA;&lt;li&gt;Several departments and key stakeholders to interact with, each one with specific priorities&lt;/li&gt;&#xA;&lt;li&gt;A huge IT department where I&amp;rsquo;m the youngest member here&lt;/li&gt;&#xA;&lt;li&gt;New technologies to discover: in particular, I&amp;rsquo;ve never worked with most of the Azure tools we are using&lt;/li&gt;&#xA;&lt;li&gt;A whole new level of complexity&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I wasn&amp;rsquo;t too worried about the previous points, as I&amp;rsquo;m happy to learn new things and I&amp;rsquo;m used to managing projects with different stakeholders. Being a &lt;strong&gt;Business Intelligence Developer&lt;/strong&gt;, my tasks were going to be about managing Power BI dashboards and collecting data from databases, more or less what I was used to doing before&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Personal Notes about The Definitive Guide to DAX</title>
-      <link>https://mutt0-ds.github.io/posts/2022/09/personal-notes-about-dax-definitive-guide/</link>
+      <link>http://localhost:1313/posts/2022/09/personal-notes-about-dax-definitive-guide/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/09/personal-notes-about-dax-definitive-guide/</guid>
+      <guid>http://localhost:1313/posts/2022/09/personal-notes-about-dax-definitive-guide/</guid>
       <description>&lt;p&gt;Disclaimer: this will be a long, long post, written in my own way. It’s essentially a dump of my personal notes, taken when reading &lt;a href=&#34;https://www.sqlbi.com/books/the-definitive-guide-to-dax-2nd-edition/&#34;&gt;“The Definitive Guide to DAX”&lt;/a&gt; written by &lt;strong&gt;Alberto Ferrari&lt;/strong&gt; and &lt;strong&gt;Marco Russo&lt;/strong&gt;. At my new workplace I’m going to use PowerBI and DAX a lot, thus my boss suggested me to read the book.&lt;/p&gt;&#xA;&lt;p&gt;Yep, it is big and very technical, with 700+ pages rich in contents, but trust me, that’s the “Bible”, a must-read for anyone willing to work with PowerBI and DAX. There’s everything you need, from the basics commands to the most advanced functions, with complex topics such as context transition, query plan, and storage engine. Many examples, in addition, apart from explaining every concept introduced in the book (which focuses a lot on giving clear, practical explanations) explore edge cases that gave me lots of headaches in the past. Further examples and insights can be found on the authors’ site &lt;a href=&#34;https://www.sqlbi.com/&#34;&gt;SQLBI&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My surreal experience with COBOL</title>
-      <link>https://mutt0-ds.github.io/posts/2022/09/my-surreal-experience-cobol/</link>
+      <link>http://localhost:1313/posts/2022/09/my-surreal-experience-cobol/</link>
       <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/09/my-surreal-experience-cobol/</guid>
+      <guid>http://localhost:1313/posts/2022/09/my-surreal-experience-cobol/</guid>
       <description>&lt;p&gt;I was feeling curious&amp;hellip; So, I decided to challenge myself and try to learn a bit more about &lt;em&gt;&lt;strong&gt;CO&lt;/strong&gt;mmon &lt;strong&gt;B&lt;/strong&gt;usiness-&lt;strong&gt;O&lt;/strong&gt;riented &lt;strong&gt;L&lt;/strong&gt;anguage&lt;/em&gt; aka &lt;a href=&#34;https://en.wikipedia.org/wiki/COBOL&#34;&gt;COBOL&lt;/a&gt;, invented in 1959 by IBM. It’s not the most popular among programmers, being extremely old and with huge limitations compared to today’s modern languages&amp;hellip; Yet, as we will see, it’s still alive, hidden in huge legacy codebases in the form of spaghetti code and difficult to get rid of without  an entire system redesign.&lt;/p&gt;</description>
     </item>
     <item>
       <title>First time with Tailwind CSS: showing off my books!</title>
-      <link>https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/</link>
+      <link>http://localhost:1313/posts/2022/06/my-books-tailwind/</link>
       <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/</guid>
+      <guid>http://localhost:1313/posts/2022/06/my-books-tailwind/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m back with another post, this time exploring a new CSS framework, &lt;a href=&#34;https://tailwindcss.com/&#34;&gt;Tailwind CSS&lt;/a&gt;!&lt;/p&gt;&#xA;&lt;p&gt;In the previous months I started using Angular and Typescript for some small web apps and dashboards, but I always found CSS management cumbersome. I could spend hours tweaking font-size and align-items parameters and hard-coding variables, and this wasn&amp;rsquo;t a lot of fun.&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s why I decided to try Tailwind, which is being heavily recommended by many people in the frontend community! I just needed the right idea before starting to code&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Personal Airflow - How I&#39;m monitoring my scripts with Python, Appsmith and SQL Server</title>
-      <link>https://mutt0-ds.github.io/posts/2022/03/personal-airflow/</link>
+      <link>http://localhost:1313/posts/2022/03/personal-airflow/</link>
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/03/personal-airflow/</guid>
+      <guid>http://localhost:1313/posts/2022/03/personal-airflow/</guid>
       <description>&lt;p&gt;Here&amp;rsquo;s the story of how I created my first full-stack project for monitoring my daily activities, using Python and SQL Server in backend and Appsmith for the GUI. I have a lot to learn and process yet, but hey, it&amp;rsquo;s a start.&lt;/p&gt;&#xA;&lt;h2 id=&#34;-the-problem&#34;&gt;😟 The Problem&lt;/h2&gt;&#xA;&lt;p&gt;There are scripts I&amp;rsquo;m using that are particularly tedious to monitor. The typical structure is the following:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Load data&lt;/strong&gt; (from a file or manual input)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Send a request&lt;/strong&gt; to internal DB / very specific API&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Compare the data&lt;/strong&gt; received with the input and if something is wrong, notify me or a colleague.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;They must operate locally on specific machines, can&amp;rsquo;t be containerized, there are severe API limitations in some cases.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Using a Neural Network for sending memes to my girlfriend</title>
-      <link>https://mutt0-ds.github.io/posts/2021/05/nn-sending-memes/</link>
+      <link>http://localhost:1313/posts/2021/05/nn-sending-memes/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2021/05/nn-sending-memes/</guid>
+      <guid>http://localhost:1313/posts/2021/05/nn-sending-memes/</guid>
       <description>&lt;p&gt;Well, my GF&amp;rsquo;s tastes in memes are simple: she loves wholesome memes and, most importantly, &lt;strong&gt;she loves animals&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s why I created a fun little project that:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Surfs the subreddit &lt;a href=&#34;https://www.reddit.com/r/wholesomememes/&#34;&gt;r/wholesomemes&lt;/a&gt; using the reddit API&lt;/li&gt;&#xA;&lt;li&gt;Downloads a few of the hottest memes in the contents folder&lt;/li&gt;&#xA;&lt;li&gt;Initializes a ResNet50 model that recognizes images containing any animal&lt;/li&gt;&#xA;&lt;li&gt;Sends them via mail to my GF (positively welcomed)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;final-email-3-memes-by-default&#34;&gt;Final email (3 memes by default)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mutt0-ds/memes-selector/main/media/result.png&#34; alt=&#34;finalmail&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>

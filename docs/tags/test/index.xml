@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/test/</link>
+    <link>http://localhost:1313/tags/test/</link>
     <description>Recent content in Test on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Dec 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Road to 100% Test Coverage on notion-sdk-py</title>
-      <link>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</link>
+      <link>http://localhost:1313/posts/2022/12/road-100-coverage-notion/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</guid>
+      <guid>http://localhost:1313/posts/2022/12/road-100-coverage-notion/</guid>
       <description>&lt;p&gt;There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously unexciting activities for many developers 😫&lt;/p&gt;&#xA;&lt;p&gt;Luckily, we are all unique in our own way and I decided to contribute to &lt;a href=&#34;https://codecov.io/github/ramnes/notion-sdk-py&#34;&gt;the testing module&lt;/a&gt; of one of my favorite libraries, &lt;a href=&#34;https://github.com/ramnes/notion-sdk-py&#34;&gt;notion-sdk-py&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Being &lt;a href=&#34;https://www.credly.com/badges/f15407b3-5fa8-4d9b-99cf-d862399a1543/public_url&#34;&gt;a certified Notion user&lt;/a&gt;, I use its Web App on a daily basis, and the Python library helps me automatically organize my notes. I even used it for custom bots and documentation. If you don’t know &lt;a href=&#34;https://www.notion.so/&#34;&gt;the tool&lt;/a&gt; yet, I recommend trying it out: it may be a bit more complex compared to a classic note editor like Google Keep or Evernote, but its potential is huge.&lt;/p&gt;</description>
     </item>
   </channel>
