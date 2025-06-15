@@ -2,11 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/posts/2025/06/we-have-no-idea-book/</loc>
+    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/book/</loc>
+    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/physics/</loc>
+    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/reading/</loc>
+    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/we-have-no-idea/</loc>
+    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ai/</loc>
     <lastmod>2025-05-29T00:00:00+00:00</lastmod>
@@ -24,9 +42,6 @@
     <lastmod>2025-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/prototyping/</loc>
-    <lastmod>2025-05-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/2025/04/ai-generated-code/</loc>
