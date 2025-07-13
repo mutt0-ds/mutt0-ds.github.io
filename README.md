@@ -21,8 +21,7 @@ I believe in keeping things [simple and human](https://mutt0-ds.github.io/posts/
 
 I share practical insights on data science, AI, engineering tips, and projects that spark my curiosity:
 
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->- ✨ [{{title}}]({{url}}) _(posted on {{date}})_- 📌 [{{title}}]({{url}}) _(posted on {{date}})_- 📝 [{{title}}]({{url}}) _(posted on {{date}})_<!-- BLOG-POST-LIST:END -->
 
 ---
 
