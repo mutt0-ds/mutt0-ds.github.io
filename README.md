@@ -21,7 +21,10 @@ I believe in keeping things [simple and human](https://mutt0-ds.github.io/posts/
 
 I share practical insights on data science, AI, engineering tips, and projects that spark my curiosity:
 
-<!-- BLOG-POST-LIST:START -->- ✨ [A Physics book for people who hate Physics](https://mutt0-ds.github.io/posts/2025/06/we-have-no-idea-book/) _(posted on 15 000 2025)_- 📌 [No, AI is not replacing Data Engineers.](https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/) _(posted on 29 000 2025)_- 📝 [45 Minutes, 100% AI-Generated Code](https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/) _(posted on 19 000 2025)_<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->- ✨ [A Physics book for people who hate Physics](https://mutt0-ds.github.io/posts/2025/06/we-have-no-idea-book/) _(posted on 15 Jun 2025)_
+- 📌 [No, AI is not replacing Data Engineers.](https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/) _(posted on 29 May 2025)_
+- 📝 [45 Minutes, 100% AI-Generated Code](https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/) _(posted on 19 Apr 2025)_
+<!-- BLOG-POST-LIST:END -->
 
 ---
 
