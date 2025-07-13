@@ -1,4 +1,4 @@
-name: Update latest blog post
+name: update-latest-blog-post-readme
 
 on:
   schedule:
