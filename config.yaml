@@ -152,7 +152,18 @@ params:
       I believe great data work starts with understanding the counterpart - that's why I love to listen and understand how the business works.
 
       I'm that person who gets excited about clear documentation (yes, really!) and love giving back to the open-source community - especially through my work on the [Python Notion SDK](https://github.com/ramnes/notion-sdk-py).
-      Tech stack: 👇
+
+      ### Other fun facts about me:
+
+      1. I created a [Microsoft Fabric course with DataCamp](https://mutt0-ds.github.io/posts/2025/01/fabric-datacamp-course/). I guess that makes me a teacher somehow!
+      
+      2. Although I'm an introvert, I like to challenge myself socially by participating and speaking 
+      at [conferences, meetups, and meetings](https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/).  
+      
+      3. My memory isn't great (😇), so I keep [a huge second brain in Obsidian](https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/) to store all the info I need.  
+
+
+      ### Tech stack: 👇
     
       - 📋 Languages
 
@@ -185,7 +196,6 @@ params:
       
       ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white) ![CodeCov](https://img.shields.io/badge/codecov-%23ff0077.svg?style=for-the-badge&logo=codecov&logoColor=white) ![Zod](https://img.shields.io/badge/Zod-000000?style=for-the-badge&logo=zod&logoColor=3068B7)
 
-
     skills:
       enable: false
       title: "Here are a few technologies I've been working with recently:"
@@ -199,111 +209,72 @@ params:
 
   # Experience
   experience:
-    enable: false
-    # title: "Custom Name"
+    enable: true
     items:
-      - job: "Senior Software Developer"
-        company: "Facebook"
-        companyUrl: "https://example.com"
-        date: "Jan 2022 - present"
+      - job: "Senior Product Engineer"
+        company: "Investsuite"
+        companyUrl: "https://www.investsuite.com"
+        date: "Dec 2024 - Present"
         featuredLink:
-          enable: true
-          name: "View the project"
-          url: "https://example.com"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
-
-      - job: "Software Developer"
-        company: "Amazon"
-        companyUrl: "https://example.com"
-        date: "Sep 2020 - Dec 2021"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
-        info:
-          enable: true
-          content: I worked as a software developer for more than one year in Amazon.
-        content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "Junior Software Developer"
-        company: "Apple"
-        companyUrl: "https://example.com"
-        date: "Jan 2020 - Aug 2020"
-        info:
           enable: false
-        featuredLink:
-          enable: true
-          url: "https://example.com"
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          - Led backend development of flagship product *[StoryTeller](https://www.investsuite.com/)*.
+          - Focused on R&D projects implementing AI features across multiple company products.
+          - Created internal Data Platform for reporting using Metabase, including ETL and Data Warehouse implementation on AWS.
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "UI/UX Designer"
-        company: "Netflix"
-        companyUrl: "https://example.com"
-        date: "June 2017 - Nov 2019"
+      - job: "Data Science & Business Intelligence Engineer"
+        company: "Acer Europe"
+        companyUrl: "https://www.acer.com"
+        date: "Oct 2022 - Nov 2024"
         featuredLink:
-          enable: true
-          url: "https://example.com"
+          enable: false
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          - Managed [internal Data Platform serving 500+ users](https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/), boosting Power BI report usage by 570% and unique users by 150%.
+          - Led R&D projects introducing [AI-powered tools](https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/) improving operational efficiency.
+          - Optimized ETL processing of 500 million daily rows with Synapse and Spark, reducing runtime by 70% while integrating 20+ data sources.
+          - Redesigned legacy forecasting tool as [modern Next.js web application](https://mutt0-ds.github.io/posts/2024/11/my-journey-with-webapp/).
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
+      - job: "Software Engineer - Data"
+        company: "Pharus Asset Management SA"
+        companyUrl: "https://pharus.ch"
+        date: "Dec 2020 - Oct 2022"
+        featuredLink:
+          enable: false
+        content: |
+          - Designed Core Database and ETL processes, automating 300+ weekly man-hours without extra costs.
+          - Introduced Power BI dashboards and key reports across departments and C-level executives.
+          - Developed Machine Learning models for algorithmic trading.
 
-      - job: "Product Designer"
-        company: "Google"
-        companyUrl: "https://example.com"
-        date: "Feb 2016 - Mar 2017"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
-
+      - job: "Junior Data Scientist, Advanced Analytics"
+        company: "Avanade S.r.l."
+        companyUrl: "https://www.avanade.com"
+        date: "Jun 2020 - Dec 2020"
+        featuredLink:
+          enable: false
+        content: |
+          - Developed ML models for cloud-based predictive analytics projects.
+          - Expanded ETL processes and built Power BI dashboards for corporate users.
   # Education
   education:
-    enable: false
-    # title: "Custom Name"
+    enable: true
     index: false
     items:
-      - title: "Master of Business Administration"
+      - title: "International Master in BABD - Business Analytics & Big Data"
         school:
-          name: "University of California, Berkeley"
-          url: "https://example.org"
-        date: "2013 - 2015"
-        GPA: "3.8 out of 5.0"
+          name: "POLIMI Graduate School of Management"
+          url: "https://www.gsom.polimi.it/"
+        date: "2019 - 2020"
+        GPA: "109/110"
         content: |-
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-      - title: "Bachelor of Science in Computer Science"
-        school:
-          name: "Massachusetts Institute of Technology"
-          url: "https://example.org"
-        date: "2009 - 2013"
-        GPA: "3.9 out of 5.0"
-        content: |-
-          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-          - Face mask detection using a single convolutional neural network.
+          Advanced training in business analytics, big data processing, and data-driven decision-making.
 
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-        featuredLink:
-          enable: true
-          name: "My academic record"
-          url: "https://example.com"
-      - title: "High School"
+      - title: "Bachelor's Degree in Management Engineering"
         school:
-          name: "Thomas Jefferson High School for Science and Technology."
-          url: "https://example.org"
-        GPA: "4.2 out of 5.0"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
+          name: "Politecnico di Milano"
+          url: "https://www.polimi.it"
+        date: "2016 - 2019"
+        content: |-
+          Engineering management fundamentals combined with technology and business strategy.
 
   # Achievements
   achievements:
