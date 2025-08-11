@@ -2,25 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mutt0-ds.github.io/tags/coverage/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/posts/2025/08/test-mind-maps/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/json/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/miro/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/posts/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/problem-solving/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/test/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mutt0-ds.github.io/posts/2025/06/we-have-no-idea-book/</loc>
     <lastmod>2025-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/book/</loc>
     <lastmod>2025-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/</loc>
-    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mutt0-ds.github.io/tags/physics/</loc>
     <lastmod>2025-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/</loc>
-    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mutt0-ds.github.io/tags/reading/</loc>
-    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/</loc>
     <lastmod>2025-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/tags/we-have-no-idea/</loc>
@@ -317,9 +335,6 @@
     <loc>https://mutt0-ds.github.io/tags/talk/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/coverage/</loc>
-    <lastmod>2022-12-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mutt0-ds.github.io/tags/notion/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -327,9 +342,6 @@
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</loc>
-    <lastmod>2022-12-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/test/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</loc>
