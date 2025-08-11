@@ -302,18 +302,20 @@ It&rsquo;s stories like this that makes me happy to be a developer, being able t
 <h2 id="how-storyteller-works">How StoryTeller works</h2>
 <p>Our tool, simply said, generates hyper-personalized financial reports.
 Every word in them is tailored, whether it&rsquo;s referencing a customer&rsquo;s name or how their portfolio performed in the past months.</p>
-<p>In the most “rigid” version of StoryTeller, we define a logic tree to compose each sentence. Think of it like a massive if-else chain: dozens of nested conditions that cover every possible scenario. For each one, we have pre-approved text to use in the final report.</p>
-<p>[image with example]</p>
-<p>Why so strict? Compliance. Every line that may appear in the report must be approved in advance by customer&rsquo;s legal team. That means we need a full database of all possible variations, and the logic to match each one correctly.</p>
+<p>In the most “rigid” version of StoryTeller, we define <strong>a logic tree</strong> to compose each sentence. Think of it like a massive if-else chain: dozens of nested conditions that cover every possible scenario. For each one, we have pre-approved text to use in the final report.</p>
+<div style="max-width: 3002px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 58.0336%;"><iframe src="//iframely.net/MR89MoAX?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p><em>For example here, each section is built based on several factors. The first 3 words <code>This excellent quarter</code> depends on the portfolio&rsquo;s performance (very good) and the reporting period type (quarter).</em></p>
+<p>Why so strict? <strong>Compliance</strong>. Every line that may appear in the report must be approved in advance by customer&rsquo;s legal team. That means we need a full database of all possible variations, and the logic to match each one correctly.</p>
 <p>Here&rsquo;s the catch:
-<strong>This tree has to cover everything.</strong></p>
-<p>A portfolio can go up, down, or stay flat. A quarter can be Q1, Q2, Q3, or Q4. Every combination matters, conditions are referecing each other and you can already guess that the number explode in more advanced parts of the report. If you miss just one, StoryTeller will crash because there&rsquo;s no corresponding text. We call this a missing scenario.</p>
+<strong>This tree has to cover EVERYTHING.</strong></p>
+<p>A portfolio can go up, down, or stay flat. A quarter can be Q1, Q2, Q3, or Q4. Every combination matters, and conditions often reference each other, so the number of possibilities explodes in the more advanced parts of the report. Miss just one, and Storyteller will crash because there&rsquo;s no corresponding text. We call this <em>a missing scenario</em> and it was my worst nightmare.</p>
 <p>When the logic file grows to 100k lines with 12+ intertwined conditions, it&rsquo;s painfully easy to miss something obscure.
-Maybe a combo that never happens—until it does, and weeks later you&rsquo;re frantically searching for that missing scenario to fix it on the fly.</p>
+Maybe a combo that never happens, until it does, and weeks later you&rsquo;re frantically searching for that missing scenario to fix it on the fly.</p>
 <h2 id="my-struggles">My struggles</h2>
 <p>From day one, I was thinking: how do we make this system more stable? It was driving me insane.</p>
 <p>Back then, <strong>the text database was responsible for ~70% of our bugs</strong>. A customer tested a bunch of reports, and many of them crashed because of missing text scenarios. I spent days navigating these giant files. They are so big that not even Gitlab diff view are displaying the changes between versions, you need to scroll through each JSON line and write down the scenarios and find what&rsquo;s missing. My eyes were burning.</p>
-<p>[image with big JSON]</p>
+<div style="max-width: 2179px"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 44.3282%;"><iframe src="//iframely.net/y9kp9sJd?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p><em>Yes, 100k lines. Imagine scrolling through that monster of a JSON file, hunting for a single missing piece.</em></p>
 <p>Also, the logic of the text database was not always clear to developers, because it was implemented by copywriters who know how to tell &ldquo;the story&rdquo; and are creating the scenarios.</p>
 <p>We never had the certainty that everything was covered. We had already implemented a bunch of stability patches, but testing these trees was still a nightmare.
 Or was it?</p>
@@ -321,21 +323,23 @@ Or was it?</p>
 <p>My first idea was to just <strong>try all the scenarios</strong>. Loop through every combo of inputs and let the tool crash if something&rsquo;s missing. Makes sense, right?</p>
 <p>So I created a script that isolates that part of the code, loads a random value for each conditions (e.g. a performance can be &gt;0, 0 or &lt;0, a quarter can be Q1, Q2, Q3, Q4, etc&hellip;) and tries every single combination.</p>
 <p>Problem: it doesn&rsquo;t scale. The combinations grow exponentially: hundreds of millions of possibilities. Each test might be fast, but running all of them was not feasible.</p>
-<p>[GIF with combinations]</p>
+<div style="max-width: 480px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.5%;"><iframe src="//iframely.net/fwInkazj?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p><em>Not going to share my terrible code here 😇</em></p>
 <p>Then my PM said something that shifted my thinking.
-We don&rsquo;t need to run every case—we just need to <strong>see</strong> the logic clearly enough to spot problems.</p>
+We don&rsquo;t need to run every case: we just need to <strong>see</strong> the logic clearly enough to spot problems.</p>
 <h2 id="second-idea-use-miro-to-easily-visualize-the-tree">Second idea: use Miro to easily visualize the tree</h2>
 <p>That was the insight.
 Our copywriters already use whiteboard tools like <a href="https://miro.com/">Miro</a> to brainstorm logic trees visually.</p>
 <p>So why not just bring that into our testing process? If we can compare the visual tree with the JSON structure, we could catch inconsistencies before they break production.</p>
 <p>With <strong>a mind map (like Miro), you can spot missing branches easily</strong>. You can collapse nodes, focus on one part of the tree, and review logic visually. It&rsquo;s not perfect, and human errors can still happen, but it makes everything reviewable. You isolate the problem from thousands of JSON lines to a simpler graph, way more manageable, even for non-technical people.</p>
 <p>So I gave it a shot. I set up a Miro project, wrote a script to export their mind maps in a JSON-compatible format using their API, and added some lightweight tests. It was quite fun: I re-created the scenarios as nodes in Miro, ran the script, and the tool was comparing expectation, suggesting missing cases, and even highlight similar-looking logic paths.</p>
-<p>[image with Miro board]</p>
+<div style="max-width: 2060px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 54.1642%;"><iframe src="//iframely.net/oL131YpR?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p>It worked great for a prototype.
 But once the node count grew, <strong>Miro became unusable and slow</strong>, and the experience worsened.</p>
 <p>My biggest problems is that the search and replace feature hanged, making it unusable (we have dozens of trees, one for each part of the element) and when I had to create a new one there was no smart copy-paste (either grab a whole tree or nothing).</p>
 <p>I started using several Miro files to be able to open them but this was getting out of hand. And as a third-party tool, it didn&rsquo;t fit well into our version control workflow.</p>
-<p>[image with Miro trees too complex]</p>
+<div style="max-width: 1056px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 78.5227%;"><iframe src="//iframely.net/VtrNNOuI?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p><em>Miro didn’t even try to load that many trees and this was just a tiny slice of the project.</em></p>
 <p>It wasn&rsquo;t production-ready. But I was in the right direction: I was easily spotting missing scenarios thanks to the mind map structure and we started fixing bugs!</p>
 <h2 id="third-idea-mind-maps-with-markdown">Third idea: mind maps with markdown</h2>
 <p>That&rsquo;s when I stumbled on <a href="https://markmap.js.org/">Markmap</a>: a tool that turns <strong>simple Markdown files into interactive mind maps</strong>.
@@ -353,7 +357,7 @@ And more importantly, I could build and review logic trees without ever leaving 
 
 - etc...
 </code></pre><p>…and voilà, you get a mind map. It&rsquo;s clean, minimal, and fast, even with hundreds of nodes.</p>
-<p>[image with Markmap board]</p>
+<div style="max-width: 2188px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.3478%;"><iframe src="//iframely.net/gYNM6SRg?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p>Each tree has its own file, which you can quickly open for reviewing (we usually audit 1 part of the report only)</p>
 <p>This solved so many issues at once:</p>
 <ul>
@@ -364,7 +368,8 @@ And more importantly, I could build and review logic trees without ever leaving 
 </ul>
 <p>It also unlocked a smarter workflow:
 Now, when the copywriter proposes a new scenario, we update the Markdown tree first. Tests are synced directly from it. If something breaks, we get a precise error pointing at the missing or invalid node. The mental model shifted from “fixing JSON bugs” to “keeping the logic tree healthy” and that&rsquo;s a much better place to be.</p>
-<p>[image with Markmap review]</p>
+<div style="max-width: 2041px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 40.7995%;"><iframe src="//iframely.net/AS4YYZ0p?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p><em>Example of a complex tree originally spanning 5,000 JSON lines, reduced to just 100 in Markdown.</em></p>
 <p>This simple change also created <strong>a shared understanding</strong> between developers and content writers.
 Before, logic lived inside JSON blobs that only devs could parse. Now it&rsquo;s visible, editable and reviewable by the whole team.</p>
 <p>And we can finally enjoy smoothless report runs with zero missign scenario errors (which, I remember you, represented the majority of our bugs), because all the combinations have been reviewed to ensure there is always text for each case.</p>
