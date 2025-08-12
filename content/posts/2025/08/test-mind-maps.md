@@ -3,7 +3,7 @@ title: "How we test 100k-Line Nested JSON trees without going insane"
 date: 2025-08-11
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
-image: images/markmap/title.png
+image: /images/markmap/title.png
 draft: false
 author: "Mutt0-ds"
 tags:
