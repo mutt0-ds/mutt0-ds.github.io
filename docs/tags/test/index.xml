@@ -6,15 +6,8 @@
     <description>Recent content in Test on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Dec 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How we test 100k-Line Nested JSON trees without going insane</title>
-      <link>https://mutt0-ds.github.io/posts/2025/08/test-mind-maps/</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2025/08/test-mind-maps/</guid>
-      <description>&lt;p&gt;Today I want to share an interesting challenge that&amp;rsquo;s been bugging me since I joined Investsuite last December.&#xA;It&amp;rsquo;s stories like this that makes me happy to be a developer, being able to address things that are ruining my day and get rid of them. It feels so satisfying.&lt;/p&gt;&#xA;&lt;p&gt;We work with massive JSON files (deeply nested, sprawling structures), and we needed a way to test them reliably.&#xA;&lt;strong&gt;The stability of &lt;a href=&#34;https://www.investsuite.com/storyteller&#34;&gt;StoryTeller&lt;/a&gt;&lt;/strong&gt;, our personalized report engine, depended on it.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Road to 100% Test Coverage on notion-sdk-py</title>
       <link>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</link>
