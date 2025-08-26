@@ -4,7 +4,7 @@ date: 2025-08-11
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/markmap/title.png
-draft: false
+draft: true
 author: "Mutt0-ds"
 tags:
   - test
