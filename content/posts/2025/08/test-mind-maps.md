@@ -4,7 +4,7 @@ date: 2025-08-11
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/markmap/title.png
-draft: true
+draft: false
 author: "Mutt0-ds"
 tags:
   - test
@@ -50,7 +50,7 @@ Back then, **the text database was responsible for ~70% of our bugs**. A custome
 
 <div style="max-width: 2179px"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 44.3282%;"><iframe src="//iframely.net/y9kp9sJd?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
-*Yes, 100k lines. Imagine scrolling through that monster of a JSON file, hunting for a single missing piece.*
+*Yes, 75k, sometimes even 100k+ lines. Imagine scrolling through that monster of a JSON file, hunting for a single missing piece.*
 
 Also, the logic of the text database was not always clear to developers, because it was implemented by copywriters who know how to tell "the story" and are creating the scenarios.
 
