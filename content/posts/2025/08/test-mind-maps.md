@@ -48,7 +48,7 @@ From day one, I was thinking: how do we make this system more stable? It was dri
 
 Back then, **the text database was responsible for ~70% of our bugs**. A customer tested a bunch of reports, and many of them crashed because of missing text scenarios. I spent days navigating these giant files. They are so big that not even Gitlab diff view are displaying the changes between versions, you need to scroll through each JSON line and write down the scenarios and find what's missing. My eyes were burning.
 
-<div style="max-width: 2179px"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 44.3282%;"><iframe src="//iframely.net/y9kp9sJd?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2179px"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 44.3282%;"><iframe src="//iframely.net/AwRnI1ns?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 *Yes, 75k, sometimes even 100k+ lines. Imagine scrolling through that monster of a JSON file, hunting for a single missing piece.*
 
@@ -82,7 +82,7 @@ With **a mind map (like Miro), you can spot missing branches easily**. You can c
 
 So I gave it a shot. I set up a Miro project, wrote a script to export their mind maps in a JSON-compatible format using their API, and added some lightweight tests. It was quite fun: I re-created the scenarios as nodes in Miro, ran the script, and the tool was comparing expectation, suggesting missing cases, and even highlight similar-looking logic paths.
 
-<div style="max-width: 2060px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 54.1642%;"><iframe src="//iframely.net/oL131YpR?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2060px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 54.1642%;"><iframe src="//iframely.net/wvMIEC5f?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 It worked great for a prototype.
 But once the node count grew, **Miro became unusable and slow**, and the experience worsened.
@@ -121,7 +121,7 @@ You write nested headings in a `.md` file:
 ```
 …and voilà, you get a mind map. It's clean, minimal, and fast, even with hundreds of nodes. 
 
-<div style="max-width: 2188px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.3478%;"><iframe src="//iframely.net/gYNM6SRg?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2188px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.3478%;"><iframe src="//iframely.net/tAfI8hxm?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 Each tree has its own file, which you can quickly open for reviewing (we usually audit 1 part of the report only)
 
@@ -134,7 +134,7 @@ This solved so many issues at once:
 It also unlocked a smarter workflow:
 Now, when the copywriter proposes a new scenario, we update the Markdown tree first. Tests are synced directly from it. If something breaks, we get a precise error pointing at the missing or invalid node. The mental model shifted from “fixing JSON bugs” to “keeping the logic tree healthy” and that's a much better place to be.
 
-<div style="max-width: 2041px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 40.7995%;"><iframe src="//iframely.net/AS4YYZ0p?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2041px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 40.7995%;"><iframe src="//iframely.net/A7Vum6ZX?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 *Example of a complex tree originally spanning 5,000 JSON lines, reduced to just 100 in Markdown.*
 
