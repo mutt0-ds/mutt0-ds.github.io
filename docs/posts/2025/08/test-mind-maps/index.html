@@ -314,7 +314,7 @@ Maybe a combo that never happens, until it does, and weeks later you&rsquo;re fr
 <h2 id="my-struggles">My struggles</h2>
 <p>From day one, I was thinking: how do we make this system more stable? It was driving me insane.</p>
 <p>Back then, <strong>the text database was responsible for ~70% of our bugs</strong>. A customer tested a bunch of reports, and many of them crashed because of missing text scenarios. I spent days navigating these giant files. They are so big that not even Gitlab diff view are displaying the changes between versions, you need to scroll through each JSON line and write down the scenarios and find what&rsquo;s missing. My eyes were burning.</p>
-<div style="max-width: 2179px"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 44.3282%;"><iframe src="//iframely.net/y9kp9sJd?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2179px"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 44.3282%;"><iframe src="//iframely.net/AwRnI1ns?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p><em>Yes, 75k, sometimes even 100k+ lines. Imagine scrolling through that monster of a JSON file, hunting for a single missing piece.</em></p>
 <p>Also, the logic of the text database was not always clear to developers, because it was implemented by copywriters who know how to tell &ldquo;the story&rdquo; and are creating the scenarios.</p>
 <p>We never had the certainty that everything was covered. We had already implemented a bunch of stability patches, but testing these trees was still a nightmare.
@@ -333,7 +333,7 @@ Our copywriters already use whiteboard tools like <a href="https://miro.com/">Mi
 <p>So why not just bring that into our testing process? If we can compare the visual tree with the JSON structure, we could catch inconsistencies before they break production.</p>
 <p>With <strong>a mind map (like Miro), you can spot missing branches easily</strong>. You can collapse nodes, focus on one part of the tree, and review logic visually. It&rsquo;s not perfect, and human errors can still happen, but it makes everything reviewable. You isolate the problem from thousands of JSON lines to a simpler graph, way more manageable, even for non-technical people.</p>
 <p>So I gave it a shot. I set up a Miro project, wrote a script to export their mind maps in a JSON-compatible format using their API, and added some lightweight tests. It was quite fun: I re-created the scenarios as nodes in Miro, ran the script, and the tool was comparing expectation, suggesting missing cases, and even highlight similar-looking logic paths.</p>
-<div style="max-width: 2060px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 54.1642%;"><iframe src="//iframely.net/oL131YpR?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2060px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 54.1642%;"><iframe src="//iframely.net/wvMIEC5f?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p>It worked great for a prototype.
 But once the node count grew, <strong>Miro became unusable and slow</strong>, and the experience worsened.</p>
 <p>My biggest problems is that the search and replace feature hanged, making it unusable (we have dozens of trees, one for each part of the element) and when I had to create a new one there was no smart copy-paste (either grab a whole tree or nothing).</p>
@@ -357,7 +357,7 @@ And more importantly, I could build and review logic trees without ever leaving 
 
 - etc...
 </code></pre><p>…and voilà, you get a mind map. It&rsquo;s clean, minimal, and fast, even with hundreds of nodes.</p>
-<div style="max-width: 2188px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.3478%;"><iframe src="//iframely.net/gYNM6SRg?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2188px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.3478%;"><iframe src="//iframely.net/tAfI8hxm?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p>Each tree has its own file, which you can quickly open for reviewing (we usually audit 1 part of the report only)</p>
 <p>This solved so many issues at once:</p>
 <ul>
@@ -368,7 +368,7 @@ And more importantly, I could build and review logic trees without ever leaving 
 </ul>
 <p>It also unlocked a smarter workflow:
 Now, when the copywriter proposes a new scenario, we update the Markdown tree first. Tests are synced directly from it. If something breaks, we get a precise error pointing at the missing or invalid node. The mental model shifted from “fixing JSON bugs” to “keeping the logic tree healthy” and that&rsquo;s a much better place to be.</p>
-<div style="max-width: 2041px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 40.7995%;"><iframe src="//iframely.net/AS4YYZ0p?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 2041px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 40.7995%;"><iframe src="//iframely.net/A7Vum6ZX?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p><em>Example of a complex tree originally spanning 5,000 JSON lines, reduced to just 100 in Markdown.</em></p>
 <p>This simple change also created <strong>a shared understanding</strong> between developers and content writers.
 Before, logic lived inside JSON blobs that only devs could parse. Now it&rsquo;s visible, editable and reviewable by the whole team.</p>
