@@ -14,7 +14,7 @@ tags:
   - problem-solving
 ---
 
-Today I want to share an interesting challenge that's been bugging me since I joined Investsuite last December.
+Today I want to share an interesting challenge that's been bugging me since I joined InvestSuite last December.
 It's stories like this that makes me happy to be a developer, being able to address things that are ruining my day and get rid of them. It feels so satisfying.
 
 We work with massive JSON files (deeply nested, sprawling structures), and we needed a way to test them reliably. 
