@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+<link rel="stylesheet" href="/css/books.css">
+
+<section id="books" class="py-5">
+  <div class="container">
+    <h3 class="text-center">Books</h3>
+    <div class="row justify-content-center px-3 px-md-5">
+      {{ range .Pages }}
+      <div class="col-lg-4 col-md-6 my-3">
+        <div class="card my-3 h-100" title="{{ .Title }}">
+          <div class="card-head">
+            <img class="card-img-top" src="{{ .Params.image }}" alt="{{ .Title }}">
+          </div>
+          <div class="card-body bg-transparent p-3">
+            {{ if .Params.badges }}
+            <div class="pb-2 bg-transparent">
+              {{ range .Params.badges }}
+              <span class="badge badge-secondary">{{ . }}</span>
+              {{ end }}
+            </div>
+            {{ end }}
+            <h5 class="card-title bg-transparent">{{ .Title }}</h5>
+            <p class="secondary-font mb-2"><em>{{ .Params.author }}</em></p>
+            <div class="card-text bg-transparent secondary-font">
+              {{ .Params.summary | default (.Summary | truncate 100) }}
+            </div>
+          </div>
+          <div class="card-footer py-3 text-center">
+            <a class="btn btn-sm" href="{{ .RelPermalink }}">Details</a>
+            {{ if .Params.link }}
+            <a class="btn btn-sm" href="{{ .Params.link }}" target="_blank">Buy</a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

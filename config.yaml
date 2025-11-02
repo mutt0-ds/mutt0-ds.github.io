@@ -29,6 +29,11 @@ Menus:
       name: Blog
       title: Blog posts
       url: /posts
+      weight: 2
+    - identifier: books
+      name: Books
+      title: Books
+      url: /books
       weight: 1
     # - identifier: gallery
     #  name: Gallery
@@ -108,8 +113,8 @@ params:
     disableSearch: false
     menus:
       disableAbout: false
-      disableExperience: false
-      disableEducation: false
+      disableExperience: true
+      disableEducation: true
       disableProjects: false
       disableAchievements: false
       disableContact: false
