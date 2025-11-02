@@ -1,0 +1,119 @@
+/* books */
+
+#books h3 {
+  color: var(--text-secondary-color) !important;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#books a {
+  text-decoration: none;
+  color: var(--text-secondary-color) !important;
+}
+
+#books a:hover {
+  color: var(--primary-color) !important;
+}
+
+/* --- Card --- */
+
+#books .card {
+  background-color: var(--secondary-color) !important;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: none !important;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+#books .card:hover {
+  box-shadow: 0px 8px 56px rgba(15, 80, 100, 0.16);
+  transform: translateY(-4px);
+}
+
+/* --- Book cover (portrait-ratio, dynamic height) --- */
+
+#books .card-head,
+#books .card-header {
+  padding: 0 !important;
+  border: none !important;
+  background-color: var(--secondary-color) !important;
+}
+
+#books .card-img-top {
+  width: 100%;
+  max-height: 320px;
+  aspect-ratio: 2 / 3; /* 📕 Keeps portrait book ratio dynamically */
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s ease;
+}
+
+#books .card:hover .card-img-top {
+  transform: scale(1.04);
+}
+
+/* --- Content --- */
+
+#books .card-body {
+  background-color: var(--secondary-color) !important;
+  padding: 1rem 1.25rem !important;
+}
+
+#books .card-title {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+#books .card-text {
+  color: var(--text-secondary-color);
+  font-size: 0.9rem;
+}
+
+/* --- Badges --- */
+
+#books .badge {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--text-secondary-color) !important;
+  border: 1px solid rgba(255, 255, 255, 0);
+  font-size: 0.7rem;
+  font-weight: 400;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.4rem;
+  margin: 0 0.25rem 0.25rem 0;
+  letter-spacing: 0.2px;
+  transition: background 0.2s ease;
+}
+
+#books .badge:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: var(--primary-color) !important;
+}
+
+/* --- Footer --- */
+
+#books .card-footer {
+  background-color: var(--background-color) !important;
+  padding: 0.8em 0.7em;
+  border: 1px solid var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#books .card-footer a {
+  color: var(--text-secondary-color) !important;
+  background-color: var(--background-color) !important;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  transition: color 0.2s ease;
+}
+
+#books .card-footer a:hover {
+  color: var(--primary-color) !important;
+  opacity: 0.8;
+}

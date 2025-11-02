@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="container py-5">
+  <h1>{{ .Title }}</h1>
+  <p><em>{{ .Params.author }}</em></p>
+  <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-fluid my-4">
+  <div class="content">{{ .Content }}</div>
+  {{ if .Params.link }}
+  <p><a href="{{ .Params.link }}" class="btn btn-primary mt-3" target="_blank">Buy this book</a></p>
+  {{ end }}
+</div>
+{{ end }}
