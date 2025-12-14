@@ -219,11 +219,298 @@
       <description>&lt;p&gt;Well, my GF&amp;rsquo;s tastes in memes are simple: she loves wholesome memes and, most importantly, &lt;strong&gt;she loves animals&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s why I created a fun little project that:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Surfs the subreddit &lt;a href=&#34;https://www.reddit.com/r/wholesomememes/&#34;&gt;r/wholesomemes&lt;/a&gt; using the reddit API&lt;/li&gt;&#xA;&lt;li&gt;Downloads a few of the hottest memes in the contents folder&lt;/li&gt;&#xA;&lt;li&gt;Initializes a ResNet50 model that recognizes images containing any animal&lt;/li&gt;&#xA;&lt;li&gt;Sends them via mail to my GF (positively welcomed)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;final-email-3-memes-by-default&#34;&gt;Final email (3 memes by default)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mutt0-ds/memes-selector/main/media/result.png&#34; alt=&#34;finalmail&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Clean Code</title>
-      <link>https://mutt0-ds.github.io/books/clean-code/</link>
+      <title>A Brief History of Time - From the Big Bang to Black Holes</title>
+      <link>https://mutt0-ds.github.io/books/dal-big-bang-ai-buchi-neri/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/books/clean-code/</guid>
-      <description>A handbook of agile software craftsmanship.</description>
+      <guid>https://mutt0-ds.github.io/books/dal-big-bang-ai-buchi-neri/</guid>
+      <description>With a complete theory we will explain why the universe exists; it would mark the triumph of human reason, for then we would know the mind of God.</description>
+    </item>
+    <item>
+      <title>All the Presidents&#39; Bankers</title>
+      <link>https://mutt0-ds.github.io/books/all-the-presidents-bankers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/all-the-presidents-bankers/</guid>
+      <description>Big bankers have total control; they can speculate undisturbed knowing they are too big to fail</description>
+    </item>
+    <item>
+      <title>An Absolutely Remarkable Thing</title>
+      <link>https://mutt0-ds.github.io/books/an-absolutely-remarkable-thing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/an-absolutely-remarkable-thing/</guid>
+      <description>Fame drives people crazy</description>
+    </item>
+    <item>
+      <title>Antifragile. Thriving in Disorder</title>
+      <link>https://mutt0-ds.github.io/books/antifragile.-prosperare-nel-disordine/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/antifragile.-prosperare-nel-disordine/</guid>
+      <description>Antifragility is beyond resilience or robustness. The resilient resists shocks and stays the same; the antifragile gets better</description>
+    </item>
+    <item>
+      <title>Developer Relations</title>
+      <link>https://mutt0-ds.github.io/books/developer-relations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/developer-relations/</guid>
+      <description>To sell a product aimed at developers, you need to think like they do.</description>
+    </item>
+    <item>
+      <title>Escaping the Build Trap</title>
+      <link>https://mutt0-ds.github.io/books/escaping-the-build-trap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/escaping-the-build-trap/</guid>
+      <description>Do not focus on shipping something; you need to create value. The build trap is when organizations become stuck measuring their success by outputs rather than outcomes</description>
+    </item>
+    <item>
+      <title>Getting Things Done</title>
+      <link>https://mutt0-ds.github.io/books/getting-things-done/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/getting-things-done/</guid>
+      <description>If you can do this thing in less than two minutes, do it; otherwise delegate it or note it in your master archive</description>
+    </item>
+    <item>
+      <title>Greenlights</title>
+      <link>https://mutt0-ds.github.io/books/greenlights/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/greenlights/</guid>
+      <description>Create your own green lights, face your challenges, and always keep exploring yourself</description>
+    </item>
+    <item>
+      <title>How to Be Perfect: The Correct Answer to Every Moral Question</title>
+      <link>https://mutt0-ds.github.io/books/how-to-be-perfect-the-correct-answer-to-every-moral-question/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/how-to-be-perfect-the-correct-answer-to-every-moral-question/</guid>
+      <description>Know thyself &amp;amp; Nothing in Excess</description>
+    </item>
+    <item>
+      <title>How to Win Friends and Influence People</title>
+      <link>https://mutt0-ds.github.io/books/come-trattare-gli-altri-e-farseli-amici/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/come-trattare-gli-altri-e-farseli-amici/</guid>
+      <description>Always give others the impression that they are important</description>
+    </item>
+    <item>
+      <title>Il Genio Non Esiste</title>
+      <link>https://mutt0-ds.github.io/books/il-genio-non-esiste/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/il-genio-non-esiste/</guid>
+      <description>Geniuses are ordinary people, often incredibly lucky or building on others’ work. So, crew, want to become geniuses? Go out there and have fun. And preferably do it legally.</description>
+    </item>
+    <item>
+      <title>Impro</title>
+      <link>https://mutt0-ds.github.io/books/impro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/impro/</guid>
+      <description>Be like a child when improvising: pure creativity requires ignoring the mental limits we have been given. In every conversation one person has higher status and one lower</description>
+    </item>
+    <item>
+      <title>It&#39;s Ok That You&#39;re Not Ok</title>
+      <link>https://mutt0-ds.github.io/books/its-ok-that-youre-not-ok/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/its-ok-that-youre-not-ok/</guid>
+      <description>Grief cannot be fixed. Only carried forward</description>
+    </item>
+    <item>
+      <title>L&#39;uomo che scambiò sua moglie per un cappello</title>
+      <link>https://mutt0-ds.github.io/todo/luomo-che-scambi%C3%B2-sua-moglie-per-un-cappello/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/luomo-che-scambi%C3%B2-sua-moglie-per-un-cappello/</guid>
+      <description>Ci sono molto disturbi neurologici strani e particolari. Dobbiamo vederli con occhio critico</description>
+    </item>
+    <item>
+      <title>L&#39;uomo in cerca di senso</title>
+      <link>https://mutt0-ds.github.io/todo/luomo-in-cerca-di-senso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/luomo-in-cerca-di-senso/</guid>
+      <description>Quanto hai vissuto, nessuna potenza del mondo può togliertelo</description>
+    </item>
+    <item>
+      <title>Le 100 bandiere che raccontano il mondo</title>
+      <link>https://mutt0-ds.github.io/todo/le-100-bandiere-che-raccontano-il-mondo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/le-100-bandiere-che-raccontano-il-mondo/</guid>
+      <description>Ogni bandiera è molto piu di un pezzo di stoffa, rappresenta milioni di persone e quello che credono. Ci sono storie affascinanti dietro di esse</description>
+    </item>
+    <item>
+      <title>Learn Git in a Month of Lunches</title>
+      <link>https://mutt0-ds.github.io/todo/learn-git-in-a-month-of-lunches/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/learn-git-in-a-month-of-lunches/</guid>
+      <description>Git è semplice nel principio, devi conoscere i comandi base e il resto googli</description>
+    </item>
+    <item>
+      <title>LLM Engineer’s Handbook</title>
+      <link>https://mutt0-ds.github.io/todo/llm-engineers-handbook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/llm-engineers-handbook/</guid>
+      <description>Creare una pipeline AI è un grande sbatti, alla fine è una cosa semplice</description>
+    </item>
+    <item>
+      <title>Looks Good to Me</title>
+      <link>https://mutt0-ds.github.io/todo/looks-good-to-me/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/looks-good-to-me/</guid>
+      <description>You are not your code. Una code review e’ fatta per arrivare a una qualita’ del codice comune e per il bene di tutti</description>
+    </item>
+    <item>
+      <title>Meditazioni</title>
+      <link>https://mutt0-ds.github.io/todo/meditazioni/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/meditazioni/</guid>
+      <description>La vita e’ breve, non preoccuparti di quello che pensano gli altri</description>
+    </item>
+    <item>
+      <title>Pale Blue Dot</title>
+      <link>https://mutt0-ds.github.io/todo/pale-blue-dot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/pale-blue-dot/</guid>
+      <description>L’uomo, in questo piccolo pallino blu, e’ sempre stato affascinato di scoprire cosa c’e’ oltre. Non smetteremo mai di essere curiosi</description>
+    </item>
+    <item>
+      <title>Ruined by Design</title>
+      <link>https://mutt0-ds.github.io/todo/ruined-by-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/ruined-by-design/</guid>
+      <description>Prenditi responsabilità. Devi metterci una coscienza etica anche in quello che costruisci, indirettamente, da designer.</description>
+    </item>
+    <item>
+      <title>Siamo Fottuti</title>
+      <link>https://mutt0-ds.github.io/todo/siamo-fottuti/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/siamo-fottuti/</guid>
+      <description>Il mondo è un casino per causa nostra, e dobbiamo prenderne responsabilità. Svegliamoci e affrontiamo il nostro destino mettendoci in gioco</description>
+    </item>
+    <item>
+      <title>Simply Said: Communicating Better at Work and Beyond</title>
+      <link>https://mutt0-ds.github.io/todo/simply-said-communicating-better-at-work-and-beyond/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/simply-said-communicating-better-at-work-and-beyond/</guid>
+      <description>Ascolta. Alle persone interessa solo di se stessi, quindi subito digli perchè quello che dici ha valore per loro</description>
+    </item>
+    <item>
+      <title>Slow Productivity</title>
+      <link>https://mutt0-ds.github.io/todo/slow-productivity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/slow-productivity/</guid>
+      <description>La vera produttivita’ richiede calma e organizzazione, non frenesia</description>
+    </item>
+    <item>
+      <title>SQL Antipatterns</title>
+      <link>https://mutt0-ds.github.io/todo/sql-antipatterns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/sql-antipatterns/</guid>
+      <description>Spararsi in un piede con SQL è facilissimo. Devi riflettere prima di prendere certe decisioni</description>
+    </item>
+    <item>
+      <title>Superhuman Social Skills</title>
+      <link>https://mutt0-ds.github.io/todo/superhuman-social-skills/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/superhuman-social-skills/</guid>
+      <description>Impara a raccontare storie, con un inizio tranquillo un problema/sorpresa e colpo di scena. Sii un cambiamento positivo, mai uno neutrale, in una conversazione, o non verrai mai notato</description>
+    </item>
+    <item>
+      <title>The 4-Hour Work Week</title>
+      <link>https://mutt0-ds.github.io/todo/the-4-hour-work-week/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/the-4-hour-work-week/</guid>
+      <description>Delega, 80/20. La tua risorsa piu importante è il tempo</description>
+    </item>
+    <item>
+      <title>The Accounting Game</title>
+      <link>https://mutt0-ds.github.io/todo/the-accounting-game/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/the-accounting-game/</guid>
+      <description>On a daily basis, cash runs the business. Not profit</description>
+    </item>
+    <item>
+      <title>The Best Story Wins</title>
+      <link>https://mutt0-ds.github.io/todo/the-best-story-wins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/the-best-story-wins/</guid>
+      <description>Saper raccontare storie, che seguono strutture uguali da millenni, è la chiave per far ricordare alle persone i concetti</description>
+    </item>
+    <item>
+      <title>The Conversation Code</title>
+      <link>https://mutt0-ds.github.io/todo/the-conversation-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/the-conversation-code/</guid>
+      <description>Fill up your conversation storage. Explore, have fun, learn, and put in practice what you heard! Most of the time, it’s just scripts.</description>
+    </item>
+    <item>
+      <title>The Culture Code</title>
+      <link>https://mutt0-ds.github.io/todo/the-culture-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/the-culture-code/</guid>
+      <description>Build Safety. Share Vulnerability. Establish Purpose</description>
+    </item>
+    <item>
+      <title>The Four Agreements</title>
+      <link>https://mutt0-ds.github.io/todo/the-four-agreements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/the-four-agreements/</guid>
+      <description>Non prendere nulla sul personale, non fare assumptions, pensa sempre al meglio e fai del tuo meglio per risvegliarti</description>
+    </item>
+    <item>
+      <title>The Great Mental Models</title>
+      <link>https://mutt0-ds.github.io/todo/the-great-mental-models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/the-great-mental-models/</guid>
+      <description>You can’t really know everything, you can however use simpler models that wll help you avoiding the most common mistakes</description>
+    </item>
+    <item>
+      <title>The Millionaire Fastlane</title>
+      <link>https://mutt0-ds.github.io/todo/the-millionaire-fastlane/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/the-millionaire-fastlane/</guid>
+      <description>diventa un imprenditore, soddisfaun bisogno (scalabile) e moltiplica esponenzialmente la tua ricchezza, questa è la fastlane</description>
+    </item>
+    <item>
+      <title>The Mom Test</title>
+      <link>https://mutt0-ds.github.io/todo/the-mom-test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/the-mom-test/</guid>
+      <description>Cosa vogliamo imparare da queste persone? Non dare subito la tua idea ma ascoltale, o come una mamma gentile, ti diranno quello che vuoi sentire e non i veri problemi</description>
+    </item>
+    <item>
+      <title>The Muscle Ladder</title>
+      <link>https://mutt0-ds.github.io/todo/the-muscle-ladder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/the-muscle-ladder/</guid>
+      <description>Non sotto-allenarti. Segui una dieta equilibrata. Affronta la palestra con pensiero critico e ascolta quello che dice la scienza</description>
+    </item>
+    <item>
+      <title>The Way of the Peaceful Warrior</title>
+      <link>https://mutt0-ds.github.io/todo/the-way-of-the-peaceful-warrior/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/the-way-of-the-peaceful-warrior/</guid>
+      <description>There are no ordinary moments!&#xA;The way of the peaceful warrior is to appreciate every moment, regardless of how dull or ordinary it may seem. Live in the present.</description>
+    </item>
+    <item>
+      <title>The Year of Magical Thinking</title>
+      <link>https://mutt0-ds.github.io/todo/the-year-of-magical-thinking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/the-year-of-magical-thinking/</guid>
+      <description>Vivi i ricordi delle persone che hai amato. E capisci quando e’ il momento di andare avanti. Non rimanere bloccato.</description>
+    </item>
+    <item>
+      <title>The Zombie Survival Guide</title>
+      <link>https://mutt0-ds.github.io/todo/the-zombie-survival-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/the-zombie-survival-guide/</guid>
+      <description>L’unico modo per uccidere uno zombie e’ colpirlo alla testa</description>
+    </item>
+    <item>
+      <title>Thinking Fast and Slow</title>
+      <link>https://mutt0-ds.github.io/todo/thinking-fast-and-slow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/thinking-fast-and-slow/</guid>
+      <description>Non è possibile spiegare la razionalità (o meglio, la sua mancanza) dell&amp;rsquo;animo umano, il quale ha due sistemi che si contrappongono a seconda dei casi</description>
+    </item>
+    <item>
+      <title>World War Z</title>
+      <link>https://mutt0-ds.github.io/todo/world-war-z/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/todo/world-war-z/</guid>
+      <description>Se arrivano gli zombie, scappa. Spara in testa. Pensa che ci serviranno anni.</description>
     </item>
   </channel>
 </rss>

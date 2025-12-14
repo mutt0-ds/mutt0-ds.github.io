@@ -1,0 +1,4 @@
+**/internals.py
+.env
+**/.venv/
+**/todo/**
