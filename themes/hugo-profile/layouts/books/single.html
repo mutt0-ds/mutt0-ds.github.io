@@ -1,11 +1,40 @@
 {{ define "main" }}
-<div class="container py-5">
-  <h1>{{ .Title }}</h1>
-  <p><em>{{ .Params.author }}</em></p>
-  <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-fluid my-4">
-  <div class="content">{{ .Content }}</div>
-  {{ if .Params.link }}
-  <p><a href="{{ .Params.link }}" class="btn btn-primary mt-3" target="_blank">Buy this book</a></p>
-  {{ end }}
+<link rel="stylesheet" href="/css/books.css">
+
+<div class="container py-5 book-page text-center">
+  <div class="book-header mb-4">
+    <img src="{{ .Params.image }}" alt="{{ .Title }}" class="book-cover mb-3">
+    <h1 class="book-title">{{ .Title }}</h1>
+    <p class="book-author"><em>{{ .Params.author }}</em></p>
+
+    {{ if .Params.finished }}
+    <p class="book-finished mb-2">
+      <span class="finished-label">📅 Finished on:</span> {{ .Params.finished }}
+    </p>
+    {{ end }}
+        
+    {{ if .Params.badges }}
+    <div class="book-badges my-2">
+      {{ range .Params.badges }}
+      <span class="badge badge-secondary">{{ . }}</span>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if .Params.score }}
+    <div class="book-score mt-2">
+      ⭐️ {{ .Params.score }}
+    </div>
+    {{ end }}
+
+    {{ if .Params.summary }}
+    <p class="book-summary mt-3 text-muted">
+      {{ .Params.summary }}
+    </p>
+    {{ end }}
+
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    {{ .Content }}
+  </div>
 </div>
 {{ end }}
