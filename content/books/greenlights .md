@@ -3,7 +3,7 @@ title: "Greenlights"
 author: Matthew McConaughey
 image: https://m.media-amazon.com/images/I/81i0Jv+qJBL._AC_UF1000,1000_QL80_.jpg
 badges:
-- "🥳 Fiction"
+- "🧘‍♀️ Lifestyle"
 score: "⭐⭐⭐⭐⭐"
 finished: '2025-06-16'
 summary: "Create your own green lights, face your challenges, and always keep exploring yourself"
