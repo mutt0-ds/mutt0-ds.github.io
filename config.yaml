@@ -223,7 +223,7 @@ params:
   experience:
     enable: true
     items:
-      - job: "Senior Product Engineer"
+      - job: "AI Tech Lead"
         company: "Investsuite"
         companyUrl: "https://www.investsuite.com"
         date: "Dec 2024 - Present"

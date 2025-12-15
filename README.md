@@ -1,6 +1,6 @@
 # Hey, I'm Davide 👋
 
-I'm a Product Engineer based in **Como**, building awesome products at **[InvestSuite](https://www.investsuite.com/)** (and pushing innovation whenever time allows).
+I'm a Tech Lead based in **Como**, building awesome products at **[InvestSuite](https://www.investsuite.com/)** (and pushing innovation whenever time allows).
 
 My skillset blends AI, Data Engineering, and classic Software Development, plus a healthy dose of [communication](https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/) and [psychology](https://mutt0-ds.github.io/posts/2024/09/the-culture-map/).
 
