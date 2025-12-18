@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://mutt0-ds.github.io/books/an-elegant-puzzle/">
+  <meta property="og:site_name" content="Mutt0-ds Notes">
+  <meta property="og:title" content="An Elegant Puzzle">
+  <meta property="og:description" content="To survive in a hyper-evolving system, you need to be flexible about migration and skilled at handling the facets of management, from hiring to culture and organization">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="books">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="An Elegant Puzzle">
+  <meta name="twitter:description" content="To survive in a hyper-evolving system, you need to be flexible about migration and skilled at handling the facets of management, from hiring to culture and organization">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+  <title>
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/books" title="Books">
+                            
+                            Books
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<link rel="stylesheet" href="/css/books.css">
+
+<div class="container py-5 book-page text-center">
+  <div class="book-header mb-4">
+    <img src="https://m.media-amazon.com/images/I/51aTO3pGp9L.jpg" alt="An Elegant Puzzle" class="book-cover mb-3">
+    <h1 class="book-title">An Elegant Puzzle</h1>
+    <p class="book-author"><em>Will Larson</em></p>
+
+    
+    <p class="book-finished mb-2">
+      <span class="finished-label">📅 Finished on:</span> 2023-05-25
+    </p>
+    
+        
+    
+    <div class="book-badges my-2">
+      
+      <span class="badge badge-secondary">💼 Work</span>
+      
+      <span class="badge badge-secondary">📢 Communication</span>
+      
+    </div>
+    
+
+    
+    <div class="book-score mt-2">
+      ⭐️ ⭐️⭐️
+    </div>
+    
+
+    
+    <p class="book-summary mt-3 text-muted">
+      To survive in a hyper-evolving system, you need to be flexible about migration and skilled at handling the facets of management, from hiring to culture and organization
+    </p>
+    
+
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    <p>The book is fine, with a set of tools meant to help decision makers in a fast-evolving environment (he was at Uber), but I read it in bits between breaks at work, paying little attention. I did not get as much out of it; it felt a bit too abstract and conceptual. By comparison The Phoenix Project is much more pragmatic. The Pragmatic Engineer took excellent notes: <a href="https://blog.pragmaticengineer.com/an-elegant-puzzle-book-review/">https://blog.pragmaticengineer.com/an-elegant-puzzle-book-review/</a></p>
+<h2 id="chapters">Chapters</h2>
+<h3 id="organizations-topics-on-organization-and-team-design">Organizations: topics on organization and team design</h3>
+<p>Interesting that in a system evolving this quickly, like Uber, scaling and changing systems every few months is the norm. The migration process is fundamental. Be flexible, with the awareness that as you grow you will need to retire systems.</p>
+<h3 id="tools-systems-thinking-and-tools-to-manage-change-at-the-org-team-and-individual-level">Tools: systems thinking and tools to manage change at the org, team and individual level</h3>
+<p>Nothing stood out to me except presenting to executives, which is very important to be heard:</p>
+<blockquote>
+<p>There absolutely is not a single right way to present to senior leaders, but hopefully, the template is a useful starting point.</p>
+</blockquote>
+<ol>
+<li>Tie topic to business value.</li>
+<li>Establish historical narrative. One or two sentences to answer the question &ldquo;Why should anyone care?&rdquo;</li>
+<li>Explicit ask. What are you looking from the audience? One or two sentences.</li>
+<li>Data driven diagnosis. (&hellip;)</li>
+<li>Decision making principles.</li>
+<li>What&rsquo;s next and when it will be done.</li>
+<li>Return to explicit ask. (&hellip;)</li>
+</ol>
+<p>Also very useful: how to present to the press and the model, document, share approach</p>
+<h3 id="approaches-common-but-difficult-situations-engineering-managers-often-find-themselves-in-and-dealing-with-these">Approaches: common, but difficult situations engineering managers often find themselves in and dealing with these</h3>
+<p>Nothing particularly useful to me, maybe Saying No but basic</p>
+<h3 id="culture-efforts-that-can-shift-the-culture-within-an-organization">Culture: efforts that can shift the culture within an organization</h3>
+<p>Useful advice: befriend your colleagues; a tight-knit team works very well. Also, do not overwork yourself; remember that the people who will remember you working late in 20 years will be your children</p>
+<h3 id="careers-hiring-evaluating-performance-promoting-and-retaining-people">Careers: hiring, evaluating performance, promoting and retaining people</h3>
+<p>Content on how to hire, and how to hire fast. It did not resonate much with me, aside from the idea of a funnel and how evaluating performance is very delicate</p>
+<h3 id="appendix-tools-to-operate-an-organization-at-the-line-manager-middle-manager-and-manager-of-managers-level-as-well-as-the-reading-list">Appendix: tools to operate an organization at the line manager, middle manager, and manager of managers level, as well as the reading list.</h3>
+<dl>
+<dt>Line management</dt>
+<dd>
+<p>Around the time your team reaches three engineers, you&rsquo;ll want to be running a sprint process. There are many successful ways to run sprints, try a few and see what resonates for you. (&hellip;)</p>
+</dd>
+</dl>
+<p>Middle management</p>
+<p>As you move into middle management, you&rsquo;ll become responsible for two to five line managers, and will need to shift away from day-to-day execution to give your line managers room to make an impact (and free yourself up to make a larger impact as well). (&hellip;)</p>
+<p>Managing an organization</p>
+<p>As your organization starts to get even larger and you&rsquo;re mostly managing middle managers, the playbook shifts again. (&hellip;) Along the way, remember that your old problems still exist, it&rsquo;s just that other folks are dealing with them instead. As you roll out new processes to solve your personal pain points, you should be handing off processes to your managers, and keeping them intact and running.</p>
+<h2 id="snippets-taken-from-the-book-raw">Snippets taken from the book (raw)</h2>
+<p>Teams are slotted into a continuum of four states:</p>
+<ul>
+<li>A team is falling behind if each week their backlog is longer than
+it was the week before. Typically, people are working extremely
+hard but not making much progress, morale is low, and your
+users are vocally dissatisfied.
+A team is treading water if they&rsquo;re able to get their critical work
+done, but are not able to start paying down technical debt or
+begin major new projects. Morale is a bit higher, but people are
+still working hard, and your users may seem happier because
+they&rsquo;ve learned that asking for help won&rsquo;t go anywhere.
+A team is repaying debt when they&rsquo;re able to start paying down
+technical debt, and are beginning to benefit from the debt
+repayment snowball: each piece of debt you repay leads to more
+time to repay more debt.
+2.2.2</li>
+<li>A team is innovating when their technical debt is sustainably
+low, morale is high, and the majority of work is satisfying new user
+needs.</li>
+</ul>
+<p>That said, if you don&rsquo;t, then there is probably no one guiding your
+career. Chasing the next promotion is at best a marker on a mass-produced treasure map, with every shovel and metal detector re-
+covering the same patch. Don&rsquo;t go there. Go somewhere that&rsquo;s
+disproportionately valuable to you because of who you are and
+what you want</p>
+<p>Finally, the one thing that I&rsquo;ve found at companies with very few
+interruptions and have observed almost nowhere else: really
+great, consistently available documentation. It&rsquo;s probably even
+harder to bootstrap documentation into a non-documenting
+company than it is to bootstrap unit tests into a non-testing
+company, but the best solution to frequent interruptions I&rsquo;ve seen
+is a culture of documentation, documentation reading, and a
+documentation search that actually works.
+There are a non-zero number of companies that do internal
+documentation well, but I&rsquo;m less sure if there are a non-zero
+number of companies with more than 20 engineers that do this
+well. If you know any, please let me know so that I can pick their
+brains.</p>
+<p>Your first reaction might be to confront this head-on, but it takes
+a while to build credibility after starting a new job. Sure, you&rsquo;ve
+been hired for your experience, so they respect your judgment,
+but it&rsquo;s a hard sell to convince someone that your personal
+experience should invalidate their personal experience.
+I&rsquo;ve been trying something different.
+Model. Start measuring your team&rsquo;s health (maybe using short,
+monthly surveys) and your team&rsquo;s throughput (do some
+lightweight form of task sizing, even if you just do it informally
+with a senior engineer on the team or with yourself), which will
+allow you to establish the baseline before your change.
+Then just start running kanban. Don&rsquo;t publicize it, don&rsquo;t make a
+big deal about it, just start doing it with your team. Frame it as a
+short experiment with the team, and start trying it. Keep iterating
+on it until you&rsquo;re confident it works. Have the courage to keep at it
+for a while, and also the courage to stop doing it if it doesn&rsquo;t work
+after a month or two. Use the team&rsquo;s health and throughput
+metrics to ground your decision about whether it&rsquo;s working.
+Document. After you&rsquo;ve discovered an effective approach,
+document the problem you set out to solve, the learning process
+you went through, and the details of how another team would adopt the practice for themselves. Be as detailed as possible:
+make a canonical document, and even get a few folks on other
+teams to check that it&rsquo;s readable from their perspective.
+Share. The final step is to share your documented approach,
+along with your experience doing the rollout, in a short email.
+Don&rsquo;t ask everyone to adopt the practice, don&rsquo;t lobby for change,
+just present the approach and your experience following it.
+You&rsquo;ll spend the majority of your time refining approaches that
+work effectively for your team, a bit of your time documenting
+how you did it, and almost no time trying to convince folks to
+change their approach.
+Strangely, in my experience, this has often led to more adoption
+than top-down mandates have</p>
+<p>It took me a few years to glean a lesson from that experience, but
+it comes to mind frequently now when I work with folks who are
+just starting to present to executives. Giving a presentation to
+senior leadership is a bit of a dark art: it takes a while to master,
+and most people who do it well can&rsquo;t quite articulate how they do
+it. Worse yet, many people who are excellent rely on advantages
+that resist replication: charisma, quick wit, deep subject matter
+expertise, or years of experience. Start with the conclusion. Particularly in written
+communication, folks skim until they get bored and then stop
+reading. Accommodate this behavior by starting with what&rsquo;s
+important, instead of building toward it gradually.
+Frame why the topic matters. Typically, you&rsquo;ll be presenting on
+an area that you&rsquo;re intimately familiar with, and it&rsquo;s probably very
+obvious to you why the work matters. This will be much less
+obvious to folks who don&rsquo;t think about the area as often. Start by
+explaining why your work matters to the company.
+Everyone loves a narrative. Another aspect of framing the topic
+is providing a narrative of where things are, how you got here, and
+where you&rsquo;re going now. This should be a sentence or two along
+the lines of, &ldquo;Last year, we had trouble closing several important
+customers due to concerns about our scalability. We identified
+our databases as our constraints to scaling, and since then our
+focus has been moving to a new sharding model that enables
+horizontal scaling. That&rsquo;s going well, and we expect to finish in Answer directly. Senior leaders tend to be indirectly responsible
+for wide areas, and frequently pierce into areas to debug
+problems. Their experience &ldquo;debug piercing&rdquo; tunes their radar for
+evasive answers, and you don&rsquo;t want to be a blip on that screen.
+Instead of hiding problems, use them as an opportunity to explain
+your plans to address them.
+Deep in the data. You should be deep enough in your data that
+you can use it to answer unexpected questions. This means
+spending time exploring the data, and the most common way to
+do that is to run a thorough goal-setting exercise.
+Derive actions from principles. One of your aims is to provide a
+mental model of how you view the topic, allowing folks to get
+familiar with how you make decisions. Showing you are &ldquo;in the
+data&rdquo; is part of this. The other aspect is defining the guiding
+principles you&rsquo;re using to approach decisions.
+Discuss the details. Some executives test presenters by diving
+into the details, trying to uncover an area the presenter is
+uncomfortable speaking on. You should be familiar with the
+details, e.g., project statuses, but I think that it&rsquo;s usually best to
+reframe the discussion when you get too far into the details. Try
+to pop up to either the data or the principles, which tend to be
+more useful conversations.
+Prepare a lot; practice a little. If you&rsquo;re presenting to your entire
+company, practicing your presentation is time well spent.
+Leadership presentations tend to quickly detour, so practice isn&rsquo;t
+38
+quite as useful. Practice until you&rsquo;re comfortable, but prefer to
+prepare instead getting deeper into the data, details, and
+principles. As a corollary, if you&rsquo;re knowledgeable in the area
+you&rsquo;re responsible for, and have spent time getting comfortable
+with the format, over time you&rsquo;ll find that you won&rsquo;t need to
+prepare much for these specifically. Rather, whether you&rsquo;re able
+to present effectively without much preparation will become a
+signal for whether you&rsquo;re keeping up with your span of
+responsibility.
+Make a clear ask. If you don&rsquo;t go into a meeting with leadership
+with a clear goal, your meeting will either go nowhere or go
+poorly. Start the meeting by explicitly framing your goal!</p>
+<p>This refined list of goals, aligned to your company&rsquo;s priorities,
+then becomes a central artifact for how you and your manager
+collaborate on your career evolution. Every quarter or so, take
+some time to refresh the document and review it together.
+If you&rsquo;re unconvinced that it&rsquo;s worth your time to write a career
+narrative, you certainly don&rsquo;t have to write one. Most folks get
+away with not writing one for their entire career and have deeply
+fulfilling careers despite the absence.
+That said, if you don&rsquo;t, then there is probably no one guiding your
+career. Chasing the next promotion is at best a marker on a mass-produced treasure map, with every shovel and metal detector re-
+covering the same patch. Don&rsquo;t go there. Go somewhere that&rsquo;s
+disproportionately valuable to you because of who you are and
+what you want</p>
+
+  </div>
+</div>
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/08/test-mind-maps/">
+                        <img src="/images/markmap/title.png" class="card-img-top" alt="How we test 100k-Line Nested JSON trees without going insane">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/08/test-mind-maps/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="How we test 100k-Line Nested JSON trees without going insane">How we test 100k-Line Nested JSON trees without going insane</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Today I want to share an interesting challenge that&rsquo;s been bugging me since I joined InvestSuite last December.
+It&rsquo;s stories like this that makes me happy to be a developer, being able to address things that are ruining my day and get rid of them. It feels so satisfying.</p>
+<p>We work with …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Aug 11, 2025</span>
+                    <a href="/posts/2025/08/test-mind-maps/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/06/we-have-no-idea-book/">
+                        <img src="/images/physics/cover.jpg" class="card-img-top" alt="A Physics book for people who hate Physics">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="A Physics book for people who hate Physics">A Physics book for people who hate Physics</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>My relationship with physics has always been… troubled.</p>
+<p>Probably because I had a high school teacher who never managed to spark any interest in me, I just never caught up. I remember sitting silently at my final exam (Maturità) when the physics question came up, completely blank. I also struggled …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jun 15, 2025</span>
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/05/ai-and-data-engineering/">
+                        <img src="/images/ai_data_engineers/pipeline.jpg" class="card-img-top" alt="No, AI is not replacing Data Engineers.">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/05/ai-and-data-engineering/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="No, AI is not replacing Data Engineers.">No, AI is not replacing Data Engineers.</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p><a href="https://www.anthropic.com/news/claude-4">Claude 4</a> landed, and as usual, it kicked off the usual hype cycle.
+&ldquo;Best coding model ever&rdquo; &ldquo;It writes stories!&rdquo; &ldquo;AI is replacing programmers!&rdquo; And of course, LinkedIn is buzzing with non-technical folks declaring how engineers are doomed and it’s time to …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 29, 2025</span>
+                    <a href="/posts/2025/05/ai-and-data-engineering/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io/" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

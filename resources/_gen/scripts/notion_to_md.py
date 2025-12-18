@@ -79,11 +79,26 @@ def get_blocks_as_md(block_id, indent=0):
 def main():
     data_source = notion.databases.retrieve(database_id=DATABASE_ID).get('data_sources')[0]['id']
     results = notion.data_sources.query(data_source_id=data_source).get("results", [])
+    # pagination
+    while True:
+        last_id = results[-1].get("id")
+        print(last_id)
+        temp = notion.data_sources.query(data_source_id=data_source, start_cursor=last_id).get("results", [])
+        if temp[-1].get("id") != last_id:
+            results.extend(temp)
+        else:
+            break
+
 
     for p in results:
         props = p["properties"]
 
+        # don't save unfinished books
         title = get_text(props["Name"])
+        if not props.get("Finito Il", {}).get("date"):
+            print(f"⏩ Skipping {title} (not finished yet)")
+            continue
+
         author = [a["name"] for a in props.get("Author", {}).get("multi_select", [])]
         tags = [t["name"] for t in props.get("🏷 Tag", {}).get("multi_select", [])]
         summary = get_text(props.get("In a Nutshell", {"type": "rich_text", "rich_text": []}))
@@ -109,11 +124,11 @@ def main():
             "showInHome": False,
         }
 
-        filename = title.lower().replace(" ", "-").replace(":", "").replace("/", "-") + ".md"
+        filename = title.lower().replace(" ", "-").replace(":", "").replace("/", "-").replace("?", "-") + ".md"
         md_path = OUTPUT_DIR / filename
 
         # ✅ Skip if already exported
-        if md_path.exists():
+        if (Path("../../../content/books") / filename).exists():
             print(f"⏩ Skipping {title} (already exists)")
             continue
 
