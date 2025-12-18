@@ -82,7 +82,6 @@ def main():
     # pagination
     while True:
         last_id = results[-1].get("id")
-        print(last_id)
         temp = notion.data_sources.query(data_source_id=data_source, start_cursor=last_id).get("results", [])
         if temp[-1].get("id") != last_id:
             results.extend(temp)
@@ -124,7 +123,7 @@ def main():
             "showInHome": False,
         }
 
-        filename = title.lower().replace(" ", "-").replace(":", "").replace("/", "-").replace("?", "-") + ".md"
+        filename = title.lower().replace(" ", "-").replace(":", "").replace("*","").replace("/", "-").replace("?", "-") + ".md"
         md_path = OUTPUT_DIR / filename
 
         # ✅ Skip if already exported

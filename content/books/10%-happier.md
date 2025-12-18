@@ -1,7 +1,7 @@
 ---
 title: 10% Happier
 author: Dan Harris
-image: https://m.media-amazon.com/images/I/71HKQBklNrL._SL1500_.jpg
+image: https://m.media-amazon.com/images/I/71o+OI3MthL.jpg
 badges:
 - "🧘‍♀️ Lifestyle"
 score: "⭐⭐⭐⭐⭐"

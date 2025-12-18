@@ -9,7 +9,9 @@ finished: '2020-10-03'
 summary: 'Always give others the impression that they are important'
 showInHome: false
 ---
-An old-fashioned book that can feel quite 'materialistic,' at times almost manipulative. Aimed at salespeople and anyone who needs to be persuasive, yet still very useful. I summarize its key points:
+An old-fashioned book that can feel quite 'materialistic,' at times almost manipulative. Aimed at salespeople and anyone who needs to be persuasive, yet still very useful. 
+
+## Notes
 
 - Do not condemn and do not criticize; take the other person's point of view
 - Appreciate the people you spend time with honestly and sincerely; show gratitude

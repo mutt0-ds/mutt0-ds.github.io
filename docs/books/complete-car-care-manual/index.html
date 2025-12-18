@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://mutt0-ds.github.io/books/complete-car-care-manual/">
+  <meta property="og:site_name" content="Mutt0-ds Notes">
+  <meta property="og:title" content="Complete Car Care Manual">
+  <meta property="og:description" content="Maintaining a car matters, some repairs you can do yourself… But be careful, the system is very, very complex!">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="books">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Complete Car Care Manual">
+  <meta name="twitter:description" content="Maintaining a car matters, some repairs you can do yourself… But be careful, the system is very, very complex!">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+  <title>
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/books" title="Books">
+                            
+                            Books
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<link rel="stylesheet" href="/css/books.css">
+
+<div class="container py-5 book-page text-center">
+  <div class="book-header mb-4">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/51huXQnbMfL._SX385_BO1,204,203,200_.jpg" alt="Complete Car Care Manual" class="book-cover mb-3">
+    <h1 class="book-title">Complete Car Care Manual</h1>
+    <p class="book-author"><em>Popular Mechanics</em></p>
+
+    
+    <p class="book-finished mb-2">
+      <span class="finished-label">📅 Finished on:</span> 2022-09-22
+    </p>
+    
+        
+    
+    <div class="book-badges my-2">
+      
+      <span class="badge badge-secondary">⚛️ Science</span>
+      
+    </div>
+    
+
+    
+    <div class="book-score mt-2">
+      ⭐️ ⭐⭐⭐⭐⭐
+    </div>
+    
+
+    
+    <p class="book-summary mt-3 text-muted">
+      Maintaining a car matters, some repairs you can do yourself... But be careful, the system is very, very complex!
+    </p>
+    
+
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    <p>Guide on how to maintain a car with lots of diagrams, recommended on Reddit. Great read, to revisit if I have specific issues with the Dacia. I feel a bit more familiar with the basics now.</p>
+<h3 id="what-you-need">What you need</h3>
+<p>Gloves</p>
+<p>Rag</p>
+<p>Wrench</p>
+<p>Screwdriver</p>
+<h3 id="very-useful-channel-for-the-sandero">VERY USEFUL CHANNEL FOR THE SANDERO</h3>
+<p><a href="https://www.youtube.com/watch?v=dYUbDkXgErI">https://www.youtube.com/watch?v=dYUbDkXgErI</a> Very detailed, worth watching end to end</p>
+<h3 id="-easy-things-i-can-replace">⭐ &ldquo;Easy&rdquo; things I can replace</h3>
+<ul>
+<li>
+<p>💥 Tire pressure light: quick pressure check, you can do it at the gas station with the pump, keep it around 2.4 bar. The car alerts me anyway. Also look for signs of wear and check before a long trip. Make sure all 4 are at the same pressure to balance weight, and reset the car&rsquo;s sensor.</p>
+</li>
+<li>
+<p>💥 Flat tire: it depends if it&rsquo;s fully flat or slowly deflating. First, park in a safe spot where you can take your time. For a small puncture you can temporarily use foam sealant. If you need to change it you need a jack and a four-way lug wrench. Read the manual, lift the car at the designated point with the jack and loosen the lug nuts. You may need force and a bit of oil. Bring a rag just in case. I saw how to do it in Switzerland: remember to put out the triangle and wear the vest, then work calmly, remove the hubcap if it&rsquo;s clipped in, possibly the wheel cover, then place the jack where indicated (about 16 cm from the tire), loosen the nuts a bit, lift until you have a finger of clearance, remove the nuts without losing them, swap the wheel, tighten in a criss-cross pattern to balance the load, lower the car and give the nuts a final tighten, then drive off without rushing. Lesson learned.
+Another tip: if the jack fails and the car drops, you might not be able to lift it again. Place wood or something sturdy as a safety support, and if the ground is unstable chock the other wheels.</p>
+</li>
+<li>
+<p>💥 Oil leaks: if you see a spot under the car, identify the source. Engine oil is black, washer fluid is blue, transmission fluid is dark red/brown, and coolant varies. If it&rsquo;s very oily, it&rsquo;s likely a lubricant. You can try to trace the source and see if a gasket is leaking and can be fixed, but you will likely need a mechanic to replace it. Not an emergency but deal with it soon. Be careful tightening fittings so you don&rsquo;t damage them, do it gently.</p>
+</li>
+<li>
+<p>💥 Oil warning light in general: if it&rsquo;s yellow the level is probably low or the pressure is off. Pull over, wait 15 minutes, then use the dipstick to check the level. If it&rsquo;s low, buy some oil at the nearest station and top up at the oil filler cap. Not urgent, but low oil can damage the engine over time, and if it runs out the engine can fail. If the level looks fine or the light behaves oddly (red or flashing), that&rsquo;s a concern. It could be a bad sensor or worse.</p>
+</li>
+<li>
+<p>💥 Wiper blades: replace them if the rubber is worn or they do not wipe well. Otherwise visibility suffers.</p>
+</li>
+<li>
+<p>🗓 The air filter can clog and is usually full of leaves and debris. In that case clean it (not with water and soap). If it has cracks, replace it. You can patch the intake tube with tape if you accept the risk. See Renault and Sandero references.</p>
+</li>
+<li>
+<p>💥 (2️⃣-5️⃣ mechanic check) Spark plugs (very interesting tutorial). I want to learn this because I can save about 90 euros and it&rsquo;s straightforward. If they are fouled the engine struggles to start, bucks, and vibrates. Note which wires go where, pull the boots off carefully (do not pull the wire), unscrew the plug from the well, and replace it.</p>
+</li>
+<li>
+<p>💥 Jump-starting the battery (replace every 🗓🗓🗓🗓-7 years): bring the other car close, connect the cables and start the donor car. Wait a bit, then start yours and let it recharge while still connected, then take a short drive to confirm all is okay. When working on a battery always remove the negative cable first and reconnect it last. Check for corrosion now and then, and remove it with a small brush if needed. Batteries often have a hydrometer eye indicator that shows, by color, if it&rsquo;s charged, discharged, or needs service.
+Still on the battery, test before replacing: charge it and see if it holds. If it cannot hold a charge, it is done. Read the battery chapters for common pitfalls.</p>
+</li>
+<li>
+<p>💥 Serpentine belt (🗓🗓🗓🗓, 7️⃣): it squeals if worn or tensioned wrong, making an annoying noise. I did not know about it, but it costs about ten euros to replace and this video is very precise: <a href="https://www.youtube.com/watch?v=4Gqwc_ORiz4">https://www.youtube.com/watch?v=4Gqwc_ORiz4</a>. Check the routing carefully.</p>
+</li>
+<li>
+<p>💥 Hatch/hood supports can fail and hurt you if you are looking inside. Tighten them properly and consider replacing the struts. Not likely on mine and there are no Dacia-specific videos. They should last a long time, but since they are gas charged they can wear. See <a href="https://www.youtube.com/watch?v=GjBqgR9HS-U">https://www.youtube.com/watch?v=GjBqgR9HS-U</a> and <a href="https://www.youtube.com/watch?v=1DMqUs0abjg">https://www.youtube.com/watch?v=1DMqUs0abjg</a></p>
+</li>
+<li>
+<p>Coolant (🗓🗓-🗓🗓🗓🗓) degrades over time. This nice video shows how to change it. Not a big concern, aside from the first time when all the fluid drains out, which can be surprising. Depends on the car. It only costs 10-30 euros at a mechanic, so I would let them do it. Check the car&rsquo;s instructions to know which coolant you need. I tend to confuse it, probably an antifreeze/coolant mix.</p>
+</li>
+<li>
+<p>The throttle body (3️⃣) is a key engine component and can be cleaned easily. If it has issues the car can stall and the engine loses power. I do not think it is always obvious. The video here is helpful. The only hassle is removing and refitting the intake tube properly. Clean the part with brushes and cloths.</p>
+</li>
+<li>
+<p>Annual inspection (🗓 see Italian law): do not try this yourself, a mechanic does it. Just remember it is required by law.</p>
+</li>
+<li>
+<p>Change headlights (💥) easy, done already. Remove and get the replacement part, see a tutorial.</p>
+</li>
+<li>
+<p>Change fuses (💥). Great video from a very clear channel on fuses and relays. Worth watching. Easy and cheap to replace. I might need a small tester, costs a few euros. Watch the relays, you need to check both contacts. I should keep a small box.</p>
+</li>
+<li>
+<p>AC with bad odors (💥): the simplest fix is to run the AC on fresh air mode (icon of the car with air coming from outside), since smells come from fungi that grow in a humid environment if you recirculate too much. You can also open the hood and see if there is debris in the air intake (filters 2️⃣). The book then describes a more involved disinfecting with specific products, worth reading up on. Helpful video.</p>
+</li>
+<li>
+<p>Seat covers? I should consider them (video here, watch out for airbags in the comments) if I see mine wearing out. If needed they can be removed.</p>
+</li>
+<li>
+<p>Replace rearview mirror (💥): it uses an adhesive. If it breaks, buy a new one and replace it. Does not look hard.</p>
+</li>
+<li>
+<p>Wash + wax: some tricks for a nice shine. Vacuum mats and interior, use cotton swabs for details, and clean windows with a suitable product (harsh chemicals can damage them). For scratches you can use a touch-up, and waxing makes it glossy. A small brush for final details like the logo.</p>
+</li>
+<li>
+<p>Repairing windshields (💥). In some cases you need a full glass replacement. For others there are kits to repair as soon as possible before it becomes a crack. It must be completely dry, and you apply the kit carefully to the glass, which looks like a small patch or an injector of adhesive, depending on the kit. See if it works. If the crack spreads, the glass is done.</p>
+</li>
+<li>
+<p>Storing your car for a long time. Read the Storing Your Car chapter. It has tips like disconnecting the battery and securing some components so nothing gets damaged.</p>
+</li>
+<li>
+<p>Fixing the car after a flood (💥). Remove as much water as possible before mold grows, there will be water everywhere. If it reaches the ECU there may be irreparable damage, check the high-water mark carefully. Check the oil filter; if it has water droplets you may need an oil change. If water got inside, air out and clean mats and interior, and rinse external components that may have gotten dirty like the brakes. The onboard computer should be removed and cleaned with great care since it is not waterproof. Also check the lights. In theory they are fine, but water can get in and you need to dry the housing. In general electrical components are protected. Test thoroughly.</p>
+</li>
+<li>
+<p>Repair paint chips (💥). Since a body shop can be expensive, you can try to fix it by buying primer and clearcoat, because the paint is layered. Mask the area to fill, sand it (the book lists grits) and apply the suggested products. Again, check the chapter images. If you are not satisfied, you can try spray paint (still masking the area) and then lightly sand.</p>
+</li>
+<li>
+<p>💥 Removing stickers (maybe the vignette). Use a hair dryer and slowly peel. Warm conditions help. I doubt special products add much here.</p>
+</li>
+</ul>
+<h2 id="-enginetransmission-i-will-not-do-myself-but-good-to-know">😯 Engine/Transmission I will not do myself but good to know</h2>
+<ul>
+<li>💥 Exhaust pipe: incident where you lose the final piece of the tailpipe (muffler), you will notice because the engine gets very loud. Wear eye protection because of flying debris, and you cut the pipe. I will not do this, so if it happens I will read that chapter. Most issues are rust.</li>
+<li>💥 Suspension (3️⃣ restore if used hard): you notice because the car takes hits poorly, like a truck. I think the book focuses on SUVs/vans in this chapter. You unscrew and inspect various components, especially shocks. They should be replaced about every 60k miles, depending on use, but replacement is complex. I saw a video and I would not do it.</li>
+<li>Change oil and filter (the car alerts you): there is a video on how, but you need a way to raise the car. I will have a mechanic do it.</li>
+<li>Change the water pump (1️⃣0️⃣): watch if coolant temperature climbs a lot; around 100k km it should be replaced. Be alert if there are leaks, which is rare, since it can seriously damage the engine. If you smell coolant, pay attention. With recent tech it should be reliable anyway.</li>
+<li>💥 The starter solenoid (or starter motor) is the device that engages the engine with the battery when you turn the key. If it fails you hear click-click-click as it spins without engaging (happened before). Could also be a battery issue. On the Dacia I will not touch it, it is just useful to know this component exists, like a small switch.</li>
+<li>💥 Ignition timing matters. The timing belt is a gear system you might adjust if the engine struggles to accelerate. There is a close-up of what I mean. They mark the current position on the pulley and turn it a certain way. I doubt I will ever do this. If needed, reread.</li>
+<li>💥 The engine mount (5️⃣ they start to crack) protects the engine from shocks and vibrations. If it has issues you notice jerks and engine vibrations. Replace if needed.</li>
+<li>💥 The cooling fan is one or two large fans that run the AC and help cool the engine. If it fails you will get hot air and risk overheating. They show how to check the connectors with a battery, and you can test the fan directly. I doubt I can do much beyond that. Replacing it is involved; you have to remove a lot around the engine.</li>
+<li>The transmission filter (and fluid) (3️⃣). There is a video that gives the idea. It reminds me of the oil filter and I may be mixing them up. I would have a mechanic do it since it takes some skill (unscrew, clean, scrape), though it is not the most complex job. It matters because it manages the driven wheels. Do they do this during service? If it is not right, steering or response may feel off.</li>
+<li>Hitching a trailer, if I ever need it. Explains how to wire it and the colors on the connector.</li>
+<li>Broken horn (💥 of course): check for battery issues, and replace it or it will not pass inspection. Do not take the whole assembly apart, it is a pain.</li>
+<li>Turn signal indicator (💥): this video shows how to replace them. I do not love messing with wires, but it is doable.</li>
+</ul>
+<p>Then there are more technical things (engine, brakes completely skipped, radiator, steering, major replacements) that I will never do, so I am not even writing them down.</p>
+
+  </div>
+</div>
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/08/test-mind-maps/">
+                        <img src="/images/markmap/title.png" class="card-img-top" alt="How we test 100k-Line Nested JSON trees without going insane">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/08/test-mind-maps/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="How we test 100k-Line Nested JSON trees without going insane">How we test 100k-Line Nested JSON trees without going insane</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Today I want to share an interesting challenge that&rsquo;s been bugging me since I joined InvestSuite last December.
+It&rsquo;s stories like this that makes me happy to be a developer, being able to address things that are ruining my day and get rid of them. It feels so satisfying.</p>
+<p>We work with …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Aug 11, 2025</span>
+                    <a href="/posts/2025/08/test-mind-maps/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/06/we-have-no-idea-book/">
+                        <img src="/images/physics/cover.jpg" class="card-img-top" alt="A Physics book for people who hate Physics">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="A Physics book for people who hate Physics">A Physics book for people who hate Physics</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>My relationship with physics has always been… troubled.</p>
+<p>Probably because I had a high school teacher who never managed to spark any interest in me, I just never caught up. I remember sitting silently at my final exam (Maturità) when the physics question came up, completely blank. I also struggled …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jun 15, 2025</span>
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/05/ai-and-data-engineering/">
+                        <img src="/images/ai_data_engineers/pipeline.jpg" class="card-img-top" alt="No, AI is not replacing Data Engineers.">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/05/ai-and-data-engineering/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="No, AI is not replacing Data Engineers.">No, AI is not replacing Data Engineers.</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p><a href="https://www.anthropic.com/news/claude-4">Claude 4</a> landed, and as usual, it kicked off the usual hype cycle.
+&ldquo;Best coding model ever&rdquo; &ldquo;It writes stories!&rdquo; &ldquo;AI is replacing programmers!&rdquo; And of course, LinkedIn is buzzing with non-technical folks declaring how engineers are doomed and it’s time to …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 29, 2025</span>
+                    <a href="/posts/2025/05/ai-and-data-engineering/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io/" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
