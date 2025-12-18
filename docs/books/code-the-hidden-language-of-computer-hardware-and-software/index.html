@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://mutt0-ds.github.io/books/code-the-hidden-language-of-computer-hardware-and-software/">
+  <meta property="og:site_name" content="Mutt0-ds Notes">
+  <meta property="og:title" content="Code: The Hidden Language of Computer Hardware and Software">
+  <meta property="og:description" content="Behind a computer there is literally a world of things to learn, from electrons to web protocols">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="books">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Code: The Hidden Language of Computer Hardware and Software">
+  <meta name="twitter:description" content="Behind a computer there is literally a world of things to learn, from electrons to web protocols">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+  <title>
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/books" title="Books">
+                            
+                            Books
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<link rel="stylesheet" href="/css/books.css">
+
+<div class="container py-5 book-page text-center">
+  <div class="book-header mb-4">
+    <img src="https://m.media-amazon.com/images/P/B00JDMPOK2.01._SCLZZZZZZZ_SX500_.jpg" alt="Code: The Hidden Language of Computer Hardware and Software" class="book-cover mb-3">
+    <h1 class="book-title">Code: The Hidden Language of Computer Hardware and Software</h1>
+    <p class="book-author"><em>Charles Petzold</em></p>
+
+    
+    <p class="book-finished mb-2">
+      <span class="finished-label">📅 Finished on:</span> 2023-01-03
+    </p>
+    
+        
+    
+    <div class="book-badges my-2">
+      
+      <span class="badge badge-secondary">💻 IT</span>
+      
+    </div>
+    
+
+    
+    <div class="book-score mt-2">
+      ⭐️ ⭐⭐⭐⭐⭐
+    </div>
+    
+
+    
+    <p class="book-summary mt-3 text-muted">
+      Behind a computer there is literally a world of things to learn, from electrons to web protocols
+    </p>
+    
+
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    <p>Most recommended book on Hacker News, it takes the concept of the PC from the basics up to the most complex abstractions. A must read that in 400 pages helped me understand what is actually behind a computer, with practical examples, clever details, and a lot of knowledge. A couple of final chapters were too tough, but otherwise I came away amazed and fascinated by this complicated world I did not know. One of the most beautiful and useful books I have ever read.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>code means a system for transferring information among people and machines, aka to communicate. The Italian vocabulary is itself a code</li>
+<li>Introduction with Morse code used to communicate between two houses by the child protagonists who only have flashlights, already impressive. Key idea is two: dots and dashes, binary. Introduction to powers of two to explain the number of possible combinations</li>
+<li>Introduction to Braille, which has a fascinating history and an ingenious structure that saves a lot of space with abbreviations and prefixes that alter the following words (shift codes). With two to the sixth combinations, a reminder of binary concepts</li>
+<li>Introduction to electricity and how a flashlight works&hellip; the battery has many atoms exchanging electrons, closing the circuit with a chemical reaction between the two ends. I = E/R, with current as how much electricity is flowing (Ampere), Resistance (Ohm) is how much the material blocks it, and E is voltage, how much potential energy there is. A disconnected battery always has the same voltage, but very high resistance since air does not conduct. Useful. Wattage for light bulbs is E x I</li>
+<li>Surprising: you can use grounding to conduct electricity using the Earth itself. Plant a large copper rod (symbolizes the beginning of the circuit, aka V). This way you do not need a second wire because the ground closes the circuit</li>
+<li>Explanation of the telegraph, which opened and closed circuits making a click-clack sound to be translated into Morse code. Connections were copper wire between the first utility poles. Explanation of repeaters, which connected the click-clack sounder to the input and repeated the same thing instead of requiring human effort</li>
+<li>Explanation of number systems, which are themselves a code. For me the number 3 stands for three because I assign that meaning to it. Zero was a tremendous invention. A digression on non-decimal systems by pretending to be a cartoon character with 8 fingers (brilliant, you understand how a base-8 system thinks by excluding 8 and 9). Excellent introduction to the bit, which is the binary digit (reasoning with a code of only 0 and 1, explained well by simulating being a dolphin with only two fingers/fins)</li>
+<li>History of binary code, the simplest possible system for counting. Any information can be broken down and expressed in bits. For example a barcode is a sequence of spaces and lines symbolizing 0 and 1 in succession, and since there are many they allow 2 to the x combinations of codes. They have a lot of checks to prevent a barcode from being tampered with or misprinted (but in the end the same numbers are printed in clear text under the code). Shows both Morse and Braille converted into binary</li>
+<li>Explanation of Boole and boolean logic. It connects to logic gates, which use current in series and in parallel to simulate + and x statements as if they were switches. Good parallel on how they physically correspond to current on and off and I learned AND, NAND, OR, and NOR</li>
+<li>Binary machine: build an adder from the components of the previous chapter. Introduced the XOR gate, which gives 1 if only one of A or B is 1, combining OR and NAND. Use an XOR and an AND to add bits with a carry if both are 1 (10). It ends up looking like this. PCs still use a system like this at the base, but obviously with microscopic, fast transistors</li>
+<li>Subtraction is like addition but uses borrow instead of carry. If both bits are one you take the borrow from the column to the left and not the right. Overview of the machine with this feature, similar structure. To avoid the hassle of borrow it uses a trick with 9s called nine&rsquo;s complement. Mathematical detail I can skip here. Introduction to overflow, which warns you if the number is larger than the bits available. To combine add and subtract it has another gate that defines the operation. If subtract, it simply inverts B with the ones&rsquo; complement (like 9s but in binary). For example 9 - 4 will be 9 + (-4). Another trick for signs: instead of using a separate bit for the minus, split the available bits. For example from 0 to 499 the positives, and from 500 to 999 the negatives. This causes errors so that if you run out of bits then from 499 + 1 you go to -499. Now I get it. The leftmost bit will be 0 for positives and 1 for negatives. A number with this property is signed vs unsigned, and subtraction works in this somewhat convoluted way</li>
+<li>Feedback: introduces an oscillator, a relay with input = output that alternates quickly between 0 and 1. It can also be called a clock because it oscillates at regular, measurable intervals, aka cycles per second aka Hertz. It also covers flip-flops, which are a cross-coupled feedback of two NORs to remember the system state. A complex trick to create a latch, which allows setting and resetting a variable to a number, which can then be connected to the previous machine. They are also very useful for counting on each oscillation. I got lost here, I admit it, but I understand why they count so quickly</li>
+<li>Introduction to hexadecimal code, the one used in colors, which for numbers beyond 9 uses A, B, &hellip; F. Brilliant. It is used because 8 bits are a byte, and for big numbers two bytes are enough, so base sixteen is convenient</li>
+<li>Discusses memory, in particular RAM which stores some bytes to read and write information quickly not in sequence (as if it were a locker). ROM instead is sequential, and uses a control panel to access the appropriate addresses</li>
+<li>Automation: very dense chapter about opcodes and assembly, and how we can use two RAMs to store information (example of addition and multiplication). Here it goes into memory addresses, in this case 2 bytes, and there is a third byte for the instruction, which can be Load, Add, Subtract, Carry with Zero, Halt, and other precise situations. Quite heavy because it is more complicated than that, but in practice it works like this, and we have just seen the split between Data and Code. One RAM stores data in memory and accepts instructions in the form of other encoded bytes. To reread</li>
+<li>Recap of the history of computers, from the first abaci to Babbage to the founder of IBM who used punch cards to Turing and Von Neumann, of which we built a replica earlier. They first use vacuum tubes and telephone relays, but transistors revolutionize everything by being semiconductors. They use metals like silicon between two doped layers of semiconductors that reduce heat and size. Chips exploit this layering even more to pack many connectors into a small space. Moore created this law about power roughly doubling every few years. In the end a computer moves a byte from one place to another, back and forth. Speed is essential for power, which is why there has been a race to put as many bits as possible on each microprocessor and to improve materials. Very complex chapter on how they handle information at that level and on how x86, x64, and company do not play well together</li>
+<li>ASCII and characters. Computers have everything in bits so how we want to display them depends on the chosen format, meaning how we choose to translate bits into text. Baudot assigns two hex bits for 30 letters, with a special one to switch to numbers if needed (like CAPS). ASCII standardizes hex into characters and is essential for computers to understand each other. It has a very interesting feature where you can subtract 20h to go from uppercase to lowercase. It was created with punch cards where you chose the hex and wrote things for the computer. Since they had not accounted for Asian writing systems and special symbols, Unicode was introduced with 16 bits and 65k characters. A bit larger but much less ambiguous</li>
+<li>Part about the bus I will skip because I did not understand it. RAM and ROM</li>
+<li>Operating System. This is indeed a challenge because when you turn off the PC, RAM loses everything it had in memory. An OS has a sequence of commands to reestablish the situation and is used to set commands for the computer in memory. Line by line the data is saved in memory thanks to OS instructions. Included there is a file system, which contains all the paths of objects, which are essentially memory addresses. Introduction to CP/M, a very basic system, and the subsequent rise of Linux, UNIX, GNU. Interesting</li>
+<li>Introduction to fractional and irrational numbers, which we still need to represent in bits. Idea of fixed-point format where there is a certain bit with the decimal fixed, for example two decimal places. There is also floating-point notation where you express the number in a particular decimal notation. Very efficient, but it becomes less precise with large numbers so for banks and the like you keep fixed point, while for something like YouTube views floating is fine. To do operations with this complexity of floating points Intel had to make a dedicated chip in the 80s</li>
+<li>Microprocessors do not understand assembly language so you need to translate it into bytes, that is, compile it, turning it into an executable. Compilers are even tougher because they synthesize commands in high-level languages into a few bytes and this requires structure. Low-level languages can communicate more directly with the machine and this can lead to interesting performance tricks like bit shifting accumulation. Uses ALGOL as a reference for a high-level language, which feels familiar. The low-level part had me lost in the instructions, it is now less useful in general cases. Example program in ALGOL, very familiar structure, and a brief history of the evolution of programs, from COBOL to FORTRAN to C, Lisp and company</li>
+<li>Graphics section. From how desktops work (fascinating) to how images and sounds are transferred digitally, the chapter examines the more recent aspect of computers, representing media to users. It also introduces TCP/IP, HTTP, and the protocols of the Internet. Very quickly, just a couple of final pages. Good</li>
+</ul>
+
+  </div>
+</div>
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/08/test-mind-maps/">
+                        <img src="/images/markmap/title.png" class="card-img-top" alt="How we test 100k-Line Nested JSON trees without going insane">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/08/test-mind-maps/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="How we test 100k-Line Nested JSON trees without going insane">How we test 100k-Line Nested JSON trees without going insane</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Today I want to share an interesting challenge that&rsquo;s been bugging me since I joined InvestSuite last December.
+It&rsquo;s stories like this that makes me happy to be a developer, being able to address things that are ruining my day and get rid of them. It feels so satisfying.</p>
+<p>We work with …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Aug 11, 2025</span>
+                    <a href="/posts/2025/08/test-mind-maps/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/06/we-have-no-idea-book/">
+                        <img src="/images/physics/cover.jpg" class="card-img-top" alt="A Physics book for people who hate Physics">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="A Physics book for people who hate Physics">A Physics book for people who hate Physics</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>My relationship with physics has always been… troubled.</p>
+<p>Probably because I had a high school teacher who never managed to spark any interest in me, I just never caught up. I remember sitting silently at my final exam (Maturità) when the physics question came up, completely blank. I also struggled …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jun 15, 2025</span>
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/05/ai-and-data-engineering/">
+                        <img src="/images/ai_data_engineers/pipeline.jpg" class="card-img-top" alt="No, AI is not replacing Data Engineers.">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/05/ai-and-data-engineering/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="No, AI is not replacing Data Engineers.">No, AI is not replacing Data Engineers.</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p><a href="https://www.anthropic.com/news/claude-4">Claude 4</a> landed, and as usual, it kicked off the usual hype cycle.
+&ldquo;Best coding model ever&rdquo; &ldquo;It writes stories!&rdquo; &ldquo;AI is replacing programmers!&rdquo; And of course, LinkedIn is buzzing with non-technical folks declaring how engineers are doomed and it’s time to …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 29, 2025</span>
+                    <a href="/posts/2025/05/ai-and-data-engineering/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io/" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
