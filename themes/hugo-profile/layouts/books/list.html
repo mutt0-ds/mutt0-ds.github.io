@@ -5,6 +5,16 @@
 <section id="books" class="py-5">
   <div class="container">
     <h3 class="text-center mb-4">Books</h3>
+    <div class="books-page-desc mb-4 text-center">
+      <p>
+      Here's a list of books I've read, with some scattered notes. They're sorted by how much I liked them, totally subjective and partial, as usual.<br>
+      Feel free to browse the notes, but don't expect anything comprehensive. There are technical books, psychology, lifestyle, history, and science here, basically anything I managed to take notes on. I usually don't review fiction, but a few are included too.
+      </p>
+      <p>      
+        <hr>
+        Got feedback or want to recommend a book? <a href="/#contact">Reach out to me</a>!
+      </p>
+    </div>
     <div class="row justify-content-center px-3 px-md-5">
       {{ range sort (sort .Pages "Params.score" "asc") "Params.score" "desc" }}
       <div class="col-lg-4 col-md-6 my-3">

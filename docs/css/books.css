@@ -16,6 +16,14 @@
   color: var(--primary-color);
 }
 
+.books-page-desc {
+  color: var(--text-secondary-color);
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+
 /* --- Card --- */
 
 #books .card {

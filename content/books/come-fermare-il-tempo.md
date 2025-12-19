@@ -1,7 +1,7 @@
 ---
 title: How to Stop Time
 author: Matt Haig
-image: https://www.edizionieo.it/spool/cover_9788833570006__id2662_w600_t1532519595__1x.jpg
+image: https://m.media-amazon.com/images/I/71VbqW+dFEL._SL1500_.jpg
 badges:
 - "🧘‍♀️ Lifestyle"
 - "🥳 Fiction"
