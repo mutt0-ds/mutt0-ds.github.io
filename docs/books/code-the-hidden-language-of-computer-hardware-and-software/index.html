@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta charset="UTF-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
@@ -28,7 +28,7 @@
 
 
 
-<meta property="og:url" content="https://mutt0-ds.github.io/books/code-the-hidden-language-of-computer-hardware-and-software/">
+<meta property="og:url" content="http://localhost:1313/books/code-the-hidden-language-of-computer-hardware-and-software/">
   <meta property="og:site_name" content="Mutt0-ds Notes">
   <meta property="og:title" content="Code: The Hidden Language of Computer Hardware and Software">
   <meta property="og:description" content="Behind a computer there is literally a world of things to learn, from electrons to web protocols">
@@ -251,6 +251,7 @@
 <link rel="stylesheet" href="/css/books.css">
 
 <div class="container py-5 book-page text-center">
+  
   <div class="book-header mb-4">
     <img src="https://m.media-amazon.com/images/P/B00JDMPOK2.01._SCLZZZZZZZ_SX500_.jpg" alt="Code: The Hidden Language of Computer Hardware and Software" class="book-cover mb-3">
     <h1 class="book-title">Code: The Hidden Language of Computer Hardware and Software</h1>
@@ -261,18 +262,18 @@
       <span class="finished-label">📅 Finished on:</span> 2023-01-03
     </p>
     
-        
+
     
     <div class="book-badges my-2">
-      
-      <span class="badge badge-secondary">💻 IT</span>
+       
+      <span class="badge badge-it">💻 IT</span>
       
     </div>
     
 
     
     <div class="book-score mt-2">
-      ⭐️ ⭐⭐⭐⭐⭐
+      ⭐⭐⭐⭐⭐
     </div>
     
 
@@ -281,6 +282,7 @@
       Behind a computer there is literally a world of things to learn, from electrons to web protocols
     </p>
     
+  </div>
 
   <div class="book-content text-start mx-auto" style="max-width: 720px;">
     <p>Most recommended book on Hacker News, it takes the concept of the PC from the basics up to the most complex abstractions. A must read that in 400 pages helped me understand what is actually behind a computer, with practical examples, clever details, and a lot of knowledge. A couple of final chapters were too tough, but otherwise I came away amazed and fascinated by this complicated world I did not know. One of the most beautiful and useful books I have ever read.</p>
@@ -311,6 +313,40 @@
 </ul>
 
   </div>
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    <p>Most recommended book on Hacker News, it takes the concept of the PC from the basics up to the most complex abstractions. A must read that in 400 pages helped me understand what is actually behind a computer, with practical examples, clever details, and a lot of knowledge. A couple of final chapters were too tough, but otherwise I came away amazed and fascinated by this complicated world I did not know. One of the most beautiful and useful books I have ever read.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>code means a system for transferring information among people and machines, aka to communicate. The Italian vocabulary is itself a code</li>
+<li>Introduction with Morse code used to communicate between two houses by the child protagonists who only have flashlights, already impressive. Key idea is two: dots and dashes, binary. Introduction to powers of two to explain the number of possible combinations</li>
+<li>Introduction to Braille, which has a fascinating history and an ingenious structure that saves a lot of space with abbreviations and prefixes that alter the following words (shift codes). With two to the sixth combinations, a reminder of binary concepts</li>
+<li>Introduction to electricity and how a flashlight works&hellip; the battery has many atoms exchanging electrons, closing the circuit with a chemical reaction between the two ends. I = E/R, with current as how much electricity is flowing (Ampere), Resistance (Ohm) is how much the material blocks it, and E is voltage, how much potential energy there is. A disconnected battery always has the same voltage, but very high resistance since air does not conduct. Useful. Wattage for light bulbs is E x I</li>
+<li>Surprising: you can use grounding to conduct electricity using the Earth itself. Plant a large copper rod (symbolizes the beginning of the circuit, aka V). This way you do not need a second wire because the ground closes the circuit</li>
+<li>Explanation of the telegraph, which opened and closed circuits making a click-clack sound to be translated into Morse code. Connections were copper wire between the first utility poles. Explanation of repeaters, which connected the click-clack sounder to the input and repeated the same thing instead of requiring human effort</li>
+<li>Explanation of number systems, which are themselves a code. For me the number 3 stands for three because I assign that meaning to it. Zero was a tremendous invention. A digression on non-decimal systems by pretending to be a cartoon character with 8 fingers (brilliant, you understand how a base-8 system thinks by excluding 8 and 9). Excellent introduction to the bit, which is the binary digit (reasoning with a code of only 0 and 1, explained well by simulating being a dolphin with only two fingers/fins)</li>
+<li>History of binary code, the simplest possible system for counting. Any information can be broken down and expressed in bits. For example a barcode is a sequence of spaces and lines symbolizing 0 and 1 in succession, and since there are many they allow 2 to the x combinations of codes. They have a lot of checks to prevent a barcode from being tampered with or misprinted (but in the end the same numbers are printed in clear text under the code). Shows both Morse and Braille converted into binary</li>
+<li>Explanation of Boole and boolean logic. It connects to logic gates, which use current in series and in parallel to simulate + and x statements as if they were switches. Good parallel on how they physically correspond to current on and off and I learned AND, NAND, OR, and NOR</li>
+<li>Binary machine: build an adder from the components of the previous chapter. Introduced the XOR gate, which gives 1 if only one of A or B is 1, combining OR and NAND. Use an XOR and an AND to add bits with a carry if both are 1 (10). It ends up looking like this. PCs still use a system like this at the base, but obviously with microscopic, fast transistors</li>
+<li>Subtraction is like addition but uses borrow instead of carry. If both bits are one you take the borrow from the column to the left and not the right. Overview of the machine with this feature, similar structure. To avoid the hassle of borrow it uses a trick with 9s called nine&rsquo;s complement. Mathematical detail I can skip here. Introduction to overflow, which warns you if the number is larger than the bits available. To combine add and subtract it has another gate that defines the operation. If subtract, it simply inverts B with the ones&rsquo; complement (like 9s but in binary). For example 9 - 4 will be 9 + (-4). Another trick for signs: instead of using a separate bit for the minus, split the available bits. For example from 0 to 499 the positives, and from 500 to 999 the negatives. This causes errors so that if you run out of bits then from 499 + 1 you go to -499. Now I get it. The leftmost bit will be 0 for positives and 1 for negatives. A number with this property is signed vs unsigned, and subtraction works in this somewhat convoluted way</li>
+<li>Feedback: introduces an oscillator, a relay with input = output that alternates quickly between 0 and 1. It can also be called a clock because it oscillates at regular, measurable intervals, aka cycles per second aka Hertz. It also covers flip-flops, which are a cross-coupled feedback of two NORs to remember the system state. A complex trick to create a latch, which allows setting and resetting a variable to a number, which can then be connected to the previous machine. They are also very useful for counting on each oscillation. I got lost here, I admit it, but I understand why they count so quickly</li>
+<li>Introduction to hexadecimal code, the one used in colors, which for numbers beyond 9 uses A, B, &hellip; F. Brilliant. It is used because 8 bits are a byte, and for big numbers two bytes are enough, so base sixteen is convenient</li>
+<li>Discusses memory, in particular RAM which stores some bytes to read and write information quickly not in sequence (as if it were a locker). ROM instead is sequential, and uses a control panel to access the appropriate addresses</li>
+<li>Automation: very dense chapter about opcodes and assembly, and how we can use two RAMs to store information (example of addition and multiplication). Here it goes into memory addresses, in this case 2 bytes, and there is a third byte for the instruction, which can be Load, Add, Subtract, Carry with Zero, Halt, and other precise situations. Quite heavy because it is more complicated than that, but in practice it works like this, and we have just seen the split between Data and Code. One RAM stores data in memory and accepts instructions in the form of other encoded bytes. To reread</li>
+<li>Recap of the history of computers, from the first abaci to Babbage to the founder of IBM who used punch cards to Turing and Von Neumann, of which we built a replica earlier. They first use vacuum tubes and telephone relays, but transistors revolutionize everything by being semiconductors. They use metals like silicon between two doped layers of semiconductors that reduce heat and size. Chips exploit this layering even more to pack many connectors into a small space. Moore created this law about power roughly doubling every few years. In the end a computer moves a byte from one place to another, back and forth. Speed is essential for power, which is why there has been a race to put as many bits as possible on each microprocessor and to improve materials. Very complex chapter on how they handle information at that level and on how x86, x64, and company do not play well together</li>
+<li>ASCII and characters. Computers have everything in bits so how we want to display them depends on the chosen format, meaning how we choose to translate bits into text. Baudot assigns two hex bits for 30 letters, with a special one to switch to numbers if needed (like CAPS). ASCII standardizes hex into characters and is essential for computers to understand each other. It has a very interesting feature where you can subtract 20h to go from uppercase to lowercase. It was created with punch cards where you chose the hex and wrote things for the computer. Since they had not accounted for Asian writing systems and special symbols, Unicode was introduced with 16 bits and 65k characters. A bit larger but much less ambiguous</li>
+<li>Part about the bus I will skip because I did not understand it. RAM and ROM</li>
+<li>Operating System. This is indeed a challenge because when you turn off the PC, RAM loses everything it had in memory. An OS has a sequence of commands to reestablish the situation and is used to set commands for the computer in memory. Line by line the data is saved in memory thanks to OS instructions. Included there is a file system, which contains all the paths of objects, which are essentially memory addresses. Introduction to CP/M, a very basic system, and the subsequent rise of Linux, UNIX, GNU. Interesting</li>
+<li>Introduction to fractional and irrational numbers, which we still need to represent in bits. Idea of fixed-point format where there is a certain bit with the decimal fixed, for example two decimal places. There is also floating-point notation where you express the number in a particular decimal notation. Very efficient, but it becomes less precise with large numbers so for banks and the like you keep fixed point, while for something like YouTube views floating is fine. To do operations with this complexity of floating points Intel had to make a dedicated chip in the 80s</li>
+<li>Microprocessors do not understand assembly language so you need to translate it into bytes, that is, compile it, turning it into an executable. Compilers are even tougher because they synthesize commands in high-level languages into a few bytes and this requires structure. Low-level languages can communicate more directly with the machine and this can lead to interesting performance tricks like bit shifting accumulation. Uses ALGOL as a reference for a high-level language, which feels familiar. The low-level part had me lost in the instructions, it is now less useful in general cases. Example program in ALGOL, very familiar structure, and a brief history of the evolution of programs, from COBOL to FORTRAN to C, Lisp and company</li>
+<li>Graphics section. From how desktops work (fascinating) to how images and sounds are transferred digitally, the chapter examines the more recent aspect of computers, representing media to users. It also introduces TCP/IP, HTTP, and the protocols of the Internet. Very quickly, just a couple of final pages. Good</li>
+</ul>
+
+  </div>
+
+  <div class="book-footer mt-5 text-center">
+    <a href="/books/" class="book-back-link">← Back to all books</a>
+  </div>
+
 </div>
 
   </div><footer>
@@ -453,7 +489,7 @@ It&rsquo;s stories like this that makes me happy to be a developer, being able t
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
             <div class="pb-2">
-                <a href="https://mutt0-ds.github.io/" title="Mutt0-ds Notes">
+                <a href="http://localhost:1313/" title="Mutt0-ds Notes">
                     <img alt="Footer logo" src="/fav.png"
                         height="40px" width="40px">
                 </a>

@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Presentation on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/presentation/</link>
+    <link>http://localhost:1313/tags/presentation/</link>
     <description>Recent content in Presentation on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 08 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/presentation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/presentation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simplicity speaks louder than Complexity</title>
-      <link>https://mutt0-ds.github.io/posts/2025/03/first-pitch/</link>
+      <link>http://localhost:1313/posts/2025/03/first-pitch/</link>
       <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2025/03/first-pitch/</guid>
+      <guid>http://localhost:1313/posts/2025/03/first-pitch/</guid>
       <description>&lt;p&gt;A few days ago, I had my first technical presentation at my new company.&#xA;I joined InvestSuite 3 months ago and it was finally time to present the product I’m working on, &lt;a href=&#34;https://www.investsuite.com/storyteller&#34;&gt;StoryTeller&lt;/a&gt;, to a very important customer.&lt;/p&gt;&#xA;&lt;p&gt;I was nervous.&lt;/p&gt;&#xA;&lt;p&gt;I’ve given many presentations in the past (to hundreds of people, even at &lt;a href=&#34;https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/&#34;&gt;a conference&lt;/a&gt;) so this wasn’t entirely new to me. But I’m shy by nature, and presenting doesn’t come easily to me. This time, it felt different because the stakes were higher: &lt;strong&gt;it was about selling our product&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Data Culture - How we promoted Power BI in a Corporate Environment [🎙 Power BI Ticino 2024]</title>
-      <link>https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/</link>
+      <link>http://localhost:1313/posts/2024/10/my-talk-about-data-culture/</link>
       <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/</guid>
+      <guid>http://localhost:1313/posts/2024/10/my-talk-about-data-culture/</guid>
       <description>&lt;p&gt;Last Friday, I took the stage at the &lt;strong&gt;&lt;a href=&#34;https://sessionize.com/pbiugiti2024/&#34;&gt;Power BI Ticino Conference&lt;/a&gt;&lt;/strong&gt; to share one of my favorite projects at Acer: our &lt;strong&gt;Power BI Champions program&lt;/strong&gt;.&#xA;The idea? Find Early Adopters (people who have a curious approach towards new technologies) and put them on the front line to help us promote Power BI and data culture to the rest of the team.&lt;/p&gt;&#xA;&lt;p&gt;I never imagined I&amp;rsquo;d speak at a conference when I started this journey&amp;hellip;&#xA;But wow - the positive feedback and amazing people I&amp;rsquo;ve met make me want to do it again!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Personal Notes about Simply Said</title>
-      <link>https://mutt0-ds.github.io/posts/2024/07/personal-notes-simply-said/</link>
+      <link>http://localhost:1313/posts/2024/07/personal-notes-simply-said/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/07/personal-notes-simply-said/</guid>
+      <guid>http://localhost:1313/posts/2024/07/personal-notes-simply-said/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.amazon.com/Simply-Said-Communicating-Better-Beyond/dp/1119285283&#34;&gt;&amp;ldquo;Simply Said&amp;rdquo;&lt;/a&gt; is the best communication book I&amp;rsquo;ve read recently.&#xA;I discovered it thanks to Jordan Cutler (who runs an &lt;a href=&#34;https://read.highgrowthengineer.com/&#34;&gt;amazing tech newsletter&lt;/a&gt;) and at first, I considered it a standard communications book. Things like &amp;ldquo;listen to others,&amp;rdquo; &amp;ldquo;be positive,&amp;rdquo; blah blah.&lt;/p&gt;&#xA;&lt;p&gt;I was wrong. &lt;strong&gt;&amp;ldquo;Simply Said&amp;rdquo; is much more than that&lt;/strong&gt;.&#xA;That&amp;rsquo;s why I condensed most of its wisdom into this blog post, and I hope it will inspire you to read it as well.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Personal Notes about Presentation Patterns</title>
-      <link>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</link>
+      <link>http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</guid>
+      <guid>http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/</guid>
       <description>&lt;h1 id=&#34;presentation-patterns&#34;&gt;Presentation Patterns&lt;/h1&gt;&#xA;&lt;p&gt;Written by &lt;strong&gt;&lt;a href=&#34;https://nealford.com/&#34;&gt;Neal Ford&lt;/a&gt;, &lt;a href=&#34;https://matthewjmccullough.com&#34;&gt;Matthew McCullough&lt;/a&gt; and &lt;a href=&#34;http://ntschutta.io&#34;&gt;Nathaniel Schutta&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;&amp;ldquo;Presentation Patterns - Techniques for Crafting Better Presentations&amp;rdquo;&lt;/strong&gt; is an encyclopedia of patterns, tips and common mistakes experienced by the authors, who have delivered thousands of presentations. In particular, they introduce “&lt;a href=&#34;https://www.nofluffjuststuff.com&#34;&gt;No Fluff, Just Stuff&lt;/a&gt;“, a traveling technical conference series covering a&#xA;wide variety of topics related to software development and management.&lt;/p&gt;&#xA;&lt;p&gt;During the years, they have build up their toolbox of patterns to provide killer presentations, which are divided in three main sections: &lt;strong&gt;Prepare&lt;/strong&gt; (thinking and setting up the presentation’s key concepts), &lt;strong&gt;Build&lt;/strong&gt; (creating the slides), &lt;strong&gt;Deliver&lt;/strong&gt; (present the content). While reading, I decided to categorize the items into &lt;strong&gt;Patterns&lt;/strong&gt;, &lt;strong&gt;Antipatterns&lt;/strong&gt; and “&lt;strong&gt;Others&lt;/strong&gt;” (type of slides or special kind of presentations which I didn&amp;rsquo;t consider as a pattern).&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta charset="UTF-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
@@ -28,7 +28,7 @@
 
 
 
-<meta property="og:url" content="https://mutt0-ds.github.io/books/looks-good-to-me/">
+<meta property="og:url" content="http://localhost:1313/books/looks-good-to-me/">
   <meta property="og:site_name" content="Mutt0-ds Notes">
   <meta property="og:title" content="Looks Good to Me">
   <meta property="og:description" content="You are not your code. A code review is meant to achieve shared code quality for everyone’s benefit">
@@ -251,6 +251,7 @@
 <link rel="stylesheet" href="/css/books.css">
 
 <div class="container py-5 book-page text-center">
+  
   <div class="book-header mb-4">
     <img src="https://images.manning.com/360/480/resize/book/0/faee912-c3e7-4842-ae02-e076c16ce2f6/Braganza-HI.png" alt="Looks Good to Me" class="book-cover mb-3">
     <h1 class="book-title">Looks Good to Me</h1>
@@ -261,18 +262,18 @@
       <span class="finished-label">📅 Finished on:</span> 2025-05-03
     </p>
     
-        
+
     
     <div class="book-badges my-2">
-      
-      <span class="badge badge-secondary">💻 IT</span>
+       
+      <span class="badge badge-it">💻 IT</span>
       
     </div>
     
 
     
     <div class="book-score mt-2">
-      ⭐️ ⭐⭐⭐
+      ⭐⭐⭐
     </div>
     
 
@@ -281,6 +282,7 @@
       You are not your code. A code review is meant to achieve shared code quality for everyone&#39;s benefit
     </p>
     
+  </div>
 
   <div class="book-content text-start mx-auto" style="max-width: 720px;">
     <p>Book on code reviews, useful since I will be doing many. Recommended on Reddit in a thread on this year&rsquo;s technical books. Nothing groundbreaking; it goes into detail and is a good introduction from zero, but many of the typical pain points are addressed by solid CI/CD, which we fortunately have. A few communication tips and process suggestions for a good experience. The author is good; it is well written and simple.</p>
@@ -326,6 +328,55 @@
 </ul>
 
   </div>
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    <p>Book on code reviews, useful since I will be doing many. Recommended on Reddit in a thread on this year&rsquo;s technical books. Nothing groundbreaking; it goes into detail and is a good introduction from zero, but many of the typical pain points are addressed by solid CI/CD, which we fortunately have. A few communication tips and process suggestions for a good experience. The author is good; it is well written and simple.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>What is a code review? It is a process developers use to inspect each other&rsquo;s code, confirming it meets a set of standards.</li>
+<li>Pros: they confirm standards, act as a record, a document of the rules and checks to follow. Also, the team learns by discussing code.</li>
+<li>The MR title is the elevator pitch of your proposal. It should explain clearly and simply what it does and give the reviewer context. The better you do it, the easier the experience. Use conventional commit prefixes.</li>
+<li>Nice to have: leave a way for the reviewer to reproduce the problem so they can verify that you fixed it.</li>
+<li>Leave your ego out of the review. Ignore titles, relationships, and more. Examine the code impartially.</li>
+<li>Anticipate the questions the reviewer may ask by adding descriptions.</li>
+<li>YOU ARE NOT YOUR CODE. A CODE REVIEW IS IMPARTIAL AND FOR THE COMMON GOOD</li>
+<li>Focus on automation: reduce the low-hanging fruit. Automation cuts a large part of the time and feedback you might get from the reviewer.
+<ul>
+<li>Linter: use an automated one</li>
+<li>Same for the formatter</li>
+</ul>
+</li>
+<li>The team&rsquo;s goal is to balance maintainable, secure, readable code with smooth development, avoiding blocks or minor updates. It is a speed-quality tradeoff.</li>
+<li>Nitpicks should be labeled; they are nice-to-haves to consider later. They should not block you.</li>
+<li>Developers are much more susceptible to change when a robot yells at them rather than another human. It takes out any subjectivity and frees up human cycles, which allows us to focus on what matters.</li>
+<li>CODEOWNERS is useful to notify code owners when you touch something specific.</li>
+<li>Be clear when you leave a comment that requires the recipient to do something; it must be actionable.</li>
+<li>Comment types:
+<ul>
+<li>needs change: small changes resolvable in a single commit, block the PR.</li>
+<li>needs rework: large changes or refactoring, often require discussion, block the PR.</li>
+<li>align: valid changes but not aligned with team standards, block the PR.</li>
+<li>levelup: useful but not urgent suggestions, do not block the PR.</li>
+<li>nitpick: subjective comments irrelevant to the code, avoidable and non-blocking.</li>
+</ul>
+</li>
+<li>For feedback: Triple-R. Request (what to do), Rationale (why), Result (what you expect).</li>
+<li>Do not use &ldquo;you&rdquo; (too aggressive); prefer &ldquo;we&rdquo;.</li>
+<li>Bad: &ldquo;Use a Boden mug for my latte&rdquo;, good: &ldquo;Could you use a Boden mug for my latte?&rdquo;</li>
+<li>If you find good code, say it. Compliments help.</li>
+<li>You need a document with processes, especially the emergency one (when you can skip the review; it should be exceptional). Emergency Playbook is very interesting.</li>
+<li>Typical problems: bottleneck of a single senior who can approve -&gt; Delegate. Minor ones can be approved by someone else, or include others to discuss together.</li>
+<li>By automating the small things and stating the request clearly, a review can move relatively quickly. Better to keep them small; otherwise they are hard to manage.</li>
+<li>Pair programming is good, but it cannot replace code reviews.</li>
+<li>Overall, the takeaway is: no code review means no audit trail.</li>
+<li>AI is here to stay and can help. You can see assistants in code reviews like CodeRabbit, but for now you need context and expert supervision to understand the nuances.</li>
+</ul>
+
+  </div>
+
+  <div class="book-footer mt-5 text-center">
+    <a href="/books/" class="book-back-link">← Back to all books</a>
+  </div>
+
 </div>
 
   </div><footer>
@@ -468,7 +519,7 @@ It&rsquo;s stories like this that makes me happy to be a developer, being able t
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
             <div class="pb-2">
-                <a href="https://mutt0-ds.github.io/" title="Mutt0-ds Notes">
+                <a href="http://localhost:1313/" title="Mutt0-ds Notes">
                     <img alt="Footer logo" src="/fav.png"
                         height="40px" width="40px">
                 </a>

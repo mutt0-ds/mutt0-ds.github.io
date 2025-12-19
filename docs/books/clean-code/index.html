@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta charset="UTF-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
@@ -28,7 +28,7 @@
 
 
 
-<meta property="og:url" content="https://mutt0-ds.github.io/books/clean-code/">
+<meta property="og:url" content="http://localhost:1313/books/clean-code/">
   <meta property="og:site_name" content="Mutt0-ds Notes">
   <meta property="og:title" content="Clean Code">
   <meta property="og:description" content="The Boy Scout Rule: leave the code better than you found it.">
@@ -251,6 +251,7 @@
 <link rel="stylesheet" href="/css/books.css">
 
 <div class="container py-5 book-page text-center">
+  
   <div class="book-header mb-4">
     <img src="https://images-na.ssl-images-amazon.com/images/I/51WVMxrH79L._SX348_BO1,204,203,200_.jpg" alt="Clean Code" class="book-cover mb-3">
     <h1 class="book-title">Clean Code</h1>
@@ -261,18 +262,18 @@
       <span class="finished-label">📅 Finished on:</span> 2021-01-17
     </p>
     
-        
+
     
     <div class="book-badges my-2">
-      
-      <span class="badge badge-secondary">💻 IT</span>
+       
+      <span class="badge badge-it">💻 IT</span>
       
     </div>
     
 
     
     <div class="book-score mt-2">
-      ⭐️ ⭐⭐
+      ⭐⭐
     </div>
     
 
@@ -281,6 +282,7 @@
       The Boy Scout Rule: leave the code better than you found it.
     </p>
     
+  </div>
 
   <div class="book-content text-start mx-auto" style="max-width: 720px;">
     <p>Addendum: <a href="https://github.com/zedr/clean-code-python#dependency-inversion-principle-dip">https://github.com/zedr/clean-code-python#dependency-inversion-principle-dip</a></p>
@@ -352,6 +354,81 @@
 </ul>
 
   </div>
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    <p>Addendum: <a href="https://github.com/zedr/clean-code-python#dependency-inversion-principle-dip">https://github.com/zedr/clean-code-python#dependency-inversion-principle-dip</a></p>
+<p>You do not write clean code by following a simple set of rules. You will not become &ldquo;craftsman developers&rdquo; by learning a simple list of heuristics. Professionalism and skill come from the values that guide the discipline.</p>
+<p>Dense read, with plenty of Java code I did not fully follow, chapters unfamiliar to me, yet solid gems for programming. I will leave the final extract that sums up the advice; overall it seemed a very useful book for a programmer.</p>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>No inappropriate info: comments are only for technical explanations of the code</li>
+<li>Remove obsolete comments; they only confuse</li>
+<li>Remove redundant comments; they distract if the code is well written</li>
+<li>Do not keep commented-out code; people leave it in thinking it might be useful. Avoid it.</li>
+</ul>
+<h2 id="environment-understood-little">Environment (understood little)</h2>
+<ul>
+<li>To build, a single command should suffice; you should not have to gather extra files</li>
+<li>Testing should be simple; start it with a single click</li>
+</ul>
+<h2 id="functions">Functions</h2>
+<ul>
+<li>THEY MUST DO ONE THING ONLY</li>
+<li>Do not have too many arguments, max 3</li>
+<li>No output arguments (Java-specific); prefer input</li>
+<li>No booleans as arguments; that often means it does more than one thing</li>
+<li>No dead functions (never called); they pollute the code</li>
+</ul>
+<h2 id="general">General</h2>
+<ul>
+<li>Avoid multiple languages in the code even if you can; it creates confusion (like HTML in comments)</li>
+<li>Avoid surprises for a reader: functions should do what you expect</li>
+<li>Do not rely on intuition; set boundaries and explore edge cases</li>
+<li>Do not disable safeguards and warnings; it may work now but causes problems later</li>
+<li>DUPLICATION: REMOVE DUPLICATES; THEY CAN BECOME FUNCTIONS/CLASSES</li>
+<li>Set up abstractions well (Java?)</li>
+<li>Excess information: hide service data, variables, and classes the user should not see if they are background details. They do not need to sit in main if they are not meaningful</li>
+<li>Bury dead code (e.g., except blocks that never run or unnecessary if cases)</li>
+<li>Vertical separation: declare variables just above their first use so you do not have to search</li>
+<li>Inconsistency: adopt the same structure everywhere; be predictable</li>
+<li>Artificial coupling: do not put constants/functions where they do not belong</li>
+<li>Obscured intent: it might seem &ldquo;cool&rdquo; to use Hungarian notation or skip spaces, but be understandable</li>
+<li>Misplaced responsibilities: things go where you expect them. const pi will live in a Math class</li>
+<li>Use descriptive variables: names should say what the function or variable does, even if long</li>
+<li>As above, watch for ambiguity: what does addDate do? better use addDaysToDate</li>
+<li>Use self-explanatory constants: in ambiguous cases, assign the number to a new descriptive constant</li>
+<li>Encapsulate conditional constructs: for long if-and-or chains, use a function that returns true or false</li>
+<li>Avoid negatives in conditional constructs: for convenience, do not use negations</li>
+<li>Keep configurable data at higher levels: if a constant might change, keep it in main</li>
+<li>Avoid transitive navigation: modules should not be too intertwined; limit communication among them. Ideally have a central module that queries the others independently</li>
+</ul>
+<h2 id="java-understood-little">Java (understood little)</h2>
+<ul>
+<li>If you import a lot, use the wildcard (from datetime import *)</li>
+<li>Do not inherit constants: they should not come from some function somewhere; declare them in main</li>
+</ul>
+<h2 id="names">Names</h2>
+<ul>
+<li>CHOOSE DESCRIPTIVE, UNAMBIGUOUS NAMES</li>
+<li>Use standard naming where possible</li>
+<li>Long names are fine, but do not overdo it or you risk confusion</li>
+<li>Avoid encodings like _f or _v (Java)</li>
+</ul>
+<h2 id="tests">Tests</h2>
+<ul>
+<li>A test package should contain everything needed to test the program</li>
+<li>Use a coverage tool; it shows which lines are exercised by tests</li>
+<li>Do not skip tests you consider trivial</li>
+<li>An ignored test signals ambiguity</li>
+<li>Consider when problems seem to suggest a pattern</li>
+<li>Tests should be fast</li>
+</ul>
+
+  </div>
+
+  <div class="book-footer mt-5 text-center">
+    <a href="/books/" class="book-back-link">← Back to all books</a>
+  </div>
+
 </div>
 
   </div><footer>
@@ -494,7 +571,7 @@ It&rsquo;s stories like this that makes me happy to be a developer, being able t
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
             <div class="pb-2">
-                <a href="https://mutt0-ds.github.io/" title="Mutt0-ds Notes">
+                <a href="http://localhost:1313/" title="Mutt0-ds Notes">
                     <img alt="Footer logo" src="/fav.png"
                         height="40px" width="40px">
                 </a>
