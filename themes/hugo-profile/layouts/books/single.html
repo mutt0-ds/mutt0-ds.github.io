@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="/css/books.css">
 
 <div class="container py-5 book-page text-center">
+  
   <div class="book-header mb-4">
     <img src="{{ .Params.image }}" alt="{{ .Title }}" class="book-cover mb-3">
     <h1 class="book-title">{{ .Title }}</h1>
@@ -12,18 +13,18 @@
       <span class="finished-label">📅 Finished on:</span> {{ .Params.finished }}
     </p>
     {{ end }}
-        
+
     {{ if .Params.badges }}
     <div class="book-badges my-2">
-      {{ range .Params.badges }}
-      <span class="badge badge-secondary">{{ . }}</span>
+      {{ range .Params.badges }} 
+      <span class="badge badge-{{ . | urlize }}">{{ . }}</span>
       {{ end }}
     </div>
     {{ end }}
 
     {{ if .Params.score }}
     <div class="book-score mt-2">
-      ⭐️ {{ .Params.score }}
+      {{ .Params.score }}
     </div>
     {{ end }}
 
@@ -32,9 +33,18 @@
       {{ .Params.summary }}
     </p>
     {{ end }}
+  </div>
 
   <div class="book-content text-start mx-auto" style="max-width: 720px;">
     {{ .Content }}
   </div>
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    {{ .Content }}
+  </div>
+
+  <div class="book-footer mt-5 text-center">
+    <a href="/books/" class="book-back-link">← Back to all books</a>
+  </div>
+
 </div>
 {{ end }}

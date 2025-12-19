@@ -50,7 +50,6 @@
 }
 
 /* --- Content --- */
-
 #books .card-body {
   flex-grow: 1;            
   display: flex;
@@ -233,3 +232,32 @@
 .book-page .book-finished .finished-label {
   font-weight: 600;
 }
+
+.book-footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.book-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  text-decoration: none;
+
+  background: rgba(0, 0, 0, 0.03);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.book-back-link:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: #222;
+}
+

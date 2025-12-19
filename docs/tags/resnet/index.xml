@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Resnet on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/resnet/</link>
+    <link>http://localhost:1313/tags/resnet/</link>
     <description>Recent content in Resnet on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 May 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/resnet/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/resnet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using a Neural Network for sending memes to my girlfriend</title>
-      <link>https://mutt0-ds.github.io/posts/2021/05/nn-sending-memes/</link>
+      <link>http://localhost:1313/posts/2021/05/nn-sending-memes/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2021/05/nn-sending-memes/</guid>
+      <guid>http://localhost:1313/posts/2021/05/nn-sending-memes/</guid>
       <description>&lt;p&gt;Well, my GF&amp;rsquo;s tastes in memes are simple: she loves wholesome memes and, most importantly, &lt;strong&gt;she loves animals&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s why I created a fun little project that:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Surfs the subreddit &lt;a href=&#34;https://www.reddit.com/r/wholesomememes/&#34;&gt;r/wholesomemes&lt;/a&gt; using the reddit API&lt;/li&gt;&#xA;&lt;li&gt;Downloads a few of the hottest memes in the contents folder&lt;/li&gt;&#xA;&lt;li&gt;Initializes a ResNet50 model that recognizes images containing any animal&lt;/li&gt;&#xA;&lt;li&gt;Sends them via mail to my GF (positively welcomed)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;final-email-3-memes-by-default&#34;&gt;Final email (3 memes by default)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mutt0-ds/memes-selector/main/media/result.png&#34; alt=&#34;finalmail&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
