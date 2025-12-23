@@ -332,52 +332,6 @@
 </ul>
 
   </div>
-  <div class="book-content text-start mx-auto" style="max-width: 720px;">
-    <p>Recommended <a href="https://www.reddit.com/r/ExperiencedDevs/comments/1ly5wat/books_not_on_software_engineering_that_you_found/">here</a>. Great. Great. Great. It&rsquo;s one of those books that surprises you, exceeding expectations in an incredible way. Instead of boring me with Oracle technical details (which are briefly touched on) Cary talks about how to communicate, understand the problem, and optimize it. A must-have treatise for all consultants, a work of art in problem solving. Much appreciated. It&rsquo;s also well written, with many instructive stories, a tight pace, and simplified technical passages for a very pleasant read.</p>
-<h2 id="notes">Notes</h2>
-<ul>
-<li>🔑 Optimization is more a political problem than a technical one. And it&rsquo;s curious that optimization books are mostly technical. This one won&rsquo;t be. In fact, he knew the technical solutions and they were always the same (some parameter to set or a query to optimize); that wasn&rsquo;t what made him good.</li>
-<li>His consulting process was 1. Listen, 2. Stay calm, 3. Convince them you have the solution, 4. Treat it.</li>
-<li>🔑 There is no shame in saying &ldquo;I don&rsquo;t know, but I can help you find out&rdquo;.</li>
-<li>🔑 Technical people rarely bother visiting users. You need to put yourself in their shoes and learn to talk with your users.</li>
-<li>The best case is when the user already has a list of grievances, problems to solve, with priorities attached. You don&rsquo;t waste time doing it yourself; the more you discuss it, the more time you waste.</li>
-<li>Trace, trace, trace. Trace and monitor everything to identify errors.</li>
-<li>R Method. R stands for response time.
-<ul>
-<li>List the symptoms for which the business is asking for help</li>
-<li>Sort the list by priority</li>
-<li>For each symptom: observe it, find the cause, treat the cause</li>
-</ul>
-</li>
-<li>The symptom must be reproducible: for a slowness problem it&rsquo;s easy, run the program and trace it.</li>
-<li>🔑 Quantity * price (tomatoes example). For a program quantity * resources. Either reduce one (call something fewer times) or the other (reduce how much time/resources it consumes) and you solve the problem. Remember there are two paths you can take.</li>
-<li>🔑 Filter Early. Many problems come from a query that fetches everything and filters later. No. Filter first and then fetch the results.</li>
-<li>To optimize even better, ask how the program is actually used, by whom, and when. Maybe you can remove the program altogether.</li>
-<li>🔑 Tow-Millsap law: No human ever wants to see more than ten rows. Ask if it can be aggregated above those ten rows.</li>
-<li>Look at the entire user experience to evaluate the system, not just isolated internal metrics.</li>
-<li>Skew: there is always some skew between parts; metrics like the average don&rsquo;t tell the full story.</li>
-<li>🔑 Always investigate the part of the trace with the most skew, or the one that is most &ldquo;odd&rdquo; compared to the average. This is why you want a lot of granularity in your trace.</li>
-<li>Great story of him in a bathroom in Detroit seeing reams of paper thrown away; he asked why and optimized a report that was printing exponentially. Be curious and ask questions.</li>
-<li>The profile is useful because it quickly answers your most important questions
-<ol>
-<li>How long? How long did the program take to run</li>
-<li>Why? Why did it take so long? Remember, quantity or resources</li>
-<li>What if? You can predict what will happen once you fix one part</li>
-<li>What else? After the fix, a profile can monitor that you actually resolved the symptoms</li>
-</ol>
-</li>
-<li>Shorten your feedback loop. If you have doubts, ask and get quick feedback instead of wasting time.</li>
-<li>The best way to improve your forecasts is by forecasting, in practice.</li>
-<li>To remove latency a program does different things in parallel while waiting for others, like chopping vegetables while the water boils.</li>
-<li>Percentile specification is very useful in a contract: the average matters little if one out of ten runs takes an extra hour. You want the number of executions above the threshold (top 1% percentile) to be low.</li>
-<li>Testing to destruction: understand what will make your idea fail; if you can&rsquo;t, find smart people who will. Don&rsquo;t spend a year only on the easy things; tackle the hard ones with courage.</li>
-<li>Work in short, fast iterations and keep your feedback loop.</li>
-<li>Another political trick (there is an entire chapter on it, which I appreciated): the Jeweler&rsquo;s Method. Let someone see and try on a solution (a demo), then tell them that if they want it, they need to pay or convince someone to help. It is much stronger than vague promises.</li>
-<li>🔑 Getting people to do the right thing is almost always the hardest part of a project.</li>
-<li>Often there are factors you can&rsquo;t control for your success. Don&rsquo;t be scared of that. Keep the serenity to accept what you can&rsquo;t change, and change what you can. Don&rsquo;t. Quit.</li>
-</ul>
-
-  </div>
 
   <div class="book-footer mt-5 text-center">
     <a href="/books/" class="book-back-link">← Back to all books</a>

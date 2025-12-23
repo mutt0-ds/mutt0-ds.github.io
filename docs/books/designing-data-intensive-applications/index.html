@@ -317,39 +317,6 @@
 </ul>
 
   </div>
-  <div class="book-content text-start mx-auto" style="max-width: 720px;">
-    <p>A bit too complex for my taste; it took me a long time to read and I often got lost. It is long and technical, but it still turned out to be a valuable source of information on databases and their issues. Here is a summary of the contents, which is fairly long.</p>
-<p>I read it too early in my data engineering journey. I will read it again and update my score!</p>
-<p>Helpful notes: <a href="https://newsletter.techworld-with-milan.com/p/what-i-learned-from-the-book-designing">https://newsletter.techworld-with-milan.com/p/what-i-learned-from-the-book-designing</a></p>
-<h2 id="database-structures">Database Structures</h2>
-<ul>
-<li>It starts by exploring various models, from document-based to tree-based to relational, and on to NoSQL</li>
-<li>Storage: to retrieve query results quickly you use indexes and hash maps, plus structures like B-Tree, LSM tree, or SSTable</li>
-<li>Difference between OLAP and OLTP: OLAP is for analysts, with few writes and huge reads, while OLTP is transactional with many writes. A data warehouse is usually a secondary DB for analysts&rsquo; queries</li>
-<li>Encoding: several formats are covered, such as JSON and XML (which have ambiguities with some numbers and limitations, but are simple). Thrift and Protocol Buffers are more advanced</li>
-</ul>
-<h2 id="replication-partitioning--co-techniques-for-databases">Replication, partitioning &amp; co: techniques for databases</h2>
-<ul>
-<li>Replication: duplicate data to avoid loss; there are 3 main approaches.</li>
-<li>Leader-based: there is a leader node that then propagates to followers (synchronously, meaning waiting for everything to be OK, which is rare, or asynchronously). If it fails, a new one is elected. Many issues arise, like lag, node failures, nodes getting out of sync, consensus, etc.</li>
-<li>Multi-leader replication: for example, across different geographic areas you can have multiple leaders for logistical reasons. This creates problems because they are almost independent, so various conflicts can arise</li>
-<li>Leaderless replication: write to multiple nodes and read from multiple nodes as long as a quorum is available. It runs continuous checks to keep nodes consistent</li>
-<li>Partitioning/Sharding: a way of splitting data to handle many nodes and scale. If load grows, add partitions. The hard part is continually managing partitions, mapping key-value to partitions or other indexes to speed up operations</li>
-<li>Transactions: ACID (and how Atomicity, Consistency, Isolation, and Durability can be very vague). It explains how to guarantee them, and it is often complicated; sometimes it is not worth it or not feasible</li>
-<li>Distributed systems (cloud computing): much more prone to issues. For example, clocks must be synchronized, the network must be stable, data can be corrupted, consensus is needed for consistency, with messages you often assume linearization by adding temporal order, and much more</li>
-</ul>
-<h2 id="batch--stream-processing">Batch &amp; Stream processing</h2>
-<ul>
-<li>Batch is periodic, stream is continuous. Simple.</li>
-<li>Covers MapReduce and how it speeds up and manages batch jobs by splitting work into small pieces across multiple machines.</li>
-<li>Stream processing is more complex because there must be a continuous flow. It talks about Kafka and its challenges, such as retaining a history of data</li>
-</ul>
-<h2 id="the-future">The future</h2>
-<ul>
-<li>A short, interesting finale on future challenges: auto-auditing, data integration across different DB systems, and ethics and privacy for data</li>
-</ul>
-
-  </div>
 
   <div class="book-footer mt-5 text-center">
     <a href="/books/" class="book-back-link">← Back to all books</a>
