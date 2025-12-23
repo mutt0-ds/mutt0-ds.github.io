@@ -5,7 +5,7 @@ image: https://m.media-amazon.com/images/I/81fKzRQpSsL._AC_UF1000,1000_QL80_.jpg
 badges:
 - "🗿 History"
 - "🧠 Psychology"
-score: "⭐⭐⭐⭐⭐⭐"
+score: "⭐⭐⭐⭐⭐"
 finished: '2024-11-19'
 summary: "Living with a person with schizophrenia is really, really tough. Imagine 6."
 showInHome: false
