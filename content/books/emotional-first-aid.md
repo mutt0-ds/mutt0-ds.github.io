@@ -11,8 +11,6 @@ summary: 'Rejection, Loneliness, Loss, Guilt, Rumination, Failure, and Low Self-
 showInHome: false
 ---
 
-_Rejection, Loneliness, Loss, Guilt, Rumination, Failure, and Low Self-esteem: quick recipes to heal us from these invisible (but painful) wounds_
-
 The summary sheet is very useful; here are the key points.
 
 1. Rejection: various wounds that get infected over time, example David at community college. Remedy: logical counterarguments, remember our positive qualities, desensitize (Caution!).
