@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://mutt0-ds.github.io/books/fundamentals-of-data-engineering/">
+  <meta property="og:site_name" content="Mutt0-ds Notes">
+  <meta property="og:title" content="Fundamentals of Data Engineering">
+  <meta property="og:description" content="Work with data across all its phases and determine both the best solution for your case and the stakeholders involved">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="books">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Fundamentals of Data Engineering">
+  <meta name="twitter:description" content="Work with data across all its phases and determine both the best solution for your case and the stakeholders involved">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+  <title>
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/books" title="Books">
+                            
+                            Books
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<link rel="stylesheet" href="/css/books.css">
+
+<div class="container py-5 book-page text-center">
+  
+  <div class="book-header mb-4">
+    <img src="https://m.media-amazon.com/images/I/81&#43;oMD7Lm7L.jpg" alt="Fundamentals of Data Engineering" class="book-cover mb-3">
+    <h1 class="book-title">Fundamentals of Data Engineering</h1>
+    <p class="book-author"><em>Joe Reis, Matt Housley</em></p>
+
+    
+    <p class="book-finished mb-2">
+      <span class="finished-label">📅 Finished on:</span> 2023-10-11
+    </p>
+    
+
+    
+    <div class="book-badges my-2">
+       
+      <span class="badge badge-it">💻 IT</span>
+       
+      <span class="badge badge-work">💼 Work</span>
+      
+    </div>
+    
+
+    
+    <div class="book-score mt-2">
+      ⭐⭐⭐
+    </div>
+    
+
+    
+    <p class="book-summary mt-3 text-muted">
+      Work with data across all its phases and determine both the best solution for your case and the stakeholders involved
+    </p>
+    
+  </div>
+
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    <p>A more abstract book that analyzes how to build an architecture and the fundamentals of data engineering. It seems very interesting, recommended on LearnSQL. The focus is the data lifecycle, explored in all its phases with attention, with significant emphasis on stakeholders and approaches.</p>
+<p>A comprehensive book, a bit too slow for me given my experience, but it provides an excellent overview of systems, especially newer ones like data lakes, mesh, and warehouses. A good read, more of a refresher for me.</p>
+<h1 id="notes">Notes</h1>
+<ul>
+<li>Today, data is moving faster than ever and growing ever larger, but big data processing has become so accessible that it no longer merits a separate term; every company aims to solve its data problems, regardless of actual data size. Big data engineers are now simply data engineers (rise and fall of the big data buzzword)</li>
+<li>Foundation first before tackling AI and research</li>
+<li>Data maturity helps us leverage our data: without a solid baseline we can&rsquo;t use it, and it depends on many factors. Our simplified model has three stages: starting with data, scaling with data, and leading with data</li>
+<li>Starting with data: advice
+<ul>
+<li>Organizational willpower may wane if many visible successes don&rsquo;t occur with data. Getting quick wins will establish the importance of data within the organization. Keep in mind that quick wins will likely create technical debt</li>
+<li>Get out and talk with people, be open-minded</li>
+<li>At the same time don&rsquo;t build custom solutions unless you have a clear competitive advantage. Technical debt is to be avoided</li>
+</ul>
+</li>
+<li>Scaling with data: advice
+<ul>
+<li>We have a stable platform; now we can build flows</li>
+<li>DevOps and ML flow</li>
+<li>Avoid overcomplicated solutions</li>
+</ul>
+</li>
+<li>Leading with data, a mature platform
+<ul>
+<li>Create community and data culture</li>
+<li>Automate import flows and new projects</li>
+<li>Data governance, lineage</li>
+</ul>
+</li>
+<li>🔬 Tech Stack: SQL, Python, a JVM language for low-level work (Scala, Java), Bash or PowerShell</li>
+<li>Type A (abstraction: use off-the-shelf tools and make things simple) and Type B (create architecture to focus on a core competency of the company), and an introduction to all the roles (C-suite, data workers)</li>
+</ul>
+<h2 id="the-data-phases">The Data Phases</h2>
+<ul>
+<li>Remember the different data phases: generation, storage, ingestion, transformation, serving</li>
+<li>⭐ Generation phase: always ask these questions when assessing source systems: its essential characteristics, how the data is persisted (long run or deleted?), at what rate it is generated, if it is consistent or we need to check for errors, how often the errors occur, if there are duplicates or delays, its schema, if schema changes are communicated, how frequent the data reading process is, whether there are upstream data dependencies, and whether there are checks for late or missing data</li>
+<li>Storage: very delicate point, as the storage solution will impact our future strategy. We usually leverage several storage solutions, since each kind of DB works best in a specific environment. Questions to ask when choosing: is it compatible with our speed rates, could it be a bottleneck, do we understand how the tech works, will it anticipate future scale, will the vendor guarantee the SLA, do we capture metadata, is it pure (object storage) or does it support query patterns (cloud DWH), is it schemaless/hybrid/enforced, how are we tracking records and schemas and governance. Also remember the difference between hot and cold data (for compliance but not accessed)</li>
+<li>Ingestion: this is usually the bottleneck of the data architecture, while source systems, the biggest culprit, are not under our control or responsibility. Focus on making a reliable system by asking these questions: the use cases, what systems generate the data and when they are available, what the data destination is, how frequently we need to access the data and in which volume, what their format is, whether it is in good shape or we need to modify it. Plus differences between batch and streaming ingestion; usually batch is more efficient and simpler (and far more used unless you have a critical need for live data)</li>
+<li>Transformation: the stage where you transform the data before the next parts of the process. This is mostly related to changing types, removing errors, schema changes, and normalization. Consider costs and keep transformations as simple as possible</li>
+<li>Serving: you can use the data in different ways. Analytics, ML, and reverse ETL are the most popular. With analytics we talk about BI (which often requires further cleaning, and ideally a self-service approach), or operational/embedded analytics (for example, inventory live or customer dashboards). ML is straightforward here. Reverse ETL is the process of putting data back into source systems, long considered an antipattern, but often a necessity (for example, marketing using sales data and uploading forecasts back into the system)</li>
+<li>Security: the principle of least privilege is crucial, and also giving access only for the duration necessary to perform the work</li>
+<li>Definition:
+Enterprise architecture is the design of systems to support change in the enterprise, achieved by flexible and reversible decisions reached through careful evaluation of trade-offs.</li>
+<li>Pillars of a good data architecture:
+<ol>
+<li>Choose common components wisely.</li>
+<li>Plan for failure.</li>
+<li>Architect for scalability.</li>
+<li>Architecture is leadership.</li>
+<li>Always be architecting.</li>
+<li>Build loosely coupled systems. → See Bezos API Mandate where every team must communicate by API only</li>
+<li>Make reversible decisions → Bezos two-way door</li>
+<li>Prioritize security → Zero trust security etc.</li>
+<li>Embrace FinOps → DevOps with Finance involved</li>
+</ol>
+</li>
+<li>Brownfield (replace legacy systems) vs Greenfield: in both cases be cautious and assess a strategy that slowly brings in the new feature, cleaning up progressively</li>
+<li>Data Mart (DWH for analytics, further step) vs Data Warehouse vs Data Lake</li>
+<li>Also mentions the data lakehouse as a likely future direction</li>
+<li>Talking about the modern stack: key concepts are self-service, agile data management, and clear pricing/open source</li>
+<li>Story: the Lambda (batch and stream to be joined together) and Kappa (one giant stream, expensive at scale) architectures were introduced for managing large real-time streaming data. The current solution is Dataflow, viewing all data as events and aggregating them in big batches. Spark and Flink are examples. There are other specifications, for example IoT aggregators for grouping signals from IoT devices</li>
+<li>Data Mesh: a new idea for addressing the divide between operational and analytical data by introducing one federated layer</li>
+</ul>
+<h2 id="choosing-technologies">Choosing Technologies</h2>
+<ul>
+<li>We strongly advise against choosing technology before getting your architecture right. Architecture first, technology second. Do not chase shiny objects. Tools are the how, architecture is the what</li>
+<li>Criteria
+<ul>
+<li>Team size and capabilities → small team, don&rsquo;t try a complex solution from big shops</li>
+<li>Speed to market → perfect is the enemy of good. Deliver value early and often</li>
+<li>Interoperability → it needs to interact with existing systems (ODBC, JDBC, REST)</li>
+<li>Cost optimization and business value → TCO, TOCO to calculate</li>
+<li>Immutable versus transitory technologies → use a two-year time horizon to reevaluate your technology choices. Lindy effect: the longer a technology has been established, the longer it will be used. Remember Hive</li>
+<li>Location (cloud, on prem, hybrid cloud, multicloud) → useful details on how cloud providers store data to avoid bottlenecks. Right now you need to keep one eye on the present while planning for unknowns</li>
+<li>Build versus buy → invest in building and customizing when doing so will provide a competitive advantage. Otherwise, stand on the shoulders of giants and use what is already available. Prefer OSS and COSS</li>
+<li>Monolith versus modular → monolith can become a trap. Decide based on flexibility and interoperability</li>
+<li>Serverless versus servers → usually serverless makes sense unless usage is so high that servers are more efficient. Decide based on workload, cost, and limitations</li>
+<li>Optimization, performance, and the benchmark wars → don&rsquo;t trust vendor benchmarks blindly since each case is different</li>
+</ul>
+</li>
+</ul>
+<h2 id="data-generation-in-source-systems">Data Generation in Source Systems</h2>
+<ul>
+<li>OLTP vs OLAP, standard distinctions. Also CDC (Change Data Capture) to detect changes in DBs, as well as database logs</li>
+<li>Pay attention to the different times: when the event is generated, when it is ingested, when it is processed&hellip;</li>
+<li>Typical sources can be:
+<ul>
+<li>Databases (relational, NoSQL, graph)</li>
+<li>APIs (REST, GraphQL, webhooks for events, RPC for distributing)</li>
+<li>Data sharing (for example, a public object storage system)</li>
+<li>Third-party data sources (CRM, typically via DB or API)</li>
+<li>Message queues (real-time events, Kafka)</li>
+</ul>
+</li>
+<li>Data engineers tend to treat source systems as &ldquo;someone else&rsquo;s problem.&rdquo; Do this at your peril. Establish communication with all system owners, especially when there are application changes</li>
+</ul>
+<h2 id="storage">Storage</h2>
+<ul>
+<li>Let&rsquo;s explore the components of the chapter</li>
+<li>Starting from HDD and SSD, technology has advanced a lot. HDDs physically read and copy binary data, while SSDs use flash cells. Very important concepts: latency and transfer speed</li>
+<li>Lots of useful info about caching, SAN, NAS, and files</li>
+<li>On object storage cloud systems like S3 there is not really a directory. If you list something and the bucket has millions of files, it will take a while even if the directory appears small. It just assigns a key that looks like a directory to us, mapped to an object</li>
+<li>Redis is a very powerful key-value store if you can tolerate small data loss</li>
+<li>Hadoop may look dead, but it has evolved into more powerful storage systems for big data</li>
+</ul>
+<h3 id="ingestion">Ingestion</h3>
+<ul>
+<li>Push vs pull vs polling (check for updates and then read)</li>
+<li>Different types of ingestion such as batch with time-based data or size-based data</li>
+<li>ETL vs ELT</li>
+<li>TTL: Time To Live, how long the streaming service can store the data. Could be a few seconds (risk of losing data) or days (but it will occupy space)</li>
+<li>Dead-letter queue for messages that can&rsquo;t be ingested (too big, expired, or error)</li>
+<li>Ways to ingest data: direct DB (for example, ODBC) or CDC (Change Data Capture, fast but can be expensive), API (trending), message queues (Kafka), object storage (data lake connector), EDI (older way to handle data movement, could be a script on the server), DB export manual, SSH, webhooks, shell, CSV, web interface where you manually download the data, AWS Snowball-like for big file sharing, web scraping</li>
+</ul>
+<h3 id="queries">Queries</h3>
+<ul>
+<li>DDL and DML (SELECT INSERT UPDATE DELETE COPY MERGE)
+<ul>
+<li>The four critical parts of a data warehouse can be described as follows:
+<ul>
+<li>Subject-oriented → the data warehouse focuses on a specific subject area, such as sales or marketing</li>
+<li>Integrated → data from disparate sources is consolidated and normalized</li>
+<li>Nonvolatile → data remains unchanged after it is stored in a data warehouse</li>
+<li>Time-variant → varying time ranges can be queried</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inmon vs Kimball, two schemas for DWH. Inmon normalizes heavily</li>
+<li>Facts vs dimensions. Dimensions are entities (for example, the calendar or the master product), while facts are events like transactions and orders</li>
+<li>SQL vs Spark: use what is simpler. For Spark you often need more procedural steps; for SQL some tasks might be awkward in Spark</li>
+<li>Suggestions for Spark
+<ol>
+<li>Filter early and often.</li>
+<li>Rely heavily on the core Spark API, and learn to understand the Spark-native way of doing things. Try to rely on well-maintained public libraries if the native Spark API doesn&rsquo;t support your use case. Good Spark code is substantially declarative.</li>
+<li>Be careful with UDFs.</li>
+<li>Consider intermixing SQL.</li>
+</ol>
+</li>
+<li>Insert, upsert, delete, truncate: differences are clear</li>
+<li>Data wrangling takes messy, malformed data and turns it into useful, clean data. This is generally a batch transformation process.</li>
+<li>Introducing MapReduce, the concept behind Spark and Hadoop: it redistributes the computation (for example, a count) to all nodes, then retrieves the results for the final step. This parallelizes and speeds up the process a lot</li>
+<li>Views vs materialized views → the first are computed each time a query runs, while MVs update only when changes happen. Also federated views, which are links to other DBs</li>
+</ul>
+<h2 id="serving-data">Serving Data</h2>
+<ul>
+<li>Trust. The fanciest, most sophisticated data architecture and serving layer are irrelevant if end users don&rsquo;t believe the data is a reliable representation of their business</li>
+<li>Hiring. When creating a data product, it helps to think of the &ldquo;jobs to be done.&rdquo; A user &ldquo;hires&rdquo; a product for a &ldquo;job to be done.&rdquo; This means you need to know what the user wants, their motivation for &ldquo;hiring&rdquo; your product</li>
+<li>Business analytics → suggestions for actions to take (for example, new investments), operational analytics → actions to take now (for example, alerting), embedded analytics → dashboards for users to assist in their tasks</li>
+<li>Reverse ETL and other stakeholders</li>
+</ul>
+<h2 id="security--privacy">Security &amp; Privacy</h2>
+<ul>
+<li>Always be cautious; the weakest link is often the human</li>
+<li>Many companies have security policies hundreds of pages long that nobody reads, and annual reviews that people quickly forget, just to check a box for a security audit</li>
+<li>The principle of least privilege means that a person or system should be given only the privileges and data they need to complete the task at hand and nothing more</li>
+<li>Always back up your data</li>
+<li>Example security policy, very useful (for updates and best practices)</li>
+<li>Pay attention to network access. Make sure not to expose IPs to the world</li>
+</ul>
+<h2 id="the-future">The Future</h2>
+<blockquote>
+<p>Some question whether increasingly simple tools and practices will lead to the disappearance of data engineers. This thinking is shallow, lazy, and shortsighted. As organizations leverage data in new ways, new foundations, systems, and workflows will be needed to address these needs. Data engineers sit at the center of designing, architecting, building, and maintaining these systems. If tooling becomes easier to use, data engineers will move up the value chain to focus on higher-level work. The data engineering lifecycle isn&rsquo;t going away anytime soon</p>
+</blockquote>
+<p>Continue to explore and learn. The world will evolve and you need to stay current with new trends, technologies, and opportunities.</p>
+
+  </div>
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    <p>A more abstract book that analyzes how to build an architecture and the fundamentals of data engineering. It seems very interesting, recommended on LearnSQL. The focus is the data lifecycle, explored in all its phases with attention, with significant emphasis on stakeholders and approaches.</p>
+<p>A comprehensive book, a bit too slow for me given my experience, but it provides an excellent overview of systems, especially newer ones like data lakes, mesh, and warehouses. A good read, more of a refresher for me.</p>
+<h1 id="notes">Notes</h1>
+<ul>
+<li>Today, data is moving faster than ever and growing ever larger, but big data processing has become so accessible that it no longer merits a separate term; every company aims to solve its data problems, regardless of actual data size. Big data engineers are now simply data engineers (rise and fall of the big data buzzword)</li>
+<li>Foundation first before tackling AI and research</li>
+<li>Data maturity helps us leverage our data: without a solid baseline we can&rsquo;t use it, and it depends on many factors. Our simplified model has three stages: starting with data, scaling with data, and leading with data</li>
+<li>Starting with data: advice
+<ul>
+<li>Organizational willpower may wane if many visible successes don&rsquo;t occur with data. Getting quick wins will establish the importance of data within the organization. Keep in mind that quick wins will likely create technical debt</li>
+<li>Get out and talk with people, be open-minded</li>
+<li>At the same time don&rsquo;t build custom solutions unless you have a clear competitive advantage. Technical debt is to be avoided</li>
+</ul>
+</li>
+<li>Scaling with data: advice
+<ul>
+<li>We have a stable platform; now we can build flows</li>
+<li>DevOps and ML flow</li>
+<li>Avoid overcomplicated solutions</li>
+</ul>
+</li>
+<li>Leading with data, a mature platform
+<ul>
+<li>Create community and data culture</li>
+<li>Automate import flows and new projects</li>
+<li>Data governance, lineage</li>
+</ul>
+</li>
+<li>🔬 Tech Stack: SQL, Python, a JVM language for low-level work (Scala, Java), Bash or PowerShell</li>
+<li>Type A (abstraction: use off-the-shelf tools and make things simple) and Type B (create architecture to focus on a core competency of the company), and an introduction to all the roles (C-suite, data workers)</li>
+</ul>
+<h2 id="the-data-phases">The Data Phases</h2>
+<ul>
+<li>Remember the different data phases: generation, storage, ingestion, transformation, serving</li>
+<li>⭐ Generation phase: always ask these questions when assessing source systems: its essential characteristics, how the data is persisted (long run or deleted?), at what rate it is generated, if it is consistent or we need to check for errors, how often the errors occur, if there are duplicates or delays, its schema, if schema changes are communicated, how frequent the data reading process is, whether there are upstream data dependencies, and whether there are checks for late or missing data</li>
+<li>Storage: very delicate point, as the storage solution will impact our future strategy. We usually leverage several storage solutions, since each kind of DB works best in a specific environment. Questions to ask when choosing: is it compatible with our speed rates, could it be a bottleneck, do we understand how the tech works, will it anticipate future scale, will the vendor guarantee the SLA, do we capture metadata, is it pure (object storage) or does it support query patterns (cloud DWH), is it schemaless/hybrid/enforced, how are we tracking records and schemas and governance. Also remember the difference between hot and cold data (for compliance but not accessed)</li>
+<li>Ingestion: this is usually the bottleneck of the data architecture, while source systems, the biggest culprit, are not under our control or responsibility. Focus on making a reliable system by asking these questions: the use cases, what systems generate the data and when they are available, what the data destination is, how frequently we need to access the data and in which volume, what their format is, whether it is in good shape or we need to modify it. Plus differences between batch and streaming ingestion; usually batch is more efficient and simpler (and far more used unless you have a critical need for live data)</li>
+<li>Transformation: the stage where you transform the data before the next parts of the process. This is mostly related to changing types, removing errors, schema changes, and normalization. Consider costs and keep transformations as simple as possible</li>
+<li>Serving: you can use the data in different ways. Analytics, ML, and reverse ETL are the most popular. With analytics we talk about BI (which often requires further cleaning, and ideally a self-service approach), or operational/embedded analytics (for example, inventory live or customer dashboards). ML is straightforward here. Reverse ETL is the process of putting data back into source systems, long considered an antipattern, but often a necessity (for example, marketing using sales data and uploading forecasts back into the system)</li>
+<li>Security: the principle of least privilege is crucial, and also giving access only for the duration necessary to perform the work</li>
+<li>Definition:
+Enterprise architecture is the design of systems to support change in the enterprise, achieved by flexible and reversible decisions reached through careful evaluation of trade-offs.</li>
+<li>Pillars of a good data architecture:
+<ol>
+<li>Choose common components wisely.</li>
+<li>Plan for failure.</li>
+<li>Architect for scalability.</li>
+<li>Architecture is leadership.</li>
+<li>Always be architecting.</li>
+<li>Build loosely coupled systems. → See Bezos API Mandate where every team must communicate by API only</li>
+<li>Make reversible decisions → Bezos two-way door</li>
+<li>Prioritize security → Zero trust security etc.</li>
+<li>Embrace FinOps → DevOps with Finance involved</li>
+</ol>
+</li>
+<li>Brownfield (replace legacy systems) vs Greenfield: in both cases be cautious and assess a strategy that slowly brings in the new feature, cleaning up progressively</li>
+<li>Data Mart (DWH for analytics, further step) vs Data Warehouse vs Data Lake</li>
+<li>Also mentions the data lakehouse as a likely future direction</li>
+<li>Talking about the modern stack: key concepts are self-service, agile data management, and clear pricing/open source</li>
+<li>Story: the Lambda (batch and stream to be joined together) and Kappa (one giant stream, expensive at scale) architectures were introduced for managing large real-time streaming data. The current solution is Dataflow, viewing all data as events and aggregating them in big batches. Spark and Flink are examples. There are other specifications, for example IoT aggregators for grouping signals from IoT devices</li>
+<li>Data Mesh: a new idea for addressing the divide between operational and analytical data by introducing one federated layer</li>
+</ul>
+<h2 id="choosing-technologies">Choosing Technologies</h2>
+<ul>
+<li>We strongly advise against choosing technology before getting your architecture right. Architecture first, technology second. Do not chase shiny objects. Tools are the how, architecture is the what</li>
+<li>Criteria
+<ul>
+<li>Team size and capabilities → small team, don&rsquo;t try a complex solution from big shops</li>
+<li>Speed to market → perfect is the enemy of good. Deliver value early and often</li>
+<li>Interoperability → it needs to interact with existing systems (ODBC, JDBC, REST)</li>
+<li>Cost optimization and business value → TCO, TOCO to calculate</li>
+<li>Immutable versus transitory technologies → use a two-year time horizon to reevaluate your technology choices. Lindy effect: the longer a technology has been established, the longer it will be used. Remember Hive</li>
+<li>Location (cloud, on prem, hybrid cloud, multicloud) → useful details on how cloud providers store data to avoid bottlenecks. Right now you need to keep one eye on the present while planning for unknowns</li>
+<li>Build versus buy → invest in building and customizing when doing so will provide a competitive advantage. Otherwise, stand on the shoulders of giants and use what is already available. Prefer OSS and COSS</li>
+<li>Monolith versus modular → monolith can become a trap. Decide based on flexibility and interoperability</li>
+<li>Serverless versus servers → usually serverless makes sense unless usage is so high that servers are more efficient. Decide based on workload, cost, and limitations</li>
+<li>Optimization, performance, and the benchmark wars → don&rsquo;t trust vendor benchmarks blindly since each case is different</li>
+</ul>
+</li>
+</ul>
+<h2 id="data-generation-in-source-systems">Data Generation in Source Systems</h2>
+<ul>
+<li>OLTP vs OLAP, standard distinctions. Also CDC (Change Data Capture) to detect changes in DBs, as well as database logs</li>
+<li>Pay attention to the different times: when the event is generated, when it is ingested, when it is processed&hellip;</li>
+<li>Typical sources can be:
+<ul>
+<li>Databases (relational, NoSQL, graph)</li>
+<li>APIs (REST, GraphQL, webhooks for events, RPC for distributing)</li>
+<li>Data sharing (for example, a public object storage system)</li>
+<li>Third-party data sources (CRM, typically via DB or API)</li>
+<li>Message queues (real-time events, Kafka)</li>
+</ul>
+</li>
+<li>Data engineers tend to treat source systems as &ldquo;someone else&rsquo;s problem.&rdquo; Do this at your peril. Establish communication with all system owners, especially when there are application changes</li>
+</ul>
+<h2 id="storage">Storage</h2>
+<ul>
+<li>Let&rsquo;s explore the components of the chapter</li>
+<li>Starting from HDD and SSD, technology has advanced a lot. HDDs physically read and copy binary data, while SSDs use flash cells. Very important concepts: latency and transfer speed</li>
+<li>Lots of useful info about caching, SAN, NAS, and files</li>
+<li>On object storage cloud systems like S3 there is not really a directory. If you list something and the bucket has millions of files, it will take a while even if the directory appears small. It just assigns a key that looks like a directory to us, mapped to an object</li>
+<li>Redis is a very powerful key-value store if you can tolerate small data loss</li>
+<li>Hadoop may look dead, but it has evolved into more powerful storage systems for big data</li>
+</ul>
+<h3 id="ingestion">Ingestion</h3>
+<ul>
+<li>Push vs pull vs polling (check for updates and then read)</li>
+<li>Different types of ingestion such as batch with time-based data or size-based data</li>
+<li>ETL vs ELT</li>
+<li>TTL: Time To Live, how long the streaming service can store the data. Could be a few seconds (risk of losing data) or days (but it will occupy space)</li>
+<li>Dead-letter queue for messages that can&rsquo;t be ingested (too big, expired, or error)</li>
+<li>Ways to ingest data: direct DB (for example, ODBC) or CDC (Change Data Capture, fast but can be expensive), API (trending), message queues (Kafka), object storage (data lake connector), EDI (older way to handle data movement, could be a script on the server), DB export manual, SSH, webhooks, shell, CSV, web interface where you manually download the data, AWS Snowball-like for big file sharing, web scraping</li>
+</ul>
+<h3 id="queries">Queries</h3>
+<ul>
+<li>DDL and DML (SELECT INSERT UPDATE DELETE COPY MERGE)
+<ul>
+<li>The four critical parts of a data warehouse can be described as follows:
+<ul>
+<li>Subject-oriented → the data warehouse focuses on a specific subject area, such as sales or marketing</li>
+<li>Integrated → data from disparate sources is consolidated and normalized</li>
+<li>Nonvolatile → data remains unchanged after it is stored in a data warehouse</li>
+<li>Time-variant → varying time ranges can be queried</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inmon vs Kimball, two schemas for DWH. Inmon normalizes heavily</li>
+<li>Facts vs dimensions. Dimensions are entities (for example, the calendar or the master product), while facts are events like transactions and orders</li>
+<li>SQL vs Spark: use what is simpler. For Spark you often need more procedural steps; for SQL some tasks might be awkward in Spark</li>
+<li>Suggestions for Spark
+<ol>
+<li>Filter early and often.</li>
+<li>Rely heavily on the core Spark API, and learn to understand the Spark-native way of doing things. Try to rely on well-maintained public libraries if the native Spark API doesn&rsquo;t support your use case. Good Spark code is substantially declarative.</li>
+<li>Be careful with UDFs.</li>
+<li>Consider intermixing SQL.</li>
+</ol>
+</li>
+<li>Insert, upsert, delete, truncate: differences are clear</li>
+<li>Data wrangling takes messy, malformed data and turns it into useful, clean data. This is generally a batch transformation process.</li>
+<li>Introducing MapReduce, the concept behind Spark and Hadoop: it redistributes the computation (for example, a count) to all nodes, then retrieves the results for the final step. This parallelizes and speeds up the process a lot</li>
+<li>Views vs materialized views → the first are computed each time a query runs, while MVs update only when changes happen. Also federated views, which are links to other DBs</li>
+</ul>
+<h2 id="serving-data">Serving Data</h2>
+<ul>
+<li>Trust. The fanciest, most sophisticated data architecture and serving layer are irrelevant if end users don&rsquo;t believe the data is a reliable representation of their business</li>
+<li>Hiring. When creating a data product, it helps to think of the &ldquo;jobs to be done.&rdquo; A user &ldquo;hires&rdquo; a product for a &ldquo;job to be done.&rdquo; This means you need to know what the user wants, their motivation for &ldquo;hiring&rdquo; your product</li>
+<li>Business analytics → suggestions for actions to take (for example, new investments), operational analytics → actions to take now (for example, alerting), embedded analytics → dashboards for users to assist in their tasks</li>
+<li>Reverse ETL and other stakeholders</li>
+</ul>
+<h2 id="security--privacy">Security &amp; Privacy</h2>
+<ul>
+<li>Always be cautious; the weakest link is often the human</li>
+<li>Many companies have security policies hundreds of pages long that nobody reads, and annual reviews that people quickly forget, just to check a box for a security audit</li>
+<li>The principle of least privilege means that a person or system should be given only the privileges and data they need to complete the task at hand and nothing more</li>
+<li>Always back up your data</li>
+<li>Example security policy, very useful (for updates and best practices)</li>
+<li>Pay attention to network access. Make sure not to expose IPs to the world</li>
+</ul>
+<h2 id="the-future">The Future</h2>
+<blockquote>
+<p>Some question whether increasingly simple tools and practices will lead to the disappearance of data engineers. This thinking is shallow, lazy, and shortsighted. As organizations leverage data in new ways, new foundations, systems, and workflows will be needed to address these needs. Data engineers sit at the center of designing, architecting, building, and maintaining these systems. If tooling becomes easier to use, data engineers will move up the value chain to focus on higher-level work. The data engineering lifecycle isn&rsquo;t going away anytime soon</p>
+</blockquote>
+<p>Continue to explore and learn. The world will evolve and you need to stay current with new trends, technologies, and opportunities.</p>
+
+  </div>
+
+  <div class="book-footer mt-5 text-center">
+    <a href="/books/" class="book-back-link">← Back to all books</a>
+  </div>
+
+</div>
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/08/test-mind-maps/">
+                        <img src="/images/markmap/title.png" class="card-img-top" alt="How we test 100k-Line Nested JSON trees without going insane">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/08/test-mind-maps/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="How we test 100k-Line Nested JSON trees without going insane">How we test 100k-Line Nested JSON trees without going insane</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Today I want to share an interesting challenge that&rsquo;s been bugging me since I joined InvestSuite last December.
+It&rsquo;s stories like this that makes me happy to be a developer, being able to address things that are ruining my day and get rid of them. It feels so satisfying.</p>
+<p>We work with …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Aug 11, 2025</span>
+                    <a href="/posts/2025/08/test-mind-maps/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/06/we-have-no-idea-book/">
+                        <img src="/images/physics/cover.jpg" class="card-img-top" alt="A Physics book for people who hate Physics">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="A Physics book for people who hate Physics">A Physics book for people who hate Physics</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>My relationship with physics has always been… troubled.</p>
+<p>Probably because I had a high school teacher who never managed to spark any interest in me, I just never caught up. I remember sitting silently at my final exam (Maturità) when the physics question came up, completely blank. I also struggled …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jun 15, 2025</span>
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/05/ai-and-data-engineering/">
+                        <img src="/images/ai_data_engineers/pipeline.jpg" class="card-img-top" alt="No, AI is not replacing Data Engineers.">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/05/ai-and-data-engineering/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="No, AI is not replacing Data Engineers.">No, AI is not replacing Data Engineers.</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p><a href="https://www.anthropic.com/news/claude-4">Claude 4</a> landed, and as usual, it kicked off the usual hype cycle.
+&ldquo;Best coding model ever&rdquo; &ldquo;It writes stories!&rdquo; &ldquo;AI is replacing programmers!&rdquo; And of course, LinkedIn is buzzing with non-technical folks declaring how engineers are doomed and it’s time to …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 29, 2025</span>
+                    <a href="/posts/2025/05/ai-and-data-engineering/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io/" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
