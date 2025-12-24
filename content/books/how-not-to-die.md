@@ -1,7 +1,7 @@
 ---
 title: How Not To Die
 author: Michael Greger, Gene Stone
-image: https://images-eu.ssl-images-amazon.com/images/I/51OZMrqpfOL._SY264_BO1,204,203,200_QL40_ML2_.jpg
+image: https://m.media-amazon.com/images/I/81reMYYwdVL._SL1500_.jpg
 badges:
 - "🥐 Nutrition"
 score: "⭐️⭐️⭐️⭐️"
