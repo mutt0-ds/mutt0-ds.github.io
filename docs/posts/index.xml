@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On AI Slop</title>
+      <link>https://mutt0-ds.github.io/posts/2025/12/on-ai-slop/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/posts/2025/12/on-ai-slop/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve started to notice a very predictable trend: AI-generated messages in my inbox.&lt;/p&gt;&#xA;&lt;p&gt;What finally pushed me to write this was how casually people are dumping GPT-generated text into their communications, apparently believing two things:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;That people won&amp;rsquo;t notice&lt;/li&gt;&#xA;&lt;li&gt;That people will actually read it&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;When I received what was clearly an AI-generated Christmas card, that was enough.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-i-mean-by-ai-slop&#34;&gt;What I mean by AI slop&lt;/h3&gt;&#xA;&lt;p&gt;This sits inside a broader problem. AI models are producing large amounts of boring, verbose, low-effort, LAZY content, and it is steadily flooding the web. Others, like &lt;a href=&#34;https://www.youtube.com/watch?v=_zfN9wnPvU0&#34;&gt;Kurzgesagt&lt;/a&gt; or &lt;a href=&#34;https://www.youtube.com/watch?v=TWpg1RmzAbc&#34;&gt;Last Week Tonight&lt;/a&gt;, have explored this more publicly, but the pattern is easy to recognise once you&amp;rsquo;ve seen it a few times.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How we test 100k-Line Nested JSON trees without going insane</title>
       <link>https://mutt0-ds.github.io/posts/2025/08/test-mind-maps/</link>

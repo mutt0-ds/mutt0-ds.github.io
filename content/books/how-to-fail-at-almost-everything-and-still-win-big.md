@@ -1,7 +1,7 @@
 ---
 title: How to Fail at Almost Everything and Still Win Big
 author: Scott Adams
-image: https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81slmX75nTL.jpg
+image: https://m.media-amazon.com/images/I/61ApZGgoQdL._SL1200_.jpg
 badges:
 - "🧘‍♀️ Lifestyle"
 score: "⭐️⭐️⭐️⭐️⭐️"

@@ -6,8 +6,22 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai</title>
+      <link>https://mutt0-ds.github.io/tags/ai/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Communication</title>
+      <link>https://mutt0-ds.github.io/tags/communication/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/communication/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Coverage</title>
       <link>https://mutt0-ds.github.io/tags/coverage/</link>
@@ -72,13 +86,6 @@
       <description></description>
     </item>
     <item>
-      <title>Ai</title>
-      <link>https://mutt0-ds.github.io/tags/ai/</link>
-      <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/ai/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Copilot</title>
       <link>https://mutt0-ds.github.io/tags/copilot/</link>
       <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
@@ -132,13 +139,6 @@
       <link>https://mutt0-ds.github.io/tags/architecture/</link>
       <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/architecture/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Communication</title>
-      <link>https://mutt0-ds.github.io/tags/communication/</link>
-      <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/communication/</guid>
       <description></description>
     </item>
     <item>
