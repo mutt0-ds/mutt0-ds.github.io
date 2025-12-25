@@ -22,9 +22,9 @@ I believe in keeping things [simple and human](https://mutt0-ds.github.io/posts/
 I share practical insights on data science, AI, engineering tips, and projects that spark my curiosity:
 
 <!-- BLOG-POST-LIST:START -->
-- ✨ [How we test 100k-Line Nested JSON trees without going insane](https://mutt0-ds.github.io/posts/2025/08/test-mind-maps/) _(posted on 11 Aug 2025)_
-- 📌 [A Physics book for people who hate Physics](https://mutt0-ds.github.io/posts/2025/06/we-have-no-idea-book/) _(posted on 15 Jun 2025)_
-- 📝 [No, AI is not replacing Data Engineers.](https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/) _(posted on 29 May 2025)_
+- ✨ [On AI Slop](https://mutt0-ds.github.io/posts/2025/12/on-ai-slop/) _(posted on 24 Dec 2025)_
+- 📌 [How we test 100k-Line Nested JSON trees without going insane](https://mutt0-ds.github.io/posts/2025/08/test-mind-maps/) _(posted on 11 Aug 2025)_
+- 📝 [A Physics book for people who hate Physics](https://mutt0-ds.github.io/posts/2025/06/we-have-no-idea-book/) _(posted on 15 Jun 2025)_
 
 <!-- BLOG-POST-LIST:END -->
 
