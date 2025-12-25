@@ -3,7 +3,7 @@ title: Cracking the Coding Interview
 author: Gayle Laakmann McDowell
 image: https://m.media-amazon.com/images/I/61mIq2iJUXL.jpg
 badges:
-- "📊 IT"
+- "💻 IT"
 score: "⭐⭐⭐"
 finished: '2024-11-29'
 summary: I will struggle with a Google interview

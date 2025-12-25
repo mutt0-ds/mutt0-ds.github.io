@@ -3,7 +3,7 @@ title: Developer Relations
 author: Caroline Lewko
 image: https://m.media-amazon.com/images/I/61NVzNd-NWL._UF894,1000_QL80_.jpg
 badges:
-- "📊 IT"
+- "💻 IT"
 - "💼 Work"
 score: "⭐️⭐️"
 finished: '2025-03-22'

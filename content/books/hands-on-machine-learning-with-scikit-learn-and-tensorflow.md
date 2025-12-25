@@ -3,7 +3,7 @@ title: Hands-on Machine Learning with Scikit-Learn and TensorFlow
 author: "Aur\xE9lien G\xE9ron"
 image: https://images-na.ssl-images-amazon.com/images/I/51GcXOrWROL._SX379_BO1,204,203,200_.jpg
 badges:
-- "📊 IT"
+- "💻 IT"
 score: "⭐⭐⭐⭐⭐"
 finished: '2022-07-18'
 summary: Building good ML models requires strong knowledge of the scikit-learn and TensorFlow libraries, lots of math, and substantial resources

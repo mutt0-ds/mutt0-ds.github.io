@@ -3,7 +3,7 @@ title: Designing data-intensive applications
 author: Martin Kleppmann
 image: https://dataintensive.net/images/book-cover.png
 badges:
-- "📊 IT"
+- "💻 IT"
 score: "⭐️⭐️"
 finished: '2021-04-11'
 summary: Databases have many potential problems to explore, understand, and anticipate. Especially distributed ones
