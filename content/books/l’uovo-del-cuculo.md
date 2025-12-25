@@ -3,7 +3,7 @@ title: "The Cuckoo's Egg"
 author: Cliff Stoll
 image: https://m.media-amazon.com/images/I/71KvXfFyi4L._AC_UF1000,1000_QL80_.jpg
 badges:
-- "📊 IT"
+- "💻 IT"
 - "🥳 Fiction"
 score: "⭐️⭐️⭐️"
 finished: '2025-09-23'

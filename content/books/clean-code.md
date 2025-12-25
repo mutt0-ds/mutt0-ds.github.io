@@ -1,7 +1,7 @@
 ---
 title: Clean Code
 author: Robert C. Martin
-image: https://images-na.ssl-images-amazon.com/images/I/51WVMxrH79L._SX348_BO1,204,203,200_.jpg
+image: https://m.media-amazon.com/images/I/71nj3JM-igL._SL1500_.jpg
 badges:
 - "💻 IT"
 score: "⭐⭐"

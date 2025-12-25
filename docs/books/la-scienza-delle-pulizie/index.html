@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://mutt0-ds.github.io/books/la-scienza-delle-pulizie/">
+  <meta property="og:site_name" content="Mutt0-ds Notes">
+  <meta property="og:title" content="La Scienza Delle Pulizie">
+  <meta property="og:description" content="Knowing a bit of chemistry can help us navigate this world of fake news and wrong tricks. Acids and bases cancel each other out. And never mix things at random.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="books">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="La Scienza Delle Pulizie">
+  <meta name="twitter:description" content="Knowing a bit of chemistry can help us navigate this world of fake news and wrong tricks. Acids and bases cancel each other out. And never mix things at random.">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+  <title>
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/books" title="Books">
+                            
+                            Books
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<link rel="stylesheet" href="/css/books.css">
+
+<div class="container py-5 book-page text-center">
+  
+  <div class="book-header mb-4">
+    <img src="https://m.media-amazon.com/images/I/71kYXNlLOAL._SL1500_.jpg" alt="La Scienza Delle Pulizie" class="book-cover mb-3">
+    <h1 class="book-title">La Scienza Delle Pulizie</h1>
+    <p class="book-author"><em>Dario Bressanini</em></p>
+
+    
+    <p class="book-finished mb-2">
+      <span class="finished-label">📅 Finished on:</span> 2023-08-09
+    </p>
+    
+
+    
+    <div class="book-badges my-2">
+       
+      <span class="badge badge-%EF%B8%8F-lifestyle">🧘‍♀️ Lifestyle</span>
+       
+      <span class="badge badge-science">⚛ Science</span>
+      
+    </div>
+    
+
+    
+    <div class="book-score mt-2">
+      ⭐️⭐️⭐️⭐️
+    </div>
+    
+
+    
+    <p class="book-summary mt-3 text-muted">
+      Knowing a bit of chemistry can help us navigate this world of fake news and wrong tricks. Acids and bases cancel each other out. And never mix things at random.
+    </p>
+    
+  </div>
+
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    <p>Wonderful book. Bressanini explains very clearly (as he does on YouTube) and does not hesitate to use big chemistry terms that many readers might skip, but they still lend professionalism to the result. I focused on the practical information, without diving into all the technicalities, and here is a general home guide I built from the key points.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Although we tend to be wary of chemical products at the supermarket and prefer grandma&rsquo;s compounds (like vinegar, lemon, etc.), chemists have refined these formulas for decades and they will usually do a better job than DIY mixes. There are strict European regulations on this; they are safe.</li>
+<li>Never mix substances together. You risk generating toxic gases. At best, combinations like an acid and a base (vinegar + baking soda) cancel each other out, so the result is worse.</li>
+<li>Take time to read ingredient lists. People fear long chemical names like triphosphate or sodium hydroxide, but every compound has a technical name and a lot is marketing. Do not be misled.</li>
+<li>It all depends on pH: acidic soils are removed with alkaline products, and vice versa.</li>
+<li>Marketing plays a big role. Many products do roughly the same thing since the core chemistry is similar. That does not mean you should always buy the cheapest option, but you do not need to overspend either. Results are often similar. Try a product and stick with what works best for you.</li>
+</ul>
+<h3 id="1-limescale">1. Limescale</h3>
+<ul>
+<li>Limescale is calcium carbonate that forms from heated water. Calcium precipitates and sticks to surfaces like shower walls, toilets, and faucets.</li>
+<li>⭐ It is not harmful to humans. In fact, our bodies use calcium. Drinking hard water can contribute calcium to the diet.</li>
+<li>Vinegar dissolves calcium carbonate, so it is a valid traditional solution, but it smells and is not acidic enough to be very effective. Purpose-made descalers work better. Bressanini examines Viakal (not as a specific recommendation, but as an example of a solid product) and its composition: water, citric acid to dissolve limescale, surfactants to increase solubility in water, citrate and sodium hydroxide to regulate pH, fragrances and colorants.</li>
+<li>These products are good for cleaning sanitary ware and damaged ceramics. There are specific notes for special cases (for example, scratches in a bathtub might be permanent). One tip: use low-mineral bottled water in coffee machines because limescale can damage them.</li>
+</ul>
+<h3 id="2-soaps">2. Soaps</h3>
+<ul>
+<li>Marseille soap is not necessarily made in Marseille and is not a registered trademark. The term usually refers to a hard soap. So-called neutral soap is also a marketing term; soap must be alkaline (pH 9+) to remove dirt. It simply means it has no free caustic soda.</li>
+<li>Skipping the history here. Today there are two main soap bases: coconut or palm kernel oils that bring lauric acid and produce more foam, and palm oil or tallow that foam less and harden the bar. Commercial blends are often around 70% palm and 30% coconut, but it varies.</li>
+<li>Most soaps are broadly similar in composition. Marketing adds small amounts of scented oils, but they are a tiny fraction. Read the ingredients and you will see them near the end.</li>
+</ul>
+<h3 id="3-detergents-and-laundry-detergents">3. Detergents and laundry detergents</h3>
+<ul>
+<li>These are ideal for removing almost any type of soil from fabrics, but they can struggle with greasy residues (often from skin or food).</li>
+<li>A key component is surfactants: special molecules that are half hydrophobic and half hydrophilic. They trap soil and bind to water, carrying the dirt away.</li>
+<li>A good detergent has surfactants (higher-end products may have up to 50%, which are costly), polymers to disperse dirt in water, enzymes to break down soil, a small percentage of fragrances, and optical brighteners. Fun fact: a brightener does not make laundry whiter by removing dirt. It lays a fluorescent layer that makes fabrics appear brighter.</li>
+<li>⭐ At the supermarket you can choose powder or liquid detergents (plus capsules and pods). In general they are all decent. Powders are slightly more effective and economical, but their performance drops if you wash below 60 C. Since in Europe we often wash at 30 to 40 C, liquids work better at those temperatures. Pods are convenient and often contain compartmentalized blends that combine during the wash to boost performance, so they can be more effective. Downside: you cannot adjust the dose as freely, so there is less flexibility.</li>
+<li>For wool and silk, read the label carefully. Hand washing with dedicated detergents is recommended.</li>
+</ul>
+<h3 id="4-bleach-and-chlorine">4. Bleach and chlorine</h3>
+<ul>
+<li>Detergents are not always effective on greasy residues. For stubborn stains we use strong oxidizers.</li>
+<li>Fun fact: bleach does not simply destroy soil. It removes the molecules that cause color and helps detergents by breaking down proteins and carbohydrates. Hypochlorite solutions are also very alkaline (pH 13+).</li>
+<li>⭐ The term &ldquo;bleach&rdquo; is ambiguous. In Europe, bleach usually means sodium hypochlorite, a strong oxidizer that can remove color from dyed fabrics. Use on whites. &ldquo;Delicate&rdquo; or &ldquo;color-safe&rdquo; bleach is a completely different oxygen-based compound.</li>
+<li>⭐ Household bleach is usually diluted (3 to 5% hypochlorite). Higher concentration usually means more aggressive action. In Europe, use it in the dedicated compartment, cold, before the wash, and you do not need large amounts or high temperatures. For tough stains you can pre-treat briefly in a basin before washing (always wash afterward). Check the label.</li>
+<li>Label symbols: an empty triangle means you can bleach, a crossed-out triangle means you cannot. A triangle with two diagonal lines means you can use non-chlorine (oxygen-based) bleach only.</li>
+<li>Do not let it degrade. Heat, time, and light reduce its effectiveness.</li>
+<li>⭐ Never mix bleach with other substances. It can create toxic gases. Handle with care. Do not use it on food. It corrodes metals and is useless against limescale.</li>
+</ul>
+<h3 id="5-percarbonate-and-oxygen">5. Percarbonate and oxygen</h3>
+<ul>
+<li>Here we are talking about oxygen-based bleaches, marketed as &ldquo;delicate&rdquo; or &ldquo;color-safe&rdquo; bleach, and hydrogen peroxide (H2O2).</li>
+<li>⭐ Hydrogen peroxide is mainly used as a disinfectant for minor wounds, and the book does not focus on it. In a pinch you can dilute it in water to treat a stain, but at low temperatures it needs a long time (overnight).</li>
+<li>⭐ Color-safe bleach typically contains 3 to 5% hydrogen peroxide and can be used to pre-treat a colored garment with tough stains before washing, or added in the washing machine bleach compartment. It is more effective at 60 C and above.</li>
+<li>Do not mix it randomly with other chemicals. You can generate unwanted reactions, splashes, or gases.</li>
+<li>Bressanini analyzes Omino Bianco color-safe bleach: it contains water (solvent), hydrogen peroxide to bleach, surfactants to reach stains, etidronic acid to stabilize the hydrogen peroxide, fragrances like linalool and citronellol, sodium sulfate to stabilize electrolytes, dimethicone as an antifoam, and colorants.</li>
+<li>⭐ Hydrogen peroxide is very effective for removing blood from handkerchiefs and walls. Apply a little with a cotton swab.</li>
+</ul>
+<h3 id="6-laundry">6. Laundry</h3>
+<ul>
+<li>Always read the care labels. A washtub with an X or a crossed-out circle (meaning even professional dry cleaning is not allowed) means do not wash. You can test stain removal on a small hidden area first. A hand in a basin means hand wash only.</li>
+<li>The machine washing symbol is a washtub with a number of degrees. One or two lines underneath indicate delicate cycles and you should reduce or skip spinning.</li>
+<li>⭐ The best wash is not washing. Since washing uses resources, you do not need to wash a garment every time you wear it, especially if it was not in contact with skin. If there are no visible stains or odors, air it and use it again. Skipping a wash is good for the environment.</li>
+<li>⭐ Many stains should be pre-treated because they are hard to remove. Main categories:
+<ul>
+<li>Water-soluble (sugar, toothpaste, salt) → rinse or wash</li>
+<li>Particulate (charcoal, ash, burnt residues, soil, rust) → bleach and detergent are not helpful; use soap and scrub</li>
+<li>Grease (oil, butter, sauce, makeup, sebum, body oils, lubricant) → best option is surfactants in detergents, specific stain removers, or in a pinch shampoo, which shares some ingredients. Let it work, then rinse thoroughly</li>
+<li>Bleachable (many types: chlorophyll, fruit/vegetable stains, tea, coffee, henna, mustard, curry) → detergents may suffice, but a bleach can finish the job</li>
+<li>Enzyme-treatable (various: blood, grass, body fluids, eggs, milk) → use proteases at room temperature, since heat sets proteins. They should be in detergents; check the label. Otherwise use bleach.</li>
+</ul>
+</li>
+<li>For yellowed linens (oxidation of sebum or cellulose) try a bleaching treatment once. If the fibers are degraded, there is nothing to do.</li>
+<li>⭐ Do not underestimate fabric softeners. They are designed to keep fibers soft and reduce friction. There is a lot of marketing since the core formula is similar (cationic surfactants that protect the fabric from limescale). Scents vary, so pick what you like. Do not use too much or it can coat the fabric and leave it greasy. It can irritate skin and, if overused, may reduce durability.</li>
+</ul>
+<h3 id="7-dishes-pots-and-glasses">7. Dishes, pots, and glasses</h3>
+<ul>
+<li>⭐ The dishwasher is by far the most effective way to wash dishes. About 90% of the cleaning power is the mechanical action of water (the rest is heat and a small contribution from detergent). Bressanini debunks the idea that handwashing is more ecological or effective: dishwashers clean roughly 3 to 4 times better and use little (around 10 L and a few tens of watts in ECO mode). Handwashing can use 35 to 470 L and can account for about 50% of household water use. It is a clear win.</li>
+<li>Handwashing is fine if you have no alternative. It is better to soak items in a basin with water and detergent, then rinse, to avoid wasting water.</li>
+<li>⭐ Pre-rinsing dishes before the dishwasher is largely unnecessary. Modern machines are powerful. Unless it is a heavily encrusted pot (they are less effective there), you do not need to pre-rinse. If needed, run a second cycle or clean it afterward.</li>
+<li>⭐ Use dishwasher-specific detergents. They foam less, include enzymes, small amounts of surfactants (to prevent redeposition since cleaning is mechanical), bleaches, anti-limescale agents, and silicates to protect glass.</li>
+<li>You can choose powders, liquids, tablets, or pods. They are interchangeable. Liquids, gels, and pods can be more convenient. Try products and choose what convinces you.</li>
+<li>Bleach food containers with deep tomato stains. Tomato pigments are hard to remove from plastic.</li>
+<li>Use dishwasher salt. It is similar to table salt but purer, so it will not damage the appliance. It costs a bit more. Do not skimp.</li>
+<li>If glasses turn cloudy, it could be manufacturing defects, deposits, or irreversible abrasion. If you notice permanent clouding, there is nothing to do; replace the glasses. You can try a different detergent and ensure you use rinse aid to help prevent it.</li>
+</ul>
+<h3 id="8-disinfectants">8. Disinfectants</h3>
+<ul>
+<li>These are tightly regulated devices. By law they must eliminate 99.99% of bacteria on a surface. There are complex requirements, but in general they must act quickly and not be toxic when used as directed.</li>
+<li>⭐ Focus on where to use them. Most transmission occurs, in order:
+<ol>
+<li>Where food is handled (cutting boards, sponges)</li>
+<li>Eating with unwashed hands</li>
+<li>Using toilets or changing a diaper</li>
+<li>Coughing/sneezing</li>
+<li>Other (in order: surfaces touched by a sick person, contaminated laundry, animals, trash, other infected people)</li>
+</ol>
+</li>
+<li>⭐ As we see, floors and even dirty clothes are relatively low risk, since we do not eat off them. Disinfecting them constantly, unless there is an immunocompromised person, is wasteful, and microbes return within hours.</li>
+<li>Several forms exist: concentrates, sprays, wipes (convenient but less effective).</li>
+<li>Other substances can disinfect in principle, like hydrogen peroxide, vinegar, or bleach, but they are not formulated for this purpose on surfaces. If you have nothing else, OK, but purpose-made disinfectants are much more effective.</li>
+<li>⭐ The best way to disinfect a sponge is the microwave. It kills the vast majority of microbes thanks to the high temperature and microwaves. Bressanini cites a study recommending placing the sponge in a vented container for one minute at maximum power.</li>
+<li>Disinfectants kill molds, so they are recommended for cleaning the fridge and cutting boards. On moldy walls there is often little to do; spores can persist in porous surfaces.</li>
+<li>⭐ The fear of pesticide residues on fruit and vegetables is generally overstated in Europe. Regulations are strict. Unless you are pregnant and need extra precautions, rinsing produce under running water is enough. In one study only about 1% of samples were above safety limits, and about 60% had no detectable residues.</li>
+</ul>
+<h3 id="9-baking-soda">9. Baking soda</h3>
+<ul>
+<li>Bonus chapter because Bressanini criticizes influencers who recommend baking soda for everything just because it seems safe (we eat it), it fizzes (carbon dioxide bubbles, which do nothing), and it is cheap. It is not made for cleaning.</li>
+<li>⭐ It is an antacid, useful for heartburn. It neutralizes vinegar, so using them together (a common traditional tip) cancels them out.</li>
+<li>It softens vegetables, which can speed up cooking when added to the water. It is also useful for absorbing acidic liquids.</li>
+<li>It does not wash, does not degrease, does not dissolve limescale, does not whiten, does not sanitize, does not capture odors (it masks them), does not disinfect, and does not unclog drains.</li>
+</ul>
+<h3 id="10-glass-and-surfaces">10. Glass and surfaces</h3>
+<ul>
+<li>For mirrors, Bressanini looks at Vetril (which I also use): water, ethyl alcohol to dissolve fats, surfactants to capture dirt, preservatives, and fragrances. Nothing special.</li>
+<li>Carpets and furniture: use specific products. For floors, a mop with an appropriate cleaner works well.</li>
+<li>⭐ Classic clogged drain: this happens because solid residues build up in the pipe (often food). In extreme cases you need a plumber (there must be at least a trickle of water; if totally blocked avoid forcing it). Before that, try in this order (ignore bad advice online; do not use baking soda):
+<ol>
+<li>An acid to dissolve limescale: vinegar or citric acid is fine, better when warm</li>
+<li>A couple of liters of hot water around 60 C to dissolve solidified grease</li>
+<li>Caustic soda (sodium hydroxide) for protein residues; many drain openers use this</li>
+<li>A plunger if it is still clogged</li>
+</ol>
+</li>
+</ul>
+<h3 id="11-odors">11. Odors</h3>
+<p>This material was available online with further cases (dishes, sink, trash, litter box).</p>
+<ul>
+<li>Brief chemistry of odors, skipping details here.</li>
+<li>In the fridge:
+<ul>
+<li>For strong cheeses like gorgonzola, cover with plastic wrap</li>
+<li>For acidic food leaks (vegetables, fruit), first discard the spoiled food, then sprinkle baking soda to absorb and wipe with a sponge and a bit of baking soda to collect it</li>
+<li>For alkaline food leaks (fish), same process, but use an acid like citric acid (lemon juice diluted in some water) or vinegar, which has its own smell. Classic pH reminder: acids neutralize bases and vice versa. Always rinse afterward</li>
+<li>If odors persist, check the drip tray. You cannot access it easily, but let two or three drops of bleach run down to kill bacteria</li>
+</ul>
+</li>
+<li>For shoes: if possible, wash them in the machine. A chemically sensible option is to use baking soda powder. Put in a heaping tablespoon and shake the shoe to spread it everywhere. Leave it for a full day, then shake out the powder and vacuum the inside. It will not neutralize every odor, since not all malodorous compounds are acidic, but it helps, though it is not a definitive solution.</li>
+</ul>
+
+  </div>
+
+  <div class="book-footer mt-5 text-center">
+    <a href="/books/" class="book-back-link">← Back to all books</a>
+  </div>
+
+</div>
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/12/on-ai-slop/">
+                        <img src="/images/ai_slop/slop.png" class="card-img-top" alt="On AI Slop">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/12/on-ai-slop/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="On AI Slop">On AI Slop</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>I&rsquo;ve started to notice a very predictable trend: AI-generated messages in my inbox.</p>
+<p>What finally pushed me to write this was how casually people are dumping GPT-generated text into their communications, apparently believing two things:</p>
+<ul>
+<li>That people won&rsquo;t notice</li>
+<li>That people will actually …</li></ul></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Dec 24, 2025</span>
+                    <a href="/posts/2025/12/on-ai-slop/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/08/test-mind-maps/">
+                        <img src="/images/markmap/title.png" class="card-img-top" alt="How we test 100k-Line Nested JSON trees without going insane">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/08/test-mind-maps/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="How we test 100k-Line Nested JSON trees without going insane">How we test 100k-Line Nested JSON trees without going insane</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Today I want to share an interesting challenge that&rsquo;s been bugging me since I joined InvestSuite last December.
+It&rsquo;s stories like this that makes me happy to be a developer, being able to address things that are ruining my day and get rid of them. It feels so satisfying.</p>
+<p>We work with …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Aug 11, 2025</span>
+                    <a href="/posts/2025/08/test-mind-maps/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/06/we-have-no-idea-book/">
+                        <img src="/images/physics/cover.jpg" class="card-img-top" alt="A Physics book for people who hate Physics">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="A Physics book for people who hate Physics">A Physics book for people who hate Physics</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>My relationship with physics has always been… troubled.</p>
+<p>Probably because I had a high school teacher who never managed to spark any interest in me, I just never caught up. I remember sitting silently at my final exam (Maturità) when the physics question came up, completely blank. I also struggled …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jun 15, 2025</span>
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io/" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

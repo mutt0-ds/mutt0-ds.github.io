@@ -3,7 +3,7 @@ title: Head First HTML and CSS
 author: Eric Freeman, Elisabeth Ronson
 image: https://images-na.ssl-images-amazon.com/images/I/51JzHZFVsLL._SX430_BO1,204,203,200_.jpg
 badges:
-- "📊 IT"
+- "💻 IT"
 score: "⭐⭐⭐"
 finished: '2022-02-19'
 summary: HTML and CSS have a few issues across different browsers, but they are essential
