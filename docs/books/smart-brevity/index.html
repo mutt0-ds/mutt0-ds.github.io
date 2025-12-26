@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="http://localhost:1313/books/smart-brevity/">
+  <meta property="og:site_name" content="Mutt0-ds Notes">
+  <meta property="og:title" content="Smart Brevity">
+  <meta property="og:description" content="In short, be brief. People do not have time">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="books">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Smart Brevity">
+  <meta name="twitter:description" content="In short, be brief. People do not have time">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+  <title>
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/books" title="Books">
+                            
+                            Books
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<link rel="stylesheet" href="/css/books.css">
+
+<div class="container py-5 book-page text-center">
+  
+  <div class="book-header mb-4">
+    <img src="https://m.media-amazon.com/images/I/71-uDwQUDXL._AC_UF1000,1000_QL80_.jpg" alt="Smart Brevity" class="book-cover mb-3">
+    <h1 class="book-title">Smart Brevity</h1>
+    <p class="book-author"><em>Jim VandeHei</em></p>
+
+    
+    <p class="book-finished mb-2">
+      <span class="finished-label">📅 Finished on:</span> 2023-12-22
+    </p>
+    
+
+    
+    <div class="book-badges my-2">
+       
+      <span class="badge badge-communication">📢 Communication</span>
+       
+      <span class="badge badge-work">💼 Work</span>
+      
+    </div>
+    
+
+    
+    <div class="book-score mt-2">
+      ⭐️⭐️⭐️
+    </div>
+    
+
+    
+    <p class="book-summary mt-3 text-muted">
+      In short, be brief. People do not have time
+    </p>
+    
+  </div>
+
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    <p>Suggested by careercutler: everything you wish you could ask. Priority: I want to see how to communicate briefly and efficiently. Direct and brief, straight to the point, but a bit too promotional; the tone did not fully land for me, and I skimmed the end. In short, be brief. People do not have time</p>
+<p>Very focused on capturing attention, especially in emails and headlines, with clickbaity techniques. Nothing wrong with that but make sure to use it in the right context.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Delete! Before hitting &ldquo;send&rdquo;, try to delete even 50% if you can.</li>
+<li>Use BLUF (Bottom line up front). Give the main takeaway first. Context after.</li>
+<li>Make the &ldquo;why&rdquo; clear. You need to tell your reader why they should read the rest.</li>
+</ul>
+<h3 id="guiding-principles">GUIDING PRINCIPLES</h3>
+<p>Authority → Be the expert, or find one.
+Brevity → Stay short, not shallow.
+Humanity → Write like you speak.
+Clarity → Style text for impact.</p>
+<h2 id="intro">Intro</h2>
+<p>THE BOTTOM LINE: All of us confront an epic challenge: How do you
+get anyone to pay attention to anything that matters in this mess?
+OUR ANSWER: Adapt to how people consume content, not how you
+wish they did or how they did once upon a time. Then, change how you
+communicate, immediately. You can do this quickly by adopting Smart
+Brevity.</p>
+<p>Do more with less, go straight to the point and stand out from the ocean of noise.</p>
+<h2 id="the-core">The core</h2>
+<p>Structure is</p>
+<ul>
+<li>A muscular tease (clickbait) for the title</li>
+<li>One strong first sentence, a &ldquo;lead&rdquo;</li>
+<li>Why it matters (the key!)</li>
+<li>The choice to learn more, go deeper</li>
+</ul>
+<p>Tease
+BEFORE
+Hey, there are some new plans for the weekend to discuss re: birthday party
+AFTER
+New plan: trampoline park
+First Sentence
+BEFORE
+Sorry for the late change of plans but there has been so much chaos in pulling Jimmy&rsquo;s party
+together, especially with the weather this past week. The good news is we found a place to
+take all of the kids, that new trampoline park. We will do this Saturday at noon.
+AFTER
+We&rsquo;re moving Jimmy&rsquo;s party to the new trampoline park this Saturday at noon.
+Why It Matters
+BEFORE
+The only hitch is it&rsquo;s a little farther than we originally planned. The first spot we were
+looking at was a 30-minute drive, but the trampoline park has a lot more space, so we
+picked it even though it&rsquo;s about 40 minutes away. Just flagging for planning purposes.
+AFTER
+It&rsquo;s about a 40-minute drive, so you might need to leave a little earlier than we first
+thought.
+Go Deeper
+BEFORE
+The place is located at 1100 Wilson Street by that sushi restaurant we visited that had
+those awesome spider rolls. Ha ha. It starts at noon, and our session ends at 4 pm. Feel free
+to stay or go since we have the instructor and we will serve lunch and drinks. I will stay and
+read or worry. They should dress to play! Shorts and shirts, oh and socks required &hellip; see
+you soon and sorry again.
+AFTER
+• Arrive @ noon, 1100 Wilson Street.
+• Pizza &amp; drinks provided.
+• Pick up kids @ 4 pm.
+• Dress to play. Socks REQUIRED.
+EXAMPLE #2
+Tease
+BEFORE
+Board of Directors Update
+AFTER
+We wowed our Board
+First Sentence
+BEFORE
+We presented on our progress toward our go-to-market plan in our most recent Board of
+Directors meeting, Wednesday, including strong product sales over the last quarter within
+the scope of our beta test. We were able to &ldquo;wow&rdquo; the Board with a report including a 12
+percent jump in revenue over the last quarter, which puts us an extraordinary 90 percent of
+the way to our overall goal for the second half.
+AFTER
+We stunned the Board Wednesday with Q3&rsquo;s 12% revenue jump, putting us 90% to goal for
+H2.
+Why It Matters
+BEFORE
+Strong product sales will allow us to increase investment in key early growth opportunities
+across tech and marketing. We&rsquo;re updating the second-half roadmap with big investments
+in the tech team, particularly on the machine learning squad, marketing, to support Ava&rsquo;s
+team with our new pitch and positioning, and in some exciting new collaborations with
+firms doing work where we don&rsquo;t have internal capacity but do have a strategic need to
+add expertise.
+AFTER
+Higher revenue means we can invest in two areas that will speed up our go-to-market plan
+by months.
+• New hires: We can add key machine learning roles on the tech and
+marketing teams.
+• Partnerships: We&rsquo;ll finalize two deals to expand our skills and
+strategic thinking.
+Go Deeper
+BEFORE
+If you haven&rsquo;t taken time to review Ava&rsquo;s new pitch and positioning documents, we
+encourage everyone to do so. The new talking points went through a lot of testing with
+focus groups and reflect our best argument to date on why our solution is the best in the
+industry.
+AFTER
+Our product speaks for itself, but it was Ava&rsquo;s new pitch, tested over three weeks of focus
+groups, that got it into customers&rsquo; hands.
+• Please review Ava&rsquo;s materials on the intranet</p>
+<h2 id="the-road-to-smart-brevity">The road to Smart Brevity</h2>
+<p>They discovered that no one was reading their thousand words on newspaper: Roughly 5 percent said they valued longer stories the most. Listen to the customer and data, not the voice inside your head. If they read 200 words, let&rsquo;s give them the best 200 words.</p>
+<h3 id="audience-first">Audience first</h3>
+<p>If you try to speak to everyone, usually you reach no one. Singling out the person you want to reach clarifies things big-time. We hide our insecurity in additional words: Your message is lost, your sincerity is in question and your competence gives me pause, because you&rsquo;re all
+over the place</p>
+<ul>
+<li>Focus on ONE person you are targeting.</li>
+<li>Plot out ONE thing you want them to remember.</li>
+<li>Then write it down.</li>
+<li>And stop.
+Tip: Talk to someone else (or yourself - no one will know) about the point you want to make</li>
+</ul>
+<h3 id="be-worthy">Be worthy</h3>
+<p>The typical person spends just 26 seconds on a story or
+update. He calls it &ldquo;time on text.&rdquo; The rest is wasted.</p>
+<p>In a world full of noise, people reward you if you respect their time and intelligence. This truth is universal. The opposite is true too: They find you annoying if you chew up their time.</p>
+<p>Do a real gut check. Is this point or detail or concept essential? If so, is there a simpler way to convey it?</p>
+<h3 id="grab-me">Grab me!</h3>
+<p>Focus on headlines: first 6 words (enough for a phone) are the key for grabbing attention:</p>
+<ul>
+<li>In 10 words or less, write the reason you&rsquo;re bothering to write
+something in the first place.</li>
+<li>Write it in the most provocative yet accurate way possible.</li>
+<li>Short words are strong words. A general rule: A one-syllable word
+is stronger than a two-syllable word is stronger than a three-
+syllable word.</li>
+<li>Strong words are better than soft and soggy ones.</li>
+<li>Active verbs ALWAYS.</li>
+</ul>
+<h3 id="one-big-thing">One big thing</h3>
+<p>Pick up only one thing people should know, and do it in ONE sentence. People when read are thinking</p>
+<ul>
+<li>WTH is this</li>
+<li>Is it worth my time?
+So, skip all the anecdotes and useless wording and just go straight to the point. and then ask If this is the ONLY thing the person sees or hears, is it exactly what you want to stick?</li>
+</ul>
+<p>And then if there is a problem immediately provide your next step.</p>
+<p>WHY IT MATTERS is the strongest one</p>
+<h3 id="emojis">Emojis</h3>
+<p>What&rsquo;s more minimal than emojis? A sentiment in one character. They can stand out in the inbox and, if used sparingly, can convey your message and catch the attention</p>
+<h3 id="mikes-tips--tricks">Mike&rsquo;s Tips &amp; Tricks</h3>
+<p>You choose the ingredients, not the readers. So show them in the right order and with the right tools</p>
+<p>Being selfless is selfishly beneficial → if you are picky, people will know that what you say matters</p>
+<h3 id="the-art-of-the-newsletters">The art of the newsletters</h3>
+<p>Some sparse advice, I think the best are: max 1000 words and 200 for item, start big, add personal touch and end funny. Also, opening rates are higher in the morning and you should send updates on Monday</p>
+<h3 id="the-art-of-the-speeches">The art of the speeches</h3>
+<p>Some simple tips: anyway keep it short obviously, your objective is to not fail</p>
+<ol>
+<li>Win before you begin → don&rsquo;t copy others, attention must be on you</li>
+<li>Remember your audience → you will be lucky if they will remember one point, they will mostly check their phone. BUT, try to make it short and fun, like if you run into a neighbor, that&rsquo;s the length</li>
+<li>Distill your point in ONE SHORT SENTENCE</li>
+<li>Hit them over their head with your point (&ldquo;The one thing I want you to remember today is . . &ldquo;)</li>
+<li>Use the &ldquo;why it matters&rdquo; and confirm it with a couple of stories</li>
+</ol>
+<h3 id="the-art-of-social-media">The art of social media</h3>
+<p>You have even less time, a blink of an eye to catch attention. Catchy titles, emoji, catchphrases. Keep it short. Also images should be kept minimal!</p>
+
+  </div>
+
+  <div class="book-footer mt-5 text-center">
+    <a href="/books/" class="book-back-link">← Back to all books</a>
+  </div>
+
+</div>
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/12/on-ai-slop/">
+                        <img src="/images/ai_slop/slop.png" class="card-img-top" alt="On AI Slop">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/12/on-ai-slop/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="On AI Slop">On AI Slop</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>I&rsquo;ve started to notice a very predictable trend: AI-generated messages in my inbox.</p>
+<p>What finally pushed me to write this was how casually people are dumping GPT-generated text into their communications, apparently believing two things:</p>
+<ul>
+<li>That people won&rsquo;t notice</li>
+<li>That people will actually …</li></ul></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Dec 24, 2025</span>
+                    <a href="/posts/2025/12/on-ai-slop/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/08/test-mind-maps/">
+                        <img src="/images/markmap/title.png" class="card-img-top" alt="How we test 100k-Line Nested JSON trees without going insane">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/08/test-mind-maps/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="How we test 100k-Line Nested JSON trees without going insane">How we test 100k-Line Nested JSON trees without going insane</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Today I want to share an interesting challenge that&rsquo;s been bugging me since I joined InvestSuite last December.
+It&rsquo;s stories like this that makes me happy to be a developer, being able to address things that are ruining my day and get rid of them. It feels so satisfying.</p>
+<p>We work with …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Aug 11, 2025</span>
+                    <a href="/posts/2025/08/test-mind-maps/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/06/we-have-no-idea-book/">
+                        <img src="/images/physics/cover.jpg" class="card-img-top" alt="A Physics book for people who hate Physics">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="A Physics book for people who hate Physics">A Physics book for people who hate Physics</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>My relationship with physics has always been… troubled.</p>
+<p>Probably because I had a high school teacher who never managed to spark any interest in me, I just never caught up. I remember sitting silently at my final exam (Maturità) when the physics question came up, completely blank. I also struggled …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jun 15, 2025</span>
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="http://localhost:1313/" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

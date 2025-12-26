@@ -1,16 +1,16 @@
 ---
-title: Love, sex and long-term relationships what people with Asperger syndrome really, really want
+title: Love, sex and long-term relationships
 author: Sarah Hendrickx
 image: https://m.media-amazon.com/images/P/B0032UXMX2.01._SCLZZZZZZZ_SX500_.jpg
 badges:
 - "🧠 Psychology"
 score: "⭐⭐⭐⭐"
 finished: '2023-01-25'
-summary: Recognizing Asperger syndrome, communicating with your partner, and helping them understand your differences are key to a stable, lasting relationship
+summary: Recognizing AS, communicating with your partner, and helping them understand your differences are key to a stable, lasting relationship
 showInHome: false
 ---
 
-The structure intrigued me, and it is a very small book. Reviews are not great; it interviewed a small sample of people, so I took it mostly as anecdotal. I still liked it, I saw myself a bit in many parts, and it gives a rational angle to think about. Full of quotes from AS and NT about their relationships, often very different. Read quickly.
+The structure intrigued me, and it is a very small book. Reviews are not great; it interviewed a small sample of people, so I took it mostly as anecdotal. Read quickly.
 
 ## Notes
 

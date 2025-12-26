@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="http://localhost:1313/books/sql-antipatterns/">
+  <meta property="og:site_name" content="Mutt0-ds Notes">
+  <meta property="og:title" content="SQL Antipatterns">
+  <meta property="og:description" content="Shooting yourself in the foot with SQL is easy. Think before making certain decisions">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="books">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SQL Antipatterns">
+  <meta name="twitter:description" content="Shooting yourself in the foot with SQL is easy. Think before making certain decisions">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+  <title>
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/books" title="Books">
+                            
+                            Books
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<link rel="stylesheet" href="/css/books.css">
+
+<div class="container py-5 book-page text-center">
+  
+  <div class="book-header mb-4">
+    <img src="https://pragprog.com/titles/bksqla/sql-antipatterns/bksqla.jpg" alt="SQL Antipatterns" class="book-cover mb-3">
+    <h1 class="book-title">SQL Antipatterns</h1>
+    <p class="book-author"><em>Bill Karwin</em></p>
+
+    
+    <p class="book-finished mb-2">
+      <span class="finished-label">📅 Finished on:</span> 2024-11-26
+    </p>
+    
+
+    
+    <div class="book-badges my-2">
+       
+      <span class="badge badge-work">💼 Work</span>
+       
+      <span class="badge badge-it">💻 IT</span>
+      
+    </div>
+    
+
+    
+    <div class="book-score mt-2">
+      ⭐️⭐️⭐️⭐️⭐️
+    </div>
+    
+
+    
+    <p class="book-summary mt-3 text-muted">
+      Shooting yourself in the foot with SQL is easy. Think before making certain decisions
+    </p>
+    
+  </div>
+
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    <p>Recommended by <a href="https://ludic.mataroa.blog/blog/i-am-out-of-data-hell/">the Ludic blog</a>, great book on mistakes to avoid with SQL (started from dynamic column values). I should have read it years ago. Excellent, highly recommended. Many insights on what not to do in SQL, plenty of useful gems. It helped me a lot: every DBA should read it.</p>
+<p>I love the bullet structure, with a story, a saying, an antipattern, and a pattern to follow, plus appendices. It is fairly DB-agnostic, but mentions commands from various tools.</p>
+<h2 id="notes">Notes</h2>
+<h2 id="1-logical-database-design-antipatterns">1. Logical Database Design Antipatterns</h2>
+<h3 id="jaywalking">Jaywalking</h3>
+<blockquote>
+<p>Store each value in its own column and row.
+Using lists inside a string to avoid creating a many-to-many is OK only if you never need to access those values; otherwise it is a nightmare for indexing.</p>
+</blockquote>
+<p>Instead, create a bridge table to connect them.</p>
+<h3 id="naive-trees">Naive Trees</h3>
+<blockquote>
+<p>A hierarchy consists of entries and relationships.
+Model both of these to suit your work.
+Example: a blog with many nested comments. How do you find the parent and display the whole thread while scaling well? The default choice is an adjacent list with a parent key, self-joining. But it scales poorly for the most common case: reconstructing the entire thread. Be careful with nested trees. A path approach is often the least painful even if not optimal, or nodes. Recursive queries are the best if your database supports them.</p>
+</blockquote>
+<h3 id="id-required">ID Required</h3>
+<blockquote>
+<p>Conventions are good only if they are helpful.
+Common case: everyone uses id as the primary key by convention, but who says you must? Better to use an id with a meaningful name like bug_id or technician_id and enforce the key on that column. It might even be a composite key (bug_id, technician_id), making a generic id column useless. If you have a framework like Prisma that expects an id, keep it. But be smart and deliberate with keys. The id convention can hide the real meaning of keys.</p>
+</blockquote>
+<h3 id="keyless-entry">Keyless Entry</h3>
+<blockquote>
+<p>Make your database mistake-proof with constraints.
+The antipattern is assuming input data maintains referential integrity, when in fact anything can happen: orphan rows, duplicates, and so on. Foreign keys are important because they block bad data at insert time. The tradeoff is you cannot remove or update a parent row without addressing the children, which often discourages their use. You see this antipattern when you find orphaned rows and automated checks for inconsistencies. The solution is to view foreign keys as ways to keep dirty data out in the first place, not as limitations. You can also assign cascading updates/deletes for efficiency.</p>
+</blockquote>
+<h3 id="entity-attribute-value">Entity-Attribute-Value</h3>
+<blockquote>
+<p>Use metadata for metadata.
+Avoid a generic attribute table. It seems clever for a flexible schema, but it is not. Those name-value tables let you put anything in. You cannot enforce required attributes, you cannot use proper data types if everything is a string, and you end up doing outer joins to fetch everything. Extensibility hurts usability. Use NoSQL if you truly need flexibility, or add a type column to identify the object type and allow many null columns. That is fine. If you need rigidity, use Single Table Inheritance. If you cannot change it, handle it in the frontend.</p>
+</blockquote>
+<h3 id="polymorphic-associations">Polymorphic Associations</h3>
+<blockquote>
+<p>In every table relationship, there is one referencing table
+and one referenced table
+These occur when a row in one table relates to exactly one row in one of several other tables. For example, a comment belongs to either a bug or a feature request. How do you enforce that? The antipattern is adding issue_type, mixing metadata with data. Then you do a Select * where issue_type = &ldquo;Bugs&rdquo;. The problem is it allows associations you do not want (like a comment without a valid parent). Solutions are either a bridge table (sometimes overkill) or using COALESCE with multiple joins to find the first non-null match.</p>
+</blockquote>
+<h3 id="multicolumn-attributes">Multicolumn Attributes</h3>
+<blockquote>
+<p>Store each value with the same meaning in a single column.
+Example: phone numbers. You might have many variants (assistant, emergency, office). Where do you put them? Same for tags. Similar to Jaywalking.</p>
+</blockquote>
+<p>Remember that changing the structure means adding a new column, copying the old data to the new one, setting the new one as main, then dropping the old one. Solution: create a separate table for the field if there are many relationships.</p>
+<h3 id="metadata-tribbles">Metadata Tribbles</h3>
+<blockquote>
+<p>Don’t let data spawn metadata.
+Performance worsens as data volume grows. Indexes help. The &ldquo;tribbles&rdquo; example is tables like Bugs_2009 and Bugs_2008, which create integrity, query, and synchronization problems. If you need a table per case X or a column per year, be concerned. This is only useful for archival.</p>
+</blockquote>
+<p>Use horizontal partitioning, vertical partitioning (as needed), or sharding instead.</p>
+<h2 id="2-physical-database-design-antipatterns">2. Physical Database Design Antipatterns</h2>
+<h3 id="rounding-errors">Rounding Errors</h3>
+<blockquote>
+<p>Do not use FLOAT if you can avoid it.
+Do not use FLOAT unless you are doing scientific calculations. Use NUMERIC/DECIMAL so you control precision and scale. Classic rounding issues otherwise.</p>
+</blockquote>
+<h3 id="31-flavors">31 Flavors</h3>
+<blockquote>
+<p>Use metadata when validating against a fixed set of values.
+Use data when validating against a fluid set of values.
+Example: Mr, Mrs, Ms. You think they are fixed, but languages and conventions change. Immutable sets tend to mutate. Do not hardcode allowed values at creation time or with CHECK constraints if they will evolve, because maintenance becomes hard. Use ENUM only if you are certain the set is immutable. Better solution: a lookup table with the allowed values, like BugStatus.</p>
+</blockquote>
+<h3 id="phantom-files">Phantom Files</h3>
+<blockquote>
+<p>Resources outside the database are not managed by the database.
+Files such as images are not part of the DB, so they do not follow DELETEs, backups, ROLLBACKs, and so on. You can use a BLOB field if you must, or manage external storage carefully (for example, today you might use S3).</p>
+</blockquote>
+<h3 id="index-shotgun">Index Shotgun</h3>
+<blockquote>
+<p>Know your data, know your queries, and MENTOR your indexes.
+Indexes are the secret weapon for the most important DB concept: performance. How not to use them?</p>
+</blockquote>
+<p>Do not add them randomly. Do not fill a table with indexes you will never use. Most engines create one for the primary key already. Prefer small, stable data types, not nvarchar(100) if you can avoid it. For composite indexes, the order matters; queries must use the leading columns. If you apply functions to the leftmost column, that index will not be used (same for LIKE &lsquo;%&hellip;&rsquo;). Use EXPLAIN and profilers to see how queries run. Rebuild or reorganize indexes periodically if your engine needs it.</p>
+<h2 id="3-query-antipatterns">3. Query Antipatterns</h2>
+<h3 id="fear-of-the-unknown">Fear of the Unknown</h3>
+<blockquote>
+<p>Use null to signify a missing value for any data type.
+Many dislike NULL because it behaves differently, but you just need to remember it is not a string or False; it is a specific marker meaning &ldquo;missing.&rdquo; Know the behavior, use IS NULL in queries, and leverage COALESCE. There is nothing wrong with NULL when the data can logically be missing. Be careful when comparing.</p>
+</blockquote>
+<h3 id="ambiguous-groups">Ambiguous Groups</h3>
+<blockquote>
+<p>Follow the Single-Value Rule to avoid ambiguous query results.
+A common mistake: doing GROUP BY with an aggregate (for example, max(date) by product_id) and then including other columns. The GROUP BY column must be the unique key for that aggregation (Single-Value Rule). Solutions: join back to fetch the remaining values (slower), or use an aggregate such as MAX or string aggregation on those columns.</p>
+</blockquote>
+<h3 id="random-selection">Random Selection</h3>
+<blockquote>
+<p>Some queries cannot be optimized; take a different approach.
+How to generate random data, e.g., show a random ad or create fake data. Do not use ORDER BY RAND() on large sets because it cannot use indexes. Use database-specific features (SQL Server TABLESAMPLE, etc.), or workarounds with numeric ranges, CEIL, and RAND on indexed columns.</p>
+</blockquote>
+<h3 id="poor-mans-search-engine">Poor Man’s Search Engine</h3>
+<blockquote>
+<p>You don’t have to use SQL to solve every problem.
+Implementing full-text search in plain SQL is hard. LIKE is slow. Either use external search engines or the built-in features of your DB. MySQL has FULLTEXT INDEX, SQL Server has full-text search, PostgreSQL has TSVECTOR with GIN.</p>
+</blockquote>
+<h3 id="spaghetti-query">Spaghetti Query</h3>
+<blockquote>
+<p>Although SQL makes it seem possible to solve a complex problem in a
+single line of code, don’t be tempted to build a house of cards.
+Because complex queries are hard, developers tend to put everything into one giant statement. That often complicates things. Watch out for Cartesian products. If you forget a join between two tables, their rows multiply, and sums will explode. Using DISTINCT is a band-aid that hides the problem and slows the query. Prefer subqueries, temp tables, or CTEs that solve the problem step by step.</p>
+</blockquote>
+<h3 id="implicit-columns">Implicit Columns</h3>
+<blockquote>
+<p>Take all you want, but eat all you take.
+Sometimes, to reduce typing, developers use wildcards like * or DEFAULT. This creates problems if the schema changes and the script still assumes DEFAULTs or a dropped column. You fetch everything and miss omissions or column order changes in the application. It also hurts performance, readability, and scalability. Use explicit column lists unless you are doing a quick ad-hoc query. You will need explicit names anyway when you use the results.</p>
+</blockquote>
+<h2 id="4-application-development-antipatterns">4. Application Development Antipatterns</h2>
+<h3 id="readable-passwords">Readable Passwords</h3>
+<blockquote>
+<p>If you can read passwords, so can a hacker.
+Do not store passwords in clear text and do not email them to users. Hash passwords (SHA-256 or better) and add a randomly generated salt to avoid reverse lookups from common password lists. You cannot read the password back, but you can send a reset link or a short-lived token. In general, do not roll your own auth.</p>
+</blockquote>
+<h3 id="sql-injection">SQL Injection</h3>
+<blockquote>
+<p>Let users input values, but never let users input code.
+Classic SQL injection. Do not concatenate user strings into SQL. Use parameters or sanitize input. Always review any user-controlled input that touches a query (sorting, selecting, filtering) whether via a form or a URL. Modern frameworks help.</p>
+</blockquote>
+<h3 id="pseudokey-neat-freak">Pseudokey Neat-Freak</h3>
+<blockquote>
+<p>Use pseudokeys as unique row identifiers; they’re not row numbers.
+Do not try to fill gaps if some auto-incremented IDs are missing because rows were deleted. Sequences keep incrementing and patching gaps creates needless risk. If you need to roll back deleted rows, you will collide with new IDs. It is usually just deleted rows or errors. Pseudokeys only need to be unique, not sequential. Communicate this clearly to users who worry about gaps.</p>
+</blockquote>
+<h3 id="see-no-evil">See No Evil</h3>
+<blockquote>
+<p>Troubleshooting code is already hard enough.
+Don’t hinder yourself by doing it blind.
+Handle query errors explicitly instead of guessing or masking failures. The database can fail, a query can be wrong, or connectivity can drop. Handle errors at the application level and surface enough context to troubleshoot.</p>
+</blockquote>
+<h3 id="diplomatic-immunity">Diplomatic Immunity</h3>
+<blockquote>
+<p>Use software development best practices, including documentation, testing, and source control, for your database as well as your application.
+Self-explanatory.</p>
+</blockquote>
+<h3 id="magic-beans">Magic Beans</h3>
+<blockquote>
+<p>Decouple your models from your tables.
+This one is more architectural. Decouple database tables from pure domain objects. An object has a table, it is not the table. Give the object its own functions and behavior to interact with the DB, and query through that interface. This avoids tangling objects and tables and keeps the two layers decoupled.</p>
+</blockquote>
+
+  </div>
+
+  <div class="book-footer mt-5 text-center">
+    <a href="/books/" class="book-back-link">← Back to all books</a>
+  </div>
+
+</div>
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/12/on-ai-slop/">
+                        <img src="/images/ai_slop/slop.png" class="card-img-top" alt="On AI Slop">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/12/on-ai-slop/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="On AI Slop">On AI Slop</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>I&rsquo;ve started to notice a very predictable trend: AI-generated messages in my inbox.</p>
+<p>What finally pushed me to write this was how casually people are dumping GPT-generated text into their communications, apparently believing two things:</p>
+<ul>
+<li>That people won&rsquo;t notice</li>
+<li>That people will actually …</li></ul></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Dec 24, 2025</span>
+                    <a href="/posts/2025/12/on-ai-slop/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/08/test-mind-maps/">
+                        <img src="/images/markmap/title.png" class="card-img-top" alt="How we test 100k-Line Nested JSON trees without going insane">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/08/test-mind-maps/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="How we test 100k-Line Nested JSON trees without going insane">How we test 100k-Line Nested JSON trees without going insane</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Today I want to share an interesting challenge that&rsquo;s been bugging me since I joined InvestSuite last December.
+It&rsquo;s stories like this that makes me happy to be a developer, being able to address things that are ruining my day and get rid of them. It feels so satisfying.</p>
+<p>We work with …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Aug 11, 2025</span>
+                    <a href="/posts/2025/08/test-mind-maps/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/06/we-have-no-idea-book/">
+                        <img src="/images/physics/cover.jpg" class="card-img-top" alt="A Physics book for people who hate Physics">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="A Physics book for people who hate Physics">A Physics book for people who hate Physics</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>My relationship with physics has always been… troubled.</p>
+<p>Probably because I had a high school teacher who never managed to spark any interest in me, I just never caught up. I remember sitting silently at my final exam (Maturità) when the physics question came up, completely blank. I also struggled …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jun 15, 2025</span>
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="http://localhost:1313/" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
