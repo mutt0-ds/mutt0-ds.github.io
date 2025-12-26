@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hands-on Machine Learning with Scikit-Learn and TensorFlow on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/books/hands-on-machine-learning-with-scikit-learn-and-tensorflow/</link>
+    <link>https://mutt0-ds.github.io/books/hands-on-machine-learning-with-scikit-learn-and-tensorflow/</link>
     <description>Recent content in Hands-on Machine Learning with Scikit-Learn and TensorFlow on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/books/hands-on-machine-learning-with-scikit-learn-and-tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/books/hands-on-machine-learning-with-scikit-learn-and-tensorflow/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
