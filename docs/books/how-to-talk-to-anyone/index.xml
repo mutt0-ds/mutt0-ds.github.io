@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>How To Talk To Anyone on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/books/how-to-talk-to-anyone/</link>
+    <link>http://localhost:1313/books/how-to-talk-to-anyone/</link>
     <description>Recent content in How To Talk To Anyone on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://mutt0-ds.github.io/books/how-to-talk-to-anyone/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/books/how-to-talk-to-anyone/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

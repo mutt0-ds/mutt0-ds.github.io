@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Books on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/books/</link>
+    <link>http://localhost:1313/tags/books/</link>
     <description>Recent content in Books on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 21 Jun 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/books/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First time with Tailwind CSS: showing off my books!</title>
-      <link>https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/</link>
+      <link>http://localhost:1313/posts/2022/06/my-books-tailwind/</link>
       <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/</guid>
+      <guid>http://localhost:1313/posts/2022/06/my-books-tailwind/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m back with another post, this time exploring a new CSS framework, &lt;a href=&#34;https://tailwindcss.com/&#34;&gt;Tailwind CSS&lt;/a&gt;!&lt;/p&gt;&#xA;&lt;p&gt;In the previous months I started using Angular and Typescript for some small web apps and dashboards, but I always found CSS management cumbersome. I could spend hours tweaking font-size and align-items parameters and hard-coding variables, and this wasn&amp;rsquo;t a lot of fun.&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s why I decided to try Tailwind, which is being heavily recommended by many people in the frontend community! I just needed the right idea before starting to code&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>
