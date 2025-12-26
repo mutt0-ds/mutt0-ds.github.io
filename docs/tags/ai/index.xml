@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ai on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/ai/</link>
+    <link>https://mutt0-ds.github.io/tags/ai/</link>
     <description>Recent content in Ai on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>On AI Slop</title>
-      <link>http://localhost:1313/posts/2025/12/on-ai-slop/</link>
+      <link>https://mutt0-ds.github.io/posts/2025/12/on-ai-slop/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025/12/on-ai-slop/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2025/12/on-ai-slop/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve started to notice a very predictable trend: AI-generated messages in my inbox.&lt;/p&gt;&#xA;&lt;p&gt;What finally pushed me to write this was how casually people are dumping GPT-generated text into their communications, apparently believing two things:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;That people won&amp;rsquo;t notice&lt;/li&gt;&#xA;&lt;li&gt;That people will actually read it&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;When I received what was clearly an AI-generated Christmas card, that was enough.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-i-mean-by-ai-slop&#34;&gt;What I mean by AI slop&lt;/h3&gt;&#xA;&lt;p&gt;This sits inside a broader problem. AI models are producing large amounts of boring, verbose, low-effort, LAZY content, and it is steadily flooding the web. Others, like &lt;a href=&#34;https://www.youtube.com/watch?v=_zfN9wnPvU0&#34;&gt;Kurzgesagt&lt;/a&gt; or &lt;a href=&#34;https://www.youtube.com/watch?v=TWpg1RmzAbc&#34;&gt;Last Week Tonight&lt;/a&gt;, have explored this more publicly, but the pattern is easy to recognise once you&amp;rsquo;ve seen it a few times.&lt;/p&gt;</description>
     </item>
     <item>
       <title>No, AI is not replacing Data Engineers.</title>
-      <link>http://localhost:1313/posts/2025/05/ai-and-data-engineering/</link>
+      <link>https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/</link>
       <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025/05/ai-and-data-engineering/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.anthropic.com/news/claude-4&#34;&gt;Claude 4&lt;/a&gt; landed, and as usual, it kicked off the usual hype cycle.&#xA;&amp;ldquo;Best coding model ever&amp;rdquo; &amp;ldquo;It writes stories!&amp;rdquo; &amp;ldquo;AI is replacing programmers!&amp;rdquo; And of course, LinkedIn is buzzing with non-technical folks declaring how engineers are doomed and it’s time to &amp;ldquo;rethink talent&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Anthropic CEO even dropped a &lt;a href=&#34;https://www.pcmag.com/news/anthropic-ceo-ai-poised-to-wipe-out-50-of-entry-level-jobs-in-next-5-years&#34;&gt;spicy take&lt;/a&gt;: AI could wipe out &lt;strong&gt;half&lt;/strong&gt; of all entry-level white-collar jobs and spike unemployment to 10–20% in the next 1–5 years.&lt;/p&gt;</description>
     </item>
     <item>
       <title>45 Minutes, 100% AI-Generated Code</title>
-      <link>http://localhost:1313/posts/2025/04/ai-generated-code/</link>
+      <link>https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/</link>
       <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025/04/ai-generated-code/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/</guid>
       <description>&lt;p&gt;Last Saturday, I woke up with an idea: what if &lt;strong&gt;&lt;a href=&#34;https://www.investsuite.com/storyteller&#34;&gt;StoryTeller&lt;/a&gt;, the product I work on, had an interactive dashboard with an AI agent that could perform tasks&lt;/strong&gt;?&#xA;It was one of those half-formed concepts I could picture it but couldn&amp;rsquo;t quite articulate it. I knew if I wanted my team to take it seriously, I&amp;rsquo;d need to build something tangible. Otherwise, it&amp;rsquo;d just sound like abstract brainstorming.&lt;/p&gt;&#xA;&lt;p&gt;So, I sinned. I &lt;em&gt;vibe coded&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Giving our AI superpowers with OpenAI Tools</title>
-      <link>http://localhost:1313/posts/2024/06/ai-superpowers-tools/</link>
+      <link>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2024/06/ai-superpowers-tools/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</guid>
       <description>&lt;p&gt;In recent months, I have been experimenting with AI tools to leverage new, powerful technologies and create value. Like you, I am inundated with hype and buzzwords, and this makes things complicate, when trying to get started. While looking for simple answers to my questions, it’s often challenging to extract real value. So, I want to share my notes to help others with similar needs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-business-case-an-ai-analyst&#34;&gt;My Business Case: an AI Analyst&lt;/h2&gt;&#xA;&lt;p&gt;Let’s start with the big question I had in my mind:&lt;/p&gt;</description>
     </item>
     <item>
       <title>What Power BI is still missing</title>
-      <link>http://localhost:1313/posts/2023/03/what-power-bi-is-missing/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/03/what-power-bi-is-missing/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</guid>
       <description>&lt;p&gt;During these months, I had the chance to take a look at Power BI at the enterprise level, juggling advanced requests from hundreds of users and reports. I am impressed by all the features that the developers have rolled out recently, greatly improving both user and creator experiences. However, one should always maintain an impartial critical vision of the tools, no matter how useful they can be. For this reason, I decided to share my thoughts about some features that are currently lacking or require over-complicated solutions (often from third-party tools), in the hope that Microsoft will find them useful when working on Power BI&amp;rsquo;s development roadmap.&lt;/p&gt;</description>
     </item>
   </channel>
