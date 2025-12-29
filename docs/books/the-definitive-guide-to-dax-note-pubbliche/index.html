@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://mutt0-ds.github.io/books/the-definitive-guide-to-dax-note-pubbliche/">
+  <meta property="og:site_name" content="Mutt0-ds Notes">
+  <meta property="og:title" content="The Definitive Guide to DAX">
+  <meta property="og:description" content="Power BI and DAX are complex; you need to know them in detail to use them well">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="books">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Definitive Guide to DAX">
+  <meta name="twitter:description" content="Power BI and DAX are complex; you need to know them in detail to use them well">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+  <title>
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/books" title="Books">
+                            
+                            Books
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<link rel="stylesheet" href="/css/books.css">
+
+<div class="container py-5 book-page text-center">
+  
+  <div class="book-header mb-4">
+    <img src="https://m.media-amazon.com/images/P/1509306978.01._SCLZZZZZZZ_SX500_.jpg" alt="The Definitive Guide to DAX" class="book-cover mb-3">
+    <h1 class="book-title">The Definitive Guide to DAX</h1>
+    <p class="book-author"><em>Marco Russo, Alberto Ferrari</em></p>
+
+    
+    <p class="book-finished mb-2">
+      <span class="finished-label">📅 Finished on:</span> 2022-08-28
+    </p>
+    
+
+    
+    <div class="book-badges my-2">
+       
+      <span class="badge badge-it">💻 IT</span>
+      
+    </div>
+    
+
+    
+    <div class="book-score mt-2">
+      ⭐️⭐️⭐️⭐️⭐️
+    </div>
+    
+
+    
+    <p class="book-summary mt-3 text-muted">
+      Power BI and DAX are complex; you need to know them in detail to use them well
+    </p>
+    
+  </div>
+
+  <div class="book-content text-start mx-auto" style="max-width: 720px;">
+    <p>Fascinating book, though the reading is long and very technical. The authors explore the whole world behind DAX and almost every chapter left me with essential concepts. Chapter 4, with filter/row context, and 5 with CALCULATE are key to understanding how the language actually works, but I really understood them only on the second pass, after finishing the book and going back as the authors suggest. Learning how to use variables, which in my previous experience were often overlooked and used only when strictly necessary, can make the difference for readable code.</p>
+<p>I would add that tools such as DAX Studio and Tabular Editor become very important; I started exploring them in the final chapters.</p>
+<p>All the examples are well made and useful both to understand the concept in practice and for a future case where I might have a similar problem and can compare strategies. For this second case, there are entire chapters marked with 🔄 to review later so as not to forget them. Strongly recommended!</p>
+<p>I already wrote a blog post based on these notes, so the polished version is this one: <a href="https://mutt0-ds.github.io/posts/2022/03/personal-airflow/">https://mutt0-ds.github.io/posts/2022/03/personal-airflow/</a></p>
+<h2 id="notes">Notes</h2>
+<h2 id="1--what-is-dax">1 ✨ What is DAX?</h2>
+<p>Basic chapter that introduces the concept of Data Analysis Expressions; not much to add.</p>
+<p>Interesting section comparing how Excel, Power BI, SQL, and MDX users approach DAX. I relate to the SQL perspective. Seeing FILTER as comparable to the WHERE clause immediately clarified things for me.</p>
+<h2 id="2--introducing-dax">2 🔄 Introducing DAX</h2>
+<p>Very important chapter to get started, with some of the most used functions and the difference between a calculated column and a measure.
+It introduces the different data types, without particular surprises (Int, Decimals, Currency, Datetime, Booleans, String, Binary), with the Variant type specific to DAX. It is like Python&rsquo;s Union, meaning it can return different data types.</p>
+<p>It introduces the different operators: arithmetic (+ - * /), comparison (&lt;, &gt;, =, &lt;&gt;, &gt;=, &lt;=), and logical (&amp;&amp;, ||, IN, NOT). There are also the functions AND(Condition1, Condition2) and OR.</p>
+<p>Tables can be constructed with {}, using () when there are multiple columns. E.g. Colors = {&ldquo;Red&rdquo;, &ldquo;White&rdquo;, &ldquo;Blue&rdquo;}. Animals = {(&ldquo;Dog&rdquo;, &ldquo;Woof&rdquo;), (&ldquo;Cat&rdquo;, &ldquo;Meow&rdquo;)}</p>
+<h3 id="calculated-columns">Calculated columns</h3>
+<p>Written as &lsquo;Table Name&rsquo;[Column Name], it is a new column added to the data model and you can use it like the others by default, regardless of context. In Import Mode, they are processed during DB refresh and then stored in memory, so they use RAM. If you have a complex formula, avoid splitting it into several intermediate columns as if it were Excel, to optimize the model.</p>
+<p>Use them when:</p>
+<ul>
+<li>The column result will be in a slicer, matrix, pivot, or FILTER condition</li>
+<li>You have an expression strictly related to the row, such as Price * Quantity, that does not rely on aggregation</li>
+<li>You need to categorize text or numbers, for example defining ranges High, Medium, Low or 0-18, 18-25, 25+</li>
+</ul>
+<h3 id="measures">Measures</h3>
+<p>Not directly associated with a table, written as [Measure Name]. You use measures when you do not want to compute values for each row, but aggregate them, and remember they are computed based on the context. The example used is great: if you create a column Sales[GrossMarginPct] = Sales[GrossMargin] / Sales[SalesAmount], you will see that the total % is over 100%. It does not reason over the set, but row by row. If our 10 products each have a 50% margin, the total will be 50 * 10 -&gt; 500%. A measure GrossMarginPct := SUM(Sales[GrossMargin]) / SUM(Sales[SalesAmount]) instead lets you aggregate correctly. Use when:</p>
+<ul>
+<li>The value depends on context and user selection</li>
+<li>Values are in aggregated form</li>
+</ul>
+<h3 id="variables">Variables</h3>
+<p>Written at the start of a formula like VAR TotalSales = SUM(Sales[SalesAmount]) &hellip; RETURN result, they are immutable and computed at the beginning of the calculation. They are temporary values that exist only inside the measure you are writing, and are very useful to break down a complex formula into easier pieces (with meaningful names), and to avoid repetition.</p>
+<h3 id="basic-functions">Basic functions</h3>
+<p>Important note: many of them have a corresponding iterator version, so if you want row-by-row evaluation inside a measure you have two paths.</p>
+<ul>
+<li>Base: SUM, AVERAGE, COUNT, COUNTBLANK, COUNTROWS, DISTINCTCOUNT, DISTINCTCOUNTNOBLANK</li>
+<li>Logical: AND, OR, IF, IFERROR, NOT, TRUE, SWITCH</li>
+<li>Information (check equality/shape): ISBLANK, ISERROR, ISLOGICAL, ISNONTEXT, ISNUMBER, ISTEXT</li>
+<li>Math: ABS, EXP, FACT, LN, LOG, LOG10, MOD, PI, POWER, QUOTIENT, SIGN, SQRT, RANDOM, RANDBETWEEN, ROUND, EVEN, ODD, and many others rarely used</li>
+<li>Text: CONCATENATE, CONCATENATEX, EXACT, FIND, FIXED, FORMAT, LEFT, LEN, LOWER, MID, REPLACE, REPT, RIGHT, SEARCH, SUBSTITUTE, TRIM, UPPER, VALUE</li>
+<li>Conversion: CURRENCY, INT, DATE, TIME, VALUE, DATEVALUE, FORMAT. You often use the latter to format dates, similar to datetime.strptime(), and it is the inverse of DATEVALUE</li>
+<li>Date &amp; Time: DATE, DATEVALUE, DAY, EDATE, EOMONTH, HOUR, MINUTE, MONTH, NOW, SECOND, TIME, TIMEVALUE, TODAY, WEEKDAY, WEEKNUM, YEAR, YEARFRAC</li>
+<li>Relational: RELATED and RELATEDTABLE. We will see later how powerful they are; they navigate relationships to fetch values from related columns.</li>
+</ul>
+<h2 id="3--using-basic-table-functions">3 ⚠ Using basic table functions</h2>
+<h3 id="filter">FILTER</h3>
+<p>Introduces how to use FILTER and the concept of EVALUATE, which you will use in DAX Studio. For FILTER with multiple conditions, putting the most selective first optimizes the query on large tables.</p>
+<h3 id="all">ALL*</h3>
+<p>Also introduces the ALL* functions, which are very powerful: ALL, ALLEXCEPT, ALLCROSSFILTERED, ALLNOBLANKROW, ALLSELECTED. ALL ignores any active filter in the report and is useful when computing ratios and % of total, because the user might have filtered something. It returns a list of unique values, requires a table or list of columns, and cannot be an expression; if you use it with more than one column it shows all combinations present in the data. ALLEXCEPT can be used like &ldquo;take everything from that table except those columns&rdquo;. ALLSELECTED is covered in chapter 14; use with caution.</p>
+<h3 id="values-distinct-blank">VALUES, DISTINCT, BLANK</h3>
+<p>Similar to ALL, VALUES and DISTINCT also return a list of unique values, but they are different. VALUES returns the distinct values that are visible given the current filters, and DISTINCT does the same, but they behave differently with invalid relationships. The example in the book is very clear: if, for example, a product is missing from the table, Sales will have some BLANK values. DISTINCT gets confused when computing average amount per product, whereas VALUES handles it correctly in the division. My rule of thumb: prefer VALUES, as it is used throughout the book.</p>
+<p>Short note on HASONEVALUE, which is a shortcut for IF(COUNTROWS(VALUES([column])) = 1, VALUES([column]), &hellip;) and has a second argument to return a message if there is more than one value.</p>
+<h2 id="4--understanding-evaluation-context">4 ⚠ Understanding Evaluation Context</h2>
+<p>There are two completely different contexts: filter context, which filters data, and row context, which iterates tables. A context is the environment in which the expression is evaluated.</p>
+<h3 id="filter-context">Filter Context</h3>
+<p>Any formula is interpreted based on the cell, which in turn exists based on the filters and the columns we have included. So TotalSales = SUM(Sales[Amount]) will be 30M if shown in a card with no filters, maybe 1M if only Australia is selected, or 30k in a table split by brand, but it is always the same measure. What matters is the context of the cell executing it, which is the filter context.</p>
+<h3 id="row-context">Row Context</h3>
+<p>The example uses a calculated column, which works row by row and is computed during data refresh, such as Sales[Gross Margin] = Sales[Quantity] * (Sales[Net Price] - Sales[Unit Cost]). How does DAX know which row it is iterating? By using the row context, which is essentially a cursor.
+If you write Gross Margin as a measure, you lose the row context of the calculated column, so you need an iterator with X; Gross Margin := SUMX(Sales, Sales[Quantity] * (Sales[Net Price] - Sales[Unit Cost])) works because it uses the SUMX iterator, which maintains context. Instead, Gross Margin := Sales[Quantity] * (Sales[Net Price] - Sales[Unit Cost]) is invalid.</p>
+<h3 id="other-notes">Other notes</h3>
+<p>It continues with many interesting examples about the difficulty of understanding the two contexts, especially in filters.</p>
+<p>When functions iterate in two different contexts, there is the EARLIER function to consider the outer layer. It is somewhat tricky; the example in the book shows how the switch works. It corresponds in some way to Python&rsquo;s super(). The book itself suggests using variables instead.</p>
+<p>Remember that row context iterates a single table, it does not filter, and therefore it cannot use relationships without RELATED/RELATEDTABLE. A filter context, instead, uses relationships automatically and behaves differently depending on direction (single or both, see chapter 15).</p>
+<p>Very interesting example with SUMMARIZE when computing average customer age without counting duplicates: the code shows how to include a different column.</p>
+<h2 id="5--understanding-calculate-and-calculatetable">5 ⚠ Understanding CALCULATE and CALCULATETABLE</h2>
+<p>CALCULATE is the most powerful and important function in DAX and the one with more facets to discover. CALCULATETABLE is similar but returns a table. Their complexity comes from the fact that they are the only ones that create new filters, and therefore modify the filter context from chapter 4. The authors recommend re-reading the chapter carefully.</p>
+<p>The formula is CALCULATE(Expression, Condition1, &hellip; ConditionN), accepting any expression as the required first parameter, and then n filters. For filters, which are tables/lists of values, you can use an expression &lsquo;Product&rsquo;[Brand] = &ldquo;Contoso&rdquo; which is equivalent to FILTER(ALL(&lsquo;Product&rsquo;[Brand]), &lsquo;Product&rsquo;[Brand] = &ldquo;Contoso&rdquo;). For readability, prefer the compact version.</p>
+<p>In short, CALCULATE:</p>
+<ul>
+<li>Makes a copy of the existing filter context</li>
+<li>Evaluates each filter in its args and, for each condition, produces a list of valid values for the specified column (in the example, it will be {&ldquo;Contoso&rdquo;}). It is equivalent to a FILTER ALL (remember)</li>
+<li>If two or more filters target the same column, they are merged with an AND</li>
+<li>Uses the new condition to replace existing filters or adds it to the context if none exist</li>
+<li>If there is a row context, applies a Context Transition by turning it into a filter context and removing the existing one</li>
+<li>When finished, applies the new filter context to the model, and once computed it returns to the original context. It is not a permanent change</li>
+</ul>
+<p>Very important: because CALCULATE uses a FILTER(ALL) behind the scenes, if you want to avoid removing all filters you must use the extended form of the condition, and use VALUES if you want to preserve current filters from other tables, for example. The chapter shows an interesting case with a ratio where the Sales table is filtered, while the Date table must keep its filters.</p>
+<h3 id="filtering-with-complex-conditions">Filtering with complex conditions</h3>
+<p>There is an example with a slicer that tries to filter a CALCULATE, but since the compact form uses ALL it gets ignored. You need to wrap the filter condition in KEEPFILTERS.</p>
+<h3 id="context-transition">Context Transition</h3>
+<blockquote>
+<p>CALCULATE invalidates any row context. It automatically adds as filter arguments all the columns that are currently being iterated in any row context—filtering their actual value in the row being iterated</p>
+</blockquote>
+<p>In short, CALCULATE uses the row context as a filter in the filter context, because by itself row context is not an iterator. This is a transition.</p>
+<p>Great example to review context. The formula Sum Num Of Sales := SUMX(Sales, COUNTROWS(Sales)) surprisingly returns COUNTROWS squared; the number of Contoso rows is 37,000, for example, and SUMX iterates 37,000 times, so it will return 37,000 * 37,000 because it is reasoning in row context.</p>
+<p>Another example: Sales Amount := SUMX(Sales, CALCULATE(SUM(Sales[Quantity]))). The point is that CALCULATE is creating filters row by row because it follows the row context in SUMX, so it will do Tot = CALCULATE(SUM(Sales[Quantity]), Sales[Product] = &ldquo;A&rdquo;) + CALCULATE(SUM(Sales[Quantity]), Sales[Product] = &ldquo;B&rdquo;) &hellip; etc.</p>
+<ul>
+<li>Context transition (CT) is costly. Use CALCULATE sparingly, because in iterations it will apply the filter for each row</li>
+<li>CT does not filter only one row, as you might think. The new transitioned filter filters all rows with the same value. So if in the example above we have Sales[Product] = &ldquo;A&rdquo;, there might be multiple results depending on the input data</li>
+<li>CT uses columns not present in the formula</li>
+<li>CT creates a filter context starting from a row context</li>
+<li>CT occurs when there is a row context (so in iterators and calculated columns). Note that measures implicitly have a CALCULATE too</li>
+<li>CT transforms all row contexts, without exceptions and without a way to stop it</li>
+<li>CT invalidates any existing row context, once the transition is applied</li>
+</ul>
+<p>Unfortunately, CT does not filter just one row but reasons on unique values, so we can get tricky errors in tables without unique values. Using this tactic is not only wrong, but also very slow because it must iterate over millions of rows.</p>
+<p>Using a measure is also wrong, because</p>
+<blockquote>
+<p>Whenever you read a measure call in DAX, you should always read it as if CALCULATE were there</p>
+</blockquote>
+<p>Every measure hides a CALCULATE that wraps its expression.</p>
+<h3 id="calculate-modifiers-see-also-chapter-14">CALCULATE modifiers (see also chapter 14)</h3>
+<ul>
+<li>USERELATIONSHIP, used in edge cases, for example if you have an Order Date and a Delivery Date you might have two relationships with the Date table, one active by default and one inactive. Adding USERELATIONSHIP(Key1, Key2) inside CALCULATE tells it to use the inactive one for this calculation</li>
+<li>CROSSFILTER, similar but more powerful: it can disable a relationship between tables and change its direction; it has a third parameter (NONE, ONEWAY, BOTH). Personally, never used</li>
+<li>KEEPFILTERS: instead of VALUES, another way to keep current filters is KEEPFILTERS, e.g. Audio Sales KeepFilters := CALCULATE([Sales Amount], KEEPFILTERS(&lsquo;Product&rsquo;[Category] = &ldquo;Audio&rdquo;)). Instead of overwriting the filter context, it adds the condition with an AND, so cells included in the function show a number and the others are BLANK</li>
+<li>ALL: behaves differently when used inside CALCULATE. It becomes a sort of REMOVEFILTER and cancels the effect of KEEPFILTERS, so it can ignore additional filters added in the function. All modifiers are computed with higher priority than normal filters</li>
+<li>ALLSELECTED: similar to ALL, it also behaves differently in this case; see chapter 14 as it can be dangerous, so try to avoid it unless you know exactly what you are doing</li>
+</ul>
+<h2 id="6--variables">6 ✨ Variables</h2>
+<p>They are important for code readability and performance, avoiding repetition. The one thing to remember is that they are constants: available only within the expression that contains them, computed at the beginning of evaluation, and immutable.</p>
+<p>The order you create them matters; they must not reference VARs declared later.</p>
+<p>Another point is the name, which must be unique with respect to table names, otherwise the DAX engine gets confused. Use long, meaningful names. DAX, for example, often prefixes internal names with two __</p>
+<h2 id="7--working-with-iterators-and-with-calculate">7 🔄 Working with iterators and with CALCULATE</h2>
+<p>Most iterators require a table and an expression that will be evaluated row by row for that table (see the classic SUMX). Specifically, they iterate all rows collecting the value, and then apply an operation, in this case a sum. The difference between iterators is therefore the final operation; the flow is always the same.</p>
+<p>Know this: iterator cardinality is the number of rows scanned by the iterator. Avoid nesting several iterations and making cardinality grow exponentially; keep it low.</p>
+<p>The chapter continues with interesting examples, such as how to compute the day with the largest Sales by nesting MAXX and SUMX, or showing the list of visible colors using CONCATENATEX and VALUES, how ALLSELECTED makes more sense with RANKX when the user is filtering, and how AVERAGEX should be replaced by DIVIDE when there are BLANKs because it handles them correctly.</p>
+<h2 id="8--time-intelligence-calculations">8 🔄 Time Intelligence Calculations</h2>
+<p>Very interesting chapter, because dates in DAX are managed in a not always intuitive way.</p>
+<p>A golden tip is to always have a Date table related to all others to operate on dates, in order to optimize performance, improve the experience, and simplify the structure.</p>
+<p>By default Power BI creates a hidden date table for each column in the model of type Date or DateTime, so you can slice by year, quarter, month, day, etc. Unfortunately this means you have one table per column, creating overhead, and you cannot see or modify them. It is better to disable that feature and create a default Date table to reuse every time.</p>
+
+  </div>
+
+  <div class="book-footer mt-5 text-center">
+    <a href="/books/" class="book-back-link">← Back to all books</a>
+  </div>
+
+</div>
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/12/on-ai-slop/">
+                        <img src="/images/ai_slop/slop.png" class="card-img-top" alt="On AI Slop">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/12/on-ai-slop/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="On AI Slop">On AI Slop</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>I&rsquo;ve started to notice a very predictable trend: AI-generated messages in my inbox.</p>
+<p>What finally pushed me to write this was how casually people are dumping GPT-generated text into their communications, apparently believing two things:</p>
+<ul>
+<li>That people won&rsquo;t notice</li>
+<li>That people will actually …</li></ul></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Dec 24, 2025</span>
+                    <a href="/posts/2025/12/on-ai-slop/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/08/test-mind-maps/">
+                        <img src="/images/markmap/title.png" class="card-img-top" alt="How we test 100k-Line Nested JSON trees without going insane">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/08/test-mind-maps/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="How we test 100k-Line Nested JSON trees without going insane">How we test 100k-Line Nested JSON trees without going insane</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Today I want to share an interesting challenge that&rsquo;s been bugging me since I joined InvestSuite last December.
+It&rsquo;s stories like this that makes me happy to be a developer, being able to address things that are ruining my day and get rid of them. It feels so satisfying.</p>
+<p>We work with …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Aug 11, 2025</span>
+                    <a href="/posts/2025/08/test-mind-maps/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2025/06/we-have-no-idea-book/">
+                        <img src="/images/physics/cover.jpg" class="card-img-top" alt="A Physics book for people who hate Physics">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="A Physics book for people who hate Physics">A Physics book for people who hate Physics</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>My relationship with physics has always been… troubled.</p>
+<p>Probably because I had a high school teacher who never managed to spark any interest in me, I just never caught up. I remember sitting silently at my final exam (Maturità) when the physics question came up, completely blank. I also struggled …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jun 15, 2025</span>
+                    <a href="/posts/2025/06/we-have-no-idea-book/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://mutt0-ds.github.io/" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
