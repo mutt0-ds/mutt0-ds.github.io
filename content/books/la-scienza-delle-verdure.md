@@ -3,7 +3,7 @@ title: La Scienza Delle Verdure
 author: Dario Bressanini
 image: 'https://m.media-amazon.com/images/I/71BbeRJiMPL._SL1203_.jpg'
 badges:
-- "🗺 Topical"
+- "🗺 Current Affairs"
 - "⚛ Science"
 score: "⭐️⭐️⭐️"
 finished: '2023-09-09'

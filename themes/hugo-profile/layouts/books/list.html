@@ -38,8 +38,12 @@
               {{ if .Params.badges }}
               <div class="pb-2 bg-transparent">
                 {{ range .Params.badges }}
-                <span class="badge badge-secondary">{{ . }}</span>
-                {{ end }}
+                <span 
+                  class="badge"
+                  style="--badge-key:'{{ . | urlize }}'">
+                  {{ . }}
+                </span>
+              {{ end }}
               </div>
               {{ end }}
               <h5 class="card-title bg-transparent mt-2">{{ .Title }}</h5>
