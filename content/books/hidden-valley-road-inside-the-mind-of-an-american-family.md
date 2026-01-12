@@ -1,5 +1,5 @@
 ---
-title: Hidden Valley Road Inside the Mind of an American Family
+title: Hidden Valley Road - Inside the Mind of an American Family
 author: Robert Kolker
 image: https://m.media-amazon.com/images/I/81fKzRQpSsL._AC_UF1000,1000_QL80_.jpg
 badges:

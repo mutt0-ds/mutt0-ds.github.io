@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>So Good They Can&#39;t Ignore You on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/books/so-good-they-cant-ignore-you/</link>
+    <link>http://localhost:1313/books/so-good-they-cant-ignore-you/</link>
     <description>Recent content in So Good They Can&#39;t Ignore You on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://mutt0-ds.github.io/books/so-good-they-cant-ignore-you/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/books/so-good-they-cant-ignore-you/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

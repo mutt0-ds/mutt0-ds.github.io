@@ -119,6 +119,33 @@
   opacity: 0.9;
 }
 
+
+/* ---Random --- */
+.random-book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.6rem;
+
+  background: rgba(0,0,0,0.04);
+  color: var(--text-secondary-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  border: 1px solid rgba(0,0,0,0.06);
+
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.random-book-btn:hover {
+  background: rgba(0,0,0,0.07);
+  border-color: rgba(0,0,0,0.12);
+  color: var(--primary-color);
+}
+
 /* --- Score badge --- */
 
 #books .book-score {

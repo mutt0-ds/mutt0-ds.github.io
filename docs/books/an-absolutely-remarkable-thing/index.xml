@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>An Absolutely Remarkable Thing on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/books/an-absolutely-remarkable-thing/</link>
+    <link>http://localhost:1313/books/an-absolutely-remarkable-thing/</link>
     <description>Recent content in An Absolutely Remarkable Thing on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://mutt0-ds.github.io/books/an-absolutely-remarkable-thing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/books/an-absolutely-remarkable-thing/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

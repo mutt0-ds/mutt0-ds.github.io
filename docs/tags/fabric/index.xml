@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fabric on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/fabric/</link>
+    <link>http://localhost:1313/tags/fabric/</link>
     <description>Recent content in Fabric on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/fabric/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/fabric/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How I created my first Course with Datacamp</title>
-      <link>https://mutt0-ds.github.io/posts/2025/01/fabric-datacamp-course/</link>
+      <link>http://localhost:1313/posts/2025/01/fabric-datacamp-course/</link>
       <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2025/01/fabric-datacamp-course/</guid>
+      <guid>http://localhost:1313/posts/2025/01/fabric-datacamp-course/</guid>
       <description>&lt;p&gt;I just published &lt;a href=&#34;https://app.datacamp.com/learn/courses/plan-and-implement-a-data-analytics-environment-with-microsoft-fabric&#34;&gt;an online course&lt;/a&gt;! covering advanced &lt;a href=&#34;https://www.microsoft.com/en-us/microsoft-fabric&#34;&gt;Microsoft Fabric&lt;/a&gt; topics like security, deployment, admin settings, and version control!&lt;/p&gt;&#xA;&lt;p&gt;Honestly, I never imagined I’d say, “I’m a teacher”&amp;hellip;&#xA;It feels pretty wild, but here I am!&lt;/p&gt;&#xA;&lt;p&gt;This project kept me busy for months, and I’m really proud of how it turned out. Fabric is way more complex than Power BI. It&amp;rsquo;s a complete data platform with several services, and there’s not much in-depth content out there for those who want to learn about the technical side. With &lt;a href=&#34;https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/&#34;&gt;my experience in a large organization&lt;/a&gt;, where I learned about Power BI and Fabric firsthand, I was excited to share what I know.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The 3 (&#43;2) ways to Get Data in Power BI, simply explained</title>
-      <link>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</link>
+      <link>http://localhost:1313/posts/2024/04/types-powerbi-connection/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</guid>
+      <guid>http://localhost:1313/posts/2024/04/types-powerbi-connection/</guid>
       <description>&lt;p&gt;There&amp;rsquo;s quite a bit of confusion swirling around about how Power BI reports gather data. Where is the data actually stored? How frequently does it refresh? Depending on the mode you&amp;rsquo;ve selected, this question can be a bit tricky to tackle.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s simplify things a bit. In this article, I&amp;rsquo;ll be focusing on Power BI Desktop. Imagine you&amp;rsquo;ve got a .pbix file on hand and don&amp;rsquo;t quite have the time to sit through &lt;a href=&#34;https://www.youtube.com/watch?v=-ip7mKUdwRg&#34;&gt;10-minute technical video from Guy in a Cube&lt;/a&gt; that I usually link my users to.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The unnecessary hype strategy behind Microsoft Fabric</title>
-      <link>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</link>
+      <link>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</guid>
+      <guid>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</guid>
       <description>&lt;p&gt;If you are into Data Engineering in Microsoft Azure Cloud Environment, you probaly heard about &lt;strong&gt;Microsoft Fabric&lt;/strong&gt; being announced last week at the yearly event &lt;a href=&#34;https://news.microsoft.com/build-2023/&#34;&gt;Microsoft Build&lt;/a&gt;. Well, &amp;ldquo;heard&amp;rdquo; is quite an euphesmism: everyone in the field is extremely excited about the announcements of the event. And for good reasons, as it’s a very big deal for us engineers, working with data every day.&lt;/p&gt;&#xA;&lt;p&gt;In short, Fabric is a cutting-edge, unified data platform that merges lots of tools together, starting from a common Data Lake where data can be stored (&lt;a href=&#34;https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview&#34;&gt;&lt;strong&gt;OneLake&lt;/strong&gt;&lt;/a&gt;), and a suite of new tools on top of it that are integrated in the “fabric” of Fabric. Some of them are evolutions of existing systems, like &lt;strong&gt;Synapse Data Engineering&lt;/strong&gt; (&lt;a href=&#34;https://azure.microsoft.com/en-us/products/synapse-analytics/&#34;&gt;Azure Synapse Anaylytics&lt;/a&gt;) or &lt;strong&gt;Data Factory&lt;/strong&gt; (&lt;a href=&#34;https://azure.microsoft.com/en-us/products/data-factory&#34;&gt;Azure Data Factory&lt;/a&gt;) for ETL and Data Processing. Others, like my beloved &lt;a href=&#34;https://powerbi.microsoft.com/en-us/&#34;&gt;&lt;strong&gt;Power BI&lt;/strong&gt;&lt;/a&gt;, have kept the same features but they will be integrated in the platform in the future. Others, like &lt;a href=&#34;https://blog.fabric.microsoft.com/en-us/blog/driving-actions-from-your-data-with-data-activator/&#34;&gt;&lt;strong&gt;Data Activator&lt;/strong&gt;&lt;/a&gt;(no-code triggers), are brand new.&lt;/p&gt;</description>
     </item>
   </channel>

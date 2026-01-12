@@ -2,885 +2,885 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mutt0-ds.github.io/tags/ai/</loc>
+    <loc>http://localhost:1313/tags/ai/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/communication/</loc>
+    <loc>http://localhost:1313/tags/communication/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2025/12/on-ai-slop/</loc>
+    <loc>http://localhost:1313/posts/2025/12/on-ai-slop/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/coverage/</loc>
+    <loc>http://localhost:1313/tags/coverage/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2025/08/test-mind-maps/</loc>
+    <loc>http://localhost:1313/posts/2025/08/test-mind-maps/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/json/</loc>
+    <loc>http://localhost:1313/tags/json/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/miro/</loc>
+    <loc>http://localhost:1313/tags/miro/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/problem-solving/</loc>
+    <loc>http://localhost:1313/tags/problem-solving/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/test/</loc>
+    <loc>http://localhost:1313/tags/test/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2025/06/we-have-no-idea-book/</loc>
+    <loc>http://localhost:1313/posts/2025/06/we-have-no-idea-book/</loc>
     <lastmod>2025-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/book/</loc>
+    <loc>http://localhost:1313/tags/book/</loc>
     <lastmod>2025-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/physics/</loc>
+    <loc>http://localhost:1313/tags/physics/</loc>
     <lastmod>2025-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/reading/</loc>
+    <loc>http://localhost:1313/tags/reading/</loc>
     <lastmod>2025-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/we-have-no-idea/</loc>
+    <loc>http://localhost:1313/tags/we-have-no-idea/</loc>
     <lastmod>2025-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/copilot/</loc>
+    <loc>http://localhost:1313/tags/copilot/</loc>
     <lastmod>2025-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/data-engineering/</loc>
+    <loc>http://localhost:1313/tags/data-engineering/</loc>
     <lastmod>2025-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/</loc>
+    <loc>http://localhost:1313/posts/2025/05/ai-and-data-engineering/</loc>
     <lastmod>2025-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/power-bi/</loc>
+    <loc>http://localhost:1313/tags/power-bi/</loc>
     <lastmod>2025-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/prototyping/</loc>
+    <loc>http://localhost:1313/tags/prototyping/</loc>
     <lastmod>2025-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/</loc>
+    <loc>http://localhost:1313/posts/2025/04/ai-generated-code/</loc>
     <lastmod>2025-04-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/coding/</loc>
+    <loc>http://localhost:1313/tags/coding/</loc>
     <lastmod>2025-04-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/cursor/</loc>
+    <loc>http://localhost:1313/tags/cursor/</loc>
     <lastmod>2025-04-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/next-js/</loc>
+    <loc>http://localhost:1313/tags/next-js/</loc>
     <lastmod>2025-04-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/architecture/</loc>
+    <loc>http://localhost:1313/tags/architecture/</loc>
     <lastmod>2025-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/data-culture/</loc>
+    <loc>http://localhost:1313/tags/data-culture/</loc>
     <lastmod>2025-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/presentation/</loc>
+    <loc>http://localhost:1313/tags/presentation/</loc>
     <lastmod>2025-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2025/03/first-pitch/</loc>
+    <loc>http://localhost:1313/posts/2025/03/first-pitch/</loc>
     <lastmod>2025-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/slides/</loc>
+    <loc>http://localhost:1313/tags/slides/</loc>
     <lastmod>2025-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/course/</loc>
+    <loc>http://localhost:1313/tags/course/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/datacamp/</loc>
+    <loc>http://localhost:1313/tags/datacamp/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/fabric/</loc>
+    <loc>http://localhost:1313/tags/fabric/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2025/01/fabric-datacamp-course/</loc>
+    <loc>http://localhost:1313/posts/2025/01/fabric-datacamp-course/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/writing/</loc>
+    <loc>http://localhost:1313/tags/writing/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/frontend/</loc>
+    <loc>http://localhost:1313/tags/frontend/</loc>
     <lastmod>2024-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/fullstack/</loc>
+    <loc>http://localhost:1313/tags/fullstack/</loc>
     <lastmod>2024-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/next.js/</loc>
+    <loc>http://localhost:1313/tags/next.js/</loc>
     <lastmod>2024-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/postgresql/</loc>
+    <loc>http://localhost:1313/tags/postgresql/</loc>
     <lastmod>2024-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/prisma/</loc>
+    <loc>http://localhost:1313/tags/prisma/</loc>
     <lastmod>2024-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2024/11/my-journey-with-webapp/</loc>
+    <loc>http://localhost:1313/posts/2024/11/my-journey-with-webapp/</loc>
     <lastmod>2024-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/tailwind/</loc>
+    <loc>http://localhost:1313/tags/tailwind/</loc>
     <lastmod>2024-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/web-app/</loc>
+    <loc>http://localhost:1313/tags/web-app/</loc>
     <lastmod>2024-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/conference/</loc>
+    <loc>http://localhost:1313/tags/conference/</loc>
     <lastmod>2024-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/culture/</loc>
+    <loc>http://localhost:1313/tags/culture/</loc>
     <lastmod>2024-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/</loc>
+    <loc>http://localhost:1313/posts/2024/10/my-talk-about-data-culture/</loc>
     <lastmod>2024-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2024/09/the-culture-map/</loc>
+    <loc>http://localhost:1313/posts/2024/09/the-culture-map/</loc>
     <lastmod>2024-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/diagram/</loc>
+    <loc>http://localhost:1313/tags/diagram/</loc>
     <lastmod>2024-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/soft-skills/</loc>
+    <loc>http://localhost:1313/tags/soft-skills/</loc>
     <lastmod>2024-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/c-sharp/</loc>
+    <loc>http://localhost:1313/tags/c-sharp/</loc>
     <lastmod>2024-08-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/dax/</loc>
+    <loc>http://localhost:1313/tags/dax/</loc>
     <lastmod>2024-08-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/description/</loc>
+    <loc>http://localhost:1313/tags/description/</loc>
     <lastmod>2024-08-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/tabular-editor/</loc>
+    <loc>http://localhost:1313/tags/tabular-editor/</loc>
     <lastmod>2024-08-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2024/08/the-trick-measure-description-powerbi/</loc>
+    <loc>http://localhost:1313/posts/2024/08/the-trick-measure-description-powerbi/</loc>
     <lastmod>2024-08-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/listening/</loc>
+    <loc>http://localhost:1313/tags/listening/</loc>
     <lastmod>2024-07-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/notes/</loc>
+    <loc>http://localhost:1313/tags/notes/</loc>
     <lastmod>2024-07-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2024/07/personal-notes-simply-said/</loc>
+    <loc>http://localhost:1313/posts/2024/07/personal-notes-simply-said/</loc>
     <lastmod>2024-07-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/speaking/</loc>
+    <loc>http://localhost:1313/tags/speaking/</loc>
     <lastmod>2024-07-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/api/</loc>
+    <loc>http://localhost:1313/tags/api/</loc>
     <lastmod>2024-06-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</loc>
+    <loc>http://localhost:1313/posts/2024/06/ai-superpowers-tools/</loc>
     <lastmod>2024-06-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/openai/</loc>
+    <loc>http://localhost:1313/tags/openai/</loc>
     <lastmod>2024-06-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/python/</loc>
+    <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2024-06-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/tools/</loc>
+    <loc>http://localhost:1313/tags/tools/</loc>
     <lastmod>2024-06-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/connection/</loc>
+    <loc>http://localhost:1313/tags/connection/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/dataset/</loc>
+    <loc>http://localhost:1313/tags/dataset/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/directquery/</loc>
+    <loc>http://localhost:1313/tags/directquery/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/semantic-model/</loc>
+    <loc>http://localhost:1313/tags/semantic-model/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</loc>
+    <loc>http://localhost:1313/posts/2024/04/types-powerbi-connection/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/azure/</loc>
+    <loc>http://localhost:1313/tags/azure/</loc>
     <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/data-saturdays/</loc>
+    <loc>http://localhost:1313/tags/data-saturdays/</loc>
     <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/database/</loc>
+    <loc>http://localhost:1313/tags/database/</loc>
     <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/11/ai-tweaked-data-saturdays-notes/</loc>
+    <loc>http://localhost:1313/posts/2023/11/ai-tweaked-data-saturdays-notes/</loc>
     <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/sql-server/</loc>
+    <loc>http://localhost:1313/tags/sql-server/</loc>
     <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/t-sql/</loc>
+    <loc>http://localhost:1313/tags/t-sql/</loc>
     <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/commute/</loc>
+    <loc>http://localhost:1313/tags/commute/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/data-analysis/</loc>
+    <loc>http://localhost:1313/tags/data-analysis/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</loc>
+    <loc>http://localhost:1313/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/google-maps/</loc>
+    <loc>http://localhost:1313/tags/google-maps/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/traffic/</loc>
+    <loc>http://localhost:1313/tags/traffic/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/documentation/</loc>
+    <loc>http://localhost:1313/tags/documentation/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/markdown/</loc>
+    <loc>http://localhost:1313/tags/markdown/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/</loc>
+    <loc>http://localhost:1313/posts/2023/09/obsidian-update-6-months-later/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/obsidian/</loc>
+    <loc>http://localhost:1313/tags/obsidian/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/second-brain/</loc>
+    <loc>http://localhost:1313/tags/second-brain/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/update/</loc>
+    <loc>http://localhost:1313/tags/update/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</loc>
+    <loc>http://localhost:1313/posts/2023/07/analyzing-commute-data-using-google-api/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/gcp/</loc>
+    <loc>http://localhost:1313/tags/gcp/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/google-distance-matrix/</loc>
+    <loc>http://localhost:1313/tags/google-distance-matrix/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/azure-synapse/</loc>
+    <loc>http://localhost:1313/tags/azure-synapse/</loc>
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/build/</loc>
+    <loc>http://localhost:1313/tags/build/</loc>
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/microsoft/</loc>
+    <loc>http://localhost:1313/tags/microsoft/</loc>
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</loc>
+    <loc>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</loc>
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/automation/</loc>
+    <loc>http://localhost:1313/tags/automation/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/ffmpeg/</loc>
+    <loc>http://localhost:1313/tags/ffmpeg/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/05/how-i-generated-automatic-reviews-tiktok/</loc>
+    <loc>http://localhost:1313/posts/2023/05/how-i-generated-automatic-reviews-tiktok/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/music-reviews/</loc>
+    <loc>http://localhost:1313/tags/music-reviews/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/playwright/</loc>
+    <loc>http://localhost:1313/tags/playwright/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/tiktok/</loc>
+    <loc>http://localhost:1313/tags/tiktok/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/tts/</loc>
+    <loc>http://localhost:1313/tags/tts/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/video-editing/</loc>
+    <loc>http://localhost:1313/tags/video-editing/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/composite-model/</loc>
+    <loc>http://localhost:1313/tags/composite-model/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/features/</loc>
+    <loc>http://localhost:1313/tags/features/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/reporting/</loc>
+    <loc>http://localhost:1313/tags/reporting/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/version-control/</loc>
+    <loc>http://localhost:1313/tags/version-control/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</loc>
+    <loc>http://localhost:1313/posts/2023/03/what-power-bi-is-missing/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</loc>
+    <loc>http://localhost:1313/posts/2023/02/obsidian-productivity-second-brain/</loc>
     <lastmod>2023-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/plugin/</loc>
+    <loc>http://localhost:1313/tags/plugin/</loc>
     <lastmod>2023-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</loc>
+    <loc>http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/powerpoint/</loc>
+    <loc>http://localhost:1313/tags/powerpoint/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/study/</loc>
+    <loc>http://localhost:1313/tags/study/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/talk/</loc>
+    <loc>http://localhost:1313/tags/talk/</loc>
     <lastmod>2023-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/notion/</loc>
+    <loc>http://localhost:1313/tags/notion/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/pytest/</loc>
+    <loc>http://localhost:1313/tags/pytest/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</loc>
+    <loc>http://localhost:1313/posts/2022/12/road-100-coverage-notion/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</loc>
+    <loc>http://localhost:1313/posts/2022/11/turbulent-journey-power-bi-source-control/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/devops/</loc>
+    <loc>http://localhost:1313/tags/devops/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/git/</loc>
+    <loc>http://localhost:1313/tags/git/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/pipeline/</loc>
+    <loc>http://localhost:1313/tags/pipeline/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/source-control/</loc>
+    <loc>http://localhost:1313/tags/source-control/</loc>
     <lastmod>2022-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/acer/</loc>
+    <loc>http://localhost:1313/tags/acer/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/experience/</loc>
+    <loc>http://localhost:1313/tags/experience/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/10/first-weeks-acer/</loc>
+    <loc>http://localhost:1313/posts/2022/10/first-weeks-acer/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/dashboard/</loc>
+    <loc>http://localhost:1313/tags/dashboard/</loc>
     <lastmod>2022-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/09/personal-notes-about-dax-definitive-guide/</loc>
+    <loc>http://localhost:1313/posts/2022/09/personal-notes-about-dax-definitive-guide/</loc>
     <lastmod>2022-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/powerbi/</loc>
+    <loc>http://localhost:1313/tags/powerbi/</loc>
     <lastmod>2022-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/sql/</loc>
+    <loc>http://localhost:1313/tags/sql/</loc>
     <lastmod>2022-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/cobol/</loc>
+    <loc>http://localhost:1313/tags/cobol/</loc>
     <lastmod>2022-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/finance/</loc>
+    <loc>http://localhost:1313/tags/finance/</loc>
     <lastmod>2022-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/ibm/</loc>
+    <loc>http://localhost:1313/tags/ibm/</loc>
     <lastmod>2022-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/learning/</loc>
+    <loc>http://localhost:1313/tags/learning/</loc>
     <lastmod>2022-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/09/my-surreal-experience-cobol/</loc>
+    <loc>http://localhost:1313/posts/2022/09/my-surreal-experience-cobol/</loc>
     <lastmod>2022-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/angular/</loc>
+    <loc>http://localhost:1313/tags/angular/</loc>
     <lastmod>2022-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/books/</loc>
+    <loc>http://localhost:1313/tags/books/</loc>
     <lastmod>2022-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/</loc>
+    <loc>http://localhost:1313/posts/2022/06/my-books-tailwind/</loc>
     <lastmod>2022-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/typescript/</loc>
+    <loc>http://localhost:1313/tags/typescript/</loc>
     <lastmod>2022-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/appsmith/</loc>
+    <loc>http://localhost:1313/tags/appsmith/</loc>
     <lastmod>2022-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/experiments/</loc>
+    <loc>http://localhost:1313/tags/experiments/</loc>
     <lastmod>2022-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/javascript/</loc>
+    <loc>http://localhost:1313/tags/javascript/</loc>
     <lastmod>2022-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2022/03/personal-airflow/</loc>
+    <loc>http://localhost:1313/posts/2022/03/personal-airflow/</loc>
     <lastmod>2022-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/machine-learning/</loc>
+    <loc>http://localhost:1313/tags/machine-learning/</loc>
     <lastmod>2021-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/meme/</loc>
+    <loc>http://localhost:1313/tags/meme/</loc>
     <lastmod>2021-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/neural-network/</loc>
+    <loc>http://localhost:1313/tags/neural-network/</loc>
     <lastmod>2021-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/tags/resnet/</loc>
+    <loc>http://localhost:1313/tags/resnet/</loc>
     <lastmod>2021-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/posts/2021/05/nn-sending-memes/</loc>
+    <loc>http://localhost:1313/posts/2021/05/nn-sending-memes/</loc>
     <lastmod>2021-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/10-happier/</loc>
+    <loc>http://localhost:1313/books/10-happier/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/11-22-63/</loc>
+    <loc>http://localhost:1313/books/11-22-63/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/21-lezioni-per-il-21esimo-secolo/</loc>
+    <loc>http://localhost:1313/books/21-lezioni-per-il-21esimo-secolo/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/48-rules-for-power/</loc>
+    <loc>http://localhost:1313/books/48-rules-for-power/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/a-beautifully-foolish-endeavor/</loc>
+    <loc>http://localhost:1313/books/a-beautifully-foolish-endeavor/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/dal-big-bang-ai-buchi-neri/</loc>
+    <loc>http://localhost:1313/books/dal-big-bang-ai-buchi-neri/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/a-mind-for-numbers-how-to-excel-at-math-and-science/</loc>
+    <loc>http://localhost:1313/books/a-mind-for-numbers-how-to-excel-at-math-and-science/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/a-short-history-of-nearly-everything/</loc>
+    <loc>http://localhost:1313/books/a-short-history-of-nearly-everything/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/all-marketers-are-liars/</loc>
+    <loc>http://localhost:1313/books/all-marketers-are-liars/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/niente-di-nuovo-sul-fronte-occidentale/</loc>
+    <loc>http://localhost:1313/books/niente-di-nuovo-sul-fronte-occidentale/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/all-the-presidents-bankers/</loc>
+    <loc>http://localhost:1313/books/all-the-presidents-bankers/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/an-absolutely-remarkable-thing/</loc>
+    <loc>http://localhost:1313/books/an-absolutely-remarkable-thing/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/an-elegant-puzzle/</loc>
+    <loc>http://localhost:1313/books/an-elegant-puzzle/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/an-open-heart/</loc>
+    <loc>http://localhost:1313/books/an-open-heart/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/antifragile.-prosperare-nel-disordine/</loc>
+    <loc>http://localhost:1313/books/antifragile.-prosperare-nel-disordine/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/automate-the-boring-stuff-with-python/</loc>
+    <loc>http://localhost:1313/books/automate-the-boring-stuff-with-python/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/backstabbing-for-beginners/</loc>
+    <loc>http://localhost:1313/books/backstabbing-for-beginners/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/bad-blood-secrets-and-lies-in-a-silicon-valley-startup/</loc>
+    <loc>http://localhost:1313/books/bad-blood-secrets-and-lies-in-a-silicon-valley-startup/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/bad-science/</loc>
+    <loc>http://localhost:1313/books/bad-science/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/become-an-effective-software-engineering-manager/</loc>
+    <loc>http://localhost:1313/books/become-an-effective-software-engineering-manager/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/being-geek/</loc>
+    <loc>http://localhost:1313/books/being-geek/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/bogleheads-guide-to-investing/</loc>
+    <loc>http://localhost:1313/books/bogleheads-guide-to-investing/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/</loc>
+    <loc>http://localhost:1313/books/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/brain-rules-for-baby/</loc>
+    <loc>http://localhost:1313/books/brain-rules-for-baby/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/brotopia/</loc>
+    <loc>http://localhost:1313/books/brotopia/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/bullshit-jobs-a-theory/</loc>
+    <loc>http://localhost:1313/books/bullshit-jobs-a-theory/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/candide-ottimismo/</loc>
+    <loc>http://localhost:1313/books/candide-ottimismo/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/car-guys-vs.-bean-counters/</loc>
+    <loc>http://localhost:1313/books/car-guys-vs.-bean-counters/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/clean-code/</loc>
+    <loc>http://localhost:1313/books/clean-code/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/cloud-atlas/</loc>
+    <loc>http://localhost:1313/books/cloud-atlas/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/code-the-hidden-language-of-computer-hardware-and-software/</loc>
+    <loc>http://localhost:1313/books/code-the-hidden-language-of-computer-hardware-and-software/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/codeless-data-structures-and-algorithms/</loc>
+    <loc>http://localhost:1313/books/codeless-data-structures-and-algorithms/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/company-of-one/</loc>
+    <loc>http://localhost:1313/books/company-of-one/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/complete-car-care-manual/</loc>
+    <loc>http://localhost:1313/books/complete-car-care-manual/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/cracking-the-coding-interview/</loc>
+    <loc>http://localhost:1313/books/cracking-the-coding-interview/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/designing-data-intensive-applications/</loc>
+    <loc>http://localhost:1313/books/designing-data-intensive-applications/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/developer-relations/</loc>
+    <loc>http://localhost:1313/books/developer-relations/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/devil-take-the-hindmost/</loc>
+    <loc>http://localhost:1313/books/devil-take-the-hindmost/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/difficult-women-an-imperfect-history-of-feminism/</loc>
+    <loc>http://localhost:1313/books/difficult-women-an-imperfect-history-of-feminism/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/demenza-digitale/</loc>
+    <loc>http://localhost:1313/books/demenza-digitale/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/la-valle-delleden/</loc>
+    <loc>http://localhost:1313/books/la-valle-delleden/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/emotional-agility/</loc>
+    <loc>http://localhost:1313/books/emotional-agility/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/emotional-first-aid/</loc>
+    <loc>http://localhost:1313/books/emotional-first-aid/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/emotional-intelligence/</loc>
+    <loc>http://localhost:1313/books/emotional-intelligence/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/engineers-survival-guide/</loc>
+    <loc>http://localhost:1313/books/engineers-survival-guide/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/escaping-the-build-trap/</loc>
+    <loc>http://localhost:1313/books/escaping-the-build-trap/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/everybody-writes-your-go-to-guide-for-creating-ridiculously-good-content/</loc>
+    <loc>http://localhost:1313/books/everybody-writes-your-go-to-guide-for-creating-ridiculously-good-content/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/siamo-fottuti/</loc>
+    <loc>http://localhost:1313/books/siamo-fottuti/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/extreme-ownership-how-u.s.-navy-seals-lead-and-win/</loc>
+    <loc>http://localhost:1313/books/extreme-ownership-how-u.s.-navy-seals-lead-and-win/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/febbre/</loc>
+    <loc>http://localhost:1313/books/febbre/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/finding-moonshine/</loc>
+    <loc>http://localhost:1313/books/finding-moonshine/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/food-rules-an-eaters-manual/</loc>
+    <loc>http://localhost:1313/books/food-rules-an-eaters-manual/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/giocati-dal-caso/</loc>
+    <loc>http://localhost:1313/books/giocati-dal-caso/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/ciclo-della-fondazione/</loc>
+    <loc>http://localhost:1313/books/ciclo-della-fondazione/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/four-thousand-weeks-time-management-for-mortals/</loc>
+    <loc>http://localhost:1313/books/four-thousand-weeks-time-management-for-mortals/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/faq-sulluniverso/</loc>
+    <loc>http://localhost:1313/books/faq-sulluniverso/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/fundamentals-of-data-engineering/</loc>
+    <loc>http://localhost:1313/books/fundamentals-of-data-engineering/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/getting-things-done/</loc>
+    <loc>http://localhost:1313/books/getting-things-done/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/gli-sdraiati/</loc>
+    <loc>http://localhost:1313/books/gli-sdraiati/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/g%C3%B6del-escher-bach.-uneterna-ghirlanda-brillante/</loc>
+    <loc>http://localhost:1313/books/g%C3%B6del-escher-bach.-uneterna-ghirlanda-brillante/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/good-calories-bad-calories/</loc>
+    <loc>http://localhost:1313/books/good-calories-bad-calories/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/greenlights/</loc>
+    <loc>http://localhost:1313/books/greenlights/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/grokking-algorhithms/</loc>
+    <loc>http://localhost:1313/books/grokking-algorhithms/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/guerrilla-analytics--a-practical-approach-to-working-with-data/</loc>
+    <loc>http://localhost:1313/books/guerrilla-analytics--a-practical-approach-to-working-with-data/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/armi-acciaio-e-malattie/</loc>
+    <loc>http://localhost:1313/books/armi-acciaio-e-malattie/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/hands-on-machine-learning-with-scikit-learn-and-tensorflow/</loc>
+    <loc>http://localhost:1313/books/hands-on-machine-learning-with-scikit-learn-and-tensorflow/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/harry-potter-and-the-methods-of-rationality/</loc>
+    <loc>http://localhost:1313/books/harry-potter-and-the-methods-of-rationality/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/head-first-design-patterns/</loc>
+    <loc>http://localhost:1313/books/head-first-design-patterns/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/head-first-html-and-css/</loc>
+    <loc>http://localhost:1313/books/head-first-html-and-css/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/hidden-valley-road-inside-the-mind-of-an-american-family/</loc>
+    <loc>http://localhost:1313/books/hidden-valley-road-inside-the-mind-of-an-american-family/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/hold-me-tight-seven-conversations-for-a-lifetime-of-love/</loc>
+    <loc>http://localhost:1313/books/hold-me-tight-seven-conversations-for-a-lifetime-of-love/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/how-not-to-die/</loc>
+    <loc>http://localhost:1313/books/how-not-to-die/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/how-the-world-really-works/</loc>
+    <loc>http://localhost:1313/books/how-the-world-really-works/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/how-to-be-perfect-the-correct-answer-to-every-moral-question/</loc>
+    <loc>http://localhost:1313/books/how-to-be-perfect-the-correct-answer-to-every-moral-question/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/how-to-fail-at-almost-everything-and-still-win-big/</loc>
+    <loc>http://localhost:1313/books/how-to-fail-at-almost-everything-and-still-win-big/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/how-to-have-impossible-conversations/</loc>
+    <loc>http://localhost:1313/books/how-to-have-impossible-conversations/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/how-to-make-things-faster/</loc>
+    <loc>http://localhost:1313/books/how-to-make-things-faster/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/come-fermare-il-tempo/</loc>
+    <loc>http://localhost:1313/books/come-fermare-il-tempo/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/how-to-talk-so-kids-will-listen--listen-so-kids-will-talk/</loc>
+    <loc>http://localhost:1313/books/how-to-talk-so-kids-will-listen--listen-so-kids-will-talk/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/how-to-talk-to-anyone/</loc>
+    <loc>http://localhost:1313/books/how-to-talk-to-anyone/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/come-trattare-gli-altri-e-farseli-amici/</loc>
+    <loc>http://localhost:1313/books/come-trattare-gli-altri-e-farseli-amici/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/how-your-house-works/</loc>
+    <loc>http://localhost:1313/books/how-your-house-works/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/il-fascismo-eterno/</loc>
+    <loc>http://localhost:1313/books/il-fascismo-eterno/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/il-genio-non-esiste/</loc>
+    <loc>http://localhost:1313/books/il-genio-non-esiste/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/impact-mapping-making-a-big-impact-with-software-products-and-projects/</loc>
+    <loc>http://localhost:1313/books/impact-mapping-making-a-big-impact-with-software-products-and-projects/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/impro/</loc>
+    <loc>http://localhost:1313/books/impro/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/influence--the-psychology-of-persuasion/</loc>
+    <loc>http://localhost:1313/books/influence--the-psychology-of-persuasion/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/inspired-how-to-create-tech-products-customers-love/</loc>
+    <loc>http://localhost:1313/books/inspired-how-to-create-tech-products-customers-love/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/it-doesnt-have-to-be-crazy-at-work/</loc>
+    <loc>http://localhost:1313/books/it-doesnt-have-to-be-crazy-at-work/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/its-ok-that-youre-not-ok/</loc>
+    <loc>http://localhost:1313/books/its-ok-that-youre-not-ok/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/kitchen-confidential/</loc>
+    <loc>http://localhost:1313/books/kitchen-confidential/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/linganno-dei-confini/</loc>
+    <loc>http://localhost:1313/books/linganno-dei-confini/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/la-rana-bollita-una-storia-di-ansia/</loc>
+    <loc>http://localhost:1313/books/la-rana-bollita-una-storia-di-ansia/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/la-scienza-delle-pulizie/</loc>
+    <loc>http://localhost:1313/books/la-scienza-delle-pulizie/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/la-scienza-delle-verdure/</loc>
+    <loc>http://localhost:1313/books/la-scienza-delle-verdure/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/le-cene-eleganti/</loc>
+    <loc>http://localhost:1313/books/le-cene-eleganti/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/leading-effective-engineering-teams/</loc>
+    <loc>http://localhost:1313/books/leading-effective-engineering-teams/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/learn-git-in-a-month-of-lunches/</loc>
+    <loc>http://localhost:1313/books/learn-git-in-a-month-of-lunches/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/lettere-a-lucilio/</loc>
+    <loc>http://localhost:1313/books/lettere-a-lucilio/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/llm-engineers-handbook/</loc>
+    <loc>http://localhost:1313/books/llm-engineers-handbook/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/looks-good-to-me/</loc>
+    <loc>http://localhost:1313/books/looks-good-to-me/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/love-sex-and-long-term-relationships-what-people-with-asperger-syndrome-really-really-want/</loc>
+    <loc>http://localhost:1313/books/love-sex-and-long-term-relationships-what-people-with-asperger-syndrome-really-really-want/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/luomo-in-cerca-di-senso/</loc>
+    <loc>http://localhost:1313/books/luomo-in-cerca-di-senso/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/meditazioni/</loc>
+    <loc>http://localhost:1313/books/meditazioni/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/meditations-for-mortals/</loc>
+    <loc>http://localhost:1313/books/meditations-for-mortals/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/mythos/</loc>
+    <loc>http://localhost:1313/books/mythos/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/never-flinch/</loc>
+    <loc>http://localhost:1313/books/never-flinch/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/no-one-would-listen/</loc>
+    <loc>http://localhost:1313/books/no-one-would-listen/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/nonviolent-communication-a-language-of-life/</loc>
+    <loc>http://localhost:1313/books/nonviolent-communication-a-language-of-life/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/nudge-la-spinta-gentile/</loc>
+    <loc>http://localhost:1313/books/nudge-la-spinta-gentile/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/on-writing-a-memoir-of-the-craft/</loc>
+    <loc>http://localhost:1313/books/on-writing-a-memoir-of-the-craft/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/packing-for-mars/</loc>
+    <loc>http://localhost:1313/books/packing-for-mars/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/pale-blue-dot/</loc>
+    <loc>http://localhost:1313/books/pale-blue-dot/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/presentation-patterns/</loc>
+    <loc>http://localhost:1313/books/presentation-patterns/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/principles/</loc>
+    <loc>http://localhost:1313/books/principles/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/project-hail-mary/</loc>
+    <loc>http://localhost:1313/books/project-hail-mary/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/machine-learning-con-python/</loc>
+    <loc>http://localhost:1313/books/machine-learning-con-python/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/quiet-/</loc>
+    <loc>http://localhost:1313/books/quiet-/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/reading-like-a-writer/</loc>
+    <loc>http://localhost:1313/books/reading-like-a-writer/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/imparare-a-rischiare/</loc>
+    <loc>http://localhost:1313/books/imparare-a-rischiare/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/refactoring-ui/</loc>
+    <loc>http://localhost:1313/books/refactoring-ui/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/refactoring-improving-the-design-of-existing-code/</loc>
+    <loc>http://localhost:1313/books/refactoring-improving-the-design-of-existing-code/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/ruined-by-design/</loc>
+    <loc>http://localhost:1313/books/ruined-by-design/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/saggio-erotico-sulla-fine-del-mondo.-la-commedia-brutta-del-disastro-ambientale/</loc>
+    <loc>http://localhost:1313/books/saggio-erotico-sulla-fine-del-mondo.-la-commedia-brutta-del-disastro-ambientale/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/salt-sugar-fat-how-the-food-giants-hooked-us/</loc>
+    <loc>http://localhost:1313/books/salt-sugar-fat-how-the-food-giants-hooked-us/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/salt-fat-acid-heat/</loc>
+    <loc>http://localhost:1313/books/salt-fat-acid-heat/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/sapiens---breve-storia-dellumanit%C3%A0/</loc>
+    <loc>http://localhost:1313/books/sapiens---breve-storia-dellumanit%C3%A0/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/say-it-like-obama-and-win/</loc>
+    <loc>http://localhost:1313/books/say-it-like-obama-and-win/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/simply-said-communicating-better-at-work-and-beyond/</loc>
+    <loc>http://localhost:1313/books/simply-said-communicating-better-at-work-and-beyond/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/slow-productivity/</loc>
+    <loc>http://localhost:1313/books/slow-productivity/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/smart-brevity/</loc>
+    <loc>http://localhost:1313/books/smart-brevity/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/smarter-faster-better/</loc>
+    <loc>http://localhost:1313/books/smarter-faster-better/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/so-good-they-cant-ignore-you/</loc>
+    <loc>http://localhost:1313/books/so-good-they-cant-ignore-you/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/spark/</loc>
+    <loc>http://localhost:1313/books/spark/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/sql-antipatterns/</loc>
+    <loc>http://localhost:1313/books/sql-antipatterns/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/superhuman-social-skills/</loc>
+    <loc>http://localhost:1313/books/superhuman-social-skills/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/system-design-interview/</loc>
+    <loc>http://localhost:1313/books/system-design-interview/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-12-million-stuffed-shark/</loc>
+    <loc>http://localhost:1313/books/the-12-million-stuffed-shark/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-100-year-life/</loc>
+    <loc>http://localhost:1313/books/the-100-year-life/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-4-pillars-of-investing/</loc>
+    <loc>http://localhost:1313/books/the-4-pillars-of-investing/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-4-hour-work-week/</loc>
+    <loc>http://localhost:1313/books/the-4-hour-work-week/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-accounting-game/</loc>
+    <loc>http://localhost:1313/books/the-accounting-game/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-antidote-happiness-for-people-who-cant-stand-positive-thinking/</loc>
+    <loc>http://localhost:1313/books/the-antidote-happiness-for-people-who-cant-stand-positive-thinking/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-art-of-data-science/</loc>
+    <loc>http://localhost:1313/books/the-art-of-data-science/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-art-of-seduction/</loc>
+    <loc>http://localhost:1313/books/the-art-of-seduction/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-art-of-sql/</loc>
+    <loc>http://localhost:1313/books/the-art-of-sql/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-best-story-wins/</loc>
+    <loc>http://localhost:1313/books/the-best-story-wins/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-black-hole-war/</loc>
+    <loc>http://localhost:1313/books/the-black-hole-war/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-black-swan/</loc>
+    <loc>http://localhost:1313/books/the-black-swan/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-body-keeps-the-score/</loc>
+    <loc>http://localhost:1313/books/the-body-keeps-the-score/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-book-of-awesome/</loc>
+    <loc>http://localhost:1313/books/the-book-of-awesome/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-conversation-code/</loc>
+    <loc>http://localhost:1313/books/the-conversation-code/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-creativity-code-how-ai-is-learning-to-write-paint-and-think/</loc>
+    <loc>http://localhost:1313/books/the-creativity-code-how-ai-is-learning-to-write-paint-and-think/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/luovo-del-cuculo/</loc>
+    <loc>http://localhost:1313/books/luovo-del-cuculo/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-culture-code/</loc>
+    <loc>http://localhost:1313/books/the-culture-code/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-culture-map/</loc>
+    <loc>http://localhost:1313/books/the-culture-map/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-defining-decade/</loc>
+    <loc>http://localhost:1313/books/the-defining-decade/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-definitive-guide-to-dax-note-pubbliche/</loc>
+    <loc>http://localhost:1313/books/the-definitive-guide-to-dax-note-pubbliche/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-design-of-everyday-things/</loc>
+    <loc>http://localhost:1313/books/the-design-of-everyday-things/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-dip/</loc>
+    <loc>http://localhost:1313/books/the-dip/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-e-myth-revisited/</loc>
+    <loc>http://localhost:1313/books/the-e-myth-revisited/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-elephant-in-the-brain/</loc>
+    <loc>http://localhost:1313/books/the-elephant-in-the-brain/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-engineering-executives-primer/</loc>
+    <loc>http://localhost:1313/books/the-engineering-executives-primer/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-five-dysfunctions-of-a-team/</loc>
+    <loc>http://localhost:1313/books/the-five-dysfunctions-of-a-team/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-flavor-bible-the-essential-guide-to-culinary-creativity/</loc>
+    <loc>http://localhost:1313/books/the-flavor-bible-the-essential-guide-to-culinary-creativity/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-food-lab-better-home-cooking-through-science/</loc>
+    <loc>http://localhost:1313/books/the-food-lab-better-home-cooking-through-science/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-four-agreements/</loc>
+    <loc>http://localhost:1313/books/the-four-agreements/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-game/</loc>
+    <loc>http://localhost:1313/books/the-game/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-gervais-principle/</loc>
+    <loc>http://localhost:1313/books/the-gervais-principle/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-great-mental-models/</loc>
+    <loc>http://localhost:1313/books/the-great-mental-models/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-intelligent-investor/</loc>
+    <loc>http://localhost:1313/books/the-intelligent-investor/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-lean-startup/</loc>
+    <loc>http://localhost:1313/books/the-lean-startup/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/luomo-che-scambi%C3%B2-sua-moglie-per-un-cappello/</loc>
+    <loc>http://localhost:1313/books/luomo-che-scambi%C3%B2-sua-moglie-per-un-cappello/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-managers-path/</loc>
+    <loc>http://localhost:1313/books/the-managers-path/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-millionaire-fastlane/</loc>
+    <loc>http://localhost:1313/books/the-millionaire-fastlane/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-millionaire-next-door-/</loc>
+    <loc>http://localhost:1313/books/the-millionaire-next-door-/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-mom-test/</loc>
+    <loc>http://localhost:1313/books/the-mom-test/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-monk-and-the-riddle/</loc>
+    <loc>http://localhost:1313/books/the-monk-and-the-riddle/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-muscle-ladder/</loc>
+    <loc>http://localhost:1313/books/the-muscle-ladder/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/lenigma-dei-numeri-primi/</loc>
+    <loc>http://localhost:1313/books/lenigma-dei-numeri-primi/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-obstacle-is-the-way/</loc>
+    <loc>http://localhost:1313/books/the-obstacle-is-the-way/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-personal-mba/</loc>
+    <loc>http://localhost:1313/books/the-personal-mba/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/the-phoenix-project/</loc>
+    <loc>http://localhost:1313/books/the-phoenix-project/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/la-dittatura-delle-abitudini/</loc>
+    <loc>http://localhost:1313/books/la-dittatura-delle-abitudini/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/the-productivity-project/</loc>
+    <loc>http://localhost:1313/books/the-productivity-project/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/luomo-pi%C3%B9-ricco-di-babilonia/</loc>
+    <loc>http://localhost:1313/books/luomo-pi%C3%B9-ricco-di-babilonia/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/the-scout-mindset/</loc>
+    <loc>http://localhost:1313/books/the-scout-mindset/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/the-seven-principles-for-making-marriage-work/</loc>
+    <loc>http://localhost:1313/books/the-seven-principles-for-making-marriage-work/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/lombra-del-vento/</loc>
+    <loc>http://localhost:1313/books/lombra-del-vento/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/the-silent-patient/</loc>
+    <loc>http://localhost:1313/books/the-silent-patient/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/the-simple-path-to-wealth/</loc>
+    <loc>http://localhost:1313/books/the-simple-path-to-wealth/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/the-slight-edge/</loc>
+    <loc>http://localhost:1313/books/the-slight-edge/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/la-sottile-arte-di-fare-quello-che-co-ti-pare/</loc>
+    <loc>http://localhost:1313/books/la-sottile-arte-di-fare-quello-che-co-ti-pare/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/the-swerve-how-the-world-became-modern/</loc>
+    <loc>http://localhost:1313/books/the-swerve-how-the-world-became-modern/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/the-tech-resume-inside-out/</loc>
+    <loc>http://localhost:1313/books/the-tech-resume-inside-out/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/il-metodo-warren-buffett/</loc>
+    <loc>http://localhost:1313/books/il-metodo-warren-buffett/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/the-way-of-the-peaceful-warrior/</loc>
+    <loc>http://localhost:1313/books/the-way-of-the-peaceful-warrior/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/il-peggior-viaggio-del-mondo/</loc>
+    <loc>http://localhost:1313/books/il-peggior-viaggio-del-mondo/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/the-year-of-magical-thinking/</loc>
+    <loc>http://localhost:1313/todo/the-year-of-magical-thinking/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/the-zombie-survival-guide/</loc>
+    <loc>http://localhost:1313/todo/the-zombie-survival-guide/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/thinking-fast-and-slow/</loc>
+    <loc>http://localhost:1313/todo/thinking-fast-and-slow/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/this-is-vegan-propaganda-and-other-lies-the-meat-industry-tells-you/</loc>
+    <loc>http://localhost:1313/todo/this-is-vegan-propaganda-and-other-lies-the-meat-industry-tells-you/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/tidy-first--a-personal-exercise-in-empirical-software-design/</loc>
+    <loc>http://localhost:1313/todo/tidy-first--a-personal-exercise-in-empirical-software-design/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/</loc>
+    <loc>http://localhost:1313/todo/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/tools-of-titans/</loc>
+    <loc>http://localhost:1313/todo/tools-of-titans/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/treasure-islands/</loc>
+    <loc>http://localhost:1313/todo/treasure-islands/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/turn-the-ship-around/</loc>
+    <loc>http://localhost:1313/todo/turn-the-ship-around/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/tutti-nella-mia-famiglia-hanno-ucciso-qualcuno/</loc>
+    <loc>http://localhost:1313/todo/tutti-nella-mia-famiglia-hanno-ucciso-qualcuno/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/uncanny-valley/</loc>
+    <loc>http://localhost:1313/todo/uncanny-valley/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/volere-troppo-e-ottenerlo/</loc>
+    <loc>http://localhost:1313/todo/volere-troppo-e-ottenerlo/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/we-have-no-idea/</loc>
+    <loc>http://localhost:1313/todo/we-have-no-idea/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/what-color-is-your-parachute-/</loc>
+    <loc>http://localhost:1313/todo/what-color-is-your-parachute-/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/what-every-body-is-saying/</loc>
+    <loc>http://localhost:1313/todo/what-every-body-is-saying/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/why-we-sleep-unlocking-the-power-of-sleep-and-dreams/</loc>
+    <loc>http://localhost:1313/todo/why-we-sleep-unlocking-the-power-of-sleep-and-dreams/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/wool/</loc>
+    <loc>http://localhost:1313/todo/wool/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/world-war-z/</loc>
+    <loc>http://localhost:1313/todo/world-war-z/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/le-100-bandiere-che-raccontano-il-mondo/</loc>
+    <loc>http://localhost:1313/books/le-100-bandiere-che-raccontano-il-mondo/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/you-can-be-funny-and-make-people-laugh/</loc>
+    <loc>http://localhost:1313/todo/you-can-be-funny-and-make-people-laugh/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/your-money-and-your-brain/</loc>
+    <loc>http://localhost:1313/todo/your-money-and-your-brain/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/your-money-or-your-life/</loc>
+    <loc>http://localhost:1313/todo/your-money-or-your-life/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/books/lo-zen-e-larte-della-manutenzione-della-motocicletta/</loc>
+    <loc>http://localhost:1313/books/lo-zen-e-larte-della-manutenzione-della-motocicletta/</loc>
   </url><url>
-    <loc>https://mutt0-ds.github.io/todo/zero-to-one-notes-on-startups-or-how-to-build-the-future/</loc>
+    <loc>http://localhost:1313/todo/zero-to-one-notes-on-startups-or-how-to-build-the-future/</loc>
   </url>
 </urlset>
