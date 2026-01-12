@@ -9,13 +9,21 @@
       <p>
       Here's a list of books I've read, with some scattered notes. They're sorted by how much I liked them, totally subjective and partial, as usual.<br>
       Feel free to browse the notes, but don't expect anything comprehensive. You'll find technical, psychology, lifestyle, history, and science books, basically anything I managed to take notes on. I usually don't review fiction, but a few are included too.
-      </p>
+      </p>    
+      {{ $books := .Pages }}
+      {{ $random := index (shuffle $books) 0 }}
+
+      <div class="text-center">
+        <a href="{{ $random.RelPermalink }}" class="random-book-btn">
+          🎲 Take me to a random book
+        </a>
+      </div>
+      <hr>
       <p>      
-        <hr>
         Got feedback or want to recommend a book? <a href="/#contact">Reach out to me</a>!
       </p>
     </div>
-    <div class="row justify-content-center px-3 px-md-5">
+      <div class="row justify-content-center px-3 px-md-5">
       {{ range sort (sort .Pages "Params.score" "asc") "Params.score" "desc" }}
       <div class="col-lg-4 col-md-6 my-3">
         <div class="card h-100" title="{{ .Title }}">
