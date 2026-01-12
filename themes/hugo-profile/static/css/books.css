@@ -79,9 +79,13 @@
 
 /* --- Badges --- */
 
-#books .badge {
-  background-color: rgba(0,0,0,0.05);
-  color: var(--text-secondary-color);
+.badge {
+  --h: 0;
+  --s: 55%;
+  --l: 80%;
+
+  background: hsl(var(--h), var(--s), var(--l));
+  color: #222;
   font-size: 0.7rem;
   font-weight: 500;
   padding: 0.25rem 0.5rem;
@@ -90,12 +94,19 @@
   transition: all 0.2s ease;
 }
 
-#books .badge:hover {
-  background-color: rgba(0,0,0,0.1);
-  color: var(--primary-color);
-}
-
-/* --- Footer --- */
+/* map letters to hue contributions */
+.badge[style*="fiction"]       { --h: 10; }
+.badge[style*="history"]       { --h: 30; }
+.badge[style*="science"]       { --h: 200; }
+.badge[style*="psychology"]    { --h: 270; }
+.badge[style*="it"]            { --h: 140; }
+.badge[style*="work"]          { --h: 340; }
+.badge[style*="marketing"]     { --h: 180; }
+.badge[style*="philosophy"]    { --h: 300; }
+.badge[style*="communication"] { --h: 90; }
+.badge[style*="economy"]       { --h: 50; }
+.badge[style*="nutrition"]     { --h: 100; }
+* --- Footer --- */
 
 #books .card-footer {
   background-color: var(--background-color);
