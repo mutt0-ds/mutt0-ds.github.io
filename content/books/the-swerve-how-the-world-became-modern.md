@@ -1,7 +1,7 @@
 ---
 title: 'The Swerve: How the World Became Modern'
 author: Stephen Greenblatt
-image: https://images-na.ssl-images-amazon.com/images/I/51hk8Jtsp1L._SX322_BO1,204,203,200_.jpg
+image: https://m.media-amazon.com/images/I/61CVy4JRasL._AC_UF1000,1000_QL80_.jpg
 badges:
 - "🗿 History"
 score: "⭐️⭐️⭐️"
@@ -9,8 +9,6 @@ finished: '2022-03-16'
 summary: "Lucretius influenced the entire world with \"De Rerum Natura\" and the rediscovery of his manuscript was a fascinating adventure"
 showInHome: false
 ---
-
-_Lucretius influenced the entire world with "De Rerum Natura" and the rediscovery of his manuscript was a fascinating adventure_
 
 One of the books read by Thomas Frank, quite engaging, it is a story of obsessive research by a certain Poggio, a 15th-century figure who served as a papal "secretary" and traveled across Europe in search of Latin manuscripts.
 
