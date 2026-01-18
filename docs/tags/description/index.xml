@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Description on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/description/</link>
+    <link>https://mutt0-ds.github.io/tags/description/</link>
     <description>Recent content in Description on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 09 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/description/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/description/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Pro Trick for Measure Descriptions in Power BI</title>
-      <link>http://localhost:1313/posts/2024/08/the-trick-measure-description-powerbi/</link>
+      <link>https://mutt0-ds.github.io/posts/2024/08/the-trick-measure-description-powerbi/</link>
       <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2024/08/the-trick-measure-description-powerbi/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2024/08/the-trick-measure-description-powerbi/</guid>
       <description>&lt;h1 id=&#34;how-does-this-measurecolumn-work&#34;&gt;&amp;ldquo;How does this MEASURE/COLUMN work?&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;This is one of the most frequent requests I was receiving. And it&amp;rsquo;s easy to see why.&lt;/p&gt;&#xA;&lt;p&gt;In complex Power BI models, users often struggle to understand the meaning of specific measures or columns. This is especially true for ambiguous names like &lt;code&gt;AMSLast12m&lt;/code&gt; or columns with deep business logic such as &lt;code&gt;NetAmount&lt;/code&gt;. How is it calculated? With VAT? Without it? Help!&lt;/p&gt;&#xA;&lt;p&gt;Traditionally, there were limited options: ask a colleague, guess the logic, search documentation, or simply try your luck and add it blindly to the report. None of these are ideal solutions, particularly for those new to report creation.&lt;/p&gt;</description>
     </item>
   </channel>
