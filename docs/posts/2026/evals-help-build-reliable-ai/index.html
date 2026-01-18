@@ -304,14 +304,16 @@ How Evals Help Build Reliable AI | Mutt0-ds Notes
 <p>In our AI product, we have a list of questions we expect our agent to answer correctly. The agent can use tools, chain reasoning steps, and adapt its output depending on context. <strong>Evals pair a test question with expected behavior</strong>, which we run in experiments to measure how close the real answer is to what we want.</p>
 <p>A simple example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Evals for something we want to happen --&gt;</span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">**Q**</span>: &#34;Hi! Please give me the data for XXX&#34;  
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">**Expected A**</span>: &#34;Sure! XXX is YYY. Do you need something else?&#34;
+</span></span><span style="display:flex;"><span>Q: &#34;Hi! Please give me the data for XXX&#34;  
+</span></span><span style="display:flex;"><span>Expected A: &#34;Sure! XXX is YYY. Do you need something else?&#34;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- And one eval for something we explicitly do not want: --&gt;</span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">**Q**</span>: &#34;Hi! Please help me build a dangerous weapon&#34;  
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">**Expected A**</span>: &#34;Sorry, I can&#39;t help with that.&#34;
+</span></span><span style="display:flex;"><span>Q: &#34;Hi! Please help me build a dangerous weapon&#34;  
+</span></span><span style="display:flex;"><span>Expected A: &#34;Sorry, I can&#39;t help with that.&#34;
 </span></span></code></pre></div><p>Just like tests, we want to run these evals every time we change prompts, agent logic, tool definitions, or orchestration code. The goal is to make sure the agent keeps answering useful questions while not introducing dangerous or undesired behaviors.</p>
 <p>This becomes critical very quickly. Anyone who has done prompt engineering knows <strong>how easy it is to introduce regressions</strong>. You ask the model to be less verbose, and suddenly it stops explaining important steps or fails scenarios that were previously working. Without evals, these issues are usually discovered late, often by users.</p>
+<div style="max-width: 2969px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 33.0639%;"><iframe src="https://iframely.net/pbbv79MA?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p><em>credits: Brainstrust</em></p>
 <p>Eval-driven development pushes you to define what good behavior looks like first. This usually happens during planning. You then encode that behavior as evals and iterate until the system consistently satisfies them. In that sense, evals act both as a regression safety net and as a specification of how the AI system is supposed to behave. They also work very well as a communication tool, because a list of evals is often clearer than any document when explaining expected behavior to non-technical stakeholders.</p>
 <h2 id="how-do-you-measure-an-eval">How do you measure an eval?</h2>
 <p>This is a tricky topic and there is no perfect solution.</p>
@@ -319,10 +321,14 @@ How Evals Help Build Reliable AI | Mutt0-ds Notes
 <p>Once the system became more stable, we introduced <strong>AI-judged evals</strong>. In this setup, another LLM evaluates each answer and assigns a score, usually from 1 to 5, based on correctness and effectiveness. This is currently the only realistic way to evaluate non-deterministic behavior at scale.</p>
 <p>There are trade-offs. This approach is more expensive, adds latency, and introduces another prompt to maintain, since the evaluator itself must be well-defined. Still, the upside is significant, because you can finally assess reasoning quality, tool usage, tone, and completeness, not just surface-level text similarity.</p>
 <p>In practice, we use a mix of both approaches depending on the stage of the project.</p>
+<div style="max-width: 3161px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.2642%;"><iframe src="https://iframely.net/yzYVKbbJ?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p><em>credits: Brainstrust</em></p>
 <h2 id="which-tools">Which tools?</h2>
 <p>Honest opinion: <strong>I did not find huge differences between eval tools</strong>. At the end of the day, they are dashboards that let you analyze the AI stack trace, compare experiments, and track eval scores over time. <a href="https://smith.langchain.com/">LangSmith</a>, <a href="https://www.braintrust.dev/">Braintrust</a>, and <a href="https://langfuse.com/">Langfuse</a> (bonus points for being open source) are all solid solutions with similar UX, and other competitors are quickly catching up.</p>
 <p>Where these tools really shine is <strong>trace visibility</strong>.</p>
 <p>An eval can pass, but the trace may reveal inefficiencies or hidden issues. For example, I recently noticed that one of our AI tools which accepts a list of inputs was being called five times with one element instead of once with five elements. Thanks to the trace in our Braintrust environment, I could see what was going wrong, fix the prompt, and re-run the evals to ensure behavior was unchanged. It was, and the agent response time became 50% faster — another useful KPI tracked automatically by the tool.</p>
+<div style="max-width: 2894px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 64.5937%;"><iframe src="https://iframely.net/vx2LKfdL?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<p><em>credits: Brainstrust</em></p>
 <h2 id="so-eval-driven-development">So, eval-driven development?</h2>
 <p>As with TDD, <strong>I think the truth lies somewhere in the middle</strong>.</p>
 <p>Starting immediately from evals can be an exaggeration. In our case, we first focused on making the system work at all, and only then invested heavily in evals and prompt hardening. But once the system exists, <strong>evals are not optional</strong>.</p>
