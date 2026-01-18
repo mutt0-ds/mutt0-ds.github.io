@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Framework on Mutt0-ds Notes</title>
+    <link>https://mutt0-ds.github.io/tags/framework/</link>
+    <description>Recent content in Framework on Mutt0-ds Notes</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mutt0-ds.github.io/tags/framework/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How Evals Help Build Reliable AI</title>
+      <link>https://mutt0-ds.github.io/posts/2026/evals-help-build-reliable-ai/</link>
+      <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/posts/2026/evals-help-build-reliable-ai/</guid>
+      <description>&lt;p&gt;I finished 2025 with &lt;a href=&#34;https://mutt0-ds.github.io/posts/2025/12/on-ai-slop/&#34;&gt;a negative AI post&lt;/a&gt;, so let&amp;rsquo;s start 2026 with a positive one.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m leading a project for an AI-based tool, and something we are heavily experimenting with is &lt;strong&gt;eval-driven development&lt;/strong&gt;. Technical readers may immediately associate this with &lt;a href=&#34;https://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;test-driven development&lt;/a&gt;, and there are similarities, but because AI is non-deterministic, there is more going on here.&lt;/p&gt;&#xA;&lt;p&gt;In this post I want to share how we are leveraging evals in practice, why they are so important in AI projects, which tools are actually useful, and what people usually mean when they talk about EDD.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
