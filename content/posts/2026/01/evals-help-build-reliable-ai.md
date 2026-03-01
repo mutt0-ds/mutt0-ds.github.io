@@ -85,4 +85,4 @@ As with TDD, **I think the truth lies somewhere in the middle**.
 
 Starting immediately from evals can be an exaggeration. In our case, we first focused on making the system work at all, and only then invested heavily in evals and prompt hardening. But once the system exists, **evals are not optional**.
 
-AI systems are too flexible, too opaque, and too easy to break silently. Traditional QA often fails here because behavior can change meaningfully without breaking code or tests.  Right now, evals are adding reliability at very small cost, and represent the best control mechanism we have for building AI toolss.
+AI systems are too flexible, too opaque, and too easy to break silently. Traditional QA often fails here because behavior can change meaningfully without breaking code or tests.  Right now, evals are adding reliability at very small cost, and represent the best control mechanism we have for building AI tools.
