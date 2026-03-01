@@ -6,13 +6,20 @@
     <description>Recent content on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Can a Rabbit help catching Bugs?</title>
+      <link>https://mutt0-ds.github.io/posts/2026/02/code-rabbit/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/posts/2026/02/code-rabbit/</guid>
+      <description>&lt;p&gt;AI-assisted code reviews: are they actually helpful, or just more noise in an already crowded inbox?&lt;/p&gt;&#xA;&lt;p&gt;Today I want to talk about my experience with &lt;strong&gt;AI-assisted code review tools&lt;/strong&gt; like &lt;a href=&#34;https://www.coderabbit.ai/&#34;&gt;CodeRabbit&lt;/a&gt; and how they are helping me with my day-to-day work.&lt;/p&gt;&#xA;&lt;p&gt;As a preface: I&amp;rsquo;m not involved with any of the tools I&amp;rsquo;ll mention; these are just the ones I&amp;rsquo;ve explored, and your experience will likely vary.&lt;/p&gt;&#xA;&lt;p&gt;This piece is going to be extremely subjective. Code reviews are a crucial part of developer life, but they highly depend on the personalities involved and the context of the project. What works for my flow might not work for yours.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>How Evals Help Build Reliable AI</title>
-      <link>https://mutt0-ds.github.io/posts/2026/evals-help-build-reliable-ai/</link>
+      <link>https://mutt0-ds.github.io/posts/2026/01/evals-help-build-reliable-ai/</link>
       <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2026/evals-help-build-reliable-ai/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2026/01/evals-help-build-reliable-ai/</guid>
       <description>&lt;p&gt;I finished 2025 with &lt;a href=&#34;https://mutt0-ds.github.io/posts/2025/12/on-ai-slop/&#34;&gt;a negative AI post&lt;/a&gt;, so let&amp;rsquo;s start 2026 with a positive one.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m leading a project for an AI-based tool, and something we are heavily experimenting with is &lt;strong&gt;eval-driven development&lt;/strong&gt;. Technical readers may immediately associate this with &lt;a href=&#34;https://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;test-driven development&lt;/a&gt;, and there are similarities, but because AI is non-deterministic, there is more going on here.&lt;/p&gt;&#xA;&lt;p&gt;In this post I want to share how we are leveraging evals in practice, why they are so important in AI projects, which tools are actually useful, and what people usually mean when they talk about EDD.&lt;/p&gt;</description>
     </item>
     <item>
