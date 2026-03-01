@@ -1,9 +1,9 @@
 ---
-title: "Are AI-Assisted Code Reviews actually Helpful?"
+title: "Can a Rabbit help catching Bugs?"
 date: 2026-03-01
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: "Moving beyond manual 'pentesting' to AI-augmented reviews, and why tools like CodeRabbit have become my favorite teammates."
-image: /images/code-reviews/title.jpg
+image: /images/code_reviews/title.jpg
 draft: false
 author: "Mutt0-ds"
 tags:
@@ -15,7 +15,8 @@ tags:
 
 AI-assisted code reviews: are they actually helpful, or just more noise in an already crowded inbox?
 
-Today I want to talk about my experience with **AI-assisted code review tools** and how they are helping me with my day-to-day work. 
+Today I want to talk about my experience with **AI-assisted code review tools** like [CodeRabbit](https://www.coderabbit.ai/) and how they are helping me with my day-to-day work. 
+
 As a preface: I'm not involved with any of the tools I'll mention; these are just the ones I've explored, and your experience will likely vary.
 
 This piece is going to be extremely subjective. Code reviews are a crucial part of developer life, but they highly depend on the personalities involved and the context of the project. What works for my flow might not work for yours.
@@ -37,6 +38,8 @@ But AI can also help us in amazing ways...
 I'm mentioning **CodeRabbit** because it has become my favorite tool in our CI/CD pipeline. There are several competitors—like [Qodo](https://www.qodo.ai/), [CodeAnt](https://www.codeant.ai/), and [CodeFactor](https://www.codefactor.io/) and they mostly share the same idea: **an AI agent that acts as a reviewer**, leaving comments and suggestions every time you open a Pull Request.
 
 The flow is straightforward: push changes, and the bot analyzes them. **This DOES NOT replace humans.** These tools still miss the "real" architectural bugs. But they do an excellent job on the **"first line" review**: catching bad practices immediately and telling you what is wrong without fear of social repercussions, every day, at every hour.
+
+
 
 ## The Experience: Signal vs. Noise
 
