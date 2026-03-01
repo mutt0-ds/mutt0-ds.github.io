@@ -6,13 +6,34 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ai</title>
       <link>https://mutt0-ds.github.io/tags/ai/</link>
-      <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Code-Review</title>
+      <link>https://mutt0-ds.github.io/tags/code-review/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/code-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding</title>
+      <link>https://mutt0-ds.github.io/tags/coding/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Productivity</title>
+      <link>https://mutt0-ds.github.io/tags/productivity/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/productivity/</guid>
       <description></description>
     </item>
     <item>
@@ -125,13 +146,6 @@
       <link>https://mutt0-ds.github.io/tags/prototyping/</link>
       <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/prototyping/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Coding</title>
-      <link>https://mutt0-ds.github.io/tags/coding/</link>
-      <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/coding/</guid>
       <description></description>
     </item>
     <item>
