@@ -124,9 +124,9 @@ params:
     enable: true
     intro: "Hi, I'm"
     title: "Davide"
-    subtitle: "A Software Engineer focused on AI, Cloud & Data Visualization"
+    subtitle: "Tech Lead focused on shipping solutions"
     content: "This is a collection of my notes, thoughts and stories collected while exploring the world around the things I love. 
-    Currently working with Power BI, Azure & cutting-edge AI technologies"
+    Currently working with AI & Data in the fintech area"
     image: /images/me.png
     roundImage: false # Make hero image circular | default false
     button:
@@ -151,21 +151,20 @@ params:
     title: "About Me"
     image: "/fav.png"
     content: |-
-      Data Engineer with a passion for BI Analytics and Artificial Intelligence. Calm, organized, and endlessly curious.
-      
-      My journey spans both IT and Finance, where I've done everything from building data pipelines and managing warehouses to crafting Power BI dashboards that people actually want to use.
+      Tech Lead working with AI & Data technologies. I enjoy building solutions that bridge different domains and help extract value from complex systems.
+  
       I believe great data work starts with understanding the counterpart - that's why I love to listen and understand how the business works.
-
-      I'm that person who gets excited about clear documentation (yes, really!) and love giving back to the open-source community - especially through my work on the [Python Notion SDK](https://github.com/ramnes/notion-sdk-py).
+      
+      I'm passionate about clear documentation and contributing to the open-source community, including work on the [Python Notion SDK](https://github.com/ramnes/notion-sdk-py).
 
       ### Other fun facts about me:
 
-      1. I created a [Microsoft Fabric course with DataCamp](https://mutt0-ds.github.io/posts/2025/01/fabric-datacamp-course/). I guess that makes me a teacher somehow!
+      1. I created a [Microsoft Fabric course with DataCamp](https://mutt0-ds.github.io/posts/2025/01/fabric-datacamp-course/).
       
       2. Although I'm an introvert, I like to challenge myself socially by participating and speaking 
       at [conferences, meetups, and meetings](https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/).  
       
-      3. My memory isn't great (😇), so I keep [a huge second brain in Obsidian](https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/) to store all the info I need.  
+      3. My memory isn't great (😇), so I keep [a huge second brain in Obsidian](https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/) to store all the info I need.
 
 
       ### Tech stack: 👇
@@ -223,16 +222,16 @@ params:
   experience:
     enable: true
     items:
-      - job: "AI Tech Lead"
-        company: "Investsuite"
-        companyUrl: "https://www.investsuite.com"
+      - job: "Head of AI - Tech Lead"
+        company: "Invessuite"
+        companyUrl: "https://www.invessuite.com"
         date: "Dec 2024 - Present"
         featuredLink:
           enable: false
         content: |
-          - Led backend development of flagship product *[StoryTeller](https://www.investsuite.com/)*.
-          - Focused on R&D projects implementing AI features across multiple company products.
-          - Created internal Data Platform for reporting using Metabase, including ETL and Data Warehouse implementation on AWS.
+          - Working with AI & Data team to build an Intelligence Platform and production AI features
+          - Contributing to backend development for flagship SaaS (StoryTeller)
+          - Helping build internal Data Platform with AWS ETL/DWH and Metabase
 
       - job: "Data Science & Business Intelligence Engineer"
         company: "Acer Europe"
