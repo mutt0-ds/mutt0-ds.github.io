@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software-Engineering on Mutt0-ds Notes</title>
+    <link>https://mutt0-ds.github.io/tags/software-engineering/</link>
+    <description>Recent content in Software-Engineering on Mutt0-ds Notes</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mutt0-ds.github.io/tags/software-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>10 Lessons learned when building Charlie</title>
+      <link>https://mutt0-ds.github.io/posts/2026/04/charlie-lessons/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/posts/2026/04/charlie-lessons/</guid>
+      <description>&lt;p&gt;Last week, we launched &lt;a href=&#34;https://www.investsuite.com/charlie&#34;&gt;&lt;strong&gt;Charlie&lt;/strong&gt;&lt;/a&gt;, our first AI Agent, specifically designed and tailored for financial institutions.&lt;/p&gt;&#xA;&lt;p&gt;While designing and building it over the past few months, the pace was intense. Now I finally have the space to step back and document the core insights we gained while developing this application. These lessons were instrumental for my team and me, and I believe they offer a valuable roadmap for anyone building in the agentic AI space.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

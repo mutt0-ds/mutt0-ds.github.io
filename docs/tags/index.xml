@@ -6,13 +6,34 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ai</title>
       <link>https://mutt0-ds.github.io/tags/ai/</link>
-      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Framework</title>
+      <link>https://mutt0-ds.github.io/tags/framework/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/framework/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Productivity</title>
+      <link>https://mutt0-ds.github.io/tags/productivity/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/productivity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software-Engineering</title>
+      <link>https://mutt0-ds.github.io/tags/software-engineering/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/software-engineering/</guid>
       <description></description>
     </item>
     <item>
@@ -30,24 +51,10 @@
       <description></description>
     </item>
     <item>
-      <title>Productivity</title>
-      <link>https://mutt0-ds.github.io/tags/productivity/</link>
-      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/productivity/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Communication</title>
       <link>https://mutt0-ds.github.io/tags/communication/</link>
       <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/communication/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Framework</title>
-      <link>https://mutt0-ds.github.io/tags/framework/</link>
-      <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/framework/</guid>
       <description></description>
     </item>
     <item>
