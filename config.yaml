@@ -124,7 +124,7 @@ params:
     enable: true
     intro: "Hi, I'm"
     title: "Davide"
-    subtitle: "Tech Lead focused on shipping solutions"
+    subtitle: "Software Engineer focused on shipping solutions"
     content: "This is a collection of my notes, thoughts and stories collected while exploring the world around the things I love. 
     Currently working with AI & Data in the fintech area"
     image: /images/me.png
@@ -151,7 +151,7 @@ params:
     title: "About Me"
     image: "/fav.png"
     content: |-
-      Tech Lead working with AI & Data technologies. I enjoy building solutions that bridge different domains and help extract value from complex systems.
+      Software Engineer working with AI & Data technologies. I enjoy building solutions that bridge different domains and help extract value from complex systems.
   
       I believe great data work starts with understanding the counterpart - that's why I love to listen and understand how the business works.
       

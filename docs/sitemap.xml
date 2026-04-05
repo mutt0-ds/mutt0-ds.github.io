@@ -2,8 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mutt0-ds.github.io/posts/2026/04/charlie-lessons/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mutt0-ds.github.io/tags/ai/</loc>
-    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/framework/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/posts/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/productivity/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/software-engineering/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/tags/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/posts/2026/02/code-rabbit/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
@@ -14,22 +35,7 @@
     <loc>https://mutt0-ds.github.io/tags/coding/</loc>
     <lastmod>2026-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mutt0-ds.github.io/</loc>
-    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/posts/</loc>
-    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/productivity/</loc>
-    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/</loc>
-    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mutt0-ds.github.io/tags/communication/</loc>
-    <lastmod>2026-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mutt0-ds.github.io/tags/framework/</loc>
     <lastmod>2026-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mutt0-ds.github.io/posts/2026/01/evals-help-build-reliable-ai/</loc>
@@ -471,6 +477,8 @@
   </url><url>
     <loc>https://mutt0-ds.github.io/books/a-short-history-of-nearly-everything/</loc>
   </url><url>
+    <loc>https://mutt0-ds.github.io/books/addiction-by-design/</loc>
+  </url><url>
     <loc>https://mutt0-ds.github.io/books/all-marketers-are-liars/</loc>
   </url><url>
     <loc>https://mutt0-ds.github.io/books/niente-di-nuovo-sul-fronte-occidentale/</loc>
@@ -484,6 +492,8 @@
     <loc>https://mutt0-ds.github.io/books/an-open-heart/</loc>
   </url><url>
     <loc>https://mutt0-ds.github.io/books/antifragile.-prosperare-nel-disordine/</loc>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/books/atomic-habits/</loc>
   </url><url>
     <loc>https://mutt0-ds.github.io/books/automate-the-boring-stuff-with-python/</loc>
   </url><url>
@@ -525,7 +535,11 @@
   </url><url>
     <loc>https://mutt0-ds.github.io/books/complete-car-care-manual/</loc>
   </url><url>
+    <loc>https://mutt0-ds.github.io/books/counter-clock-world/</loc>
+  </url><url>
     <loc>https://mutt0-ds.github.io/books/cracking-the-coding-interview/</loc>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/books/creativity-inc./</loc>
   </url><url>
     <loc>https://mutt0-ds.github.io/books/designing-data-intensive-applications/</loc>
   </url><url>
@@ -601,7 +615,11 @@
   </url><url>
     <loc>https://mutt0-ds.github.io/books/hold-me-tight-seven-conversations-for-a-lifetime-of-love/</loc>
   </url><url>
+    <loc>https://mutt0-ds.github.io/books/how-big-things-get-done/</loc>
+  </url><url>
     <loc>https://mutt0-ds.github.io/books/how-not-to-die/</loc>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/books/how-not-to-kill-your-houseplant/</loc>
   </url><url>
     <loc>https://mutt0-ds.github.io/books/how-the-world-really-works/</loc>
   </url><url>
@@ -612,6 +630,8 @@
     <loc>https://mutt0-ds.github.io/books/how-to-have-impossible-conversations/</loc>
   </url><url>
     <loc>https://mutt0-ds.github.io/books/how-to-make-things-faster/</loc>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/books/how-to-stay-smart-in-a-smart-world-why-human-intelligence-still-beats-algorithms/</loc>
   </url><url>
     <loc>https://mutt0-ds.github.io/books/come-fermare-il-tempo/</loc>
   </url><url>
@@ -668,6 +688,8 @@
     <loc>https://mutt0-ds.github.io/books/meditazioni/</loc>
   </url><url>
     <loc>https://mutt0-ds.github.io/books/meditations-for-mortals/</loc>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/books/minecraft-the-unlikely-tale-of-markus-notch-persson-and-the-game-that-changed-everything/</loc>
   </url><url>
     <loc>https://mutt0-ds.github.io/books/mythos/</loc>
   </url><url>
@@ -752,6 +774,8 @@
     <loc>https://mutt0-ds.github.io/books/the-art-of-seduction/</loc>
   </url><url>
     <loc>https://mutt0-ds.github.io/books/the-art-of-sql/</loc>
+  </url><url>
+    <loc>https://mutt0-ds.github.io/books/larte-della-vittoria/</loc>
   </url><url>
     <loc>https://mutt0-ds.github.io/books/the-best-story-wins/</loc>
   </url><url>
