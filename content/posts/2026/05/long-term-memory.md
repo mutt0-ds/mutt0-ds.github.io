@@ -15,9 +15,11 @@ tags:
   - framework
 ---
 
-**Agentic Memory** is an area of the AI world where even benchmarks are vague. How do you really measure "*memory*"? Retention? Relevance? Recall quality? Personality consistency? 
+**Agentic Memory** is an area of the AI world where even benchmarks are vague. 
 
-Honestly, it is surprisingly difficult to find concise, practical information on the topic. 
+How do you really measure "*memory*"? Retention? Relevance? Recall quality? Personality consistency? 
+
+It is surprisingly difficult to find concise, practical information on the topic. 
 
 Sure, there are tons of libraries, frameworks, and academic papers around, but there is also a lot of [lies](https://www.reddit.com/r/LangChain/comments/1kg5qas/lies_damn_lies_statistics_is_mem0_really_sota_in/) and [confusion](https://blog.getzep.com/the-ai-memory-wallet-fallacy/). Plus, implementing this in a real-world scenario isn't easy.
 
@@ -26,13 +28,13 @@ Today, I'll guide you through long-term memory, "dreams", and the challenges I e
 
 ## Why we needed long-term memory
 
-Essentially, to give our users a better experience.
+Essentially, **to give our users a better experience.**
 
 How satisfying is it when ChatGPT, Gemini, or Claude remembers your name, your preferences, or instructions you gave weeks ago? It feels natural, and the overall experience dramatically improves. You build a relationship with your agent, and that matters a lot in UX.
 
 I still remember when I told my ChatGPT: *"YOU MUST ALWAYS TALK TO ME IN A CONCISE WAY - NO BULLETS - NO SYCOPHANCY"*, and it has been quiet and direct since that day...
 
-[good_boy]
+<div style="max-width: 1051px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.2009%;"><iframe src="https://iframely.net/AxA7kYh9?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 I also noticed this with technical tools like [CodeRabbit](https://mutt0-ds.github.io/posts/2026/02/code-rabbit/). At some point, fed up with wrong PR comments, I repeatedly told the bot we were using Pydantic V1 (it was assuming V2). It stored that information in long-term memory and stopped flagging non-existent issues for good.
 
@@ -40,26 +42,26 @@ That's incredibly cool because it really feels like talking to a human. You don'
 
 But achieving that reliably is *very* difficult.
 
-
 ## The intricacies of long-term memory
 
 For starters, **memory is complex**.
 
 The earliest implementations were basically "startup context": injecting instructions like *"remember that my name is Davide, I like concise responses, and I live in Italy"* into every prompt. This is already up and running in most flagship models, and it's a highly efficient way to keep customizations active. I recommend to use it for things that rarely change like your name, tone preferences, and localization. 
 
-[chatgpt memory]
+<div style="max-width: 881px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 78.0654%;"><iframe src="https://iframely.net/iddilVEN?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+
+*Custom instructions, available in the ChatGPT preferences*
 
 But back in the day (about 500 days ago, I mean) there was a whole hype cycle around [ChatGPT "plugins"](https://openai.com/index/chatgpt-plugins/). They were essentially just injecting prompts like *"you are a helpful go-kart pilot"*, pairing it with a couple of tools to read data, and releasing them to users in a marketplace. 
 
 This concept was quickly forgotten because:
-1. Models got better, so you don't need a 500-word-long startup context anymore; you can just ask for something and the model understands what you expect.
-2. Apps and plugins evolved into data connectors, which are a different thing entirely: they feed data, and the AI already knows how to use it.
+1. **Models got better**, so you don't need a 500-word-long startup context anymore; you can just ask for something and the model understands what you expect.
+2. Apps and plugins evolved into **data connectors**, which are a different thing entirely: they feed data, and the AI already knows how to use it.
 
-So, while "startup context" works, it only goes so far. It doesn't really capture the nuances of personality, habits, or evolving preferences. It simply reminds the AI of some hardcoded instructions. Boring.
+So, while "startup context" works, it doesn't really capture the nuances of personality, habits, or evolving preferences. It simply reminds the AI of some hardcoded instructions. Boring.
 
 Over time, more sophisticated systems appeared. 
 Starting with [this 2024 paper](https://arxiv.org/html/2410.15665v2) on long-term memory, the topic became increasingly interesting. [Google](https://research.google/blog/titans-miras-helping-ai-have-long-term-memory/) and [others](https://arxiv.org/abs/2504.19413) have experimented with newer architectures and memory systems.
-
 
 ## But how do memory systems work?
 
@@ -105,11 +107,12 @@ Davide
  └── uses → Pydantic v1
 ```
 
-https://raw.githubusercontent.com/DEEP-PolyU/Awesome-GraphMemory/main/figures/illustration_memory_comparison.png
-(brief recap)
 Graph memory allows for more contextual and relational retrieval instead of pure similarity search, mapping closely to how our own brains work with networks of neurons.
 
 I'm intentionally oversimplifying here because there are already [many deeply technical articles](https://github.com/DEEP-PolyU/Awesome-GraphMemory) explaining the individual strategies much better than I could in a single post.
+
+<div style="max-width: 5768px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.2823%;"><iframe src="https://iframely.net/I3awR5yi?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+
 
 ## What did I choose?
 
@@ -123,30 +126,29 @@ I had pretty simple requirements starting out:
 - Something fast
 - Something that doesn't burn too many tokens
 
-The user needs to *feel listened to* without the system becoming incredibly expensive or slow.
 After a lot of experimentation, I focused mainly on **Hindsight**.
 
 It's still relatively new and requires some exploration, but I really like the philosophy behind it:
 
 [Hindsight Research Paper](https://arxiv.org/html/2512.12818v1)
 
-The core idea is pretty simple:
+The core idea is pretty simple, based on the graph memory I previously mentioned:
 
 - **Retain** important interactions
 - **Recall** them when needed
-- **Reflect** periodically to reorganize memory
+- **Reflect** periodically to reorganize and update memory
 
-The reflection part is especially interesting, and it connects right back to the graph memory system I mentioned earlier.
+Instead of treating memory as static storage, the system continuously revisits and restructures information over time, similar to how humans reinforce or forget memories. 
 
-Instead of treating memory as static storage, the system continuously revisits and restructures information over time, similar to how humans reinforce or forget memories. This helps avoid context pollution and prevents the memory layer from becoming a giant pile of irrelevant chat logs.
+Hindsight also features a nice graph view so you can explore the memory freely, just like a "second brain". It reminds me a lot of [my Obsidian vault](https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/).
 
-Hindsight also features a nice graph view so you can explore the memory freely, just like a "second brain". It honestly reminds me a lot of [my Obsidian vault](https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/).
+<div style="max-width: 4014px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 61.7339%;"><iframe src="https://iframely.net/qiKmGy5j?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
-[memory image]
 *This is how it looks at scale (source: Reddit)*
 
-<video src="https://github.com/user-attachments/assets/923b798d-3581-4897-bb62-9cfa5a931682" controls></video>
-*A brief introduction to Hindsight, and a clean explanation of the graph memory mechanism!*
+<div><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%; margin-bottom:3%"><iframe src="https://iframely.net/C1vosy7W?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="encrypted-media *;"></iframe></div></div><script async src="https://iframely.net/embed.js"></script>
+
+*A brief introduction to Hindsight*
 
 
 ## Lessons learned
