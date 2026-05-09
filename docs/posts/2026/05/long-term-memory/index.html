@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="http://localhost:1313/posts/2026/05/long-term-memory/">
+  <meta property="og:site_name" content="Mutt0-ds Notes">
+  <meta property="og:title" content="Why AI needs to dream: a guide to long-term memory">
+  <meta property="og:description" content="Agentic Memory is an area of the AI world where even benchmarks are vague. How do you really measure “memory”? Retention? Relevance? Recall quality? Personality consistency?
+Honestly, it is surprisingly difficult to find concise, practical information on the topic.
+Sure, there are tons of libraries, frameworks, and academic papers around, but there is also a lot of lies and confusion. Plus, implementing this in a real-world scenario isn’t easy.
+Today, I’ll guide you through long-term memory, “dreams”, and the challenges I encountered while trying to implement it in production.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-05-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-05-09T00:00:00+00:00">
+    <meta property="article:tag" content="Ai">
+    <meta property="article:tag" content="Software-Engineering">
+    <meta property="article:tag" content="Coding">
+    <meta property="article:tag" content="Rag">
+    <meta property="article:tag" content="Memory">
+    <meta property="article:tag" content="Framework">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Why AI needs to dream: a guide to long-term memory">
+  <meta name="twitter:description" content="Agentic Memory is an area of the AI world where even benchmarks are vague. How do you really measure “memory”? Retention? Relevance? Recall quality? Personality consistency?
+Honestly, it is surprisingly difficult to find concise, practical information on the topic.
+Sure, there are tons of libraries, frameworks, and academic papers around, but there is also a lot of lies and confusion. Plus, implementing this in a real-world scenario isn’t easy.
+Today, I’ll guide you through long-term memory, “dreams”, and the challenges I encountered while trying to implement it in production.">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+Why AI needs to dream: a guide to long-term memory | Mutt0-ds Notes
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Mutt0-ds
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/books" title="Books">
+                            
+                            Books
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Why AI needs to dream: a guide to long-term memory</h1>
+            <div class="text-center">
+              Mutt0-ds 
+              <small>|</small>
+              May 9, 2026
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid" src="/images/memory/title.png" alt="Why AI needs to dream: a guide to long-term memory">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p><strong>Agentic Memory</strong> is an area of the AI world where even benchmarks are vague. How do you really measure &ldquo;<em>memory</em>&rdquo;? Retention? Relevance? Recall quality? Personality consistency?</p>
+<p>Honestly, it is surprisingly difficult to find concise, practical information on the topic.</p>
+<p>Sure, there are tons of libraries, frameworks, and academic papers around, but there is also a lot of <a href="https://www.reddit.com/r/LangChain/comments/1kg5qas/lies_damn_lies_statistics_is_mem0_really_sota_in/">lies</a> and <a href="https://blog.getzep.com/the-ai-memory-wallet-fallacy/">confusion</a>. Plus, implementing this in a real-world scenario isn&rsquo;t easy.</p>
+<p>Today, I&rsquo;ll guide you through long-term memory, &ldquo;dreams&rdquo;, and the challenges I encountered while trying to implement it in production.</p>
+<h2 id="why-we-needed-long-term-memory">Why we needed long-term memory</h2>
+<p>Essentially, to give our users a better experience.</p>
+<p>How satisfying is it when ChatGPT, Gemini, or Claude remembers your name, your preferences, or instructions you gave weeks ago? It feels natural, and the overall experience dramatically improves. You build a relationship with your agent, and that matters a lot in UX.</p>
+<p>I still remember when I told my ChatGPT: <em>&ldquo;YOU MUST ALWAYS TALK TO ME IN A CONCISE WAY - NO BULLETS - NO SYCOPHANCY&rdquo;</em>, and it has been quiet and direct since that day&hellip;</p>
+<p>[good_boy]</p>
+<p>I also noticed this with technical tools like <a href="https://mutt0-ds.github.io/posts/2026/02/code-rabbit/">CodeRabbit</a>. At some point, fed up with wrong PR comments, I repeatedly told the bot we were using Pydantic V1 (it was assuming V2). It stored that information in long-term memory and stopped flagging non-existent issues for good.</p>
+<p>That&rsquo;s incredibly cool because it really feels like talking to a human. You don&rsquo;t need to change prompts or hardcode instructions, the model &ldquo;learns&rdquo; in real time.</p>
+<p>But achieving that reliably is <em>very</em> difficult.</p>
+<h2 id="the-intricacies-of-long-term-memory">The intricacies of long-term memory</h2>
+<p>For starters, <strong>memory is complex</strong>.</p>
+<p>The earliest implementations were basically &ldquo;startup context&rdquo;: injecting instructions like <em>&ldquo;remember that my name is Davide, I like concise responses, and I live in Italy&rdquo;</em> into every prompt. This is already up and running in most flagship models, and it&rsquo;s a highly efficient way to keep customizations active. I recommend to use it for things that rarely change like your name, tone preferences, and localization.</p>
+<p>[chatgpt memory]</p>
+<p>But back in the day (about 500 days ago, I mean) there was a whole hype cycle around <a href="https://openai.com/index/chatgpt-plugins/">ChatGPT &ldquo;plugins&rdquo;</a>. They were essentially just injecting prompts like <em>&ldquo;you are a helpful go-kart pilot&rdquo;</em>, pairing it with a couple of tools to read data, and releasing them to users in a marketplace.</p>
+<p>This concept was quickly forgotten because:</p>
+<ol>
+<li>Models got better, so you don&rsquo;t need a 500-word-long startup context anymore; you can just ask for something and the model understands what you expect.</li>
+<li>Apps and plugins evolved into data connectors, which are a different thing entirely: they feed data, and the AI already knows how to use it.</li>
+</ol>
+<p>So, while &ldquo;startup context&rdquo; works, it only goes so far. It doesn&rsquo;t really capture the nuances of personality, habits, or evolving preferences. It simply reminds the AI of some hardcoded instructions. Boring.</p>
+<p>Over time, more sophisticated systems appeared.
+Starting with <a href="https://arxiv.org/html/2410.15665v2">this 2024 paper</a> on long-term memory, the topic became increasingly interesting. <a href="https://research.google/blog/titans-miras-helping-ai-have-long-term-memory/">Google</a> and <a href="https://arxiv.org/abs/2504.19413">others</a> have experimented with newer architectures and memory systems.</p>
+<h2 id="but-how-do-memory-systems-work">But how do memory systems work?</h2>
+<p>There are many advanced approaches, but most memory systems today are essentially a combination of:</p>
+<ul>
+<li>Vector storage</li>
+<li>Embeddings</li>
+<li>Summarization/compaction loops</li>
+<li>Reflection phases</li>
+<li>Retrieval systems (RAG)</li>
+</ul>
+<p>Lots of big words, eh? The simplest version works like this:</p>
+<ol>
+<li>The conversation is cleaned and trimmed.</li>
+<li>Relevant information is extracted (usually by another model or complex algorithms).</li>
+<li>The memory gets transformed into numeric vectors (easier for search) and stored in a vector database.</li>
+<li>Future conversations retrieve relevant memories through semantic similarity (which is why we need vectors).</li>
+</ol>
+<p>But let&rsquo;s simplify this even further.
+For example, after a long discussion with my AI tool, the conversation is packed and trimmed (removing noise, fillers, emojis, and other junk) and sent to a smaller model for a key-point summary.</p>
+<p>From, say, 50 messages, the LLM generates 3 memories:</p>
+<ul>
+<li><em>&ldquo;Davide likes concise responses&rdquo;</em></li>
+<li><em>&ldquo;Davide prefers practical examples over theory&rdquo;</em></li>
+<li><em>&ldquo;Davide works mostly with FastAPI and Pydantic v1&rdquo;</em> <em>(btw, I updated to v2 now, so this memory will have to change&hellip;)</em></li>
+</ul>
+<p><strong>Instead of storing 300 messages, the system stores less than 50 words</strong>, converting them into vectors for optimization so when the LLM searches for &ldquo;Davide preferences,&rdquo; it finds this info. The final step is giving the LLM a tool it can use to search this unique internal knowledge base whenever it feels it&rsquo;s needed. Like when I ask, <em>&ldquo;how should you talk to me?&rdquo;</em></p>
+<p>More advanced systems periodically &ldquo;reflect&rdquo; on conversations. Instead of storing raw interactions forever, they summarize patterns and compress information into higher-level memories.</p>
+<p>For example, the list above may be &ldquo;compacted&rdquo; overnight into: <em>&ldquo;Davide is a practical FastAPI/Pydantic v1 developer.&rdquo;</em> <a href="https://claudefa.st/blog/guide/mechanics/auto-dream">Claude Code&rsquo;s &ldquo;dream&rdquo;</a> feature is a particularly fascinating example of this. Very complex and a real rabbit hole, which is outside the scope of this article.</p>
+<p>Then there&rsquo;s <strong>graph memory</strong>, one of the most advanced strategies at the time of writing. Instead of storing isolated memories, it builds relationships between concepts.</p>
+<p>For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Davide
+</span></span><span style="display:flex;"><span> ├── works with → FastAPI
+</span></span><span style="display:flex;"><span> ├── prefers → concise responses
+</span></span><span style="display:flex;"><span> ├── dislikes → unnecessary abstractions
+</span></span><span style="display:flex;"><span> └── uses → Pydantic v1
+</span></span></code></pre></div><p><a href="https://raw.githubusercontent.com/DEEP-PolyU/Awesome-GraphMemory/main/figures/illustration_memory_comparison.png">https://raw.githubusercontent.com/DEEP-PolyU/Awesome-GraphMemory/main/figures/illustration_memory_comparison.png</a>
+(brief recap)
+Graph memory allows for more contextual and relational retrieval instead of pure similarity search, mapping closely to how our own brains work with networks of neurons.</p>
+<p>I&rsquo;m intentionally oversimplifying here because there are already <a href="https://github.com/DEEP-PolyU/Awesome-GraphMemory">many deeply technical articles</a> explaining the individual strategies much better than I could in a single post.</p>
+<h2 id="what-did-i-choose">What did I choose?</h2>
+<p>Imagine my confusion in this world of rapidly changing technologies.
+During my research, I mainly explored <a href="https://github.com/mem0ai/mem0">Mem0</a>, <a href="https://www.getzep.com/">Zep</a>, and <a href="https://github.com/vectorize-io/hindsight">Hindsight</a>, plus a large amount of proprietary logic and hosted services.</p>
+<p>I had pretty simple requirements starting out:</p>
+<ul>
+<li>Something simple</li>
+<li>Something reliable</li>
+<li>Something fast</li>
+<li>Something that doesn&rsquo;t burn too many tokens</li>
+</ul>
+<p>The user needs to <em>feel listened to</em> without the system becoming incredibly expensive or slow.
+After a lot of experimentation, I focused mainly on <strong>Hindsight</strong>.</p>
+<p>It&rsquo;s still relatively new and requires some exploration, but I really like the philosophy behind it:</p>
+<p><a href="https://arxiv.org/html/2512.12818v1">Hindsight Research Paper</a></p>
+<p>The core idea is pretty simple:</p>
+<ul>
+<li><strong>Retain</strong> important interactions</li>
+<li><strong>Recall</strong> them when needed</li>
+<li><strong>Reflect</strong> periodically to reorganize memory</li>
+</ul>
+<p>The reflection part is especially interesting, and it connects right back to the graph memory system I mentioned earlier.</p>
+<p>Instead of treating memory as static storage, the system continuously revisits and restructures information over time, similar to how humans reinforce or forget memories. This helps avoid context pollution and prevents the memory layer from becoming a giant pile of irrelevant chat logs.</p>
+<p>Hindsight also features a nice graph view so you can explore the memory freely, just like a &ldquo;second brain&rdquo;. It honestly reminds me a lot of <a href="https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/">my Obsidian vault</a>.</p>
+<p>[memory image]
+<em>This is how it looks at scale (source: Reddit)</em></p>
+<p><video src="https://github.com/user-attachments/assets/923b798d-3581-4897-bb62-9cfa5a931682" controls></video>
+<em>A brief introduction to Hindsight, and a clean explanation of the graph memory mechanism!</em></p>
+<h2 id="lessons-learned">Lessons learned</h2>
+<p>Now, <strong>the more I talk with my AI applications, the more they understand me</strong>, and the more some things start feeling completely natural.</p>
+<p>Working with Hindsight was fascinating, but it forced us to make some difficult decisions, especially around optimization. And this is tricky for applications that need to scale.</p>
+<p>We had to find a balance between caching meaningful interactions and skipping noisy data. If a user simply replies &ldquo;OK&rdquo; or pastes 100 lines of unrelated code in the chat, that&rsquo;s not clean memory material. Filtering what is actually worth remembering quickly became one of the hardest parts of the system.</p>
+<p>Memory database read/write optimization is also interesting. You want to make it incredibly fast on reads, but it&rsquo;s totally fine if writes are a bit slower and handled in the background. Testing memory retrieval and recall is no easy feat either: it&rsquo;s a highly subjective, slippery metric.</p>
+<p>Internally, we ended up building batching processes to:</p>
+<ul>
+<li>Split conversations</li>
+<li>Filter valuable interactions</li>
+<li>Compact redundant memories</li>
+<li>Asynchronously process reflections</li>
+<li>Update memory indexes</li>
+</ul>
+<p>All of this had to run in the background while keeping user-facing latency under tight control.</p>
+<p>I still think we are far away from a truly stable, universal model for AI memory, but current solutions are already solid enough to create a much more familiar, &ldquo;<em>human</em>&rdquo; experience.</p>
+<p>The key lesson is simple: <strong>everyone wants to feel listened to</strong>. Adding even a trivial long-term memory layer can step up your AI system&rsquo;s UX in completely new ways.</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-we-needed-long-term-memory">Why we needed long-term memory</a></li>
+    <li><a href="#the-intricacies-of-long-term-memory">The intricacies of long-term memory</a></li>
+    <li><a href="#but-how-do-memory-systems-work">But how do memory systems work?</a></li>
+    <li><a href="#what-did-i-choose">What did I choose?</a></li>
+    <li><a href="#lessons-learned">Lessons learned</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/ai" target="_blank">ai</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/software-engineering" target="_blank">software-engineering</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/coding" target="_blank">coding</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/rag" target="_blank">rag</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/memory" target="_blank">memory</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/framework" target="_blank">framework</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=Why%20AI%20needs%20to%20dream%3a%20a%20guide%20to%20long-term%20memory&url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2026%2f05%2flong-term-memory%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Why%20AI%20needs%20to%20dream%3a%20a%20guide%20to%20long-term%20memory: http%3a%2f%2flocalhost%3a1313%2fposts%2f2026%2f05%2flong-term-memory%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=Why%20AI%20needs%20to%20dream%3a%20a%20guide%20to%20long-term%20memory&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fposts%2f2026%2f05%2flong-term-memory%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        My Latest Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2026/05/long-term-memory/">
+                        <img src="/images/memory/title.png" class="card-img-top" alt="Why AI needs to dream: a guide to long-term memory">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2026/05/long-term-memory/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Why AI needs to dream: a guide to long-term memory">Why AI needs to dream: a guide to long-term memory</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p><strong>Agentic Memory</strong> is an area of the AI world where even benchmarks are vague. How do you really measure &ldquo;<em>memory</em>&rdquo;? Retention? Relevance? Recall quality? Personality consistency?</p>
+<p>Honestly, it is surprisingly difficult to find concise, practical information on the topic.</p>
+<p>Sure, there are tons …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 9, 2026</span>
+                    <a href="/posts/2026/05/long-term-memory/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2026/04/charlie-lessons/">
+                        <img src="/images/charlie_lessons/title.png" class="card-img-top" alt="10 Lessons learned when building Charlie">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2026/04/charlie-lessons/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="10 Lessons learned when building Charlie">10 Lessons learned when building Charlie</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Last week, we launched <a href="https://www.investsuite.com/charlie"><strong>Charlie</strong></a>, our first AI Agent, specifically designed and tailored for financial institutions.</p>
+<p>While designing and building it over the past few months, the pace was intense. Now I finally have the space to step back and document the core insights we gained while developing this …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Apr 5, 2026</span>
+                    <a href="/posts/2026/04/charlie-lessons/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/posts/2026/02/code-rabbit/">
+                        <img src="/images/code_reviews/title.jpg" class="card-img-top" alt="Can a Rabbit help catching Bugs?">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/posts/2026/02/code-rabbit/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Can a Rabbit help catching Bugs?">Can a Rabbit help catching Bugs?</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>AI-assisted code reviews: are they actually helpful, or just more noise in an already crowded inbox?</p>
+<p>Today I want to talk about my experience with <strong>AI-assisted code review tools</strong> like <a href="https://www.coderabbit.ai/">CodeRabbit</a> and how they are helping me with my day-to-day work.</p>
+<p>As a preface: I&rsquo;m not involved with any of the …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Mar 1, 2026</span>
+                    <a href="/posts/2026/02/code-rabbit/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/mutt0-ds" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="http://localhost:1313/" title="Mutt0-ds Notes">
+                    <img alt="Footer logo" src="/fav.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2026  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (document.body.className.includes("dark")) {
+        document.body.classList.remove('dark');
+        localStorage.setItem("pref-theme", 'light');
+    }
+</script>
+
+
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

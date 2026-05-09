@@ -224,7 +224,7 @@ params:
     items:
       - job: "Head of AI - Tech Lead"
         company: "Invessuite"
-        companyUrl: "https://www.invessuite.com"
+        companyUrl: "https://www.investsuite.com"
         date: "Dec 2024 - Present"
         featuredLink:
           enable: false

@@ -2,66 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ai on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/ai/</link>
+    <link>http://localhost:1313/tags/ai/</link>
     <description>Recent content in Ai on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Giving an AI assistant a long-term memory</title>
+      <link>http://localhost:1313/posts/2026/05/long-term-memory/</link>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026/05/long-term-memory/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Agentic Memory&lt;/strong&gt; is an area of the AI world where even benchmarks are vague. How do you really measure &amp;ldquo;&lt;em&gt;memory&lt;/em&gt;&amp;rdquo;? Retention? Relevance? Recall quality? Personality consistency?&lt;/p&gt;&#xA;&lt;p&gt;Honestly, it is surprisingly difficult to find concise, practical information on the topic.&lt;/p&gt;&#xA;&lt;p&gt;Sure, there are tons of libraries, frameworks, and academic papers around, but there is also a lot of &lt;a href=&#34;https://www.reddit.com/r/LangChain/comments/1kg5qas/lies_damn_lies_statistics_is_mem0_really_sota_in/&#34;&gt;lies&lt;/a&gt; and &lt;a href=&#34;https://blog.getzep.com/the-ai-memory-wallet-fallacy/&#34;&gt;confusion&lt;/a&gt;. Plus, implementing this in a real-world scenario isn&amp;rsquo;t easy.&lt;/p&gt;&#xA;&lt;p&gt;Today, I&amp;rsquo;ll guide you through long-term memory, &amp;ldquo;dreams&amp;rdquo;, and the challenges I encountered while trying to implement it in production.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>10 Lessons learned when building Charlie</title>
-      <link>https://mutt0-ds.github.io/posts/2026/04/charlie-lessons/</link>
+      <link>http://localhost:1313/posts/2026/04/charlie-lessons/</link>
       <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2026/04/charlie-lessons/</guid>
+      <guid>http://localhost:1313/posts/2026/04/charlie-lessons/</guid>
       <description>&lt;p&gt;Last week, we launched &lt;a href=&#34;https://www.investsuite.com/charlie&#34;&gt;&lt;strong&gt;Charlie&lt;/strong&gt;&lt;/a&gt;, our first AI Agent, specifically designed and tailored for financial institutions.&lt;/p&gt;&#xA;&lt;p&gt;While designing and building it over the past few months, the pace was intense. Now I finally have the space to step back and document the core insights we gained while developing this application. These lessons were instrumental for my team and me, and I believe they offer a valuable roadmap for anyone building in the agentic AI space.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Can a Rabbit help catching Bugs?</title>
-      <link>https://mutt0-ds.github.io/posts/2026/02/code-rabbit/</link>
+      <link>http://localhost:1313/posts/2026/02/code-rabbit/</link>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2026/02/code-rabbit/</guid>
+      <guid>http://localhost:1313/posts/2026/02/code-rabbit/</guid>
       <description>&lt;p&gt;AI-assisted code reviews: are they actually helpful, or just more noise in an already crowded inbox?&lt;/p&gt;&#xA;&lt;p&gt;Today I want to talk about my experience with &lt;strong&gt;AI-assisted code review tools&lt;/strong&gt; like &lt;a href=&#34;https://www.coderabbit.ai/&#34;&gt;CodeRabbit&lt;/a&gt; and how they are helping me with my day-to-day work.&lt;/p&gt;&#xA;&lt;p&gt;As a preface: I&amp;rsquo;m not involved with any of the tools I&amp;rsquo;ll mention; these are just the ones I&amp;rsquo;ve explored, and your experience will likely vary.&lt;/p&gt;&#xA;&lt;p&gt;This piece is going to be extremely subjective. Code reviews are a crucial part of developer life, but they highly depend on the personalities involved and the context of the project. What works for my flow might not work for yours.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How Evals Help Build Reliable AI</title>
-      <link>https://mutt0-ds.github.io/posts/2026/01/evals-help-build-reliable-ai/</link>
+      <link>http://localhost:1313/posts/2026/01/evals-help-build-reliable-ai/</link>
       <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2026/01/evals-help-build-reliable-ai/</guid>
+      <guid>http://localhost:1313/posts/2026/01/evals-help-build-reliable-ai/</guid>
       <description>&lt;p&gt;I finished 2025 with &lt;a href=&#34;https://mutt0-ds.github.io/posts/2025/12/on-ai-slop/&#34;&gt;a negative AI post&lt;/a&gt;, so let&amp;rsquo;s start 2026 with a positive one.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m leading a project for an AI-based tool, and something we are heavily experimenting with is &lt;strong&gt;eval-driven development&lt;/strong&gt;. Technical readers may immediately associate this with &lt;a href=&#34;https://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;test-driven development&lt;/a&gt;, and there are similarities, but because AI is non-deterministic, there is more going on here.&lt;/p&gt;&#xA;&lt;p&gt;In this post I want to share how we are leveraging evals in practice, why they are so important in AI projects, which tools are actually useful, and what people usually mean when they talk about EDD.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On AI Slop</title>
-      <link>https://mutt0-ds.github.io/posts/2025/12/on-ai-slop/</link>
+      <link>http://localhost:1313/posts/2025/12/on-ai-slop/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2025/12/on-ai-slop/</guid>
+      <guid>http://localhost:1313/posts/2025/12/on-ai-slop/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve started to notice a very predictable trend: AI-generated messages in my inbox.&lt;/p&gt;&#xA;&lt;p&gt;What finally pushed me to write this was how casually people are dumping GPT-generated text into their communications, apparently believing two things:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;That people won&amp;rsquo;t notice&lt;/li&gt;&#xA;&lt;li&gt;That people will actually read it&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;When I received what was clearly an AI-generated Christmas card, that was enough.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-i-mean-by-ai-slop&#34;&gt;What I mean by AI slop&lt;/h3&gt;&#xA;&lt;p&gt;This sits inside a broader problem. AI models are producing large amounts of boring, verbose, low-effort, LAZY content, and it is steadily flooding the web. Others, like &lt;a href=&#34;https://www.youtube.com/watch?v=_zfN9wnPvU0&#34;&gt;Kurzgesagt&lt;/a&gt; or &lt;a href=&#34;https://www.youtube.com/watch?v=TWpg1RmzAbc&#34;&gt;Last Week Tonight&lt;/a&gt;, have explored this more publicly, but the pattern is easy to recognise once you&amp;rsquo;ve seen it a few times.&lt;/p&gt;</description>
     </item>
     <item>
       <title>No, AI is not replacing Data Engineers.</title>
-      <link>https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/</link>
+      <link>http://localhost:1313/posts/2025/05/ai-and-data-engineering/</link>
       <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/</guid>
+      <guid>http://localhost:1313/posts/2025/05/ai-and-data-engineering/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.anthropic.com/news/claude-4&#34;&gt;Claude 4&lt;/a&gt; landed, and as usual, it kicked off the usual hype cycle.&#xA;&amp;ldquo;Best coding model ever&amp;rdquo; &amp;ldquo;It writes stories!&amp;rdquo; &amp;ldquo;AI is replacing programmers!&amp;rdquo; And of course, LinkedIn is buzzing with non-technical folks declaring how engineers are doomed and it’s time to &amp;ldquo;rethink talent&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Anthropic CEO even dropped a &lt;a href=&#34;https://www.pcmag.com/news/anthropic-ceo-ai-poised-to-wipe-out-50-of-entry-level-jobs-in-next-5-years&#34;&gt;spicy take&lt;/a&gt;: AI could wipe out &lt;strong&gt;half&lt;/strong&gt; of all entry-level white-collar jobs and spike unemployment to 10–20% in the next 1–5 years.&lt;/p&gt;</description>
     </item>
     <item>
       <title>45 Minutes, 100% AI-Generated Code</title>
-      <link>https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/</link>
+      <link>http://localhost:1313/posts/2025/04/ai-generated-code/</link>
       <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/</guid>
+      <guid>http://localhost:1313/posts/2025/04/ai-generated-code/</guid>
       <description>&lt;p&gt;Last Saturday, I woke up with an idea: what if &lt;strong&gt;&lt;a href=&#34;https://www.investsuite.com/storyteller&#34;&gt;StoryTeller&lt;/a&gt;, the product I work on, had an interactive dashboard with an AI agent that could perform tasks&lt;/strong&gt;?&#xA;It was one of those half-formed concepts I could picture it but couldn&amp;rsquo;t quite articulate it. I knew if I wanted my team to take it seriously, I&amp;rsquo;d need to build something tangible. Otherwise, it&amp;rsquo;d just sound like abstract brainstorming.&lt;/p&gt;&#xA;&lt;p&gt;So, I sinned. I &lt;em&gt;vibe coded&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Giving our AI superpowers with OpenAI Tools</title>
-      <link>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</link>
+      <link>http://localhost:1313/posts/2024/06/ai-superpowers-tools/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</guid>
+      <guid>http://localhost:1313/posts/2024/06/ai-superpowers-tools/</guid>
       <description>&lt;p&gt;In recent months, I have been experimenting with AI tools to leverage new, powerful technologies and create value. Like you, I am inundated with hype and buzzwords, and this makes things complicate, when trying to get started. While looking for simple answers to my questions, it’s often challenging to extract real value. So, I want to share my notes to help others with similar needs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-business-case-an-ai-analyst&#34;&gt;My Business Case: an AI Analyst&lt;/h2&gt;&#xA;&lt;p&gt;Let’s start with the big question I had in my mind:&lt;/p&gt;</description>
     </item>
     <item>
       <title>What Power BI is still missing</title>
-      <link>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</link>
+      <link>http://localhost:1313/posts/2023/03/what-power-bi-is-missing/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</guid>
+      <guid>http://localhost:1313/posts/2023/03/what-power-bi-is-missing/</guid>
       <description>&lt;p&gt;During these months, I had the chance to take a look at Power BI at the enterprise level, juggling advanced requests from hundreds of users and reports. I am impressed by all the features that the developers have rolled out recently, greatly improving both user and creator experiences. However, one should always maintain an impartial critical vision of the tools, no matter how useful they can be. For this reason, I decided to share my thoughts about some features that are currently lacking or require over-complicated solutions (often from third-party tools), in the hope that Microsoft will find them useful when working on Power BI&amp;rsquo;s development roadmap.&lt;/p&gt;</description>
     </item>
   </channel>
