@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>We-Have-No-Idea on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/we-have-no-idea/</link>
+    <link>https://mutt0-ds.github.io/tags/we-have-no-idea/</link>
     <description>Recent content in We-Have-No-Idea on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/we-have-no-idea/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/we-have-no-idea/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Physics book for people who hate Physics</title>
-      <link>http://localhost:1313/posts/2025/06/we-have-no-idea-book/</link>
+      <link>https://mutt0-ds.github.io/posts/2025/06/we-have-no-idea-book/</link>
       <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025/06/we-have-no-idea-book/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2025/06/we-have-no-idea-book/</guid>
       <description>&lt;p&gt;My relationship with physics has always been… troubled.&lt;/p&gt;&#xA;&lt;p&gt;Probably because I had a high school teacher who never managed to spark any interest in me, I just never caught up. I remember sitting silently at my final exam (Maturità) when the physics question came up, completely blank. I also struggled like hell with the physics exam at university. It just never clicked.&lt;/p&gt;&#xA;&lt;p&gt;And honestly, I don’t deal with physics in my daily life, so the chance to change that never really came up.&lt;/p&gt;</description>
     </item>
   </channel>

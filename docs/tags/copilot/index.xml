@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Copilot on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/copilot/</link>
+    <link>https://mutt0-ds.github.io/tags/copilot/</link>
     <description>Recent content in Copilot on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/copilot/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/copilot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>No, AI is not replacing Data Engineers.</title>
-      <link>http://localhost:1313/posts/2025/05/ai-and-data-engineering/</link>
+      <link>https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/</link>
       <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025/05/ai-and-data-engineering/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.anthropic.com/news/claude-4&#34;&gt;Claude 4&lt;/a&gt; landed, and as usual, it kicked off the usual hype cycle.&#xA;&amp;ldquo;Best coding model ever&amp;rdquo; &amp;ldquo;It writes stories!&amp;rdquo; &amp;ldquo;AI is replacing programmers!&amp;rdquo; And of course, LinkedIn is buzzing with non-technical folks declaring how engineers are doomed and it’s time to &amp;ldquo;rethink talent&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Anthropic CEO even dropped a &lt;a href=&#34;https://www.pcmag.com/news/anthropic-ceo-ai-poised-to-wipe-out-50-of-entry-level-jobs-in-next-5-years&#34;&gt;spicy take&lt;/a&gt;: AI could wipe out &lt;strong&gt;half&lt;/strong&gt; of all entry-level white-collar jobs and spike unemployment to 10–20% in the next 1–5 years.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The unnecessary hype strategy behind Microsoft Fabric</title>
-      <link>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</guid>
       <description>&lt;p&gt;If you are into Data Engineering in Microsoft Azure Cloud Environment, you probaly heard about &lt;strong&gt;Microsoft Fabric&lt;/strong&gt; being announced last week at the yearly event &lt;a href=&#34;https://news.microsoft.com/build-2023/&#34;&gt;Microsoft Build&lt;/a&gt;. Well, &amp;ldquo;heard&amp;rdquo; is quite an euphesmism: everyone in the field is extremely excited about the announcements of the event. And for good reasons, as it’s a very big deal for us engineers, working with data every day.&lt;/p&gt;&#xA;&lt;p&gt;In short, Fabric is a cutting-edge, unified data platform that merges lots of tools together, starting from a common Data Lake where data can be stored (&lt;a href=&#34;https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview&#34;&gt;&lt;strong&gt;OneLake&lt;/strong&gt;&lt;/a&gt;), and a suite of new tools on top of it that are integrated in the “fabric” of Fabric. Some of them are evolutions of existing systems, like &lt;strong&gt;Synapse Data Engineering&lt;/strong&gt; (&lt;a href=&#34;https://azure.microsoft.com/en-us/products/synapse-analytics/&#34;&gt;Azure Synapse Anaylytics&lt;/a&gt;) or &lt;strong&gt;Data Factory&lt;/strong&gt; (&lt;a href=&#34;https://azure.microsoft.com/en-us/products/data-factory&#34;&gt;Azure Data Factory&lt;/a&gt;) for ETL and Data Processing. Others, like my beloved &lt;a href=&#34;https://powerbi.microsoft.com/en-us/&#34;&gt;&lt;strong&gt;Power BI&lt;/strong&gt;&lt;/a&gt;, have kept the same features but they will be integrated in the platform in the future. Others, like &lt;a href=&#34;https://blog.fabric.microsoft.com/en-us/blog/driving-actions-from-your-data-with-data-activator/&#34;&gt;&lt;strong&gt;Data Activator&lt;/strong&gt;&lt;/a&gt;(no-code triggers), are brand new.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Experience on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/experience/</link>
+    <link>https://mutt0-ds.github.io/tags/experience/</link>
     <description>Recent content in Experience on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Oct 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/experience/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/experience/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My first weeks at Acer Europe</title>
-      <link>http://localhost:1313/posts/2022/10/first-weeks-acer/</link>
+      <link>https://mutt0-ds.github.io/posts/2022/10/first-weeks-acer/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2022/10/first-weeks-acer/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2022/10/first-weeks-acer/</guid>
       <description>&lt;p&gt;This is a post for my future self when I will be asking myself: &lt;em&gt;“How were my first days at Acer like?”&lt;/em&gt;.&lt;br&gt;&#xA;Note: I&amp;rsquo;m working at Acer EMEA HQ, so when I mention &amp;ldquo;&lt;em&gt;Acer&lt;/em&gt;&amp;rdquo;, for simplicity, I mean &amp;ldquo;&lt;em&gt;Acer Europe&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;-my-expectations&#34;&gt;💭 My expectations&lt;/h2&gt;&#xA;&lt;p&gt;My previous experience was in a small company and a very different sector. Considering this, I was expecting the following challenges in the upcoming scenario:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;An organization with thousands of employees and decades of history&lt;/li&gt;&#xA;&lt;li&gt;Several departments and key stakeholders to interact with, each one with specific priorities&lt;/li&gt;&#xA;&lt;li&gt;A huge IT department where I&amp;rsquo;m the youngest member here&lt;/li&gt;&#xA;&lt;li&gt;New technologies to discover: in particular, I&amp;rsquo;ve never worked with most of the Azure tools we are using&lt;/li&gt;&#xA;&lt;li&gt;A whole new level of complexity&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I wasn&amp;rsquo;t too worried about the previous points, as I&amp;rsquo;m happy to learn new things and I&amp;rsquo;m used to managing projects with different stakeholders. Being a &lt;strong&gt;Business Intelligence Developer&lt;/strong&gt;, my tasks were going to be about managing Power BI dashboards and collecting data from databases, more or less what I was used to doing before&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>
