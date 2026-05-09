@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Analyzing My Commute Data to Find the Best Time to Go to Work on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</link>
+    <link>http://localhost:1313/posts/2023/07/analyzing-commute-data-using-google-api/</link>
     <description>Recent content in Analyzing My Commute Data to Find the Best Time to Go to Work on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/2023/07/analyzing-commute-data-using-google-api/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

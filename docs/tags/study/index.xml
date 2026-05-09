@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Study on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/study/</link>
+    <link>http://localhost:1313/tags/study/</link>
     <description>Recent content in Study on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/study/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Personal Notes about Presentation Patterns</title>
-      <link>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</link>
+      <link>http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/01/personal-notes-about-presentation-patterns/</guid>
+      <guid>http://localhost:1313/posts/2023/01/personal-notes-about-presentation-patterns/</guid>
       <description>&lt;h1 id=&#34;presentation-patterns&#34;&gt;Presentation Patterns&lt;/h1&gt;&#xA;&lt;p&gt;Written by &lt;strong&gt;&lt;a href=&#34;https://nealford.com/&#34;&gt;Neal Ford&lt;/a&gt;, &lt;a href=&#34;https://matthewjmccullough.com&#34;&gt;Matthew McCullough&lt;/a&gt; and &lt;a href=&#34;http://ntschutta.io&#34;&gt;Nathaniel Schutta&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;&amp;ldquo;Presentation Patterns - Techniques for Crafting Better Presentations&amp;rdquo;&lt;/strong&gt; is an encyclopedia of patterns, tips and common mistakes experienced by the authors, who have delivered thousands of presentations. In particular, they introduce “&lt;a href=&#34;https://www.nofluffjuststuff.com&#34;&gt;No Fluff, Just Stuff&lt;/a&gt;“, a traveling technical conference series covering a&#xA;wide variety of topics related to software development and management.&lt;/p&gt;&#xA;&lt;p&gt;During the years, they have build up their toolbox of patterns to provide killer presentations, which are divided in three main sections: &lt;strong&gt;Prepare&lt;/strong&gt; (thinking and setting up the presentation’s key concepts), &lt;strong&gt;Build&lt;/strong&gt; (creating the slides), &lt;strong&gt;Deliver&lt;/strong&gt; (present the content). While reading, I decided to categorize the items into &lt;strong&gt;Patterns&lt;/strong&gt;, &lt;strong&gt;Antipatterns&lt;/strong&gt; and “&lt;strong&gt;Others&lt;/strong&gt;” (type of slides or special kind of presentations which I didn&amp;rsquo;t consider as a pattern).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Personal Notes about The Definitive Guide to DAX</title>
-      <link>https://mutt0-ds.github.io/posts/2022/09/personal-notes-about-dax-definitive-guide/</link>
+      <link>http://localhost:1313/posts/2022/09/personal-notes-about-dax-definitive-guide/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/09/personal-notes-about-dax-definitive-guide/</guid>
+      <guid>http://localhost:1313/posts/2022/09/personal-notes-about-dax-definitive-guide/</guid>
       <description>&lt;p&gt;Disclaimer: this will be a long, long post, written in my own way. It’s essentially a dump of my personal notes, taken when reading &lt;a href=&#34;https://www.sqlbi.com/books/the-definitive-guide-to-dax-2nd-edition/&#34;&gt;“The Definitive Guide to DAX”&lt;/a&gt; written by &lt;strong&gt;Alberto Ferrari&lt;/strong&gt; and &lt;strong&gt;Marco Russo&lt;/strong&gt;. At my new workplace I’m going to use PowerBI and DAX a lot, thus my boss suggested me to read the book.&lt;/p&gt;&#xA;&lt;p&gt;Yep, it is big and very technical, with 700+ pages rich in contents, but trust me, that’s the “Bible”, a must-read for anyone willing to work with PowerBI and DAX. There’s everything you need, from the basics commands to the most advanced functions, with complex topics such as context transition, query plan, and storage engine. Many examples, in addition, apart from explaining every concept introduced in the book (which focuses a lot on giving clear, practical explanations) explore edge cases that gave me lots of headaches in the past. Further examples and insights can be found on the authors’ site &lt;a href=&#34;https://www.sqlbi.com/&#34;&gt;SQLBI&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>

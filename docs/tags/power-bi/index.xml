@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Power-Bi on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/power-bi/</link>
+    <link>http://localhost:1313/tags/power-bi/</link>
     <description>Recent content in Power-Bi on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/power-bi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/power-bi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>No, AI is not replacing Data Engineers.</title>
-      <link>https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/</link>
+      <link>http://localhost:1313/posts/2025/05/ai-and-data-engineering/</link>
       <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2025/05/ai-and-data-engineering/</guid>
+      <guid>http://localhost:1313/posts/2025/05/ai-and-data-engineering/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.anthropic.com/news/claude-4&#34;&gt;Claude 4&lt;/a&gt; landed, and as usual, it kicked off the usual hype cycle.&#xA;&amp;ldquo;Best coding model ever&amp;rdquo; &amp;ldquo;It writes stories!&amp;rdquo; &amp;ldquo;AI is replacing programmers!&amp;rdquo; And of course, LinkedIn is buzzing with non-technical folks declaring how engineers are doomed and it’s time to &amp;ldquo;rethink talent&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Anthropic CEO even dropped a &lt;a href=&#34;https://www.pcmag.com/news/anthropic-ceo-ai-poised-to-wipe-out-50-of-entry-level-jobs-in-next-5-years&#34;&gt;spicy take&lt;/a&gt;: AI could wipe out &lt;strong&gt;half&lt;/strong&gt; of all entry-level white-collar jobs and spike unemployment to 10–20% in the next 1–5 years.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How I created my first Course with Datacamp</title>
-      <link>https://mutt0-ds.github.io/posts/2025/01/fabric-datacamp-course/</link>
+      <link>http://localhost:1313/posts/2025/01/fabric-datacamp-course/</link>
       <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2025/01/fabric-datacamp-course/</guid>
+      <guid>http://localhost:1313/posts/2025/01/fabric-datacamp-course/</guid>
       <description>&lt;p&gt;I just published &lt;a href=&#34;https://app.datacamp.com/learn/courses/plan-and-implement-a-data-analytics-environment-with-microsoft-fabric&#34;&gt;an online course&lt;/a&gt;! covering advanced &lt;a href=&#34;https://www.microsoft.com/en-us/microsoft-fabric&#34;&gt;Microsoft Fabric&lt;/a&gt; topics like security, deployment, admin settings, and version control!&lt;/p&gt;&#xA;&lt;p&gt;Honestly, I never imagined I’d say, “I’m a teacher”&amp;hellip;&#xA;It feels pretty wild, but here I am!&lt;/p&gt;&#xA;&lt;p&gt;This project kept me busy for months, and I’m really proud of how it turned out. Fabric is way more complex than Power BI. It&amp;rsquo;s a complete data platform with several services, and there’s not much in-depth content out there for those who want to learn about the technical side. With &lt;a href=&#34;https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/&#34;&gt;my experience in a large organization&lt;/a&gt;, where I learned about Power BI and Fabric firsthand, I was excited to share what I know.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Data Culture - How we promoted Power BI in a Corporate Environment [🎙 Power BI Ticino 2024]</title>
-      <link>https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/</link>
+      <link>http://localhost:1313/posts/2024/10/my-talk-about-data-culture/</link>
       <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/</guid>
+      <guid>http://localhost:1313/posts/2024/10/my-talk-about-data-culture/</guid>
       <description>&lt;p&gt;Last Friday, I took the stage at the &lt;strong&gt;&lt;a href=&#34;https://sessionize.com/pbiugiti2024/&#34;&gt;Power BI Ticino Conference&lt;/a&gt;&lt;/strong&gt; to share one of my favorite projects at Acer: our &lt;strong&gt;Power BI Champions program&lt;/strong&gt;.&#xA;The idea? Find Early Adopters (people who have a curious approach towards new technologies) and put them on the front line to help us promote Power BI and data culture to the rest of the team.&lt;/p&gt;&#xA;&lt;p&gt;I never imagined I&amp;rsquo;d speak at a conference when I started this journey&amp;hellip;&#xA;But wow - the positive feedback and amazing people I&amp;rsquo;ve met make me want to do it again!&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Pro Trick for Measure Descriptions in Power BI</title>
-      <link>https://mutt0-ds.github.io/posts/2024/08/the-trick-measure-description-powerbi/</link>
+      <link>http://localhost:1313/posts/2024/08/the-trick-measure-description-powerbi/</link>
       <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/08/the-trick-measure-description-powerbi/</guid>
+      <guid>http://localhost:1313/posts/2024/08/the-trick-measure-description-powerbi/</guid>
       <description>&lt;h1 id=&#34;how-does-this-measurecolumn-work&#34;&gt;&amp;ldquo;How does this MEASURE/COLUMN work?&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;This is one of the most frequent requests I was receiving. And it&amp;rsquo;s easy to see why.&lt;/p&gt;&#xA;&lt;p&gt;In complex Power BI models, users often struggle to understand the meaning of specific measures or columns. This is especially true for ambiguous names like &lt;code&gt;AMSLast12m&lt;/code&gt; or columns with deep business logic such as &lt;code&gt;NetAmount&lt;/code&gt;. How is it calculated? With VAT? Without it? Help!&lt;/p&gt;&#xA;&lt;p&gt;Traditionally, there were limited options: ask a colleague, guess the logic, search documentation, or simply try your luck and add it blindly to the report. None of these are ideal solutions, particularly for those new to report creation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The 3 (&#43;2) ways to Get Data in Power BI, simply explained</title>
-      <link>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</link>
+      <link>http://localhost:1313/posts/2024/04/types-powerbi-connection/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</guid>
+      <guid>http://localhost:1313/posts/2024/04/types-powerbi-connection/</guid>
       <description>&lt;p&gt;There&amp;rsquo;s quite a bit of confusion swirling around about how Power BI reports gather data. Where is the data actually stored? How frequently does it refresh? Depending on the mode you&amp;rsquo;ve selected, this question can be a bit tricky to tackle.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s simplify things a bit. In this article, I&amp;rsquo;ll be focusing on Power BI Desktop. Imagine you&amp;rsquo;ve got a .pbix file on hand and don&amp;rsquo;t quite have the time to sit through &lt;a href=&#34;https://www.youtube.com/watch?v=-ip7mKUdwRg&#34;&gt;10-minute technical video from Guy in a Cube&lt;/a&gt; that I usually link my users to.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My AI-tweaked Data Saturdays 23 Notes</title>
-      <link>https://mutt0-ds.github.io/posts/2023/11/ai-tweaked-data-saturdays-notes/</link>
+      <link>http://localhost:1313/posts/2023/11/ai-tweaked-data-saturdays-notes/</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/11/ai-tweaked-data-saturdays-notes/</guid>
+      <guid>http://localhost:1313/posts/2023/11/ai-tweaked-data-saturdays-notes/</guid>
       <description>&lt;p&gt;Last Saturday I had the privilege of attending &lt;a href=&#34;https://datasaturdays.com/2023-11-18-datasaturday0037/&#34;&gt;Data Saturdays #37 at Parma&lt;/a&gt;, an event series focused on Microsoft data platform technologies. Covering AI, Database, Business Intelligence, and Cloud, the event promised insights from top experts in Italy (and beyond).&lt;/p&gt;&#xA;&lt;p&gt;Of course, I wrote down (almost) everything I heard.&#xA;This blog post is actually a dump of my notes, which I tried to partially automated with a mix of OCR + ChatGPT, which struggled in understanding most of the complex contexts&amp;hellip; My disorganized note management didn&amp;rsquo;t help, poor GPT.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Finding the Best Time to Go to Work: Now with Car Accidents Data &amp; Power BI Dashboard!</title>
-      <link>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</link>
+      <link>http://localhost:1313/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</guid>
+      <guid>http://localhost:1313/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</guid>
       <description>&lt;p&gt;I want to express my gratitude for the positive feedbacks I received a few months ago when &lt;a href=&#34;https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/&#34;&gt;I used Google Maps data to determine the best times for the daily commute&lt;/a&gt;. TL;DR: Mondays are the best, while Wednesdays, and early Fridays are the trickiest times to hit the road.&lt;/p&gt;&#xA;&lt;p&gt;However, the neatness of this analysis takes a hit when real-world unpredictabilities come into play. Things like heavy traffic, rain, road closures due to accidents, or just that one slow driver in front of you can disrupt even the best-planned routes. So, it&amp;rsquo;s essential to view these explorations as &amp;ldquo;what if&amp;rdquo; games. They provide a general framework but can&amp;rsquo;t fully account for the chaos of everyday life.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The unnecessary hype strategy behind Microsoft Fabric</title>
-      <link>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</link>
+      <link>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/05/the-unnecessary-hype-fabric/</guid>
+      <guid>http://localhost:1313/posts/2023/05/the-unnecessary-hype-fabric/</guid>
       <description>&lt;p&gt;If you are into Data Engineering in Microsoft Azure Cloud Environment, you probaly heard about &lt;strong&gt;Microsoft Fabric&lt;/strong&gt; being announced last week at the yearly event &lt;a href=&#34;https://news.microsoft.com/build-2023/&#34;&gt;Microsoft Build&lt;/a&gt;. Well, &amp;ldquo;heard&amp;rdquo; is quite an euphesmism: everyone in the field is extremely excited about the announcements of the event. And for good reasons, as it’s a very big deal for us engineers, working with data every day.&lt;/p&gt;&#xA;&lt;p&gt;In short, Fabric is a cutting-edge, unified data platform that merges lots of tools together, starting from a common Data Lake where data can be stored (&lt;a href=&#34;https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview&#34;&gt;&lt;strong&gt;OneLake&lt;/strong&gt;&lt;/a&gt;), and a suite of new tools on top of it that are integrated in the “fabric” of Fabric. Some of them are evolutions of existing systems, like &lt;strong&gt;Synapse Data Engineering&lt;/strong&gt; (&lt;a href=&#34;https://azure.microsoft.com/en-us/products/synapse-analytics/&#34;&gt;Azure Synapse Anaylytics&lt;/a&gt;) or &lt;strong&gt;Data Factory&lt;/strong&gt; (&lt;a href=&#34;https://azure.microsoft.com/en-us/products/data-factory&#34;&gt;Azure Data Factory&lt;/a&gt;) for ETL and Data Processing. Others, like my beloved &lt;a href=&#34;https://powerbi.microsoft.com/en-us/&#34;&gt;&lt;strong&gt;Power BI&lt;/strong&gt;&lt;/a&gt;, have kept the same features but they will be integrated in the platform in the future. Others, like &lt;a href=&#34;https://blog.fabric.microsoft.com/en-us/blog/driving-actions-from-your-data-with-data-activator/&#34;&gt;&lt;strong&gt;Data Activator&lt;/strong&gt;&lt;/a&gt;(no-code triggers), are brand new.&lt;/p&gt;</description>
     </item>
     <item>
       <title>What Power BI is still missing</title>
-      <link>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</link>
+      <link>http://localhost:1313/posts/2023/03/what-power-bi-is-missing/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/</guid>
+      <guid>http://localhost:1313/posts/2023/03/what-power-bi-is-missing/</guid>
       <description>&lt;p&gt;During these months, I had the chance to take a look at Power BI at the enterprise level, juggling advanced requests from hundreds of users and reports. I am impressed by all the features that the developers have rolled out recently, greatly improving both user and creator experiences. However, one should always maintain an impartial critical vision of the tools, no matter how useful they can be. For this reason, I decided to share my thoughts about some features that are currently lacking or require over-complicated solutions (often from third-party tools), in the hope that Microsoft will find them useful when working on Power BI&amp;rsquo;s development roadmap.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A turbulent journey through Power BI source control</title>
-      <link>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</link>
+      <link>http://localhost:1313/posts/2022/11/turbulent-journey-power-bi-source-control/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</guid>
+      <guid>http://localhost:1313/posts/2022/11/turbulent-journey-power-bi-source-control/</guid>
       <description>&lt;p&gt;One of the most annoying issues I have when working with Power BI files is that source control is a real pain.&#xA;Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly complicated solutions&amp;hellip; But that day seems still far in the future.&lt;/p&gt;&#xA;&lt;p&gt;Here is a story about how I managed to set up a CI/CD pipeline through Azure DevOps Pipeline for providing rudimental version control of our Power BI reports.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My first weeks at Acer Europe</title>
-      <link>https://mutt0-ds.github.io/posts/2022/10/first-weeks-acer/</link>
+      <link>http://localhost:1313/posts/2022/10/first-weeks-acer/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/10/first-weeks-acer/</guid>
+      <guid>http://localhost:1313/posts/2022/10/first-weeks-acer/</guid>
       <description>&lt;p&gt;This is a post for my future self when I will be asking myself: &lt;em&gt;“How were my first days at Acer like?”&lt;/em&gt;.&lt;br&gt;&#xA;Note: I&amp;rsquo;m working at Acer EMEA HQ, so when I mention &amp;ldquo;&lt;em&gt;Acer&lt;/em&gt;&amp;rdquo;, for simplicity, I mean &amp;ldquo;&lt;em&gt;Acer Europe&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;-my-expectations&#34;&gt;💭 My expectations&lt;/h2&gt;&#xA;&lt;p&gt;My previous experience was in a small company and a very different sector. Considering this, I was expecting the following challenges in the upcoming scenario:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;An organization with thousands of employees and decades of history&lt;/li&gt;&#xA;&lt;li&gt;Several departments and key stakeholders to interact with, each one with specific priorities&lt;/li&gt;&#xA;&lt;li&gt;A huge IT department where I&amp;rsquo;m the youngest member here&lt;/li&gt;&#xA;&lt;li&gt;New technologies to discover: in particular, I&amp;rsquo;ve never worked with most of the Azure tools we are using&lt;/li&gt;&#xA;&lt;li&gt;A whole new level of complexity&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I wasn&amp;rsquo;t too worried about the previous points, as I&amp;rsquo;m happy to learn new things and I&amp;rsquo;m used to managing projects with different stakeholders. Being a &lt;strong&gt;Business Intelligence Developer&lt;/strong&gt;, my tasks were going to be about managing Power BI dashboards and collecting data from databases, more or less what I was used to doing before&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>

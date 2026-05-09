@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dataset on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/dataset/</link>
+    <link>http://localhost:1313/tags/dataset/</link>
     <description>Recent content in Dataset on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/dataset/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/dataset/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The 3 (&#43;2) ways to Get Data in Power BI, simply explained</title>
-      <link>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</link>
+      <link>http://localhost:1313/posts/2024/04/types-powerbi-connection/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/04/types-powerbi-connection/</guid>
+      <guid>http://localhost:1313/posts/2024/04/types-powerbi-connection/</guid>
       <description>&lt;p&gt;There&amp;rsquo;s quite a bit of confusion swirling around about how Power BI reports gather data. Where is the data actually stored? How frequently does it refresh? Depending on the mode you&amp;rsquo;ve selected, this question can be a bit tricky to tackle.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s simplify things a bit. In this article, I&amp;rsquo;ll be focusing on Power BI Desktop. Imagine you&amp;rsquo;ve got a .pbix file on hand and don&amp;rsquo;t quite have the time to sit through &lt;a href=&#34;https://www.youtube.com/watch?v=-ip7mKUdwRg&#34;&gt;10-minute technical video from Guy in a Cube&lt;/a&gt; that I usually link my users to.&lt;/p&gt;</description>
     </item>
   </channel>

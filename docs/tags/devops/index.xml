@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Devops on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/devops/</link>
+    <link>http://localhost:1313/tags/devops/</link>
     <description>Recent content in Devops on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 07 Nov 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A turbulent journey through Power BI source control</title>
-      <link>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</link>
+      <link>http://localhost:1313/posts/2022/11/turbulent-journey-power-bi-source-control/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/</guid>
+      <guid>http://localhost:1313/posts/2022/11/turbulent-journey-power-bi-source-control/</guid>
       <description>&lt;p&gt;One of the most annoying issues I have when working with Power BI files is that source control is a real pain.&#xA;Considering that Microsoft owns Azure, Github, and Power BI, one would hope that they will come up with a solution for comparing two reports without using third-party tools or overly complicated solutions&amp;hellip; But that day seems still far in the future.&lt;/p&gt;&#xA;&lt;p&gt;Here is a story about how I managed to set up a CI/CD pipeline through Azure DevOps Pipeline for providing rudimental version control of our Power BI reports.&lt;/p&gt;</description>
     </item>
   </channel>

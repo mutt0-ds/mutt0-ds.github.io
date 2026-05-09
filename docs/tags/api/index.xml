@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Api on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/api/</link>
+    <link>http://localhost:1313/tags/api/</link>
     <description>Recent content in Api on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Giving our AI superpowers with OpenAI Tools</title>
-      <link>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</link>
+      <link>http://localhost:1313/posts/2024/06/ai-superpowers-tools/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</guid>
+      <guid>http://localhost:1313/posts/2024/06/ai-superpowers-tools/</guid>
       <description>&lt;p&gt;In recent months, I have been experimenting with AI tools to leverage new, powerful technologies and create value. Like you, I am inundated with hype and buzzwords, and this makes things complicate, when trying to get started. While looking for simple answers to my questions, it’s often challenging to extract real value. So, I want to share my notes to help others with similar needs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-business-case-an-ai-analyst&#34;&gt;My Business Case: an AI Analyst&lt;/h2&gt;&#xA;&lt;p&gt;Let’s start with the big question I had in my mind:&lt;/p&gt;</description>
     </item>
   </channel>

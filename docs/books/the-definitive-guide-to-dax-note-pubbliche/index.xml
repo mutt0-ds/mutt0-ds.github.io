@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Definitive Guide to DAX on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/books/the-definitive-guide-to-dax-note-pubbliche/</link>
+    <link>http://localhost:1313/books/the-definitive-guide-to-dax-note-pubbliche/</link>
     <description>Recent content in The Definitive Guide to DAX on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://mutt0-ds.github.io/books/the-definitive-guide-to-dax-note-pubbliche/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/books/the-definitive-guide-to-dax-note-pubbliche/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
