@@ -1,5 +1,6 @@
 ---
 title: Creativity, Inc.
+slug: creativity-inc
 author: Ed Catmull
 image: https://i5.walmartimages.com/seo/Creativity-Inc-the-Expanded-Edition-Overcoming-the-Unseen-Forces-That-Stand-in-the-Way-of-True-Inspiration-Hardcover-9780593594643_9ca29120-c7c5-46f4-ab3b-e341fe7761e3.86eb16d195d204dafddb1793b94d8d69.jpeg
 badges:

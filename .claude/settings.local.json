@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E '\\\\..*\\\\.md$')",
+      "Bash(hugo version *)",
+      "Bash(hugo)"
+    ]
+  }
+}

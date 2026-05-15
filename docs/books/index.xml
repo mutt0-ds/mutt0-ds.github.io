@@ -169,6 +169,13 @@
       <description>Expect surprises. We seek definition to understand the system so that we can discern the rules so that we know what to do next so that we win. Managers hate surprises</description>
     </item>
     <item>
+      <title>Blood, Sweat, and Pixels</title>
+      <link>https://mutt0-ds.github.io/books/blood-sweat-and-pixels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/blood-sweat-and-pixels/</guid>
+      <description>Making a video game is complicated for many reasons, and many releases are rushed</description>
+    </item>
+    <item>
       <title>Bogleheads&#39; Guide To Investing</title>
       <link>https://mutt0-ds.github.io/books/bogleheads-guide-to-investing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -268,9 +275,9 @@
     </item>
     <item>
       <title>Creativity, Inc.</title>
-      <link>https://mutt0-ds.github.io/books/creativity-inc./</link>
+      <link>https://mutt0-ds.github.io/books/creativity-inc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/books/creativity-inc./</guid>
+      <guid>https://mutt0-ds.github.io/books/creativity-inc/</guid>
       <description>Change is going to happen, whether we like it or not.</description>
     </item>
     <item>
@@ -834,6 +841,13 @@
       <description>&amp;ldquo;I feel XXXX when XXXX because XXXX.&amp;rdquo; Each of us has unmet needs to bring out with empathy</description>
     </item>
     <item>
+      <title>Norwegian Wood</title>
+      <link>https://mutt0-ds.github.io/books/norwegian-wood/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/norwegian-wood/</guid>
+      <description>Death exists, not as the opposite but as a part of life.</description>
+    </item>
+    <item>
       <title>Nudge</title>
       <link>https://mutt0-ds.github.io/books/nudge-la-spinta-gentile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -967,6 +981,13 @@
       <description>For a great speech, Obama uses many rhetorical structures, such as repetitions, personifications, analogies</description>
     </item>
     <item>
+      <title>Say Nothing</title>
+      <link>https://mutt0-ds.github.io/books/say-nothing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/say-nothing/</guid>
+      <description>The IRA&amp;rsquo;s history is full of injustices, violence, and so much ambiguity</description>
+    </item>
+    <item>
       <title>Simply Said: Communicating Better at Work and Beyond</title>
       <link>https://mutt0-ds.github.io/books/simply-said-communicating-better-at-work-and-beyond/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1063,6 +1084,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/books/the-accounting-game/</guid>
       <description>On a daily basis, cash runs the business. Not profit</description>
+    </item>
+    <item>
+      <title>The Algebra of Wealth</title>
+      <link>https://mutt0-ds.github.io/books/the-algebra-of-wealth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/the-algebra-of-wealth/</guid>
+      <description>Wealth = Focus + (Stoicism x Time x Diversification)</description>
     </item>
     <item>
       <title>The Antidote: Happiness for People Who Can&#39;t Stand Positive Thinking</title>
@@ -1219,6 +1247,13 @@
       <description>Focus on getting the work done, build a solid team, and optimize communication, decision and processes</description>
     </item>
     <item>
+      <title>The Everything Store: Jeff Bezos and the Age of Amazon</title>
+      <link>https://mutt0-ds.github.io/books/the-everything-store-jeff-bezos-and-the-age-of-amazon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/the-everything-store-jeff-bezos-and-the-age-of-amazon/</guid>
+      <description>There is a lot of customer obsession behind Amazon&amp;rsquo;s nature. And what a turbulent story!</description>
+    </item>
+    <item>
       <title>The Five Dysfunctions of a Team</title>
       <link>https://mutt0-ds.github.io/books/the-five-dysfunctions-of-a-team/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1308,6 +1343,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/books/the-millionaire-next-door-/</guid>
       <description>Income and wealth are two different things: some earn a lot but do not own much, and others earn less but grow their capital through frugality. Many millionaires are of the second type (PAW)</description>
+    </item>
+    <item>
+      <title>The Minds of Billy Milligan</title>
+      <link>https://mutt0-ds.github.io/books/the-minds-of-billy-milligan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/the-minds-of-billy-milligan/</guid>
+      <description>Living with multiple personalities is a complicated, difficult, and tragic life</description>
     </item>
     <item>
       <title>The Mom Test</title>
@@ -1471,6 +1513,13 @@
       <description>Live with the memories of the people you loved. And know when it is time to move on. Do not get stuck.</description>
     </item>
     <item>
+      <title>The Year Without Pants: WordPress.com and the Future of Work</title>
+      <link>https://mutt0-ds.github.io/books/the-year-without-pants-wordpress.com-and-the-future-of-work/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/the-year-without-pants-wordpress.com-and-the-future-of-work/</guid>
+      <description>They were visionaries at Automattic, but it was also truly chaotic.</description>
+    </item>
+    <item>
       <title>The Zombie Survival Guide</title>
       <link>https://mutt0-ds.github.io/books/the-zombie-survival-guide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1478,11 +1527,25 @@
       <description>The only way to kill a zombie is to hit it in the head</description>
     </item>
     <item>
+      <title>Thinking in Bets</title>
+      <link>https://mutt0-ds.github.io/books/thinking-in-bets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/thinking-in-bets/</guid>
+      <description>There is almost never a 1:1 link between choice and outcome. Think of your choices as bets with a win percentage</description>
+    </item>
+    <item>
       <title>Thinking, Fast and Slow</title>
       <link>https://mutt0-ds.github.io/books/thinking-fast-and-slow/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/books/thinking-fast-and-slow/</guid>
       <description>It is not possible to explain the rationality (or rather, the lack of it) of the human mind, which relies on two systems that oppose each other depending on the situation</description>
+    </item>
+    <item>
+      <title>This is Marketing</title>
+      <link>https://mutt0-ds.github.io/books/this-is-marketing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/this-is-marketing/</guid>
+      <description>Everyone has their own story. A good marketer listens and builds a narrative around those stories to address needs. Not everyone&amp;rsquo;s, but the slice you need to impress</description>
     </item>
     <item>
       <title>This Is Vegan Propaganda (And Other Lies the Meat Industry Tells You)</title>
@@ -1581,6 +1644,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/books/you-can-be-funny-and-make-people-laugh/</guid>
       <description>Don&amp;rsquo;t close yourself off. You can be funny easily by exaggerating and asking imaginative questions, thoughts, and opinions. The important part is to put yourself out there and keep the conversation flowing</description>
+    </item>
+    <item>
+      <title>You Can Negotiate Anything</title>
+      <link>https://mutt0-ds.github.io/books/you-can-negotiate-anything/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/books/you-can-negotiate-anything/</guid>
+      <description>Everyone has a motive and pressures that influence the negotiation. Try to understand more</description>
     </item>
     <item>
       <title>Your Money and Your Brain</title>
