@@ -124,7 +124,7 @@ params:
     enable: true
     intro: "Hi, I'm"
     title: "Davide"
-    subtitle: "Software Engineer focused on shipping solutions"
+    subtitle: "I build things and write about what I learn"
     content: "This is a collection of my notes, thoughts and stories collected while exploring the world around the things I love. 
     Currently working with AI & Data in the fintech area"
     image: /images/me.png
@@ -223,7 +223,7 @@ params:
     enable: true
     items:
       - job: "Head of AI - Tech Lead"
-        company: "Invessuite"
+        company: "Investsuite"
         companyUrl: "https://www.investsuite.com"
         date: "Dec 2024 - Present"
         featuredLink:

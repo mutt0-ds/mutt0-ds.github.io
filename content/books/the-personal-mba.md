@@ -4,7 +4,7 @@ author: Josh Kaufman
 image: https://images-na.ssl-images-amazon.com/images/I/71IWc+F7yeL.jpg
 badges:
 - "💼 Work"
-- "🗣 Marketing"
+- "🗣️ Marketing"
 score: "⭐⭐⭐"
 finished: '2022-08-16'
 summary: Don't spend 300k USD on an MBA; get a broad overview of management with this

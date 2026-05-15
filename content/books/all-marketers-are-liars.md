@@ -3,7 +3,7 @@ title: All Marketers Are Liars
 author: Seth Godin
 image: https://m.media-amazon.com/images/I/71NrAkCAHnL._SL1500_.jpg
 badges:
-- "🗣 Marketing"
+- "🗣️ Marketing"
 score: "⭐️⭐️⭐️"
 finished: '2022-12-13'
 summary: Not everyone is a liar; customers tell themselves lies and marketers sell
