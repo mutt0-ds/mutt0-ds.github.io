@@ -10,9 +10,7 @@ summary: "It is much easier to sell and make money if people like you"
 showInHome: false
 ---
 
-_It is much easier to sell and make money if people like you_
-
-Recommended by Davide Mauri of Gitbar, a book about how Zak Brown transformed McLaren in a few years. A story of leadership, ingenuity, and positivity.
+A book about how Zak Brown transformed McLaren in a few years. A story of leadership, ingenuity, and positivity.
 
 Really good. He writes well, is honest and direct, and makes it truly engaging by explaining how he works and how he inspires people. Extremely driven and tireless, and inspiring. Recommended.
 
