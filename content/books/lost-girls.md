@@ -10,8 +10,6 @@ summary: "The lives of some girls can be very hard, and good journalism is givin
 showInHome: false
 ---
 
-_The lives of some girls can be very hard, and good journalism is giving voice to these stories_
-
 Good book, meticulously written.
 
 It tells the story of 5 girls who come from difficult backgrounds, become sex workers, and are murdered on Long Island by a killer (caught in 2023, thankfully). The journalist reconstructs their stories very very well, the details, and the families' pain, really making you step into these heavy stories. The point is not the killer and the investigation, the point is how the family and loved ones interact with the tragedy.
