@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
@@ -28,7 +28,7 @@
 
 
 
-<meta property="og:url" content="http://localhost:1313/posts/2026/06/ai-architecture/">
+<meta property="og:url" content="https://mutt0-ds.github.io/posts/2026/06/ai-architecture/">
   <meta property="og:site_name" content="Mutt0-ds Notes">
   <meta property="og:title" content="An Oversimplified intro to Conversational AI Architectures">
   <meta property="og:description" content="Lately, I’ve been sharing more and more about what I learned when building an AI architecture for a classic AI chat agent (like we did with Charlie). I think it’s a good time to map out the main components, along with the little tips and tricks I picked up along the way.
@@ -302,7 +302,7 @@ Don&rsquo;t get me wrong, that macro perspective is super important, especially 
 Consider this a clean introduction to the core pillars, stripped of all the unnecessary bells and whistles.</p>
 <p>Let&rsquo;s look at the basic building blocks you actually need to assemble for a production AI product, whether you&rsquo;re building a simple assistant, a chatbot, or a full agentic orchestrator.</p>
 <h2 id="the-orchestrator">The Orchestrator</h2>
-<div style="max-width: 1442px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.8935%;"><iframe src="https://iframely.net/N90M325Y?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1442px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.8935%;"><iframe src="https://iframely.net/N90M325Y?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p>At the heart of any AI agent is the <strong>orchestrator</strong>.
 This is the core framework in your code that coordinates your AI tools, handles incoming user requests, registers new capabilities, and manages all the background plumbing.</p>
 <p>I strongly discourage creating this layer from scratch, even though it makes sense for very simple, single-turn flows.
@@ -320,7 +320,7 @@ They come with way too much abstraction and unnecessary complexity, which become
 <p>It has its own annoying drawbacks, especially when you&rsquo;re dealing with their loggers 😫, but it&rsquo;s perfectly fine for production.
 Anyway, if you keep the orchestrator layer lightweight and well-contained, switching later is painful but doable. Choosing the right SDK from the start just makes life a lot easier.</p>
 <h2 id="llm-integration">LLM Integration</h2>
-<div style="max-width: 1441px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.9467%;"><iframe src="https://iframely.net/GU44tL79?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1441px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.9467%;"><iframe src="https://iframely.net/GU44tL79?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p>Now that you have the structural brain to handle your AI application, <strong>you need an LLM to plug into it</strong>.
 This introduction is way too short to debate what the single &ldquo;best&rdquo; model is.
 Any benchmark list I write will be outdated in two weeks, and the choice depends entirely on your specific parameters.</p>
@@ -330,7 +330,7 @@ A crucial tip for the smart model: avoid giving it a long thinking budget. You d
 Handing off tasks to dedicated agents only makes sense if you have a massive project that does completely disconnected things, and you need a central router to navigate between them. For example, a personal assistant that manages your calendar and updates your Jira tasks can justify two separate agents because those workflows never touch. Otherwise, sticking to a smart + fast model combo works incredibly well.
 Most providers offer multiple tiers of models to mix and match, and there are plenty of model-agnostic middlewares to pick from like <a href="https://openrouter.ai/">OpenRouter</a>, though that introduces its own latency and reliability drawbacks.</p>
 <h2 id="prompts">Prompts</h2>
-<div style="max-width: 1690px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.3295%;"><iframe src="https://iframely.net/YkSfVFnA?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1690px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.3295%;"><iframe src="https://iframely.net/YkSfVFnA?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p>Your model(s) obviously needs <strong>a decent system prompt</strong>.
 The prompt does most of the heavy lifting, and the way &ldquo;prompt engineering&rdquo; works can feel ridiculously complex and out of scope for today.
 Still, for the sake of this post, 2026-era models are smart enough to work perfectly well with simple, direct instructions.</p>
@@ -341,7 +341,7 @@ Still, for the sake of this post, 2026-era models are smart enough to work perfe
 <li>The more complexity and edge-case padding you add, the more things you can screw up, and the more you risk tying up your model to unpredictable behaviors</li>
 </ul>
 <h2 id="tools">Tools</h2>
-<div style="max-width: 1451px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.5236%;"><iframe src="https://iframely.net/OmPzvBSh?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1451px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.5236%;"><iframe src="https://iframely.net/OmPzvBSh?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p>Each agent will have <strong>a set of tools</strong> at its disposal.
 Think of them as skills, <a href="https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/">plugins, MCPs, whatever you want to call them</a>&hellip; Essentially functions the agent can call to fetch data and provide better responses.</p>
 <p>Let&rsquo;s look at a basic example like web search.
@@ -355,7 +355,7 @@ Most SDKs provide built-in methods to filter tools in your backend code. DO NOT 
 <p>Finally, <strong>be careful with what you expose</strong>. Do not hand super-powerful, open-ended tools to an agent without strict guardrails.
 The classic example is giving an agent total shell control. Start with small, highly-constrained skills (like listing a single directory) and slowly expand them as you prove out the security boundaries.</p>
 <h2 id="guardrails">Guardrails</h2>
-<div style="max-width: 1426px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 64.6465%;"><iframe src="https://iframely.net/DZbwFNps?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1426px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 64.6465%;"><iframe src="https://iframely.net/DZbwFNps?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p>If your AI agent is customer-facing, and especially if you work in a regulated sector, <strong>guardrails are absolutely essential</strong>.
 Some models provide default safety filtering out of the box (like blocking explicit hate speech or violence), but the closer your app is to an end-user, the more granular control you need.</p>
 <p>Guardrails are essentially automated layers designed to stop your AI from causing disasters.
@@ -368,7 +368,7 @@ In an oversimplified way, they usually consist of additional, lightweight LLM ch
 </ul>
 <p>Also, pay close attention to custom fields inside your tools. If you allow unfiltered, raw text into tool arguments without strict schema enforcement and sanitation, you are opening your application up to easy injections. The key takeaway: never rely on the AI to defend itself from attacks.</p>
 <h2 id="evals">Evals</h2>
-<div style="max-width: 1690px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 41.6193%;"><iframe src="https://iframely.net/CJIUFKhZ?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1690px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 41.6193%;"><iframe src="https://iframely.net/CJIUFKhZ?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p>To me, this is completely non-negotiable, the equivalent of unit testing for traditional applications. <strong>You need a resilient evaluation suite</strong>.</p>
 <p><a href="https://mutt0-ds.github.io/posts/2026/01/evals-help-build-reliable-ai/">As I wrote in my previous post on Evals</a>, these suites should run automatically every single time you alter a main prompt or a tool definition to ensure you haven&rsquo;t introduced regressions.</p>
 <p>This ties directly into eval-driven development. Start with a defined goal: you usually don&rsquo;t want an AI agent that attempts to do literally everything; you want it bounded to a few core tasks.
@@ -376,7 +376,7 @@ In an oversimplified way, they usually consist of additional, lightweight LLM ch
 <p>I also highly recommend adding adversarial evals to your test pipeline. Write test prompts that actively try to confuse, trick, or jailbreak the LLM across multiple turns.
 It&rsquo;s the best way to verify that your guardrails are actually working as expected under pressure. AI can be a massive help in generating these adversarial test cases, but your own understanding of the product&rsquo;s ultimate goals will be the key factor. Think outside the box when writing your evals.</p>
 <h2 id="miscellaneous">Miscellaneous</h2>
-<div style="max-width: 1640px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 44.6233%;"><iframe src="https://iframely.net/4Ux0Xpbx?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1640px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 44.6233%;"><iframe src="https://iframely.net/4Ux0Xpbx?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 <p>We&rsquo;ve only scratched the surface, but here are a few final infrastructure points I would always include in a production-ready setup:</p>
 <ul>
 <li><strong>Configuration</strong>: in production, you need the agility to deploy an emergency prompt hot-fix instantly without waiting for a full 10-minute CI/CD deployment pipeline. Store your base prompts, model settings, and configurations in a database that can be synced to the orchestrator</li>
@@ -421,17 +421,17 @@ If you have any question or want to explore a point in more depth, <a href="http
             <h5>Tags</h5>
             <ul class="tags-ul list-unstyled list-inline">
               
-              <li class="list-inline-item"><a href="http://localhost:1313/tags/ai" target="_blank">ai</a></li>
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/ai" target="_blank">ai</a></li>
               
-              <li class="list-inline-item"><a href="http://localhost:1313/tags/software-engineering" target="_blank">software-engineering</a></li>
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/software-engineering" target="_blank">software-engineering</a></li>
               
-              <li class="list-inline-item"><a href="http://localhost:1313/tags/architecture" target="_blank">architecture</a></li>
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/architecture" target="_blank">architecture</a></li>
               
-              <li class="list-inline-item"><a href="http://localhost:1313/tags/rag" target="_blank">rag</a></li>
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/rag" target="_blank">rag</a></li>
               
-              <li class="list-inline-item"><a href="http://localhost:1313/tags/memory" target="_blank">memory</a></li>
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/memory" target="_blank">memory</a></li>
               
-              <li class="list-inline-item"><a href="http://localhost:1313/tags/framework" target="_blank">framework</a></li>
+              <li class="list-inline-item"><a href="https://mutt0-ds.github.io/tags/framework" target="_blank">framework</a></li>
               
             </ul>
           </aside>
@@ -443,17 +443,17 @@ If you have any question or want to explore a point in more depth, <a href="http
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=An%20Oversimplified%20intro%20to%20Conversational%20AI%20Architectures&url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2026%2f06%2fai-architecture%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=An%20Oversimplified%20intro%20to%20Conversational%20AI%20Architectures&url=https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2026%2f06%2fai-architecture%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=An%20Oversimplified%20intro%20to%20Conversational%20AI%20Architectures: http%3a%2f%2flocalhost%3a1313%2fposts%2f2026%2f06%2fai-architecture%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=An%20Oversimplified%20intro%20to%20Conversational%20AI%20Architectures: https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2026%2f06%2fai-architecture%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=An%20Oversimplified%20intro%20to%20Conversational%20AI%20Architectures&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fposts%2f2026%2f06%2fai-architecture%2f'>
+                  <a target="_blank" href='mailto:?subject=An%20Oversimplified%20intro%20to%20Conversational%20AI%20Architectures&amp;body=Check%20out%20this%20site https%3a%2f%2fmutt0-ds.github.io%2fposts%2f2026%2f06%2fai-architecture%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -647,7 +647,7 @@ I think it&rsquo;s a good time to map out the main components, along with the li
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
             <div class="pb-2">
-                <a href="http://localhost:1313/" title="Mutt0-ds Notes">
+                <a href="https://mutt0-ds.github.io/" title="Mutt0-ds Notes">
                     <img alt="Footer logo" src="/fav.png"
                         height="40px" width="40px">
                 </a>

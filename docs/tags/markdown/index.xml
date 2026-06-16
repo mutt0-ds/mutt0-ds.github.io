@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Markdown on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/markdown/</link>
+    <link>https://mutt0-ds.github.io/tags/markdown/</link>
     <description>Recent content in Markdown on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 13 Sep 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Second Brain... 6 Months later: Obsidian update</title>
-      <link>http://localhost:1313/posts/2023/09/obsidian-update-6-months-later/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/09/obsidian-update-6-months-later/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been quite the journey since I first delved into Second Brain technologies for organizing my team&amp;rsquo;s documentation. I previously shared my initial experiences with Obsidian, and now, it&amp;rsquo;s time for a comprehensive update. In case you missed my earlier exploration, you can catch up &lt;a href=&#34;https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;So, what has changed?&#xA;Let&amp;rsquo;s dive right in. Since my last update, I&amp;rsquo;ve continued to utilize Obsidian for secure and structured note organization within my team, enjoying the rapid and intuitive process and enjoying its advantages (flexibility, powerful search system,  security, and so on). I&amp;rsquo;m still in the &amp;ldquo;honeymoon&amp;rdquo; phase.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes</title>
-      <link>http://localhost:1313/posts/2023/02/obsidian-productivity-second-brain/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</link>
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/02/obsidian-productivity-second-brain/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/</guid>
       <description>&lt;h2 id=&#34;-introduction-to-second-brains--brain-dumping&#34;&gt;🧠 Introduction to Second Brains &amp;amp; Brain Dumping&lt;/h2&gt;&#xA;&lt;p&gt;As I&amp;rsquo;m working with data all the time, I&amp;rsquo;m aware of the importance of keeping it in a safe and structured place, where it can be easily accessed when needed, which could be days, weeks or even years in the future. Thus, organizing my information, tasks, and notes is a key activity in my work (and personal) life. Without a clear system, I would feel lost in chaos, and my productivity would plunge (also considering that my memory sucks).&lt;/p&gt;</description>
     </item>
   </channel>

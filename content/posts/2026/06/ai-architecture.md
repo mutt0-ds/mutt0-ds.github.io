@@ -32,7 +32,7 @@ Let's look at the basic building blocks you actually need to assemble for a prod
 
 ## The Orchestrator
 
-<div style="max-width: 1442px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.8935%;"><iframe src="https://iframely.net/N90M325Y?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1442px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.8935%;"><iframe src="https://iframely.net/N90M325Y?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 At the heart of any AI agent is the **orchestrator**. 
 This is the core framework in your code that coordinates your AI tools, handles incoming user requests, registers new capabilities, and manages all the background plumbing.
@@ -58,7 +58,7 @@ Anyway, if you keep the orchestrator layer lightweight and well-contained, switc
 
 ## LLM Integration
 
-<div style="max-width: 1441px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.9467%;"><iframe src="https://iframely.net/GU44tL79?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1441px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.9467%;"><iframe src="https://iframely.net/GU44tL79?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 Now that you have the structural brain to handle your AI application, **you need an LLM to plug into it**.
 This introduction is way too short to debate what the single "best" model is. 
@@ -73,7 +73,7 @@ Most providers offer multiple tiers of models to mix and match, and there are pl
 
 ## Prompts
 
-<div style="max-width: 1690px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.3295%;"><iframe src="https://iframely.net/YkSfVFnA?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1690px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.3295%;"><iframe src="https://iframely.net/YkSfVFnA?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 Your model(s) obviously needs **a decent system prompt**. 
 The prompt does most of the heavy lifting, and the way "prompt engineering" works can feel ridiculously complex and out of scope for today.
@@ -87,7 +87,7 @@ I wouldn't stress about over-engineering this part because it depends entirely o
 
 ## Tools
 
-<div style="max-width: 1451px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.5236%;"><iframe src="https://iframely.net/OmPzvBSh?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1451px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.5236%;"><iframe src="https://iframely.net/OmPzvBSh?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 Each agent will have **a set of tools** at its disposal. 
 Think of them as skills, [plugins, MCPs, whatever you want to call them](https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/)... Essentially functions the agent can call to fetch data and provide better responses.
@@ -111,7 +111,7 @@ The classic example is giving an agent total shell control. Start with small, hi
 
 ## Guardrails
 
-<div style="max-width: 1426px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 64.6465%;"><iframe src="https://iframely.net/DZbwFNps?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1426px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 64.6465%;"><iframe src="https://iframely.net/DZbwFNps?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 If your AI agent is customer-facing, and especially if you work in a regulated sector, **guardrails are absolutely essential**. 
 Some models provide default safety filtering out of the box (like blocking explicit hate speech or violence), but the closer your app is to an end-user, the more granular control you need.
@@ -129,7 +129,7 @@ Also, pay close attention to custom fields inside your tools. If you allow unfil
 
 ## Evals
 
-<div style="max-width: 1690px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 41.6193%;"><iframe src="https://iframely.net/CJIUFKhZ?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1690px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 41.6193%;"><iframe src="https://iframely.net/CJIUFKhZ?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 To me, this is completely non-negotiable, the equivalent of unit testing for traditional applications. **You need a resilient evaluation suite**.
 
@@ -143,7 +143,7 @@ It's the best way to verify that your guardrails are actually working as expecte
 
 ## Miscellaneous
 
-<div style="max-width: 1640px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 44.6233%;"><iframe src="https://iframely.net/4Ux0Xpbx?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div style="max-width: 1640px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 44.6233%;"><iframe src="https://iframely.net/4Ux0Xpbx?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 We've only scratched the surface, but here are a few final infrastructure points I would always include in a production-ready setup:
 

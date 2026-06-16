@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Memory on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/memory/</link>
+    <link>https://mutt0-ds.github.io/tags/memory/</link>
     <description>Recent content in Memory on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 16 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/memory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>An Oversimplified intro to Conversational AI Architectures</title>
-      <link>http://localhost:1313/posts/2026/06/ai-architecture/</link>
+      <link>https://mutt0-ds.github.io/posts/2026/06/ai-architecture/</link>
       <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2026/06/ai-architecture/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2026/06/ai-architecture/</guid>
       <description>&lt;p&gt;Lately, I&amp;rsquo;ve been sharing more and more about what I learned when building an AI architecture for a classic AI chat agent (like we did with &lt;a href=&#34;https://mutt0-ds.github.io/posts/2026/04/charlie-lessons/&#34;&gt;Charlie&lt;/a&gt;).&#xA;I think it&amp;rsquo;s a good time to map out the main components, along with the little tips and tricks I picked up along the way.&lt;/p&gt;&#xA;&lt;p&gt;Keep in mind that &lt;strong&gt;all of this comes straight from my own hands-on experience&lt;/strong&gt;.&#xA;The tech is moving insanely fast, things will change, and your specific use cases will obviously differ from mine.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why AI needs to dream: a guide to long-term memory</title>
-      <link>http://localhost:1313/posts/2026/05/long-term-memory/</link>
+      <link>https://mutt0-ds.github.io/posts/2026/05/long-term-memory/</link>
       <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2026/05/long-term-memory/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2026/05/long-term-memory/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Agentic Memory&lt;/strong&gt; is an area of the AI world where even benchmarks are vague.&lt;/p&gt;&#xA;&lt;p&gt;How do you really measure &amp;ldquo;&lt;em&gt;memory&lt;/em&gt;&amp;rdquo;? Retention? Relevance? Recall quality? Personality consistency?&lt;/p&gt;&#xA;&lt;p&gt;It is surprisingly difficult to find concise, practical information on the topic.&lt;/p&gt;&#xA;&lt;p&gt;Sure, there are tons of libraries, frameworks, and academic papers around, but there is also a lot of &lt;a href=&#34;https://www.reddit.com/r/LangChain/comments/1kg5qas/lies_damn_lies_statistics_is_mem0_really_sota_in/&#34;&gt;lies&lt;/a&gt; and &lt;a href=&#34;https://blog.getzep.com/the-ai-memory-wallet-fallacy/&#34;&gt;confusion&lt;/a&gt;. Plus, implementing this in a real-world scenario isn&amp;rsquo;t easy.&lt;/p&gt;&#xA;&lt;p&gt;Today, I&amp;rsquo;ll guide you through long-term memory, &amp;ldquo;dreams&amp;rdquo;, and the challenges I encountered while trying to implement it in production.&lt;/p&gt;</description>
     </item>
   </channel>
