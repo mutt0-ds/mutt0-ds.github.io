@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/python/</link>
+    <link>https://mutt0-ds.github.io/tags/python/</link>
     <description>Recent content in Python on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Giving our AI superpowers with OpenAI Tools</title>
-      <link>http://localhost:1313/posts/2024/06/ai-superpowers-tools/</link>
+      <link>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2024/06/ai-superpowers-tools/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/</guid>
       <description>&lt;p&gt;In recent months, I have been experimenting with AI tools to leverage new, powerful technologies and create value. Like you, I am inundated with hype and buzzwords, and this makes things complicate, when trying to get started. While looking for simple answers to my questions, it’s often challenging to extract real value. So, I want to share my notes to help others with similar needs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-business-case-an-ai-analyst&#34;&gt;My Business Case: an AI Analyst&lt;/h2&gt;&#xA;&lt;p&gt;Let’s start with the big question I had in my mind:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Finding the Best Time to Go to Work: Now with Car Accidents Data &amp; Power BI Dashboard!</title>
-      <link>http://localhost:1313/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/10/analyzing-accidents-data-to-perfectionize-my-commute/</guid>
       <description>&lt;p&gt;I want to express my gratitude for the positive feedbacks I received a few months ago when &lt;a href=&#34;https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/&#34;&gt;I used Google Maps data to determine the best times for the daily commute&lt;/a&gt;. TL;DR: Mondays are the best, while Wednesdays, and early Fridays are the trickiest times to hit the road.&lt;/p&gt;&#xA;&lt;p&gt;However, the neatness of this analysis takes a hit when real-world unpredictabilities come into play. Things like heavy traffic, rain, road closures due to accidents, or just that one slow driver in front of you can disrupt even the best-planned routes. So, it&amp;rsquo;s essential to view these explorations as &amp;ldquo;what if&amp;rdquo; games. They provide a general framework but can&amp;rsquo;t fully account for the chaos of everyday life.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Second Brain... 6 Months later: Obsidian update</title>
-      <link>http://localhost:1313/posts/2023/09/obsidian-update-6-months-later/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/09/obsidian-update-6-months-later/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been quite the journey since I first delved into Second Brain technologies for organizing my team&amp;rsquo;s documentation. I previously shared my initial experiences with Obsidian, and now, it&amp;rsquo;s time for a comprehensive update. In case you missed my earlier exploration, you can catch up &lt;a href=&#34;https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;So, what has changed?&#xA;Let&amp;rsquo;s dive right in. Since my last update, I&amp;rsquo;ve continued to utilize Obsidian for secure and structured note organization within my team, enjoying the rapid and intuitive process and enjoying its advantages (flexibility, powerful search system,  security, and so on). I&amp;rsquo;m still in the &amp;ldquo;honeymoon&amp;rdquo; phase.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Analyzing My Commute Data to Find the Best Time to Go to Work</title>
-      <link>http://localhost:1313/posts/2023/07/analyzing-commute-data-using-google-api/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/07/analyzing-commute-data-using-google-api/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</guid>
       <description>&lt;p&gt;When my commute buddy and I find ourselves stuck in traffic during our car journeys, we often daydream about finding the ideal route and &lt;strong&gt;the optimal time&lt;/strong&gt; to leave the office in order to avoid these uncomfortable situations. Now, thanks to the power of technology and the inspiration I drew from &lt;a href=&#34;https://medium.com/@hishamsajid113/using-google-distance-matrix-api-to-reduce-commute-time-b17a0b9b0fbe&#34;&gt;a fantastic article by @hishamsajid113&lt;/a&gt;, I am finally able to back up my theories about the best departure times from home and simulate with real data!&lt;/p&gt;</description>
     </item>
     <item>
       <title>How I ended up with AI-generated Music Reviews on TikTok</title>
-      <link>http://localhost:1313/posts/2023/05/how-i-generated-automatic-reviews-tiktok/</link>
+      <link>https://mutt0-ds.github.io/posts/2023/05/how-i-generated-automatic-reviews-tiktok/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2023/05/how-i-generated-automatic-reviews-tiktok/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2023/05/how-i-generated-automatic-reviews-tiktok/</guid>
       <description>&lt;p&gt;This is a fun story, with a series of technologies and topics that I couldn&amp;rsquo;t believe they were capable of living together&amp;hellip; EDM, TikTok, Text-To-Speech, AI, Playwright&amp;hellip; Many times, when going down this over-engineered rabbit hole, I thought, &amp;ldquo;OK, I have to write about this thing.&amp;rdquo; And also, &amp;ldquo;What am I doing here with my time?&amp;rdquo;&lt;/p&gt;&#xA;&lt;h2 id=&#34;-some-context&#34;&gt;📚 Some context&lt;/h2&gt;&#xA;&lt;p&gt;So, here are a few key things to be aware of:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Road to 100% Test Coverage on notion-sdk-py</title>
-      <link>http://localhost:1313/posts/2022/12/road-100-coverage-notion/</link>
+      <link>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2022/12/road-100-coverage-notion/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2022/12/road-100-coverage-notion/</guid>
       <description>&lt;p&gt;There is something bizarre with me if two of my favourite activities are writing documentation and hitting my head against tests, which are notoriously unexciting activities for many developers 😫&lt;/p&gt;&#xA;&lt;p&gt;Luckily, we are all unique in our own way and I decided to contribute to &lt;a href=&#34;https://codecov.io/github/ramnes/notion-sdk-py&#34;&gt;the testing module&lt;/a&gt; of one of my favorite libraries, &lt;a href=&#34;https://github.com/ramnes/notion-sdk-py&#34;&gt;notion-sdk-py&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Being &lt;a href=&#34;https://www.credly.com/badges/f15407b3-5fa8-4d9b-99cf-d862399a1543/public_url&#34;&gt;a certified Notion user&lt;/a&gt;, I use its Web App on a daily basis, and the Python library helps me automatically organize my notes. I even used it for custom bots and documentation. If you don’t know &lt;a href=&#34;https://www.notion.so/&#34;&gt;the tool&lt;/a&gt; yet, I recommend trying it out: it may be a bit more complex compared to a classic note editor like Google Keep or Evernote, but its potential is huge.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Personal Airflow - How I&#39;m monitoring my scripts with Python, Appsmith and SQL Server</title>
-      <link>http://localhost:1313/posts/2022/03/personal-airflow/</link>
+      <link>https://mutt0-ds.github.io/posts/2022/03/personal-airflow/</link>
       <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2022/03/personal-airflow/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2022/03/personal-airflow/</guid>
       <description>&lt;p&gt;Here&amp;rsquo;s the story of how I created my first full-stack project for monitoring my daily activities, using Python and SQL Server in backend and Appsmith for the GUI. I have a lot to learn and process yet, but hey, it&amp;rsquo;s a start.&lt;/p&gt;&#xA;&lt;h2 id=&#34;-the-problem&#34;&gt;😟 The Problem&lt;/h2&gt;&#xA;&lt;p&gt;There are scripts I&amp;rsquo;m using that are particularly tedious to monitor. The typical structure is the following:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Load data&lt;/strong&gt; (from a file or manual input)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Send a request&lt;/strong&gt; to internal DB / very specific API&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Compare the data&lt;/strong&gt; received with the input and if something is wrong, notify me or a colleague.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;They must operate locally on specific machines, can&amp;rsquo;t be containerized, there are severe API limitations in some cases.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Using a Neural Network for sending memes to my girlfriend</title>
-      <link>http://localhost:1313/posts/2021/05/nn-sending-memes/</link>
+      <link>https://mutt0-ds.github.io/posts/2021/05/nn-sending-memes/</link>
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2021/05/nn-sending-memes/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2021/05/nn-sending-memes/</guid>
       <description>&lt;p&gt;Well, my GF&amp;rsquo;s tastes in memes are simple: she loves wholesome memes and, most importantly, &lt;strong&gt;she loves animals&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s why I created a fun little project that:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Surfs the subreddit &lt;a href=&#34;https://www.reddit.com/r/wholesomememes/&#34;&gt;r/wholesomemes&lt;/a&gt; using the reddit API&lt;/li&gt;&#xA;&lt;li&gt;Downloads a few of the hottest memes in the contents folder&lt;/li&gt;&#xA;&lt;li&gt;Initializes a ResNet50 model that recognizes images containing any animal&lt;/li&gt;&#xA;&lt;li&gt;Sends them via mail to my GF (positively welcomed)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;final-email-3-memes-by-default&#34;&gt;Final email (3 memes by default)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mutt0-ds/memes-selector/main/media/result.png&#34; alt=&#34;finalmail&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>

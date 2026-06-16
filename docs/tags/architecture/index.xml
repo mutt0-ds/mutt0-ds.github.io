@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Architecture on Mutt0-ds Notes</title>
-    <link>http://localhost:1313/tags/architecture/</link>
+    <link>https://mutt0-ds.github.io/tags/architecture/</link>
     <description>Recent content in Architecture on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 16 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mutt0-ds.github.io/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>An Oversimplified intro to Conversational AI Architectures</title>
-      <link>http://localhost:1313/posts/2026/06/ai-architecture/</link>
+      <link>https://mutt0-ds.github.io/posts/2026/06/ai-architecture/</link>
       <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2026/06/ai-architecture/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2026/06/ai-architecture/</guid>
       <description>&lt;p&gt;Lately, I&amp;rsquo;ve been sharing more and more about what I learned when building an AI architecture for a classic AI chat agent (like we did with &lt;a href=&#34;https://mutt0-ds.github.io/posts/2026/04/charlie-lessons/&#34;&gt;Charlie&lt;/a&gt;).&#xA;I think it&amp;rsquo;s a good time to map out the main components, along with the little tips and tricks I picked up along the way.&lt;/p&gt;&#xA;&lt;p&gt;Keep in mind that &lt;strong&gt;all of this comes straight from my own hands-on experience&lt;/strong&gt;.&#xA;The tech is moving insanely fast, things will change, and your specific use cases will obviously differ from mine.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Simplicity speaks louder than Complexity</title>
-      <link>http://localhost:1313/posts/2025/03/first-pitch/</link>
+      <link>https://mutt0-ds.github.io/posts/2025/03/first-pitch/</link>
       <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025/03/first-pitch/</guid>
+      <guid>https://mutt0-ds.github.io/posts/2025/03/first-pitch/</guid>
       <description>&lt;p&gt;A few days ago, I had my first technical presentation at my new company.&#xA;I joined InvestSuite 3 months ago and it was finally time to present the product I’m working on, &lt;a href=&#34;https://www.investsuite.com/storyteller&#34;&gt;StoryTeller&lt;/a&gt;, to a very important customer.&lt;/p&gt;&#xA;&lt;p&gt;I was nervous.&lt;/p&gt;&#xA;&lt;p&gt;I’ve given many presentations in the past (to hundreds of people, even at &lt;a href=&#34;https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/&#34;&gt;a conference&lt;/a&gt;) so this wasn’t entirely new to me. But I’m shy by nature, and presenting doesn’t come easily to me. This time, it felt different because the stakes were higher: &lt;strong&gt;it was about selling our product&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
