@@ -3,7 +3,10 @@
     "allow": [
       "Bash(grep -E '\\\\..*\\\\.md$')",
       "Bash(hugo version *)",
-      "Bash(hugo)"
+      "Bash(hugo)",
+      "PowerShell(\\(Invoke-WebRequest -Uri \"http://localhost:1313/posts/\" -UseBasicParsing\\).Content -split \"`n\" | Select-String -Pattern \"img|card\" | Select-Object -First 30)",
+      "PowerShell(\\(Invoke-WebRequest -Uri \"http://localhost:1313/posts/\" -UseBasicParsing\\).Content -split \"`n\" | Select-String -Pattern \"list-page|id=\" | Select-Object -First 10)",
+      "PowerShell(\\(Invoke-WebRequest -Uri \"http://localhost:1313/posts/\" -UseBasicParsing\\).Content -split \"`n\" | Select-String -Pattern \"\\\\.css\" | Select-Object -First 20)"
     ]
   }
 }

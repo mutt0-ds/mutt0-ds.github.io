@@ -1,6 +1,6 @@
 ---
-title: "An Oversimplified Introduction to Conversational AI Architectures"
-date: 2026-06-17
+title: "An Oversimplified intro to Conversational AI Architectures"
+date: 2026-06-16
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/ai_architecture/Title.png
@@ -32,16 +32,18 @@ Let's look at the basic building blocks you actually need to assemble for a prod
 
 ## The Orchestrator
 
+<div style="max-width: 1442px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.8935%;"><iframe src="https://iframely.net/N90M325Y?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+
 At the heart of any AI agent is the **orchestrator**. 
 This is the core framework in your code that coordinates your AI tools, handles incoming user requests, registers new capabilities, and manages all the background plumbing.
 
 I strongly discourage creating this layer from scratch, even though it makes sense for very simple, single-turn flows. 
 Save yourself the headache and pick an existing development tool (an SDK) to start from.
 
-I would also avoid over-complicated frameworks like LangChain. 
+I would also avoid over-complicated frameworks like [LangChain](https://www.google.com/search?q=LangChain&ie=UTF-8). 
 They come with way too much abstraction and unnecessary complexity, which becomes a massive liability as the landscape rapidly evolves. 
 
-There are solid alternatives on the rise: [PydanticAI](https://pydantic.dev/docs/ai/overview/) is gaining traction for its stability guarantees, and [Vercel AI SDK](https://ai-sdk.dev/) is quite popular too — both are solid steps up from LangChain. But if you aren't worried about vendor lock-in, my tip is to go one step further and just use one of the main provider SDKs directly. They share more or less the same features, and if you've already committed to a cloud vendor, their native SDK is usually the lowest-friction route.
+There are solid alternatives on the rise: [PydanticAI](https://pydantic.dev/docs/ai/overview/) is gaining traction for its stability guarantees, and [Vercel AI SDK](https://ai-sdk.dev/) is quite popular too, both are solid steps up from LangChain. But if you aren't worried about vendor lock-in, my tip is to **go one step further and just use one of the main provider SDKs directly**. They share more or less the same features, and if you've already committed to a cloud vendor, their native SDK is usually the lowest-friction route.
 
 For example, I lately opted for the [OpenAI Agents SDK](https://developers.openai.com/api/docs/guides/agents) because:
 
@@ -51,10 +53,12 @@ For example, I lately opted for the [OpenAI Agents SDK](https://developers.opena
 - It's basically becoming the ecosystem standard, meaning most external tools natively expect OpenAI-compatible responses anyway
 
 It has its own annoying drawbacks, especially when you're dealing with their loggers 😫, but it's perfectly fine for production.
-That said, if you keep the orchestrator layer lightweight and well-contained, switching later is painful but doable. Choosing the right SDK from the start just makes life a lot easier.
+Anyway, if you keep the orchestrator layer lightweight and well-contained, switching later is painful but doable. Choosing the right SDK from the start just makes life a lot easier.
 
 
 ## LLM Integration
+
+<div style="max-width: 1441px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.9467%;"><iframe src="https://iframely.net/GU44tL79?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 Now that you have the structural brain to handle your AI application, **you need an LLM to plug into it**.
 This introduction is way too short to debate what the single "best" model is. 
@@ -63,11 +67,14 @@ Any benchmark list I write will be outdated in two weeks, and the choice depends
 But for conversational agents, you generally need a combination of two things: **something relatively fast** depending on the context (luckily, most routing tasks are quite simple) and something **genuinely smart** to act as the general orchestrator. A great pattern is letting the smart model handle the initial user input and intent, while a faster, cheaper model handles tool calling and secondary tasks where you need less reasoning (like parsing a raw API response).
 A crucial tip for the smart model: avoid giving it a long thinking budget. You do not want your AI to sit there running reasoning loops for 30 seconds just to say "hello" to a user.
 
-You know my style by now: keep things simple. Keep your agent network tight. 
+You know my style by now: **keep things simple**. **Keep your agent network tight**. 
 Handing off tasks to dedicated agents only makes sense if you have a massive project that does completely disconnected things, and you need a central router to navigate between them. For example, a personal assistant that manages your calendar and updates your Jira tasks can justify two separate agents because those workflows never touch. Otherwise, sticking to a smart + fast model combo works incredibly well.
-Most providers offer multiple tiers of models to mix and match, and there are plenty of model-agnostic middlewares to pick from like OpenRouter, though that introduces its own latency and reliability drawbacks.
+Most providers offer multiple tiers of models to mix and match, and there are plenty of model-agnostic middlewares to pick from like [OpenRouter](https://openrouter.ai/), though that introduces its own latency and reliability drawbacks.
 
 ## Prompts
+
+<div style="max-width: 1690px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.3295%;"><iframe src="https://iframely.net/YkSfVFnA?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+
 Your model(s) obviously needs **a decent system prompt**. 
 The prompt does most of the heavy lifting, and the way "prompt engineering" works can feel ridiculously complex and out of scope for today.
 Still, for the sake of this post, 2026-era models are smart enough to work perfectly well with simple, direct instructions.
@@ -80,15 +87,17 @@ I wouldn't stress about over-engineering this part because it depends entirely o
 
 ## Tools
 
+<div style="max-width: 1451px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.5236%;"><iframe src="https://iframely.net/OmPzvBSh?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+
 Each agent will have **a set of tools** at its disposal. 
-Think of them as skills — [plugins, MCPs, whatever you want to call them](https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/) — essentially functions the agent can call to fetch data and provide better responses.
+Think of them as skills, [plugins, MCPs, whatever you want to call them](https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/)... Essentially functions the agent can call to fetch data and provide better responses.
 
 Let's look at a basic example like web search.
 You can enable it natively through your SDK (for instance, the [Gemini SDK has a native WebSearch](https://ai.google.dev/gemini-api/docs/google-search) tool), and the LLM just needs clear instructions on when to invoke it.
 
 Tools should be lightweight and dead simple to use. **Keep your tool prompts exactly like your main prompts: version-controlled, tested, and strictly minimal**.
 
-I really want to emphasize the word "*SIMPLE*". If you write a 50-line instruction block for a specific tool, *that entire block gets injected into the general system prompt context on every single conversation turn*. This is 1. slow, 2. expensive and 3. unnecessary, especially for a niche tool that only gets called 5% of the time.
+I really want to emphasize the word "*SIMPLE*". If you write a 50-line instruction block for a specific tool, **that entire block gets injected into the general system prompt context on every single conversation turn**. This is 1. slow, 2. expensive and 3. unnecessary, especially for a niche tool that only gets called 5% of the time.
 
 If you need to strictly steer the AI's behavior after it uses a tool, prefer leaving hints directly in the data response payload instead of hardcoding constraints into the prompt logic itself.
 
@@ -101,6 +110,8 @@ Finally, **be careful with what you expose**. Do not hand super-powerful, open-e
 The classic example is giving an agent total shell control. Start with small, highly-constrained skills (like listing a single directory) and slowly expand them as you prove out the security boundaries.
 
 ## Guardrails
+
+<div style="max-width: 1426px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 64.6465%;"><iframe src="https://iframely.net/DZbwFNps?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 If your AI agent is customer-facing, and especially if you work in a regulated sector, **guardrails are absolutely essential**. 
 Some models provide default safety filtering out of the box (like blocking explicit hate speech or violence), but the closer your app is to an end-user, the more granular control you need.
@@ -118,7 +129,9 @@ Also, pay close attention to custom fields inside your tools. If you allow unfil
 
 ## Evals
 
-To me, this is completely non-negotiable—the equivalent of unit testing for traditional applications. **You need a resilient evaluation suite**.
+<div style="max-width: 1690px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 41.6193%;"><iframe src="https://iframely.net/CJIUFKhZ?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+
+To me, this is completely non-negotiable, the equivalent of unit testing for traditional applications. **You need a resilient evaluation suite**.
 
 [As I wrote in my previous post on Evals](https://mutt0-ds.github.io/posts/2026/01/evals-help-build-reliable-ai/), these suites should run automatically every single time you alter a main prompt or a tool definition to ensure you haven't introduced regressions.
 
@@ -130,16 +143,18 @@ It's the best way to verify that your guardrails are actually working as expecte
 
 ## Miscellaneous
 
+<div style="max-width: 1640px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 44.6233%;"><iframe src="https://iframely.net/4Ux0Xpbx?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+
 We've only scratched the surface, but here are a few final infrastructure points I would always include in a production-ready setup:
 
-- The Configuration: in production, you need the agility to deploy an emergency prompt hot-fix instantly without waiting for a full 10-minute CI/CD deployment pipeline. Store your base prompts, model settings, and configurations in a database that can be synced to the orchestrator
-- A solid Observability Layer: you absolutely need deep tracing for debugging when something goes wrong, and to track hallucinations, token spend, and other KPIs. There are plenty of great production solutions out there, many of which are completely self-hostable
-- Graceful Fallbacks: LLMs fail, rate limits get hit, and cloud vendor APIs go down. You should always have a backup model hosted by an entirely different provider ready to take over if your main provider becomes unresponsive—it's the only way to ensure high uptime
-- Memory Management: all the conversational APIs let you pass previous messages back to the model to maintain a coherent conversation flow (otherwise, the AI has total amnesia on every new turn). However, keep two things in mind: 1. it really helps to enforce structured [long-term memory](https://mutt0-ds.github.io/posts/2026/05/long-term-memory/), 2. keep a close eye on long chat sessions. They will eventually need to be truncated or summarized to save on token costs and prevent overloading the context window of your smaller, fast utility models.
+- **Configuration**: in production, you need the agility to deploy an emergency prompt hot-fix instantly without waiting for a full 10-minute CI/CD deployment pipeline. Store your base prompts, model settings, and configurations in a database that can be synced to the orchestrator
+- A solid **Observability** Layer: you absolutely need deep tracing for debugging when something goes wrong, and to track hallucinations, token spend, and other KPIs. There are plenty of great production solutions out there, many of which are completely self-hostable
+- Graceful **fallbacks**: LLMs fail, rate limits get hit, and cloud vendor APIs go down. You should always have a backup model hosted by an entirely different provider ready to take over if your main provider becomes unresponsive: it's the only way to ensure high uptime
+- **Memory** management: all the conversational APIs let you pass previous messages back to the model to maintain a coherent conversation flow (otherwise, the AI has total amnesia on every new turn). However, keep two things in mind: 1. it really helps to enforce structured [long-term memory](https://mutt0-ds.github.io/posts/2026/05/long-term-memory/), 2. keep a close eye on long chat sessions. They will eventually need to be truncated or summarized to save on token costs and prevent overloading the context window of your smaller, fast utility models.
 
 ## Wrap up
 
-Those were the pillars for a good conversational AI architecture—something I've refined over the years building different projects in different areas.
+Those were the pillars for a good conversational AI architecture: something I've refined over the years building different projects in different areas.
 I know we just had a very quick overview of a vast, complex and rapidly-evolving world, but I hope this was helpful! I was looking for a post like this before creating [Charlie](https://mutt0-ds.github.io/posts/2026/04/charlie-lessons/).
 If you have any question or want to explore a point in more depth, [you know where to find me](https://www.linkedin.com/in/davide-muttoni-77b134194/).
 
