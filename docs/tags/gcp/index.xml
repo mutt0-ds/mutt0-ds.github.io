@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gcp on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/tags/gcp/</link>
+    <link>http://localhost:1313/tags/gcp/</link>
     <description>Recent content in Gcp on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mutt0-ds.github.io/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Analyzing My Commute Data to Find the Best Time to Go to Work</title>
-      <link>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</link>
+      <link>http://localhost:1313/posts/2023/07/analyzing-commute-data-using-google-api/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/</guid>
+      <guid>http://localhost:1313/posts/2023/07/analyzing-commute-data-using-google-api/</guid>
       <description>&lt;p&gt;When my commute buddy and I find ourselves stuck in traffic during our car journeys, we often daydream about finding the ideal route and &lt;strong&gt;the optimal time&lt;/strong&gt; to leave the office in order to avoid these uncomfortable situations. Now, thanks to the power of technology and the inspiration I drew from &lt;a href=&#34;https://medium.com/@hishamsajid113/using-google-distance-matrix-api-to-reduce-commute-time-b17a0b9b0fbe&#34;&gt;a fantastic article by @hishamsajid113&lt;/a&gt;, I am finally able to back up my theories about the best departure times from home and simulate with real data!&lt;/p&gt;</description>
     </item>
   </channel>

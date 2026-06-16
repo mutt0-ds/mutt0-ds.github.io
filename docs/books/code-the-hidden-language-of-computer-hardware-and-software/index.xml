@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code: The Hidden Language of Computer Hardware and Software on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/books/code-the-hidden-language-of-computer-hardware-and-software/</link>
+    <link>http://localhost:1313/books/code-the-hidden-language-of-computer-hardware-and-software/</link>
     <description>Recent content in Code: The Hidden Language of Computer Hardware and Software on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://mutt0-ds.github.io/books/code-the-hidden-language-of-computer-hardware-and-software/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/books/code-the-hidden-language-of-computer-hardware-and-software/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

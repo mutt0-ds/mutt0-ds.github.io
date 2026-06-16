@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>How to Fail at Almost Everything and Still Win Big on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/books/how-to-fail-at-almost-everything-and-still-win-big/</link>
+    <link>http://localhost:1313/books/how-to-fail-at-almost-everything-and-still-win-big/</link>
     <description>Recent content in How to Fail at Almost Everything and Still Win Big on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://mutt0-ds.github.io/books/how-to-fail-at-almost-everything-and-still-win-big/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/books/how-to-fail-at-almost-everything-and-still-win-big/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

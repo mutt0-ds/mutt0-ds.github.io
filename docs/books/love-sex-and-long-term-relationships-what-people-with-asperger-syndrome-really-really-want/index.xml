@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Love, sex and long-term relationships on Mutt0-ds Notes</title>
-    <link>https://mutt0-ds.github.io/books/love-sex-and-long-term-relationships-what-people-with-asperger-syndrome-really-really-want/</link>
+    <link>http://localhost:1313/books/love-sex-and-long-term-relationships-what-people-with-asperger-syndrome-really-really-want/</link>
     <description>Recent content in Love, sex and long-term relationships on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://mutt0-ds.github.io/books/love-sex-and-long-term-relationships-what-people-with-asperger-syndrome-really-really-want/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/books/love-sex-and-long-term-relationships-what-people-with-asperger-syndrome-really-really-want/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
