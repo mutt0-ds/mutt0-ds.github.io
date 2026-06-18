@@ -4,7 +4,7 @@ date: 2026-06-16
 github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/ai_architecture/Title.png
-draft: false
+draft: true
 author: "Mutt0-ds"
 tags:
   - ai
