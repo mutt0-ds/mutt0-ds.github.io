@@ -6,15 +6,8 @@
     <description>Recent content in Rag on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/rag/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>An Oversimplified intro to Conversational AI Architectures</title>
-      <link>https://mutt0-ds.github.io/posts/2026/06/ai-architecture/</link>
-      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/posts/2026/06/ai-architecture/</guid>
-      <description>&lt;p&gt;Lately, I&amp;rsquo;ve been sharing more and more about what I learned when building an AI architecture for a classic AI chat agent (like we did with &lt;a href=&#34;https://mutt0-ds.github.io/posts/2026/04/charlie-lessons/&#34;&gt;Charlie&lt;/a&gt;).&#xA;I think it&amp;rsquo;s a good time to map out the main components, along with the little tips and tricks I picked up along the way.&lt;/p&gt;&#xA;&lt;p&gt;Keep in mind that &lt;strong&gt;all of this comes straight from my own hands-on experience&lt;/strong&gt;.&#xA;The tech is moving insanely fast, things will change, and your specific use cases will obviously differ from mine.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Why AI needs to dream: a guide to long-term memory</title>
       <link>https://mutt0-ds.github.io/posts/2026/05/long-term-memory/</link>
