@@ -6,13 +6,41 @@
     <description>Recent content in Tags on Mutt0-ds Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mutt0-ds.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ai</title>
       <link>https://mutt0-ds.github.io/tags/ai/</link>
-      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Copilot</title>
+      <link>https://mutt0-ds.github.io/tags/copilot/</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/copilot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Friction</title>
+      <link>https://mutt0-ds.github.io/tags/friction/</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/friction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microsoft</title>
+      <link>https://mutt0-ds.github.io/tags/microsoft/</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Productivity</title>
+      <link>https://mutt0-ds.github.io/tags/productivity/</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://mutt0-ds.github.io/tags/productivity/</guid>
       <description></description>
     </item>
     <item>
@@ -48,13 +76,6 @@
       <link>https://mutt0-ds.github.io/tags/software-engineering/</link>
       <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/software-engineering/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Productivity</title>
-      <link>https://mutt0-ds.github.io/tags/productivity/</link>
-      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/productivity/</guid>
       <description></description>
     </item>
     <item>
@@ -139,13 +160,6 @@
       <link>https://mutt0-ds.github.io/tags/we-have-no-idea/</link>
       <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/we-have-no-idea/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Copilot</title>
-      <link>https://mutt0-ds.github.io/tags/copilot/</link>
-      <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/copilot/</guid>
       <description></description>
     </item>
     <item>
@@ -545,13 +559,6 @@
       <link>https://mutt0-ds.github.io/tags/build/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
       <guid>https://mutt0-ds.github.io/tags/build/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Microsoft</title>
-      <link>https://mutt0-ds.github.io/tags/microsoft/</link>
-      <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://mutt0-ds.github.io/tags/microsoft/</guid>
       <description></description>
     </item>
     <item>
