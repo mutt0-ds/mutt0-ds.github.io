@@ -22,7 +22,7 @@ I believe in keeping things [simple and human](https://mutt0-ds.github.io/posts/
 I share practical insights on data science, AI, engineering tips, and projects that spark my curiosity:
 
 <!-- BLOG-POST-LIST:START -->
-- ✨ [An Oversimplified intro to Conversational AI Architectures](https://mutt0-ds.github.io/posts/2026/06/ai-architecture/) _(posted on 16 Jun 2026)_
+- ✨ [Microsoft, Copilot, and how to add friction](https://mutt0-ds.github.io/posts/2026/07/microsoft-copilot/) _(posted on 9 Jul 2026)_
 - 📌 [Why AI needs to dream: a guide to long-term memory](https://mutt0-ds.github.io/posts/2026/05/long-term-memory/) _(posted on 9 May 2026)_
 - 📝 [10 Lessons learned when building Charlie](https://mutt0-ds.github.io/posts/2026/04/charlie-lessons/) _(posted on 5 Apr 2026)_
 
