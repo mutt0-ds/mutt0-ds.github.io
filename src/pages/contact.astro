@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact — Davide Muttoni" description="Get in touch.">
+  <h1 class="page-title">Get in touch</h1>
+  <p class="page-lead">The most reliable way to reach me is email — I check it far more often than anything else.</p>
+
+  <ul class="contact-list">
+    <li>
+      <a class="contact-link" href="mailto:mr0lnk6r1@relay.firefox.com">📧 mr0lnk6r1@relay.firefox.com</a>
+    </li>
+    <li>
+      <a class="contact-link" href="https://github.com/mutt0-ds">GitHub — @mutt0-ds</a>
+    </li>
+    <li>
+      <a class="contact-link" href="https://www.linkedin.com/in/davide-muttoni-77b134194/">LinkedIn</a>
+    </li>
+  </ul>
+</BaseLayout>
+
+<style>
+  .contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 50ch;
+  }
+
+  .contact-link {
+    display: block;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 1.05rem;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--hairline);
+    transition: color 0.15s ease;
+  }
+
+  .contact-link:hover,
+  .contact-link:focus-visible {
+    color: var(--accent);
+  }
+</style>

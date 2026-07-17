@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostListItem from '../../components/PostListItem.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout title="Posts — Davide Muttoni" description="Notes on AI, data engineering, and software.">
+  <h1 class="page-title">All writing</h1>
+  <p class="page-lead">Everything I've published, oldest at the bottom, most recent at the top.</p>
+  <ol class="post-list">
+    {posts.map((post) => <PostListItem post={post} />)}
+  </ol>
+</BaseLayout>

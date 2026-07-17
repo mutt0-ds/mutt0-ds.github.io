@@ -1,0 +1,73 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { formatDate } from '../../lib/text';
+
+export async function getStaticPaths() {
+  const books = await getCollection('books');
+  return books.map((book) => ({ params: { slug: book.id }, props: { book } }));
+}
+
+interface Props {
+  book: CollectionEntry<'books'>;
+}
+
+const { book } = Astro.props;
+const { Content } = await render(book);
+---
+
+<ArticleLayout title={`${book.data.title} — Davide Muttoni`} description={book.data.summary}>
+  <div class="book-header">
+    <img
+      class="book-header-cover"
+      src={book.data.image}
+      alt={book.data.title}
+      loading="lazy"
+      decoding="async"
+      onerror="this.style.visibility='hidden'"
+    />
+    <div>
+      <span class="post-date">Finished {formatDate(book.data.finished)}</span>
+      <h1 class="article-title">{book.data.title}</h1>
+      <p class="book-header-author">{book.data.author}</p>
+      <p class="book-header-score">{book.data.score}</p>
+      {
+        book.data.badges.length > 0 && (
+          <ul class="tag-list">
+            {book.data.badges.map((badge) => (
+              <li>{badge}</li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </div>
+  <Content />
+</ArticleLayout>
+
+<style>
+  .book-header {
+    display: flex;
+    gap: clamp(20px, 4vw, 32px);
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 6px;
+  }
+
+  .book-header-cover {
+    width: 140px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+    flex: none;
+  }
+
+  .book-header-author {
+    margin: 0 0 6px;
+    color: var(--ink-70);
+  }
+
+  .book-header-score {
+    margin: 0 0 12px;
+  }
+</style>

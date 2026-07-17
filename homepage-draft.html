@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Davide Muttoni — homepage draft</title>
+<style>
+  :root {
+    --paper: #EAF2F2;
+    --paper-shade: #DCE9E9;
+    --ink: #123138;
+    --ink-70: rgba(18, 49, 56, 0.74);
+    --ink-45: rgba(18, 49, 56, 0.48);
+    --hairline: rgba(18, 49, 56, 0.15);
+    --accent: #12798C;
+    --accent-soft: rgba(18, 121, 140, 0.16);
+
+    --spine-1: #D6E3E2;
+    --spine-2: #A9CDD1;
+    --spine-3: #C7D6D2;
+    --spine-4: #BFE0E2;
+
+    --lake-light: #3B95A5;
+    --lake-deep: #0C5866;
+    --spine-sheen: rgba(255, 255, 255, 0.4);
+
+    --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    --font-body: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+    color-scheme: light dark;
+  }
+
+  @supports (background: color-mix(in srgb, red 50%, blue)) {
+    :root {
+      --spine-1: color-mix(in srgb, var(--ink) 10%, var(--paper));
+      --spine-2: color-mix(in srgb, var(--accent) 30%, var(--paper));
+      --spine-3: color-mix(in srgb, var(--ink) 18%, var(--paper));
+      --spine-4: color-mix(in srgb, var(--accent) 16%, var(--paper));
+      --lake-light: color-mix(in srgb, var(--accent) 100%, white 32%);
+      --lake-deep: color-mix(in srgb, var(--accent) 100%, black 24%);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0A1B1F;
+      --paper-shade: #11262A;
+      --ink: #E7F2F2;
+      --ink-70: rgba(231, 242, 242, 0.72);
+      --ink-45: rgba(231, 242, 242, 0.46);
+      --hairline: rgba(231, 242, 242, 0.15);
+      --accent: #4FC3D9;
+      --accent-soft: rgba(79, 195, 217, 0.18);
+      --spine-1: #1a2e30;
+      --spine-2: #204a52;
+      --spine-3: #1c3230;
+      --spine-4: #1c3c40;
+      --lake-light: #7ED4E4;
+      --lake-deep: #2E8A9C;
+      --spine-sheen: rgba(255, 255, 255, 0.1);
+    }
+    @supports (background: color-mix(in srgb, red 50%, blue)) {
+      :root {
+        --spine-1: color-mix(in srgb, var(--ink) 12%, var(--paper));
+        --spine-2: color-mix(in srgb, var(--accent) 28%, var(--paper));
+        --spine-3: color-mix(in srgb, var(--ink) 20%, var(--paper));
+        --spine-4: color-mix(in srgb, var(--accent) 16%, var(--paper));
+        --lake-light: color-mix(in srgb, var(--accent) 100%, white 26%);
+        --lake-deep: color-mix(in srgb, var(--accent) 100%, black 20%);
+      }
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #0A1B1F;
+    --paper-shade: #11262A;
+    --ink: #E7F2F2;
+    --ink-70: rgba(231, 242, 242, 0.72);
+    --ink-45: rgba(231, 242, 242, 0.46);
+    --hairline: rgba(231, 242, 242, 0.15);
+    --accent: #4FC3D9;
+    --accent-soft: rgba(79, 195, 217, 0.18);
+    --lake-light: #7ED4E4;
+    --lake-deep: #2E8A9C;
+    --spine-sheen: rgba(255, 255, 255, 0.1);
+  }
+
+  :root[data-theme="light"] {
+    --paper: #EAF2F2;
+    --paper-shade: #DCE9E9;
+    --ink: #123138;
+    --ink-70: rgba(18, 49, 56, 0.74);
+    --ink-45: rgba(18, 49, 56, 0.48);
+    --hairline: rgba(18, 49, 56, 0.15);
+    --accent: #12798C;
+    --accent-soft: rgba(18, 121, 140, 0.16);
+    --lake-light: #3B95A5;
+    --lake-deep: #0C5866;
+    --spine-sheen: rgba(255, 255, 255, 0.4);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+
+  .page {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 32px);
+    position: relative;
+  }
+
+  /* ---------- topbar ---------- */
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 0;
+    font-size: 0.9rem;
+  }
+
+  .mark {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .toplinks {
+    display: flex;
+    gap: clamp(14px, 3vw, 26px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .toplinks a {
+    text-decoration: none;
+    color: var(--ink-70);
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .toplinks a:hover,
+  .toplinks a:focus-visible {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* ---------- lake mark (signature graphic) ---------- */
+  /* the actual outline of Lake Como — traced from real OpenStreetMap
+     boundary coordinates (projected and scaled, not hand-drawn) —
+     held inside the same contour-ring halo as before. */
+
+  .lake {
+    position: absolute;
+    top: -30px;
+    right: clamp(-30px, 1vw, -8px);
+    width: 260px;
+    height: 260px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* light bleeding from the water itself, not a floating spotlight */
+  .lake::after {
+    content: "";
+    position: absolute;
+    left: 65px;
+    top: 40px;
+    width: 130px;
+    height: 130px;
+    background: var(--lake-light);
+    border-radius: 50%;
+    opacity: 0.1;
+    filter: blur(22px);
+    z-index: -1;
+  }
+
+  .lake svg { width: 100%; height: 100%; }
+
+  .lake .ring {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 1.25;
+  }
+
+  .lake .ring--1 { opacity: 0.13; }
+  .lake .ring--2 { opacity: 0.23; }
+  .lake .ring--3 { opacity: 0.35; }
+  .lake .ring--4 { opacity: 0.5; }
+
+  .lake .water-path {
+    fill: url(#lakeGrad);
+    stroke: var(--lake-deep);
+    stroke-width: 2;
+    stroke-linejoin: round;
+    opacity: 0.95;
+  }
+
+  .lake .stop-light { stop-color: var(--lake-light); }
+  .lake .stop-deep  { stop-color: var(--lake-deep); }
+
+  /* ---------- hero ---------- */
+
+  .hero {
+    position: relative;
+    padding: clamp(30px, 6vw, 60px) 0 clamp(24px, 4vw, 36px);
+    z-index: 1;
+  }
+
+  .hero-label {
+    display: block;
+    font-size: 1rem;
+    color: var(--ink-70);
+    margin-bottom: 6px;
+  }
+
+  .hero-name {
+    margin: 0;
+    max-width: 8.8em;
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    font-size: clamp(2.6rem, 8vw, 4.4rem);
+    text-wrap: balance;
+    color: var(--ink);
+  }
+
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    .hero-name {
+      background: linear-gradient(115deg, var(--lake-deep) 10%, var(--accent) 48%, var(--lake-light) 92%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+  }
+
+  .thesis {
+    max-width: 46ch;
+    margin: clamp(18px, 3vw, 26px) 0 0;
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    color: var(--ink-70);
+  }
+
+  .thesis strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ---------- section rule ---------- */
+
+  .rule {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--hairline) 18%, var(--accent) 50%, var(--hairline) 82%, transparent);
+    opacity: 0.65;
+    margin: clamp(40px, 7vw, 60px) 0;
+  }
+
+  /* ---------- section scaffolding ---------- */
+
+  .section-head {
+    margin-bottom: clamp(20px, 4vw, 28px);
+  }
+
+  .section-head h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(1.4rem, 3.4vw, 1.8rem);
+  }
+
+  .section-cap {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: var(--ink-45);
+  }
+
+  .viewall {
+    margin-top: clamp(18px, 3vw, 26px);
+    display: inline-block;
+    font-size: 0.92rem;
+    text-decoration: none;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+  }
+
+  .viewall:hover,
+  .viewall:focus-visible {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+
+  /* ---------- post log ---------- */
+
+  .post-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(22px, 4vw, 30px);
+    position: relative;
+  }
+
+  /* a gauge line down the margin, like a water-level scale — each
+     post is a mark on it, most recent nearest the top */
+  .post-list::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    bottom: 6px;
+    width: 1.5px;
+    background: linear-gradient(180deg, transparent, var(--accent) 6%, var(--accent) 94%, transparent);
+    opacity: 0.4;
+  }
+
+  .post-row {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .post-row::before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 7px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.5;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .post-row:hover::before,
+  .post-row:focus-visible::before {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+
+  .post-date {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--ink-45);
+    margin-bottom: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .post-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+    line-height: 1.3;
+    text-wrap: balance;
+    background-image: linear-gradient(90deg, var(--lake-deep), var(--accent) 55%, var(--lake-light));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1px;
+    transition: background-size 0.3s ease;
+  }
+
+  .post-row:hover .post-title,
+  .post-row:focus-visible .post-title {
+    background-size: 100% 1px;
+  }
+
+  .post-desc {
+    margin: 6px 0 0;
+    max-width: 58ch;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: var(--ink-70);
+  }
+
+  /* ---------- shelf ---------- */
+
+  .shelf {
+    list-style: none;
+    margin: 0;
+    padding: 6px 4px 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+  }
+
+  .shelf-ledge {
+    height: 2px;
+    margin: 0 4px 20px;
+    background: linear-gradient(90deg, transparent, var(--hairline) 10%, var(--accent) 45%, var(--hairline) 90%, transparent);
+    opacity: 0.55;
+  }
+
+  .spine {
+    flex: none;
+  }
+
+  .spine a {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 14px 6px;
+    width: 40px;
+    height: var(--h, 160px);
+    overflow: hidden;
+    border-radius: 3px 3px 1px 1px;
+    text-decoration: none;
+    color: var(--ink);
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    line-height: 1.15;
+    background-image: linear-gradient(180deg, var(--spine-sheen) 0%, transparent 48%);
+    box-shadow: inset -3px 0 0 rgba(0, 0, 0, 0.06);
+    transform: rotate(var(--tilt, 0deg));
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .spine a:hover,
+  .spine a:focus-visible {
+    transform: translateY(-10px) rotate(calc(var(--tilt, 0deg) - 1deg));
+    box-shadow: 0 10px 16px -8px rgba(0, 0, 0, 0.28), inset -3px 0 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .spine:nth-child(4n+1) a { background-color: var(--spine-1); }
+  .spine:nth-child(4n+2) a { background-color: var(--spine-2); }
+  .spine:nth-child(4n+3) a { background-color: var(--spine-3); }
+  .spine:nth-child(4n+4) a { background-color: var(--spine-4); }
+
+  /* ---------- about / now ---------- */
+
+  .about p {
+    margin: 0 0 1.05em;
+    max-width: 58ch;
+    font-size: 1.03rem;
+    line-height: 1.65;
+    color: var(--ink-70);
+  }
+
+  .about a {
+    color: var(--accent);
+  }
+
+  .sign-off {
+    margin-top: 22px;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+
+  /* ---------- footer ---------- */
+
+  .footer {
+    margin-top: clamp(40px, 7vw, 60px);
+    padding: 22px 0 clamp(40px, 6vw, 56px);
+    border-top: 1px solid var(--hairline);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--ink-45);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: var(--ink-70);
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .footer-links a:hover,
+  .footer-links a:focus-visible {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 560px) {
+    .lake { transform: scale(0.52); transform-origin: top right; }
+    .hero-name { max-width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header class="topbar">
+    <a class="mark" href="#top">Davide</a>
+    <ul class="toplinks">
+      <li><a href="#posts">Posts</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#about">Now</a></li>
+      <li><a href="https://mutt0-ds.github.io/index.xml">RSS</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="lake" aria-hidden="true">
+        <svg viewBox="-8 -8 276 276">
+          <defs>
+            <linearGradient id="lakeGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop class="stop-light" offset="0%"></stop>
+              <stop class="stop-deep" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <path class="ring ring--1" d="M259.62,126.00 C259.74,128.53 259.63,134.27 259.42,136.79 C259.21,139.32 258.37,145.00 257.86,147.49 C257.35,149.98 255.87,155.52 255.10,157.94 C254.33,160.36 252.32,165.72 251.33,168.05 C250.35,170.39 247.90,175.55 246.74,177.80 C245.58,180.06 242.77,185.02 241.45,187.19 C240.13,189.35 237.00,194.12 235.54,196.20 C234.08,198.27 230.62,202.84 229.00,204.81 C227.39,206.78 223.58,211.10 221.80,212.95 C220.02,214.79 215.82,218.79 213.87,220.47 C211.91,222.14 207.31,225.73 205.19,227.20 C203.06,228.68 198.07,231.75 195.79,232.98 C193.51,234.21 188.19,236.69 185.77,237.66 C183.36,238.62 177.79,240.47 175.29,241.16 C172.79,241.84 167.06,243.07 164.52,243.50 C161.97,243.93 156.19,244.60 153.64,244.81 C151.08,245.01 145.32,245.22 142.77,245.25 C140.23,245.27 134.53,245.14 132.00,245.03 C129.47,244.92 123.82,244.55 121.31,244.34 C118.79,244.13 113.16,243.57 110.64,243.28 C108.13,242.99 102.46,242.26 99.93,241.87 C97.41,241.48 91.69,240.51 89.15,240.00 C86.60,239.48 80.85,238.17 78.31,237.48 C75.77,236.78 70.05,235.01 67.56,234.08 C65.06,233.15 59.49,230.78 57.10,229.58 C54.71,228.37 49.44,225.33 47.23,223.82 C45.01,222.31 40.24,218.56 38.27,216.75 C36.30,214.95 32.17,210.53 30.51,208.46 C28.84,206.39 25.46,201.41 24.14,199.13 C22.81,196.84 20.23,191.46 19.24,189.03 C18.26,186.60 16.44,180.98 15.77,178.48 C15.10,175.98 13.95,170.27 13.54,167.75 C13.13,165.23 12.51,159.55 12.31,157.05 C12.10,154.56 11.86,148.98 11.80,146.52 C11.75,144.07 11.76,138.60 11.80,136.18 C11.85,133.77 12.04,128.39 12.16,126.00 C12.28,123.61 12.63,118.28 12.84,115.91 C13.04,113.53 13.59,108.21 13.90,105.84 C14.22,103.47 15.05,98.14 15.51,95.78 C15.97,93.42 17.18,88.10 17.83,85.76 C18.48,83.43 20.16,78.19 21.03,75.90 C21.90,73.61 24.11,68.51 25.22,66.31 C26.32,64.10 29.09,59.23 30.43,57.14 C31.77,55.04 35.05,50.46 36.61,48.50 C38.16,46.53 41.90,42.27 43.65,40.45 C45.39,38.63 49.51,34.69 51.41,33.01 C53.31,31.33 57.76,27.70 59.79,26.14 C61.82,24.59 66.53,21.24 68.68,19.81 C70.83,18.38 75.80,15.30 78.06,14.00 C80.32,12.69 85.54,9.90 87.92,8.74 C90.30,7.59 95.79,5.14 98.29,4.17 C100.78,3.19 106.53,1.21 109.14,0.47 C111.74,-0.27 117.73,-1.67 120.42,-2.12 C123.11,-2.57 129.27,-3.25 132.00,-3.36 C134.73,-3.47 140.94,-3.32 143.66,-3.05 C146.38,-2.78 152.49,-1.74 155.14,-1.09 C157.79,-0.44 163.66,1.47 166.18,2.48 C168.70,3.50 174.20,6.19 176.54,7.52 C178.88,8.84 183.92,12.18 186.06,13.74 C188.20,15.31 192.77,19.10 194.71,20.83 C196.65,22.55 200.79,26.61 202.56,28.43 C204.33,30.25 208.11,34.43 209.75,36.28 C211.39,38.13 214.94,42.32 216.50,44.18 C218.06,46.04 221.48,50.21 222.99,52.07 C224.50,53.94 227.86,58.12 229.34,60.01 C230.82,61.89 234.12,66.16 235.56,68.11 C237.00,70.05 240.20,74.50 241.55,76.54 C242.91,78.57 245.89,83.28 247.11,85.43 C248.33,87.59 250.93,92.59 251.95,94.88 C252.97,97.17 255.04,102.46 255.80,104.86 C256.56,107.27 257.96,112.81 258.41,115.29 C258.86,117.78 259.51,123.47 259.62,126.00 Z"></path>
+          <path class="ring ring--2" d="M230.32,131.00 C230.58,133.01 230.84,137.61 230.74,139.63 C230.65,141.65 230.00,146.21 229.50,148.17 C229.01,150.14 227.42,154.49 226.54,156.33 C225.66,158.17 223.24,162.15 222.04,163.82 C220.85,165.48 217.80,169.02 216.40,170.49 C215.00,171.97 211.61,175.07 210.12,176.39 C208.63,177.71 205.19,180.48 203.72,181.70 C202.24,182.92 198.95,185.55 197.55,186.74 C196.14,187.93 193.10,190.61 191.78,191.84 C190.46,193.07 187.62,195.92 186.35,197.23 C185.08,198.54 182.28,201.59 181.00,202.96 C179.71,204.33 176.78,207.51 175.40,208.88 C174.02,210.26 170.79,213.37 169.26,214.67 C167.73,215.96 164.09,218.77 162.38,219.88 C160.68,221.00 156.62,223.28 154.75,224.13 C152.88,224.98 148.48,226.57 146.49,227.11 C144.50,227.64 139.88,228.48 137.82,228.70 C135.76,228.92 131.07,229.03 129.00,228.96 C126.93,228.89 122.28,228.40 120.23,228.09 C118.19,227.78 113.64,226.83 111.65,226.33 C109.66,225.84 105.25,224.54 103.31,223.90 C101.38,223.26 97.10,221.68 95.23,220.92 C93.36,220.16 89.21,218.32 87.41,217.43 C85.61,216.54 81.64,214.40 79.93,213.37 C78.22,212.34 74.47,209.85 72.88,208.67 C71.28,207.49 67.84,204.65 66.39,203.31 C64.94,201.98 61.84,198.80 60.55,197.33 C59.26,195.87 56.54,192.41 55.40,190.85 C54.26,189.28 51.87,185.66 50.85,184.03 C49.83,182.40 47.69,178.68 46.76,177.02 C45.82,175.35 43.81,171.59 42.92,169.90 C42.03,168.21 40.07,164.39 39.21,162.67 C38.35,160.95 36.42,157.03 35.60,155.25 C34.78,153.47 32.97,149.39 32.25,147.53 C31.53,145.67 30.01,141.38 29.47,139.44 C28.94,137.49 27.94,133.01 27.68,131.00 C27.42,128.99 27.16,124.39 27.26,122.37 C27.35,120.35 28.00,115.79 28.50,113.83 C28.99,111.86 30.58,107.51 31.46,105.67 C32.34,103.83 34.76,99.85 35.96,98.18 C37.15,96.52 40.20,92.98 41.60,91.51 C43.00,90.03 46.39,86.93 47.88,85.61 C49.37,84.29 52.81,81.52 54.28,80.30 C55.76,79.08 59.05,76.45 60.45,75.26 C61.86,74.07 64.90,71.39 66.22,70.16 C67.54,68.93 70.38,66.08 71.65,64.77 C72.92,63.46 75.72,60.41 77.00,59.04 C78.29,57.67 81.22,54.49 82.60,53.12 C83.98,51.74 87.21,48.63 88.74,47.33 C90.27,46.04 93.91,43.23 95.62,42.12 C97.32,41.00 101.38,38.72 103.25,37.87 C105.12,37.02 109.52,35.43 111.51,34.89 C113.50,34.36 118.12,33.52 120.18,33.30 C122.24,33.08 126.93,32.97 129.00,33.04 C131.07,33.11 135.72,33.60 137.77,33.91 C139.81,34.22 144.36,35.17 146.35,35.67 C148.34,36.16 152.75,37.46 154.69,38.10 C156.62,38.74 160.90,40.32 162.77,41.08 C164.64,41.84 168.79,43.68 170.59,44.57 C172.39,45.46 176.36,47.60 178.07,48.63 C179.78,49.66 183.53,52.15 185.12,53.33 C186.72,54.51 190.16,57.35 191.61,58.69 C193.06,60.02 196.16,63.20 197.45,64.67 C198.74,66.13 201.46,69.59 202.60,71.15 C203.74,72.72 206.13,76.34 207.15,77.97 C208.17,79.60 210.31,83.32 211.24,84.98 C212.18,86.65 214.19,90.41 215.08,92.10 C215.97,93.79 217.93,97.61 218.79,99.33 C219.65,101.05 221.58,104.97 222.40,106.75 C223.22,108.53 225.03,112.61 225.75,114.47 C226.47,116.33 227.99,120.62 228.53,122.56 C229.06,124.51 230.06,128.99 230.32,131.00 Z"></path>
+          <path class="ring ring--3" d="M198.88,129.00 C198.87,130.35 198.68,133.39 198.51,134.73 C198.33,136.07 197.73,139.06 197.38,140.36 C197.03,141.65 196.04,144.53 195.53,145.78 C195.03,147.02 193.72,149.75 193.10,150.93 C192.49,152.11 190.97,154.69 190.28,155.82 C189.59,156.94 187.96,159.41 187.22,160.49 C186.48,161.57 184.77,163.95 183.98,164.99 C183.20,166.03 181.39,168.34 180.54,169.33 C179.70,170.32 177.73,172.51 176.81,173.44 C175.89,174.37 173.72,176.38 172.70,177.22 C171.69,178.05 169.30,179.82 168.21,180.55 C167.11,181.28 164.54,182.78 163.38,183.41 C162.22,184.03 159.53,185.31 158.33,185.87 C157.13,186.42 154.39,187.57 153.17,188.09 C151.95,188.61 149.18,189.76 147.93,190.28 C146.68,190.81 143.84,192.01 142.55,192.54 C141.26,193.08 138.30,194.32 136.94,194.83 C135.58,195.34 132.43,196.48 131.00,196.89 C129.57,197.30 126.24,198.12 124.75,198.34 C123.26,198.55 119.82,198.81 118.32,198.74 C116.83,198.67 113.44,198.18 112.00,197.78 C110.57,197.38 107.41,196.07 106.11,195.35 C104.80,194.63 102.03,192.62 100.89,191.64 C99.76,190.66 97.43,188.15 96.47,187.02 C95.51,185.89 93.57,183.17 92.75,182.00 C91.93,180.82 90.23,178.14 89.48,177.01 C88.72,175.87 87.09,173.39 86.34,172.33 C85.59,171.27 83.87,169.00 83.08,168.01 C82.29,167.02 80.45,164.87 79.62,163.90 C78.79,162.94 76.87,160.78 76.05,159.78 C75.23,158.78 73.38,156.48 72.63,155.41 C71.88,154.33 70.28,151.82 69.66,150.66 C69.05,149.50 67.83,146.77 67.39,145.54 C66.94,144.30 66.16,141.43 65.89,140.14 C65.62,138.85 65.23,135.90 65.11,134.59 C64.99,133.28 64.89,130.32 64.88,129.00 C64.87,127.68 64.95,124.72 65.02,123.40 C65.08,122.08 65.29,119.11 65.42,117.78 C65.54,116.46 65.89,113.46 66.10,112.13 C66.31,110.80 66.86,107.79 67.19,106.47 C67.51,105.14 68.37,102.17 68.84,100.88 C69.31,99.59 70.54,96.72 71.17,95.49 C71.80,94.26 73.43,91.57 74.22,90.43 C75.01,89.28 76.97,86.82 77.89,85.77 C78.82,84.72 81.04,82.48 82.06,81.52 C83.08,80.56 85.48,78.51 86.57,77.63 C87.66,76.75 90.19,74.86 91.35,74.06 C92.50,73.26 95.16,71.53 96.38,70.82 C97.60,70.12 100.41,68.62 101.70,68.05 C102.99,67.47 105.98,66.33 107.34,65.93 C108.70,65.54 111.84,64.88 113.24,64.71 C114.65,64.55 117.87,64.45 119.28,64.52 C120.69,64.59 123.88,65.04 125.26,65.32 C126.64,65.60 129.69,66.48 131.00,66.89 C132.31,67.30 135.18,68.38 136.43,68.83 C137.67,69.28 140.39,70.32 141.59,70.71 C142.80,71.11 145.47,71.92 146.69,72.21 C147.90,72.50 150.66,73.00 151.94,73.19 C153.21,73.38 156.17,73.67 157.52,73.82 C158.88,73.96 162.05,74.24 163.47,74.44 C164.89,74.63 168.18,75.15 169.61,75.51 C171.04,75.86 174.26,76.85 175.61,77.42 C176.96,78.00 179.90,79.58 181.09,80.40 C182.28,81.23 184.76,83.39 185.73,84.44 C186.71,85.50 188.64,88.12 189.39,89.34 C190.13,90.55 191.55,93.47 192.10,94.78 C192.65,96.09 193.67,99.12 194.08,100.47 C194.49,101.81 195.26,104.85 195.58,106.20 C195.91,107.54 196.55,110.55 196.82,111.89 C197.09,113.23 197.65,116.23 197.86,117.56 C198.07,118.90 198.48,121.92 198.60,123.26 C198.72,124.61 198.89,127.65 198.88,129.00 Z"></path>
+          <path class="ring ring--4" d="M168.21,130.00 C168.39,130.78 168.73,132.59 168.81,133.39 C168.90,134.20 168.97,136.05 168.92,136.86 C168.87,137.67 168.60,139.50 168.40,140.29 C168.19,141.07 167.55,142.81 167.18,143.54 C166.82,144.27 165.81,145.85 165.31,146.50 C164.81,147.15 163.51,148.51 162.91,149.07 C162.30,149.63 160.83,150.78 160.17,151.26 C159.51,151.74 157.97,152.72 157.30,153.14 C156.63,153.56 155.13,154.43 154.48,154.83 C153.84,155.23 152.43,156.09 151.82,156.50 C151.22,156.91 149.90,157.85 149.33,158.29 C148.75,158.73 147.50,159.78 146.94,160.27 C146.37,160.76 145.10,161.91 144.52,162.42 C143.93,162.94 142.58,164.14 141.94,164.65 C141.31,165.17 139.82,166.32 139.11,166.78 C138.41,167.25 136.76,168.24 135.99,168.61 C135.22,168.99 133.41,169.72 132.59,169.97 C131.77,170.22 129.85,170.63 129.00,170.73 C128.15,170.84 126.19,170.90 125.33,170.86 C124.47,170.81 122.54,170.55 121.69,170.37 C120.85,170.20 118.98,169.65 118.18,169.36 C117.37,169.07 115.60,168.30 114.83,167.92 C114.07,167.54 112.41,166.60 111.70,166.15 C110.99,165.71 109.44,164.63 108.78,164.13 C108.12,163.62 106.69,162.43 106.09,161.88 C105.48,161.33 104.19,160.04 103.64,159.45 C103.10,158.85 101.94,157.47 101.46,156.83 C100.98,156.20 99.97,154.74 99.55,154.07 C99.14,153.41 98.27,151.89 97.92,151.21 C97.56,150.53 96.82,148.97 96.51,148.28 C96.19,147.59 95.54,146.03 95.26,145.33 C94.97,144.64 94.36,143.08 94.09,142.38 C93.82,141.68 93.21,140.12 92.95,139.41 C92.68,138.71 92.07,137.11 91.81,136.39 C91.54,135.67 90.95,134.02 90.72,133.26 C90.48,132.51 89.97,130.78 89.79,130.00 C89.61,129.22 89.27,127.41 89.19,126.61 C89.10,125.80 89.03,123.95 89.08,123.14 C89.13,122.33 89.40,120.50 89.60,119.71 C89.81,118.93 90.45,117.19 90.82,116.46 C91.18,115.73 92.19,114.15 92.69,113.50 C93.19,112.85 94.49,111.49 95.09,110.93 C95.70,110.37 97.17,109.22 97.83,108.74 C98.49,108.26 100.03,107.28 100.70,106.86 C101.37,106.44 102.87,105.57 103.52,105.17 C104.16,104.77 105.57,103.91 106.18,103.50 C106.78,103.09 108.10,102.15 108.67,101.71 C109.25,101.27 110.50,100.22 111.06,99.73 C111.63,99.24 112.90,98.09 113.48,97.58 C114.07,97.06 115.42,95.86 116.06,95.35 C116.69,94.83 118.18,93.68 118.89,93.22 C119.59,92.75 121.24,91.76 122.01,91.39 C122.78,91.01 124.59,90.28 125.41,90.03 C126.23,89.78 128.15,89.37 129.00,89.27 C129.85,89.16 131.81,89.10 132.67,89.14 C133.53,89.19 135.46,89.45 136.31,89.63 C137.15,89.80 139.02,90.35 139.82,90.64 C140.63,90.93 142.40,91.70 143.17,92.08 C143.93,92.46 145.59,93.40 146.30,93.85 C147.01,94.29 148.56,95.37 149.22,95.87 C149.88,96.38 151.31,97.57 151.91,98.12 C152.52,98.67 153.81,99.96 154.36,100.55 C154.90,101.15 156.06,102.53 156.54,103.17 C157.02,103.80 158.03,105.26 158.45,105.93 C158.86,106.59 159.73,108.11 160.08,108.79 C160.44,109.47 161.18,111.03 161.49,111.72 C161.81,112.41 162.46,113.97 162.74,114.67 C163.03,115.36 163.64,116.92 163.91,117.62 C164.18,118.32 164.79,119.88 165.05,120.59 C165.32,121.29 165.93,122.89 166.19,123.61 C166.46,124.33 167.05,125.98 167.28,126.74 C167.52,127.49 168.03,129.22 168.21,130.00 Z"></path>
+          <g transform="translate(85 57.5) scale(0.5585)">
+            <path class="water-path" d="M0.00,259.31 C1.79,258.33 16.98,231.67 21.84,227.20 C26.70,222.73 41.54,225.26 43.76,219.05 C45.98,212.84 38.76,177.90 41.85,171.35 C44.94,164.80 65.29,164.62 71.60,160.06 C77.91,155.50 93.93,127.06 98.66,130.34 C103.39,133.62 107.26,178.04 114.20,189.62 C121.14,201.20 156.53,231.78 161.15,234.60 C165.77,237.42 159.97,220.23 155.79,215.00 C151.61,209.77 128.89,198.43 123.53,187.50 C118.17,176.57 107.56,128.18 107.55,116.63 C107.54,105.08 122.52,88.64 123.41,83.57 C124.30,78.50 115.71,75.94 115.57,71.04 C115.43,66.14 119.48,43.03 122.19,39.47 C124.90,35.91 136.17,43.35 139.98,38.96 C143.79,34.57 158.69,2.48 156.47,0.00 C154.25,-2.48 125.59,12.79 120.03,16.68 C114.47,20.57 107.95,28.81 106.42,34.99 C104.89,41.17 108.61,65.37 106.28,72.34 C103.95,79.31 87.79,91.27 85.46,97.76 C83.13,104.25 87.27,124.96 85.27,130.73 C83.27,136.50 70.96,147.89 67.42,149.67 C63.88,151.45 57.59,145.14 53.45,146.71 C49.31,148.28 32.02,157.02 30.17,163.79 C28.32,170.56 39.53,199.62 36.81,207.65 C34.09,215.68 9.82,230.31 5.73,236.05 C1.64,241.79 -1.79,260.29 0.00,259.31 Z"></path>
+          </g>
+        </svg>
+      </div>
+      <span class="hero-label">Hi, I'm</span>
+      <h1 class="hero-name">Davide Muttoni.</h1>
+      <p class="thesis">I'm a <strong>software engineer</strong> building AI products at InvestSuite, writing from a desk in <strong>Como</strong> — lake included, view still not taken for granted. This is where I put the things I learn, read, and occasionally overthink.</p>
+    </section>
+
+    <div class="rule"></div>
+
+    <section id="posts">
+      <div class="section-head">
+        <h2>Recent writing</h2>
+      </div>
+      <ol class="post-list">
+        <li>
+          <a class="post-row" href="/posts/2026/06/ai-architecture/">
+            <span class="post-date">16 June 2026</span>
+            <span class="post-title">An Oversimplified Intro to Conversational AI Architectures</span>
+            <p class="post-desc">A map of the pieces that make an AI agent feel like it remembers who you are.</p>
+          </a>
+        </li>
+        <li>
+          <a class="post-row" href="/posts/2026/05/long-term-memory/">
+            <span class="post-date">9 May 2026</span>
+            <span class="post-title">Why AI Needs to Dream: A Guide to Long-Term Memory</span>
+            <p class="post-desc">What agents can borrow from how our own memory quietly rewrites itself overnight.</p>
+          </a>
+        </li>
+        <li>
+          <a class="post-row" href="/posts/2026/04/charlie-lessons/">
+            <span class="post-date">5 April 2026</span>
+            <span class="post-title">10 Lessons Learned When Building Charlie</span>
+            <p class="post-desc">Everything that broke, surprised me, or made it into the postmortem.</p>
+          </a>
+        </li>
+        <li>
+          <a class="post-row" href="/posts/2025/03/first-pitch/">
+            <span class="post-date">8 March 2025</span>
+            <span class="post-title">Simplicity Speaks Louder Than Complexity</span>
+            <p class="post-desc">On saying things plainly enough that ideas actually land.</p>
+          </a>
+        </li>
+      </ol>
+      <a class="viewall" href="/posts">Read all the posts →</a>
+    </section>
+
+    <div class="rule"></div>
+
+    <section id="books">
+      <div class="section-head">
+        <h2>On the shelf</h2>
+        <span class="section-cap">243 books, loosely organized by whim.</span>
+      </div>
+      <ul class="shelf">
+        <li class="spine"><a href="/books/designing-data-intensive-applications/" style="--h:150px;--tilt:-1.2deg" title="Designing Data-Intensive Applications">DDIA</a></li>
+        <li class="spine"><a href="/books/an-elegant-puzzle/" style="--h:232px;--tilt:0.8deg">An Elegant Puzzle</a></li>
+        <li class="spine"><a href="/books/atomic-habits/" style="--h:182px;--tilt:-0.6deg">Atomic Habits</a></li>
+        <li class="spine"><a href="/books/antifragile.-prosperare-nel-disordine/" style="--h:162px;--tilt:1.3deg">Antifragile</a></li>
+        <li class="spine"><a href="/books/clean-code/" style="--h:152px;--tilt:-1.6deg">Clean Code</a></li>
+        <li class="spine"><a href="/books/bad-blood-secrets-and-lies-in-a-silicon-valley-startup/" style="--h:140px;--tilt:0.5deg">Bad Blood</a></li>
+        <li class="spine"><a href="/books/creativity,-inc../" style="--h:212px;--tilt:-0.9deg">Creativity, Inc.</a></li>
+        <li class="spine"><a href="/books/company-of-one/" style="--h:192px;--tilt:1.1deg">Company of One</a></li>
+        <li class="spine"><a href="/books/cracking-the-coding-interview/" style="--h:148px;--tilt:-0.4deg" title="Cracking the Coding Interview">CTCI</a></li>
+        <li class="spine"><a href="/books/brotopia/" style="--h:130px;--tilt:1.5deg">Brotopia</a></li>
+      </ul>
+      <div class="shelf-ledge" aria-hidden="true"></div>
+      <a class="viewall" href="/books">Browse the whole shelf →</a>
+    </section>
+
+    <div class="rule"></div>
+
+    <section class="about" id="about">
+      <div class="section-head">
+        <h2>Off the clock</h2>
+      </div>
+      <p>When I'm not shipping, I'm usually hiking somewhere above Como, mid-book, or losing an evening to a tool I didn't need. My memory has never been reliable, so I keep <a href="/posts/2023/02/obsidian-productivity-second-brain/">a second brain in Obsidian</a> for everything worth not forgetting.</p>
+      <p>I like keeping things simple and human — writing plainly enough that an idea can land without ceremony. That's really all this site is trying to do.</p>
+      <p class="sign-off">— D.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Davide Muttoni</span>
+    <ul class="footer-links">
+      <li><a href="https://github.com/mutt0-ds">GitHub</a></li>
+      <li><a href="https://www.investsuite.com/">InvestSuite</a></li>
+      <li><a href="https://mutt0-ds.github.io/index.xml">RSS</a></li>
+    </ul>
+  </footer>
+</div>
+
+</body>
+</html>

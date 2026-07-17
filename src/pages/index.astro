@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LakeMark from '../components/LakeMark.astro';
+import PostListItem from '../components/PostListItem.astro';
+import BookShelf from '../components/BookShelf.astro';
+import { getCollection } from 'astro:content';
+
+const recentPosts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4);
+
+const allBooks = await getCollection('books');
+const shelfBooks = [...allBooks]
+  .sort((a, b) => b.data.finished.valueOf() - a.data.finished.valueOf())
+  .slice(0, 10);
+---
+
+<BaseLayout title="Davide Muttoni">
+  <section class="hero" id="top">
+    <LakeMark />
+    <span class="hero-label">Hi, I'm</span>
+    <h1 class="hero-name">Davide Muttoni.</h1>
+    <p class="thesis">
+      I'm a <strong>software engineer</strong> building AI products at InvestSuite, writing from a desk in <strong>Como</strong> —
+      lake included, view still not taken for granted. This is where I put the things I learn, read, and occasionally overthink.
+    </p>
+  </section>
+
+  <div class="rule"></div>
+
+  <section id="posts">
+    <div class="section-head">
+      <h2>Recent writing</h2>
+    </div>
+    <ol class="post-list">
+      {recentPosts.map((post) => <PostListItem post={post} />)}
+    </ol>
+    <a class="viewall" href="/posts/">Read all the posts →</a>
+  </section>
+
+  <div class="rule"></div>
+
+  <section id="books">
+    <div class="section-head">
+      <h2>On the shelf</h2>
+      <span class="section-cap">{allBooks.length} books, loosely organized by whim.</span>
+    </div>
+    <BookShelf books={shelfBooks} />
+    <a class="viewall" href="/books/">Browse the whole shelf →</a>
+  </section>
+
+  <div class="rule"></div>
+
+  <section class="about" id="about">
+    <div class="section-head">
+      <h2>Off the clock</h2>
+    </div>
+    <p>
+      When I'm not shipping, I'm usually hiking somewhere above Como, mid-book, or losing an evening to a tool I didn't
+      need. My memory has never been reliable, so I keep <a href="/posts/2023/02/obsidian-productivity-second-brain/"
+        >a second brain in Obsidian</a
+      > for everything worth not forgetting.
+    </p>
+    <p>
+      I like keeping things simple and human — writing plainly enough that an idea can land without ceremony. That's
+      really all this site is trying to do.
+    </p>
+    <p class="sign-off">— D.</p>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    position: relative;
+    padding: clamp(30px, 6vw, 60px) 0 clamp(24px, 4vw, 36px);
+    z-index: 1;
+  }
+
+  .hero-label {
+    display: block;
+    font-size: 1rem;
+    color: var(--ink-70);
+    margin-bottom: 6px;
+  }
+
+  .hero-name {
+    margin: 0;
+    max-width: 8.8em;
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    font-size: clamp(2.6rem, 8vw, 4.4rem);
+    text-wrap: balance;
+    color: var(--ink);
+  }
+
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    .hero-name {
+      background: linear-gradient(115deg, var(--lake-deep) 10%, var(--accent) 48%, var(--lake-light) 92%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+  }
+
+  .thesis {
+    max-width: 46ch;
+    margin: clamp(18px, 3vw, 26px) 0 0;
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    color: var(--ink-70);
+  }
+
+  .about p {
+    margin: 0 0 1.05em;
+    max-width: 58ch;
+    font-size: 1.03rem;
+    line-height: 1.65;
+    color: var(--ink-70);
+  }
+
+  .about a {
+    color: var(--accent);
+  }
+
+  .sign-off {
+    margin-top: 22px;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+
+  @media (max-width: 560px) {
+    .hero-name {
+      max-width: 100%;
+    }
+  }
+</style>

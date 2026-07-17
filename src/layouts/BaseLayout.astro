@@ -1,0 +1,134 @@
+---
+import '../styles/tokens.css';
+import '../styles/components.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  wide?: boolean;
+}
+
+const { title, description = 'Notes on AI, data engineering, and software — written from Como.', wide = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title="Mutt0-ds Notes" href="/index.xml" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class:list={['page', { 'page--wide': wide }]}>
+      <header class="topbar">
+        <a class="mark" href="/">Davide</a>
+        <ul class="toplinks">
+          <li><a href="/posts/">Posts</a></li>
+          <li><a href="/books/">Books</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/index.xml">RSS</a></li>
+        </ul>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer class="footer">
+        <span>© {new Date().getFullYear()} Davide Muttoni</span>
+        <ul class="footer-links">
+          <li><a href="https://github.com/mutt0-ds">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/davide-muttoni-77b134194/">LinkedIn</a></li>
+          <li><a href="/index.xml">RSS</a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<style>
+  .page {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 32px);
+    position: relative;
+  }
+
+  .page--wide {
+    max-width: 1100px;
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 0;
+    font-size: 0.9rem;
+  }
+
+  .mark {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .toplinks {
+    display: flex;
+    gap: clamp(14px, 3vw, 26px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .toplinks a {
+    text-decoration: none;
+    color: var(--ink-70);
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .toplinks a:hover,
+  .toplinks a:focus-visible {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .footer {
+    margin-top: clamp(40px, 7vw, 60px);
+    padding: 22px 0 clamp(40px, 6vw, 56px);
+    border-top: 1px solid var(--hairline);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--ink-45);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: var(--ink-70);
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .footer-links a:hover,
+  .footer-links a:focus-visible {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+</style>
