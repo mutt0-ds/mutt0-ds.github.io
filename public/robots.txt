@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mutt0-ds.github.io/sitemap-index.xml

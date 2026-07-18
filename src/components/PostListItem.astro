@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getExcerpt, formatDate } from '../lib/text';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const excerpt = getExcerpt(post.body ?? '');
+---
+
+<li>
+  <a class="post-row" href={`/posts/${post.id}/`}>
+    <span class="post-date">{formatDate(post.data.date)}</span>
+    <span class="post-title">{post.data.title}</span>
+    <p class="post-desc">{excerpt}</p>
+  </a>
+</li>

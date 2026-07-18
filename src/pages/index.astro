@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LakeMark from '../components/LakeMark.astro';
+import PostListItem from '../components/PostListItem.astro';
+import BookShelf from '../components/BookShelf.astro';
+import IconLink from '../components/IconLink.astro';
+import { getLinkIcon } from '../lib/link-icons';
+
+const klarIcon = getLinkIcon('https://klar.mx');
+const datacampIcon = getLinkIcon('https://www.datacamp.com');
+const obsidianIcon = getLinkIcon('https://obsidian.md');
+const acerIcon = getLinkIcon('https://www.acer.com');
+const investsuiteIcon = getLinkIcon('https://www.investsuite.com');
+import { getCollection } from 'astro:content';
+import { countStars } from '../lib/text';
+
+const recentPosts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4);
+
+const allBooks = await getCollection('books');
+const shelfBooks = [...allBooks]
+  .sort((a, b) => {
+    const byRating = countStars(b.data.score) - countStars(a.data.score);
+    if (byRating !== 0) return byRating;
+    return b.data.finished.valueOf() - a.data.finished.valueOf();
+  })
+  .slice(0, 10);
+---
+
+<BaseLayout title="Davide Muttoni">
+  <section class="hero" id="top">
+    <LakeMark />
+    <span class="hero-label">Hi, I'm</span>
+    <h1 class="hero-name">Davide Muttoni.</h1>
+    <p class="thesis">
+      I'm a software engineer doing AI development at <a href="https://klar.mx" class="icon-only-link"><span class="link-icon link-icon-klar link-icon-chip" set:html={klarIcon?.svg} /></a> from a desk in <IconLink href="https://www.lakecomo.is/en/">Como</IconLink>,
+      overlooking the lake. This is a collection of my notes, thoughts, and stories collected while exploring the world around the
+      things I love.
+      <span class="thesis-note">Currently working with AI & data in the fintech space.</span>
+    </p>
+  </section>
+
+  <div class="rule"></div>
+
+  <section id="posts">
+    <div class="section-head">
+      <h2>Recent writing</h2>
+    </div>
+    <ol class="post-list">
+      {recentPosts.map((post) => <PostListItem post={post} />)}
+    </ol>
+    <a class="viewall" href="/posts/">Read all the posts →</a>
+  </section>
+
+  <div class="rule"></div>
+
+  <section id="books">
+    <div class="section-head">
+      <h2>On the shelf</h2>
+      <span class="section-cap">{allBooks.length} books reviewed, and counting</span>
+    </div>
+    <BookShelf books={shelfBooks} />
+    <a class="viewall" href="/books/">Browse the whole shelf →</a>
+  </section>
+
+  <div class="rule"></div>
+
+  <section class="about" id="about">
+    <div class="section-head">
+      <h2>About me</h2>
+    </div>
+    <p>
+      I worked as Senior Data Engineer at <a href="https://www.acer.com" class="icon-only-link"><span class="link-icon link-icon-acer" set:html={acerIcon?.svg} /></a>, then as Head of AI at <a href="https://www.investsuite.com" class="icon-only-link"><span class="link-icon link-icon-investsuite" set:html={investsuiteIcon?.svg} /></a>, and I'm now doing GenAI development at <a href="https://klar.mx" class="icon-only-link"><span class="link-icon link-icon-klar link-icon-chip" set:html={klarIcon?.svg} /></a>.
+      Along the way, I've helped ship some pretty ambitious products, and I usually write about what I learn in my <a href="/posts/">posts section</a>.
+    </p>
+    <p>
+      When I have time, I like contributing to the open-source community, including work on the <IconLink href="https://github.com/ramnes/notion-sdk-py">Python Notion SDK</IconLink>. I also created <a href="/posts/2025/01/fabric-datacamp-course/"><span class="link-icon link-icon-datacamp" set:html={datacampIcon?.svg} />a Microsoft Fabric course with DataCamp</a>; I guess that makes me a teacher somehow.
+    </p>
+    <p>
+      It doesn't come naturally, but I like challenging myself by speaking at <a href="/posts/2024/10/my-talk-about-data-culture/">conferences, meetups, and meetings</a>. And since my memory isn't great 😇, I keep <a href="/posts/2023/02/obsidian-productivity-second-brain/"><span class="link-icon link-icon-obsidian" set:html={obsidianIcon?.svg} />a huge second brain in Obsidian</a> to store everything I need. For the fuller story (or just to say hi) find me on <IconLink href="https://www.linkedin.com/in/davide-muttoni-77b134194/">LinkedIn</IconLink>.
+    </p>
+    <p class="sign-off">— D.</p>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    position: relative;
+    padding: clamp(30px, 6vw, 60px) 0 clamp(24px, 4vw, 36px);
+    z-index: 1;
+  }
+
+  .hero-label {
+    display: block;
+    font-size: 1rem;
+    color: var(--ink-70);
+    margin-bottom: 6px;
+  }
+
+  .hero-name {
+    margin: 0;
+    max-width: 8.8em;
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    font-size: clamp(2.6rem, 8vw, 4.4rem);
+    text-wrap: balance;
+    color: var(--ink);
+  }
+
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    .hero-name {
+      background: linear-gradient(115deg, var(--lake-deep) 10%, var(--accent) 48%, var(--lake-light) 92%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+  }
+
+  .thesis {
+    max-width: 46ch;
+    margin: clamp(18px, 3vw, 26px) 0 0;
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    color: var(--ink-70);
+  }
+
+  .thesis-note {
+    display: block;
+    margin-top: 0.7em;
+  }
+
+  .thesis :global(a) {
+    color: var(--accent);
+  }
+
+  .thesis :global(a.icon-only-link) {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .about p {
+    margin: 0 0 1.05em;
+    max-width: 58ch;
+    font-size: 1.03rem;
+    line-height: 1.65;
+    color: var(--ink-70);
+  }
+
+  .about :global(a) {
+    color: var(--accent);
+  }
+
+  .about :global(a.icon-only-link) {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .sign-off {
+    margin-top: 22px;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+
+  @media (max-width: 560px) {
+    .hero-name {
+      max-width: 100%;
+    }
+  }
+</style>

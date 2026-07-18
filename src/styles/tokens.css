@@ -1,0 +1,136 @@
+/* Design tokens — ported verbatim from homepage-draft.html. This is the
+   single source of truth for color/type across every page. Don't invent
+   new tokens per-page; add here if a real new need shows up. */
+
+:root {
+  --paper: #eaf2f2;
+  --paper-shade: #dce9e9;
+  --ink: #123138;
+  --ink-70: rgba(18, 49, 56, 0.74);
+  --ink-45: rgba(18, 49, 56, 0.48);
+  --hairline: rgba(18, 49, 56, 0.15);
+  --accent: #12798c;
+  --accent-soft: rgba(18, 121, 140, 0.16);
+
+  --spine-1: #d6e3e2;
+  --spine-2: #a9cdd1;
+  --spine-3: #c7d6d2;
+  --spine-4: #bfe0e2;
+
+  --lake-light: #3b95a5;
+  --lake-deep: #0c5866;
+  --spine-sheen: rgba(255, 255, 255, 0.4);
+
+  --font-display: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --font-body: 'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+  color-scheme: light dark;
+}
+
+@supports (background: color-mix(in srgb, red 50%, blue)) {
+  :root {
+    --spine-1: color-mix(in srgb, var(--ink) 10%, var(--paper));
+    --spine-2: color-mix(in srgb, var(--accent) 30%, var(--paper));
+    --spine-3: color-mix(in srgb, var(--ink) 18%, var(--paper));
+    --spine-4: color-mix(in srgb, var(--accent) 16%, var(--paper));
+    --lake-light: color-mix(in srgb, var(--accent) 100%, white 32%);
+    --lake-deep: color-mix(in srgb, var(--accent) 100%, black 24%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0a1b1f;
+    --paper-shade: #11262a;
+    --ink: #e7f2f2;
+    --ink-70: rgba(231, 242, 242, 0.72);
+    --ink-45: rgba(231, 242, 242, 0.46);
+    --hairline: rgba(231, 242, 242, 0.15);
+    --accent: #4fc3d9;
+    --accent-soft: rgba(79, 195, 217, 0.18);
+    --spine-1: #1a2e30;
+    --spine-2: #204a52;
+    --spine-3: #1c3230;
+    --spine-4: #1c3c40;
+    --lake-light: #7ed4e4;
+    --lake-deep: #2e8a9c;
+    --spine-sheen: rgba(255, 255, 255, 0.1);
+  }
+  @supports (background: color-mix(in srgb, red 50%, blue)) {
+    :root {
+      --spine-1: color-mix(in srgb, var(--ink) 12%, var(--paper));
+      --spine-2: color-mix(in srgb, var(--accent) 28%, var(--paper));
+      --spine-3: color-mix(in srgb, var(--ink) 20%, var(--paper));
+      --spine-4: color-mix(in srgb, var(--accent) 16%, var(--paper));
+      --lake-light: color-mix(in srgb, var(--accent) 100%, white 26%);
+      --lake-deep: color-mix(in srgb, var(--accent) 100%, black 20%);
+    }
+  }
+}
+
+:root[data-theme='dark'] {
+  --paper: #0a1b1f;
+  --paper-shade: #11262a;
+  --ink: #e7f2f2;
+  --ink-70: rgba(231, 242, 242, 0.72);
+  --ink-45: rgba(231, 242, 242, 0.46);
+  --hairline: rgba(231, 242, 242, 0.15);
+  --accent: #4fc3d9;
+  --accent-soft: rgba(79, 195, 217, 0.18);
+  --lake-light: #7ed4e4;
+  --lake-deep: #2e8a9c;
+  --spine-sheen: rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme='light'] {
+  --paper: #eaf2f2;
+  --paper-shade: #dce9e9;
+  --ink: #123138;
+  --ink-70: rgba(18, 49, 56, 0.74);
+  --ink-45: rgba(18, 49, 56, 0.48);
+  --hairline: rgba(18, 49, 56, 0.15);
+  --accent: #12798c;
+  --accent-soft: rgba(18, 121, 140, 0.16);
+  --lake-light: #3b95a5;
+  --lake-deep: #0c5866;
+  --spine-sheen: rgba(255, 255, 255, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+  /* Reserve the scrollbar's width on every page, not just tall ones — a
+     short page (e.g. Contact) would otherwise render a few pixels wider
+     than a page long enough to need a scrollbar, shifting the centered
+     nav/logo sideways between pages. */
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
