@@ -1,0 +1,237 @@
+/* Structural CSS shared across ≥2 pages — signature components that would
+   otherwise be duplicated in scoped <style> blocks. Anything used on only
+   one page stays scoped in that component/page instead. */
+
+/* ---------- post list (the "gauge line") ---------- */
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(22px, 4vw, 30px);
+  position: relative;
+}
+
+.post-list::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 1.5px;
+  background: linear-gradient(180deg, transparent, var(--accent) 6%, var(--accent) 94%, transparent);
+  opacity: 0.4;
+}
+
+.post-row {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.post-row::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.5;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.post-row:hover::before,
+.post-row:focus-visible::before {
+  opacity: 1;
+  transform: scale(1.4);
+}
+
+.post-date {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--ink-45);
+  margin-bottom: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.post-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+  line-height: 1.3;
+  text-wrap: balance;
+  background-image: linear-gradient(90deg, var(--lake-deep), var(--accent) 55%, var(--lake-light));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: background-size 0.3s ease;
+}
+
+.post-row:hover .post-title,
+.post-row:focus-visible .post-title {
+  background-size: 100% 1px;
+}
+
+.post-desc {
+  margin: 6px 0 0;
+  max-width: 58ch;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--ink-70);
+}
+
+/* Positions a <RingsDecor /> instance as a small corner flourish, echoing
+   the homepage lake mark. Parent needs position:relative; let it bleed past
+   the edge (no overflow:hidden) like the lake mark does. */
+.corner-rings {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 110px;
+  height: 110px;
+  pointer-events: none;
+}
+
+/* ---------- shared section furniture ---------- */
+
+.page-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.05;
+  margin: clamp(30px, 6vw, 50px) 0 10px;
+  text-wrap: balance;
+}
+
+.page-lead {
+  margin: 0 0 clamp(30px, 6vw, 48px);
+  max-width: 60ch;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--ink-70);
+}
+
+.article-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  margin: 6px 0 16px;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0 0 clamp(20px, 4vw, 28px);
+  padding: 0;
+}
+
+.tag-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--ink-70);
+  background: var(--paper-shade);
+  border: 1px solid var(--hairline);
+  padding: 4px 11px 4px 9px;
+  border-radius: 999px;
+}
+
+.tag-list li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: none;
+}
+
+.rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--hairline) 18%, var(--accent) 50%, var(--hairline) 82%, transparent);
+  opacity: 0.65;
+  margin: clamp(40px, 7vw, 60px) 0;
+}
+
+.link-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  margin-right: 0.3em;
+}
+
+.link-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.link-icon-como svg {
+  width: 62%;
+  margin: 0 auto;
+  display: block;
+}
+
+.link-icon-chip {
+  width: 1.9em;
+  padding: 0.08em 0.16em;
+  background: #14171a;
+  border-radius: 3px;
+  box-sizing: content-box;
+}
+
+.link-icon-acer {
+  width: 4.15em;
+}
+
+.link-icon-investsuite {
+  width: 8.8em;
+}
+
+.icon-only-link .link-icon {
+  margin-right: 0;
+}
+
+.viewall {
+  margin-top: clamp(18px, 3vw, 26px);
+  display: inline-block;
+  font-size: 0.92rem;
+  text-decoration: none;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+}
+
+.viewall:hover,
+.viewall:focus-visible {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.section-head {
+  margin-bottom: clamp(20px, 4vw, 28px);
+}
+
+.section-head h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 3.4vw, 1.8rem);
+}
+
+.section-cap {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--ink-45);
+}

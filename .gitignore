@@ -2,3 +2,10 @@
 .env
 **/.venv/
 **/todo/**
+
+# Astro
+node_modules/
+dist/
+.astro/
+
+.claude/

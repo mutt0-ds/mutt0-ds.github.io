@@ -1,0 +1,116 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { formatDate, stripLeadingEmoji } from '../../lib/text';
+
+export async function getStaticPaths() {
+  const books = await getCollection('books');
+  return books.map((book) => ({ params: { slug: book.id }, props: { book } }));
+}
+
+interface Props {
+  book: CollectionEntry<'books'>;
+}
+
+const { book } = Astro.props;
+const { Content } = await render(book);
+---
+
+<ArticleLayout title={`${book.data.title}`} description={book.data.summary}>
+  <div class="book-header">
+    <div class="book-header-cover-wrap">
+      <img
+        class="book-header-cover"
+        src={book.data.image}
+        alt={book.data.title}
+        loading="lazy"
+        decoding="async"
+        onerror="this.style.visibility='hidden'"
+      />
+    </div>
+    <div class="book-header-info">
+      <span class="post-date">Finished {formatDate(book.data.finished)}</span>
+      <h1 class="article-title">{book.data.title}</h1>
+      <p class="book-header-author">{book.data.author}</p>
+      <div class="book-header-meta">
+        <p class="book-header-score">{book.data.score}</p>
+        {
+          book.data.badges.length > 0 && (
+            <ul class="tag-list">
+              {book.data.badges.map((badge) => (
+                <li>{stripLeadingEmoji(badge)}</li>
+              ))}
+            </ul>
+          )
+        }
+      </div>
+    </div>
+  </div>
+  <div class="rule book-rule"></div>
+  <Content />
+</ArticleLayout>
+
+<style>
+  .book-header {
+    display: flex;
+    gap: clamp(20px, 4vw, 32px);
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 6px;
+  }
+
+  .book-header-cover-wrap {
+    position: relative;
+    flex: none;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .book-header-cover {
+    display: block;
+    width: 200px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    flex: none;
+  }
+
+  .book-header-cover-wrap::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--lake-deep), var(--accent), var(--lake-light));
+    opacity: 0.85;
+  }
+
+  .book-rule {
+    margin-top: clamp(28px, 5vw, 40px);
+  }
+
+  .book-header-info {
+    flex: 1 1 260px;
+    min-width: 0;
+  }
+
+  .book-header-author {
+    margin: 0 0 6px;
+    color: var(--ink-70);
+  }
+
+  .book-header-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+
+  .book-header-score {
+    margin: 0;
+  }
+
+  .book-header-meta .tag-list {
+    margin: 0;
+  }
+</style>

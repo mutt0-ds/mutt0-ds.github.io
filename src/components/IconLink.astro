@@ -1,0 +1,15 @@
+---
+import { getLinkIcon } from '../lib/link-icons';
+
+interface Props {
+  href: string;
+  class?: string;
+}
+
+const { href, class: className } = Astro.props;
+const icon = getLinkIcon(href);
+---
+
+<a href={href} class:list={['icon-link', className]}>
+  {icon && <span class:list={['link-icon', `link-icon-${icon.key}`, { 'link-icon-chip': icon.chip }]} set:html={icon.svg} />}<slot />
+</a>
