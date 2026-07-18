@@ -1,16 +1,26 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { formatDate } from '../../lib/text';
+import { formatDate, stripLeadingEmoji } from '../../lib/text';
 
 const books = (await getCollection('books')).sort(
   (a, b) => b.data.finished.valueOf() - a.data.finished.valueOf()
 );
+const slugs = books.map((book) => book.id);
 ---
 
 <BaseLayout title="Books — Davide Muttoni" description="Everything I've read, with a one-line take on each." wide>
   <h1 class="page-title">The whole shelf</h1>
-  <p class="page-lead">{books.length} books, most recently finished first.</p>
+  <p class="page-lead">
+    Here's a list of books I've read, with some scattered notes. They're sorted by how much I liked them — totally
+    subjective and partial, as usual. You'll find technical, psychology, lifestyle, history, and science books, basically
+    anything I managed to take notes on. I usually don't review fiction, but a few are included too.
+  </p>
+  <div class="book-actions">
+    <button class="random-book-btn" id="random-book" type="button">🎲 Surprise me</button>
+    <span class="book-actions-cap">{books.length} books — <a href="/contact/">got a recommendation?</a></span>
+  </div>
+
   <ul class="book-grid">
     {
       books.map((book) => (
@@ -24,6 +34,13 @@ const books = (await getCollection('books')).sort(
               decoding="async"
               onerror="this.style.visibility='hidden'"
             />
+            {book.data.badges.length > 0 && (
+              <span class="book-card-badges">
+                {book.data.badges.slice(0, 2).map((badge) => (
+                  <span class="book-card-badge">{stripLeadingEmoji(badge)}</span>
+                ))}
+              </span>
+            )}
             <span class="book-card-title">{book.data.title}</span>
             <span class="book-card-author">{book.data.author}</span>
             <span class="book-card-meta">
@@ -37,7 +54,53 @@ const books = (await getCollection('books')).sort(
   </ul>
 </BaseLayout>
 
+<script define:vars={{ slugs }}>
+  document.getElementById('random-book')?.addEventListener('click', () => {
+    const slug = slugs[Math.floor(Math.random() * slugs.length)];
+    window.location.href = `/books/${slug}/`;
+  });
+</script>
+
 <style>
+  .book-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 0 0 clamp(28px, 5vw, 40px);
+  }
+
+  .random-book-btn {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--paper);
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .random-book-btn:hover,
+  .random-book-btn:focus-visible {
+    background: linear-gradient(90deg, var(--lake-deep), var(--accent), var(--lake-light));
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.4);
+  }
+
+  .book-actions-cap {
+    font-size: 0.85rem;
+    color: var(--ink-45);
+    padding-left: 18px;
+    border-left: 1px solid var(--hairline);
+  }
+
+  .book-actions-cap a {
+    color: var(--accent);
+  }
+
   .book-grid {
     list-style: none;
     margin: 0;
@@ -63,15 +126,53 @@ const books = (await getCollection('books')).sort(
     background: var(--paper-shade);
   }
 
+  .book-card-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 2px;
+  }
+
+  .book-card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.68rem;
+    line-height: 1.4;
+    color: var(--ink-70);
+    background: var(--paper-shade);
+    border: 1px solid var(--hairline);
+    padding: 1px 8px 1px 6px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .book-card-badge::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex: none;
+  }
+
   .book-card-title {
     font-family: var(--font-display);
     font-size: 0.95rem;
     line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.6em;
   }
 
   .book-card-author {
     font-size: 0.8rem;
     color: var(--ink-45);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .book-card-meta {

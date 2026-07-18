@@ -20,6 +20,31 @@ const { title, description } = Astro.props;
     padding: clamp(16px, 3vw, 24px) 0 clamp(40px, 6vw, 60px);
   }
 
+  .prose :global(.post-hero-wrap) {
+    position: relative;
+    margin: 0 0 clamp(20px, 4vw, 30px);
+  }
+
+  .prose :global(.post-hero) {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .prose :global(.post-hero-wrap)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 3px;
+    border-radius: 0 0 8px 8px;
+    background: linear-gradient(90deg, var(--lake-deep), var(--accent), var(--lake-light));
+    opacity: 0.85;
+  }
+
   .prose :global(h2),
   .prose :global(h3) {
     font-family: var(--font-display);

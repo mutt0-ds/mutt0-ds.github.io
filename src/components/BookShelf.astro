@@ -20,6 +20,21 @@ const PROFILES = [
   { h: 212, tilt: -0.9 },
   { h: 192, tilt: 1.1 },
 ];
+
+// Real book titles vary far more than the height profiles above were tuned
+// for, and CSS text-overflow:ellipsis doesn't reliably render in this
+// vertical-writing-mode + flex setup — so truncate for real, with an actual
+// "…" character, sized to what each spine's own height can hold.
+// Measured directly in-browser (Iowan Old Style/Palatino/Georgia @ 0.82rem,
+// vertical-rl): ~5.6-6.5px per character across 10 real titles, average 6.06.
+// Budget at 6.6px/char — just above the observed max — for a small safety
+// margin without truncating harder than necessary.
+const PX_PER_CHAR = 6.6;
+function truncateForHeight(title: string, height: number): string {
+  const maxChars = Math.floor((height - 28) / PX_PER_CHAR);
+  if (title.length <= maxChars) return title;
+  return `${title.slice(0, Math.max(maxChars - 1, 1)).trimEnd()}…`;
+}
 ---
 
 <ul class="shelf">
@@ -29,7 +44,7 @@ const PROFILES = [
       return (
         <li class="spine">
           <a href={`/books/${book.id}/`} style={`--h:${profile.h}px;--tilt:${profile.tilt}deg`} title={book.data.title}>
-            {book.data.title}
+            {truncateForHeight(book.data.title, profile.h)}
           </a>
         </li>
       );

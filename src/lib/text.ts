@@ -17,3 +17,10 @@ export function getExcerpt(markdown: string, maxLength = 140): string {
 export function formatDate(date: Date): string {
   return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 }
+
+/** Book badges are free text like "🧘‍♀️ Lifestyle" — the emoji vary wildly in
+ * color and clash with the site's controlled palette, so strip any leading
+ * emoji/symbols and keep just the label. */
+export function stripLeadingEmoji(text: string): string {
+  return text.replace(/^[^\p{L}\p{N}]+/u, '').trim();
+}

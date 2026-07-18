@@ -17,6 +17,13 @@ const { Content } = await render(post);
 ---
 
 <ArticleLayout title={`${post.data.title} — Davide Muttoni`} description={getExcerpt(post.body ?? '')}>
+  {
+    post.data.image && (
+      <div class="post-hero-wrap">
+        <img class="post-hero" src={post.data.image} alt={post.data.title} onerror="this.parentElement.style.display='none'" />
+      </div>
+    )
+  }
   <span class="post-date">{formatDate(post.data.date)}</span>
   <h1 class="article-title">{post.data.title}</h1>
   {

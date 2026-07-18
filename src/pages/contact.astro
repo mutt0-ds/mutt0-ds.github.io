@@ -4,44 +4,78 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Contact — Davide Muttoni" description="Get in touch.">
   <h1 class="page-title">Get in touch</h1>
-  <p class="page-lead">The most reliable way to reach me is email — I check it far more often than anything else.</p>
+  <p class="page-lead">Email is the most reliable way to reach me — I check it far more often than anything else. GitHub and LinkedIn work too.</p>
 
-  <ul class="contact-list">
-    <li>
-      <a class="contact-link" href="mailto:mr0lnk6r1@relay.firefox.com">📧 mr0lnk6r1@relay.firefox.com</a>
-    </li>
-    <li>
-      <a class="contact-link" href="https://github.com/mutt0-ds">GitHub — @mutt0-ds</a>
-    </li>
-    <li>
-      <a class="contact-link" href="https://www.linkedin.com/in/davide-muttoni-77b134194/">LinkedIn</a>
-    </li>
-  </ul>
+  <div class="contact-grid">
+    <a class="contact-card" href="mailto:mr0lnk6r1@relay.firefox.com">
+      <span class="contact-icon">📧</span>
+      <span class="contact-label">Email</span>
+    </a>
+    <a class="contact-card" href="https://github.com/mutt0-ds">
+      <span class="contact-icon">🐙</span>
+      <span class="contact-label">GitHub</span>
+    </a>
+    <a class="contact-card" href="https://www.linkedin.com/in/davide-muttoni-77b134194/">
+      <span class="contact-icon">💼</span>
+      <span class="contact-label">LinkedIn</span>
+    </a>
+  </div>
 </BaseLayout>
 
 <style>
-  .contact-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    max-width: 700px;
+  }
+
+  .contact-card {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    max-width: 50ch;
-  }
-
-  .contact-link {
-    display: block;
+    gap: 8px;
     text-decoration: none;
     color: var(--ink);
-    font-size: 1.05rem;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--hairline);
-    transition: color 0.15s ease;
+    padding: clamp(20px, 4vw, 28px);
+    border-radius: 10px;
+    background: var(--paper-shade);
+    border: 1px solid var(--hairline);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   }
 
-  .contact-link:hover,
-  .contact-link:focus-visible {
-    color: var(--accent);
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--lake-deep), var(--accent), var(--lake-light));
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .contact-card:hover,
+  .contact-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 24px -16px rgba(0, 0, 0, 0.35);
+    border-color: var(--accent);
+  }
+
+  .contact-card:hover::before,
+  .contact-card:focus-visible::before {
+    opacity: 1;
+  }
+
+  .contact-icon {
+    font-size: 1.7rem;
+    line-height: 1;
+  }
+
+  .contact-label {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
   }
 </style>

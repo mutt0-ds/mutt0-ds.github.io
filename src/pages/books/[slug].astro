@@ -1,7 +1,7 @@
 ---
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
-import { formatDate } from '../../lib/text';
+import { formatDate, stripLeadingEmoji } from '../../lib/text';
 
 export async function getStaticPaths() {
   const books = await getCollection('books');
@@ -35,7 +35,7 @@ const { Content } = await render(book);
         book.data.badges.length > 0 && (
           <ul class="tag-list">
             {book.data.badges.map((badge) => (
-              <li>{badge}</li>
+              <li>{stripLeadingEmoji(badge)}</li>
             ))}
           </ul>
         )

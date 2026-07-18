@@ -122,11 +122,24 @@
 }
 
 .tag-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 0.8rem;
   color: var(--ink-70);
-  background: var(--accent-soft);
-  padding: 4px 10px;
+  background: var(--paper-shade);
+  border: 1px solid var(--hairline);
+  padding: 4px 11px 4px 9px;
   border-radius: 999px;
+}
+
+.tag-list li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: none;
 }
 
 .rule {
