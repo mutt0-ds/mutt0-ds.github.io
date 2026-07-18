@@ -160,6 +160,18 @@
         e.preventDefault();
         window.location.href = active.href;
       }
+    } else if (e.key === 'Tab') {
+      const focusables = modal.querySelectorAll('input, a[href]');
+      if (focusables.length === 0) return;
+      const first = focusables[0] as HTMLElement;
+      const last = focusables[focusables.length - 1] as HTMLElement;
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 

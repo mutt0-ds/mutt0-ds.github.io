@@ -7,7 +7,8 @@ export function getExcerpt(markdown: string, maxLength = 140): string {
     .replace(/<[^>]+>/g, ' ')
     .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
     .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
-    .replace(/[#>*_`~]/g, ' ')
+    .replace(/[*_]/g, '')
+    .replace(/[#>~`]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
   if (plain.length <= maxLength) return plain;
@@ -15,7 +16,7 @@ export function getExcerpt(markdown: string, maxLength = 140): string {
 }
 
 export function formatDate(date: Date): string {
-  return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'numeric', year: 'numeric' });
+  return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'numeric', year: 'numeric', timeZone: 'UTC' });
 }
 
 /** Book badges are free text like "🧘‍♀️ Lifestyle" — the emoji vary wildly in

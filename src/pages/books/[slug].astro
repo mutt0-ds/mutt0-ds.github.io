@@ -62,6 +62,8 @@ const { Content } = await render(book);
   .book-header-cover-wrap {
     position: relative;
     flex: none;
+    border-radius: 4px;
+    overflow: hidden;
   }
 
   .book-header-cover {
@@ -69,7 +71,6 @@ const { Content } = await render(book);
     width: 200px;
     aspect-ratio: 2 / 3;
     object-fit: cover;
-    border-radius: 4px;
     flex: none;
   }
 
@@ -78,9 +79,8 @@ const { Content } = await render(book);
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -3px;
+    bottom: 0;
     height: 3px;
-    border-radius: 4px;
     background: linear-gradient(90deg, var(--lake-deep), var(--accent), var(--lake-light));
     opacity: 0.85;
   }

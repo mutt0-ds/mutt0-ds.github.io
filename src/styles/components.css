@@ -150,6 +150,46 @@
   margin: clamp(40px, 7vw, 60px) 0;
 }
 
+.link-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  margin-right: 0.3em;
+}
+
+.link-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.link-icon-como svg {
+  width: 62%;
+  margin: 0 auto;
+  display: block;
+}
+
+.link-icon-chip {
+  width: 1.9em;
+  padding: 0.08em 0.16em;
+  background: #14171a;
+  border-radius: 3px;
+  box-sizing: content-box;
+}
+
+.link-icon-acer {
+  width: 4.15em;
+}
+
+.link-icon-investsuite {
+  width: 8.8em;
+}
+
+.icon-only-link .link-icon {
+  margin-right: 0;
+}
+
 .viewall {
   margin-top: clamp(18px, 3vw, 26px);
   display: inline-block;

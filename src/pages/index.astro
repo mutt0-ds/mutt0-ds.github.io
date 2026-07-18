@@ -3,6 +3,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LakeMark from '../components/LakeMark.astro';
 import PostListItem from '../components/PostListItem.astro';
 import BookShelf from '../components/BookShelf.astro';
+import IconLink from '../components/IconLink.astro';
+import { getLinkIcon } from '../lib/link-icons';
+
+const klarIcon = getLinkIcon('https://klar.mx');
+const datacampIcon = getLinkIcon('https://www.datacamp.com');
+const obsidianIcon = getLinkIcon('https://obsidian.md');
+const acerIcon = getLinkIcon('https://www.acer.com');
+const investsuiteIcon = getLinkIcon('https://www.investsuite.com');
 import { getCollection } from 'astro:content';
 import { countStars } from '../lib/text';
 
@@ -26,7 +34,7 @@ const shelfBooks = [...allBooks]
     <span class="hero-label">Hi, I'm</span>
     <h1 class="hero-name">Davide Muttoni.</h1>
     <p class="thesis">
-      I'm a <strong>software engineer</strong> doing AI development at <strong>Klar</strong>, from a desk in <strong>Como</strong>,
+      I'm a software engineer doing AI development at <a href="https://klar.mx" class="icon-only-link"><span class="link-icon link-icon-klar link-icon-chip" set:html={klarIcon?.svg} /></a> from a desk in <IconLink href="https://www.lakecomo.is/en/">Como</IconLink>,
       overlooking the lake. This is a collection of my notes, thoughts, and stories collected while exploring the world around the
       things I love.
       <span class="thesis-note">Currently working with AI & data in the fintech space.</span>
@@ -50,7 +58,7 @@ const shelfBooks = [...allBooks]
   <section id="books">
     <div class="section-head">
       <h2>On the shelf</h2>
-      <span class="section-cap">{allBooks.length} books, loosely organized by whim.</span>
+      <span class="section-cap">{allBooks.length} books reviewed, and counting</span>
     </div>
     <BookShelf books={shelfBooks} />
     <a class="viewall" href="/books/">Browse the whole shelf →</a>
@@ -60,18 +68,17 @@ const shelfBooks = [...allBooks]
 
   <section class="about" id="about">
     <div class="section-head">
-      <h2>Off the clock</h2>
+      <h2>About me</h2>
     </div>
     <p>
-      I did data work at Acer, then led AI at InvestSuite, and I'm now doing GenAI development at Klar. Along the way I've
-      come to believe great data work starts with understanding the counterpart — that's why I love to listen and
-      understand how the business works, not just the numbers.
+      I worked as Senior Data Engineer at <a href="https://www.acer.com" class="icon-only-link"><span class="link-icon link-icon-acer" set:html={acerIcon?.svg} /></a>, then as Head of AI at <a href="https://www.investsuite.com" class="icon-only-link"><span class="link-icon link-icon-investsuite" set:html={investsuiteIcon?.svg} /></a>, and I'm now doing GenAI development at <a href="https://klar.mx" class="icon-only-link"><span class="link-icon link-icon-klar link-icon-chip" set:html={klarIcon?.svg} /></a>.
+      Along the way, I've helped ship some pretty ambitious products, and I usually write about what I learn in my <a href="/posts/">posts section</a>.
     </p>
     <p>
-      I'm passionate about clear documentation and contributing to the open-source community, including work on the <a href="https://github.com/ramnes/notion-sdk-py">Python Notion SDK</a>. I also created <a href="/posts/2025/01/fabric-datacamp-course/">a Microsoft Fabric course with DataCamp</a> — I guess that makes me a teacher somehow.
+      When I have time, I like contributing to the open-source community, including work on the <IconLink href="https://github.com/ramnes/notion-sdk-py">Python Notion SDK</IconLink>. I also created <a href="/posts/2025/01/fabric-datacamp-course/"><span class="link-icon link-icon-datacamp" set:html={datacampIcon?.svg} />a Microsoft Fabric course with DataCamp</a>; I guess that makes me a teacher somehow.
     </p>
     <p>
-      Although I'm an introvert, I like to challenge myself socially by speaking at <a href="/posts/2024/10/my-talk-about-data-culture/">conferences, meetups, and meetings</a>. And since my memory isn't great 😇, I keep <a href="/posts/2023/02/obsidian-productivity-second-brain/">a huge second brain in Obsidian</a> to store everything I need. For the fuller story — or just to say hi — find me on <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/">LinkedIn</a>.
+      It doesn't come naturally, but I like challenging myself by speaking at <a href="/posts/2024/10/my-talk-about-data-culture/">conferences, meetups, and meetings</a>. And since my memory isn't great 😇, I keep <a href="/posts/2023/02/obsidian-productivity-second-brain/"><span class="link-icon link-icon-obsidian" set:html={obsidianIcon?.svg} />a huge second brain in Obsidian</a> to store everything I need. For the fuller story (or just to say hi) find me on <IconLink href="https://www.linkedin.com/in/davide-muttoni-77b134194/">LinkedIn</IconLink>.
     </p>
     <p class="sign-off">— D.</p>
   </section>
@@ -126,6 +133,15 @@ const shelfBooks = [...allBooks]
     margin-top: 0.7em;
   }
 
+  .thesis :global(a) {
+    color: var(--accent);
+  }
+
+  .thesis :global(a.icon-only-link) {
+    color: inherit;
+    text-decoration: none;
+  }
+
   .about p {
     margin: 0 0 1.05em;
     max-width: 58ch;
@@ -134,8 +150,13 @@ const shelfBooks = [...allBooks]
     color: var(--ink-70);
   }
 
-  .about a {
+  .about :global(a) {
     color: var(--accent);
+  }
+
+  .about :global(a.icon-only-link) {
+    color: inherit;
+    text-decoration: none;
   }
 
   .sign-off {

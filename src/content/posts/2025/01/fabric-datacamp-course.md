@@ -87,4 +87,4 @@ Overall, this was an amazing experience. It took a few months of hard work, but 
 
 I’d definitely do it again.
 
-Having any questions about the course? Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/davide-muttoni-77b134194/) or send me an [email](mr0lnk6r1@relay.firefox.com). I’d love to hear from you!
+Having any questions about the course? Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/davide-muttoni-77b134194/) or send me an [email](mailto:mr0lnk6r1@relay.firefox.com). I’d love to hear from you!

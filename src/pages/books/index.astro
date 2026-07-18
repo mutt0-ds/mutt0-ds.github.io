@@ -14,13 +14,14 @@ const slugs = books.map((book) => book.id);
 <BaseLayout title="Books" description="Everything I've read, with a one-line take on each." wide>
   <h1 class="page-title">The whole shelf</h1>
   <p class="page-lead">
-    Here's a list of books I've read, with some scattered notes. They're sorted by how much I liked them — totally
-    subjective and partial, as usual. You'll find technical, psychology, lifestyle, history, and science books, basically
-    anything I managed to take notes on. I usually don't review fiction, but a few are included too.
+    Here's a list of books I've read, with some scattered notes. They're sorted by how much I liked them, totally subjective and partial, as usual.
+  Feel free to browse the notes, but don't expect anything comprehensive. 
+  You'll find technical, psychology, lifestyle, history, and science books, basically anything I managed to take notes on. 
+  I usually don't review fiction, but a few are included too.
   </p>
   <div class="book-actions">
     <button class="random-book-btn" id="random-book" type="button">🎲 Surprise me</button>
-    <span class="book-actions-cap">{books.length} books — <a href="/contact/">got a recommendation?</a></span>
+    <span class="book-actions-cap">{books.length} books - <a href="/contact/">got a recommendation?</a></span>
   </div>
 
   <ul class="book-grid">
@@ -28,14 +29,16 @@ const slugs = books.map((book) => book.id);
       books.map((book) => (
         <li>
           <a class="book-card" href={`/books/${book.id}/`}>
-            <img
-              class="book-cover"
-              src={book.data.image}
-              alt={book.data.title}
-              loading="lazy"
-              decoding="async"
-              onerror="this.style.visibility='hidden'"
-            />
+            <div class="book-cover-wrap">
+              <img
+                class="book-cover"
+                src={book.data.image}
+                alt={book.data.title}
+                loading="lazy"
+                decoding="async"
+                onerror="this.style.visibility='hidden'"
+              />
+            </div>
             {book.data.badges.length > 0 && (
               <span class="book-card-badges">
                 {book.data.badges.slice(0, 2).map((badge) => (
@@ -64,6 +67,10 @@ const slugs = books.map((book) => book.id);
 </script>
 
 <style>
+  .page-lead {
+    max-width: 85ch;
+  }
+
   .book-actions {
     display: flex;
     align-items: center;
@@ -102,6 +109,13 @@ const slugs = books.map((book) => book.id);
     color: var(--accent);
   }
 
+  @media (max-width: 480px) {
+    .book-actions-cap {
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+
   .book-grid {
     list-style: none;
     margin: 0;
@@ -119,11 +133,16 @@ const slugs = books.map((book) => book.id);
     color: var(--ink);
   }
 
+  .book-cover-wrap {
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
   .book-cover {
+    display: block;
     aspect-ratio: 2 / 3;
     width: 100%;
     object-fit: cover;
-    border-radius: 4px;
     background: var(--paper-shade);
   }
 

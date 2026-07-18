@@ -1,10 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getLinkIcon } from '../lib/link-icons';
+
+const githubIcon = getLinkIcon('https://github.com/mutt0-ds');
+const linkedinIcon = getLinkIcon('https://www.linkedin.com/in/davide-muttoni-77b134194/');
 ---
 
 <BaseLayout title="Contact" description="Get in touch.">
   <h1 class="page-title">Get in touch</h1>
-  <p class="page-lead">Email is the most reliable way to reach me — I check it far more often than anything else. GitHub and LinkedIn work too.</p>
+  <p class="page-lead">
+    Email is the most reliable way to reach me, I check it far more often than anything else. Book recommendations, feedback on a
+    post, or just saying hi, all welcome.
+  </p>
 
   <div class="contact-grid">
     <a class="contact-card" href="mailto:mr0lnk6r1@relay.firefox.com">
@@ -12,11 +19,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <span class="contact-label">Email</span>
     </a>
     <a class="contact-card" href="https://github.com/mutt0-ds">
-      <span class="contact-icon">🐙</span>
+      <span class="contact-icon" set:html={githubIcon?.svg} />
       <span class="contact-label">GitHub</span>
     </a>
     <a class="contact-card" href="https://www.linkedin.com/in/davide-muttoni-77b134194/">
-      <span class="contact-icon">💼</span>
+      <span class="contact-icon" set:html={linkedinIcon?.svg} />
       <span class="contact-label">LinkedIn</span>
     </a>
   </div>
@@ -70,8 +77,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .contact-icon {
+    display: block;
+    width: 1.7rem;
+    height: 1.7rem;
     font-size: 1.7rem;
     line-height: 1;
+  }
+
+  .contact-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 
   .contact-label {
