@@ -71,6 +71,7 @@ const { title, description = 'Notes on AI, data engineering, and software — wr
   .topbar-inner,
   .footer-inner,
   .main {
+    width: 100%;
     max-width: 740px;
     margin: 0 auto;
     padding: 0 clamp(20px, 5vw, 32px);
@@ -78,6 +79,8 @@ const { title, description = 'Notes on AI, data engineering, and software — wr
 
   .main {
     position: relative;
+    flex: 1 0 auto;
+    min-width: 0;
   }
 
   .main--wide {
@@ -117,7 +120,7 @@ const { title, description = 'Notes on AI, data engineering, and software — wr
 
   .toplinks {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: clamp(14px, 3vw, 26px);
     list-style: none;
     margin: 0;

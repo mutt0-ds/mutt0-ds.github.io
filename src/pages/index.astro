@@ -26,9 +26,10 @@ const shelfBooks = [...allBooks]
     <span class="hero-label">Hi, I'm</span>
     <h1 class="hero-name">Davide Muttoni.</h1>
     <p class="thesis">
-      I'm a <strong>software engineer</strong> doing GenAI development at <strong>Klar</strong>, from a desk in <strong>Como</strong> —
-      lake included. This is a collection of my notes, thoughts, and stories collected while exploring the world around the
-      things I love. Currently working with AI & data in the fintech space.
+      I'm a <strong>software engineer</strong> doing AI development at <strong>Klar</strong>, from a desk in <strong>Como</strong>,
+      overlooking the lake. This is a collection of my notes, thoughts, and stories collected while exploring the world around the
+      things I love.
+      <span class="thesis-note">Currently working with AI & data in the fintech space.</span>
     </p>
   </section>
 
@@ -118,6 +119,11 @@ const shelfBooks = [...allBooks]
     font-size: clamp(1.05rem, 2vw, 1.2rem);
     line-height: 1.6;
     color: var(--ink-70);
+  }
+
+  .thesis-note {
+    display: block;
+    margin-top: 0.7em;
   }
 
   .about p {

@@ -18,14 +18,16 @@ const { Content } = await render(book);
 
 <ArticleLayout title={`${book.data.title}`} description={book.data.summary}>
   <div class="book-header">
-    <img
-      class="book-header-cover"
-      src={book.data.image}
-      alt={book.data.title}
-      loading="lazy"
-      decoding="async"
-      onerror="this.style.visibility='hidden'"
-    />
+    <div class="book-header-cover-wrap">
+      <img
+        class="book-header-cover"
+        src={book.data.image}
+        alt={book.data.title}
+        loading="lazy"
+        decoding="async"
+        onerror="this.style.visibility='hidden'"
+      />
+    </div>
     <div class="book-header-info">
       <span class="post-date">Finished {formatDate(book.data.finished)}</span>
       <h1 class="article-title">{book.data.title}</h1>
@@ -44,6 +46,7 @@ const { Content } = await render(book);
       </div>
     </div>
   </div>
+  <div class="rule book-rule"></div>
   <Content />
 </ArticleLayout>
 
@@ -56,12 +59,34 @@ const { Content } = await render(book);
     margin-top: 6px;
   }
 
+  .book-header-cover-wrap {
+    position: relative;
+    flex: none;
+  }
+
   .book-header-cover {
+    display: block;
     width: 200px;
     aspect-ratio: 2 / 3;
     object-fit: cover;
     border-radius: 4px;
     flex: none;
+  }
+
+  .book-header-cover-wrap::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 3px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--lake-deep), var(--accent), var(--lake-light));
+    opacity: 0.85;
+  }
+
+  .book-rule {
+    margin-top: clamp(28px, 5vw, 40px);
   }
 
   .book-header-info {
