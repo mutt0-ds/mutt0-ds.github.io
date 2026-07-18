@@ -15,7 +15,7 @@ export function getExcerpt(markdown: string, maxLength = 140): string {
 }
 
 export function formatDate(date: Date): string {
-  return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'numeric', year: 'numeric' });
 }
 
 /** Book badges are free text like "🧘‍♀️ Lifestyle" — the emoji vary wildly in

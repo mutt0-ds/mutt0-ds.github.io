@@ -16,7 +16,7 @@ const { book } = Astro.props;
 const { Content } = await render(book);
 ---
 
-<ArticleLayout title={`${book.data.title} — Davide Muttoni`} description={book.data.summary}>
+<ArticleLayout title={`${book.data.title}`} description={book.data.summary}>
   <div class="book-header">
     <img
       class="book-header-cover"
@@ -26,20 +26,22 @@ const { Content } = await render(book);
       decoding="async"
       onerror="this.style.visibility='hidden'"
     />
-    <div>
+    <div class="book-header-info">
       <span class="post-date">Finished {formatDate(book.data.finished)}</span>
       <h1 class="article-title">{book.data.title}</h1>
       <p class="book-header-author">{book.data.author}</p>
-      <p class="book-header-score">{book.data.score}</p>
-      {
-        book.data.badges.length > 0 && (
-          <ul class="tag-list">
-            {book.data.badges.map((badge) => (
-              <li>{stripLeadingEmoji(badge)}</li>
-            ))}
-          </ul>
-        )
-      }
+      <div class="book-header-meta">
+        <p class="book-header-score">{book.data.score}</p>
+        {
+          book.data.badges.length > 0 && (
+            <ul class="tag-list">
+              {book.data.badges.map((badge) => (
+                <li>{stripLeadingEmoji(badge)}</li>
+              ))}
+            </ul>
+          )
+        }
+      </div>
     </div>
   </div>
   <Content />
@@ -55,11 +57,16 @@ const { Content } = await render(book);
   }
 
   .book-header-cover {
-    width: 140px;
+    width: 200px;
     aspect-ratio: 2 / 3;
     object-fit: cover;
     border-radius: 4px;
     flex: none;
+  }
+
+  .book-header-info {
+    flex: 1 1 260px;
+    min-width: 0;
   }
 
   .book-header-author {
@@ -67,7 +74,18 @@ const { Content } = await render(book);
     color: var(--ink-70);
   }
 
+  .book-header-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+
   .book-header-score {
-    margin: 0 0 12px;
+    margin: 0;
+  }
+
+  .book-header-meta .tag-list {
+    margin: 0;
   }
 </style>

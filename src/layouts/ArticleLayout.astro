@@ -61,7 +61,7 @@ const { title, description } = Astro.props;
     font-size: clamp(1.1rem, 2.2vw, 1.3rem);
   }
 
-  .prose :global(p) {
+  .prose :global(p):not(.book-header-score):not(.book-header-author) {
     margin: 0 0 1.1em;
     max-width: 68ch;
     font-size: 1.03rem;
@@ -77,7 +77,7 @@ const { title, description } = Astro.props;
     color: var(--ink);
   }
 
-  .prose :global(ul),
+  .prose :global(ul):not(.tag-list),
   .prose :global(ol) {
     max-width: 68ch;
     padding-left: 1.3em;
@@ -85,7 +85,7 @@ const { title, description } = Astro.props;
     line-height: 1.7;
   }
 
-  .prose :global(img),
+  .prose :global(img):not(.book-header-cover),
   .prose :global(video) {
     max-width: 100%;
     height: auto;

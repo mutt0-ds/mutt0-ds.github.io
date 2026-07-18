@@ -110,6 +110,7 @@
   font-size: clamp(1.8rem, 5vw, 2.6rem);
   margin: 6px 0 16px;
   text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 .tag-list {

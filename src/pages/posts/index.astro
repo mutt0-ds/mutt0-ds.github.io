@@ -8,7 +8,7 @@ const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
 );
 ---
 
-<BaseLayout title="Posts — Davide Muttoni" description="Notes on AI, data engineering, and software.">
+<BaseLayout title="Posts" description="Notes on AI, data engineering, and software.">
   <h1 class="page-title">All writing</h1>
   <p class="page-lead">Everything I've published, oldest at the bottom, most recent at the top.</p>
   <ol class="post-list">

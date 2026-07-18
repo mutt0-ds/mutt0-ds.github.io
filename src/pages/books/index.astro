@@ -11,7 +11,7 @@ const books = (await getCollection('books')).sort((a, b) => {
 const slugs = books.map((book) => book.id);
 ---
 
-<BaseLayout title="Books — Davide Muttoni" description="Everything I've read, with a one-line take on each." wide>
+<BaseLayout title="Books" description="Everything I've read, with a one-line take on each." wide>
   <h1 class="page-title">The whole shelf</h1>
   <p class="page-lead">
     Here's a list of books I've read, with some scattered notes. They're sorted by how much I liked them — totally
