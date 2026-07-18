@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostListItem from '../../components/PostListItem.astro';
+import RingsDecor from '../../components/RingsDecor.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
@@ -11,7 +12,69 @@ const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
 <BaseLayout title="Posts" description="Notes on AI, data engineering, and software.">
   <h1 class="page-title">All writing</h1>
   <p class="page-lead">Everything I've published, oldest at the bottom, most recent at the top.</p>
+  <div class="ai-note">
+    <RingsDecor class="ai-note-rings" />
+    <p class="ai-note-label">On my AI usage</p>
+    <p class="ai-note-body">
+      Everything you read here is thought up and drafted by me. I use AI (mostly Gemini) strictly as a grammar check.
+      We are surrounded by content generated faster than it can be read.
+    </p>
+    <p class="ai-note-body">
+      I choose to value your time instead.
+    </p>
+  </div>
   <ol class="post-list">
     {posts.map((post) => <PostListItem post={post} />)}
   </ol>
 </BaseLayout>
+
+<style>
+  .ai-note {
+    position: relative;
+    overflow: hidden;
+    max-width: 54ch;
+    margin: 0 0 clamp(28px, 5vw, 40px);
+    padding: 18px 20px;
+    background: var(--paper-shade);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+  }
+
+  .ai-note::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--lake-deep), var(--accent), var(--lake-light));
+    opacity: 0.85;
+  }
+
+  .ai-note :global(.ai-note-rings) {
+    position: absolute;
+    top: -30px;
+    right: -20px;
+    width: 90px;
+    height: 90px;
+    pointer-events: none;
+  }
+
+  .ai-note-label {
+    position: relative;
+    margin: 0 0 6px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .ai-note-body {
+    position: relative;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink-70);
+  }
+</style>

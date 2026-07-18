@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import RingsDecor from '../components/RingsDecor.astro';
 import { getLinkIcon } from '../lib/link-icons';
 
 const githubIcon = getLinkIcon('https://github.com/mutt0-ds');
@@ -7,11 +8,14 @@ const linkedinIcon = getLinkIcon('https://www.linkedin.com/in/davide-muttoni-77b
 ---
 
 <BaseLayout title="Contact" description="Get in touch.">
-  <h1 class="page-title">Get in touch</h1>
-  <p class="page-lead">
-    Email is the most reliable way to reach me, I check it far more often than anything else. Book recommendations, feedback on a
-    post, or just saying hi, all welcome.
-  </p>
+  <div class="contact-intro">
+    <RingsDecor class="corner-rings" />
+    <h1 class="page-title">Get in touch</h1>
+    <p class="page-lead">
+      Email is the most reliable way to reach me, I check it far more often than anything else. Book recommendations, feedback on a
+      post, or just saying hi, all welcome.
+    </p>
+  </div>
 
   <div class="contact-grid">
     <a class="contact-card" href="mailto:mr0lnk6r1@relay.firefox.com">
@@ -30,6 +34,10 @@ const linkedinIcon = getLinkIcon('https://www.linkedin.com/in/davide-muttoni-77b
 </BaseLayout>
 
 <style>
+  .contact-intro {
+    position: relative;
+  }
+
   .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));

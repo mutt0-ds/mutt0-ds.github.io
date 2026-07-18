@@ -84,6 +84,18 @@
   color: var(--ink-70);
 }
 
+/* Positions a <RingsDecor /> instance as a small corner flourish, echoing
+   the homepage lake mark. Parent needs position:relative; let it bleed past
+   the edge (no overflow:hidden) like the lake mark does. */
+.corner-rings {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 110px;
+  height: 110px;
+  pointer-events: none;
+}
+
 /* ---------- shared section furniture ---------- */
 
 .page-title {
