@@ -1,7 +1,7 @@
 ---
 title: Become an Effective Software Engineering Manager
 author: James Stanier
-image: https://blog.jstassen.com/wp-content/uploads/2021/12/Image-2021-12-22-at-11.50.31-PM.jpg?x33647
+image: /images/book-covers/become-an-effective-software-engineering-manager.jpg
 badges:
 - "💼 Work"
 score: "⭐⭐⭐⭐⭐"

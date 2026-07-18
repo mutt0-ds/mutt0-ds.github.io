@@ -1,7 +1,7 @@
 ---
 title: The Great Mental Models
 author: Shane Parrish, Rhiannon Beaubien
-image: https://fs.blog/wp-content/uploads/2024/04/vol1.png
+image: /images/book-covers/the-great-mental-models.png
 badges:
 - "🧘‍♀️ Lifestyle"
 score: "⭐️⭐️⭐️"

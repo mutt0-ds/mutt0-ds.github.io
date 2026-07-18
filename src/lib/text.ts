@@ -24,3 +24,11 @@ export function formatDate(date: Date): string {
 export function stripLeadingEmoji(text: string): string {
   return text.replace(/^[^\p{L}\p{N}]+/u, '').trim();
 }
+
+/** `score` is a literal star-emoji string (e.g. "⭐⭐⭐⭐"), not a number —
+ * count the base star codepoint only, since some entries attach a trailing
+ * variation selector (⭐️ = U+2B50 U+FE0F) and some don't, for the same
+ * visual star. */
+export function countStars(score: string): number {
+  return (score.match(/⭐/gu) ?? []).length;
+}

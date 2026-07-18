@@ -1,7 +1,7 @@
 ---
 title: East of Eden
 author: John Steinbeck
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/East_of_Eden_%281952_1st_ed_dust_jacket%29.jpg/250px-East_of_Eden_%281952_1st_ed_dust_jacket%29.jpg
+image: /images/book-covers/la-valle-dell'eden.jpg
 badges:
 - "🥳 Fiction"
 score: "⭐⭐"

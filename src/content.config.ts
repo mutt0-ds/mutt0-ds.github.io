@@ -25,7 +25,10 @@ const books = defineCollection({
   schema: z.object({
     title: z.string(),
     author: z.string(),
-    image: z.string().url(),
+    // most covers are external URLs (Amazon/publisher CDNs); a handful are
+    // self-hosted under /images/book-covers/ where the source was slow or
+    // unreliable — so this can't be a strict .url()
+    image: z.string(),
     badges: z.array(z.string()).default([]),
     score: z.string(),
     finished: z.coerce.date(),

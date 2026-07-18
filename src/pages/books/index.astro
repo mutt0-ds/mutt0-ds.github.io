@@ -1,11 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { formatDate, stripLeadingEmoji } from '../../lib/text';
+import { formatDate, stripLeadingEmoji, countStars } from '../../lib/text';
 
-const books = (await getCollection('books')).sort(
-  (a, b) => b.data.finished.valueOf() - a.data.finished.valueOf()
-);
+const books = (await getCollection('books')).sort((a, b) => {
+  const byRating = countStars(b.data.score) - countStars(a.data.score);
+  if (byRating !== 0) return byRating;
+  return b.data.finished.valueOf() - a.data.finished.valueOf();
+});
 const slugs = books.map((book) => book.id);
 ---
 

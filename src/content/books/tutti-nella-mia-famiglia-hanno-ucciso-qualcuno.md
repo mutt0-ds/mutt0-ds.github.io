@@ -1,7 +1,7 @@
 ---
 title: Everyone in My Family Has Killed Someone
 author: Benjamin Stevenson
-image: https://images.squarespace-cdn.com/content/v1/5d395bfb352d130001e96cf1/b0f0ea2a-abf1-43db-8a73-e7c9da10f7fe/9780143795650.jpg
+image: /images/book-covers/tutti-nella-mia-famiglia-hanno-ucciso-qualcuno.jpg
 badges:
 - "🎉 Fiction"
 score: "⭐⭐⭐⭐⭐"

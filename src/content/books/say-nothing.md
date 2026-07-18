@@ -1,7 +1,7 @@
 ---
 title: Say Nothing
 author: Patrick Radden Keefe
-image: https://upload.wikimedia.org/wikipedia/en/0/0d/Say_Nothing_%28Patrick_Radden_Keefe%29.png
+image: /images/book-covers/say-nothing.png
 badges:
 - "🥳 Fiction"
 - "🗿 History"

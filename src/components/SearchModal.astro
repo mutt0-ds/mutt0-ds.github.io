@@ -1,0 +1,353 @@
+---
+// Client-side search over posts + books. Lazy-fetches /search-index.json
+// (built at compile time, see src/pages/search-index.json.js) on first open,
+// then scores/filters in the browser — no server, no dependency, fine at
+// ~280 items.
+---
+
+<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search" hidden>
+  <div class="search-backdrop" id="search-backdrop"></div>
+  <div class="search-panel">
+    <div class="search-input-row">
+      <svg class="search-icon" viewBox="0 0 20 20" aria-hidden="true">
+        <circle cx="8.5" cy="8.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+        <line x1="13.3" y1="13.3" x2="18" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></line>
+      </svg>
+      <input
+        id="search-input"
+        class="search-input"
+        type="text"
+        placeholder="Search posts and books…"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <kbd class="search-esc">Esc</kbd>
+    </div>
+    <ul class="search-results" id="search-results"></ul>
+    <p class="search-empty" id="search-empty" hidden>Nothing found — try a different word.</p>
+  </div>
+</div>
+
+<script>
+  let items: { type: 'post' | 'book'; title: string; url: string; date: string; text: string; author?: string }[] = [];
+  let loaded = false;
+  let activeIndex = -1;
+
+  const modal = document.getElementById('search-modal') as HTMLElement;
+  const backdrop = document.getElementById('search-backdrop') as HTMLElement;
+  const trigger = document.getElementById('search-trigger') as HTMLButtonElement;
+  const input = document.getElementById('search-input') as HTMLInputElement;
+  const resultsEl = document.getElementById('search-results') as HTMLUListElement;
+  const emptyEl = document.getElementById('search-empty') as HTMLElement;
+
+  function scoreItem(item: (typeof items)[number], q: string): number {
+    const title = item.title.toLowerCase();
+    const author = (item.author ?? '').toLowerCase();
+    const text = (item.text ?? '').toLowerCase();
+    let score = 0;
+    if (title === q) score += 100;
+    if (title.startsWith(q)) score += 50;
+    if (title.includes(q)) score += 30;
+    if (author.includes(q)) score += 15;
+    if (text.includes(q)) score += 5;
+    const words = q.split(/\s+/).filter(Boolean);
+    if (words.length > 1 && words.every((w) => title.includes(w))) score += 20;
+    return score;
+  }
+
+  function formatDate(iso: string): string {
+    return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  function render(results: (typeof items)[number][]) {
+    resultsEl.innerHTML = '';
+    activeIndex = results.length > 0 ? 0 : -1;
+    emptyEl.hidden = results.length > 0 || input.value.trim() === '';
+
+    results.forEach((item, i) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.className = 'search-result' + (i === 0 ? ' is-active' : '');
+      a.innerHTML = `
+        <span class="search-result-type">${item.type}</span>
+        <span class="search-result-main">
+          <span class="search-result-title">${item.title}</span>
+          <span class="search-result-text">${item.author ? item.author + ' — ' : ''}${item.text}</span>
+        </span>
+        <span class="search-result-date">${formatDate(item.date)}</span>
+      `;
+      li.appendChild(a);
+      resultsEl.appendChild(li);
+    });
+  }
+
+  function runSearch() {
+    const q = input.value.trim().toLowerCase();
+    if (!q) {
+      render([]);
+      return;
+    }
+    const scored = items
+      .map((item) => ({ item, score: scoreItem(item, q) }))
+      .filter((s) => s.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 20)
+      .map((s) => s.item);
+    render(scored);
+  }
+
+  function setActive(index: number) {
+    const links = resultsEl.querySelectorAll('.search-result');
+    links.forEach((el) => el.classList.remove('is-active'));
+    if (index >= 0 && links[index]) {
+      links[index].classList.add('is-active');
+      links[index].scrollIntoView({ block: 'nearest' });
+    }
+    activeIndex = index;
+  }
+
+  async function ensureLoaded() {
+    if (loaded) return;
+    try {
+      const res = await fetch('/search-index.json');
+      items = await res.json();
+      loaded = true;
+    } catch {
+      // offline or fetch failed — search just stays empty, no crash
+    }
+  }
+
+  async function openModal() {
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    await ensureLoaded();
+    input.value = '';
+    render([]);
+    input.focus();
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    trigger?.focus();
+  }
+
+  trigger?.addEventListener('click', openModal);
+  backdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (e) => {
+    const isOpen = !modal.hidden;
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      isOpen ? closeModal() : openModal();
+      return;
+    }
+    if (!isOpen) return;
+    if (e.key === 'Escape') {
+      closeModal();
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      const count = resultsEl.querySelectorAll('.search-result').length;
+      if (count > 0) setActive((activeIndex + 1) % count);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      const count = resultsEl.querySelectorAll('.search-result').length;
+      if (count > 0) setActive((activeIndex - 1 + count) % count);
+    } else if (e.key === 'Enter') {
+      const active = resultsEl.querySelector('.search-result.is-active') as HTMLAnchorElement | null;
+      if (active) {
+        e.preventDefault();
+        window.location.href = active.href;
+      }
+    }
+  });
+
+  input?.addEventListener('input', runSearch);
+</script>
+
+<style is:global>
+  /* Global, not scoped: the results list is built with innerHTML in the
+     client script below, so those elements never get Astro's compile-time
+     data-astro-cid attribute — scoped selectors would silently never match
+     them. */
+  .search-modal[hidden] {
+    display: none;
+  }
+
+  .search-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 12vh 20px 20px;
+  }
+
+  .search-backdrop {
+    position: absolute;
+    inset: 0;
+    background: color-mix(in srgb, var(--ink) 45%, transparent);
+    backdrop-filter: blur(2px);
+  }
+
+  .search-panel {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+  }
+
+  .search-input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .search-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--ink-45);
+    flex: none;
+  }
+
+  .search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--ink);
+  }
+
+  .search-input::placeholder {
+    color: var(--ink-45);
+  }
+
+  .search-esc {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    color: var(--ink-45);
+    background: var(--paper-shade);
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    padding: 1px 6px;
+    flex: none;
+  }
+
+  .search-results {
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--hairline) transparent;
+  }
+
+  .search-results::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .search-results::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .search-results::-webkit-scrollbar-thumb {
+    background: var(--ink-45);
+    border-radius: 999px;
+    border: 2px solid var(--paper);
+    background-clip: padding-box;
+  }
+
+  .search-results::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+    background-clip: padding-box;
+  }
+
+  .search-result {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .search-result.is-active,
+  .search-result:hover,
+  .search-result:focus-visible {
+    background: var(--accent-soft);
+  }
+
+  .search-result-type {
+    flex: none;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-45);
+    background: var(--paper-shade);
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    padding: 2px 8px;
+  }
+
+  .search-result-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .search-result-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .search-result-text {
+    font-size: 0.82rem;
+    color: var(--ink-70);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .search-result-date {
+    flex: none;
+    font-size: 0.78rem;
+    color: var(--ink-45);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .search-empty {
+    margin: 0;
+    padding: 24px 18px;
+    text-align: center;
+    font-size: 0.92rem;
+    color: var(--ink-45);
+  }
+
+  @media (max-width: 560px) {
+    .search-modal {
+      padding: 8vh 12px 12px;
+    }
+    .search-result-date {
+      display: none;
+    }
+  }
+</style>

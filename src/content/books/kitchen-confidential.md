@@ -1,7 +1,7 @@
 ---
 title: Kitchen Confidential
 author: Anthony Bourdain
-image: https://images.thenile.io/r1000/9781408845042.jpg
+image: /images/book-covers/kitchen-confidential.jpg
 badges:
 - "🧘‍♀️ Lifestyle"
 score: "⭐⭐⭐⭐⭐"

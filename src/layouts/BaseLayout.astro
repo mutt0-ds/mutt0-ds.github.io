@@ -1,6 +1,7 @@
 ---
 import '../styles/tokens.css';
 import '../styles/components.css';
+import SearchModal from '../components/SearchModal.astro';
 
 interface Props {
   title: string;
@@ -23,8 +24,8 @@ const { title, description = 'Notes on AI, data engineering, and software — wr
     <title>{title}</title>
   </head>
   <body>
-    <div class:list={['page', { 'page--wide': wide }]}>
-      <header class="topbar">
+    <header class="topbar">
+      <div class="topbar-inner">
         <a class="mark" href="/" aria-label="Davide Muttoni — home">
           <svg class="mark-icon" viewBox="-4 -4 168 268" aria-hidden="true">
             <path
@@ -38,42 +39,57 @@ const { title, description = 'Notes on AI, data engineering, and software — wr
           <li><a href="/books/">Books</a></li>
           <li><a href="/contact/">Contact</a></li>
           <li><a href="/index.xml">RSS</a></li>
+          <li>
+            <button class="search-trigger" id="search-trigger" type="button" aria-haspopup="dialog" aria-controls="search-modal">
+              Search <kbd>⌘K</kbd>
+            </button>
+          </li>
         </ul>
-      </header>
+      </div>
+    </header>
 
-      <main>
-        <slot />
-      </main>
+    <main class:list={['main', { 'main--wide': wide }]}>
+      <slot />
+    </main>
 
-      <footer class="footer">
+    <footer class="footer">
+      <div class="footer-inner">
         <span>© {new Date().getFullYear()} Davide Muttoni</span>
         <ul class="footer-links">
           <li><a href="https://github.com/mutt0-ds">GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/davide-muttoni-77b134194/">LinkedIn</a></li>
           <li><a href="/index.xml">RSS</a></li>
         </ul>
-      </footer>
-    </div>
+      </div>
+    </footer>
+
+    <SearchModal />
   </body>
 </html>
 
 <style>
-  .page {
+  .topbar-inner,
+  .footer-inner,
+  .main {
     max-width: 740px;
     margin: 0 auto;
     padding: 0 clamp(20px, 5vw, 32px);
+  }
+
+  .main {
     position: relative;
   }
 
-  .page--wide {
+  .main--wide {
     max-width: 1100px;
   }
 
-  .topbar {
+  .topbar-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 26px 0;
+    padding-top: 26px;
+    padding-bottom: 26px;
     font-size: 0.9rem;
   }
 
@@ -101,6 +117,7 @@ const { title, description = 'Notes on AI, data engineering, and software — wr
 
   .toplinks {
     display: flex;
+    align-items: center;
     gap: clamp(14px, 3vw, 26px);
     list-style: none;
     margin: 0;
@@ -121,10 +138,45 @@ const { title, description = 'Notes on AI, data engineering, and software — wr
     border-color: var(--accent);
   }
 
+  .search-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--ink-70);
+    background: none;
+    border: none;
+    padding: 0 0 3px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .search-trigger:hover,
+  .search-trigger:focus-visible {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .search-trigger kbd {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    color: var(--ink-45);
+    background: var(--paper-shade);
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    padding: 1px 5px;
+  }
+
   .footer {
     margin-top: clamp(40px, 7vw, 60px);
-    padding: 22px 0 clamp(40px, 6vw, 56px);
     border-top: 1px solid var(--hairline);
+  }
+
+  .footer-inner {
+    padding-top: 22px;
+    padding-bottom: clamp(40px, 6vw, 56px);
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -152,5 +204,11 @@ const { title, description = 'Notes on AI, data engineering, and software — wr
   .footer-links a:focus-visible {
     color: var(--accent);
     border-color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .search-trigger kbd {
+      display: none;
+    }
   }
 </style>

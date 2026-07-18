@@ -1,7 +1,7 @@
 ---
 title: Looks Good to Me
 author: Adrienne Braganza
-image: https://images.manning.com/360/480/resize/book/0/faee912-c3e7-4842-ae02-e076c16ce2f6/Braganza-HI.png
+image: /images/book-covers/looks-good-to-me.png
 badges:
 - "💻 IT"
 score: "⭐⭐⭐"

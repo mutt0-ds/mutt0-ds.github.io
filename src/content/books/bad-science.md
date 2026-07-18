@@ -1,7 +1,7 @@
 ---
 title: Bad Science
 author: Ben Goldacre
-image: https://i5.walmartimages.com/asr/abc46298-be00-40b2-9ea9-842efebd7763_2.f15ca0acca6fa767448d00cdc55e0f0f.jpeg
+image: /images/book-covers/bad-science.jpeg
 badges:
 - "🔬 Science"
 score: "⭐⭐⭐⭐"

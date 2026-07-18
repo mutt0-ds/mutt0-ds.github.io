@@ -1,7 +1,7 @@
 ---
 title: How to Make Things Faster
 author: Cary Millsap
-image: https://learning.oreilly.com/library/cover/9781098147051/250w/
+image: /images/book-covers/how-to-make-things-faster.jpg
 badges:
 - "💻 IT"
 - "📢 Communication"

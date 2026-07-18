@@ -1,7 +1,7 @@
 ---
 title: 'A Mind for Numbers: How to Excel at Math and Science'
 author: Barbara Oakley
-image: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1575009552l/18693655._SY475_.jpg
+image: /images/book-covers/a-mind-for-numbers-how-to-excel-at-math-and-science.jpg
 badges:
 - "🧘‍♀️ Lifestyle"
 - "🧠 Psychology"

@@ -1,7 +1,7 @@
 ---
 title: Car Guys vs. Bean Counters
 author: Bob Lutz
-image: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440349509l/11276949._SY475_.jpg
+image: /images/book-covers/car-guys-vs.-bean-counters.jpg
 badges:
 - "🗿 History"
 score: "⭐️⭐️⭐️⭐️"

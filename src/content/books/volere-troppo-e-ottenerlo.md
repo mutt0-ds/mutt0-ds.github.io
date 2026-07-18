@@ -1,7 +1,7 @@
 ---
 title: Never Split The Difference
 author: Chris Voss
-image: https://cdn.kobo.com/book-images/171ba032-c7d1-4eb6-b5e2-b035725fff2e/1200/1200/False/never-split-the-difference.jpg
+image: /images/book-covers/volere-troppo-e-ottenerlo.jpg
 badges:
 - "🧘‍♀️ Lifestyle"
 - "🧠 Psychology"

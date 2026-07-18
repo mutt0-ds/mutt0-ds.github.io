@@ -1,7 +1,7 @@
 ---
 title: Febbre
 author: Jonathan Bazzi
-image: https://www.ibs.it/images/9788860446251_0_0_536_0_75.jpg
+image: /images/book-covers/febbre.jpg
 badges:
 - "🧘‍♀️ Lifestyle"
 score: "⭐⭐⭐⭐⭐"

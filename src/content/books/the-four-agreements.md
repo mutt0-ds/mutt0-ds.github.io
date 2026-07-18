@@ -1,7 +1,7 @@
 ---
 title: The Four Agreements
 author: Don Miguel Ruiz
-image: https://cdn2.penguin.com.au/covers/original/9781878424587.jpg
+image: /images/book-covers/the-four-agreements.jpg
 badges:
 - "🤔 Philosophy"
 score: "⭐️⭐️"

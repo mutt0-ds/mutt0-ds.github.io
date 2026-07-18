@@ -1,7 +1,7 @@
 ---
 title: "L’inganno dei confini: Come la geografia governa il mondo"
 author: Simone Guida
-image: https://i.ebayimg.com/thumbs/images/g/IIwAAeSwCZpoi9TW/s-l500.jpg
+image: /images/book-covers/l’inganno-dei-confini.jpg
 badges:
 - "🗿 History"
 score: "⭐️⭐️⭐️"

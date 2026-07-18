@@ -1,7 +1,7 @@
 ---
 title: The Body Keeps The Score
 author: Bessel Van der Kolk
-image: https://telegra.ph/file/96eb960f66bbc4beba109.jpg
+image: /images/book-covers/the-body-keeps-the-score.jpg
 badges:
 - "🧠 Psychology"
 score: "⭐⭐⭐"

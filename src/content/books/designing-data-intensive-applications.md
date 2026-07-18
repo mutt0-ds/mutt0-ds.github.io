@@ -1,7 +1,7 @@
 ---
 title: Designing data-intensive applications
 author: Martin Kleppmann
-image: https://dataintensive.net/images/book-cover.png
+image: /images/book-covers/designing-data-intensive-applications.png
 badges:
 - "💻 IT"
 score: "⭐️⭐️"

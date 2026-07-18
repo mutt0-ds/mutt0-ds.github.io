@@ -1,7 +1,7 @@
 ---
 title: SQL Antipatterns
 author: Bill Karwin
-image: https://pragprog.com/titles/bksqla/sql-antipatterns/bksqla.jpg
+image: /images/book-covers/sql-antipatterns.jpg
 badges:
 - "💼 Work"
 - "💻 IT"

@@ -1,7 +1,7 @@
 ---
 title: How Your House Works
 author: Charlie Wing
-image: https://media.wiley.com/product_data/coverImage300/28/13942133/1394213328.jpg
+image: /images/book-covers/how-your-house-works.jpg
 badges:
 - "🔨 Utilities"
 score: "⭐⭐⭐"

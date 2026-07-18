@@ -1,7 +1,7 @@
 ---
 title: Turn the Ship Around
 author: David Marquet
-image: https://navigatemc.com/wp-content/uploads/2020/05/turn-the-ship-around-768x1160.jpg
+image: /images/book-covers/turn-the-ship-around.jpg
 badges:
 - "🧠 Psychology"
 - "💼 Work"

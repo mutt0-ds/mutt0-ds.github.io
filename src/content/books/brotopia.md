@@ -1,7 +1,7 @@
 ---
 title: Brotopia
 author: Emily Chang
-image: https://upload.wikimedia.org/wikipedia/en/9/95/Brotopia_%28Emily_Chang%29.png
+image: /images/book-covers/brotopia.png
 badges:
 - "🗺 Current affairs"
 score: "⭐⭐⭐⭐"

@@ -1,7 +1,7 @@
 ---
 title: The Muscle Ladder
 author: Jeff Nippard
-image: https://i.ebayimg.com/images/g/j88AAeSwIp9nmXOv/s-l960.jpg
+image: /images/book-covers/the-muscle-ladder.jpg
 badges:
 - "⚛️ Science"
 score: "⭐⭐⭐⭐⭐"

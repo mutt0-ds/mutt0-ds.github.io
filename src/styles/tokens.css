@@ -102,6 +102,11 @@
 
 html {
   color-scheme: light dark;
+  /* Reserve the scrollbar's width on every page, not just tall ones — a
+     short page (e.g. Contact) would otherwise render a few pixels wider
+     than a page long enough to need a scrollbar, shifting the centered
+     nav/logo sideways between pages. */
+  scrollbar-gutter: stable;
 }
 
 body {

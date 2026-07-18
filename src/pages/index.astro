@@ -4,6 +4,7 @@ import LakeMark from '../components/LakeMark.astro';
 import PostListItem from '../components/PostListItem.astro';
 import BookShelf from '../components/BookShelf.astro';
 import { getCollection } from 'astro:content';
+import { countStars } from '../lib/text';
 
 const recentPosts = (await getCollection('posts', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -11,7 +12,11 @@ const recentPosts = (await getCollection('posts', ({ data }) => !data.draft))
 
 const allBooks = await getCollection('books');
 const shelfBooks = [...allBooks]
-  .sort((a, b) => b.data.finished.valueOf() - a.data.finished.valueOf())
+  .sort((a, b) => {
+    const byRating = countStars(b.data.score) - countStars(a.data.score);
+    if (byRating !== 0) return byRating;
+    return b.data.finished.valueOf() - a.data.finished.valueOf();
+  })
   .slice(0, 10);
 ---
 
@@ -21,9 +26,9 @@ const shelfBooks = [...allBooks]
     <span class="hero-label">Hi, I'm</span>
     <h1 class="hero-name">Davide Muttoni.</h1>
     <p class="thesis">
-      I'm a <strong>software engineer</strong> building AI products at InvestSuite, from a desk in <strong>Como</strong> — lake
-      included. This is a collection of my notes, thoughts, and stories collected while exploring the world around the things
-      I love. Currently working with AI & data in the fintech space.
+      I'm a <strong>software engineer</strong> doing GenAI development at <strong>Klar</strong>, from a desk in <strong>Como</strong> —
+      lake included. This is a collection of my notes, thoughts, and stories collected while exploring the world around the
+      things I love. Currently working with AI & data in the fintech space.
     </p>
   </section>
 
@@ -57,15 +62,15 @@ const shelfBooks = [...allBooks]
       <h2>Off the clock</h2>
     </div>
     <p>
-      I'm a software engineer working with AI and data technologies. I enjoy building solutions that bridge different
-      domains, and I believe great data work starts with understanding the counterpart — that's why I love to listen and
-      understand how the business works.
+      I did data work at Acer, then led AI at InvestSuite, and I'm now doing GenAI development at Klar. Along the way I've
+      come to believe great data work starts with understanding the counterpart — that's why I love to listen and
+      understand how the business works, not just the numbers.
     </p>
     <p>
-      I'm passionate about clear documentation and contributing to the open-source community, including work on the <a href="https://github.com/ramnes/notion-sdk-py">Python Notion SDK</a>.
+      I'm passionate about clear documentation and contributing to the open-source community, including work on the <a href="https://github.com/ramnes/notion-sdk-py">Python Notion SDK</a>. I also created <a href="/posts/2025/01/fabric-datacamp-course/">a Microsoft Fabric course with DataCamp</a> — I guess that makes me a teacher somehow.
     </p>
     <p>
-      A few other things about me: I created <a href="/posts/2025/01/fabric-datacamp-course/">a Microsoft Fabric course with DataCamp</a>. Although I'm an introvert, I like to challenge myself socially by speaking at <a href="/posts/2024/10/my-talk-about-data-culture/">conferences, meetups, and meetings</a>. And my memory isn't great 😇, so I keep <a href="/posts/2023/02/obsidian-productivity-second-brain/">a huge second brain in Obsidian</a> to store everything I need.
+      Although I'm an introvert, I like to challenge myself socially by speaking at <a href="/posts/2024/10/my-talk-about-data-culture/">conferences, meetups, and meetings</a>. And since my memory isn't great 😇, I keep <a href="/posts/2023/02/obsidian-productivity-second-brain/">a huge second brain in Obsidian</a> to store everything I need. For the fuller story — or just to say hi — find me on <a href="https://www.linkedin.com/in/davide-muttoni-77b134194/">LinkedIn</a>.
     </p>
     <p class="sign-off">— D.</p>
   </section>

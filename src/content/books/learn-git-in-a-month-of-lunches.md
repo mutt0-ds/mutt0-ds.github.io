@@ -1,7 +1,7 @@
 ---
 title: Learn Git in a Month of Lunches
 author: Rick Umali
-image: https://images.manning.com/360/480/resize/book/4/392baa6-650a-4b06-b15f-15b302761a46/Umali_front.png
+image: /images/book-covers/learn-git-in-a-month-of-lunches.png
 badges:
 - "💻 IT"
 score: "⭐️⭐️"

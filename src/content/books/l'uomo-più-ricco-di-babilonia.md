@@ -1,7 +1,7 @@
 ---
 title: "The Richest Man in Babylon"
 author: George S. Clason
-image: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348336780l/1052.jpg
+image: /images/book-covers/l'uomo-più-ricco-di-babilonia.jpg
 badges:
 - "💰 Economy"
 score: "⭐⭐"

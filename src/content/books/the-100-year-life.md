@@ -1,7 +1,7 @@
 ---
 title: The 100-Year Life
 author: Lynda Gratton
-image: https://media.bloomsbury.com/rep/bj/9781526622846.jpg
+image: /images/book-covers/the-100-year-life.jpg
 badges:
 - "🧘‍♀️ Lifestyle"
 - "💰 Economy"

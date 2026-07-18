@@ -1,7 +1,7 @@
 ---
 title: Le Cene Eleganti
 author: Piero Colaprico
-image: https://www.feltrinellieditore.it/media/copertina/quarta/51/9788807172151_quarta.jpg.600x800_q100_upscale.jpg
+image: /images/book-covers/le-cene-eleganti.jpg
 badges:
 - "🗺 Current affairs"
 score: "⭐⭐⭐⭐"

@@ -1,7 +1,7 @@
 ---
 title: 'Quiet'
 author: Susan Cain
-image: https://cdn2.penguin.com.au/covers/original/9780141029191.jpg
+image: /images/book-covers/quiet-.jpg
 badges:
 - "📢 Communication"
 - "🧠 Psychology"

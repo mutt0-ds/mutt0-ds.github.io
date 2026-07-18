@@ -1,7 +1,7 @@
 ---
 title: Gli Sdraiati
 author: Michele Serra
-image: https://www.ibs.it/images/9788807018343_0_536_0_75.jpg
+image: /images/book-covers/gli-sdraiati.jpg
 badges:
 - "📢 Communication"
 score: "⭐️⭐️⭐️⭐️⭐️"
