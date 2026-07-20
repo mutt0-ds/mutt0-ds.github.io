@@ -13,10 +13,10 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 ---
 
-<ArticleLayout title={`${post.data.title}`} description={getExcerpt(post.body ?? '')} image={post.data.image || undefined}>
+<ArticleLayout title={`${post.data.title}`} description={getExcerpt(post.body ?? '')} image={post.data.image || undefined} headings={headings}>
   {
     post.data.image && (
       <div class="post-hero-wrap">

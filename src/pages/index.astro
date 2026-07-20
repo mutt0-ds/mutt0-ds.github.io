@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LakeMark from '../components/LakeMark.astro';
+import AboutPortrait from '../components/AboutPortrait.astro';
 import PostListItem from '../components/PostListItem.astro';
 import BookShelf from '../components/BookShelf.astro';
 import IconLink from '../components/IconLink.astro';
@@ -70,6 +71,8 @@ const shelfBooks = [...allBooks]
     <div class="section-head">
       <h2>About me</h2>
     </div>
+    <div class="about-grid">
+      <div class="about-text">
     <p>
       I worked as Senior Data Engineer at <a href="https://www.acer.com" class="icon-only-link"><span class="link-icon link-icon-acer" set:html={acerIcon?.svg} /></a>, then as Head of AI at <a href="https://www.investsuite.com" class="icon-only-link"><span class="link-icon link-icon-investsuite" set:html={investsuiteIcon?.svg} /></a>, and I'm now doing GenAI development at <a href="https://klar.mx" class="icon-only-link"><span class="link-icon link-icon-klar link-icon-chip" set:html={klarIcon?.svg} /></a>.
       Along the way, I've helped ship some pretty ambitious products, and I usually write about what I learn in my <a href="/posts/">posts section</a>.
@@ -81,6 +84,9 @@ const shelfBooks = [...allBooks]
       It doesn't come naturally, but I like challenging myself by speaking at <a href="/posts/2024/10/my-talk-about-data-culture/">conferences, meetups, and meetings</a>. And since my memory isn't great 😇, I keep <a href="/posts/2023/02/obsidian-productivity-second-brain/"><span class="link-icon link-icon-obsidian" set:html={obsidianIcon?.svg} />a huge second brain in Obsidian</a> to store everything I need. For the fuller story (or just to say hi) find me on <IconLink href="https://www.linkedin.com/in/davide-muttoni-77b134194/">LinkedIn</IconLink>.
     </p>
     <p class="sign-off">— D.</p>
+      </div>
+      <AboutPortrait />
+    </div>
   </section>
 </BaseLayout>
 
@@ -140,6 +146,30 @@ const shelfBooks = [...allBooks]
   .thesis :global(a.icon-only-link) {
     color: inherit;
     text-decoration: none;
+  }
+
+  .about-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(24px, 4vw, 44px);
+  }
+
+  .about-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  @media (max-width: 620px) {
+    .about-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-grid :global(.portrait) {
+      order: -1;
+      width: 210px;
+      margin: 0;
+    }
   }
 
   .about p {
