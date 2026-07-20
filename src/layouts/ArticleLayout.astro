@@ -1,25 +1,155 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import type { MarkdownHeading } from 'astro';
 
 interface Props {
   title: string;
   description?: string;
   image?: string;
   imageAspect?: 'wide' | 'tall';
+  headings?: MarkdownHeading[];
 }
 
-const { title, description, image, imageAspect } = Astro.props;
+const { title, description, image, imageAspect, headings = [] } = Astro.props;
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const showToc = toc.length >= 2;
 ---
 
 <BaseLayout title={title} description={description} image={image} imageAspect={imageAspect} type="article">
+  {
+    showToc && (
+      <nav class="toc" aria-label="On this page">
+        <div class="toc-inner">
+          <ul>
+            <li class="toc-title">
+              <a href="#">{title}</a>
+            </li>
+            {toc.map((h) => (
+              <li class:list={[{ 'toc-sub': h.depth === 3 }]}>
+                <a href={`#${h.slug}`}>{h.text}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+    )
+  }
   <article class="prose">
     <slot />
   </article>
 </BaseLayout>
 
+<script>
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc a[href^="#"]')];
+  const pairs = links
+    .map((a) => {
+      const id = decodeURIComponent(a.hash.slice(1));
+      return [a, id ? document.getElementById(id) : document.body] as const;
+    })
+    .filter((p): p is readonly [HTMLAnchorElement, HTMLElement] => !!p[1]);
+
+  if (pairs.length) {
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const y = window.scrollY + 130;
+      let active = pairs[0][0];
+      for (const [a, h] of pairs) {
+        if (h.offsetTop <= y) active = a;
+        else break;
+      }
+      for (const [a] of pairs) a.classList.toggle('active', a === active);
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+  }
+</script>
+
 <style>
   .prose {
     padding: clamp(16px, 3vw, 24px) 0 clamp(40px, 6vw, 60px);
+  }
+
+  .toc {
+    display: none;
+  }
+
+  @media (min-width: 1280px) {
+    .toc {
+      display: block;
+      position: absolute;
+      top: clamp(16px, 3vw, 24px);
+      bottom: 0;
+      right: calc(100% + 8px);
+      width: 224px;
+    }
+  }
+
+  .toc-inner {
+    position: sticky;
+    top: 48px;
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+
+  .toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--hairline);
+  }
+
+  .toc a {
+    display: block;
+    padding: 5px 0 5px 14px;
+    margin-left: -1px;
+    border-left: 2px solid transparent;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--ink-45);
+    text-decoration: none;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .toc-sub a {
+    padding-left: 28px;
+  }
+
+  .toc-title a {
+    padding-bottom: 10px;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    line-height: 1.35;
+    color: var(--ink-70);
+  }
+
+  .toc a:hover,
+  .toc a:focus-visible {
+    color: var(--accent);
+  }
+
+  .toc a.active {
+    color: var(--accent);
+    border-left-color: var(--accent);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    :global(html) {
+      scroll-behavior: smooth;
+    }
+  }
+
+  .prose :global(h2),
+  .prose :global(h3) {
+    scroll-margin-top: 40px;
   }
 
   .prose :global(.post-hero-wrap) {
