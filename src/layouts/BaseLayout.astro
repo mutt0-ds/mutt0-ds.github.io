@@ -6,10 +6,26 @@ import SearchModal from '../components/SearchModal.astro';
 interface Props {
   title: string;
   description?: string;
+  image?: string;
+  imageAspect?: 'wide' | 'tall';
+  type?: 'website' | 'article';
   wide?: boolean;
 }
 
-const { title, description = 'Notes on AI, data engineering, and software — written from Como.', wide = false } = Astro.props;
+const {
+  title,
+  description = "Davide Muttoni's notes on AI, data engineering, and software",
+  image,
+  imageAspect = 'wide',
+  type = 'website',
+  wide = false,
+} = Astro.props;
+
+const siteName = 'Mutt0-ds Notes';
+const isHome = Astro.url.pathname === '/';
+const fullTitle = isHome ? title : `${title} · ${siteName}`;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL(image ?? '/images/og-default.png', Astro.site);
 ---
 
 <!doctype html>
@@ -18,10 +34,25 @@ const { title, description = 'Notes on AI, data engineering, and software — wr
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="alternate" type="application/rss+xml" title="Mutt0-ds Notes" href="/index.xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="alternate" type="application/rss+xml" title={siteName} href="/index.xml" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImage} />
+    {!image && <meta property="og:image:width" content="1200" />}
+    {!image && <meta property="og:image:height" content="630" />}
+    <meta name="twitter:card" content={imageAspect === 'tall' ? 'summary' : 'summary_large_image'} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{fullTitle}</title>
   </head>
   <body>
     <header class="topbar">

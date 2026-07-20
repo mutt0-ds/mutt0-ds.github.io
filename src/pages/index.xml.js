@@ -5,7 +5,7 @@ export async function GET(context) {
   const posts = await getCollection('posts', ({ data }) => !data.draft);
   return rss({
     title: 'Mutt0-ds Notes',
-    description: 'Notes on AI, data engineering, and software — written from Como.',
+    description: "Davide Muttoni's notes on AI, data engineering, and software",
     site: context.site,
     items: posts
       .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
