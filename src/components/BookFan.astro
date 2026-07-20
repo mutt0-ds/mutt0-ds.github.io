@@ -1,0 +1,137 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  books: CollectionEntry<'books'>[];
+}
+
+const { books } = Astro.props;
+
+const shelf = [...books]
+  .sort((a, b) => b.data.finished.valueOf() - a.data.finished.valueOf())
+  .slice(0, 14);
+---
+
+<div class="shelf-strip" id="shelf-strip" aria-label="Recently finished books">
+  <ul class="shelf-track">
+    {
+      shelf.map((book) => (
+        <li>
+          <a href={`/books/${book.id}/`} title={book.data.title}>
+            <img
+              src={book.data.image}
+              alt={book.data.title}
+              loading="eager"
+              decoding="async"
+              onerror="this.closest('li').style.display='none'"
+            />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+<div class="shelf-ledge" aria-hidden="true"></div>
+
+<script>
+  const strip = document.getElementById('shelf-strip');
+  const track = strip?.querySelector<HTMLElement>('.shelf-track');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  if (strip && track && !reduceMotion.matches) {
+    let target = 0;
+    let current = 0;
+    let raf = 0;
+
+    const span = () => Math.max(0, track.offsetWidth - strip.clientWidth);
+
+    const glide = () => {
+      current += (target - current) * 0.07;
+      if (Math.abs(target - current) < 0.5) {
+        current = target;
+        raf = 0;
+      } else {
+        raf = requestAnimationFrame(glide);
+      }
+      track.style.transform = `translateX(${-current}px)`;
+    };
+    const kick = () => {
+      if (!raf) raf = requestAnimationFrame(glide);
+    };
+
+    strip.addEventListener('pointermove', (e) => {
+      const rect = strip.getBoundingClientRect();
+      const frac = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
+      target = frac * span();
+      kick();
+    });
+
+    track.addEventListener('focusin', (e) => {
+      const li = (e.target as HTMLElement).closest<HTMLElement>('li');
+      if (!li) return;
+      const centered = li.offsetLeft + li.offsetWidth / 2 - strip.clientWidth / 2;
+      target = Math.min(span(), Math.max(0, centered));
+      kick();
+    });
+  }
+</script>
+
+<style>
+  .shelf-strip {
+    overflow: hidden;
+    margin-top: clamp(6px, 2vw, 18px);
+    touch-action: pan-y;
+    -webkit-mask-image: linear-gradient(90deg, transparent, black clamp(24px, 6vw, 90px), black calc(100% - clamp(24px, 6vw, 90px)), transparent);
+    mask-image: linear-gradient(90deg, transparent, black clamp(24px, 6vw, 90px), black calc(100% - clamp(24px, 6vw, 90px)), transparent);
+  }
+
+  .shelf-track {
+    list-style: none;
+    margin: 0;
+    padding: 18px 9px 24px;
+    display: flex;
+    gap: 18px;
+    width: max-content;
+    will-change: transform;
+  }
+
+  .shelf-track li {
+    flex: none;
+  }
+
+  .shelf-track a {
+    display: block;
+    width: clamp(132px, 19vw, 184px);
+    aspect-ratio: 2 / 3;
+    border-radius: 5px;
+    overflow: hidden;
+    background: var(--paper-shade);
+    box-shadow:
+      0 16px 26px -18px rgba(8, 32, 38, 0.5),
+      0 2px 5px rgba(8, 32, 38, 0.14);
+    transition: translate 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  /* `translate`, not `transform` — composes with the pan on the track. */
+  .shelf-track a:hover,
+  .shelf-track a:focus-visible {
+    translate: 0 -10px;
+    box-shadow:
+      0 26px 32px -18px rgba(8, 32, 38, 0.55),
+      0 2px 5px rgba(8, 32, 38, 0.14);
+  }
+
+  .shelf-track img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .shelf-ledge {
+    height: 2px;
+    margin: 0 4px clamp(28px, 5vw, 44px);
+    background: linear-gradient(90deg, transparent, var(--hairline) 10%, var(--accent) 45%, var(--hairline) 90%, transparent);
+    opacity: 0.55;
+  }
+</style>
