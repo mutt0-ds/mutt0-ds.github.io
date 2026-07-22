@@ -18,8 +18,15 @@ const wobble =
       <clipPath id="portrait-clip">
         <use href="#portrait-shape"></use>
       </clipPath>
+      <radialGradient id="portrait-vignette" cx="50%" cy="42%" r="64%">
+        <stop offset="72%" stop-color="#0c2830" stop-opacity="0"></stop>
+        <stop offset="100%" stop-color="#0c2830" stop-opacity="0.16"></stop>
+      </radialGradient>
     </defs>
-    <image href="/images/davide-portrait.jpg" width="96" height="96" preserveAspectRatio="xMidYMid slice" clip-path="url(#portrait-clip)"></image>
+    <g class="photo-wrap">
+      <image class="photo" href="/images/davide-portrait.jpg" width="96" height="96" preserveAspectRatio="xMidYMid slice" clip-path="url(#portrait-clip)"></image>
+      <use class="vignette" href="#portrait-shape"></use>
+    </g>
     <use class="rim" href="#portrait-shape"></use>
     <path
       class="contour contour-1"
@@ -54,6 +61,25 @@ const wobble =
     width: 100%;
     height: auto;
     overflow: visible;
+  }
+
+  .photo-wrap {
+    filter: drop-shadow(0 1px 1px rgba(8, 32, 38, 0.12)) drop-shadow(0 4px 6px rgba(8, 32, 38, 0.14))
+      drop-shadow(0 14px 22px rgba(8, 32, 38, 0.18));
+  }
+
+  .photo {
+    filter: brightness(0.97) contrast(1.14) saturate(1.12);
+  }
+
+  .vignette {
+    fill: url(#portrait-vignette);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .photo-wrap {
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5)) drop-shadow(0 8px 24px rgba(79, 195, 217, 0.18));
+    }
   }
 
   .rim {
