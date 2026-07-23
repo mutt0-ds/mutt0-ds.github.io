@@ -12,4 +12,4 @@ showInHome: false
 
 Recommended by careercutler as the best communication book, and it was right. Excellent book with valuable advice for executives and professionals on how to communicate, present, and understand people.
 
-Written recap at https://mutt0-ds.github.io/posts/2024/07/personal-notes-simply-said/
+Written recap at https://mutto.fyi/posts/2024/07/personal-notes-simply-said/

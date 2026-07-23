@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/ai_slop/slop.png
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - ai
   - communication
@@ -46,7 +46,7 @@ To me, this is not only annoying. It is a waste of my time and, in a subtle way,
 
 It also trains readers to disengage. For example, I already skip obvious AI-generated content on LinkedIn, and I am increasingly not replying to sloppy messages at all.
 
-I even read a likely [AI-generated book by Addy Osmani](https://mutt0-ds.github.io/books/leading-effective-engineering-teams/), and that same "off" feeling was there for the entire reading. This was later confirmed by [similar comments on Goodreads](https://www.goodreads.com/book/show/199551266-leading-effective-engineering-teams). The book was well masked, but it felt empty, without real substance. And I know there are thousands more like it.
+I even read a likely [AI-generated book by Addy Osmani](https://mutto.fyi/books/leading-effective-engineering-teams/), and that same "off" feeling was there for the entire reading. This was later confirmed by [similar comments on Goodreads](https://www.goodreads.com/book/show/199551266-leading-effective-engineering-teams). The book was well masked, but it felt empty, without real substance. And I know there are thousands more like it.
 
 ### A matter of trust
 

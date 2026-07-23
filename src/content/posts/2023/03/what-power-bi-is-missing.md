@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/power_bi_missing/what-power-bi-missing.jpg
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - power-bi
   - features
@@ -30,7 +30,7 @@ Please note that these ratings are based on my own personal speculations as of M
 
 That's an old story: .pbix files are binary, so they can't be easily tracked and compared with git or other versioning systems. It's ironic that the parent company owns Github, but I suppose priorities differ, as evidenced by the recent announcement of [Copilot X with GPT-4](https://github.blog/2023-03-22-github-copilot-x-the-ai-powered-developer-experience/). There aren't many big teams of Power BI developers out there who really need the feature.
 
-In our situation, this became increasingly frustrating month after month as our models grew larger, and there was still no easy way to compare different versions. I addressed this in [another blog post](https://mutt0-ds.github.io/posts/2022/11/turbulent-journey-power-bi-source-control/), where I created an over-engineered Azure Pipeline that downloads a third-party tool (Tabular Editor 2) every time, uses it to extract JSON metadata, and commits it together with the model. This allowed us to keep track of parts of the model such as tables, columns, and relationships, but not charts or visuals. Git integration [was announced a few weeks ago](https://twitter.com/mthierba/status/1618701222177042433), then canceled, then supported in an upcoming [an upcoming TMDL](https://twitter.com/PowerBITips/status/1636675335591788545/photo/1) initiative by SQLBits. While there is still no clear direction defined, things are in motion.
+In our situation, this became increasingly frustrating month after month as our models grew larger, and there was still no easy way to compare different versions. I addressed this in [another blog post](https://mutto.fyi/posts/2022/11/turbulent-journey-power-bi-source-control/), where I created an over-engineered Azure Pipeline that downloads a third-party tool (Tabular Editor 2) every time, uses it to extract JSON metadata, and commits it together with the model. This allowed us to keep track of parts of the model such as tables, columns, and relationships, but not charts or visuals. Git integration [was announced a few weeks ago](https://twitter.com/mthierba/status/1618701222177042433), then canceled, then supported in an upcoming [an upcoming TMDL](https://twitter.com/PowerBITips/status/1636675335591788545/photo/1) initiative by SQLBits. While there is still no clear direction defined, things are in motion.
 
 ## 🔘 Enhanced User Input
 

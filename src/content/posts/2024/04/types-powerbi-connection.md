@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/power_bi_connections/pbi_connections_charts.png
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - power-bi
   - connection
@@ -62,7 +62,7 @@ However, a significant drawback is the inability to modify the semantic model di
 The [Composite Model](https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-composite-models) is when you mix together a Live Connection (which becomes a DirectQuery), and something else, either another DirectQuery or a local file in Import Mode.
 I won't go too much into details here because it's a new feature, and still has big limitations in my opinion. I've mentioned its great potential in a past article, as it can be the Saint Graal for some people who aim to integrate an "official" report with their own local files, but mixing together connection can incredibly deteriorate the query performance, because the model will make several queries before joining the results with the rest of the data. Still, be very cautious with composite models and keep an eye for future updates.
 
-The Composite Model blends a Live Connection (which essentially becomes a DirectQuery) with another DirectQuery or a local file in Import Mode. I won't delve too deeply into the specifics here because it's a relatively new feature with significant limitations, in my opinion. While I've highlighted its potential [in a previous article](https://mutt0-ds.github.io/posts/2023/03/what-power-bi-is-missing/), caution is warranted, as mixing connections can severely impact query performance. The model may execute several queries before joining the results with the rest of the data. Approach composite models with care and keep an eye out for future updates.
+The Composite Model blends a Live Connection (which essentially becomes a DirectQuery) with another DirectQuery or a local file in Import Mode. I won't delve too deeply into the specifics here because it's a relatively new feature with significant limitations, in my opinion. While I've highlighted its potential [in a previous article](https://mutto.fyi/posts/2023/03/what-power-bi-is-missing/), caution is warranted, as mixing connections can severely impact query performance. The model may execute several queries before joining the results with the rest of the data. Approach composite models with care and keep an eye out for future updates.
 
 ## Ah, and there is more!
 

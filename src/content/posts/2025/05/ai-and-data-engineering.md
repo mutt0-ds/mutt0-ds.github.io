@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/ai_data_engineers/pipeline.jpg
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - ai
   - data-engineering
@@ -24,7 +24,7 @@ Anthropic CEO even dropped a [spicy take](https://www.pcmag.com/news/anthropic-c
 
 Bold. But **what about data engineers**?
 
-And no, I’m not doing another ["AI is a tool, not a replacement" speech](https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/). That’s tired. A slightly better score on some synthetic coding benchmark doesn’t move the needle for me. Developers will adapt, and more opportunities will unlock.
+And no, I’m not doing another ["AI is a tool, not a replacement" speech](https://mutto.fyi/posts/2025/04/ai-generated-code/). That’s tired. A slightly better score on some synthetic coding benchmark doesn’t move the needle for me. Developers will adapt, and more opportunities will unlock.
 
 What I want to explore is this: 
 
@@ -86,7 +86,7 @@ We leave the realm of technology and step into something messier: corporate poli
 
 Sure, AI might help a non-technical person put together a working prototype and be more precise and convincing in the initial analysis. But will it slash 50% of these menial jobs like Anthropic CEO says?
 
-Not unless corporations get serious about automation, documentation, and [data culture change](https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/).
+Not unless corporations get serious about automation, documentation, and [data culture change](https://mutto.fyi/posts/2024/10/my-talk-about-data-culture/).
 
 
 ## 3. "Real" Data Engineering
@@ -112,7 +112,7 @@ Because **it lacks the nuance**. Just a few complications, off the top of my hea
 
 And even if the AI agent somehow gets the logic right… **how do you trust it?**
 
-[A hallucinated React component is easy to spot](https://mutt0-ds.github.io/posts/2025/04/ai-generated-code/). It crashes or looks weird. Bad data quietly poisons your reporting until someone in the C-suite sees a chart that doesn’t add up, and then suddenly, it’s your problem.
+[A hallucinated React component is easy to spot](https://mutto.fyi/posts/2025/04/ai-generated-code/). It crashes or looks weird. Bad data quietly poisons your reporting until someone in the C-suite sees a chart that doesn’t add up, and then suddenly, it’s your problem.
 
 The tooling is getting flashier, but the core problems are still human, still fuzzy, still hard to automate.
 

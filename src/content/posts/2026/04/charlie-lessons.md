@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/charlie_lessons/title.png
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - ai
   - software-engineering
@@ -27,13 +27,13 @@ Enjoy **10 lessons learned when building Charlie**!
 
 ### 1. Keep things simple
 
-[**Simplicity** is my mantra for everything](https://mutt0-ds.github.io/posts/2025/03/first-pitch/), but in the AI world, where there is constant noise, it is essential. It is incredibly easy to over-engineer. We initially thought Charlie needed a massive, multi-step reasoning chain for every query, complete with nested agents. However, we learned that for 80% of the questions, a direct path from data retrieval to natural language explanation is both more robust and faster. The key is providing more high-quality tools and fewer complex agent systems that only add friction between tasks.
+[**Simplicity** is my mantra for everything](https://mutto.fyi/posts/2025/03/first-pitch/), but in the AI world, where there is constant noise, it is essential. It is incredibly easy to over-engineer. We initially thought Charlie needed a massive, multi-step reasoning chain for every query, complete with nested agents. However, we learned that for 80% of the questions, a direct path from data retrieval to natural language explanation is both more robust and faster. The key is providing more high-quality tools and fewer complex agent systems that only add friction between tasks.
 
 ---
 
 ### 2. Design with evals in mind
 
-You can't improve what you can't measure. We built a dedicated evaluation pipeline early on because, in the LLM era, [**evals** are the new Test-Driven Development (TDD)](https://mutt0-ds.github.io/posts/2026/01/evals-help-build-reliable-ai/). By testing Charlie against a "golden dataset" of real-world financial queries, we ensured that every prompt tweak or model update didn't accidentally break core logic or introduce hallucinations.
+You can't improve what you can't measure. We built a dedicated evaluation pipeline early on because, in the LLM era, [**evals** are the new Test-Driven Development (TDD)](https://mutto.fyi/posts/2026/01/evals-help-build-reliable-ai/). By testing Charlie against a "golden dataset" of real-world financial queries, we ensured that every prompt tweak or model update didn't accidentally break core logic or introduce hallucinations.
 
 However, **building evals in a vacuum is a trap**. If you don't understand the specific context (the unique tasks, edge cases, and user intent) you're just flying blind. An evaluation framework only works if it mirrors the complexity of the actual environment Charlie operates in. Writing tests just for the sake of it will inevitably let real edge cases slip through.
 

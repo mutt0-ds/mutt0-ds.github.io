@@ -13,7 +13,7 @@ jobs:
 
       - uses: gautamkrishnar/blog-post-workflow@master
         with:
-          feed_list: "https://mutt0-ds.github.io/index.xml"
+          feed_list: "https://mutto.fyi/index.xml"
           max_post_count: 3
           date_format: "d mmm yyyy"
           template: "- $randomEmoji(📌,🚀,✨,📢,📝) [$title]($url) _(posted on $date)_$newline"

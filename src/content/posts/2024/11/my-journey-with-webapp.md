@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/web_app/cover.png
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - web-app
   - next.js
@@ -41,7 +41,7 @@ _Sneak Peek_:
 
 Let me be upfront - **I'm not a full stack developer**.
 
-My background is in Data Engineering and Data Science. While I'm comfortable with backend languages like Python and TypeScript, frontend development was my biggest challenge. My closest experience with frontend work was Power BI, which is an entirely different beast. I've already talked about my previous experiments [here (Tailwind)](https://mutt0-ds.github.io/posts/2022/06/my-books-tailwind/) and [here (Appsmith)](https://mutt0-ds.github.io/posts/2022/03/personal-airflow/).
+My background is in Data Engineering and Data Science. While I'm comfortable with backend languages like Python and TypeScript, frontend development was my biggest challenge. My closest experience with frontend work was Power BI, which is an entirely different beast. I've already talked about my previous experiments [here (Tailwind)](https://mutto.fyi/posts/2022/06/my-books-tailwind/) and [here (Appsmith)](https://mutto.fyi/posts/2022/03/personal-airflow/).
 
 The project emerged from a workplace challenge:**we had a legacy forecasting tool built in Excel**. Classic corporate story.
 

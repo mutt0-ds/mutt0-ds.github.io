@@ -21,7 +21,7 @@ const {
   wide = false,
 } = Astro.props;
 
-const siteName = 'Mutt0-ds Notes';
+const siteName = 'My notes';
 const isHome = Astro.url.pathname === '/';
 const fullTitle = isHome ? title : `${title} · ${siteName}`;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
