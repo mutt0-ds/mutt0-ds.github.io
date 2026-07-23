@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/obsidian/vault_animated.gif
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - obsidian
   - notes
@@ -15,7 +15,7 @@ tags:
   - update
   - python
 ---
-It's been quite the journey since I first delved into Second Brain technologies for organizing my team's documentation. I previously shared my initial experiences with Obsidian, and now, it's time for a comprehensive update. In case you missed my earlier exploration, you can catch up [here](https://mutt0-ds.github.io/posts/2023/02/obsidian-productivity-second-brain/).
+It's been quite the journey since I first delved into Second Brain technologies for organizing my team's documentation. I previously shared my initial experiences with Obsidian, and now, it's time for a comprehensive update. In case you missed my earlier exploration, you can catch up [here](https://mutto.fyi/posts/2023/02/obsidian-productivity-second-brain/).
 
 So, what has changed?
 Let's dive right in. Since my last update, I've continued to utilize Obsidian for secure and structured note organization within my team, enjoying the rapid and intuitive process and enjoying its advantages (flexibility, powerful search system,  security, and so on). I'm still in the "honeymoon" phase.

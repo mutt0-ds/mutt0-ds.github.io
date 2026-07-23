@@ -16,7 +16,7 @@ I would add that tools such as DAX Studio and Tabular Editor become very importa
 
 All the examples are well made and useful both to understand the concept in practice and for a future case where I might have a similar problem and can compare strategies. For this second case, there are entire chapters marked with 🔄 to review later so as not to forget them. Strongly recommended!
 
-I already wrote a blog post based on these notes, so the polished version is this one: https://mutt0-ds.github.io/posts/2022/03/personal-airflow/
+I already wrote a blog post based on these notes, so the polished version is this one: https://mutto.fyi/posts/2022/03/personal-airflow/
 
 ## Notes
 

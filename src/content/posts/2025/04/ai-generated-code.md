@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/vibe_coding/ollivander.gif
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - ai
   - coding
@@ -51,7 +51,7 @@ That's why AI is perfect for prototyping: I knew this wouldn't ship to productio
 
 I first tried mocking up the confuse idea in my mind using [Figma](https://www.figma.com/) and [Framer](https://www.framer.com/), but static designs couldn't capture the flow I wanted: *me chatting with an AI agent -> the agent updating report data in real time*. Or maybe it was just me being bad at using them 😇.
 
-So I decided to set up [Cursor](https://www.cursor.com/) (my favorite IDE at the moment) and created a new project. It was a Next.js web app, because [I've already some experience with it](https://mutt0-ds.github.io/posts/2024/11/my-journey-with-webapp/), and it was a complete solution for creating and interactive web application to show what I had in mind.
+So I decided to set up [Cursor](https://www.cursor.com/) (my favorite IDE at the moment) and created a new project. It was a Next.js web app, because [I've already some experience with it](https://mutto.fyi/posts/2024/11/my-journey-with-webapp/), and it was a complete solution for creating and interactive web application to show what I had in mind.
 
 Finally I had some time to try to experiment a little bit without the pressure of a complex codebase to handle. I had something in my mind, and the freedom to create everything I wanted.
 

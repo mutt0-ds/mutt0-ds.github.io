@@ -11,7 +11,7 @@ summary: Each culture has behavioral tendencies that can be mapped so you are no
 showInHome: false
 ---
 
-Recommended on Gitbar by Alfonso Graziano, a solid book for understanding how people from different cultures communicate with you. The book is excellent; it added fundamental pieces to that great master's course on different cultures. I wrote my own blog post about it here: https://mutt0-ds.github.io/posts/2024/09/the-culture-map/
+Recommended on Gitbar by Alfonso Graziano, a solid book for understanding how people from different cultures communicate with you. The book is excellent; it added fundamental pieces to that great master's course on different cultures. I wrote my own blog post about it here: https://mutto.fyi/posts/2024/09/the-culture-map/
 
 Another good summary here: https://www.patkua.com/blog/book-notes-the-culture-map-by-erin-meyer/
 

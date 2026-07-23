@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/ai_architecture/Title.png
 draft: true
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - ai
   - software-engineering
@@ -15,7 +15,7 @@ tags:
   - framework
 ---
 
-Lately, I've been sharing more and more about what I learned when building an AI architecture for a classic AI chat agent (like we did with [Charlie](https://mutt0-ds.github.io/posts/2026/04/charlie-lessons/)). 
+Lately, I've been sharing more and more about what I learned when building an AI architecture for a classic AI chat agent (like we did with [Charlie](https://mutto.fyi/posts/2026/04/charlie-lessons/)). 
 I think it's a good time to map out the main components, along with the little tips and tricks I picked up along the way.
 
 Keep in mind that **all of this comes straight from my own hands-on experience**. 
@@ -90,7 +90,7 @@ I wouldn't stress about over-engineering this part because it depends entirely o
 <div style="max-width: 1451px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 63.5236%;"><iframe src="https://iframely.net/OmPzvBSh?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 Each agent will have **a set of tools** at its disposal. 
-Think of them as skills, [plugins, MCPs, whatever you want to call them](https://mutt0-ds.github.io/posts/2024/06/ai-superpowers-tools/)... Essentially functions the agent can call to fetch data and provide better responses.
+Think of them as skills, [plugins, MCPs, whatever you want to call them](https://mutto.fyi/posts/2024/06/ai-superpowers-tools/)... Essentially functions the agent can call to fetch data and provide better responses.
 
 Let's look at a basic example like web search.
 You can enable it natively through your SDK (for instance, the [Gemini SDK has a native WebSearch](https://ai.google.dev/gemini-api/docs/google-search) tool), and the LLM just needs clear instructions on when to invoke it.
@@ -133,7 +133,7 @@ Also, pay close attention to custom fields inside your tools. If you allow unfil
 
 To me, this is completely non-negotiable, the equivalent of unit testing for traditional applications. **You need a resilient evaluation suite**.
 
-[As I wrote in my previous post on Evals](https://mutt0-ds.github.io/posts/2026/01/evals-help-build-reliable-ai/), these suites should run automatically every single time you alter a main prompt or a tool definition to ensure you haven't introduced regressions.
+[As I wrote in my previous post on Evals](https://mutto.fyi/posts/2026/01/evals-help-build-reliable-ai/), these suites should run automatically every single time you alter a main prompt or a tool definition to ensure you haven't introduced regressions.
 
 This ties directly into eval-driven development. Start with a defined goal: you usually don't want an AI agent that attempts to do literally everything; you want it bounded to a few core tasks. 
 **Every single one of those core tasks MUST BE AN EVAL CASE**. Run them continuously to make sure that a prompt tweak designed to fix feature A doesn't accidentally completely break feature B.
@@ -150,11 +150,11 @@ We've only scratched the surface, but here are a few final infrastructure points
 - **Configuration**: in production, you need the agility to deploy an emergency prompt hot-fix instantly without waiting for a full 10-minute CI/CD deployment pipeline. Store your base prompts, model settings, and configurations in a database that can be synced to the orchestrator
 - A solid **Observability** Layer: you absolutely need deep tracing for debugging when something goes wrong, and to track hallucinations, token spend, and other KPIs. There are plenty of great production solutions out there, many of which are completely self-hostable
 - Graceful **fallbacks**: LLMs fail, rate limits get hit, and cloud vendor APIs go down. You should always have a backup model hosted by an entirely different provider ready to take over if your main provider becomes unresponsive: it's the only way to ensure high uptime
-- **Memory** management: all the conversational APIs let you pass previous messages back to the model to maintain a coherent conversation flow (otherwise, the AI has total amnesia on every new turn). However, keep two things in mind: 1. it really helps to enforce structured [long-term memory](https://mutt0-ds.github.io/posts/2026/05/long-term-memory/), 2. keep a close eye on long chat sessions. They will eventually need to be truncated or summarized to save on token costs and prevent overloading the context window of your smaller, fast utility models.
+- **Memory** management: all the conversational APIs let you pass previous messages back to the model to maintain a coherent conversation flow (otherwise, the AI has total amnesia on every new turn). However, keep two things in mind: 1. it really helps to enforce structured [long-term memory](https://mutto.fyi/posts/2026/05/long-term-memory/), 2. keep a close eye on long chat sessions. They will eventually need to be truncated or summarized to save on token costs and prevent overloading the context window of your smaller, fast utility models.
 
 ## Wrap up
 
 Those were the pillars for a good conversational AI architecture: something I've refined over the years building different projects in different areas.
-I know we just had a very quick overview of a vast, complex and rapidly-evolving world, but I hope this was helpful! I was looking for a post like this before creating [Charlie](https://mutt0-ds.github.io/posts/2026/04/charlie-lessons/).
+I know we just had a very quick overview of a vast, complex and rapidly-evolving world, but I hope this was helpful! I was looking for a post like this before creating [Charlie](https://mutto.fyi/posts/2026/04/charlie-lessons/).
 If you have any question or want to explore a point in more depth, [you know where to find me](https://www.linkedin.com/in/davide-muttoni-77b134194/).
 

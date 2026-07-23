@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/first_pitch/title.png
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - data-culture
   - slides
@@ -18,7 +18,7 @@ I joined InvestSuite 3 months ago and it was finally time to present the product
 
 I was nervous.
 
-I’ve given many presentations in the past (to hundreds of people, even at [a conference](https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/)) so this wasn’t entirely new to me. But I’m shy by nature, and presenting doesn’t come easily to me. This time, it felt different because the stakes were higher: **it was about selling our product**.
+I’ve given many presentations in the past (to hundreds of people, even at [a conference](https://mutto.fyi/posts/2024/10/my-talk-about-data-culture/)) so this wasn’t entirely new to me. But I’m shy by nature, and presenting doesn’t come easily to me. This time, it felt different because the stakes were higher: **it was about selling our product**.
 
 On top of that, explaining StoryTeller is tricky, even to a technical audience. It’s a financial reporting product with a lot of technical, mathematical and financial nuances. You could spend hours discussing it. I’ve been working on it for two months, and there are still parts of its logic I need to review with my PM because they’re not clear to me yet!
 

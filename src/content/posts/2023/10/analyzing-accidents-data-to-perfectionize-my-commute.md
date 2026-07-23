@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/commute_data/commute_title_v2.jpg
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - power-bi
   - traffic
@@ -14,7 +14,7 @@ tags:
   - google-maps
   - data-analysis
 ---
-I want to express my gratitude for the positive feedbacks I received a few months ago when [I used Google Maps data to determine the best times for the daily commute](https://mutt0-ds.github.io/posts/2023/07/analyzing-commute-data-using-google-api/). TL;DR: Mondays are the best, while Wednesdays, and early Fridays are the trickiest times to hit the road.
+I want to express my gratitude for the positive feedbacks I received a few months ago when [I used Google Maps data to determine the best times for the daily commute](https://mutto.fyi/posts/2023/07/analyzing-commute-data-using-google-api/). TL;DR: Mondays are the best, while Wednesdays, and early Fridays are the trickiest times to hit the road.
 
 However, the neatness of this analysis takes a hit when real-world unpredictabilities come into play. Things like heavy traffic, rain, road closures due to accidents, or just that one slow driver in front of you can disrupt even the best-planned routes. So, it's essential to view these explorations as "what if" games. They provide a general framework but can't fully account for the chaos of everyday life.
 
@@ -36,7 +36,7 @@ The last steps involved filtering the coordinates to focus only on my commute ar
 
 ## 📊 A Peek with Power BI
 
-Instead of relying solely on Python's [seaborn](https://seaborn.pydata.org/) for data visualization, I turned to a more potent tool I use in my daily job, Microsoft Power BI (I already wrote about it [here](https://mutt0-ds.github.io/tags/power-bi/)). My first task was to create a map of accidents, color-coded by severity, much like the one on the [Swiss website](https://map.geo.admin.ch/?topic=vu&lang=en&bgLayer=ch.swisstopo.pixelkarte-grau&layers=ch.astra.unfaelle-personenschaeden_alle%2Cch.swisstopo.swissnames3d&layers_timestamp=99990101%2C&E=2652000.00&N=1171625.00&zoom=2&catalogNodes=1318).
+Instead of relying solely on Python's [seaborn](https://seaborn.pydata.org/) for data visualization, I turned to a more potent tool I use in my daily job, Microsoft Power BI (I already wrote about it [here](https://mutto.fyi/tags/power-bi/)). My first task was to create a map of accidents, color-coded by severity, much like the one on the [Swiss website](https://map.geo.admin.ch/?topic=vu&lang=en&bgLayer=ch.swisstopo.pixelkarte-grau&layers=ch.astra.unfaelle-personenschaeden_alle%2Cch.swisstopo.swissnames3d&layers_timestamp=99990101%2C&E=2652000.00&N=1171625.00&zoom=2&catalogNodes=1318).
 
 <div style="max-width: 1148px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75.5486%;"><iframe src="//iframely.net/f5TLmf2" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 

@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/memory/title.png
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - ai
   - software-engineering
@@ -36,7 +36,7 @@ I still remember when I told my ChatGPT: *"YOU MUST ALWAYS TALK TO ME IN A CONCI
 
 <div style="max-width: 1051px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.2009%;"><iframe src="https://iframely.net/AxA7kYh9?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
-I also noticed this with technical tools like [CodeRabbit](https://mutt0-ds.github.io/posts/2026/02/code-rabbit/). At some point, fed up with wrong PR comments, I repeatedly told the bot we were using Pydantic V1 (it was assuming V2). It stored that information in long-term memory and stopped flagging non-existent issues for good.
+I also noticed this with technical tools like [CodeRabbit](https://mutto.fyi/posts/2026/02/code-rabbit/). At some point, fed up with wrong PR comments, I repeatedly told the bot we were using Pydantic V1 (it was assuming V2). It stored that information in long-term memory and stopped flagging non-existent issues for good.
 
 That's incredibly cool because it really feels like talking to a human. You don't need to change prompts or hardcode instructions, the model "learns" in real time.
 
@@ -140,7 +140,7 @@ The core idea is pretty simple, based on the graph memory I previously mentioned
 
 Instead of treating memory as static storage, the system continuously revisits and restructures information over time, similar to how humans reinforce or forget memories. 
 
-Hindsight also features a nice graph view so you can explore the memory freely, just like a "second brain". It reminds me a lot of [my Obsidian vault](https://mutt0-ds.github.io/posts/2023/09/obsidian-update-6-months-later/).
+Hindsight also features a nice graph view so you can explore the memory freely, just like a "second brain". It reminds me a lot of [my Obsidian vault](https://mutto.fyi/posts/2023/09/obsidian-update-6-months-later/).
 
 <div style="max-width: 4014px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 61.7339%;"><iframe src="https://iframely.net/qiKmGy5j?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 

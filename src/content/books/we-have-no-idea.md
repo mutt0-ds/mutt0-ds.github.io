@@ -14,4 +14,4 @@ _We should be EXCITED about all the things we still do not know_
 
 Recommended by Mr. Rip. It is a popular science book about what we know about the universe, full of illustrations. Masterpiece. Wonderful book. 
 
-I loved the narrative style, fun and light, and very clear and specific when needed. I learned a ton of things, from theories of everything, quarks, black holes, the speed of light, space, time, the Big Bang, and dark matter and energy. Highly recommended. I wrote a full summary here: https://mutt0-ds.github.io/posts/2025/06/we-have-no-idea-book/
+I loved the narrative style, fun and light, and very clear and specific when needed. I learned a ton of things, from theories of everything, quarks, black holes, the speed of light, space, time, the Big Bang, and dark matter and energy. Highly recommended. I wrote a full summary here: https://mutto.fyi/posts/2025/06/we-have-no-idea-book/

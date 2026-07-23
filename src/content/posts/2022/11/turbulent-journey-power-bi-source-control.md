@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/power_bi_source_control/title.jpg
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - source-control
   - power-bi

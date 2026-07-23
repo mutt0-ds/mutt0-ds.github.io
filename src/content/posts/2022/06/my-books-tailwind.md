@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/selected-book.png
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - tailwind
   - angular

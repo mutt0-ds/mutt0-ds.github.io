@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/evals/title.png
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - ai
   - testing
@@ -13,7 +13,7 @@ tags:
   - communication
 ---
 
-I finished 2025 with [a negative AI post](https://mutt0-ds.github.io/posts/2025/12/on-ai-slop/), so let's start 2026 with a positive one.
+I finished 2025 with [a negative AI post](https://mutto.fyi/posts/2025/12/on-ai-slop/), so let's start 2026 with a positive one.
 
 I'm leading a project for an AI-based tool, and something we are heavily experimenting with is **eval-driven development**. Technical readers may immediately associate this with [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development), and there are similarities, but because AI is non-deterministic, there is more going on here.
 

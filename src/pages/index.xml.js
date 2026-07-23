@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 export async function GET(context) {
   const posts = await getCollection('posts', ({ data }) => !data.draft);
   return rss({
-    title: 'Mutt0-ds Notes',
+    title: 'My notes',
     description: "Davide Muttoni's notes on AI, data engineering, and software",
     site: context.site,
     items: posts

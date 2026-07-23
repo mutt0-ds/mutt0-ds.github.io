@@ -5,7 +5,7 @@ github_link: "https://github.com/mutt0-ds/mutt0-ds.github.io"
 description: ""
 image: /images/datacamp_fabric/datacamp_course.jfif
 draft: false
-author: "Mutt0-ds"
+author: "Davide Muttoni"
 tags:
   - fabric
   - power-bi
@@ -18,7 +18,7 @@ I just published [an online course](https://app.datacamp.com/learn/courses/plan-
 Honestly, I never imagined I’d say, “I’m a teacher”...
 It feels pretty wild, but here I am!
 
-This project kept me busy for months, and I’m really proud of how it turned out. Fabric is way more complex than Power BI. It's a complete data platform with several services, and there’s not much in-depth content out there for those who want to learn about the technical side. With [my experience in a large organization](https://mutt0-ds.github.io/posts/2024/10/my-talk-about-data-culture/), where I learned about Power BI and Fabric firsthand, I was excited to share what I know.
+This project kept me busy for months, and I’m really proud of how it turned out. Fabric is way more complex than Power BI. It's a complete data platform with several services, and there’s not much in-depth content out there for those who want to learn about the technical side. With [my experience in a large organization](https://mutto.fyi/posts/2024/10/my-talk-about-data-culture/), where I learned about Power BI and Fabric firsthand, I was excited to share what I know.
 
 I’m confident this course will help a lot of people, which is why I decided to partner with [Datacamp](https://datacamp.com/).
 
