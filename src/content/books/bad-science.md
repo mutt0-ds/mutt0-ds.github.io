@@ -3,7 +3,7 @@ title: Bad Science
 author: Ben Goldacre
 image: /images/book-covers/bad-science.jpeg
 badges:
-- "🔬 Science"
+- "⚛️ Science"
 score: "⭐⭐⭐⭐"
 finished: '2023-07-20'
 summary: We have biases that charlatans and marketers exploit to sell us nonsense. Watch out

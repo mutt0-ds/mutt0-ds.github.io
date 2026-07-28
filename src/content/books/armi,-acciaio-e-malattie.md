@@ -4,7 +4,7 @@ author: Jared Diamond
 image: https://m.media-amazon.com/images/I/81r52EwyncL._SL1500_.jpg
 badges:
 - "🗿 History"
-- "⚛ Science"
+- "⚛️ Science"
 score: "⭐⭐⭐"
 finished: '2024-07-25'
 summary: "Human society evolved this way, with these disparities, because of a simple question of geography. Eurasia starts ahead "

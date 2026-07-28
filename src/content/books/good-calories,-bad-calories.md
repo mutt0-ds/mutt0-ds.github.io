@@ -3,7 +3,7 @@ title: Good Calories, Bad Calories
 author: Gary Taubes
 image: https://images-na.ssl-images-amazon.com/images/I/412EtoK9cEL._SX325_BO1,204,203,200_.jpg
 badges:
-- "⚛ Science"
+- "⚛️ Science"
 score: "⭐️"
 finished: '2022-03-28'
 summary: Carbohydrates and sugars cause more problems than fats
