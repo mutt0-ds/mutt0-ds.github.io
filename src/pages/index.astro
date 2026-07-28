@@ -26,7 +26,7 @@ const shelfBooks = [...allBooks]
     if (byRating !== 0) return byRating;
     return b.data.finished.valueOf() - a.data.finished.valueOf();
   })
-  .slice(0, 10);
+  .slice(0, 24);
 ---
 
 <BaseLayout title="Davide Muttoni">

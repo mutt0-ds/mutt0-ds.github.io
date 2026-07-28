@@ -96,6 +96,36 @@
   pointer-events: none;
 }
 
+/* ---------- book cover as object ---------- */
+
+/* Makes a cover image read as a bound book: spine shading on the left
+   edge, fore-edge rounding on the right, a soft shadow underneath. Used
+   on the home shelf, the books grid, and the single-book header. */
+.book-object {
+  position: relative;
+  border-radius: 2px 4px 4px 2px;
+  overflow: hidden;
+  box-shadow: 0 12px 16px -12px rgba(5, 25, 30, 0.5);
+}
+
+.book-object::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.18),
+    rgba(255, 255, 255, 0.16) 4%,
+    rgba(0, 0, 0, 0.08) 8%,
+    transparent 14%,
+    transparent 96%,
+    rgba(0, 0, 0, 0.07)
+  );
+}
+
 /* ---------- shared section furniture ---------- */
 
 .page-title {

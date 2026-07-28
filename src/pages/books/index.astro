@@ -29,7 +29,7 @@ const slugs = books.map((book) => book.id);
       books.map((book) => (
         <li>
           <a class="book-card" href={`/books/${book.id}/`}>
-            <div class="book-cover-wrap">
+            <div class="book-cover-wrap book-object">
               <img
                 class="book-cover"
                 src={book.data.image}
@@ -134,8 +134,13 @@ const slugs = books.map((book) => book.id);
   }
 
   .book-cover-wrap {
-    border-radius: 4px;
-    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .book-card:hover .book-cover-wrap,
+  .book-card:focus-visible .book-cover-wrap {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 18px -12px rgba(5, 25, 30, 0.45);
   }
 
   .book-cover {
