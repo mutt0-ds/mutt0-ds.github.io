@@ -7,115 +7,315 @@ interface Props {
 
 const { books } = Astro.props;
 
-// A repeating cycle of hand-tuned height/tilt profiles — gives the shelf an
-// organic, varied silhouette (like a real shelf) without true randomness,
-// so the layout stays stable across rebuilds.
-const PROFILES = [
-  { h: 150, tilt: -1.2 },
-  { h: 232, tilt: 0.8 },
-  { h: 182, tilt: -0.6 },
-  { h: 162, tilt: 1.3 },
-  { h: 152, tilt: -1.6 },
-  { h: 140, tilt: 0.5 },
-  { h: 212, tilt: -0.9 },
-  { h: 192, tilt: 1.1 },
-];
-
-// Real book titles vary far more than the height profiles above were tuned
-// for, and CSS text-overflow:ellipsis doesn't reliably render in this
-// vertical-writing-mode + flex setup — so truncate for real, with an actual
-// "…" character, sized to what each spine's own height can hold.
-// Measured directly in-browser (Iowan Old Style/Palatino/Georgia @ 0.82rem,
-// vertical-rl): ~5.6-6.5px per character across 10 real titles, average 6.06.
-// Budget at 6.6px/char — just above the observed max — for a small safety
-// margin without truncating harder than necessary.
-const PX_PER_CHAR = 6.6;
-function truncateForHeight(title: string, height: number): string {
-  const maxChars = Math.floor((height - 28) / PX_PER_CHAR);
-  if (title.length <= maxChars) return title;
-  return `${title.slice(0, Math.max(maxChars - 1, 1)).trimEnd()}…`;
-}
+// A repeating cycle of hand-tuned cover heights — real books don't line up
+// perfectly, so a gentle height variation keeps the shelf organic without
+// true randomness (layout stays stable across rebuilds).
+const HEIGHTS = [168, 150, 176, 158, 144, 172, 154, 164];
 ---
 
-<ul class="shelf">
-  {
-    books.map((book, i) => {
-      const profile = PROFILES[i % PROFILES.length];
-      return (
-        <li class="spine">
-          <a href={`/books/${book.id}/`} style={`--h:${profile.h}px;--tilt:${profile.tilt}deg`} title={book.data.title}>
-            {truncateForHeight(book.data.title, profile.h)}
-          </a>
-        </li>
-      );
-    })
-  }
-</ul>
-<div class="shelf-ledge" aria-hidden="true"></div>
+<div class="shelf-scene at-start">
+  <button class="shelf-arrow shelf-prev" type="button" aria-label="Scroll shelf backward" disabled>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6" /></svg>
+  </button>
+
+  <div class="shelf-viewport">
+    <ul class="shelf-row">
+      {
+        books.map((book, i) => (
+          <li class="book" style={`--h:${HEIGHTS[i % HEIGHTS.length]}px`}>
+            <a
+              class="book-object"
+              href={`/books/${book.id}/`}
+              aria-label={`${book.data.title} — ${book.data.author}`}
+              title={book.data.title}
+            >
+              <span class="book-fallback" aria-hidden="true">{book.data.title}</span>
+              <img
+                src={book.data.image}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                draggable="false"
+                onerror="this.style.display='none'"
+              />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div class="shelf-ledge" aria-hidden="true"></div>
+
+  <button class="shelf-arrow shelf-next" type="button" aria-label="Scroll shelf forward">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+  </button>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.shelf-scene').forEach((scene) => {
+    const viewport = scene.querySelector<HTMLElement>('.shelf-viewport');
+    const prev = scene.querySelector<HTMLButtonElement>('.shelf-prev');
+    const next = scene.querySelector<HTMLButtonElement>('.shelf-next');
+    if (!viewport || !prev || !next) return;
+
+    const update = () => {
+      const max = viewport.scrollWidth - viewport.clientWidth;
+      const atStart = viewport.scrollLeft <= 2;
+      const atEnd = viewport.scrollLeft >= max - 2;
+      scene.classList.toggle('no-scroll', max <= 4);
+      scene.classList.toggle('at-start', atStart);
+      scene.classList.toggle('at-end', atEnd);
+      prev.disabled = atStart;
+      next.disabled = atEnd;
+    };
+
+    const step = (dir: number) => {
+      const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      viewport.scrollBy({ left: dir * viewport.clientWidth * 0.8, behavior: smooth ? 'smooth' : 'auto' });
+    };
+
+    prev.addEventListener('click', () => step(-1));
+    next.addEventListener('click', () => step(1));
+    viewport.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+
+    // drag-to-scroll for mouse; touch already pans natively
+    let startX = 0;
+    let startScroll = 0;
+    let dragging = false;
+    let moved = false;
+
+    viewport.addEventListener('pointerdown', (e) => {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      dragging = true;
+      moved = false;
+      startX = e.clientX;
+      startScroll = viewport.scrollLeft;
+    });
+
+    viewport.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      const dx = e.clientX - startX;
+      if (!moved && Math.abs(dx) > 5) {
+        moved = true;
+        viewport.classList.add('dragging');
+        viewport.setPointerCapture(e.pointerId);
+      }
+      if (moved) viewport.scrollLeft = startScroll - dx;
+    });
+
+    const endDrag = () => {
+      dragging = false;
+      viewport.classList.remove('dragging');
+    };
+    viewport.addEventListener('pointerup', endDrag);
+    viewport.addEventListener('pointercancel', endDrag);
+
+    // a drag must not count as a click on the book it ended over
+    viewport.addEventListener(
+      'click',
+      (e) => {
+        if (moved) {
+          e.preventDefault();
+          e.stopPropagation();
+          moved = false;
+        }
+      },
+      { capture: true }
+    );
+    viewport.addEventListener('dragstart', (e) => e.preventDefault());
+
+    update();
+  });
+</script>
 
 <style>
-  .shelf {
-    list-style: none;
-    margin: 0;
-    padding: 6px 4px 0;
-    display: flex;
-    align-items: flex-end;
-    gap: 8px;
+  /* The shelf bleeds past the text column (mirroring the main padding),
+     like the lake mark does — a full-width band rather than a boxed widget. */
+  .shelf-scene {
+    position: relative;
+    margin-inline: calc(-1 * clamp(20px, 5vw, 32px));
+    margin-bottom: 10px;
+  }
+
+  .shelf-viewport {
+    position: relative;
+    z-index: 1;
     overflow-x: auto;
     overflow-y: hidden;
-    scrollbar-width: thin;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    /* top padding gives the hover lift headroom inside the scroll clip */
+    padding: 22px 0 0;
+    /* books dissolve at the edges instead of hard-clipping; each side
+       fades only while there is more content in that direction */
+    --fade-l: 0px;
+    --fade-r: 0px;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 var(--fade-l),
+      #000 calc(100% - var(--fade-r)),
+      transparent
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 var(--fade-l),
+      #000 calc(100% - var(--fade-r)),
+      transparent
+    );
+  }
+
+  .shelf-scene:not(.at-start) .shelf-viewport {
+    --fade-l: 56px;
+  }
+
+  .shelf-scene:not(.at-end) .shelf-viewport {
+    --fade-r: 56px;
+  }
+
+  .shelf-viewport.dragging {
+    cursor: grabbing;
+  }
+
+  .shelf-viewport.dragging :global(a) {
+    cursor: grabbing;
+  }
+
+  .shelf-viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  .shelf-row {
+    list-style: none;
+    margin: 0;
+    padding: 0 clamp(20px, 5vw, 32px);
+    display: flex;
+    align-items: flex-end;
+    gap: clamp(14px, 2vw, 22px);
+    min-width: min-content;
+  }
+
+  .no-scroll .shelf-row {
+    justify-content: center;
+  }
+
+  .book {
+    flex: none;
+  }
+
+  .book a {
+    display: block;
+    width: calc(var(--h, 160px) * 0.66);
+    height: var(--h, 160px);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .book a:hover,
+  .book a:focus-visible {
+    transform: translateY(-9px);
+    box-shadow: 0 24px 22px -14px rgba(5, 25, 30, 0.5);
+  }
+
+  .book img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--paper-shade);
+  }
+
+  .book-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 9px;
+    text-align: center;
+    overflow: hidden;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    line-height: 1.35;
+    color: var(--ink);
+  }
+
+  .book:nth-child(4n + 1) .book-fallback {
+    background: var(--spine-1);
+  }
+  .book:nth-child(4n + 2) .book-fallback {
+    background: var(--spine-2);
+  }
+  .book:nth-child(4n + 3) .book-fallback {
+    background: var(--spine-3);
+  }
+  .book:nth-child(4n + 4) .book-fallback {
+    background: var(--spine-4);
   }
 
   .shelf-ledge {
     height: 2px;
-    margin: 0 4px 20px;
     background: linear-gradient(90deg, transparent, var(--hairline) 10%, var(--accent) 45%, var(--hairline) 90%, transparent);
     opacity: 0.55;
   }
 
-  .spine {
-    flex: none;
-  }
-
-  .spine a {
+  .shelf-arrow {
+    position: absolute;
+    z-index: 2;
+    /* viewport top padding + half the tallest cover */
+    top: 110px;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 14px 6px;
-    width: 40px;
-    height: var(--h, 160px);
-    overflow: hidden;
-    border-radius: 3px 3px 1px 1px;
-    text-decoration: none;
-    color: var(--ink);
-    writing-mode: vertical-rl;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-family: var(--font-display);
-    font-size: 0.82rem;
-    line-height: 1.15;
-    background-image: linear-gradient(180deg, var(--spine-sheen) 0%, transparent 48%);
-    box-shadow: inset -3px 0 0 rgba(0, 0, 0, 0.06);
-    transform: rotate(var(--tilt, 0deg));
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--hairline);
+    background: var(--paper-shade);
+    color: var(--ink-70);
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
   }
 
-  .spine a:hover,
-  .spine a:focus-visible {
-    transform: translateY(-10px) rotate(calc(var(--tilt, 0deg) - 1deg));
-    box-shadow: 0 10px 16px -8px rgba(0, 0, 0, 0.28), inset -3px 0 0 rgba(0, 0, 0, 0.06);
+  .shelf-prev {
+    left: 4px;
   }
 
-  .spine:nth-child(4n+1) a {
-    background-color: var(--spine-1);
+  .shelf-next {
+    right: 4px;
   }
-  .spine:nth-child(4n+2) a {
-    background-color: var(--spine-2);
+
+  .shelf-arrow svg {
+    width: 15px;
+    height: 15px;
   }
-  .spine:nth-child(4n+3) a {
-    background-color: var(--spine-3);
+
+  .shelf-arrow:hover:not(:disabled),
+  .shelf-arrow:focus-visible {
+    color: var(--accent);
+    border-color: var(--accent);
   }
-  .spine:nth-child(4n+4) a {
-    background-color: var(--spine-4);
+
+  .shelf-arrow:disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .no-scroll .shelf-arrow {
+    display: none;
+  }
+
+  @media (max-width: 720px) {
+    .shelf-arrow {
+      display: none;
+    }
   }
 </style>
