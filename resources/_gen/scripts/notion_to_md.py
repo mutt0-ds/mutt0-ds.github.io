@@ -13,6 +13,7 @@ load_dotenv()
 NOTION_TOKEN = os.getenv("NOTION_TOKEN")
 DATABASE_ID = os.getenv("DATABASE_ID")
 OUTPUT_DIR = Path("../../../content/todo")
+BOOKS_DIR = Path("../../../src/content/books")
 notion = Client(auth=NOTION_TOKEN)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -101,8 +102,8 @@ def main():
         author = [a["name"] for a in props.get("Author", {}).get("multi_select", [])]
         tags = [t["name"] for t in props.get("🏷 Tag", {}).get("multi_select", [])]
         summary = get_text(props.get("In a Nutshell", {"type": "rich_text", "rich_text": []}))
-        score = props.get("Score /5", {}).get("select", {}).get("name", "")
-        finished_date = props.get("Finito Il", {}).get("date", {}).get("start", "")
+        score = (props.get("Score /5", {}).get("select") or {}).get("name", "")
+        finished_date = (props.get("Finito Il", {}).get("date") or {}).get("start", "")
 
         cover = ""
         if files := props.get("Cover", {}).get("files"):
@@ -127,13 +128,11 @@ def main():
         md_path = OUTPUT_DIR / filename
 
         # ✅ Skip if already exported
-        if (Path("../../../content/books") / filename).exists():
+        if (BOOKS_DIR / filename).exists():
             print(f"⏩ Skipping {title} (already exists)")
             continue
 
         content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n\n"
-        if summary:
-            content += f"_{summary}_\n\n"
         content += page_content_md + "\n"
 
         md_path.write_text(content, encoding="utf-8")

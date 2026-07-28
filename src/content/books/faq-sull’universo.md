@@ -3,7 +3,7 @@ title: "Frequently Asked Questions About the Universe"
 author: Jorge Cham
 image: https://m.media-amazon.com/images/I/91eVvEt5+7L._SL1500_.jpg
 badges:
-- "⚛ Science"
+- "⚛️ Science"
 score: "⭐️⭐️⭐️⭐️"
 finished: '2025-07-10'
 summary: "It's great to ask lots of questions about the universe, and even if we still do not know much, scientists are doing a lot of important work"

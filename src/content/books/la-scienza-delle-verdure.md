@@ -4,7 +4,7 @@ author: Dario Bressanini
 image: 'https://m.media-amazon.com/images/I/71BbeRJiMPL._SL1203_.jpg'
 badges:
 - "🗺 Current Affairs"
-- "⚛ Science"
+- "⚛️ Science"
 score: "⭐️⭐️⭐️"
 finished: '2023-09-09'
 summary: "The microwave can help a lot. Watch food storage."

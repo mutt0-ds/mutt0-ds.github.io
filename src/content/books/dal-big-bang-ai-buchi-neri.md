@@ -3,7 +3,7 @@ title: A Brief History of Time - From the Big Bang to Black Holes
 author: Stephen Hawkins
 image: https://m.media-amazon.com/images/I/91ebghaV-eL._SL1500_.jpg
 badges:
-- "🔬 Science"
+- "⚛️ Science"
 score: "⭐️⭐️⭐️⭐️"
 finished: '2020-05-14'
 summary: With a complete theory we will explain why the universe exists; it would mark the triumph of human reason, for then we would know the mind of God.

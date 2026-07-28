@@ -3,7 +3,7 @@ title: 'The Creativity Code: How AI is Learning to Write, Paint and Think'
 author: Marcus Du Sautoy
 image: https://m.media-amazon.com/images/I/71f7iYpYB8L._SL1500_.jpg
 badges:
-- "⚛ Science"
+- "⚛️ Science"
 score: "⭐️⭐️"
 finished: '2024-09-01'
 summary: "Don't fear AI: behind it are rigorous mathematical rules, whose evolution has been very slow"

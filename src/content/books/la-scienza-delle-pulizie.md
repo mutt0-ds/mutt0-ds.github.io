@@ -4,7 +4,7 @@ author: Dario Bressanini
 image: https://m.media-amazon.com/images/I/71kYXNlLOAL._SL1500_.jpg
 badges:
 - "🧘‍♀️ Lifestyle"
-- "⚛ Science"
+- "⚛️ Science"
 score: "⭐️⭐️⭐️⭐️"
 finished: '2023-08-09'
 summary: Knowing a bit of chemistry can help us navigate this world of fake news and wrong tricks. Acids and bases cancel each other out. And never mix things at random.
