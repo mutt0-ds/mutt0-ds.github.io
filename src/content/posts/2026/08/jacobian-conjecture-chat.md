@@ -22,11 +22,11 @@ And it left me thinking.
 
 What struck me first is how the LLM immediately switches tone when the question is technical. Like when Tao wrote `I can see why the jacobian map from x y z to x u r is so simple, this map is “upper triangular“ in some sense. But why is the jacobian from x u r to P Q R just a monomial?`: it suddenly cuts the fluff and proceeds, guided by the mathematician, to verify its findings. And notice that the prompt isn't reall-y a question. He says what he already understands, points at the one bit that doesn't fit, and asks the model to account for it. That's why it doesn't wander off.
 
-<image>
+<div style="max-width: 1055px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 79.5222%;"><iframe src="https://iframely.net/cHfy6AHe?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 _Second message of the chat_
 
-If I had been in that chat and asked "wait, what is a three-sheeted/cubic structure?" - around the 20th word - the whole thing would have gone sideways into a math primer. Tao instead prompted the LLM as a peer, asking his questions only after working out the assumptions, sometimes unstated, that the model was running on.
+If I had been in that chat and asked _"wait, what is a three-sheeted/cubic structure?"_ - around the 20th word - the whole thing would have gone sideways into a math primer. Tao instead prompted the LLM as a peer, asking his questions only after working out the assumptions, sometimes unstated, that the model was running on.
 
 Which is why I think **the "prompt engineering era" is over**. You don't need a super complex prompt like "[you are a smart mathematician. You are good with logic and math and thinking. ALWAYS follow these rules, etc...](https://community.openai.com/t/is-role-system-content-you-are-a-helpful-assistant-redundant-in-chat-api-calls/191229/3)". No. LLMs are smart enough to mirror us from the few words we give them.
 
@@ -34,7 +34,7 @@ And that's what I'm doing in my own LLM chats. No more prompt engineering, just 
 
 There's a positive side to this, and it's exactly where the difference between a junior and a senior shows up: **you can only guide an LLM as far as you can follow it**. A senior developer, or in this case a brilliant mathematician, can route a model by orders of magnitude better than someone who doesn't yet know what to look for.
 
-<image>
+<div style="max-width: 774px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 121.8604%;"><iframe src="https://iframely.net/yBcyVGkx?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 _The more you read the chat, the scarier it becomes_
 
@@ -42,7 +42,7 @@ You could say that modern AI models are getting better at generating their own q
 
 With LLMs you can learn faster than ever, but I don't think you can shortcut your way to that pro status. I can't just tell Claude "generate some prompts to prove the Jacobian conjecture" and expect Tao's results.
 
-<image>
+<div style="max-width: 790px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 76.4438%;"><iframe src="https://iframely.net/YxNcOa0N?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
 _No shortcuts!_
 
