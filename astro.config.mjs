@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { unified } from '@astrojs/markdown-remark';
 import rehypeLinkIcons from './src/lib/rehype-link-icons.ts';
 
 // https://astro.build/config
@@ -9,6 +10,6 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [sitemap()],
   markdown: {
-    rehypePlugins: [rehypeLinkIcons],
+    processor: unified({ rehypePlugins: [rehypeLinkIcons] }),
   },
 });
