@@ -14,7 +14,7 @@ tags:
   - prompt
 ---
 
-There is something so satisfying in reading [Terence Tao's ChatGPT conversation](https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56), where he and the model together verify a counterexample to the [Jacobian conjecture](https://en.wikipedia.org/wiki/Jacobian_conjecture) (for n > 2), a problem that had been open since 1939. To be precise, Tao didn't find the example itself: it was presented by Levent Alpöge (with the help of Fable 5). But it's impressive to read how a mathematician that smart talks to an AI model, and how fast things move with "some good prompting".
+There is something so satisfying in reading [Terence Tao's ChatGPT conversation](https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56), where he and the model together verify a counterexample to the [Jacobian conjecture](https://en.wikipedia.org/wiki/Jacobian_conjecture), a problem that had been open since 1939. To be precise, Tao didn't find the example itself: it was presented by Levent Alpöge (with the help of Fable 5). But it's impressive to read how a mathematician that smart talks to an AI model, and how fast things move with "some good prompting".
 
 It only took a few well-calibrated back-and-forth messages. This is incredibly advanced math, a topic with rabbit holes so deep you need years of study just to enter them, which makes what happens in that chat even more impressive.
 
@@ -40,7 +40,7 @@ _The more you read the chat, the scarier it becomes_
 
 You could say that modern AI models are getting better at generating their own questions, so maybe this advantage doesn't last. I don't think so. It's like having more powerful cars: everyone benefits, but only professional drivers can push them to the real limit.
 
-With LLMs you can learn faster than ever, but I don't think you can shortcut your way to that pro status. I can't just tell Claude "generate some prompts to prove the Jacobian conjecture" and expect Tao's results.
+With LLMs you can learn faster than ever, but I don't think you can shortcut your way to that _pro_ status. I can't just tell Claude _"generate some prompts to validate this Jacobian conjecture counterexample"_ and expect Tao's results.
 
 <div style="max-width: 790px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 76.4438%;"><iframe src="https://iframely.net/YxNcOa0N?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
