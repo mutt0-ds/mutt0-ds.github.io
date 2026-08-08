@@ -20,9 +20,9 @@ When I'm not coding, you'll find me hiking, reading, exploring new tools, or sha
 I share practical insights on data science, AI, engineering tips, and projects that spark my curiosity:
 
 <!-- BLOG-POST-LIST:START -->
-- ✨ [Microsoft, Copilot, and how to add friction](https://mutto.fyi/posts/2026/07/microsoft-copilot/) _(posted on 9 Jul 2026)_
-- 📌 [Why AI needs to dream: a guide to long-term memory](https://mutto.fyi/posts/2026/05/long-term-memory/) _(posted on 9 May 2026)_
-- 📝 [10 Lessons learned when building Charlie](https://mutto.fyi/posts/2026/04/charlie-lessons/) _(posted on 5 Apr 2026)_
+- ✨ [On Terence Tao&#39;s chat: the prompt engineering era is over](https://mutto.fyi/posts/2026/08/jacobian-conjecture-chat/) _(posted on 6 Aug 2026)_
+- 📌 [Microsoft, Copilot, and how to add friction](https://mutto.fyi/posts/2026/07/microsoft-copilot/) _(posted on 9 Jul 2026)_
+- 📝 [Why AI needs to dream: a guide to long-term memory](https://mutto.fyi/posts/2026/05/long-term-memory/) _(posted on 9 May 2026)_
 
 <!-- BLOG-POST-LIST:END -->
 
