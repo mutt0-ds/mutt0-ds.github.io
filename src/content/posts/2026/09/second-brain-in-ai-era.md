@@ -21,7 +21,7 @@ In case the term is new to you, a [second brain](https://fortelabs.com/blog/basb
 
 I wrote about the first one [back in 2023](https://mutto.fyi/posts/2023/02/obsidian-productivity-second-brain/), then [again six months later](https://mutto.fyi/posts/2023/09/obsidian-update-6-months-later/). Three years and one AI revolution later, the obvious question is whether the whole exercise still makes sense. Why keep hand-feeding a vault of markdown notes when a model can produce a summary of anything in four seconds?
 
-Short answer: it's worth more than before. Long answer below.
+Short answer: it's worth **more** than before. Long answer below.
 
 ## AI needs context
 
@@ -29,7 +29,9 @@ This part isn't even worth an argument.
 
 An assistant is only as good as the context you can hand it, and a second brain is a pile of context that is already cleaned, dated, and **connected**. Documentation, meeting notes, brain dumps, half-finished guides: all of it is a "no-brainer" to feed to an agent, and the good part is that it doesn't even need to be refactored or indexed, because LLMs are crazy good at grasping complex information, GIVEN THE CONTEXT.
 
-<!-- graph_view.jpg -->
+<div style="max-width: 1440px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 53.5833%;"><iframe src="https://iframely.net/Rj6aXFOs?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+
+_Example of big knowledge graph in Obsidian. Source: Obsidian's X_
 
 What matters is the shape of it. If you throw 500 files at an AI agent, it will easily get confused and hallucinate, as it needs to understand what is connected to what, the meaning of hundreds of concepts, and how they fit together. But a second brain is not a folder of documents, it is a graph of notes pointing at each other: this meeting relates to that ticket, that ticket touches this data source, that data source has these business rules. For years that structure existed for me only, and I navigated it by clicking around the graph view. Now it happens to be the format agents are best at walking, and it maps almost one to one to what the memory world calls [graph memory](https://mutto.fyi/posts/2026/05/long-term-memory/).
 
@@ -54,24 +56,30 @@ Meanwhile, AI-generated summaries have quietly appeared in every tool I use, whe
 - **TIL, personal notes, book notes: 3/10.** I prefer doing these myself. Writing them is the learning, and there is plenty of research on how much reviewing and rethinking what we read actually matters. Also, [my book notes](https://mutto.fyi/posts/2025/06/we-have-no-idea-book/) are mostly me arguing with my own thoughts, which is not something I want to automate.
 - **Cleaning up scrambled notes taken in a hurry: 10/10.** No contest. Especially when in meetings with no recordings, my notes are absolutely terrible. I now paste all my typos, half sentences, and stray Italian, and I get back something readable with the meaning intact. I tried this exact thing [in 2023 with OCR and GPT on my conference notes](https://mutto.fyi/posts/2023/11/ai-tweaked-data-saturdays-notes/) and back then it was painful. Now it just works, and it's the single feature keeping my brain-dumping habit alive.
 
-<!-- example_mess -->
+<div style="max-width: 1744px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 11.6999%;"><iframe src="https://iframely.net/GQL6QIZ6?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+
+_Some of my messy notes for this post..._
 
 The rule is the same across all of these: **you still have to read what ends up in the vault**. Garbage in, garbage out: the day my second brain fills up with slop and unreliable notes, I'll start skipping it the way I skip half of my LinkedIn feed. AI fatigue is real.
 
 ## Unloading your brain is not the same as switching it off
 
-So, am I worried about learning less? A little, yes.
+So, am I worried about learning less? **A little, yes**.
 There's a real contradiction in building a second brain and then delegating it to a machine.
 
 The original point, though, was never to stop thinking, but to stop *storing*: you offload the remembering so the brain can spend its energy on connecting.
 
-It all comes down to knowing when to reach for it. Cleaning up dirty notes and querying the knowledge base? Absolutely yes. Delegating the whole thing? That ruins the entire point of journaling, and you never learn how to connect the dots.
+It all comes down to knowing when to reach for it. 
+Cleaning up dirty notes and querying the knowledge base is a big yes. 
+Delegating the whole thing? That ruins the entire point of journaling, and you never learn how to connect the dots.
 
-If you switch it off completely and let the model build the vault for you, you end up with the note-taking version of a vibe-coded repository. [I've built one of those](https://mutto.fyi/posts/2025/04/ai-generated-code/) and it was great fun for forty-five minutes: thousands of files, no idea how to navigate them, and no idea what's inside, so no way to go looking for the interesting parts.
+If you switch it off completely and let the model build the vault for you, **you end up with the note-taking version of a vibe-coded repository**. [I've built one of those](https://mutto.fyi/posts/2025/04/ai-generated-code/) and it was great fun for forty-five minutes: thousands of files, no idea how to navigate them, and no idea what's inside, so no way to go looking for the interesting parts.
 
-<!-- vibe_coded: source https://github.com/hroyhong/Haoshan-Vault -->
+<div style="max-width: 1440px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 95.75%;"><iframe src="https://iframely.net/1t8LGani?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
 
-And that's where the leverage actually is. 
+_Example of vibe-code knowledge graph. Source: https://github.com/hroyhong/Haoshan-Vault_
+
+And that's where the tradeoff hits, in my opinion.
 If I know, even vaguely, that somewhere in my vault there's a note on M Query internals covering the exact edge case I'm hitting, I know what to ask for. 
 **If I don't know it's in there, I'll never ask**, and the vault might as well be empty. It's the same thing I wrote about [Terence Tao's chat](https://mutto.fyi/posts/2026/08/jacobian-conjecture-chat/): the model will go as deep as you can take it, but it won't pick the rabbit hole for you. It's [Lateral Thinking](https://en.wikipedia.org/wiki/Lateral_thinking), and it's like a superpower.
 
@@ -81,7 +89,7 @@ So here's the compromise I settled on: **I read every note I add to my second br
 
 This is the part I feel strongly about.
 
-The key feature of a second brain is connecting the dots, and the nice part is that linking notes takes almost no work, provided you read them and make the effort to remember what they relate to.
+**The key feature of a second brain is connecting the dots**, and the nice part is that linking notes takes almost no work, provided you read them and make the effort to remember what they relate to.
 
 Let the model clean, transcribe, reformat, summarize, even suggest links. **Do NOT let it draw them for you**. Building the big picture is the reason the vault exists in the first place, and placing a link by hand is the cheapest form of revision I know.
 
