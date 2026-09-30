@@ -22,7 +22,7 @@ I’ve given many presentations in the past (to hundreds of people, even at [a c
 
 On top of that, explaining StoryTeller is tricky, even to a technical audience. It’s a financial reporting product with a lot of technical, mathematical and financial nuances. You could spend hours discussing it. I’ve been working on it for two months, and there are still parts of its logic I need to review with my PM because they’re not clear to me yet!
 
-<div style="max-width: 70%; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 86.0465%;"><iframe src="//iframely.net/gdXlsHU" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![StoryTeller for Portfolio reporting](/images/first_pitch/StoryTeller-for-Portfolio-reporting.png)
 
 So, how did I fight my nervousness and **explain a complex project without confusing the audience**?
 
@@ -50,7 +50,7 @@ So, I summarized StoryTeller in 4 boxes and 3 arrows. That’s it. You call the 
 
 _Mockup of my slide (which was already a mockup of another slide):_
 
-<div style="max-width: 1229px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 57.3242%;"><iframe src="//iframely.net/l6ofqHa" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![architecture](/images/first_pitch/architecture.png)
 
 ### 2. How to Interact With It
 
@@ -58,7 +58,7 @@ It’s an API, so the important parts are response times, flexibility, how to qu
 
 Which data to send, what to expect in return, waiting times, how to read logs... Very practical, but not too deep section.
 
-<div style="max-width: 1007px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.5507%;"><iframe src="//iframely.net/fCl9MAy" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![what you need](/images/first_pitch/what_you_need.png)
 
 ### 3. Common Errors
 
@@ -71,7 +71,7 @@ Last Friday I was melting because I literally had to put myself in the same plac
 Stories like that can really frustrate an API user, so I made sure to explain the key points to follow and highlight common stress points. As a customer, I find this kind of proactive support incredibly valuable. It saves hours of frustration and nervousness in advance.
 
 _List of stress points you might encounter:_
-<div style="max-width: 432px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 66.6667%;"><iframe src="//iframely.net/GU6cK6C" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![note: Marketing asked me to clarify that this is just a Spongebob meme. The **real** list of user hiccups is much shorter... like, way shorter](/images/first_pitch/list.jpg)
 
 _note: Marketing asked me to clarify that this is just a Spongebob meme. The **real** list of user hiccups is much shorter... like, way shorter_
 

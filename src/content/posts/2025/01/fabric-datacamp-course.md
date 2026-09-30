@@ -30,7 +30,7 @@ At first, I thought that would be impossible to replicate at scale, but Datacamp
 
 They give you **a Fabric account** to manage and build exercises directly within the sandbox. This hands-on approach sets Datacamp apart from other platforms. They also have sandboxes for other tools, like AWS.
 
-<div style="max-width: 2267px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 38.5918%;"><iframe src="//iframely.net/gqY9fsv" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![sandbox](/images/datacamp_fabric/sandbox.png)
 
 On top of that, their library of courses is extensive (I even checked out some on [AWS](https://www.datacamp.com/category/aws?page=1) and [dbt](https://app.datacamp.com/learn/courses/introduction-to-dbt), and they’re great). The focus on interactivity, the supportive team, and the creative freedom they gave me to design my course made the experience really enjoyable.
 
@@ -48,9 +48,9 @@ Once the outline was in place, I moved on to creating the slides and exercises. 
 
 One day, I had an idea to swap the order of the chapters and make security the first topic. I imagined a scenario where you join a company called Fashionbric (a little play on fashion) and are thrown into a security nightmare. That’s how the course kicks off — with an urgent security issue that the student needs to solve.
 
-<div style="max-width: 1466px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 50.3273%;"><iframe src="//iframely.net/JS13pih" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![welcome](/images/datacamp_fabric/welcome.png)
 
-<div style="max-width: 1476px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.1057%;"><iframe src="//iframely.net/OK9CwmQ" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![tough day at work...](/images/datacamp_fabric/fire.png)
 
 _tough day at work..._
 
@@ -58,7 +58,7 @@ From there, the course takes the student through a series of challenges: fixing 
 
 By the end, they’ll know how to secure Fabric, manage costs, use version control (even in Power BI!), and deploy safely using CI/CD pipelines.
 
-<div style="max-width: 1595px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.3604%;"><iframe src="//iframely.net/ayPfOsO" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![exercise](/images/datacamp_fabric/exercise.png)
 
 ## How I Built the Course
 

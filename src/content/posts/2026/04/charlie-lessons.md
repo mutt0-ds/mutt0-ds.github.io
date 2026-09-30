@@ -19,7 +19,7 @@ While designing and building it over the past few months, the pace was intense. 
 
 I mentioned some of them in this episode of [The Suite Spot podcast](https://open.spotify.com/episode/5ns5bY7lzh0MHsSiCnyEzF), with more to come in the future. 
 
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/5ns5bY7lzh0MHsSiCnyEzF/video?utm_source=generator" width="496" height="279" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<div class="embed"><iframe src="https://open.spotify.com/embed/episode/5ns5bY7lzh0MHsSiCnyEzF/video?utm_source=generator" title="Spotify episode" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
 
 Enjoy **10 lessons learned when building Charlie**!
 
@@ -59,7 +59,7 @@ Before, I was used to having a big set of rigid rules to steer the LLM in the ri
 
 We learned early on that relying solely on text is a recipe for user fatigue. Instead of delivering walls of text, **we crafted beautiful, functional widgets** and taught Charlie how to trigger them. This makes the experience unique, intuitive, and significantly faster. To keep this scalable, we use a standardized protocol to ensure the UI remains consistent regardless of the underlying stack.
 
-<div style="max-width: 1500px;"><div style="left: 0; width: 80%; height: 0; position: relative; padding-bottom: 97.7647%;"><iframe src="https://iframely.net/oDazLGUc?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Example of a Charlie widget](/images/charlie_lessons/V7hNkresXcH8PwCObTLJcvp8.png)
 
 ---
 

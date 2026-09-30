@@ -35,7 +35,7 @@ Back in the day 👴, when you had a problem, you needed to:
 3. Analyzing the top comments
 4. Copy-pasting and adapting the solution to your needs.
 
-<div style="max-width: 910px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 51.4512%;"><iframe src="//iframely.net/opdtPia" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![programmerhumor io stackoverflow memes programming](/images/vibe_coding/programmerhumor-io-stackoverflow-memes-programming.png)
 
 AI speeds this up dramatically, but you still need that critical thinking - knowing what you want, how you want it and whether the solution might backfire later. Prompting is becoming an art like Googling and this comes with experience.
 
@@ -57,7 +57,7 @@ Finally I had some time to try to experiment a little bit without the pressure o
 
 **45 minutes later**, I was done.
 
-<div style="max-width: 2244px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.6257%;"><iframe src="//iframely.net/tapV6Va" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![dashboard result](/images/vibe_coding/dashboard_result.png)
 
 ## The strategy
 
@@ -75,11 +75,11 @@ In the Cursor Agent prompt, I told my LLM ([Gemini 2.5 Pro](https://blog.google/
 
 Then we developed the interactive logic where I could ask the model to change parameters, modify data, and generate final reports.
 
-<div style="max-width: 782px; margin-bottom:1%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 83.8957%;"><iframe src="//iframely.net/ESyg2WJ" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Thank you Gemini for understanding my rambling confusion](/images/vibe_coding/cursor_2.png)
 
 *Thank you Gemini for understanding my rambling confusion*
 
-<div style="max-width: 2302px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 52.3983%;"><iframe src="//iframely.net/0STNZlM" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![cursor 4](/images/vibe_coding/cursor_4.png)
 
 ## First impressions: amazing experience
 
@@ -92,7 +92,7 @@ I'd sinned. I'd vibe coded.
 
 **The codebase was a mess (especially the tool-usage logic) and I barely understood it.**
 
-<div style="max-width: 2302px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 52.2941%;"><iframe src="//iframely.net/ipVUlRV" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![cursor 1](/images/vibe_coding/cursor_1.png)
 
 Jokes aside, I noticed how tempting it was to keep prompting fixes without thinking. What truly scared me? 
 

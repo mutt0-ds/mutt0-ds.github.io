@@ -18,23 +18,23 @@ If you are into Data Engineering in Microsoft Azure Cloud Environment, you proba
 
 In short, Fabric is a cutting-edge, unified data platform that merges lots of tools together, starting from a common Data Lake where data can be stored ([**OneLake**](https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview)), and a suite of new tools on top of it that are integrated in the “fabric” of Fabric. Some of them are evolutions of existing systems, like **Synapse Data Engineering** ([Azure Synapse Anaylytics](https://azure.microsoft.com/en-us/products/synapse-analytics/)) or **Data Factory** ([Azure Data Factory](https://azure.microsoft.com/en-us/products/data-factory)) for ETL and Data Processing. Others, like my beloved [**Power BI**](https://powerbi.microsoft.com/en-us/), have kept the same features but they will be integrated in the platform in the future. Others, like [**Data Activator**](https://blog.fabric.microsoft.com/en-us/blog/driving-actions-from-your-data-with-data-activator/)(no-code triggers), are brand new.
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;"><iframe src="https://www.youtube.com/embed/X_c7gLfJz_Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen title="YouTube video"></iframe></div>
+<div class="embed"><iframe src="https://www.youtube.com/embed/X_c7gLfJz_Q" title="YouTube video" allowfullscreen loading="lazy"></iframe></div>
 
-<div style="max-width: 1440px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 53.25%;"><iframe src="//iframely.net/LNrnS4V" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![microsoft fabric](/images/fabric/6f6c803f-microsoft-fabric-scaled-e1684822392207.jpg)
 
 Let me be clear: the idea of unifying all these data-related services in charge of processing, storing and using data is a game changer, if Fabric will respect the promises. In my job, handling data in the correct way is the crucial part, and I’m already using Synapse, Data Factory, Data Lake, Data Warehouse and Power BI as separate Azure Services so I doubt that much in my workflow will change: everything will be more interconnected and, hopefully, more productive, with support for the new AI technologies and unlocked integrations.
 
-<div style="max-width: 1536px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="//iframely.net/Cmp4DxI" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![microsoft fabric scope and artefacts](/images/fabric/microsoft-fabric-scope-and-artefacts.gif)
 
 What I didn’t like is **Microsoft hype-oriented strategy**. There was total secret about Fabric, and then in a couple of days it’s everywhere, still in Beta, with so much new infrormation that everyone out there still has to proceed what’s going to change and what’s exactly we will have to adapt. New spending plans, beta features, articles describing the “magic unlocked” by these tools, an explosion of [contents](https://www.youtube.com/watch?v=6QusOchmSXQ) and [curiosity](https://www.youtube.com/watch?v=tu2M_K3pb0E) has been suddenly evoked.
 
-<div style="max-width: 774px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 64.031%;"><iframe src="//iframely.net/JYJhv7z" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![tweet fabric](/images/fabric/tweet_fabric.jpg)
 
 While I understand the rushed period the Big Tech are encountering, with [the AI Race](https://time.com/6255952/ai-impact-chatgpt-microsoft-google/) dominating the minds of business users (and investors), in this case the update is on a technical side.
 
 Let’s take the other “**bomb**”, the protagonist of Microsoft Build 2023. I'm talking about [**365 Copilot**](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/16/introducing-microsoft-365-copilot-a-whole-new-way-to-work/), a sort of ChatGPT assistant that can be integrated with Office Tools for generating presentations, Word documents and analysis, has been anticipated several months before, with lots of buzz from the press. There is mistery about how it will work at the end, but Microsoft is sharing as many updates as possible about the tool. With 365 Copilot and [Azure AI Studio](https://www.youtube.com/watch?v=DaIYrlMOj7I) alone, which makes possible to build our own GPT models with in-house data, Microsoft would have already win everything for this year. The AI Race, at the moment of writing, is on its hands.
 
-<div style="max-width: 1345px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 32.1142%;"><iframe src="//iframely.net/VyLswwI" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![google trends fabric](/images/fabric/google_trends_fabric.png)
 
 That’s why I don’t like this choice of dropping another huge announcement with no anticipation. Was it only for the joy of scaring the competitors? Microsoft Fabric, all cool and shiny, _the joy of every Data Engineer and Data Analyst_, still leaves my biggest question remains unanswered.
 

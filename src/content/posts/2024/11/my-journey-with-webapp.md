@@ -35,7 +35,7 @@ Here's how I built a prototype of a sales forecasting app for my company.
 
 _Sneak Peek_:
 
-<div style="max-width: 2266px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 48.0932%;"><iframe src="//iframely.net/fuw3M7i" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![tool frontend](/images/web_app/tool_frontend.PNG)
 
 ## Some context
 
@@ -49,7 +49,7 @@ Imagine hundreds of columns spread across multiple sheets, powered by VBA macros
 
 _Something like this. Multiply its complexity by 100 (credits: Excel-Skills.com)_:
 
-<div style="max-width: 960px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="//iframely.net/7Trgacl" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![cashflow forecast actual sample 3](/images/web_app/cashflow_forecast_actual_sample_3.jpg)
 
 It worked, but it suffered from classic legacy system issues:
 
@@ -75,7 +75,7 @@ This is where the backend proves its worth.
 
 _Settings example. Pardon for the weird centering, I had to remove some parts_
 
-<div style="max-width: 1848px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 41.8182%;"><iframe src="//iframely.net/2TCjhD3" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![related settings](/images/web_app/related_settings.PNG)
 
 ## Choosing the Tech Stack
 
@@ -87,7 +87,7 @@ This was overwhelming at first. The options seem endless. Let me break it down t
 
 Simply said: I picked the most beginner-friendly options available. My choices were heavily influenced by tutorials from [Fireship](https://fireship.io/courses/nextjs/) and [Code with Mosh](https://codewithmosh.com/p/ultimate-nextjs-series) - both excellent resources for beginners.
 
-<div style="max-width: 4714px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 68.4317%;"><iframe src="//iframely.net/6FJOKN4" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Architecture](/images/web_app/Architecture.png)
 
 ## Data first
 
@@ -107,7 +107,7 @@ Luckily, I found [shadcn/ui](https://ui.shadcn.com/), a component library built 
 
 I initially chose shadcn/ui for their table component, which integrates [TanStack Table V8](https://tanstack.com/table/latest), another great library designed for building tables. This provided built-in filtering, sorting, and pagination. I ended up using their entire component ecosystem - buttons, cards, popups, and more, all just an import away. Modern frontend development has come a long way!
 
-<div style="max-width: 1536px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 67.6563%;"><iframe src="//iframely.net/XASUIo4" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![dashboard dark](/images/web_app/dashboard-dark.png)
 
 ## My Lazy Tips for Frontend Development
 
@@ -122,7 +122,7 @@ With my data display sorted, I tackled **forms** next. Forms are a key part for 
 
 Next.js forms, combined with [Zod](https://zod.dev) for validation, make it surprisingly straightforward to handle user input. You can easily enforce rules like email format validation or ensuring quantities are positive numbers.
 
-<div style="max-width: 2258px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 28.1084%;"><iframe src="//iframely.net/1o5Danv" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![settings](/images/web_app/settings.PNG)
 
 I'll talk about forms and validation in part two of this series, where I'll also cover the specific tools I used and share more detailed tips from my experience.
 

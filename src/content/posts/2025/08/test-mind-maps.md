@@ -29,7 +29,7 @@ Every word in them is tailored, whether it's referencing a customer's name or ho
 
 In the most “rigid” version of StoryTeller, we define **a logic tree** to compose each sentence. Think of it like a massive if-else chain: dozens of nested conditions that cover every possible scenario. For each one, we have pre-approved text to use in the final report.
 
-<div style="max-width: 3002px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 58.0336%;"><iframe src="//iframely.net/MR89MoAX?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![For example here, each section is built based on several factors. The first 3 words `This excellent quarter` depends on the portfolio's performance (very good) and the reporting period type (quarter).](/images/markmap/StoryTeller.png)
 
 *For example here, each section is built based on several factors. The first 3 words `This excellent quarter` depends on the portfolio's performance (very good) and the reporting period type (quarter).*
 
@@ -48,7 +48,7 @@ From day one, I was thinking: how do we make this system more stable? It was dri
 
 Back then, **the text database was responsible for ~70% of our bugs**. A customer tested a bunch of reports, and many of them crashed because of missing text scenarios. I spent days navigating these giant files. They are so big that not even Gitlab diff view are displaying the changes between versions, you need to scroll through each JSON line and write down the scenarios and find what's missing. My eyes were burning.
 
-<div style="max-width: 2179px"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 44.3282%;"><iframe src="//iframely.net/AwRnI1ns?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Yes, 75k, sometimes even 100k+ lines. Imagine scrolling through that monster of a JSON file, hunting for a single missing piece.](/images/markmap/json_files.png)
 
 *Yes, 75k, sometimes even 100k+ lines. Imagine scrolling through that monster of a JSON file, hunting for a single missing piece.*
 
@@ -64,7 +64,7 @@ So I created a script that isolates that part of the code, loads a random value 
 
 Problem: it doesn't scale. The combinations grow exponentially: hundreds of millions of possibilities. Each test might be fast, but running all of them was not feasible.
 
-<div style="max-width: 480px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.5%;"><iframe src="//iframely.net/fwInkazj?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Not going to share my terrible code here 😇](/images/markmap/combination.gif)
 
 *Not going to share my terrible code here 😇*
 
@@ -82,7 +82,7 @@ With **a mind map (like Miro), you can spot missing branches easily**. You can c
 
 So I gave it a shot. I set up a Miro project, wrote a script to export their mind maps in a JSON-compatible format using their API, and added some lightweight tests. It was quite fun: I re-created the scenarios as nodes in Miro, ran the script, and the tool was comparing expectation, suggesting missing cases, and even highlight similar-looking logic paths.
 
-<div style="max-width: 2060px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 54.1642%;"><iframe src="//iframely.net/wvMIEC5f?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Miro Tree](/images/markmap/Miro%20Tree.png)
 
 It worked great for a prototype.
 But once the node count grew, **Miro became unusable and slow**, and the experience worsened.
@@ -91,7 +91,7 @@ My biggest problems is that the search and replace feature hanged, making it unu
 
 I started using several Miro files to be able to open them but this was getting out of hand. And as a third-party tool, it didn't fit well into our version control workflow.
 
-<div style="max-width: 1056px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 78.5227%;"><iframe src="//iframely.net/VtrNNOuI?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Miro didn’t even try to load that many trees and this was just a tiny slice of the project.](/images/markmap/Trees.png)
 
 *Miro didn’t even try to load that many trees and this was just a tiny slice of the project.*
 
@@ -121,7 +121,7 @@ You write nested headings in a `.md` file:
 ```
 …and voilà, you get a mind map. It's clean, minimal, and fast, even with hundreds of nodes. 
 
-<div style="max-width: 2188px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 42.3478%;"><iframe src="//iframely.net/tAfI8hxm?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![markmap](/images/markmap/markmap.gif)
 
 Each tree has its own file, which you can quickly open for reviewing (we usually audit 1 part of the report only)
 
@@ -134,7 +134,7 @@ This solved so many issues at once:
 It also unlocked a smarter workflow:
 Now, when the copywriter proposes a new scenario, we update the Markdown tree first. Tests are synced directly from it. If something breaks, we get a precise error pointing at the missing or invalid node. The mental model shifted from “fixing JSON bugs” to “keeping the logic tree healthy” and that's a much better place to be.
 
-<div style="max-width: 2041px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 40.7995%;"><iframe src="//iframely.net/A7Vum6ZX?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Example of a complex tree originally spanning 5,000 JSON lines, reduced to just 100 in Markdown.](/images/markmap/simpler%20trees.png)
 
 *Example of a complex tree originally spanning 5,000 JSON lines, reduced to just 100 in Markdown.*
 

@@ -23,7 +23,7 @@ That’s because India is a high-context culture, where linguistic nuances are t
 
 Another example? Just take this viral meme about UK language (which is middle-high context)!
 
-<div style="max-width: 1006px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 90.4535%;"><iframe src="//iframely.net/vuJax5F" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Meme about what British people say and what they mean](/images/culture_map/Bildschirmfoto-2018-08-31-um-11_40_05.png)
 
 Another interesting aspect is the importance of relationships in different cultures. In China, it's crucial to know the other person, share meals and drinks together. At the opposite, Nordic cultures like America and Germany prefer to focus on tasks. From both perspectives, their approach feels natural, but it's deeply ingrained in their cultural norms.
 
@@ -42,11 +42,11 @@ All these precious differences are explored in the fantastic book [**"The Cultur
 
 A unique strategy the professor used was to position each culture along a spectrum with two extremes. This creates a structured framework to differentiate between them. During the past months, I recreated my own Figma diagram of the Culture Map, including cultures I've personally interacted with. This gives me a quick visual reference of their (average) cultural traits, blending Meyer's insights with my own experiences.
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/YSnXo4O5NsAb1d4kIRRRui/Culture-%F0%9F%97%BA-Map?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+<div class="embed"><iframe src="https://embed.figma.com/design/YSnXo4O5NsAb1d4kIRRRui/Culture-%F0%9F%97%BA-Map?node-id=0-1&embed-host=share" title="Figma board" allowfullscreen loading="lazy"></iframe></div>
 
 Png version:
 
-<div style="max-width: 4201px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.5287%;"><iframe src="//iframely.net/kXIjPAj" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![culture map](/images/culture_map/culture_map.png)
 
 Here's an explanation of each point on the Culture Map so you actually know what’s going on:
 

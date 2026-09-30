@@ -34,7 +34,7 @@ How satisfying is it when ChatGPT, Gemini, or Claude remembers your name, your p
 
 I still remember when I told my ChatGPT: *"YOU MUST ALWAYS TALK TO ME IN A CONCISE WAY - NO BULLETS - NO SYCOPHANCY"*, and it has been quiet and direct since that day...
 
-<div style="max-width: 1051px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.2009%;"><iframe src="https://iframely.net/AxA7kYh9?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![good boy](/images/memory/good_boy.png)
 
 I also noticed this with technical tools like [CodeRabbit](https://mutto.fyi/posts/2026/02/code-rabbit/). At some point, fed up with wrong PR comments, I repeatedly told the bot we were using Pydantic V1 (it was assuming V2). It stored that information in long-term memory and stopped flagging non-existent issues for good.
 
@@ -48,7 +48,7 @@ For starters, **memory is complex**.
 
 The earliest implementations were basically "startup context": injecting instructions like *"remember that my name is Davide, I like concise responses, and I live in Italy"* into every prompt. This is already up and running in most flagship models, and it's a highly efficient way to keep customizations active. I recommend to use it for things that rarely change like your name, tone preferences, and localization. 
 
-<div style="max-width: 881px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 78.0654%;"><iframe src="https://iframely.net/iddilVEN?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Custom instructions, available in the ChatGPT preferences](/images/memory/memory_preferences.png)
 
 *Custom instructions, available in the ChatGPT preferences*
 
@@ -111,7 +111,7 @@ Graph memory allows for more contextual and relational retrieval instead of pure
 
 I'm intentionally oversimplifying here because there are already [many deeply technical articles](https://github.com/DEEP-PolyU/Awesome-GraphMemory) explaining the individual strategies much better than I could in a single post.
 
-<div style="max-width: 5768px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.2823%;"><iframe src="https://iframely.net/I3awR5yi?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![illustration memory comparison](/images/memory/illustration_memory_comparison.png)
 
 
 ## What did I choose?
@@ -142,11 +142,11 @@ Instead of treating memory as static storage, the system continuously revisits a
 
 Hindsight also features a nice graph view so you can explore the memory freely, just like a "second brain". It reminds me a lot of [my Obsidian vault](https://mutto.fyi/posts/2023/09/obsidian-update-6-months-later/).
 
-<div style="max-width: 4014px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 61.7339%;"><iframe src="https://iframely.net/qiKmGy5j?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![This is how it looks at scale (source: Reddit)](/images/memory/memory_graph.webp)
 
 *This is how it looks at scale (source: Reddit)*
 
-<div><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%; margin-bottom:3%"><iframe src="https://iframely.net/C1vosy7W?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="encrypted-media *;"></iframe></div></div><script async src="https://iframely.net/embed.js"></script>
+<div class="embed"><iframe src="https://www.youtube.com/embed/_fxrvOrLSvQ" title="YouTube video" allowfullscreen loading="lazy"></iframe></div>
 
 *A brief introduction to Hindsight*
 

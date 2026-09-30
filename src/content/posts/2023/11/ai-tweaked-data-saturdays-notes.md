@@ -27,7 +27,7 @@ Special thanks to Ema for the support.
 
 ## ☁ SQL Server PaaS by Gianluca Hotz
 
-<div style="max-width: 1834px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 137.6963%;"><iframe src="//iframely.net/WeqRYGZ" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![paas](/images/data_saturdays/paas.jpg)
 
 #### Three Solutions
 
@@ -81,7 +81,7 @@ Utilizes a cluster-based model with modularized SQL, resembling AWS [Aurora](htt
 
 ## 📐 T-SQL performance tips & tricks by Sergio Govoni
 
-<div style="max-width: 1757px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 133.8797%;"><iframe src="//iframely.net/xlNErkd" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![t sql performance](/images/data_saturdays/t_sql_performance.jpg)
 
 #### 1. [Sargable Predicates](https://www.sqlshack.com/how-to-use-sargable-expressions-in-t-sql-queries-performance-advantages-and-examples/)
 
@@ -111,7 +111,7 @@ Utilizes a cluster-based model with modularized SQL, resembling AWS [Aurora](htt
 
 ## 🧯 SQL Server On Fire by Gabriele Franco
 
-<div style="max-width: 1814px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 133.8624%;"><iframe src="//iframely.net/yBY9cdc" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![sql server on fire](/images/data_saturdays/sql_server_on_fire.jpg)
 
 #### Tools Used
 
@@ -146,7 +146,7 @@ Utilizes a cluster-based model with modularized SQL, resembling AWS [Aurora](htt
 
 ## 🔓 Unlocking the Power of AI-Driven Analytics: Mastering Generative AI in Power BI by Leon Gordon
 
-<div style="max-width: 1834px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 134.5549%;"><iframe src="//iframely.net/tsk3cev" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![ai x files](/images/data_saturdays/ai_x_files.jpg)
 
 #### The scenario
 
@@ -208,11 +208,11 @@ Utilizes a cluster-based model with modularized SQL, resembling AWS [Aurora](htt
 I didn't take notes here as I work with Ema and kindly shared with me the entire presentation, which was rich in interesting points about the question one should me when choosing to migrate to the Cloud. It's not that simple.
 Amazing performance that made me leave the room with more questions than answer.
 
-<div style="max-width: 1853px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 134.715%;"><iframe src="https://nbviewer.org/github/mutt0-ds/mutt0-ds.github.io/blob/9ac4c33c137c0e7959ca91dad753f166287bac14/static/images/data_saturdays/meazzo_presentazione.pdf" type="application/pdf" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+<div class="embed embed-portrait"><iframe src="https://nbviewer.org/github/mutt0-ds/mutt0-ds.github.io/blob/9ac4c33c137c0e7959ca91dad753f166287bac14/static/images/data_saturdays/meazzo_presentazione.pdf" title="Embedded document" allowfullscreen loading="lazy"></iframe></div>
 
 ## 🕘 Save The Date by Rudi Bruchez
 
-<div style="max-width: 1853px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 134.715%;"><iframe src="//iframely.net/M6dlvZg" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![save the date](/images/data_saturdays/save_the_date.jpg)
 
 This session explores the nuances of different date and time types in SQL Server, highlighting the strengths and challenges of each and emphasizing best practices for handling date-related operations.
 Suggested article: [The Ultimate Guide to Datetime datatypes](https://karaszi.com/the-ultimate-guide-to-the-datetime-datatypes)

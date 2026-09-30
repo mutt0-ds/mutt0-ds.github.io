@@ -39,7 +39,7 @@ I'm mentioning **CodeRabbit** because it has become my favorite tool in our CI/C
 
 The flow is straightforward: push changes, and the bot analyzes them. **This DOES NOT replace humans.** These tools still miss the "real" architectural bugs. But they do an excellent job on the **"first line" review**: catching bad practices immediately and telling you what is wrong without fear of social repercussions, every day, at every hour.
 
-<div style="max-width: 864px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 85.4166%;"><iframe src="https://iframely.net/JgGsbg8N?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![suggestion](/images/code_reviews/suggestion.webp)
 
 ## The Experience: Signal vs. Noise
 
@@ -49,9 +49,9 @@ In my opinion, **I'm fine with the occasional mistake**.  Even if it's wrong a l
 
 If a comment is wrong, you clarify it to the bot and move on. It still challenges you to think, *"Am I right, or is it?"* which forces a manual review of that specific step. It also has a form of **"long-term memory."** I discovered that telling it, *"Put in your long-term memory that we use Pydantic v2,"* actually works! It remembers preferences over time, reducing the "noise" as the bot learns our stack.
 
-<div style="max-width: 864px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 100.4166%;"><iframe src="https://iframely.net/uFGHQIxQ?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![follow up](/images/code_reviews/follow-up.webp)
 
-<div style="max-width: 864px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 19.0278%;"><iframe src="https://iframely.net/49jsRI59?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![clarification](/images/code_reviews/clarification.webp)
 
 For most nitpicks, it provides an "AI edit" prompt to be copied in your AI IDE of choice, something I find myself using often when I'm feeling lazy. You can also run [CodeRabbit as a VSCode](https://docs.coderabbit.ai/ide) extension or in [CLI](https://docs.coderabbit.ai/cli), but I prefer having it publicly available in GitLab. It helps the "human reviewer" see how I addressed the bot's concerns, providing more context for the final human approval.
 
@@ -71,6 +71,6 @@ It's especially helpful for juniors because it has infinite patience when showin
 
 If you're curious, most of these tools offer free trials. Swap some licenses around and see if it adds value to your team. To me, **it's a net positive**: I hope it will provide value in your workflow too!
 
-<div style="max-width: 1229px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 70.6055%;"><iframe src="https://iframely.net/0Pvy7Xr0?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![all image credits: Tom Smykowski(https://tomaszs2.medium.com/ai-code-review-tool-coderabbit-replaces-me-and-i-like-it-b1350a9cda58) and CodeRabbit](/images/code_reviews/mistake.webp)
 
 _all image credits: [Tom Smykowski](https://tomaszs2.medium.com/ai-code-review-tool-coderabbit-replaces-me-and-i-like-it-b1350a9cda58) and CodeRabbit_

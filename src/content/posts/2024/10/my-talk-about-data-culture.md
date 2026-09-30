@@ -29,4 +29,4 @@ Big thanks to the Power BI Italy User Group for organizing and to Acer for spons
 
 See you next time! 👋
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/board/sag9miTWzsWaRK8gc43pQu/Data-Culture---How-To-Promote-Power-BI-in-a-Corporate-Culture-(NOTES)?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+<div class="embed"><iframe src="https://embed.figma.com/board/sag9miTWzsWaRK8gc43pQu/Data-Culture---How-To-Promote-Power-BI-in-a-Corporate-Culture-(NOTES)?node-id=0-1&embed-host=share" title="Figma board" allowfullscreen loading="lazy"></iframe></div>

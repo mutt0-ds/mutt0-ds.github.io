@@ -22,12 +22,12 @@ But it all comes down to **friction**, and that is what today's article is about
 
 I distinctly remember my excitement when we had exclusive preview access to the Copilot tools in our Office (disclaimer, I don't use Office anymore). Following the wave of initial excitement, I immediately realized I didn't need them (plus, they were extremely expensive!). It was much easier to just copy the entire context into my company ChatGPT tab than using the **slow, clunky, and hallucination-prone** small box in my Word or PowerPoint.
 
-<div style="max-width: 2227px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 54.7414%;"><iframe src="https://iframely.net/fKThMB6Y?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![the infamous Copilot button (credits: Microsoft)](/images/microsoft_copilot/Copilot_Chat_in_Microsoft_365_apps.png)
 
 _the infamous Copilot button (credits: Microsoft)_
 
 
-<div style="max-width: 360px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 162%;"><iframe src="https://iframely.net/WY3jR8Yh?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![an example of an annoying interaction with Copilot in PowerPoint (credits: @No-Wave2924)](/images/microsoft_copilot/copilot-in-powerpoint-is-not-consistent-v0-paux6ys.png)
 
 _an example of an annoying interaction with Copilot in PowerPoint (credits: @No-Wave2924)_
 
@@ -35,7 +35,7 @@ For most of my personal experience, Copilot products are slow, often they just h
 
 And while things slowly improved, from what I am seeing around, Microsoft clearly didn't focus its attention on making the user experience better. They just slammed AIs and Copilots everywhere, from [NOTEPAD](https://support.microsoft.com/en-us/windows/ai/ai-apps/enhance-your-writing-with-ai-in-notepad) to [a manual button on PCs](https://www.microsoft.com/en-us/windows/learning-center/unlock-productivity-with-the-copilot-key), creating a lot of confusion. Also, [the drama with OpenAI](https://www.theverge.com/ai-artificial-intelligence/942242/microsoft-build-ai-agents-openai-competition) didn't help keep things calm, but I wouldn't enter into that territory.
 
-<div style="max-width: 2639px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 76.8076%;"><iframe src="https://iframely.net/gCrXbKMA?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![so many Copilot products released... (credits: teybannerman)](/images/microsoft_copilot/mapping-of-every-microsoft-product-named-copilot-v.png)
 
 _so many Copilot products released... (credits: teybannerman)_
 
@@ -44,7 +44,7 @@ It's the clear example of *"let's add AI here, users will figure it out."* It wo
 
 And now better products like [Claude Cowork](https://support.claude.com/en/articles/12650343-use-claude-for-excel) are eating their market share, including usage from Microsoft's own employees. It's unbelievable how such a massive company with at least a 1-year head start lost terrain by just **not focusing on user experience**.
 
-<div style="max-width: 4608px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://iframely.net/5wsQPzpV?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Claude Blog Excel PPT 3P](/images/microsoft_copilot/69b18f278891d8d39110c45e_Claude-Blog-Excel-PPT-3P.png)
 
 By trying to understand their point, I assume Microsoft's objective is to sell these licenses in bulk, so they can be compliant and "safe" for the big enterprises.
 

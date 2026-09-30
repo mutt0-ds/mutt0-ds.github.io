@@ -21,7 +21,7 @@ I also recommend [this brief introduction in 100 seconds](https://www.youtube.co
 
 Managing legacy code of half a century ago is not my dream, but maybe, I thought, there's something to learn from it! That's why I'm here, sharing notes and personal thoughts about my overall experience with [IBM's COBOL course for VS Code](https://www.ibm.com/blogs/ibm-training/free-course-announcing-learning-cobol-programming-with-vscode/) and this detailed tutorial by Derek Banas that saved me several times.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TBs7HXI76yU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="embed"><iframe src="https://www.youtube.com/embed/TBs7HXI76yU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
 
 ## COBOL's essentials
 The first impression isn't great, since it's such verbose language... Let's compare a“Hello World" in Python, JS, and COBOL:

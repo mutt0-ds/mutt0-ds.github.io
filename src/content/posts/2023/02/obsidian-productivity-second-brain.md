@@ -115,3 +115,16 @@ The most significant advantage, as mentioned in the introduction, is the ease of
 Currently, I also have a few scripts that automate the process of cleaning links and organizing notes in my vault, as they are just a bunch of .md textual files in the end.
 
 If you're interested in this innovative way of organizing notes, then I recommend giving Obsidian a try. There are tools available for importing notes from [Evernote](https://github.com/dmuth/evernote-to-obsidian), [OneNote](https://github.com/Segza/OneNote-to-Obsidian) and [Notion](https://github.com/connertennery/Notion-to-Obsidian-Converter), so the transition is seamless. It takes a while to get used to Obsidian; personally, it took me a week to become familiar with the process, but then the fun began.
+
+
+---
+
+## 🔄 Addendum: three years later
+
+Re-reading this post in 2026, I have to admit that most of the limitations I listed above are gone.
+
+Sharing a note as a link was my biggest complaint back then, and now there are ways around it. It's still not built in, but [Obsidian Publish](https://obsidian.md/publish) (paid) or one of the community sharing plugins let me send a colleague a link instead of exporting a file or pasting the whole markdown in a chat. Code blocks are also formatted properly out of the box, so no more patching that outdated plugin fork. In general, the tool matured a lot. Templates, properties and plugins are in much better shape, and I still open my vault every day.
+
+The learning curve, though, is still there. The first weeks are a bit awkward, and the advice in the "Challenges and Lessons" section of [my six-month update](https://mutto.fyi/posts/2023/09/obsidian-update-6-months-later/) still holds: **name your notes properly and clean the vault regularly**, otherwise it quickly becomes a mess.
+
+If you're curious about how all of this changed now that AI can read the vault, I wrote about it in [Second Brains in the AI era](https://mutto.fyi/posts/2026/09/second-brain-in-ai-era/).

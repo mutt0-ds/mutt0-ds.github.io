@@ -29,7 +29,7 @@ This part isn't even worth an argument.
 
 An assistant is only as good as the context you can hand it, and a second brain is a pile of context that is already cleaned, dated, and **connected**. Documentation, meeting notes, brain dumps, half-finished guides: all of it is a "no-brainer" to feed to an agent, and the good part is that it doesn't even need to be refactored or indexed, because LLMs are crazy good at grasping complex information, GIVEN THE CONTEXT.
 
-<div style="max-width: 1440px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 53.5833%;"><iframe src="https://iframely.net/Rj6aXFOs?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Example of big knowledge graph in Obsidian. Source: Obsidian's X](/images/second_brain_ai/graph_view.jpg)
 
 _Example of big knowledge graph in Obsidian. Source: Obsidian's X_
 
@@ -56,7 +56,7 @@ Meanwhile, AI-generated summaries have quietly appeared in every tool I use, whe
 - **TIL, personal notes, book notes: 3/10.** I prefer doing these myself. Writing them is the learning, and there is plenty of research on how much reviewing and rethinking what we read actually matters. Also, [my book notes](https://mutto.fyi/posts/2025/06/we-have-no-idea-book/) are mostly me arguing with my own thoughts, which is not something I want to automate.
 - **Cleaning up scrambled notes taken in a hurry: 10/10.** No contest. Especially when in meetings with no recordings, my notes are absolutely terrible. I now paste all my typos, half sentences, and stray Italian, and I get back something readable with the meaning intact. I tried this exact thing [in 2023 with OCR and GPT on my conference notes](https://mutto.fyi/posts/2023/11/ai-tweaked-data-saturdays-notes/) and back then it was painful. Now it just works, and it's the single feature keeping my brain-dumping habit alive.
 
-<div style="max-width: 1744px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 11.6999%;"><iframe src="https://iframely.net/GQL6QIZ6?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Some of my messy notes for this post...](/images/second_brain_ai/example_mess.png)
 
 _Some of my messy notes for this post..._
 
@@ -75,7 +75,7 @@ Delegating the whole thing? That ruins the entire point of journaling, and you n
 
 If you switch it off completely and let the model build the vault for you, **you end up with the note-taking version of a vibe-coded repository**. [I've built one of those](https://mutto.fyi/posts/2025/04/ai-generated-code/) and it was great fun for forty-five minutes: thousands of files, no idea how to navigate them, and no idea what's inside, so no way to go looking for the interesting parts.
 
-<div style="max-width: 1440px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 95.75%;"><iframe src="https://iframely.net/1t8LGani?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Example of vibe-code knowledge graph. Source: https://github.com/hroyhong/Haoshan-Vault](/images/second_brain_ai/vibe_coded.png)
 
 _Example of vibe-code knowledge graph. Source: https://github.com/hroyhong/Haoshan-Vault_
 

@@ -42,11 +42,11 @@ It’s like telling to our GPT, `“Reply to my {QUESTION}, knowing that if I as
 
 This differs from [Retrieval Augmented Generation (RAG)](https://aws.amazon.com/what-is/retrieval-augmented-generation/), where you use a specialized Vector database to search your documents (e.g., Copilot with your email inbox), then pass the best results to the prompt and tell the AI to reply based on the context.
 
-<div style="max-width: 1536px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="//iframely.net/ZRkGzjC" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![copilot](/images/ai_superpowers/copilot.png)
 
 But not _that_ different. In RAG you search for similar data, find results, then tell the AI, `“Hey, given this {CONTEXT}, reply to my {QUESTION}.”`. **Always remember that it’s all prompt engineering**.
 
-<div style="max-width: 1066px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1937%;"><iframe src="//iframely.net/ndPoIXx" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![cover](/images/ai_superpowers/cover.jpg)
 
 Cool, but getting started wasn’t straightforward. Navigating through hype and buzzwords, overcomplicated solutions (I see you, [semantic-kernel](github.com/microsoft/semantic-kernel/tree/main/python)!), [outdated docs](https://community.openai.com/t/what-is-deference-between-function-call-and-tool-call/686481/3), and useless tutorials was a journey. What I needed was something like this post.
 
@@ -111,9 +111,9 @@ response_message, history = call_gpt(client, history, tools=[get_order_data_docs
 
 I asked the model about an order, and you can see that as an intermediate step, the ChatCompletion API returned a ‘special object’ called `tool_call` that shows which function to call and with which arguments.
 
-<div style="max-width: 1120px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 13.3976%;"><iframe src="//iframely.net/AgppO6x" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![chat](/images/ai_superpowers/chat.png)
 
-<div style="max-width: 498px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 24.8193%;"><iframe src="//iframely.net/coypa8w" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![response](/images/ai_superpowers/response.png)
 
 Note that the model is not executing anything itself; it is merely indicating the function it wants to use. It is then our responsibility to execute the function, adding any necessary data cleaning features or security checks. And then we can pass the results back to the ChatCompletion API to generate the final answer! We have full control.
 

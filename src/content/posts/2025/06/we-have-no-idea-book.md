@@ -31,7 +31,7 @@ Each chapter starts with a big question like *"What is dark matter?", "Why can�
 
 As you can probably guess, "we have no idea" is the recurring theme. The authors even added a meta joke about it.
 
-<div style="max-width: 600px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 50.4391%;"><iframe src="//iframely.net/zi6MGvaH" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![chapter 13](/images/physics/chapter_13.png)
 
 Physics has made huge progress, but the more we learn, the more questions we unlock. 
 
@@ -46,19 +46,19 @@ The chapter structure is usually well organized:
 
 - A question
 
-<div style="max-width: 600px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 90.9091%;"><iframe src="//iframely.net/sc6Wx4Ov" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![introduction](/images/physics/introduction.png)
 
 - Some background/context
 
-<div style="max-width: 600px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 46.684%;"><iframe src="//iframely.net/39JBzuQV" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![context](/images/physics/context.png)
 
 - The answers we think might be true
 
-<div style="max-width: 600px; margin-bottom:3%;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 72.8156%;"><iframe src="//iframely.net/CFU8mThL" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![explanation](/images/physics/explanation.png)
 
 - And finally, why any of this matters
 
-<div style="max-width: 600px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 81.7439%;"><iframe src="//iframely.net/niTf7ftb" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![why it matters](/images/physics/why_it_matters.png)
 
 That last part is the most important, in my opinion, because **it really helps you understand why we even bother** working on these wildly complex, hard-to-test theories.
 I learned that GPS technology relies on Einstein’s relativity, that quantum mechanics powers semiconductors, that black holes might be key to understanding the universe itself.
@@ -73,7 +73,7 @@ I read the book in Italian, and 90% of the jokes still worked. Some fell flat, s
 
 I see the same thing in my daily life with tech, especially when I try to explain IT or finance to non-tech friends. The world needs more content like this, smart, clear, funny, and kind to the skeptic. 
 
-<div style="max-width: 600px; margin-bottom:3%;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 72.4963%;"><iframe src="//iframely.net/YgvFRGBX" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![take here for example: the books managed to explain Einstein's relativity with an hamster and two flashlights!](/images/physics/relativity.png)
 
 *take here for example: the books managed to explain Einstein's relativity with an hamster and two flashlights!*
 
@@ -83,6 +83,6 @@ If you know other books like "We Have No Idea", let me know. I’ve already pick
 
 It totally changed how I see physics, and if you’re a skeptic like I was, give it a shot. That’s the magic of a good book.
 
-<div style="max-width: 600px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 57.6923%;"><iframe src="//iframely.net/8At8fbMJ" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Note: All image credits go to Jorge Cham, Daniel Whiteson, and Riverhead Books](/images/physics/background_radiation.png)
 
 *Note: All image credits go to Jorge Cham, Daniel Whiteson, and Riverhead Books*

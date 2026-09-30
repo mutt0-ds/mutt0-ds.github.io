@@ -42,13 +42,13 @@ It’s what happens when a new project starts, or a client shares a dataset with
 
 It’s not “data engineering” in the job-title sense. I’ve seen finance analysts, HR folks, even sales do some form of this. **Prototyping is the messy, improvisational foundation of early-stage data work**: that's why I find it so fascinating, and it's the core of my work.
 
-<div style="max-width: 576px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="//iframely.net/rO1XsCE2" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Me, prototyping.](/images/ai_data_engineers/giphy_1.gif)
 
 *Me, prototyping.*
 
 Indeed, we were all impressed when ChatGPT started parsing Excels and doing exploratory data analysis. But real life isn’t a demo video.
 
-<div style="max-width: 2292px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 53.089%;"><iframe src="//iframely.net/dbcNKH9N" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Summarizing simple data 2](/images/ai_data_engineers/Summarizing-simple-data-2.gif)
 
 Take last week: I had to prep a usable API input for our product, [StoryTeller](https://www.investsuite.com/storyteller). The client sent over an Excel file with financial instruments. Here’s what I ran into:
 
@@ -73,7 +73,7 @@ But they tend to crumble when they hit something new, which is pretty much the n
 Now let’s talk about the other kind of data work.
 The "download a file, change some headers, check for mistakes, re-upload it to another system" kind. A staple in corporations everywhere.
 
-<div style="max-width: 600px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 66.6%;"><iframe src="//iframely.net/RJi1v8Ra" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Repetitive manual data work](/images/ai_data_engineers/giphy_2.gif)
 
 I've seen around quite some time: from Marketing interns downloading Google Analytics results to make a weekly chart in Excel, to more complex manual steps between one internal system and another that "is not connected".
 
@@ -99,7 +99,7 @@ And what’s interesting is: this side of the field can be less complex than bui
 
 I’m seeing Microsoft push hard tools like [Data Formulator](https://github.com/microsoft/data-formulator), Copilot in [Power BI]() and [Azure](https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction). But like most AI tools, they work great on toy problems and fall apart when things get medium to high complexity. From what I’ve seen and read around (check [here](https://data-goblins.com/power-bi/copilot-in-power-bi) and [here](https://www.reddit.com/r/PowerBI/comments/1gmpuef/thoughts_on_powerbi_copilot/) for example), it’s mildly helpful. Copilot can nudge you toward a valid SQL query if you forget the syntax, but beyond that, it’s mostly noise.
 
-<div style="max-width: 2042px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 51.6451%;"><iframe src="//iframely.net/87NeaWNO" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Copilot in Power BI - Credits: Data Goblin](/images/ai_data_engineers/Copilot-Pane-Fabric_Generating-Report.png)
 
 *Copilot in Power BI - Credits: Data Goblin*
 
@@ -116,7 +116,7 @@ And even if the AI agent somehow gets the logic right… **how do you trust it?*
 
 The tooling is getting flashier, but the core problems are still human, still fuzzy, still hard to automate.
 
-<div style="max-width: 941px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 99.7449%;"><iframe src="//iframely.net/93lNyZNr" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![Credits: Data Goblin](/images/ai_data_engineers/power_bi_copilot.png)
 
 
 *Credits: Data Goblin*

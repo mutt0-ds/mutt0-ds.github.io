@@ -45,7 +45,7 @@ Just like tests, we want to run these evals every time we change prompts, agent 
 
 This becomes critical very quickly. Anyone who has done prompt engineering knows **how easy it is to introduce regressions**. You ask the model to be less verbose, and suddenly it stops explaining important steps or fails scenarios that were previously working. Without evals, these issues are usually discovered late, often by users.
 
-<div style="max-width: 2969px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 33.0639%;"><iframe src="https://iframely.net/pbbv79MA?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![credits: Brainstrust](/images/evals/first.avif)
 
 _credits: Brainstrust_
 
@@ -63,7 +63,7 @@ There are trade-offs. This approach is more expensive, adds latency, and introdu
 
 In practice, we use a mix of both approaches depending on the stage of the project.
 
-<div style="max-width: 3161px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.2642%;"><iframe src="https://iframely.net/yzYVKbbJ?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![credits: Brainstrust](/images/evals/eval-summary.avif)
 
 _credits: Brainstrust_
 
@@ -75,7 +75,7 @@ Where these tools really shine is **trace visibility**.
 
 An eval can pass, but the trace may reveal inefficiencies or hidden issues. For example, I recently noticed that one of our AI tools which accepts a list of inputs was being called five times with one element instead of once with five elements. Thanks to the trace in our Braintrust environment, I could see what was going wrong, fix the prompt, and re-run the evals to ensure behavior was unchanged. It was, and the agent response time became 50% faster — another useful KPI tracked automatically by the tool.
 
-<div style="max-width: 2894px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 64.5937%;"><iframe src="https://iframely.net/vx2LKfdL?theme=dark" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![credits: Brainstrust](/images/evals/trace.avif)
 
 _credits: Brainstrust_
 

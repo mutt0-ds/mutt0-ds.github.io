@@ -21,7 +21,7 @@ Let's simplify things a bit. In this article, I'll be focusing on Power BI Deskt
 
 First things first, open your file in Power BI Desktop and take a peek at the bottom-right corner.
 
-<div style="max-width: 2303px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 69.4528%;"><iframe src="//iframely.net/ER7G3PL" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![power bi desktop](/images/power_bi_connections/power_bi_desktop.jpg)
 
 1. If it's empty, you are in **Import Mode**
 2. If it says "Live connected to _dataset name_" you are in **Live Connection** mode
@@ -30,7 +30,7 @@ First things first, open your file in Power BI Desktop and take a peek at the bo
 
 Let's say you are in a hurry and still can't spare a moment for tutorials. You just want to know where the data is and the absolute minimum to ensure you're not messing anything up. Say no more.
 
-<div style="max-width: 2303px; margin-bottom:3%"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 49.4528%;"><iframe src="//iframely.net/lwXu3yn" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div></div>
+![pbi connections charts](/images/power_bi_connections/pbi_connections_charts.png)
 
 ## Import Mode
 
