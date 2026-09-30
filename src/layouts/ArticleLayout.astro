@@ -225,6 +225,22 @@ const showToc = toc.length >= 2;
     margin: 0.4em 0;
   }
 
+  .prose :global(p > img):not(.book-header-cover) {
+    display: block;
+    margin: 0;
+  }
+
+  /* :not() only raises specificity above the generic .prose p rule */
+  .prose :global(p:has(> img)):not(.book-header-score):not(.book-header-author) {
+    margin-bottom: 0;
+  }
+
+  .prose :global(p:has(> img) + p:has(> em:only-child)):not(.book-header-score) {
+    margin: 0.5rem 0 1.6em;
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
   .prose :global(pre) {
     background: var(--paper-shade);
     padding: 1em;
