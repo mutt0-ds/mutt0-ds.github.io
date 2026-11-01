@@ -164,9 +164,11 @@ const showToc = toc.length >= 2;
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+    filter: url(#hero-ink);
   }
 
   .prose :global(.post-hero-wrap)::after {
+    z-index: 2;
     content: '';
     position: absolute;
     left: 0;
@@ -201,7 +203,7 @@ const showToc = toc.length >= 2;
     color: var(--ink-70);
   }
 
-  .prose :global(a) {
+  .prose :global(a:not(.tag-list a)) {
     color: var(--accent);
   }
 

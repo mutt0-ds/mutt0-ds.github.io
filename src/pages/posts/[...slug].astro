@@ -20,6 +20,16 @@ const { Content, headings } = await render(post);
   {
     post.data.image && (
       <div class="post-hero-wrap">
+        <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+          <filter id="hero-ink" color-interpolation-filters="sRGB">
+            <feColorMatrix type="saturate" values="0" />
+            <feComponentTransfer>
+              <feFuncR type="table" tableValues="0.031 0.918" />
+              <feFuncG type="table" tableValues="0.212 0.949" />
+              <feFuncB type="table" tableValues="0.259 0.949" />
+            </feComponentTransfer>
+          </filter>
+        </svg>
         <img class="post-hero" src={post.data.image} alt={post.data.title} onerror="this.parentElement.style.display='none'" />
       </div>
     )
@@ -30,7 +40,7 @@ const { Content, headings } = await render(post);
     post.data.tags.length > 0 && (
       <ul class="tag-list">
         {post.data.tags.map((tag) => (
-          <li>{tag}</li>
+          <li><a href={`/tags/${tag}/`}>{tag}</a></li>
         ))}
       </ul>
     )
