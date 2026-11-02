@@ -20,9 +20,9 @@ When I'm not coding, you'll find me hiking, reading, exploring new tools, or sha
 I share practical insights on data science, AI, engineering tips, and projects that spark my curiosity:
 
 <!-- BLOG-POST-LIST:START -->
-- ✨ [Ontologies: yet another data platform](https://mutto.fyi/posts/2026/09/ontology-primer/) _(posted on 30 Sep 2026)_
-- 📌 [Second Brains in the AI era: still worth it?](https://mutto.fyi/posts/2026/09/second-brain-in-ai-era/) _(posted on 6 Sep 2026)_
-- 📝 [On Terence Tao&#39;s chat: the prompt engineering era is over](https://mutto.fyi/posts/2026/08/jacobian-conjecture-chat/) _(posted on 6 Aug 2026)_
+- ✨ [Don&#39;t delegate taste](https://mutto.fyi/posts/2026/10/ai-slop-ux/) _(posted on 31 Oct 2026)_
+- 📌 [Ontologies: yet another data platform](https://mutto.fyi/posts/2026/09/ontology-primer/) _(posted on 30 Sep 2026)_
+- 📝 [Second Brains in the AI era: still worth it?](https://mutto.fyi/posts/2026/09/second-brain-in-ai-era/) _(posted on 6 Sep 2026)_
 
 <!-- BLOG-POST-LIST:END -->
 
