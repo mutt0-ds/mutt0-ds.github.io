@@ -22,7 +22,7 @@ While writing, I found myself lucky as all the points I'll state are currently e
 That being said, there are still a few features that could use some attention. For each point, I've included a "📿 Hope level" rating, speculating about the likelihood of these features being implemented in the near future.
 Please note that these ratings are based on my own personal speculations as of March 2023.
 
-![roadmap](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/power_bi_missing/roadmap.png)
+![roadmap](/images/power_bi_missing/roadmap.png)
 
 ## 🔢 Basic Version Control
 
@@ -54,7 +54,7 @@ Luckily, I rarely have to create long DAX queries in Power BI. The majority of c
 
 Creating them in the Power BI tab is only suitable if you like to become frustrated with debugging. The simplest solution is another third-party tool, [DAX Studio](https://www.sqlbi.com/tools/dax-studio/) by SQLBI, which enables syntax highlighting, formatting, linting, quick access to documentation, and rather simple debugging. I highly recommend DAX Studio, which is a wonderful and open-source tool. However, considering that Microsoft owns VS Code, I am waiting for some DAX-compatible extensions to better integrate my workflow.
 
-![dax studio](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/power_bi_missing/dax-studio-v3-ui.png)
+![dax studio](/images/power_bi_missing/dax-studio-v3-ui.png)
 
 ## 📄 Intermediate-level Documentation
 

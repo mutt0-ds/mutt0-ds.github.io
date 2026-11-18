@@ -59,7 +59,7 @@ No, this complex and DEFINITELY over-engineered architecture serves one, very, v
 
 This is ridiculously specific and I'm fascinated by the capabilities of programmers who are adding features to this amazing project. The level of configuration is impressive, with a GUI, multiple voice options, AI-powered post filtering, and even content translation. The settings are extensive and well-documented. This is better maintained than many core libraries in Python!
 
-![redditvideomarkerbot-strategy](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/redditvideomarkerbot.jpg)
+![redditvideomarkerbot-strategy](/images/reviews_tiktok/redditvideomarkerbot.jpg)
 
 [![lewisthumbnail](https://user-images.githubusercontent.com/6053155/173631669-1d1b14ad-c478-4010-b57d-d79592a789f2.png)
 ](https://www.youtube.com/watch?v=3gjcY_00U1w)
@@ -76,7 +76,7 @@ RedditVideoMakerBot offers an extensive range of 7 libraries, including Streamla
 
 For my project, I opted for the _"male funny"_ voice from TikTok, which is conveniently accessible with an account and has a natural tone that suits my needs perfectly. The code then combines multiple small .mp3 files, merging them into the first component of the final result sync.
 
-![tts-strategy](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/tts.jpg)
+![tts-strategy](/images/reviews_tiktok/tts.jpg)
 
 ## 🔍 Finding 'The Drop'
 
@@ -88,11 +88,11 @@ However, I encountered an obstacle at this point. I wanted the most energetic se
 
 During my research, I came across an intriguing thesis titled ["Finding 'The Drop': Recognizing the climax in electronic music using classification models"](http://essay.utwente.nl/82333/1/Bachelor_Thesis.pdf) by Koen van den Brink. The author utilized AI techniques, including Support Vector Machines and Convolutional Neural Networks, to identify the climax point in a song by analyzing its spectrogram. Discovering this thesis was a delightful moment as I realized someone else had faced a similar problem and even conducted research on it, providing valuable insights and motivation for my own project.
 
-![thesis](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/thesis.jpg)
+![thesis](/images/reviews_tiktok/thesis.jpg)
 
 However, I opted not to train an entire convolutional neural network and over-engineer my solution solely for finding the right segment for my TikTok videos. Instead, I relied on my personal experience and examined a few spectrograms, measuring the noise levels (in decibels) at each second of the song. Surprisingly, this approach yielded satisfactory results without the need for complex AI models.
 
-![soundwave](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/wave.jpg)
+![soundwave](/images/reviews_tiktok/wave.jpg)
 
 My function kicks in after 25% of the song has played and looks for a specific moment when:
 
@@ -101,7 +101,7 @@ My function kicks in after 25% of the song has played and looks for a specific m
 
 Yep, that's the climax. So simple, so effective. It works for many music genres and took me 5 minutes to code.
 
-![soundwave-strategy](https://raw.githubusercontent.com/mutt0-ds/mutt0-ds.github.io/master/static/images/reviews_tiktok/wave_strategy.jpg)
+![soundwave-strategy](/images/reviews_tiktok/wave_strategy.jpg)
 
 ```python
 def find_drop(df: pd.DataFrame) -> int:
