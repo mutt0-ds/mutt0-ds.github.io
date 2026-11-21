@@ -1,7 +1,8 @@
 ---
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
-import { formatDate, stripLeadingEmoji } from '../../lib/text';
+import { countStars, formatDate, stripLeadingEmoji } from '../../lib/text';
+import { author, authorRef, toIsoDate } from '../../lib/seo';
 
 export async function getStaticPaths() {
   const books = await getCollection('books');
@@ -14,9 +15,45 @@ interface Props {
 
 const { book } = Astro.props;
 const { Content } = await render(book);
+
+const { title, summary, image, finished } = book.data;
+const bookAuthors = book.data.author.split(',').map((name) => name.trim()).filter(Boolean);
+const stars = countStars(book.data.score);
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+const imageUrl = new URL(image, Astro.site).href;
+
+const jsonLd = [
+  {
+    '@type': 'Review',
+    '@id': `${pageUrl}#review`,
+    url: pageUrl,
+    name: `${title} by ${book.data.author}: book notes`,
+    description: summary,
+    datePublished: toIsoDate(finished),
+    author: authorRef,
+    publisher: authorRef,
+    itemReviewed: {
+      '@type': 'Book',
+      name: title,
+      author: bookAuthors.map((name) => ({ '@type': 'Person', name })),
+      image: imageUrl,
+    },
+    ...(stars > 0 && {
+      reviewRating: { '@type': 'Rating', ratingValue: stars, bestRating: 5, worstRating: 1 },
+    }),
+  },
+  author,
+];
 ---
 
-<ArticleLayout title={`${book.data.title}`} description={book.data.summary} image={book.data.image} imageAspect="tall">
+<ArticleLayout
+  title={title}
+  documentTitle={`${title} by ${book.data.author} – Book Notes & Summary`}
+  description={summary}
+  image={image}
+  imageAspect="tall"
+  jsonLd={jsonLd}
+>
   <div class="book-header">
     <div class="book-header-cover-wrap book-object">
       <img

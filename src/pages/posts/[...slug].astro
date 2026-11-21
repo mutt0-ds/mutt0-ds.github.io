@@ -2,6 +2,7 @@
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import { formatDate, getExcerpt } from '../../lib/text';
+import { author, authorRef, toIsoDate } from '../../lib/seo';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts', ({ data }) => !data.draft);
@@ -14,9 +15,28 @@ interface Props {
 
 const { post } = Astro.props;
 const { Content, headings } = await render(post);
+
+const description = getExcerpt(post.body ?? '');
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+const jsonLd = [
+  {
+    '@type': 'BlogPosting',
+    '@id': `${pageUrl}#article`,
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    headline: post.data.title,
+    description,
+    datePublished: toIsoDate(post.data.date),
+    author: authorRef,
+    publisher: authorRef,
+    keywords: post.data.tags.join(', ') || undefined,
+    image: post.data.image ? new URL(post.data.image, Astro.site).href : undefined,
+  },
+  author,
+];
 ---
 
-<ArticleLayout title={`${post.data.title}`} description={getExcerpt(post.body ?? '')} image={post.data.image || undefined} headings={headings}>
+<ArticleLayout title={post.data.title} description={description} image={post.data.image || undefined} headings={headings} jsonLd={jsonLd}>
   {
     post.data.image && (
       <div class="post-hero-wrap">

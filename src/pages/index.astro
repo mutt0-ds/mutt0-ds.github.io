@@ -13,6 +13,7 @@ const acerIcon = getLinkIcon('https://www.acer.com');
 const investsuiteIcon = getLinkIcon('https://www.investsuite.com');
 import { getCollection } from 'astro:content';
 import { countStars } from '../lib/text';
+import { SITE_NAME, SITE_URL, author, authorRef } from '../lib/seo';
 
 const recentPosts = (await getCollection('posts', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -28,7 +29,10 @@ const shelfBooks = [...allBooks]
   .slice(0, 24);
 ---
 
-<BaseLayout title="Davide Muttoni">
+<BaseLayout
+  title="Davide Muttoni"
+  jsonLd={[{ '@type': 'WebSite', '@id': `${SITE_URL}#website`, name: SITE_NAME, url: SITE_URL, publisher: authorRef }, author]}
+>
   <section class="hero" id="top">
     <LakeMark />
     <span class="hero-label">Hi, I'm</span>

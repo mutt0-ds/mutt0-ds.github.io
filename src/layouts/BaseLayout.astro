@@ -2,6 +2,7 @@
 import '../styles/tokens.css';
 import '../styles/components.css';
 import SearchModal from '../components/SearchModal.astro';
+import { SITE_NAME } from '../lib/seo';
 
 interface Props {
   title: string;
@@ -10,6 +11,10 @@ interface Props {
   imageAspect?: 'wide' | 'tall';
   type?: 'website' | 'article';
   wide?: boolean;
+  noindex?: boolean;
+  /** Overrides the generated <title>; og/twitter titles keep `title`. */
+  documentTitle?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
@@ -19,11 +24,18 @@ const {
   imageAspect = 'wide',
   type = 'website',
   wide = false,
+  noindex = false,
+  documentTitle,
+  jsonLd,
 } = Astro.props;
 
-const siteName = 'My notes';
+const siteName = SITE_NAME;
 const isHome = Astro.url.pathname === '/';
-const fullTitle = isHome ? title : `${title} · ${siteName}`;
+const fullTitle = documentTitle ?? (isHome ? title : `${title} · ${siteName}`);
+// Escape '<' so a stray "</script>" in content can't close the tag early.
+const jsonLdHtml =
+  jsonLd &&
+  JSON.stringify({ '@context': 'https://schema.org', ...(Array.isArray(jsonLd) ? { '@graph': jsonLd } : jsonLd) }).replaceAll('<', `${String.fromCharCode(92)}u003c`);
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const socialImage = new URL(image ?? '/images/og-default.png', Astro.site);
 ---
@@ -35,6 +47,7 @@ const socialImage = new URL(image ?? '/images/og-default.png', Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -53,6 +66,7 @@ const socialImage = new URL(image ?? '/images/og-default.png', Astro.site);
     <meta name="twitter:image" content={socialImage} />
     <meta name="generator" content={Astro.generator} />
     <title>{fullTitle}</title>
+    {jsonLdHtml && <script type="application/ld+json" set:html={jsonLdHtml} />}
   </head>
   <body>
     <header class="topbar">

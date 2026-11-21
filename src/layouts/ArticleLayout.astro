@@ -8,14 +8,16 @@ interface Props {
   image?: string;
   imageAspect?: 'wide' | 'tall';
   headings?: MarkdownHeading[];
+  documentTitle?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, description, image, imageAspect, headings = [] } = Astro.props;
+const { title, description, image, imageAspect, headings = [], documentTitle, jsonLd } = Astro.props;
 const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
 const showToc = toc.length >= 2;
 ---
 
-<BaseLayout title={title} description={description} image={image} imageAspect={imageAspect} type="article">
+<BaseLayout title={title} description={description} image={image} imageAspect={imageAspect} type="article" documentTitle={documentTitle} jsonLd={jsonLd}>
   {
     showToc && (
       <nav class="toc" aria-label="On this page">

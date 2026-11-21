@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 const { tag, posts } = Astro.props;
 ---
 
-<BaseLayout title={`#${tag}`} description={`Posts tagged ${tag}.`}>
+<BaseLayout title={`#${tag}`} description={`Posts tagged ${tag}.`} noindex>
   <h1 class="page-title"><span class="tag-hash">#</span>{tag}</h1>
   <p class="page-lead">
     {posts.length} {posts.length === 1 ? 'post' : 'posts'} tagged {tag}. <a href="/posts/">All writing</a>
