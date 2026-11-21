@@ -1,0 +1,129 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { countStars, stripLeadingEmoji } from '../lib/text';
+
+interface Props {
+  book: CollectionEntry<'books'>;
+  limit?: number;
+}
+
+const { book, limit = 4 } = Astro.props;
+
+const badgesOf = (b: CollectionEntry<'books'>) => new Set(b.data.badges.map(stripLeadingEmoji));
+const own = badgesOf(book);
+const finished = book.data.finished.valueOf();
+
+// Badges are broad (55 books are "Lifestyle"), so the finished-date tie-break
+// spreads links around instead of every page pointing at the same top-rated few.
+const related = (await getCollection('books'))
+  .filter((b) => b.id !== book.id)
+  .map((b) => ({ b, shared: [...badgesOf(b)].filter((x) => own.has(x)).length }))
+  .filter(({ shared }) => shared > 0)
+  .sort(
+    (x, y) =>
+      y.shared - x.shared ||
+      countStars(y.b.data.score) - countStars(x.b.data.score) ||
+      Math.abs(x.b.data.finished.valueOf() - finished) - Math.abs(y.b.data.finished.valueOf() - finished),
+  )
+  .slice(0, limit)
+  .map(({ b }) => b);
+---
+
+{
+  related.length > 0 && (
+    <section class="related" aria-labelledby="related-title">
+      <h2 id="related-title" class="related-title">Related books</h2>
+      <ul class="related-grid">
+        {related.map((b) => (
+          <li>
+            <a class="related-card" href={`/books/${b.id}/`}>
+              <span class="related-cover-wrap book-object">
+                <img class="related-cover" src={b.data.image} alt="" loading="lazy" decoding="async" onerror="this.style.visibility='hidden'" />
+              </span>
+              <span class="related-card-title">{b.data.title}</span>
+              <span class="related-card-author">{b.data.author}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
+<style>
+  .related {
+    padding-top: clamp(28px, 5vw, 36px);
+    border-top: 1px solid var(--hairline);
+  }
+
+  .related-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(1.2rem, 2.4vw, 1.4rem);
+    line-height: 1.25;
+    margin: 0 0 clamp(16px, 3vw, 22px);
+  }
+
+  .related-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px 16px;
+  }
+
+  @media (max-width: 560px) {
+    .related-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .related-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .related-cover-wrap {
+    display: block;
+    margin-bottom: 6px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .related-card:hover .related-cover-wrap,
+  .related-card:focus-visible .related-cover-wrap {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 18px -12px rgba(5, 25, 30, 0.45);
+  }
+
+  .related-cover {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    background: var(--paper-shade);
+  }
+
+  .related-card-title {
+    font-family: var(--font-display);
+    font-size: 0.92rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .related-card-author {
+    font-size: 0.78rem;
+    color: var(--ink-45);
+  }
+
+  .related-card:hover .related-card-title,
+  .related-card:focus-visible .related-card-title {
+    color: var(--accent);
+  }
+</style>

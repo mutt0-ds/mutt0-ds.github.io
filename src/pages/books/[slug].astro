@@ -3,6 +3,7 @@ import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import { countStars, formatDate, stripLeadingEmoji } from '../../lib/text';
 import { author, authorRef, toIsoDate } from '../../lib/seo';
+import RelatedBooks from '../../components/RelatedBooks.astro';
 
 export async function getStaticPaths() {
   const books = await getCollection('books');
@@ -85,6 +86,7 @@ const jsonLd = [
   </div>
   <div class="rule book-rule"></div>
   <Content />
+  <RelatedBooks slot="after" book={book} />
 </ArticleLayout>
 
 <style>

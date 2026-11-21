@@ -37,6 +37,7 @@ const jsonLdHtml =
   jsonLd &&
   JSON.stringify({ '@context': 'https://schema.org', ...(Array.isArray(jsonLd) ? { '@graph': jsonLd } : jsonLd) }).replaceAll('<', `${String.fromCharCode(92)}u003c`);
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const markdownPath = /^\/(posts|books)\/.+\/$/.test(Astro.url.pathname) ? Astro.url.pathname.slice(0, -1) + '.md' : undefined;
 const socialImage = new URL(image ?? '/images/og-default.png', Astro.site);
 ---
 
@@ -51,6 +52,7 @@ const socialImage = new URL(image ?? '/images/og-default.png', Astro.site);
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    {markdownPath && <link rel="alternate" type="text/markdown" href={markdownPath} />}
     <link rel="alternate" type="application/rss+xml" title={siteName} href="/index.xml" />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:type" content={type} />
